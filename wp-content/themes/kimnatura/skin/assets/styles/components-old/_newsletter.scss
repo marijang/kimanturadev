@@ -1,0 +1,18 @@
+@include block('newsletter'){
+    background: no-repeat center center;
+    background-size: cover;
+    @include element('title'){
+        margin-top: $grid-gutter*3;
+        margin-bottom: $grid-gutter*3;
+        text-align: center;
+    }
+    @include element('content'){
+        margin: auto;
+        width: 500px;
+        margin-bottom: $grid-gutter*3;
+    }
+    @include element('actions'){
+        margin: auto;
+        width: 500px;
+    }
+}

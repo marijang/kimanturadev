@@ -1,0 +1,119 @@
+
+@include block('featured-link'){
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    margin: auto;
+    margin: 0px;
+    text-align: center;
+    padding: $grid-gutter*2;
+    color:$title-link-color;
+    &:hover{
+        text-decoration: none;
+        color:$title-link-color;
+        &::after{
+            opacity: 1;
+        }
+        .featured-link__movable{
+            transform: translateY(-10px);
+        }
+        .featured-link__button{
+            opacity: 1;
+        }
+    }
+    @include element('title'){
+        font-weight: 400;
+        text-align: left;
+        color:$title-link-color;
+        margin-bottom: $grid-gutter;
+    }
+
+    @include element('price'){
+       display: block;
+       margin-bottom: $grid-gutter;
+       color:$title-link-color;
+    }
+
+    @include element('movable'){
+        position: relative;
+        transition: transform 300ms;
+        text-align: left;
+        &:hover > & {
+            transform: translateY(-10px);
+        }
+    }
+
+    @include element('button'){
+        display: inline-block;
+        padding:  0;
+        height: $grid-gutter*2;
+        border: 1px solid rgba(0,0,0,0.2);
+        position: relative;
+        user-select: none;
+        transition: all 300ms;
+        cursor: pointer;
+        transition: opacity 300ms;
+        opacity: 0;
+        color: $link-hover-color;
+        border-color: transparent;
+    }
+
+    @include element('image'){
+        height: 240px;
+        padding-bottom: $grid-gutter;
+        display: inline-block;
+    }
+    &::after{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+        -webkit-transition: opacity 200ms;
+        transition: opacity 200ms;
+        opacity: 0;
+        border: 1px solid #E9E9E9;
+        border-color: 200ms;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+       
+    }
+
+}
+
+
+
+
+.featured-item:hover {
+    
+}
+
+.featured-item:hover .movable {
+    transform: translateY(-10px);
+}
+
+.featured-item__movable {
+    position: relative;
+    transition: transform 300ms;
+}
+
+
+
+.featured-item::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    -webkit-transition: opacity 200ms;
+    transition: opacity 200ms;
+    opacity: 0;
+    border: 1px solid #E9E9E9;
+    border-color: 200ms;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+.featured-item:hover::after {
+    opacity: 1;
+}

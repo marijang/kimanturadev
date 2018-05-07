@@ -1,0 +1,112 @@
+@include block('main-navigation'){
+    @extend %list-reset;
+    @include modifier('primary'){
+        align-items: stretch; /* Default */
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
+    @include modifier('secondary'){
+    
+        display: flex;
+        align-items: center;
+      
+    }
+
+    @include element('item'){
+        position: relative;
+        padding: $base-content-padding/2;
+        
+    }
+
+    @include element('link'){
+            color: $base-dark-color;
+        //   text-decoration: $link-decoration;
+            position: relative;
+            //font-weight: bold;
+            letter-spacing: 0.4px;
+            display: block;
+            padding-left: 8px;
+            .mi,.material-icons{
+                display: block;
+            }
+            &.is-active,&.current{
+                color: $base-primary-color;
+            }
+            &:active{
+                color:$base-primary-color;
+            }
+            &:hover{
+                color:$base-primary-color;
+                &:before{
+                    transform: scale(1, 1); 
+                }
+            }
+            &.is-logged-in{
+                display: flex;
+                align-content: center;
+                align-items: center;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                left: -$base-content-padding/2;
+                top: 11px;
+                top: calc( 50% - 2px);
+                width: 12px;
+                background: currentColor;
+                height: 2px;
+                -webkit-transform-origin: left;
+                        transform-origin: left;
+                -webkit-transition: all .2s ease-out;
+                transition: all .2s ease-out;
+                -webkit-transform: scale(0, 1);
+                transform: scale(0, 1); 
+            }
+    }
+    @include element('user-info'){
+        font-size: 10px;
+        line-height: 1.5;
+        word-wrap: break-word;
+        display: inline-block;
+        max-width: 72px;
+        padding-left: 8px;
+    }
+
+    @include element('cart'){
+		position: relative;
+		vertical-align: middle;
+	}
+	@include element('badge'){
+		background: $base-primary-color;
+        color: white;
+        font-size: 14px;
+        position: absolute;
+        top: -16px;
+        right: -14px;
+        padding: 0px 6px;
+            border-radius: 24px;
+            font-weight: 500;
+
+        /* width: 16px; */
+        /* height: 18px; */
+        text-align: center;
+	}
+}
+
+
+
+.navigation__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.navigation__list--main{
+    flex: 1;
+}
+
+

@@ -1,0 +1,9 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="512"
+  height="512"
+  viewBox="0 0 512 512">
+  <path
+    d="m 64,64 0,184 184,0 0,-184 z m 200,0 0,184 184,0 0,-184 z m -200,200 0,184 184,0 0,-184 z m 200,0 0,184 184,0 0,-184 z"
+    style="fill:#ffffff"/>
+</svg>

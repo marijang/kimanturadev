@@ -1,0 +1,157 @@
+
+@include block('homeslider'){
+    
+    display: block;
+    position: relative;
+    height: 600px;
+    width: 100%;
+
+    @include element('title'){
+        text-transform: uppercase;
+        margin-top: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    @include element('subtitle'){
+        font-style: italic;
+        margin:0px;
+        margin-bottom: 8px;
+    }
+
+    @include element('item'){
+        width: 100%;
+        height: 600px;
+        position: relative;
+    
+    }
+    @include element('image'){
+        width: 100%;
+        height: 100%;
+        background: no-repeat center center;
+        background-size: cover;
+        -webkit-transform: scale(1.05) rotate(0.01deg);
+        -ms-transform: scale(1.05) rotate(0.01deg);
+        transform: scale(1.05) rotate(0.01deg);
+        -webkit-transition: -webkit-transform 4s ease-in;
+        transition: -webkit-transform 4s ease-in;
+        transition: transform 4s ease-in;
+        transition: transform 4s ease-in, -webkit-transform 4s ease-in;
+    }
+    @include element('content'){
+        position: absolute;
+        width: 60%;
+        height: 400px;
+        left: 32px;
+        top: 32px;
+        padding: $grid-gutter*3;
+        color: $color-black;
+    }
+    @include element('control'){
+    
+    }
+    @include element('pager'){
+        position: absolute;
+        bottom: 94px;
+        right: 32px;
+        display: flex;
+        align-self: baseline;
+        z-index: 130;
+        cursor: pointer;
+       span{
+            height: 4px;
+            width: 24px;
+            border-top:2px solid transparent;
+            background: $color-white;
+            flex: 1;
+            display: block;
+            margin-right: 8px;
+            &.is-active{
+                height: 6px;
+                border-top:0px solid transparent;
+                background: $primary-color;
+           }
+       }
+    }
+
+
+    @include element('wrapper'){
+        @include container();   
+        padding: 0px;
+        position: relative;
+        margin-bottom: 32px;
+        margin-top: 32px;
+       // background: black;
+        overflow: hidden;
+        .cycle_controler{
+            display: flex;
+        }
+        .cycle_control{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+        .cycle_btn{
+            width: 49%;
+            height: 100%;
+            display: inline-block;
+        }
+    }
+
+    
+
+}
+
+
+.cycle_btn:after {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+    line-height: 50px;
+    font-weight: normal;
+    text-align: center;
+    color: $color-white;
+    -webkit-transition: color 300ms;
+    transition: color 300ms;
+}
+.cycle_prev:after {content: '\E5C4';}
+.cycle_next:after {content: '\E5C8';}
+.cycle_btn:hover:after {color: darken($color-white,20%);}
+
+.main_caption_text {
+    display: inline-block;
+    min-width: 10px;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 50px;
+    color: $color-white;
+}
+
+.main_visual_item {display: none;width: 100%;height: 100%;position: relative;overflow: hidden;}
+.main_visual_item:first-child {display: block;}

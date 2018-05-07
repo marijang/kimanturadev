@@ -1,0 +1,98 @@
+@include block('cookie-notice'){
+    a{
+        cursor: pointer;
+    }
+    @include element('container'){
+        display: none;
+        position: relative;
+        z-index: 999999999;
+        position: fixed;
+        width: 100%; 
+        bottom: 0;
+        transition: all 1s;
+        //overflow: hidden;
+    }
+    @include element('content'){
+        
+        width: 1024px;
+        padding: 40px;
+        margin: 0 auto;
+        background-color: #ce242e;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    @include element('inner'){
+        display: flex;
+        align-items: center;
+       
+       
+        
+        
+    }
+    @include element('description'){
+        margin: 0;
+        flex: 1;
+        width: 80%;
+        margin-right: $grid-gutter*2;
+        @include typi('xs');
+        color: $color-white;
+        a{
+            color: $color-white;
+            text-decoration: underline;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    @include element('overlay'){
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .3);
+        z-index: 999999998;
+    }
+    @include element('close'){
+        padding: 0 $grid-gutter;
+        
+        display: block;
+        background: #fff;
+        color: #ce242e;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: none;
+    }
+
+}
+
+.cookie-notice .cookie-notice__close {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    bottom: 0;
+    height: 40px;
+    margin: auto;
+    cursor: pointer;
+}
+@media only screen and (max-width: 400px) {
+    .cookie-notice__description {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .cookie-notice__content .cookie-notice__close {
+        position: static;
+    }
+}
+
+.cookie-notice { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(0, 0, 0, 0.9); padding: 15px; z-index: 50; }
+
+.cookie-notice__img { float: left; margin: 2px 10px 10px 0; }
+
+.cookie_notice__txt { padding: 0; margin: 0; font-size: 12px; font-size: 1.2rem; color: #fff; }
+
+.cookie-notice__btn-cont { float: left; width: 100%; margin-top: 10px; text-align: center; }
+
+.cookie-notice__btn { height: 30px; line-height: 30px; }

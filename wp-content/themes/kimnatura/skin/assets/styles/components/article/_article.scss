@@ -1,0 +1,25 @@
+@include block('article'){
+    @include element('container'){
+        @include container();
+    }
+    @include element('title'){
+
+    }
+    @include element('content'){
+        p,h3,h2,h1,div,hr{
+            margin-left: 200px;
+            margin-right: 100px;
+        }
+    }
+    @include element('image'){
+        position: relative;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+
+    }
+    @include element('link'){
+
+    }
+}

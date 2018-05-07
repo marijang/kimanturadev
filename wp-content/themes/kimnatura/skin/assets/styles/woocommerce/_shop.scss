@@ -1,0 +1,53 @@
+@include block('shop'){
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: $grid-gutter*2;
+    @include section();
+
+
+    @include element('products-header'){
+        display: flex;
+        padding-bottom: $grid-gutter;
+        border-bottom: 1px solid $color-dark-grey
+    }
+    @include element('products-ordering'){
+        
+    }
+    @include element('products-result-count'){
+        flex: 1;
+        align-self: center;
+
+    }
+
+    @include element('sidebar'){
+        grid-column: 1/4;
+        h4{
+            margin-top:0px;
+        }
+    }
+    
+    @include element('products'){
+        grid-column: 4/13;
+
+    }
+
+    @include element('products-list'){
+        flex: 1;
+    }
+
+    .products11{
+        padding: 0px;
+        margin:0px;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: $grid-gutter;
+    }
+
+
+
+    @include element('categories-list'){
+        @extend  %accordion;
+    }
+}

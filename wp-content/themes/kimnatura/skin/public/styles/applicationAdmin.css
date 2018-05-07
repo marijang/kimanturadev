@@ -1,0 +1,18 @@
+/* stylelint-disable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* Full path due to wp-login.php is not in the theme folder */
+.login h1 a {
+  /* stylelint-disable-line selector-no-type */
+  background-image: url("/wp-content/themes/kimnatura/skin/public/images/logo.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 80%;
+  width: 100%;
+  height: 37px;
+  margin: 0 auto 15px; }
+
+/* stylelint-disable */
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi93cC1jb250ZW50L3RoZW1lcy9raW1uYXR1cmEvc2tpbi9hc3NldHMvc3R5bGVzL2FwcGxpY2F0aW9uLWFkbWluLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esc0JBQXNCOztBQUV0QiIsImZpbGUiOiJzdHlsZXMvYXBwbGljYXRpb25BZG1pbi5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBzdHlsZWxpbnQtZGlzYWJsZSAqL1xuLyogc3R5bGVsaW50LWRpc2FibGUgKi9cbi8qIHN0eWxlbGludC1lbmFibGUgKi9cbi8qIEZ1bGwgcGF0aCBkdWUgdG8gd3AtbG9naW4ucGhwIGlzIG5vdCBpbiB0aGUgdGhlbWUgZm9sZGVyICovXG4ubG9naW4gaDEgYSB7XG4gIC8qIHN0eWxlbGludC1kaXNhYmxlLWxpbmUgc2VsZWN0b3Itbm8tdHlwZSAqL1xuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIvd3AtY29udGVudC90aGVtZXMva2ltbmF0dXJhL3NraW4vcHVibGljL2ltYWdlcy9sb2dvLnN2Z1wiKTtcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogdG9wIGNlbnRlcjtcbiAgYmFja2dyb3VuZC1zaXplOiA4MCU7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDM3cHg7XG4gIG1hcmdpbjogMCBhdXRvIDE1cHg7IH1cblxuLyogc3R5bGVsaW50LWRpc2FibGUgKi9cbiJdLCJzb3VyY2VSb290IjoiIn0=*/

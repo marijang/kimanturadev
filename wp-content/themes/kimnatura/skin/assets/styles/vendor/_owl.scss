@@ -1,0 +1,99 @@
+/**
+ * Owl Carousel v2.3.3
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+ .owl-theme .owl-nav1 {
+    margin-top: 10px;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent; }
+    .owl-theme .owl-nav1 [class*='owl-'] {
+      color: #FFF;
+      font-size: 14px;
+      margin: 5px;
+      padding: 4px 7px;
+      background: $base-color-light-grey;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 3px; 
+  }
+  
+    .owl-theme .owl-nav .disabled {
+      opacity: 0.5;
+      cursor: default; }
+  
+.owl-theme .owl-nav.disabled + .owl-dots {
+    margin: $base-content-padding 0; 
+}
+  
+.owl-theme .owl-dots {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent; 
+}
+.owl-theme .owl-dots .owl-dot {
+      display: inline-block;
+      zoom: 1;
+      *display: inline; 
+}
+.owl-theme .owl-dots .owl-dot span {
+    width: 8px;
+    height: 8px;
+    margin: 4px 8px;
+    background: $base-color-light-grey;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity 200ms ease;
+    border-radius: 0px;
+}
+  .owl-theme .owl-dots .owl-dot.active span
+, .owl-theme .owl-dots .owl-dot:hover span {
+    background:$base-primary-color; 
+}
+  
+  
+  .owl-theme .owl-nav [class*='owl-']:hover {
+    background: transparent;
+    color: #333;
+    text-decoration: none; 
+  }
+  
+  .owl-stage-outer{
+    padding: $base-content-padding*3;
+    //width: calc(100% - 80px);
+    margin: auto;
+  
+    margin-bottom: $base-content-padding*3;
+    transform-style: preserve-3d;
+   
+  }
+  .owl-stage .item{
+  
+  }
+  
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    color: #cdcbcd;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+  
+  
+  .owl-nav i {
+    font-size: 52px;
+  }
+  
+  .owl-prev {
+    position: absolute;
+    left: 0px;
+    margin-left: -48px;
+  }
+  
+  .owl-next {
+    position: absolute;
+    right: 0px;
+    margin-right: -48px;
+  }

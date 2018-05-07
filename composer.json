@@ -1,0 +1,21 @@
+{
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "*",
+    "jakub-onderka/php-console-highlighter": "*",
+    "jakub-onderka/php-parallel-lint": "*"
+  
+  },
+  "scripts": {
+    "post-install-cmd": [
+    
+    ],
+    "post-update-cmd": [
+      
+    ]
+  },
+  "autoload": {
+    "classmap": [
+      "wp-content/themes/kimnatura/"
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+@include block('navigation'){
+    @include element('link'){
+        &.is-logged-in{
+            i {
+                border-radius: 50%;
+                border: 1px solid $primary-color;
+               // width: 24px;
+                //height: 24px;
+                padding: 3px;
+                display: inline-block;
+            }
+        }
+    }
+    @include element('user-info'){
+        font-size: 10px;
+        line-height: 1.5;
+        word-wrap: break-word;
+        display: inline-block;
+        max-width: 72px;
+        padding-left: 8px;
+    }
+}
+
+.navigation{
+    grid-row: 1;
+    grid-column: 1 / 13;
+    text-align: left;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    //font-size: 85%;
+}
+.navigation__brand{
+    grid-column: 1 / 4;
+    img{
+        height: 70px;
+        width: 128px;
+    }
+    svg{
+        g path{
+            fill: #000;
+        }
+        fill: #000;
+    }
+}
+.navigation__primary{
+    grid-column: 4 / 10;
+    display: flex;
+    align-items: center;
+}
+.navigation__secondary{
+  grid-column: 10 / 13;
+  display: flex;
+  align-items: center;
+}
+
+.navigation__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.navigation__list--main{
+    flex: 1;
+}
+.navigation__item{
+    position: relative;
+    padding: $grid-gutter-width/2;
+}
+.navigation__link{
+    color: $navigation-link-color;
+    text-decoration: $link-decoration;
+    position: relative;
+    //font-weight: bold;
+    letter-spacing: 0.4px;
+    display: block;
+    .mi,.material-icons{
+        display: block;
+    }
+    &.is-active,&.current{
+        color: $navigation-hover-color;
+    }
+    &:active{
+        //color:$navigation-link-hover-color;
+    }
+    &:hover{
+        color: $navigation-hover-color;
+        &:before{
+            transform: scale(1, 1); 
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        left: -$grid-gutter-width/2;
+        top: 11px;
+        top: calc( 50% - 2px);
+        width: 12px;
+        background: currentColor;
+        height: 2px;
+        -webkit-transform-origin: left;
+                transform-origin: left;
+        -webkit-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+        -webkit-transform: scale(0, 1);
+        transform: scale(0, 1); 
+    }
+}
+

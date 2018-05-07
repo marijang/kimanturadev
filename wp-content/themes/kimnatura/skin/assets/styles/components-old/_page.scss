@@ -1,0 +1,133 @@
+.single-post{
+    .page__content p{
+        margin-left: $grid-gutter*18;
+    }
+}
+
+@include block('page'){
+    @include element('header'){
+       @include container();
+    }
+    @include element('article'){
+        @include container();
+    }
+    @include element('content'){
+        @include modifier('intendent'){
+           
+            margin-right: 100px;
+        }
+    }
+    @include element('content-sidebar'){
+          flex: 1;
+         
+          flex-basis: 200px;
+          flex-grow: 0;
+          flex-shrink: 0;
+    }
+    @include element('content-wrap'){
+        display: flex;
+        .page__content--intendend{
+            flex:1;
+        }
+        
+    }
+
+    @include element('article'){
+        @include section();
+    }
+    @include element('title'){
+        margin-bottom: 0;
+        font-weight: $font-weight-medium;
+    }
+    
+   
+
+    
+    @include element('description'){
+        font-weight: $font-weight-thin;
+        margin-bottom: vr(2);
+        margin-top: 0;
+    }
+    @include element('title-main'){
+        display: block;
+    }
+    @include element('title-subtitle'){
+        display: block;
+        @include typi('subtitle'); 
+        margin-top: 0px;
+        margin-bottom: vr(1);
+        font-weight: $font-weight-thin;
+        //@include font-size(0.7);
+    }
+
+    @include element('image'){
+       @include section();
+       position: relative;
+       overflow: hidden;
+       img{
+           width: 100%;
+       }
+    }
+
+
+
+
+    @include element('shop-checkout-navigation'){
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        align-content: stretch; 
+        @include container();
+        margin-bottom: $grid-gutter*3;
+        margin-top: $grid-gutter*3;
+    }
+    @include element('shop-checkout-navigation-item'){
+        flex:1;
+        color:$page-shop-checkout-navigation-item-text;
+        background: $page-shop-checkout-navigation-item-background;
+        padding: $grid-gutter;
+        @include typi('small');
+        margin-right: $grid-gutter*3;
+        position: relative;
+
+        &.is-activated{
+            border: 1px solid $primary-color;
+            background: transparent;
+            a{
+                color:$primary-color;
+                display: block;
+            }
+        }
+        &.is-active{
+            color:$page-shop-checkout-navigation-item-text-active;
+            background: $page-shop-checkout-navigation-item-background-active;
+            &::after{
+                color:$page-shop-checkout-navigation-item-background-active;
+            }
+            a{
+                color:$color-white;
+                display: block;
+            }
+        }
+        &:last-child{
+            margin-right: 0px;
+            &::after{
+                content:'';
+                display: none;
+            }
+        }
+        &::after{
+           @extend .mi;
+           content:'keyboard_arrow_right';
+           position: absolute;
+           right: -48px;
+           top: 0;
+           padding: $grid-gutter;
+        }
+    }
+    @include element('shop-checkout-navigation-link'){
+        
+    }
+
+}

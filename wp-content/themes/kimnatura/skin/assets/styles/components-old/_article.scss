@@ -1,0 +1,50 @@
+@include block('article'){
+    @include container();
+    @include m('primary'){
+       background: $section-background-color-primary;
+    }
+
+
+
+    @include element('description'){
+        font-weight: $font-weight-thin;
+        margin-bottom: vr(2);
+        @include typi('subtitle'); 
+        @include m('center'){
+            text-align: center;
+        }
+    }
+
+
+    @include element('content-wrap'){
+        display: flex;
+        @include m('columns'){
+            .article__image{
+                flex: 1;
+                
+            }
+
+            .article__content{
+                flex: 1;
+                margin-right: $grid-gutter*2;
+            }
+        }
+    }
+
+    @include element('title'){
+        margin-bottom: $grid-gutter*2;
+
+        @include m('center'){
+            text-align: center;
+        }
+    }
+
+    @include element('image'){
+        @include section();
+        position: relative;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+     }
+}

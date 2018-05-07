@@ -1,0 +1,158 @@
+$font-family-sans-serif1:      -apple-system, BlinkMacSystemFont, "Merriweather", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:         "Merriweather",  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-heading-sans-serif: "Poppins",  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+//Base
+$base-font-family:                    $font-family-heading-sans-serif;
+$base-font-family-primary:            $font-family-heading-sans-serif;
+$base-font-primary-letter-spacing:    0.5px;
+$base-font-family-secondary:          $font-family-sans-serif;
+$base-font-secondary-letter-spacing:  0.5px;
+
+
+$base-icons-font-family:  'Material Icons';
+$paragraph-font-family:   $font-family-sans-serif;
+
+// Container
+$base-content-padding: 16px;
+$base-content-full-width: 1200px;
+$base-content-width: $base-content-full-width + ($base-content-padding*2);
+$grid-gutter: $base-content-padding;
+
+// Section
+$base-section-margin:64px;
+
+//Typography
+$typography-map: (
+  mobile: (
+    giant:          72px,
+    huge:           42px,
+    biggest:        30px,
+    bigger:         28px,
+    big:            26px,
+    largest:        24px,
+    larger:         22px,
+    large:          20px,
+    default:        18px,
+    medium:         16px,
+    small:          14px,
+    smaller:        12px,
+    tiny:           11px
+  )
+);
+
+$base-font-weight-bold: 700;
+$base-font-weight-medium:600;
+
+$media-breakpoints: (
+  mobile: 0 767,
+  tablet: 768 991,
+  desktop: 992 1199,
+  large: 1200
+);
+
+$breakpoints: (
+  small: 600px,
+  large: 1200px
+);
+
+
+
+
+$typi: (
+  base: (
+    null: (18px, 1.5),
+    small: (16px,1.5),
+    large: (20px,1.5)
+  ),
+  tiny: (
+    null: (11px)
+  ),
+  smaller: (
+    null: (12px)
+  ),
+  small: (
+    null: (14px)
+  ),
+  medium: (
+    null: (16px)
+  ),
+  default: (
+    null: (18px)
+  ),
+  large: (
+    null: (20px)
+  ),
+  larger: (
+    null: (22px)
+  ),
+  largest: (
+    null: (24px)
+  ),
+  big: (
+    null: (26px)
+  ),
+  bigger: (
+    null: (28px)
+  ),
+  biggest: (
+    null: (30px)
+  ),
+  huge: (
+    null: (40px)
+  ),
+  giant: (
+    null: (50px)
+  ),
+);
+
+
+// Buttons
+$button-size-map: (
+  mobile: (
+    default: (
+      text-size: 14px,
+      line-height: 1.5,
+      height: 64px,
+    ),
+    small: (
+      text-size: 14px,
+      line-height: 1.5,
+      height: 48px,
+    )
+  )
+);
+
+
+
+//Section
+$section-spacing-map: (
+  mobile: (
+    default:    00px,
+    medium:     24px,
+    small:      16px,
+    no-spacing: 0
+  ),
+  large:(
+    default:    0px,
+    medium:     64px,
+    small:      32px,
+    no-spacing: 0
+  )
+);
+
+//WP admin bar
+$wpAdminBar-sm: 782px;
+
+// Forms
+$form-field-spacing: 30px;
+
+// Input
+$input-height-map: (
+  mobile: (
+    default: (
+      text-size: 18px,
+      height: 57px,
+    )
+  )
+);

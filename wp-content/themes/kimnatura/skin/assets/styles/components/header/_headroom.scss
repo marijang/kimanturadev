@@ -1,0 +1,44 @@
+$transition-headroom: all 0.35s ease-in-out;
+
+.headroom-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+  /*
+  @include for-phone-only() {
+    display: none;
+  }
+  */
+}
+
+.headroom {
+  width: 100%;
+  &.headroom--top{
+    position: relative!important;
+  }
+}
+
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+  transition: $transition-headroom;
+}
+
+.headroom--scrolled {
+  transition: $transition-headroom;
+}
+
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: $transition-headroom;
+}
+
+.headroom--pinned {
+  background-color: $base-white-color;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  transform: translateY(0%);
+  transition: $transition-headroom;
+  
+}

@@ -1,0 +1,118 @@
+@include b('cart'){
+
+
+
+
+
+    @include e('item'){
+        td {
+            vertical-align: middle!important;
+        }
+        
+    }
+
+    @include e('thumbnail'){
+        width: 128px;
+        height: 128px;
+        img {
+            width: 128px;
+            height: 128px;
+        }
+    }
+
+    @include e('name'){
+        width: 40%;
+
+        a {
+            color: $base-text-color;
+            font-weight: 600;
+        }
+    }
+
+    @include e('quantity'){
+        width: 120px;
+
+        .quantity {
+            margin-right: 0!important;
+        }
+    }
+
+    @include e('remove'){
+        width: 5%;
+        text-align: center!important;
+
+        a {
+            font-size: 24px;
+            color: $base-text-color;
+        }
+    }
+
+    @include e('totals'){
+        width: 33%!important;
+        margin: $base-content-padding $base-content-padding $base-content-padding auto;
+
+        tr {
+            border: 0;            
+        }
+
+        tr:nth-last-child(2) {
+            border-bottom: 1px solid $base-table-border-color;
+            th, td {
+                padding: 5px 5px 20px 5px; 
+            }
+        }
+
+        tr:nth-last-child(1) {
+            th, td {
+                padding: 20px 5px 5px 5px; 
+            }
+        }
+        
+        
+
+        th, td {
+            text-align: right!important;
+            padding: 5px;
+        }
+    }
+
+    @include e('shipping'){
+            font-weight: normal!important;
+        
+    }
+
+    @include e('subtotal'){
+        font-weight: bold;
+    
+    }   
+
+    @include e('proceed'){
+        margin-left: auto;
+        width: fit-content;
+    }
+
+    @include e('item-desc'){
+        //@include typi('s'); 
+        
+        margin-bottom: 0;
+        color: $base-text-color;
+        
+    }
+
+    @include e('banner'){
+        background-color: $base-color-light-grey;
+        padding: $grid-gutter;
+        text-align: center;
+        font-weight: 600;
+        color: $base-black-color;
+        margin-bottom: $base-content-padding;
+    }
+
+    
+}
+
+.item-center {
+    text-align: center !important;
+}
+
+

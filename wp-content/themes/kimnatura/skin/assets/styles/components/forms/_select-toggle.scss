@@ -1,0 +1,24 @@
+.select-toggle__button-group{
+    display: block;
+    padding: $base-content-padding/2 0;
+
+}
+.select-toggle__button{
+    display: inline-block;
+    padding:8px;
+    margin-right: 8px;
+    border: 1px solid $base-grey-color;
+    &:hover{
+        cursor: pointer;
+        background: $base-primary-color;
+        color: $base-white-color;
+        border-color: $base-primary-color;
+        &.is-active{
+            color: $base-white-color;
+        }
+    }
+    &.is-active{
+        color: $base-primary-color;
+        border: 1px solid $base-primary-color;
+    }
+}

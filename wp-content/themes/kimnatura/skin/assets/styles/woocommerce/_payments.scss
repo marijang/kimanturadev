@@ -1,0 +1,21 @@
+@include block('payment'){
+    @include element('methods'){
+        border: 1px solid #F6F6F6;
+        margin:0px;
+    }
+    @include element('method'){
+        padding: 32px;
+        background: $color-light-grey;
+        &.is-active{
+            background: #fff;
+        }
+    }
+    @include element('description'){
+        border-top: 1px solid $color-light-grey;
+        margin-top: $grid-gutter/2;
+        padding-top: $grid-gutter;
+    }
+    .btn{
+        float: right;
+    }
+}

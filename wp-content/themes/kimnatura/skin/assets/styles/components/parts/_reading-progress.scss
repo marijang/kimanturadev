@@ -1,0 +1,24 @@
+.reading__progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background: transparent;
+    border: none;
+    color: $primary-color;
+    z-index: 5;
+    z-index: 99999;
+}
+.reading__progress::-webkit-progress-bar {
+    background: transparent;
+}
+.reading__progress::-webkit-progress-value {
+    background: $primary-color;
+}
+.reading__progress::-moz-progress-bar {
+    background: $primary-color;
+}

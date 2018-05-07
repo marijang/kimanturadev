@@ -1,0 +1,57 @@
+@include b('checkout'){
+
+
+    @include e('grid'){
+        display: flex;
+    }
+
+    @include e('form'){
+        flex: 2;
+        padding-right: $base-content-padding;
+    }
+
+    @include e('review'){
+        flex: 1;
+    }
+
+    @include e('review-box'){
+        background-color: $base-color-light-grey;
+        padding: $base-content-padding;
+    }
+
+
+    @include e('box-title'){
+        margin-top: 0;
+    }
+
+    @include e('totals'){
+        td {
+            text-align: right!important;
+        }
+
+        th, td {
+            padding: 5px;
+        }
+
+        tr {
+            border: 0;            
+        }
+
+        tr:nth-last-child(2) {
+            border-bottom: 1px solid $base-table-border-color;
+            th, td {
+                padding: 5px 5px 20px 5px; 
+            }
+        }
+
+        tr:nth-last-child(1) {
+            th, td {
+                padding: 20px 5px 5px 5px; 
+            }
+        }
+    }
+
+    @include e('subtotal'){
+        font-weight: normal!important;
+    }
+}

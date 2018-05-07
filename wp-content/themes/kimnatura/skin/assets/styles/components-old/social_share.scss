@@ -1,0 +1,36 @@
+.sticky{
+  
+    display: flex;
+    flex-direction: row;
+    flex-basis: 64px;
+    margin-left: 68px;
+    width: 64px;
+ 
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 94px;
+    div{
+        text-align: center;
+    }
+    //transform: translate(0px, -50%);
+}
+.sticky.is-active {
+  //  position: fixed;
+   // top: 94px;
+    opacity: 1;
+  }
+
+.sticky.fadeOut300 {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s linear .3s,opacity .3s 0s;
+    transition: visibility 0s linear .3s,opacity .3s 0s
+}
+
+.sticky.fadeIn300 {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: visibility 0s linear 0s,opacity .3s 0s;
+    transition: visibility 0s linear 0s,opacity .3s 0s
+}

@@ -1,0 +1,6 @@
+@include block('sharing'){
+    margin-top: $grid-gutter/2;
+    @include element('inline'){
+
+    }
+}

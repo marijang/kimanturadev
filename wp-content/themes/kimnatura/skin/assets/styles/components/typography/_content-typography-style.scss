@@ -1,0 +1,176 @@
+//Some stuff here is out of BEM because it is used inside WP as helpers or modifiers
+// Text sizes are refines via mixins as utility helpers
+$cs-text-color: $base-dark-color;
+$cs-default-padding: 35px;
+
+$cs-table-bg-color: $base-white-color;
+$cs-table-border-color: $base-silver-color;
+
+::selection {
+  color: #fff;
+  text-shadow: none;
+  background: $base-primary-color; 
+
+
+   
+}
+
+
+@include typi-init;
+@include typi-create-classes;
+
+
+html{
+
+ // font-family: $font-family-heading;
+ // letter-spacing: $font-base-letter-spacing;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* stylelint-disable selector-no-type */
+p,
+ul,
+ol {
+  @extend %paragraph-reset;
+  padding-bottom: $cs-default-padding;
+  letter-spacing: $base-font-secondary-letter-spacing;
+  font-family: $base-font-family-secondary;
+  &.clear-spacing{
+  
+  }
+}
+p{
+  
+  font-family: $base-font-family-secondary;
+}
+
+.larger {
+  @include typi(larger);
+}
+
+.large {
+  @include typi(large);
+}
+
+.medium {
+  @include typi(medium);
+}
+
+.small {
+  @include typi(small);
+}
+
+/*
+&--larger {
+  @include text-size(larger);
+}
+
+&--large {
+  @include text-size(large);
+}
+
+&--medium {
+  @include text-size(medium);
+}
+
+&--small {
+  @include text-size(small);
+}
+
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %heading-reset;
+  font-weight: bold;
+ // line-height: 1.7;
+  //text-transform: uppercase;
+ // padding: 18px 0 22px;
+}
+
+h1 {
+  @include typi(biggest);
+}
+
+h2 {
+  @include typi(bigger);
+}
+
+h3 {
+  @include typi(big);
+}
+
+h4 {
+  @include typi(largest);
+}
+
+h5 {
+  @include typi(larger);
+}
+
+h6 {
+  @include typi(large);
+}
+
+//TODO  Add to content-media class
+ul,
+ol {
+  //margin-left: 18px;
+
+  li {
+    //padding-bottom: 16px;
+
+    &:last-child {
+     // padding-bottom: 0;
+    }
+
+    ul,
+    ol {
+      margin-left: 0px;
+    }
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  @extend %list-reset;
+  font-style: italic;
+}
+
+em {
+  font-style: italic;
+}
+
+table1 {
+  width: 100% !important; //stylelint-disable-line declaration-no-important
+  height: auto !important; //stylelint-disable-line declaration-no-important
+  border-top: 1px solid $cs-table-border-color;
+  border-left: 1px solid $cs-table-border-color;
+  margin-bottom: $cs-default-padding;
+  border-collapse: collapse;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  tr {
+    td,
+    th {
+      @include text-size(medium);
+      border: none;
+      border-right: 1px solid $cs-table-border-color;
+      border-bottom: 1px solid $cs-table-border-color;
+      height: auto !important; //stylelint-disable-line declaration-no-important
+      padding: 15px 10px;
+    }
+  }
+}
+

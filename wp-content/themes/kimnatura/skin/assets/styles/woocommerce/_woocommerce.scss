@@ -1,0 +1,11 @@
+
+
+
+@include block('woocommerce'){
+    @include element('main'){
+        @include container();
+    }
+    @include element('blog'){
+        @include container();
+    }
+}

@@ -1,0 +1,16 @@
+@include block('section'){
+    @include section-spacings('top');
+
+   // background: red;
+    @include container();
+    @include element('image'){
+        img{
+            width: 100%;
+        }
+    }
+    @include element('title'){
+        @include m('center'){
+            text-align: center;
+        }
+    }
+}

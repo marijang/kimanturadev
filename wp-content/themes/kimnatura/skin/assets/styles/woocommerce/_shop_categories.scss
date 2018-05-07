@@ -1,0 +1,38 @@
+@include block('shop-categories'){
+    @include element('list'){
+       //@include typi('xs');
+       @extend  %accordion;
+    }
+    @include element('item'){
+        @include modifier('parent'){
+            font-weight: 600;
+            padding: $grid-gutter!important;
+        }
+        @include modifier('child'){
+            font-weight: normal;
+            margin-bottom: 4px;
+        }
+
+    }
+    @include element('title'){
+        //@include typi('xs');
+    }
+    @include element('label'){
+        //@include typi('xs');
+        display: flex;
+        color: $base-black-color!important;
+    }
+    @include element('count'){
+        //@include typi('xs');
+        color: $base-black-color!important;
+    }
+    @include element('icon'){
+        text-align: right;
+        flex: 1;
+    }
+    @include element('childs'){
+        margin: $grid-gutter/2 0px;
+        padding-top: $grid-gutter/2;
+       
+    }
+}

@@ -1,0 +1,54 @@
+
+/* ----------------------------------------------
+ * Mouse Scroller
+ * w: 
+ * ---------------------------------------------- */
+.scroller {
+	width:48px;
+	height:80px;
+	position:absolute;
+	left:50%;
+	//right:32px;
+	//top:50%;
+	bottom: 32px;	
+	transform:translateX(-50%);
+	cursor:pointer;
+	z-index: 130;
+}
+
+
+
+
+.mouse{
+	width:100%;
+	box-sizing:border-box;
+	height:100%;
+	border:2px solid;
+	border-radius:35px;
+	position:relative;
+	animation: mouseAnim 1s linear infinite alternate;
+}
+
+
+.ball{
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);
+	content:'';
+	width:4px;
+	height:4px;
+	background:white;
+  animation: ballAnim 1s linear infinite;
+}
+
+@keyframes ballAnim {
+    0% {width:10px;height:10px;border-radius:5px;opacity:0;top: 15px;}
+		50% {width:12px;height:12px;border-radius:6px;opacity:1;top: 25px;}
+    100% {width:8px;height:8px;border-radius:4px;opacity:0;top: 64px;}
+}
+
+@keyframes mouseAnim {
+    0% {border-color:rgba(250,250,250,1);}
+		50% {border-color:rgba(250,250,250,.8);}
+    100% {border-color:rgba(250,250,250,.5);}
+}

@@ -1,0 +1,37 @@
+/* **************************************** *
+ * VISUAL
+ * **************************************** */
+ .main_section.main_visual {padding: 0;}
+ .main_visual {width: 100%;position: relative;background: #f6f6f6;overflow: hidden;}
+ .main_visual_slider {width: 100%;position: relative;}
+ .main_visual_item {display: none;width: 100%;height: 100%;position: relative;overflow: hidden;}
+ .main_visual_item:first-child {display: block;}
+ .main_visual_item > .wrap {height: 100%;}
+ .main_visual_content {display: table;width: 100%;height: 100%;opacity: 0;}
+ .main_visual_content_cell {display: table-cell;vertical-align: middle;}
+ .main_visual_content h2 {margin-left: -4px;font-size: 55px;font-weight: 300;line-height: 1.2;letter-spacing: 0.025em;color: #222;}
+ .main_visual_content p {padding-top: 9px;font-size: 15px;line-height: 1.86;color: #444;}
+ .main_visual_content .jt_btn {margin-top: 24px;}
+ .main_visual_bg {width: 100%;height: 100%;position: absolute;top: 0;left: 0;background: no-repeat center center;background-size: cover;-webkit-transform: scale(1.05) rotate(0.01deg);-ms-transform: scale(1.05) rotate(0.01deg);transform: scale(1.05) rotate(0.01deg);-webkit-transition: -webkit-transform 4s ease-in;transition: -webkit-transform 4s ease-in;transition: transform 4s ease-in;transition: transform 4s ease-in, -webkit-transform 4s ease-in;}
+ .main_visual_pc_bg {display: block;}
+ .main_visual_mobile_bg {display: none}
+ .main_visual_item.cycle-slide-active .main_visual_bg {-webkit-transform: scale(1) rotate(0deg);-ms-transform: scale(1) rotate(0deg);transform: scale(1) rotate(0deg);}
+ 
+ .main_visual_item_secondary .main_visual_content h2,
+ .main_visual_item_secondary .main_visual_content p {color: #fff;}
+ 
+ .main_visual .cycle_controler {width: 220px;height: 105px;left: 0;right: inherit;bottom: 0;background: #fff;}
+ .main_visual .cycle_control {position: absolute;left: 0;right: 0;bottom: 0;top: 0;}
+ .main_visual .cycle_control:after {display: none;}
+ .main_visual .cycle_btn {width: 50%;height: 100%;opacity: 0.3;-webkit-transition: opacity 300ms;transition: opacity 300ms;}
+ .main_visual .cycle_btn:after {line-height: 105px;}
+ .main_visual .cycle_prev:after {left: 7px;}
+ .main_visual .cycle_next:after {left: -7px;}
+ .main_visual .cycle_btn:hover {opacity: 1;}
+ .main_visual .cycle_btn:hover:after {color: #222;}
+ 
+ /* loading */
+ .main_visual:after {content: '';display: block;width: 100%;height: 100%;position: absolute;top: 0;left: 0;background: #f6f6f6;z-index: 200;}
+ .main_visual_slider {opacity: 0;-webkit-transition: opacity 1s;transition: opacity 1s;}
+ .main_visual_load.main_visual:after {opacity: 0;visibility: hidden;}
+ .main_visual_load .main_visual_slider {opacity: 1;}

@@ -1,0 +1,83 @@
+@include block('cart-checkout-navigation'){
+
+    @include container();
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    align-content: stretch; 
+    @include container();
+    margin-bottom: $grid-gutter*3;
+    margin-top: $grid-gutter*3;
+
+    @include element('shop-checkout-navigation'){
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        align-content: stretch; 
+        @include container();
+        margin-bottom: $grid-gutter*3;
+        margin-top: $grid-gutter*3;
+    }
+    @include element('item'){
+        flex:1;
+        color:$multistep-text-color;
+        background: $multistep-background-color;
+        
+        padding: $grid-gutter;
+       // @include typi('small');
+        margin-right: $grid-gutter*3;
+        position: relative;
+
+        &.is-activated{
+            border: 1px solid $base-primary-color;
+            background: transparent;
+            a{
+                color:$base-primary-color;
+                display: block;
+                &:hover{
+                    color:$base-white-color
+                }
+            }
+            &:hover{
+                color:$base-white-color;
+                background: $base-primary-color;
+                a{
+                    color:$base-white-color;
+                }
+            }
+            &::after{
+                color:$base-primary-color;
+            }
+        }
+        &.is-active{
+            color:$base-white-color;
+            background: $base-primary-color;
+            &::after{
+                color:$base-primary-color;
+            }
+            a{
+                color:$base-white-color;
+                display: block;
+            }
+        }
+        &:last-child{
+            margin-right: 0px;
+            &::after{
+                content:'';
+                display: none;
+            }
+        }
+        &::after{
+           @extend %font-icon;
+           content:'keyboard_arrow_right';
+           position: absolute;
+           right: -48px;
+           top: 0;
+           padding: $grid-gutter;
+        }
+    }
+
+
+}

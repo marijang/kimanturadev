@@ -1,0 +1,30 @@
+
+.woocommerce-MyAccount-navigation {
+    list-style: none;
+    flex:1;
+    ul{
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+.woocommerce-MyAccount-navigation-link{
+    padding-bottom: $grid-gutter;
+    a{
+        color: $dashboard-nav-color;
+        &:hover{
+            color: $dashboard-nav-hover-color;
+        }
+    }
+    &.is-active{
+        a{
+            color:  $dashboard-nav-hover-color;
+        }
+    }
+}
+
+.woocommerce-MyAccount-content{
+    flex:3;
+    display: flex;
+}

@@ -1,0 +1,191 @@
+@include b('single-product'){
+    @include e('item'){
+        display: flex;
+        position: relative;
+    }
+
+    @include e('regular-price'){
+        //  display: inherit!important;
+          text-decoration: line-through!important;
+          font-weight: normal;
+         
+      }
+      @include e('sale-price'){
+          display: inline-block;
+          padding-left: 8px;
+          font-weight: $base-font-weight-bold;
+          &::before{
+            content:' - ';
+          }
+          
+      }
+    @include e('summary'){
+       flex: 1;
+       margin-left: $base-content-padding;
+    }
+    @include e('gallery'){
+       flex: 1;
+       max-width: 50%;
+       position: relative;
+     }
+     @include element('price'){
+        display: block;
+        font-weight: $base-font-weight-bold;
+        font-family: $base-font-family-primary;
+       // @include typi('large');
+        color: $base-primary-color;
+        margin-bottom: $base-content-padding;
+    } 
+    @include element('variation-item'){
+        label{
+           // @include typi('label');
+            display: block;
+            margin-top: 0px;
+            font-weight: $base-font-weight-medium;
+
+        }
+    }
+    @include element('onsale'){
+        display: block;
+        //border-radius:$base-content-padding;
+        border: 1px solid $base-primary-color;
+        color: $base-primary-color;
+        position: absolute;
+        padding: $base-content-padding;
+        left: 50%;
+        transform: translateX(-150%);
+        span{
+
+        } 
+        &::after{ 
+           
+        }
+     }
+     @include element('meta'){
+        display: block;
+        margin-top: $base-content-padding*2;
+     }
+     @include element('sku'){
+        display: block;
+        margin-bottom: $base-content-padding/2;
+       //TODO @include typi('small');
+    } 
+    @include element('posted-in'){
+        display: none;
+       //TODO @include typi('xs');
+    } 
+    @include element('tagged-as'){
+        display: block;
+        //TODO @include typi('small');
+    } 
+    @include element('quantity'){
+        margin-right: $base-content-padding;
+    }
+    @include element('description'){
+        //margin-bottom: vr(1);
+        //TODO @include typi('small');
+    }
+    @include element('tab-wrapper'){
+      margin: 0 $base-content-padding*7;
+    }
+    @include element('tab'){
+        //margin-bottom: vr(1);
+        //TODO @include typi('small');
+    }
+    @include element('variations-form'){
+
+    }
+    @include element('stock'){
+    }
+    @include element('out-of-stock'){
+
+    }
+    @include element('js-variations'){
+        display: none;  
+        &.is-active{
+            display: block;
+        }
+    }
+    @include element('single-variation'){
+        //padding: $base-content-padding 0;
+       
+    }
+    @include element('variation-item'){
+       //display: flex;
+       //align-content: center;
+    }
+    @include element('variations-buttons'){
+       
+    }
+    @include element('reset-variations'){
+      display: none;  
+    }
+
+    @include element('variation-name'){
+        color: $base-black-color;
+    }
+    @include element('variations-button'){
+        display: flex;
+        margin-top: $base-content-padding;
+    }
+    @include element('variation-description'){
+        display: block;
+    }
+    @include element('variation-price'){
+        color: $base-primary-color;
+        display: inline-block;
+        display: none;
+    }
+    @include element('variation-selected-variation'){
+        color: $base-text-color;
+        display: inline-block;
+        padding-left: $base-content-padding;
+        display: none;
+    }
+    @include element('variation-availability'){
+        display: none;
+    }
+    @include element('upsells'){
+        margin-bottom: $base-content-padding*4;
+    }
+    @include element('related'){
+        margin-bottom: $base-content-padding*4;
+    }
+
+
+
+}
+
+
+.woocommerce-product-gallery__wrapper{
+    @extend %paragraph-reset;
+}
+
+.woocommerce-product-gallery__trigger{
+    display: none;
+}
+
+.flex-control-nav{
+    overflow: hidden;
+    @extend %list-reset;
+    align-items: stretch;
+    align-content: space-between;
+    display: flex;
+    li{
+        flex:1;
+
+        overflow: hidden;
+        transition: all 1s ease;
+        img{
+            transition: all 1s ease;
+            &:hover{
+                transform: scale(0.7);    
+            }
+        }
+    }
+    .flex-active{
+        border: 1px solid $base-primary-color;
+    }
+}
+
+

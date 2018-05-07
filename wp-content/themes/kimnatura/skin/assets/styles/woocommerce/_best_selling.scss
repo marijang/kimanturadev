@@ -1,0 +1,17 @@
+@include block('best-selling-products'){
+    @include container();
+    @include element('content'){
+        margin-bottom: $global-section-margin-bottom;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: $grid-gutter;
+        
+    }
+    @include element('title'){
+       
+    }
+
+    
+
+    
+}

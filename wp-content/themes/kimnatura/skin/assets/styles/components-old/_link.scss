@@ -1,0 +1,37 @@
+@include block('link'){
+    @include modifier('primary'){
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    margin-left: 32px;
+       &::before{
+           content:'';
+           position: absolute;
+           width: 24px;
+           height: 2px;
+           background: $primary-color;
+           left: -32px;
+           top: 14px;
+           
+       } 
+       &::after{
+            
+            vertical-align: middle;
+            margin-bottom: 2px;
+            
+       }
+       &:hover{
+        &::after{
+            @extend .mi;
+            content:'keyboard_arrow_right';
+          animation: move8px .42s ease-in-out
+        }
+       }
+    }
+}
+
+@keyframes move8px {
+    50% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px)
+    }
+}

@@ -1,0 +1,86 @@
+
+
+@include block('section'){
+
+    //padding-bottom: 64px;
+    padding: 32px 0;
+    position: relative;
+    @include container();
+    margin-bottom: 32px;
+
+    @include element('content'){
+        @include container();
+    }
+    @include element('container'){
+        @include container();
+    }
+
+    @include m('pad'){
+        padding: 32px 0;
+    }
+
+    @include m('r-pad'){
+        padding-right: 264px;
+    }
+
+
+
+    @include m('primary'){
+       background: $section-background-color-primary;
+    }
+    @include m('fluid'){
+        max-width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+     }
+     @include m('wide'){
+        max-width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+     }
+
+
+    @include element('title'){
+        //margin-bottom: 0;
+        @include m('center'){
+            text-align: center;
+        }
+        @include m('content'){
+            margin-top: 0px;
+        }
+    }
+
+    @include element('divider'){
+        display: block;
+        border: 0;
+        text-align: center;
+        overflow: visible;
+        margin-top: 52px;
+        margin-bottom: 42px;
+        &:before {
+            --x-height-multiplier: 0.342;
+            --baseline-multiplier: 0.22;
+            content: '...';
+            display: inline-block;
+            margin-left: .6em;
+            color: rgba(0,0,0,.68);
+            position: relative;
+            top: -30px;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 30px;
+            letter-spacing: .6em;
+        }
+    }
+
+    @include element('blog-lastest'){
+        background: url('img/cipka-r.png');
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
+    @include modifier('background'){
+        background: url('img/cipka-r.png');
+        background-repeat: no-repeat;
+        background-position: center right;
+    }
+}

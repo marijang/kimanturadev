@@ -1,0 +1,9 @@
+@include block('woocommerce-message'){
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @include element('info'){
+
+    } 
+}

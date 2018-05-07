@@ -1,0 +1,121 @@
+$link-color:                #3DC19E;
+$link-decoration:           none !default;
+$link-hover-color:          darken(#3dc19e,20%);
+$link-hover-decoration:     underline !default;
+
+
+$title-link-color: #262626;
+$title-hover-color: #262626;
+
+$color-white: #fff;
+$primary-color: #3DC19E;
+$primary-color-text: #fff;
+$color-grey: #BDBDBD;
+$color-dark-grey: #C4C4C4;
+$color-black: #333;
+$color-light-grey: #F9F9F9;
+
+
+$base-black-color:       #000000;
+$base-white-color:       #FFFFFF;
+
+$base-rouge-color:       #C3151B;
+$base-dark-color:        #2F2F2F;
+$base-abbey-color:       #424446;
+$base-battleship-color:  #71787C;
+$base-chateau-color:     #A9B0B5;
+$base-silver-sand-color: #BDC3C7;
+$base-silver-color:      #E5E7E9;
+$base-porcelain-color:   #EEF0F1;
+$base-whild-sand-color:  #F6F6F6;
+$base-green-color:       #3DC19E;
+$base-malachite-color:   #15C343;
+
+
+$base-color-light-grey:  #F9F9F9;
+$base-primary-color:     #3DC19E;
+$base-grey-color:        $base-silver-sand-color;
+$base-light-grey-color:  #F9F9F9;
+
+$global-input-focus-color: rgba($base-black-color, 0.2);
+
+// Defaults
+$base-text-color: $base-dark-color;
+$base-text-muted-color:#b1b1b3;
+$base-bg-color:   $base-white-color;
+
+// Border
+$base-border-color: $base-grey-color;
+
+// Link
+$base-link-muted-color: $base-chateau-color;
+
+
+// Table
+$base-table-border-color: $base-chateau-color;
+
+
+// Woocommerce Multistep
+$multistep-background-color: $base-chateau-color;
+$multistep-text-color:       $base-black-color;
+
+
+// Footer
+$footer-bg-color-primary: #3A4542;
+$footer-bg-color-secondary: rgba(0,0,0,.25);
+$footer-text-color: #fff;
+$footer-link-color: #fff;
+$footer-hover-color: lighten($footer-link-color,25%);
+
+// Text color helper
+$color-map: (
+  primary:    $base-primary-color,
+  white:      $base-white-color,
+  whild-sand: $base-whild-sand-color
+);
+
+// Buttons
+$button-color-map: (
+  default: (
+    bg: transparent,
+    text: $base-primary-color,
+    border: $base-primary-color,
+    bg-hover: $base-primary-color,
+    text-hover: $base-white-color,
+    border-hover: $base-primary-color
+  ),
+
+  primary: (
+    bg: $base-primary-color,
+    text: $base-white-color,
+    border: $base-primary-color,
+    bg-hover: $base-primary-color,
+    text-hover: $base-white-color,
+    border-hover: $base-primary-color
+  ),
+
+  ghost: (
+    bg: transparent,
+    text: $base-primary-color,
+    border: $base-primary-color,
+    bg-hover: $base-primary-color,
+    text-hover: $base-white-color,
+    border-hover: $base-primary-color
+  ),
+
+  default-bordered: (
+    bg: transparent,
+    text: $base-primary-color,
+    border: $base-primary-color,
+    bg-hover: $base-primary-color,
+    text-hover: $base-white-color,
+    border-hover: $base-primary-color
+  )
+);
+
+$links-map: (
+  default: (
+    color: $base-primary-color,
+    hover: $base-dark-color
+  )
+);
