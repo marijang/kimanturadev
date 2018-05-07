@@ -8,6 +8,9 @@ $base-font-family-primary:            $font-family-heading-sans-serif;
 $base-font-primary-letter-spacing:    0.5px;
 $base-font-family-secondary:          $font-family-sans-serif;
 $base-font-secondary-letter-spacing:  0.5px;
+$base-font-weight-thin: 300;
+$base-font-weight-bold: 700;
+$base-font-weight-medium:600;
 
 
 $base-icons-font-family:  'Material Icons';
@@ -16,7 +19,8 @@ $paragraph-font-family:   $font-family-sans-serif;
 // Container
 $base-content-padding: 16px;
 $base-content-full-width: 1200px;
-$base-content-width: $base-content-full-width + ($base-content-padding*2);
+$base-content-width:1200px;
+//$base-content-width: $base-content-full-width + ($base-content-padding*2);
 $grid-gutter: $base-content-padding;
 
 // Section
@@ -41,8 +45,7 @@ $typography-map: (
   )
 );
 
-$base-font-weight-bold: 700;
-$base-font-weight-medium:600;
+
 
 $media-breakpoints: (
   mobile: 0 767,

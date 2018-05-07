@@ -27,5 +27,5 @@ if ( have_posts() ) {
   get_template_part( 'template-parts/listing/articles/empty' );
 
 };
-
+do_action('b4b_after_single_page');
 get_footer();

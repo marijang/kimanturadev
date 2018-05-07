@@ -1,0 +1,32 @@
+$hero-content-top:      $base-content-padding*2;
+$hero-content-bottom:   auto;
+$hero-content-left:     $base-content-padding*2;
+$hero-content-right:    auto;
+$hero-content-padding:  $base-content-padding*2;
+
+
+@include block('hero'){
+    @include element('item'){
+        position: relative;
+    }
+    @include element('wrapper'){
+
+    }
+    @include element('title'){
+
+    }
+    @include element('link'){
+
+    }
+    @include element('content'){
+        position: absolute;
+        top:$hero-content-top;
+        left:$hero-content-left;
+        bottom:$hero-content-bottom;
+        right:$hero-content-right;
+        padding: $hero-content-padding;
+    }
+    @include element('image'){
+        width: 100%;
+    }
+}

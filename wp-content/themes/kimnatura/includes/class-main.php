@@ -74,11 +74,14 @@ class Main {
     } else {
       $this->theme_name = 'kimnatura';
     }
-
+    
     $this->load_dependencies();
     $this->define_admin_hooks();
     $this->define_theme_hooks();
     $this->define_woo_hooks(); 
+    $this->define_blog_hooks();
+
+
   }
 
   /**
@@ -118,7 +121,7 @@ class Main {
     $widgets     = new Admin\Widgets( $this->get_theme_info() );
     $menu        = new Menu\Menu( $this->get_theme_info() );
     $media       = new Admin\Media( $this->get_theme_info() );
-    $blog        = new Admin\Blog( $this->get_theme_info() );
+  
 
     // Admin.
     $this->loader->add_action( 'login_enqueue_scripts', $admin, 'enqueue_styles' );
@@ -199,8 +202,11 @@ class Main {
     // Gallery.
     $this->loader->add_filter( 'post_gallery', $gallery, 'wrap_post_gallery', 10, 3 );
 
+ 
+
     // General.
     $this->loader->add_action( 'after_setup_theme', $general, 'add_theme_support' );
+    $this->loader->add_filter( 'image_size_names_choose', $general, 'wpshout_custom_sizes', 10 );
 
     // Pagination.
     $this->loader->add_filter( 'next_posts_link_attributes', $pagination, 'pagination_link_next_class' );
@@ -209,13 +215,30 @@ class Main {
   }
 
   /**
+   * Register all of the hooks related to the blog functionality.
+   *
+   * @since 2.0.0
+   */
+  private function define_blog_hooks() {
+    $woo          = new Woo( $this->get_theme_info() );
+    $blog         = new Admin\Blog( $this->get_theme_info() );
+
+
+    $this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
+    $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
+    $this->loader->add_action('b4b_before_home_page',$woo,'woocommerce_related_products',10);
+    $this->loader->add_action('b4b_after_home_page',$blog,'last_news',20);
+    
+  }
+  
+  /**
    * Register all of the hooks related to the theme area functionality.
    *
    * @since 2.0.0
    */
   private function define_woo_hooks() {
     $woo          = new Woo( $this->get_theme_info() );
-
+    $blog         = new Admin\Blog( $this->get_theme_info() );
     $this->loader->add_action( 'after_setup_theme', $woo, 'add_theme_support' );
     $this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_styles' );
     $this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_scripts' );
@@ -302,7 +325,10 @@ class Main {
     
 
     
+    // Filter
     
+    $this->loader->add_action('woocommerce_product_query',$woo, 'filter_product_query' );
+    $this->loader->add_action('woocommerce_after_main_content',$blog,'last_news');
     
   }
  

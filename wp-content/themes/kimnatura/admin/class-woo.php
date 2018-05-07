@@ -69,7 +69,7 @@ class Woo {
     add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
-    add_image_size( 'shop-catalog', 250,200, true );
+    
   }
 
   /**
@@ -709,6 +709,29 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
         }
         } 
         return   round($max_percentage) . "%";
+        }
+    }
+
+
+
+    // Categroy filter
+    // Shop query for sidebar
+
+
+    function filter_product_query( $q ){
+        $taxonomies = array();
+        if (!empty($_GET['category'])) {
+            $categories = explode(',',$_GET['category']);
+            $taxonomies[] = array (
+                'taxonomy' => 'product_cat',
+                'field' => 'slug',
+                'terms' => $categories
+            );
+        }
+        // https://wordpress.stackexchange.com/questions/25076/how-to-filter-wordpress-search-excluding-post-in-some-custom-taxonomies
+        $taxonomy_query = array('relation' => 'OR', $taxonomies);
+        if (!empty( $taxonomies)) {
+            $q->set('tax_query', $taxonomy_query);
         }
     }
 }

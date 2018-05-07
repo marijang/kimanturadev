@@ -21,11 +21,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $post, $product;
-
+use Kimnatura\Admin\Woo as Woo;
+$woo  = new Woo();
+$sale = $woo->show_sale_percentage();
 ?>
 <?php if ( $product->is_on_sale() ) : ?>
 
-	<?php echo apply_filters( 'woocommerce_sale_flash', '<span class="shop-catalog__onsale"><span>' . esc_html__( 'Sale!', 'woocommerce' ) . '</span></span>', $post, $product ); ?>
+	<?php echo apply_filters( 'woocommerce_sale_flash', '<span class="shop-catalog__onsale"><span>' . $sale  . '</span></span>', $post, $product ); ?>
 
 <?php endif;
 

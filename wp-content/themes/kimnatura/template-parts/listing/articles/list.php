@@ -13,7 +13,7 @@ $image  = $images->get_post_image( 'listing' );
   <div class="article-list__container">
     <div class="article-list__image">
       <a class="article-list__image-link" href="<?php the_permalink(); ?>">
-           <?php  the_post_thumbnail( 'listing'); ?>
+           <?php  the_post_thumbnail( 'blog-list'); ?>
       </a>
     </div>
     <div class="article-list__content">
@@ -27,7 +27,7 @@ $image  = $images->get_post_image( 'listing' );
       <div class="article-list__excerpt">
         <?php the_excerpt(); ?>
       </div>
-      <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class="article-list__link">Saznaj više</a>
+      <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class="article-list__link"><?php echo __('Saznaj više','kimnatura');?></a>
     </div>
   </div>
   <?php require locate_template( 'template-parts/parts/google-rich-snippets.php' ); ?>

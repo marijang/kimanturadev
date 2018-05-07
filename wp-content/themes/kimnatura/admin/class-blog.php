@@ -81,84 +81,50 @@ class Blog {
        // add_filter('b4b_checkout_step','b4b_test');
   }
 
- 
+  function last_news() {		
+		get_template_part( 'section-templates/last-news' );
+  }
+  /*
+  if ( is_front_page() && is_home() ) {
+    // Default homepage
+    $this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
+    $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);  
+  } elseif ( is_front_page() ){
+  //Static homepage
+  $this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
+  $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
+  } elseif ( is_home()){
+    //Blog page
+    $this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
+    //  $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
+  } else {
+    //everything else
+    $this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
+    $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
+  }
+  */
 
-  public function b4b_test($step=1) {
-    $t = '';
-    //$t.='C Step='.$step;
-    if (is_cart()) {
-      $step =  0;
+  public function dynamic_load($test=""){
+    global $woo;
+    if ( is_front_page() && is_home() ) {
+      // Default homepage
+      
+      add_action('b4b_after_single_page',array($woo,'woocommerce_related_products'),10);
+      add_action('b4b_after_single_page',array($this,'last_news'),20);  
+    } elseif ( is_front_page() ){
+    //Static homepage
+    echo "TO";
+       add_action('b4b_before_home_page',array($woo,'woocommerce_related_products'),10);
+       add_action('b4b_after_single_page',array($this,'last_news'),20);
+    } elseif ( is_home()){
+      //Blog page
+      add_action('b4b_after_single_page',array($this,'woocommerce_related_products'),10);
+      //  $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
+    } else {
+      //everything else
+      add_action('b4b_after_single_page',array($woo,'woocommerce_related_products'),10);
+      add_action('b4b_after_single_page',array($blog,'last_news'),20);
     }
-    if (Is_checkout()) {
-      $step =  1;
-    }
-    if (is_wc_endpoint_url( 'order-pay' )) {
-      $t .="order-pay";
-    }
-    if (is_wc_endpoint_url( 'order-received' )) {
-      $t .="order-received";
-    }
-  
-  
-    if (is_account_page()) {
-      $t .="acount_page";
-    }
-    if (is_cart()) {
-      //$t .="Cart";
-    }
-     //var_dump($_POST);
-    
-    //is_order_received_page
-  
-    
-    if (Is_view_order_page()) {
-      $step =  2;
-    }
-    if (Is_order_received_page()) {
-      $step =  3;
-    }
-    if (Is_view_order_page()) {
-      $step =  4;
-    }
-     
-    /*
-     * Page title
-     *  
-    $t  .= '<header class="page__title">';
-    $t  .= '<h1 class="page__title">'.get_the_title( ).'</h1>'; 
-    $t  .= '<p class="page__description">'.get_the_subtitle().'</p>';
-    $t  .= '</header>';
-    */
-      //$t.='Step='.$step;
-    $t  .= 'oooooo<ul class="page__shop-checkout-navigation">';
-    // First item
-    $t  .= '<li id="wc-multistep-cart" data-step="cart" class="page__shop-checkout-navigation-item '. ( ($step == 0 ) ? 'is-active' : '').' '. ( ($step > 0 ) ? 'is-activated' : '').'" >';
-    //$t  .= __('Košarica','b4b');
-    if ($step>0){
-      $t .= '<a href="'.get_permalink( wc_get_page_id( 'cart' )).'">'.__('Košarica','b4b').'</a>';
-    }else{
-      $t .= '<a href="'.get_permalink( wc_get_page_id( 'cart' )).'">'.__('Košarica','b4b').'</a>';
-    }
-    $t  .= '</li>';
-    // Second item
-    $t  .= '<li id="wc-multistep-details" data-step="customer-details" class="page__shop-checkout-navigation-item '. ( ($step == 1) ? 'is-active' : '').'" >';
-    $t  .= __('Dostava','b4b');
-    $t  .= '</li>';
-    // Third item
-    $t  .= '<li id="wc-multistep-payment" data-step="payment" class="page__shop-checkout-navigation-item '. ( ($step == 2) ? 'is-active' : '').'" >';
-    $t  .= __('Način plačanja','b4b');
-    $t  .= '</li>';
-    // Fourth Item
-    $t  .= '<li id="wc-multistep-finish" data-step="finish" class="page__shop-checkout-navigation-item is-last 
-    '. ( ($step == 3) ? ' is-active' : '').'" >';
-    $t  .= __('Potvrda','b4b');
-    $t  .= '</li>';
-  
-  
-    $t  .=  "</ul>";
-    //$t  .= '<div class="page__content">';  
-    //$t  .= 'Show:'.($step == 0) ? 'is-active' : 'prazno';
-    return $t;
   }
 
   public function inf_exclude_category( $query ) {

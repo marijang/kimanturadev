@@ -39,7 +39,7 @@ $woo  = new Woo();
         <?php 
         if($product->is_on_sale()){
             $sale = $woo->show_sale_percentage();
-            echo '<span class="featured-link__onsale">'.$sale.  esc_html__( 'Sale!', 'woocommerce' ). '</span>';
+            echo '<span class="featured-link__onsale">'.$sale .'</span>'; //  esc_html__( 'Sale!', 'woocommerce' ). '</span>';
         }
         if (has_post_thumbnail( $loop->post->ID )) 
         echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog',array('class'=>'featured-link__image')); 

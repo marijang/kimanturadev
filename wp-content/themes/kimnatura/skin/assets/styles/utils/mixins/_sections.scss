@@ -49,3 +49,24 @@
     }
   }
 }
+
+//section single color item from map
+@mixin section-color($key) {
+  $bg: map_get($key, bg);
+  background-color: $bg;
+}
+
+//Section color items from map
+@mixin section-colors($map: $section-color-map) {
+  @each $key, $value in $map {
+    @if $key == default {
+      @include section-color($value);
+    }
+
+    @else {
+      &--#{$key}-color {
+        @include section-color($value);
+      }
+    }
+  }
+}

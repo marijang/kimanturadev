@@ -2,6 +2,18 @@ import 'slick-carousel';
 
 $(function() {
 
+  $('.hero-slider-slick').slick({
+// normal options...
+      infinite: false,
+      infinite: true,
+      slidesToShow: 1,
+      dots:true,
+      arrows:false,
+      //cssEase: 'ease-in-out',
+      //autoplay:true,
+      //autoplaySpeed: 3000
+    });
+
 $(".slider-slick").slick({
 
   // normal options...

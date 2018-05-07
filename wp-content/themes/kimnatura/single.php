@@ -15,4 +15,5 @@ if ( have_posts() ) {
   }
 }
 
+do_action('b4b_after_single_page');
 get_footer();
