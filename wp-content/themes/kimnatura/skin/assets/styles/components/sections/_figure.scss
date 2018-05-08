@@ -1,0 +1,21 @@
+@include b('fig-item'){
+    padding: 0 32px 32px 0;
+    position: relative;
+    display: grid;
+
+    @include e('img'){
+        max-width: 100%;
+        height: auto;
+    }
+
+    @include e('caption'){
+        padding: 32px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: $base-primary-color;
+        color: $base-white-color;
+
+        //height i width potrebno postaviti drugom klasom
+    }
+}
