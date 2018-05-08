@@ -74,11 +74,14 @@ class Main {
     } else {
       $this->theme_name = 'kimnatura';
     }
-
+    
     $this->load_dependencies();
     $this->define_admin_hooks();
     $this->define_theme_hooks();
     $this->define_woo_hooks(); 
+    $this->define_blog_hooks();
+
+
   }
 
   /**
@@ -118,7 +121,7 @@ class Main {
     $widgets     = new Admin\Widgets( $this->get_theme_info() );
     $menu        = new Menu\Menu( $this->get_theme_info() );
     $media       = new Admin\Media( $this->get_theme_info() );
-    $blog        = new Admin\Blog( $this->get_theme_info() );
+  
 
     // Admin.
     $this->loader->add_action( 'login_enqueue_scripts', $admin, 'enqueue_styles' );
@@ -199,8 +202,11 @@ class Main {
     // Gallery.
     $this->loader->add_filter( 'post_gallery', $gallery, 'wrap_post_gallery', 10, 3 );
 
+ 
+
     // General.
     $this->loader->add_action( 'after_setup_theme', $general, 'add_theme_support' );
+    $this->loader->add_filter( 'image_size_names_choose', $general, 'wpshout_custom_sizes', 10 );
 
     // Pagination.
     $this->loader->add_filter( 'next_posts_link_attributes', $pagination, 'pagination_link_next_class' );
@@ -209,13 +215,30 @@ class Main {
   }
 
   /**
+   * Register all of the hooks related to the blog functionality.
+   *
+   * @since 2.0.0
+   */
+  private function define_blog_hooks() {
+    $woo          = new Woo( $this->get_theme_info() );
+    $blog         = new Admin\Blog( $this->get_theme_info() );
+
+
+    $this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
+    $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
+    $this->loader->add_action('b4b_before_home_page',$woo,'woocommerce_related_products',10);
+    $this->loader->add_action('b4b_after_home_page',$blog,'last_news',20);
+    
+  }
+  
+  /**
    * Register all of the hooks related to the theme area functionality.
    *
    * @since 2.0.0
    */
   private function define_woo_hooks() {
     $woo          = new Woo( $this->get_theme_info() );
-
+    $blog         = new Admin\Blog( $this->get_theme_info() );
     $this->loader->add_action( 'after_setup_theme', $woo, 'add_theme_support' );
     $this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_styles' );
     $this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_scripts' );
@@ -235,23 +258,20 @@ class Main {
       remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
       //add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
 
-      // Variable product
-      // remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation', 10, 0);
-      //add_action( 'b4b_woocommerce_price', 'woocommerce_single_variation' );
-
       // Remove upsell i crosell
       remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
       remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
       // Single variation
       remove_action('woocommerce_single_variation','woocommerce_single_variation',10);
- 
+      remove_action('woocommerce_before_shop_loop_item','woocommerce_template_loop_product_link_open',10);
       
     });
+    
     // Remove Checkout form
     remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
     add_action('woocommerce_custom_login_form','woocommerce_checkout_login_form', 10);
-    //$this->loaderadd_action( 'b4b_account_before','b4b_user_navigation' );
+   
     $this->loader->add_action( 'woocommerce_before_single_product',$woo, 'move_variations_single_price', 1 );
 
 
@@ -266,12 +286,12 @@ class Main {
     $this->loader->add_filter('woocommerce_cart_item_name',$woo,'b4b_woocommerce_cart_item_name',10,3);
 
 
-    $this->loader->add_action('woocommerce_before_shop_loop_item',$woo,'woocommerce_template_loop_product_link_open');
-
+    $this->loader->add_action('woocommerce_before_shop_loop_item',$woo,'woocommerce_template_loop_product_link_open',10);
+    //$this->loader->add_action('woocommerce_before_shop_loop_item',$woo,'woocommerce_template_loop_product_link_open',10);
+    
     // Single variation
     // woocommerce_template_single_price ako zelimo u cijenu
-    $this->loader->add_action('woocommerce_single_variation',$woo,'woocommerce_single_variation',10);
-    //$this->loader->add_action('woocommerce_single_product_summary',$woo,'woocommerce_single_variation',40);
+    $this->loader->add_action('woocommerce_single_variation',$woo,'woocommerce_single_variation',10);;
     // Remove all actions
     $this->loader->remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description',10 );
     $this->loader->remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
@@ -298,11 +318,10 @@ class Main {
 
 
 
-    //$this->loader->add_action( 'woocommerce_after_shop_loop_item_title',$woo, 'catalog_item_title', 10, 2  );
+    // Filter
     
-
-    
-    
+    $this->loader->add_action('woocommerce_product_query',$woo, 'filter_product_query' );
+    $this->loader->add_action('woocommerce_after_main_content',$blog,'last_news');
     
   }
  

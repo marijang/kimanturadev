@@ -15,7 +15,7 @@ $woo  = new Woo();
 
 
 ?>
-<section class="section  page__related-products1 section__spacing-top--medium">
+<section class="section  page__related-products1 section__spacing-top--medium section__spacing-bottom--medium">
     <?php if (is_front_page()) :?>
     <h3 class="section__title section__title--center"><?php echo  $title;?></h3>
     <?php else :?>
@@ -35,11 +35,11 @@ $woo  = new Woo();
 		<div >
 
    
-        <a id="id-<?php the_id(); ?>" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="featured-link">
+        <a id="id-<?php the_id(); ?>" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="featured-link  <?php echo ($product->is_type( 'variable' ))?'featured-link__variable':'featured-link__simple'; ?>">
         <?php 
         if($product->is_on_sale()){
             $sale = $woo->show_sale_percentage();
-            echo '<span class="featured-link__onsale">'.$sale.  esc_html__( 'Sale!', 'woocommerce' ). '</span>';
+            echo '<span class="featured-link__onsale">'.$sale .'</span>'; //  esc_html__( 'Sale!', 'woocommerce' ). '</span>';
         }
         if (has_post_thumbnail( $loop->post->ID )) 
         echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog',array('class'=>'featured-link__image')); 
@@ -146,7 +146,7 @@ $woo  = new Woo();
                     }
                     ?>
                 </div>
-                <div class="featured-link__button">Idi na proizvod</div>
+                <div class="featured-link__button btn btn--primary btn--small">Idi na proizvod</div>
             </div>
         </a>
 			

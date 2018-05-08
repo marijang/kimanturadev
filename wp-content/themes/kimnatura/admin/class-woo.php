@@ -69,7 +69,7 @@ class Woo {
     add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
-    add_image_size( 'shop-catalog', 250,200, true );
+    
   }
 
   /**
@@ -471,17 +471,20 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
      */
     function catalog_item_image( $size = 'shop-catalog' ) {
         global $post, $woocommerce;
-        $output = '<div class="shop-catalog__image">';
+        echo '<div class="shop-catalog__image">';
 
-        if ( has_post_thumbnail() ) {               
-            $output .= get_the_post_thumbnail( $size );
+        if ( has_post_thumbnail() ) {       
+            //$output .="test";  
+            //echo "ok";      
+            the_post_thumbnail( 'shop-catalog' );
         } else {
            //  $output .= wc_placeholder_img( $size );
              // Or alternatively setting yours width and height shop_catalog dimensions.
              // $output .= '<img src="' . woocommerce_placeholder_img_src() . '" alt="Placeholder" width="300px" height="300px" />';
-        }                       
-        $output .= '</div>';
-        echo $output;
+        }              
+             
+        echo '</div>';
+       // echo $output;
     }
 
      /**
@@ -526,7 +529,7 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
             $string ='<div class="shop-catalog__variations">';
             foreach($attributes as $attribute){
                 foreach ($attribute as $variation){
-                    $string .='<span>'.$variation.'<span>';
+                    $string .='<span>'.$variation.'</span>';
                 }
             }
             $string .='</div>';	
@@ -549,14 +552,14 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
 		
 		//$html .= woocommerce_quantity_input( array(), $product, false );
 		//$html .= '' . esc_html( $product->add_to_cart_text() ) . '';
-		$html .= '' . __( 'Idi na proizvod','b4b' ) . '';
+		$html .= '' . __( 'Idi na proizvod','kimnatura' ) . '';
 		//$html .= '' . __( 'View product' ) . '';
 
 		$html .= '</a>';
 	}else{
 		$html = '<a href="' . esc_url( get_permalink($product->get_ID())) . '" class="shop-catalog__link-product btn btn--ghost btn--small  btn--fluid1" >';
 		//$html .= woocommerce_quantity_input( array(), $product, false );
-		$html .= '' . __( 'Idi na proizvod','b4b' ) . '';
+		$html .= '' . __( 'Idi na proizvod','kimnatura' ) . '';
 		//$html .= '' . esc_html( $product->add_to_cart_text() ) . '';
 
 		$html .= '</a>';
@@ -709,6 +712,29 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
         }
         } 
         return   round($max_percentage) . "%";
+        }
+    }
+
+
+
+    // Categroy filter
+    // Shop query for sidebar
+
+
+    function filter_product_query( $q ){
+        $taxonomies = array();
+        if (!empty($_GET['category'])) {
+            $categories = explode(',',$_GET['category']);
+            $taxonomies[] = array (
+                'taxonomy' => 'product_cat',
+                'field' => 'slug',
+                'terms' => $categories
+            );
+        }
+        // https://wordpress.stackexchange.com/questions/25076/how-to-filter-wordpress-search-excluding-post-in-some-custom-taxonomies
+        $taxonomy_query = array('relation' => 'OR', $taxonomies);
+        if (!empty( $taxonomies)) {
+            $q->set('tax_query', $taxonomy_query);
         }
     }
 }

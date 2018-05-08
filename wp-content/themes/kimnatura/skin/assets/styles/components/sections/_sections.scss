@@ -1,16 +1,57 @@
+$section-font-weight: $base-font-weight-thin;
+$section-img-width:   100%;
+$section-highlight-padding: $base-content-padding*4 $base-content-padding*3;
+$section-highlighted-font-weight: normal;
+$section-description-font-weight: $base-font-weight-thin;
+
 @include block('section'){
     @include section-spacings('top');
+    @include section-spacings('bottom');
 
    // background: red;
     @include container();
     @include element('image'){
         img{
-            width: 100%;
+            width: $section-img-width;
         }
     }
     @include element('title'){
         @include m('center'){
             text-align: center;
         }
+    }
+    @include element('description'){
+        font-weight: $section-description-font-weight;
+        @include m('center'){
+            text-align: center;
+        }
+    }
+
+    @include element('highlighted'){
+        @include typi('largest');  
+        @include p('e:link'){
+            font-weight: $section-highlighted-font-weight;
+        }
+        @include p('e:inner'){
+            display: flex;
+        }
+        @include p('e:content'){
+            flex:1;
+            font-weight: $section-font-weight;
+            padding:$section-highlight-padding;
+        }
+        
+        @include p('e:image'){
+            flex:1;
+        }
+    }
+
+    @include section-colors();
+
+    @include element('bg'){
+     //   background: red;
+        background: url('/wp-content/themes/kimnatura/skin/public/images/cipka-r.png');
+        background-repeat: no-repeat;
+        background-position: bottom right;
     }
 }

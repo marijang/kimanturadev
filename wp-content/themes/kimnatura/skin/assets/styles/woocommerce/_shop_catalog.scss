@@ -23,22 +23,13 @@
         
     }
     @include e('onsale'){
-        display: block;
-        //border-radius:$base-content-padding;
-        border: 1px solid $base-primary-color;
-        color: $base-primary-color;
-        font-weight: $base-font-weight-bold;
+        @extend %woocommerce-sale;
         position: absolute;
-        padding: $base-content-padding;
+        //padding: $base-content-padding;
         right: $base-content-padding/2;
         top: $base-content-padding/2;
        
-        span{
 
-        } 
-        &::after{ 
-           
-        }
     }
 
     @include element('items'){
@@ -55,7 +46,7 @@
     @include element('item'){
        display: block;
        a{
-           //display: block;
+           
        }
     }
 
@@ -74,31 +65,7 @@
             
         }
     }
-    @include element('onsale-old'){
-        width: 64px;
-        height: 134px;
-        background: $base-primary-color;
-        position: absolute;
-        top:-45px;
-        right:-10px;
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            -o-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-        span{
-            position:absolute;
-            top:58px;
-            left:4px;
-            -webkit-transform: rotate(45deg);
-               -moz-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                 -o-transform: rotate(45deg);
-                    transform: rotate(45deg);
-            font-size:12px;
-            color:#fff;
-        }
-    }
+
     @include element('title'){
         margin: 0;
        // @include typi('h6');
@@ -106,6 +73,7 @@
     }
     @include element('price'){
         margin: 0;  
+        color:$base-primary-color;
         //@include typi('h6');
         font-weight: 700;
     } 
@@ -130,6 +98,7 @@
         position: relative;
         overflow: hidden;
         display: block;
+        color:$base-text-color;
     }
     
 }

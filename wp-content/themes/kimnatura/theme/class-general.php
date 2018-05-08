@@ -51,7 +51,28 @@ class General {
   public function add_theme_support() {
     add_theme_support( 'title-tag', 'html5' );
     add_image_size( 'full-width', 1200,400, true );  //300 pixels wide (and unlimited height) 
-  //  add_image_size( 'shop-catalog', 250,200, true );  //300 pixels wide (and unlimited height) 
+    add_image_size( 'highlighted', 564,493, true ); // Try to not use
+    add_image_size( 'shop-catalog', 375,250, true );
+    add_image_size( 'shop-catalog-small', 342,228, true );
+    add_image_size( 'sastojci', 1200,400, true );
+    add_image_size( 'product', 585, 390,true);
+    add_image_size( 'blog-list', 567, 493,true);
+    add_image_size('gallery-large',668,437,true);
+    add_image_size('gallery-small',468,437,true);
+
+ 
   }
+
+
+  public function wpshout_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+      'gallery-large' => __( 'Gallery Large' ),
+      'gallery-small' => __( 'Gallery Small' ),
+      'full-width' => __( 'Full Width' ),
+      'highlighted' => __( 'Highlighetd Post' ),
+      //'medium-something' => __( 'Medium Something' ),
+    ) );
+  }
+
 
 }

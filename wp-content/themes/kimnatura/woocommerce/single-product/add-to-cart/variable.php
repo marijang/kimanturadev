@@ -55,10 +55,9 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	echo end( $attribute_keys ) === $attribute_name ? apply_filters( 'woocommerce_reset_variations_link', '<a class="single-product__reset-variations reset_variations" href="#">' . esc_html__( 'Clear', 'woocommerce' ) . '</a>' ) : '';
 	?>
 	</div>
-	</div>
+
 <?php endforeach;?>
-
-
+</div>
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
 		<div class="single_variation_wrap">
@@ -90,4 +89,4 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 </form>
 
 <?php
-do_action( 'woocommerce_after_add_to_cart_form' );
+do_action( 'woocommerce_after_add_to_cart_form1' );

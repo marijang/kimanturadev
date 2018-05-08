@@ -35,7 +35,7 @@ $base-malachite-color:   #15C343;
 
 $base-color-light-grey:  #F9F9F9;
 $base-primary-color:     #3DC19E;
-$base-grey-color:        $base-silver-sand-color;
+$base-grey-color:        #FAFAFA;
 $base-light-grey-color:  #F9F9F9;
 
 $global-input-focus-color: rgba($base-black-color, 0.2);
@@ -73,6 +73,13 @@ $color-map: (
   primary:    $base-primary-color,
   white:      $base-white-color,
   whild-sand: $base-whild-sand-color
+);
+
+// Buttons
+$section-color-map: (
+  highlighted : (
+    bg: $base-grey-color
+  )
 );
 
 // Buttons
