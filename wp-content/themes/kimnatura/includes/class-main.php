@@ -258,10 +258,6 @@ class Main {
       remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
       //add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
 
-      // Variable product
-      // remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation', 10, 0);
-      //add_action( 'b4b_woocommerce_price', 'woocommerce_single_variation' );
-
       // Remove upsell i crosell
       remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
       remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
@@ -274,7 +270,7 @@ class Main {
     // Remove Checkout form
     remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
     add_action('woocommerce_custom_login_form','woocommerce_checkout_login_form', 10);
-    //$this->loaderadd_action( 'b4b_account_before','b4b_user_navigation' );
+   
     $this->loader->add_action( 'woocommerce_before_single_product',$woo, 'move_variations_single_price', 1 );
 
 
@@ -293,8 +289,7 @@ class Main {
 
     // Single variation
     // woocommerce_template_single_price ako zelimo u cijenu
-    $this->loader->add_action('woocommerce_single_variation',$woo,'woocommerce_single_variation',10);
-    //$this->loader->add_action('woocommerce_single_product_summary',$woo,'woocommerce_single_variation',40);
+    $this->loader->add_action('woocommerce_single_variation',$woo,'woocommerce_single_variation',10);;
     // Remove all actions
     $this->loader->remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description',10 );
     $this->loader->remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
@@ -321,10 +316,6 @@ class Main {
 
 
 
-    //$this->loader->add_action( 'woocommerce_after_shop_loop_item_title',$woo, 'catalog_item_title', 10, 2  );
-    
-
-    
     // Filter
     
     $this->loader->add_action('woocommerce_product_query',$woo, 'filter_product_query' );

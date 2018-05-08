@@ -474,7 +474,7 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
         $output = '<div class="shop-catalog__image">';
 
         if ( has_post_thumbnail() ) {               
-            $output .= get_the_post_thumbnail( $size );
+            $output .= get_the_post_thumbnail( 'shop-catalog' );
         } else {
            //  $output .= wc_placeholder_img( $size );
              // Or alternatively setting yours width and height shop_catalog dimensions.
@@ -526,7 +526,7 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
             $string ='<div class="shop-catalog__variations">';
             foreach($attributes as $attribute){
                 foreach ($attribute as $variation){
-                    $string .='<span>'.$variation.'<span>';
+                    $string .='<span>'.$variation.'</span>';
                 }
             }
             $string .='</div>';	

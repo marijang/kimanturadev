@@ -68,10 +68,10 @@ if ( post_password_required() ) {
 			do_action( 'woocommerce_single_product_summary' );
 			//do_shortcode('addthis_sharing_buttons');
 		?>
-		<?php echo eyespeak_share(); ?>
+		<?php //echo eyespeak_share(); ?>
 		
 		
-	</div>
+	</div><!--end of product__summary -->
 
 
 </div>
