@@ -1,0 +1,133 @@
+$contact-padding: $base-content-padding;
+$contact-primary-color: $base-primary-color;
+$contact-white: $base-white-color;
+
+
+@include b('contact'){
+    position: relative;
+
+    @include e('form'){
+        color: $base-white-color!important;
+        //background-color: $primary-color-text!important;
+        margin-left: $contact-padding*2!important;
+        margin-top: -$contact-padding*3!important;
+        min-width: calc(50% - 96px)!important;
+        max-width: calc(50% - 96px)!important;
+        padding: 55px 40px!important;
+        background-color: $contact-primary-color!important;
+        
+    }
+
+    @include e('field'){
+        input, textarea {
+            color: $contact-primary-color!important;
+            background-color: $contact-white;
+            border: 0!important;
+            border-bottom: 1px solid $contact-primary-color;
+        }
+        
+        label {
+            font-weight: 400!important;
+        }
+
+
+
+        @include m('inverted'){
+            input, textarea {
+                color: $contact-white!important;
+                background-color: $contact-primary-color!important;
+                border-bottom: 1px solid $contact-white!important;
+            }
+            label {
+                color: $contact-white!important;
+            }
+        }
+    }
+
+    @include e('address'){
+        padding: 100px 132px;
+    }
+
+    @include e('address-title'){
+        font-weight: 600;
+        margin-top: 0;
+    }
+
+    @include e('address-desc'){
+        margin: 0;
+        font-weight: normal;
+
+        @include m('last'){
+            margin-bottom: vr(1);
+        }
+    }
+
+    @include e('icon-row'){
+        display: flex;
+        line-height: 34px;
+    }
+
+    @include e('icon'){
+        margin-right: 16px;
+        line-height: inherit!important;
+        color: $contact-primary-color;
+    }
+
+    @include e('icon-text'){
+        line-height: inherit;
+        margin-bottom: 0;
+    }
+}
+
+div.wpforms-container-full .wpforms-form input[type=date],
+div.wpforms-container-full .wpforms-form input[type=datetime],
+div.wpforms-container-full .wpforms-form input[type=datetime-local],
+div.wpforms-container-full .wpforms-form input[type=email],
+div.wpforms-container-full .wpforms-form input[type=month],
+div.wpforms-container-full .wpforms-form input[type=number],
+div.wpforms-container-full .wpforms-form input[type=password],
+div.wpforms-container-full .wpforms-form input[type=range],
+div.wpforms-container-full .wpforms-form input[type=search],
+div.wpforms-container-full .wpforms-form input[type=tel],
+div.wpforms-container-full .wpforms-form input[type=text],
+div.wpforms-container-full .wpforms-form input[type=time],
+div.wpforms-container-full .wpforms-form input[type=url],
+div.wpforms-container-full .wpforms-form input[type=week],
+div.wpforms-container-full .wpforms-form select,
+div.wpforms-container-full .wpforms-form textarea {
+/*
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 2px;
+*/
+border-radius: 0px;
+box-sizing: border-box;
+color: #fff;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+display: block;
+float: none;
+font-size: 16px;
+padding: 6px 10px;
+height: 38px;
+width: 100%;
+line-height: 1.3;
+}
+
+div.wpforms-container-full .wpforms-form input,
+div.wpforms-container-full .wpforms-form select,
+div.wpforms-container-full .wpforms-form textarea {
+border-bottom:2px solid #fff;
+outline:none;
+}
+
+div.wpforms-container-full .wpforms-form input[type=checkbox],
+div.wpforms-container-full .wpforms-form input[type=radio] {
+border-bottom: 1px solid #ccc;
+background-color: #fff;
+width: 14px;
+height: 14px;
+margin: 0px 10px 0 3px;
+display: inline-block;
+vertical-align: baseline;
+}

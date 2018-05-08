@@ -32,8 +32,8 @@ html{
 p,
 ul,
 ol {
-  @extend %paragraph-reset;
-  padding-bottom: $cs-default-padding;
+   @extend %paragraph-reset;
+ // padding-bottom: $cs-default-padding;
   letter-spacing: $base-font-secondary-letter-spacing;
   font-family: $base-font-family-secondary;
   &.clear-spacing{

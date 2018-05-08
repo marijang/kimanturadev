@@ -64,6 +64,7 @@
 
 //Sections
 @import 'components/sections/sections';
+@import 'components/sections/figure';
 
 // Template parts
 @import 'components/parts/cookies-notification';
@@ -111,3 +112,11 @@
     border: 0;
     word-wrap: normal !important;
 }
+
+
+
+// contact page
+@import 'components/contact/contact';
+
+// prodajna mjesta page
+@import 'components/gallery/grid';
