@@ -1,8 +1,9 @@
-$section-font-weight: $base-font-weight-thin;
-$section-img-width:   100%;
-$section-highlight-padding: $base-content-padding*4 $base-content-padding*3;
-$section-highlighted-font-weight: normal;
-$section-description-font-weight: $base-font-weight-thin;
+$section-font-weight:                   $base-font-weight-thin;
+$section-img-width:                     100%;
+$section-highlight-padding:             $base-content-padding*4 $base-content-padding*3;
+$section-highlighted-font-weight:       normal;
+$section-description-font-weight:       $base-font-weight-thin;
+$section-description-space-bottom:      $base-content-padding*2;
 
 @include block('section'){
     @include section-spacings('top');
@@ -15,13 +16,19 @@ $section-description-font-weight: $base-font-weight-thin;
             width: $section-img-width;
         }
     }
+ 
     @include element('title'){
+        @extend %heading-reset;
         @include m('center'){
             text-align: center;
+        }
+        @include m('spacing-bottom'){
+            margin-bottom: $section-description-space-bottom;
         }
     }
     @include element('description'){
         font-weight: $section-description-font-weight;
+        @include typi('largest');
         @include m('center'){
             text-align: center;
         }

@@ -8,7 +8,7 @@ $article-min-height:      500px;
     margin-bottom: $article-bottom-spacing;
     margin-top: $article-top-spacing;
     @include first{
-      margin-top: $article-bottom-spacing;
+     // margin-top: $article-bottom-spacing;
     }
     @include element('container'){
         @include container();
