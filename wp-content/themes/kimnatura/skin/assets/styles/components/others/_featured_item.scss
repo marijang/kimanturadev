@@ -6,8 +6,9 @@
         display: block;
         color: inherit;
         height: 450px;
-        width: 348px;
+       // width: 348px;
         user-select: none;
+       // margin: 16px;
         outline:0;
         //z-index: 1;
         border: 1px solid $base-light-grey-color;
@@ -20,7 +21,7 @@
                 opacity: 1;
             }
             @include parse('e:movable'){
-                transform: translateY(-115px);
+                transform: translateY(-140px);
                // bottom:0;
             }
             @include parse('e:image'){
@@ -47,6 +48,7 @@
         @include element('image'){
             width: 100%;
             transition: transform 300ms;
+            height: 280px;
            
          }
         @include element('description'){
@@ -127,12 +129,16 @@
             display: block;
             //border-radius:$base-content-padding;
             border: 1px solid $base-primary-color;
-            color: $base-primary-color;
+            color: $base-white-color;
             font-weight: $base-font-weight-bold;
             position: absolute;
             padding: $base-content-padding;
             right: $base-content-padding/2;
             top: $base-content-padding/2;
+            @include typi('small');
+            line-height: 1;
+            background: $base-primary-color;
+            padding: $base-content-padding/2;
            
             span{
     
@@ -168,10 +174,8 @@
 
 
         @include element('button'){
-            @extend %link-transition;
-            font-size:16px;
-            display: block;
-            padding-top: $base-content-padding;
+    
+            margin-top: $base-content-padding;
            
         }
      

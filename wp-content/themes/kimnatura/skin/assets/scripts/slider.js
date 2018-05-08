@@ -22,6 +22,7 @@ $(".slider-slick").slick({
   slidesToShow: 3,
   slidesToScroll: 3,
   dots:true,
+  centerMode:false,
 
   // the magic
   responsive: [{

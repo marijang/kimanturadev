@@ -15,7 +15,7 @@ $woo  = new Woo();
 
 
 ?>
-<section class="section  page__related-products1 section__spacing-top--medium">
+<section class="section  page__related-products1 section__spacing-top--medium section__spacing-bottom--medium">
     <?php if (is_front_page()) :?>
     <h3 class="section__title section__title--center"><?php echo  $title;?></h3>
     <?php else :?>
@@ -146,7 +146,7 @@ $woo  = new Woo();
                     }
                     ?>
                 </div>
-                <div class="featured-link__button">Idi na proizvod</div>
+                <div class="featured-link__button btn btn--primary btn--small">Idi na proizvod</div>
             </div>
         </a>
 			

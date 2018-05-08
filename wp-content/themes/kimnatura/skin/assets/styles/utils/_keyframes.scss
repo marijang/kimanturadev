@@ -79,39 +79,24 @@
 
 /**
  * ----------------------------------------
- * animation focus-in-contract
+ * animation tracking-in-expand
+ * Url http://animista.net/play/text/tracking-in/tracking-in-expand
  * ----------------------------------------
  */
-@keyframes focus-in-contract {
-  0% {
-    letter-spacing: 1em;
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
 
-/**
- * ----------------------------------------
- * animation tracking-in-contract
- * ----------------------------------------
- */
-@keyframes tracking-in-contract {
+@keyframes tracking-in-expand {
   0% {
-    letter-spacing: 1em;
+    letter-spacing: -0.5em;
     opacity: 0;
   }
   40% {
     opacity: 0.6;
   }
   100% {
-    letter-spacing: normal;
     opacity: 1;
   }
 }
+
 
 
 /**
@@ -142,19 +127,7 @@
   }
 }
 
-/**
- * ----------------------------------------
- * animation text-blur-out
- * ----------------------------------------
- */
-@keyframes text-blur-out {
-  0% {
-    filter: blur(0.01);
-  }
-  100% {
-    filter: blur(12px) opacity(0%);
-  }
-}
+
 
 /**
  * ----------------------------------------

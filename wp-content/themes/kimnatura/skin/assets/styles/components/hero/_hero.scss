@@ -2,14 +2,39 @@ $hero-content-top:      $base-content-padding*2;
 $hero-content-bottom:   auto;
 $hero-content-left:     $base-content-padding*2;
 $hero-content-right:    auto;
-$hero-content-padding:  $base-content-padding*2;
+$hero-content-padding:  $base-content-padding;
+// Slick Dots
+$hero-content-dots-bottom: $base-content-padding;
+$hero-content-dots-right:  $base-content-padding;
+// Colors
+$hero-content-dots-inactive-color: #3A4542;
 
 
 @include block('hero'){
     @include element('item'){
         position: relative;
     }
-    @include element('wrapper'){
+    @include element('slider-wrapper'){
+
+        // Slick
+        .slick-dots{
+            position: absolute;
+            bottom: $hero-content-dots-bottom;
+            right:$hero-content-dots-right;
+            width: auto;
+            margin:0;
+        }
+        .slick-dots li button{
+            background: $hero-content-dots-inactive-color;
+            opacity: .5;
+        }
+         .slick-dots li button
+        ,.slick-dots.slick-active li button{
+            content: '';
+            color:transparent!important;
+            margin:0px;
+            opacity: 1;
+        }
 
     }
     @include element('title'){
@@ -19,14 +44,23 @@ $hero-content-padding:  $base-content-padding*2;
 
     }
     @include element('content'){
+       
+        z-index: 1;
         position: absolute;
         top:$hero-content-top;
         left:$hero-content-left;
         bottom:$hero-content-bottom;
         right:$hero-content-right;
         padding: $hero-content-padding;
+        width: 40%;
+        p,i,div{
+            transform: translate3d(0,0,0);
+        }
     }
     @include element('image'){
         width: 100%;
     }
+
+    
 }
+

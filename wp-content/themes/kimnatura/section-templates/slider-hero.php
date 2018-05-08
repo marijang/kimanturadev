@@ -23,7 +23,7 @@ foreach($result as $post):
     <div class="hero__item">
         <div class="hero__content">
             <h2 class="hero__title"><?php the_title(); ?></h2>
-            <?php the_subtitle( '<div class="hero__description"><i>', '<i></div>' ); ?>
+            <?php the_subtitle( '<div class="hero__description"><i>', '</i></div>' ); ?>
             <?php 
                 if( has_excerpt() ){
                     the_excerpt();
@@ -31,7 +31,7 @@ foreach($result as $post):
                     the_content(); 
                 }
             ?>
-            <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class="section__link"><?php echo __('Saznaj više','kimnatura');?></a>
+            <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class="section__link btn btn--ghost"><?php echo __('Saznaj više','kimnatura');?></a>
         </div>
          <?php the_post_thumbnail( 'full-width',array('class' => 'kenburns-bottom hero__image'));  ?>
 </div><!--end of hero item-->
@@ -41,5 +41,5 @@ endforeach;
 ?>
 </div>
 </div>
-<?
+<?php
 wp_reset_postdata();	
