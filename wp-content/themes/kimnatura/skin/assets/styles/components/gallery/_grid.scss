@@ -1,8 +1,15 @@
+$grid-gap-column: $base-content-padding*2;
+$grid-gap-row: $base-content-padding*2.5;
+$grid-gallery-space-bottom: $base-content-padding*6;
+$grid-icon-margin: $base-content-padding;
+$grid-item-title-space-bottom: $base-content-padding;
+
+
 @include b('grid2'){
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 32px;
-    margin-bottom: 96px;
+    grid-gap: $grid-gap-column;
+    margin-bottom: $grid-gallery-space-bottom;
 
     // @include e('item'){
     //     padding: 0 32px 32px 0;
@@ -23,11 +30,11 @@
 
     @include e('icon-row'){
         display: flex;
-        line-height: 34px;
+        line-height: 2em;
     }
 
     @include e('icon'){
-        margin-right: 16px;
+        margin-right: $grid-icon-margin;
         line-height: inherit!important;
     }
 
@@ -37,9 +44,9 @@
     }
 
     @include e('title'){
-        //margin-bottom: 16px;
-        margin-top: 0;
+        @extend %heading-reset;
 
+        margin-bottom: $grid-item-title-space-bottom;
     }
 
 }
@@ -48,19 +55,24 @@
 @include b('grid3'){
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 32px 40px;
+    grid-gap: $grid-gap-column $grid-gap-row;
 
     @include e('item'){
         padding: 0;
     }
 
+    @include e('item-title'){
+        @extend %heading-reset;
+        margin-bottom: $grid-item-title-space-bottom;
+    }
+
     @include e('icon-row'){
         display: flex;
-        line-height: 34px;
+        line-height: 2em;
     }
 
     @include e('icon'){
-        margin-right: 16px;
+        margin-right: $grid-icon-margin;
         line-height: inherit!important;
         color: $base-primary-color;
     }

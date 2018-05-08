@@ -1,5 +1,12 @@
-@include b('checkout'){
+$checkout-box-title-margin: $base-content-padding*2;
+$checkout-btn-margin-top:  $base-content-padding*6;
 
+@include b('checkout'){
+    @include e('btn'){
+        display: flex;
+        justify-content: flex-end;
+        margin-top: $checkout-btn-margin-top;
+    }
 
     @include e('grid'){
         display: flex;
@@ -21,7 +28,8 @@
 
 
     @include e('box-title'){
-        margin-top: 0;
+        @extend %heading-reset;
+        margin-bottom: $checkout-box-title-margin;
     }
 
     @include e('totals'){

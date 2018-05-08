@@ -1,8 +1,7 @@
+$cart-text-color: $base-text-color;
+$cart-totals-margin: $base-content-padding $base-content-padding $base-content-padding auto;
+
 @include b('cart'){
-
-
-
-
 
     @include e('item'){
         td {
@@ -24,7 +23,7 @@
         width: 40%;
 
         a {
-            color: $base-text-color;
+            color: $cart-text-color;
             font-weight: 600;
         }
     }
@@ -43,13 +42,14 @@
 
         a {
             font-size: 24px;
-            color: $base-text-color;
+            //@include typi(largest);
+            color: $cart-text-color;
         }
     }
 
     @include e('totals'){
         width: 33%!important;
-        margin: $base-content-padding $base-content-padding $base-content-padding auto;
+        margin: $cart-totals-margin;
 
         tr {
             border: 0;            
@@ -95,7 +95,7 @@
         //@include typi('s'); 
         
         margin-bottom: 0;
-        color: $base-text-color;
+        color: $cart-text-color;
         
     }
 
