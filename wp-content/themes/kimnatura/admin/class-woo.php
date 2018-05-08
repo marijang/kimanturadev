@@ -471,17 +471,20 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
      */
     function catalog_item_image( $size = 'shop-catalog' ) {
         global $post, $woocommerce;
-        $output = '<div class="shop-catalog__image">';
+        echo '<div class="shop-catalog__image">';
 
-        if ( has_post_thumbnail() ) {               
-            $output .= get_the_post_thumbnail( 'shop-catalog' );
+        if ( has_post_thumbnail() ) {       
+            //$output .="test";  
+            //echo "ok";      
+            the_post_thumbnail( 'shop-catalog' );
         } else {
            //  $output .= wc_placeholder_img( $size );
              // Or alternatively setting yours width and height shop_catalog dimensions.
              // $output .= '<img src="' . woocommerce_placeholder_img_src() . '" alt="Placeholder" width="300px" height="300px" />';
-        }                       
-        $output .= '</div>';
-        echo $output;
+        }              
+             
+        echo '</div>';
+       // echo $output;
     }
 
      /**
@@ -549,14 +552,14 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
 		
 		//$html .= woocommerce_quantity_input( array(), $product, false );
 		//$html .= '' . esc_html( $product->add_to_cart_text() ) . '';
-		$html .= '' . __( 'Idi na proizvod','b4b' ) . '';
+		$html .= '' . __( 'Idi na proizvod','kimnatura' ) . '';
 		//$html .= '' . __( 'View product' ) . '';
 
 		$html .= '</a>';
 	}else{
 		$html = '<a href="' . esc_url( get_permalink($product->get_ID())) . '" class="shop-catalog__link-product btn btn--ghost btn--small  btn--fluid1" >';
 		//$html .= woocommerce_quantity_input( array(), $product, false );
-		$html .= '' . __( 'Idi na proizvod','b4b' ) . '';
+		$html .= '' . __( 'Idi na proizvod','kimnatura' ) . '';
 		//$html .= '' . esc_html( $product->add_to_cart_text() ) . '';
 
 		$html .= '</a>';

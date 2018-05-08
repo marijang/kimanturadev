@@ -1,7 +1,7 @@
 @include b('featured-link'){
         position: relative;
         transition: transform 5s;
-        transition: 100ms ease-out;
+        transition: 300ms ease-in;
         transform-style: preserve-3d;
         display: block;
         color: inherit;
@@ -14,19 +14,36 @@
         border: 1px solid $base-light-grey-color;
        // margin: $base-content-padding*2;
         overflow: hidden;
+        @include e('variable'){
+            @include hover(){
+                @include parse('e:movable'){
+                    transform: translateY(-168px);
+                }
+                @include parse('e:image'){
+                    transform: translateY(-80px) scale(0.5);
+                }
+            }
+        }
+        @include e('simple'){
+            @include hover(){
+                @include parse('e:movable'){
+                    transform: translateY(-64px);
+                }
+                @include parse('e:image'){
+                    transform: translateY(-16px) scale(0.8);
+                }
+            }
+        }
+
         @include parse(':hover', 'm:hover') {
             box-shadow: 0px 5px 31px -1px rgba(0, 0, 0, 0.15);
             transform: scale(1.04);
             @include at(':after'){
                 opacity: 1;
             }
-            @include parse('e:movable'){
-                transform: translateY(-140px);
-               // bottom:0;
-            }
-            @include parse('e:image'){
-                transform: translateY(-58px) scale(0.5);
-            }
+    
+   
+            
             @include parse('e:button'){
                 color: $base-primary-color;
             }
@@ -126,26 +143,7 @@
         }
 
         @include e('onsale'){
-            display: block;
-            //border-radius:$base-content-padding;
-            border: 1px solid $base-primary-color;
-            color: $base-white-color;
-            font-weight: $base-font-weight-bold;
-            position: absolute;
-            padding: $base-content-padding;
-            right: $base-content-padding/2;
-            top: $base-content-padding/2;
-            @include typi('small');
-            line-height: 1;
-            background: $base-primary-color;
-            padding: $base-content-padding/2;
-           
-            span{
-    
-            } 
-            &::after{ 
-               
-            }
+            @extend %woocommerce-sale;
         }
 
         @include e('sale-regular-price'){

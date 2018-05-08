@@ -264,9 +264,10 @@ class Main {
 
       // Single variation
       remove_action('woocommerce_single_variation','woocommerce_single_variation',10);
- 
+      remove_action('woocommerce_before_shop_loop_item','woocommerce_template_loop_product_link_open',10);
       
     });
+    
     // Remove Checkout form
     remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
     add_action('woocommerce_custom_login_form','woocommerce_checkout_login_form', 10);
@@ -285,8 +286,9 @@ class Main {
     $this->loader->add_filter('woocommerce_cart_item_name',$woo,'b4b_woocommerce_cart_item_name',10,3);
 
 
-    $this->loader->add_action('woocommerce_before_shop_loop_item',$woo,'woocommerce_template_loop_product_link_open');
-
+    $this->loader->add_action('woocommerce_before_shop_loop_item',$woo,'woocommerce_template_loop_product_link_open',10);
+    //$this->loader->add_action('woocommerce_before_shop_loop_item',$woo,'woocommerce_template_loop_product_link_open',10);
+    
     // Single variation
     // woocommerce_template_single_price ako zelimo u cijenu
     $this->loader->add_action('woocommerce_single_variation',$woo,'woocommerce_single_variation',10);;

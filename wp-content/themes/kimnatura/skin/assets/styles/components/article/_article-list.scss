@@ -1,9 +1,15 @@
-// .article-list {
-
-// }
+$article-top-spacing:     0;
+$article-bottom-spacing:  $base-content-padding*7;
+$article-content-color:   $base-white-color;
+$article-content-padding: $base-content-padding*4;
+$article-min-height:      500px;
 
 @include block('article-list'){
-    margin-bottom: $base-section-margin;
+    margin-bottom: $article-bottom-spacing;
+    margin-top: $article-top-spacing;
+    @include first{
+      margin-top: $article-bottom-spacing;
+    }
     @include element('container'){
         @include container();
         display: flex;
@@ -15,13 +21,9 @@
        &:hover{
             color: $base-primary-color;
        }
-     // margin-bottom: $base-content-padding;
     }
     @include element('title'){
-     // @include typi('blogtitle');
-     // font-weight: $font-weight-medium;
       a{
-       // color: $post-title-link-color;
         &:hover{
       
         }
@@ -29,17 +31,18 @@
     }
     @include element('content'){
       flex: 1;
-      //background: $post-info-bg-color;
-      padding: 64px;
+      background: $article-content-color;
+      padding: $article-content-padding;
       margin-top: 100px;
       box-shadow: 0 4px 18.9px 2.1px rgba(205,193,193,0.15);
       box-shadow: 16px 16px 48px rgba(0, 0, 0, 0.08);
+      min-height: $article-min-height;    
     }
   
     @include element('image'){
-      margin-bottom: 64px;
+      margin-bottom: $article-content-padding;
       flex: 1;
-      height: 500px;    
+      min-height: $article-min-height;   
       img{
           width: 100%;
           vertical-align: middle;

@@ -51,12 +51,14 @@
   background-color: $bg;
   color: $text;
   border-color: $border;
+  position: relative;
+  transition: all 0.3s;
 
   .icon-animated-arrow__item {
     background-color: $text;
   }
 
-  &:hover,
+  &:hover1,
   &:active,
   &.is-active,
   &:focus {
@@ -68,6 +70,30 @@
       background-color: $text-hover;
     }
   }
+  &::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+  z-index: 1000;
+  &::after {
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:$bg-hover;
+  }
+  &:hover,:active{
+    color:$text-hover;
+    background: transparent;
+    &::after{
+      width: 100%;
+    }
+  }
+
 }
 
 //Buttons color items from map

@@ -47,4 +47,11 @@ $section-description-font-weight: $base-font-weight-thin;
     }
 
     @include section-colors();
+
+    @include element('bg'){
+     //   background: red;
+        background: url('/wp-content/themes/kimnatura/skin/public/images/cipka-r.png');
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
 }

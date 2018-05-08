@@ -1,16 +1,16 @@
 $(function() {
     var allPanels = $('.shop-categories__childs').show();
-    $('.shop-categories__item--parent>label1,.shop-categories__icon').on('click', function(e){
+    $('.shop-categories__icon').on('click', function(e){
         e.preventDefault();
         var $this = $(this);
-        var $thislist = $this.parent();
+        var $thislist = $this.parent().parent();
         
-        jQuery(this).parent().find('ul').slideToggle('fast');  // apply the toggle to the ul
-        jQuery(this).parent().toggleClass('is-expanded');
+        $thislist.find('ul').slideToggle('fast');  // apply the toggle to the ul
+        $thislist.toggleClass('is-expanded');
         if ($thislist.hasClass('is-expanded')){
-          $this.parent().find('.shop-categories__icon').html('keyboard_arrow_down');
+            $thislist.find('.shop-categories__icon').html('keyboard_arrow_down');
         }else{
-          $this.parent().find('.shop-categories__icon').html('keyboard_arrow_up');
+            $thislist.find('.shop-categories__icon').html('keyboard_arrow_up');
         }
         
     });

@@ -87,3 +87,26 @@
   max-width: $base-content-width;
   margin: 0 auto;
 }
+
+%woocommerce-sale{
+  display: block;
+  //border-radius:$base-content-padding;
+  border: 1px solid $base-primary-color;
+  color: $base-white-color;
+  font-weight: $base-font-weight-bold;
+  position: absolute;
+  padding: $base-content-padding;
+  right: $base-content-padding/2;
+  top: $base-content-padding/2;
+  font-size:14px;
+  line-height: 1;
+  background: $base-primary-color;
+  padding: $base-content-padding/2;
+ 
+  span{
+
+  } 
+  &::after{ 
+     
+  }
+}
