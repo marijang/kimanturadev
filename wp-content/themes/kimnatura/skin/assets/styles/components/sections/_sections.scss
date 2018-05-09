@@ -38,11 +38,15 @@ $section-description-space-bottom-small:     $base-content-padding;
 
     @include element('title'){
         @extend %heading-reset;
+
         @include m('center'){
             text-align: center;
         }
         @include m('spacing-bottom'){
             margin-bottom: $section-description-space-bottom;
+        }
+        @include media(mobile){
+            text-align: center;
         }
     }
     @include element('description'){

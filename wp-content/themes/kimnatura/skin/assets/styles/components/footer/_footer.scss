@@ -1,5 +1,5 @@
 $footer-bg-color-primary:           $footer-bg-color-primary;
-$footer-margin-top:                 $base-content-padding*4;
+$footer-margin-top:                 $base-content-padding;
 $footer-content-padding:            $base-content-padding*2 0;
 $footer-link-color:                 $base-white-color;
 $footer-link-hover-color:           $base-white-color;
@@ -27,6 +27,9 @@ footer{
 }
 
 @include block('footer'){
+    @include media(mobile){
+       margin-top: $base-content-padding;
+    }
     @include e('content'){
         display: flex;
         @include container();
