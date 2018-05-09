@@ -29,6 +29,9 @@ $border-grey-color: $base-border-color-dark;
     @include e('hamb'){
         grid-area: hamburger;
         display: none;
+        &.is-active{
+            color: $base-primary-color;
+        }
         @include media(mobile){
             display: flex;
             align-items: center;
@@ -60,6 +63,7 @@ $border-grey-color: $base-border-color-dark;
         }
 
         @include media(mobile){
+            @include container();
             display: none;
             flex-direction: column;
             margin: 0;
@@ -69,6 +73,7 @@ $border-grey-color: $base-border-color-dark;
             z-index: 50;
             background: white;
             width: 100%;
+
             li {
                 padding: 8px 0;
             }

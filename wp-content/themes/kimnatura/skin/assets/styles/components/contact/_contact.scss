@@ -1,4 +1,5 @@
-$contact-padding: $base-content-padding;
+$contact-margin-top: $base-content-padding*4.5;
+$contact-margin-left: $base-content-padding*2;
 $contact-primary-color: $base-primary-color;
 $contact-white: $base-white-color;
 
@@ -9,8 +10,8 @@ $contact-white: $base-white-color;
     @include e('form'){
         color: $base-white-color!important;
         //background-color: $primary-color-text!important;
-        margin-left: $contact-padding*2!important;
-        margin-top: -$contact-padding*3!important;
+        margin-left: $contact-margin-left!important;
+        margin-top: -$contact-margin-top!important;
         min-width: calc(50% - 96px)!important;
         max-width: calc(50% - 96px)!important;
         padding: 55px 40px!important;

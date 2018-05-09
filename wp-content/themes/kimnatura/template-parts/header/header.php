@@ -18,9 +18,11 @@ $header_logo_info = $blog_name . ' - ' . $blog_description;
 		jQuery('#menu-toggle').on('click', function(){
 			if(jQuery('#menu').hasClass('is-open')){
         jQuery('#menu').removeClass('is-open');
+        jQuery('#menu-toggle').removeClass('is-active');
       }
       else{
         jQuery('#menu').addClass('is-open');
+        jQuery('#menu-toggle').addClass('is-active');
       }
 	});
 });
