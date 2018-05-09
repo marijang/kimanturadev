@@ -10,9 +10,9 @@ $images = new Utils\Images();
 $image  = $images->get_post_image( 'listing' );
 ?>
 <article class="article-list">
-  <div class="article-list__container">
+  <div class="article-list__container article-list__container--odd">
 
-    <div class="article-list__content">
+    <div class="article-list__content article-list__content--odd">
       <header>
         <h2 class="article-list__heading">
           <a class="article-list__heading-link" href="<?php the_permalink(); ?>">

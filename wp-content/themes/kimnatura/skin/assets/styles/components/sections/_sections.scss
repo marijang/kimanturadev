@@ -11,8 +11,9 @@ $section-description-space-bottom-small:     $base-content-padding;
     @include section-spacings('top');
     @include section-spacings('bottom');
 
-    @include m('padding'){
-       
+    @include e('link'){
+       margin-top: $base-content-padding;
+       display: block;
     }
    // background: red;
     @include container();
@@ -23,10 +24,16 @@ $section-description-space-bottom-small:     $base-content-padding;
         }
         margin-top: $base-content-padding*2;
         margin-bottom: $base-content-padding*3;
+        @include media(mobile){
+            margin: $base-content-padding 0; 
+        }
     }
     
     @include element('header'){
         margin-bottom: $section-header-space-bottom; 
+        @include media(mobile){
+             margin: 0;
+        }
     }
 
     @include element('title'){
@@ -57,7 +64,8 @@ $section-description-space-bottom-small:     $base-content-padding;
         @include p('e:inner'){
             display: flex;
             @include media(mobile){
-                flex-direction: column;
+                flex-direction: column-reverse;
+               // flex-direction: row-reverse; 
             }
         }
         @include p('e:content'){
@@ -65,7 +73,7 @@ $section-description-space-bottom-small:     $base-content-padding;
             font-weight: $section-font-weight;
             padding:$section-highlight-padding;
             @include media(mobile){
-                padding:$base-content-padding*2;
+                padding:0;
             }
         }
         
@@ -77,9 +85,10 @@ $section-description-space-bottom-small:     $base-content-padding;
     @include section-colors();
 
     @include element('bg'){
-     //   background: red;
-        background: url('/wp-content/themes/kimnatura/skin/public/images/cipka-r.png');
-        background-repeat: no-repeat;
-        background-position: bottom right;
+        @include media('desktop'){
+            background: url('/wp-content/themes/kimnatura/skin/public/images/cipka-r.png');
+            background-repeat: no-repeat;
+            background-position: bottom right;
+        } 
     }
 }

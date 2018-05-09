@@ -7,7 +7,8 @@
   max-width: $max-width;
   margin: 0 auto;
   @include media(mobile){
-    max-width: auto!important;
+  //  max-width: auto!important;
+    max-width: auto;
     padding-left: $base-content-padding;
     padding-right: $base-content-padding;
   }
