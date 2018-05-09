@@ -6,4 +6,9 @@
 @mixin container($max-width: $base-content-width) {
   max-width: $max-width;
   margin: 0 auto;
+  @include media(mobile){
+    max-width: auto!important;
+    padding-left: $base-content-padding;
+    padding-right: $base-content-padding;
+  }
 }

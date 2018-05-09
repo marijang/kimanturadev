@@ -12,12 +12,7 @@ $section-description-space-bottom-small:     $base-content-padding;
     @include section-spacings('bottom');
 
     @include m('padding'){
-        p,ol,h1{
-            padding: 0 100px;
-        }
-        i{
-            font-weight: 300;
-        }
+       
     }
    // background: red;
     @include container();
@@ -26,6 +21,7 @@ $section-description-space-bottom-small:     $base-content-padding;
             width: $section-img-width;
            
         }
+        margin-top: $base-content-padding*2;
         margin-bottom: $base-content-padding*3;
     }
     

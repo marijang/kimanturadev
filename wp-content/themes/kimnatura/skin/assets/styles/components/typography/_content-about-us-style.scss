@@ -1,0 +1,17 @@
+$content-about-us-padding: 0 100px;
+
+@include b('content-about-us-style'){
+
+    em{
+        @include typi(larger);
+        font-weight: 300;
+    }
+    p,ol,h1,ul{
+        padding:$content-about-us-padding;
+        @include media('mobile'){
+            padding: 0;
+        }
+    }
+
+}
+
