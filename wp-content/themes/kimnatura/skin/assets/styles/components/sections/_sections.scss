@@ -9,12 +9,22 @@ $section-description-space-bottom:      $base-content-padding*2;
     @include section-spacings('top');
     @include section-spacings('bottom');
 
+    @include m('padding'){
+        p,ol,h1{
+            padding: 0 100px;
+        }
+        i{
+            font-weight: 300;
+        }
+    }
    // background: red;
     @include container();
     @include element('image'){
         img{
             width: $section-img-width;
+           
         }
+        margin-bottom: $base-content-padding*3;
     }
  
     @include element('title'){

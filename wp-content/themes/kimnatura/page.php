@@ -1,6 +1,7 @@
 <?php
 /**
  * Display regular page
+ * Template Name: Regular Page
  *
  * @package Kimnatura
  */

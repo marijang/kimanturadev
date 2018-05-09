@@ -65,6 +65,7 @@
 //Sections
 @import 'components/sections/sections';
 @import 'components/sections/figure';
+@import 'components/sections/ordered-list';
 
 // Template parts
 @import 'components/parts/cookies-notification';
@@ -92,7 +93,8 @@
 @import 'woocommerce/checkout';
 
 
-
+// Social
+@import 'components/social/social-followus';
 
 
 
