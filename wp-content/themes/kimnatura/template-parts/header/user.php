@@ -17,15 +17,15 @@ if(!$current_user->firstname ){
 ?>
 
 <ul id="site-header-cart" class="main-navigation main-navigation--secondary">
-    <li class="main-navigation__item">
+    <li class="main-navigation__item desktop-only">
         <a href="" class="main-navigation__link">EN</a>
     </li>
-    <li class="main-navigation__item">
+    <li class="main-navigation__item" id="eng">
         <a href="#" id="btn-search" class="main-navigation__link">
             <i class="material-icons mi">search</i>
         </a>
     </li>
-    <li class="main-navigation__item">
+    <li class="main-navigation__item desktop-only">
     <?php if(is_user_logged_in()):  ?>
     <a href="/my-account" class="main-navigation__link is-logged-in">
             <i class="material-icons">account_circle</i>

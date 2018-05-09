@@ -1,3 +1,6 @@
+$main-menu-mobile-bottom-spacing: $base-content-padding*2;
+
+
 @include block('main-navigation'){
     @extend %list-reset;
     @include modifier('primary'){
@@ -71,6 +74,12 @@
         display: inline-block;
         max-width: 72px;
         padding-left: 8px;
+
+        @include media(mobile){
+            max-width: 100%;
+            font-size: inherit;
+            line-height: inherit;
+        }
     }
 
     @include element('cart'){
@@ -91,7 +100,12 @@
         /* width: 16px; */
         /* height: 18px; */
         text-align: center;
-	}
+    }
+    
+    @include media(mobile){
+        margin-bottom: $main-menu-mobile-bottom-spacing;
+        width: 100%;
+    }
 }
 
 
