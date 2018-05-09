@@ -171,6 +171,9 @@ class Main {
     $general         = new Theme\General( $this->get_theme_info() );
     $pagination      = new Theme\Pagination( $this->get_theme_info() );
 
+    // Shortcodes
+    $theme->add_shortcodes();
+
     // Enque styles and scripts.
     $this->loader->add_action( 'wp_enqueue_scripts', $theme, 'enqueue_styles' );
     $this->loader->add_action( 'wp_enqueue_scripts', $theme, 'enqueue_scripts' );

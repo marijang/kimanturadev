@@ -8,7 +8,12 @@
 
 namespace Kimnatura\Theme;
 
+
+
+
 use Kimnatura\Helpers as General_Helpers;
+//use Kimnatura\Shortcodes\Gmap as Gmap;
+
 
 /**
  * Class Theme
@@ -125,6 +130,11 @@ class Theme {
         )
       );
     }
+  }
+
+  function add_shortcodes(){
+    $contactmap = new Shortcodes\Gmap();
+    add_shortcode( 'b4b-map', array($contactmap,'shortcode') );
   }
 
 }
