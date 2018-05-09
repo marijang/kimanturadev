@@ -1,0 +1,126 @@
+$login-title-bottom: $base-content-padding;
+$login-description-bottom: $base-content-padding*3;
+$login-btn-top-margin: $base-content-padding*3;
+$login-button-top-margin: $base-content-padding*2.5;
+$login-button-bottom-margin: $base-content-padding*4;
+
+@include b('login'){
+
+    @include e('boxes'){
+        display: flex;
+    }
+
+    @include e('box'){
+        flex-basis: calc(50% + 64px);
+        background-color: $primary-color;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        padding: 48px;
+        z-index: 4;
+        color: $color-white;
+        #submit-btn{
+            display: none;
+        }
+
+        .login__row {
+            display: none;
+        }
+
+        input {
+            background-color: $primary-color!important;
+            color: $color-white!important;
+        }
+
+        &.is-active {
+            .login__row {
+                display: block;
+            }
+            background-color: $color-white;
+            z-index: 5;
+            color: $color-black;
+
+            input {
+                background-color: $color-white!important;
+                color: $color-black!important;
+            }
+
+            #toggle-btn{
+                display: none;
+            }
+
+            
+        }
+
+        @include m('log'){
+            max-height: 525px;
+            padding: 48px 176px 48px 48px;
+            margin-bottom: 72px;
+
+            &.is-active{
+                padding: 48px;
+                margin-bottom: 72px;
+                max-height: 870px;
+
+                #submit-btn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+            //margin-right: -64px;
+        }
+
+        @include m('reg'){
+            margin-top: 72px;
+            margin-left: -128px;
+            padding: 48px 48px 48px 176px;
+
+            #terms_cond{
+                display: none;
+            }
+
+            &.is-active{
+                padding: 48px;
+
+                #terms_cond{
+                    display: block;
+                }
+
+                #submit-btn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
+    @include e('box-title'){
+        @extend %heading-reset;
+        @include typi('largest');
+        margin-bottom: $login-title-bottom;
+        font-weight: 600;
+    }
+
+    @include e('box-description'){
+        margin-bottom: $login-description-bottom;
+    }
+
+    @include e('button-row'){
+        display: flex;
+        margin-bottom: $login-button-bottom-margin;
+        margin-top: $login-button-top-margin;
+        justify-content: flex-end;
+    }
+
+    @include e('btn-row'){
+        margin-top: $login-btn-top-margin;
+    }
+}
+
+.account__content {
+    display: flex;
+
+    form{
+        min-width: 50%;
+    }
+}

@@ -4,6 +4,8 @@ $section-highlight-padding:             $base-content-padding*4 $base-content-pa
 $section-highlighted-font-weight:       normal;
 $section-description-font-weight:       $base-font-weight-thin;
 $section-description-space-bottom:      $base-content-padding*2;
+$section-header-space-bottom:           $base-content-padding*3;
+$section-description-space-bottom-small:     $base-content-padding;
 
 @include block('section'){
     @include section-spacings('top');
@@ -26,7 +28,11 @@ $section-description-space-bottom:      $base-content-padding*2;
         }
         margin-bottom: $base-content-padding*3;
     }
- 
+    
+    @include element('header'){
+        margin-bottom: $section-header-space-bottom; 
+    }
+
     @include element('title'){
         @extend %heading-reset;
         @include m('center'){
@@ -41,6 +47,9 @@ $section-description-space-bottom:      $base-content-padding*2;
         @include typi('largest');
         @include m('center'){
             text-align: center;
+        }
+        @include m('spacing-bottom-s'){
+            margin-bottom: $section-description-space-bottom-small;
         }
     }
 

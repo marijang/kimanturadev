@@ -10,9 +10,9 @@
 ?>
 sdsdasda
 <article id="post-<?php the_ID(); ?>" <?php post_class('page__article'); ?>>
-	<header class="page__title">
-		<?php the_title( '<h1 class="page__title">', '</h1>' ); ?>
-		<?php the_subtitle( '<p class="page__description">', '</p>' ); ?>
+	<header class="section__header">
+		<?php the_title( '<h1 class="section__title">', '</h1>' ); ?>
+		<?php the_subtitle( '<p class="section__description">', '</p>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="page__content">

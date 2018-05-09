@@ -16,9 +16,9 @@
 get_header();
 ?>
     <section class="section">
-        <header class="page__title">
-	        <?php the_title( '<h1 class="page__title">', '</h1>' ); ?>
-	        <?php the_subtitle( '<h4 class="page__description">', '</h4>' ); ?>
+        <header class="section__header">
+	        <?php the_title( '<h1 class="section__title">', '</h1>' ); ?>
+	        <?php the_subtitle( '<p class="section__description">', '</p>' ); ?>
 	    </header><!-- .entry-header -->
 
         <div class="grid2">
@@ -80,59 +80,73 @@ get_header();
 
         </div>
 
-        <h2 class="" style="font-size: 40px">Ostala prodajna mjesta</h2>
+        <h1 class="section__title section__header">Ostala prodajna mjesta</h1>
         <div class="grid3">
             <div class="grid3__item">
-                <h3 class="" style="font-weight: 500">Suvenirnica jedan</h3>
+                <h2 class="grid3__item-title" style="font-weight: 500">Suvenirnica jedan</h2>
                 <div class="grid3__icon-row">
                     <i class="material-icons grid3__icon">place</i>
                     <p class="grid3__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
                 </div>
             </div>
             <div class="grid3__item">
-                <h3 class="" style="font-weight: 500">Suvenirnica jedan</h3>
+                <h2 class="grid3__item-title" style="font-weight: 500">Suvenirnica jedan</h2>
                 <div class="grid3__icon-row">
                     <i class="material-icons grid3__icon">place</i>
                     <p class="grid3__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
                 </div>
             </div>
             <div class="grid3__item">
-                <h3 class="" style="font-weight: 500">Suvenirnica jedan</h3>
+                <h2 class="grid3__item-title" style="font-weight: 500">Suvenirnica jedan</h2>
                 <div class="grid3__icon-row">
                     <i class="material-icons grid3__icon">place</i>
                     <p class="grid3__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
                 </div>
             </div>
             <div class="grid3__item">
-                <h3 class="" style="font-weight: 500">Suvenirnica jedan</h3>
+                <h2 class="grid3__item-title" style="font-weight: 500">Suvenirnica jedan</h2>
                 <div class="grid3__icon-row">
                     <i class="material-icons grid3__icon">place</i>
                     <p class="grid3__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
                 </div>
             </div>
             <div class="grid3__item">
-                <h3 class="" style="font-weight: 500">Suvenirnica jedan</h3>
+                <h2 class="grid3__item-title" style="font-weight: 500">Suvenirnica jedan</h2>
                 <div class="grid3__icon-row">
                     <i class="material-icons grid3__icon">place</i>
                     <p class="grid3__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
                 </div>
             </div>
             <div class="grid3__item">
-                <h3 class="" style="font-weight: 500">Suvenirnica jedan</h3>
+                <h2 class="grid3__item-title" style="font-weight: 500">Suvenirnica jedan</h2>
                 <div class="grid3__icon-row">
                     <i class="material-icons grid3__icon">place</i>
                     <p class="grid3__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
                 </div>
             </div>
             <div class="grid3__item">
-                <h3 class="" style="font-weight: 500">Suvenirnica jedan</h3>
+                <h2 class="grid3__item-title" style="font-weight: 500">Suvenirnica jedan</h2>
                 <div class="grid3__icon-row">
                     <i class="material-icons grid3__icon">place</i>
                     <p class="grid3__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
                 </div>
             </div>
             <div class="grid3__item">
-                <h3 class="" style="font-weight: 500">Suvenirnica jedan</h3>
+                <h2 class="grid3__item-title" style="font-weight: 500">Suvenirnica jedan</h2>
+                <div class="grid3__icon-row">
+                    <i class="material-icons grid3__icon">place</i>
+                    <p class="grid3__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
+                </div>
+            </div>
+            <div class="grid3__item">
+                <h2 class="grid3__item-title" style="font-weight: 500">Suvenirnica jedan</h2>
+                <div class="grid3__icon-row">
+                    <i class="material-icons grid3__icon">place</i>
+                    <p class="grid3__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
+                </div>
+            </div>
+            <div class="grid3__item">
+                <h2 class="grid3__item-title" style="font-weight: 500">Suvenirnica jedan</h2>
                 <div class="grid3__icon-row">
                     <i class="material-icons grid3__icon">place</i>
                     <p class="grid3__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
