@@ -1,5 +1,5 @@
 $footer-bg-color-primary:           $footer-bg-color-primary;
-$footer-margin-top:                 $base-content-padding*4;
+$footer-margin-top:                 $base-content-padding;
 $footer-content-padding:            $base-content-padding*2 0;
 $footer-link-color:                 $base-white-color;
 $footer-link-hover-color:           $base-white-color;
@@ -17,6 +17,9 @@ footer{
     @extend %list-reset;
     @include e('item'){
        margin-bottom: $grid-gutter/2;
+       @include media(mobile){
+            margin-bottom: $base-content-padding;
+       }
     }
     @include e('link'){
         color: $footer-link-color;
@@ -24,27 +27,42 @@ footer{
 }
 
 @include block('footer'){
+    @include media(mobile){
+       margin-top: $base-content-padding;
+    }
     @include e('content'){
         display: flex;
         @include container();
         padding: $footer-content-padding;
+        @include media(mobile){
+            text-align: center;
+            flex-direction: column;
+        }  
     }
     @include e('content-media-style'){
         color: $footer-content-media-style-color;
+        p{
+            @include media(mobile){
+                padding: $base-content-padding 0;
+            }
+        }
     }
-    
+
     @include e('links'){
-         // padding-left: $grid-gutter*3;
-         flex: 1;
-         @include first{
-             flex:2;
-         }
+        flex: 1;
+        @include first{
+            flex:2;
+        }
+        @include media(mobile){
+            padding-top: $base-content-padding;
+        }
     }
     @include e('logo'){
         margin: 0px;
         img{
             width: 20%;
         }
+        
     }
     @include e('info'){
         background: $footer-bg-color-secondary;

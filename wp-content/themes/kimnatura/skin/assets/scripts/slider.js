@@ -37,8 +37,8 @@ $(".slider-slick").slick({
 
       breakpoint: 600,
       settings: {
-        slidesToShow: 3,
-        dots: true
+        slidesToShow: 1,
+        dots: false
       }
 
     }, {

@@ -268,6 +268,14 @@ $delay7: $duration + $delay6 - 3;
             content: $slick-next-character;
         }
     }
+    @include media(mobile){
+        bottom: -$base-content-padding*2;
+        bottom: -8px;
+        left: 20%;
+        top: auto;
+        transform: translateX(-50%);
+        margin-right: $base-content-padding;
+    }
 }
 
 .slick-next {
@@ -282,6 +290,14 @@ $delay7: $duration + $delay6 - 3;
             content: $slick-prev-character;
         }
     }
+    @include media(mobile){
+        bottom: -$base-content-padding*2;
+        bottom: -8px;
+        right: 20%;
+        top: auto;
+        transform: translateX(-50%);
+        margin-right: $base-content-padding;
+    }
 }
 
 /* Dots */
@@ -291,6 +307,9 @@ $delay7: $duration + $delay6 - 3;
 }
 
 .slick-dots {
+    @include media(mobile){
+        display: none;
+    }
    // position: absolute;
    // bottom: -25px;
     list-style: none;

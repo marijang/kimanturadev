@@ -16,6 +16,9 @@ $social-followus-border-radius: 0;
         padding: 0;
         list-style: none;
         display: flex;
+        @include media(mobile){
+            justify-content: center;
+        }
     }
     @include element('item'){
         flex:1;

@@ -1,3 +1,4 @@
+@import '~media-blender';
 %button-reset {
   padding: 0;
   border: 0;
@@ -77,10 +78,11 @@
   }
 }
 
-%container {
+%container{
   max-width: $base-content-width;
   margin: 0 auto;
 }
+
 
 %site-container {
   @extend %site-padding;

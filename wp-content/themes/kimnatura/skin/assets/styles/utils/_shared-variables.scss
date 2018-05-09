@@ -55,7 +55,7 @@ $media-breakpoints: (
 );
 
 $breakpoints: (
-  small: 600px,
+  small: 300px,
   large: 1200px
 );
 
@@ -66,7 +66,7 @@ $typi: (
   base: (
     null: (18px, 1.5),
     small: (16px,1.5),
-    large: (18px,1.5)
+    large: (20px,1.5)
   ),
   tiny: (
     null: (11px)
@@ -110,6 +110,8 @@ $typi: (
 );
 
 
+
+
 // Buttons
 $button-size-map: (
   mobile: (
@@ -138,8 +140,8 @@ $section-spacing-map: (
   ),
   large:(
     default:    0px,
-    medium:     64px,
-    small:      32px,
+    medium:     32px,
+    small:      16px,
     no-spacing: 0
   )
 );

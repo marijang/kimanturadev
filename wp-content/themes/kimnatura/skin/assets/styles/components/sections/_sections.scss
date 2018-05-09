@@ -11,13 +11,9 @@ $section-description-space-bottom-small:     $base-content-padding;
     @include section-spacings('top');
     @include section-spacings('bottom');
 
-    @include m('padding'){
-        p,ol,h1{
-            padding: 0 100px;
-        }
-        i{
-            font-weight: 300;
-        }
+    @include e('link'){
+       margin-top: $base-content-padding;
+       display: block;
     }
    // background: red;
     @include container();
@@ -26,20 +22,31 @@ $section-description-space-bottom-small:     $base-content-padding;
             width: $section-img-width;
            
         }
+        margin-top: $base-content-padding*2;
         margin-bottom: $base-content-padding*3;
+        @include media(mobile){
+            margin: $base-content-padding 0; 
+        }
     }
     
     @include element('header'){
         margin-bottom: $section-header-space-bottom; 
+        @include media(mobile){
+             margin: 0;
+        }
     }
 
     @include element('title'){
         @extend %heading-reset;
+
         @include m('center'){
             text-align: center;
         }
         @include m('spacing-bottom'){
             margin-bottom: $section-description-space-bottom;
+        }
+        @include media(mobile){
+            text-align: center;
         }
     }
     @include element('description'){
@@ -60,11 +67,18 @@ $section-description-space-bottom-small:     $base-content-padding;
         }
         @include p('e:inner'){
             display: flex;
+            @include media(mobile){
+                flex-direction: column-reverse;
+               // flex-direction: row-reverse; 
+            }
         }
         @include p('e:content'){
             flex:1;
             font-weight: $section-font-weight;
             padding:$section-highlight-padding;
+            @include media(mobile){
+                padding:0;
+            }
         }
         
         @include p('e:image'){
@@ -75,9 +89,10 @@ $section-description-space-bottom-small:     $base-content-padding;
     @include section-colors();
 
     @include element('bg'){
-     //   background: red;
-        background: url('/wp-content/themes/kimnatura/skin/public/images/cipka-r.png');
-        background-repeat: no-repeat;
-        background-position: bottom right;
+        @include media('desktop'){
+            background: url('/wp-content/themes/kimnatura/skin/public/images/cipka-r.png');
+            background-repeat: no-repeat;
+            background-position: bottom right;
+        } 
     }
 }

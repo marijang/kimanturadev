@@ -6,10 +6,13 @@
 
     }
     @include element('content'){
-        p,h3,h2,h1,div,hr{
-            margin-left: 200px;
-            margin-right: 100px;
+        @include media('desktop'){
+            p,h3,h2,h1,div,hr{
+                margin-left: 200px;
+                margin-right: 100px;
+            }
         }
+
     }
     @include element('image'){
         position: relative;
