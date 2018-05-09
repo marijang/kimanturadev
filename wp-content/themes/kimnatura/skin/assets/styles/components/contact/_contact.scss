@@ -7,6 +7,14 @@ $contact-white: $base-white-color;
 @include b('contact'){
     position: relative;
 
+    @include e('section'){
+        display: flex;
+        position: relative;
+        @include media(mobile){
+            flex-direction: column-reverse;
+        }
+    }
+
     @include e('form'){
         color: $base-white-color!important;
         //background-color: $primary-color-text!important;
@@ -16,6 +24,12 @@ $contact-white: $base-white-color;
         max-width: calc(50% - 96px)!important;
         padding: 55px 40px!important;
         background-color: $contact-primary-color!important;
+
+        @include media(mobile){
+            max-width: 100%!important;
+            margin: 0!important;
+            padding: 32px 16px!important;
+        }
         
     }
 
@@ -47,6 +61,10 @@ $contact-white: $base-white-color;
 
     @include e('address'){
         padding: 100px 132px;
+
+        @include media(mobile){
+            padding: 16px 0;
+        }
     }
 
     @include e('address-title'){
