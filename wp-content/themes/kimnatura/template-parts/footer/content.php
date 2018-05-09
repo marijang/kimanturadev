@@ -24,7 +24,7 @@ $helper = new Helper();
       <div class="footer__links">
         <?php echo esc_html( $menu->bem_menu( 'footer_main_nav', 'footer-nav' ) );?>
       </div>
-      <div class="footer__links">
+      <div class="footer__links footer__links--social">
       <?php get_template_part( 'template-parts/footer/social', '' );  ?>    
       </div>
   </div>

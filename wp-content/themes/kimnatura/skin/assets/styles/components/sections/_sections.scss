@@ -56,11 +56,17 @@ $section-description-space-bottom-small:     $base-content-padding;
         }
         @include p('e:inner'){
             display: flex;
+            @include media(mobile){
+                flex-direction: column;
+            }
         }
         @include p('e:content'){
             flex:1;
             font-weight: $section-font-weight;
             padding:$section-highlight-padding;
+            @include media(mobile){
+                padding:$base-content-padding*2;
+            }
         }
         
         @include p('e:image'){
