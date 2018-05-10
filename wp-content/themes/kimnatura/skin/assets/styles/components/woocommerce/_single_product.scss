@@ -91,6 +91,7 @@
         //TODO @include typi('small');
     }
     @include element('variations-form'){
+        margin-top: $base-content-padding;
 
     }
     @include element('stock'){

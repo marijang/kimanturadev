@@ -172,10 +172,6 @@ class Woo {
         add_image_size( 'blogarchive', 576 , 500, true ); 
   }
 
-  public function test(){
-        echo "OK OVO RADI SADA";
-       // add_filter('b4b_checkout_step','b4b_test');
-  }
 
   public function woocommerce_related_products() {
     global $post,$product;
@@ -307,23 +303,32 @@ class Woo {
     $t  .= '<li id="wc-multistep-cart" data-step="cart" class="cart-checkout-navigation__item '. ( ($step == 0 ) ? 'is-active' : '').' '. ( ($step > 0 ) ? 'is-activated' : '').'" >';
     //$t  .= __('Košarica','b4b');
     if ($step>0){
-      $t .= '<a href="'.get_permalink( wc_get_page_id( 'cart' )).'">'.__('Košarica','b4b').'</a>';
+      $t .= '<a href="'.get_permalink( wc_get_page_id( 'cart' )).'">
+              <span class="cart-checkout-navigation__step-number">1</span>
+              <span class="cart-checkout-navigation__step-title">'.__('Košarica','b4b').'<span>
+            </a>';
     }else{
-      $t .= '<a href="'.get_permalink( wc_get_page_id( 'cart' )).'">'.__('Košarica','b4b').'</a>';
+      $t .= '<a href="'.get_permalink( wc_get_page_id( 'cart' )).'">
+        <span class="cart-checkout-navigation__step-number">1</span>
+        <span class="cart-checkout-navigation__step-title">'.__('Košarica','b4b').'<span>
+      </a>';
     }
     $t  .= '</li>';
     // Second item
     $t  .= '<li id="wc-multistep-details" data-step="customer-details" class="cart-checkout-navigation__item '. ( ($step == 1) ? 'is-active' : '').'" >';
-    $t  .= __('Dostava','b4b');
+    $t  .= '<span class="cart-checkout-navigation__step-number">2</span>';
+    $t  .= '<span class="cart-checkout-navigation__step-title">'.__('Dostava','b4b').'<span>';
     $t  .= '</li>';
     // Third item
     $t  .= '<li id="wc-multistep-payment" data-step="payment" class="cart-checkout-navigation__item '. ( ($step == 2) ? 'is-active' : '').'" >';
-    $t  .= __('Način plačanja','b4b');
+    $t  .= '<span class="cart-checkout-navigation__step-number">3</span>';
+    $t  .= '<span class="cart-checkout-navigation__step-title">'.__('Način plačanja','b4b').'<span>';
     $t  .= '</li>';
     // Fourth Item
     $t  .= '<li id="wc-multistep-finish" data-step="finish" class="cart-checkout-navigation__item is-last 
     '. ( ($step == 3) ? ' is-active' : '').'" >';
-    $t  .= __('Potvrda','b4b');
+    $t  .= '<span class="cart-checkout-navigation__step-number">4</span>';
+    $t  .= '<span class="cart-checkout-navigation__step-title">'.__('Potvrda','b4b').'<span>';
     $t  .= '</li>';
   
   

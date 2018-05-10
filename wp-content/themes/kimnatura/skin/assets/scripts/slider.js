@@ -9,9 +9,18 @@ $(function() {
       slidesToShow: 1,
       dots:true,
       arrows:false,
-      //cssEase: 'ease-in-out',
+      cssEase: 'ease-in-out',
       //autoplay:true,
       //autoplaySpeed: 3000
+      responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            arrows:true,
+            //dots: false
+          }
+        }
+      ],
     });
 
 $(".products__slider").slick({
@@ -38,6 +47,7 @@ $(".products__slider").slick({
       breakpoint: 600,
       settings: {
         slidesToShow: 1,
+        slidesToScroll: 1,
         dots: false
       }
 
