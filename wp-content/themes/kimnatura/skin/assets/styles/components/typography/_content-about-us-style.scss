@@ -6,7 +6,7 @@ $content-about-us-padding: 0 100px;
         @include typi(larger);
         font-weight: 300;
     }
-    p,ol,h1,ul{
+    h3,h2,h4,p,ol,h1,ul{
         padding:$content-about-us-padding;
         @include media('mobile'){
             padding: 0;

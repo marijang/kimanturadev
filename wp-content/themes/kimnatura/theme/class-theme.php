@@ -70,7 +70,7 @@ class Theme {
 
     $main_style_vendors = '/skin/public/styles/vendors.css';
     wp_register_style( $this->theme_name . '-style-vendors', get_template_directory_uri() . $main_style_vendors, array(), $this->general_helper->get_assets_version( $main_style_vendors ) );
-    wp_enqueue_style( $this->theme_name . '-style-vendors' );
+    //wp_enqueue_style( $this->theme_name . '-style-vendors' );
 
     $main_style = '/skin/public/styles/application.css';
     wp_register_style( $this->theme_name . '-style', get_template_directory_uri() . $main_style, array(), $this->general_helper->get_assets_version( $main_style ) );

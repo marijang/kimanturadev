@@ -80,6 +80,7 @@ class Images {
 
       if ( ! empty( $no_image ) ) {
         $image_array['image'] = esc_url( $no_image );
+        $image_array['image'] = '';
       }
     }
 
