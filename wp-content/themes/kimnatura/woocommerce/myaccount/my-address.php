@@ -55,7 +55,7 @@ $col    = 1;
 			$address = wc_get_account_formatted_address( $name );
 			echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' );
 		?></address>
-		<a class="btn btn--primary btn--small" href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'woocommerce' ); ?></a>
+		<a class="btn btn--primary-color btn--small" href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'woocommerce' ); ?></a>
 	</div>
 
 <?php endforeach; ?>

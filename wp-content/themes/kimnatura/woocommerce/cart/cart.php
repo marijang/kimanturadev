@@ -32,11 +32,11 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<thead>
 			<tr>
 				<th class="product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>	
-				<th class="product-thumbnail">&nbsp;</th>
-				<th class="product-price item-center"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
-				<th class="product-quantity item-center"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
-				<th class="product-subtotal item-center"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
-				<th class="product-remove item-center"><?php esc_html_e( 'Remove', 'woocommerce' ); ?></th>
+				<th class="product-thumbnail desktop-only">&nbsp;</th>
+				<th class="product-price item-center desktop-only"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
+				<th class="product-quantity item-center desktop-only"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
+				<th class="product-subtotal item-center desktop-only"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
+				<th class="product-remove item-center desktop-only"><?php esc_html_e( 'Remove', 'woocommerce' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -80,7 +80,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						}
 						?></td>
 
-						<td class="product-price item-center" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
+						<td class="product-price item-center desktop-only" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
 							?>
@@ -102,7 +102,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );
 						?></td>
 
-						<td class="product-price item-center" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
+						<td class="product-price item-center cart__price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
 							?>
@@ -143,7 +143,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						</div>
 					<?php } ?>
 
-					<button type="submit" class="btn btn--primary" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+					<button type="submit" class="btn btn--primary-color" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 

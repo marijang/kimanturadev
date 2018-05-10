@@ -39,7 +39,8 @@ $section-description-space-bottom-small:$base-content-padding;
 
     @include element('title'){
         @extend %heading-reset;
-        margin-bottom: $section-description-space-bottom;
+        
+
         @include m('center'){
             text-align: center;
         }
@@ -51,6 +52,7 @@ $section-description-space-bottom-small:$base-content-padding;
         }
     }
     @include element('description'){
+        @extend %heading-reset;
         font-weight: $section-description-font-weight;
         @include typi('largest');
         @include m('center'){

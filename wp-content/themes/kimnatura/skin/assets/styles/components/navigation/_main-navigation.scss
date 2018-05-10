@@ -105,10 +105,6 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
         /* height: 18px; */
         text-align: center;
     }
-    
-    @include media(mobile){
-        width: 100%;
-    }
 }
 
 

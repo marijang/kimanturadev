@@ -163,4 +163,10 @@ $mobile-spacing-box: $base-content-padding*2 0;
     form{
         min-width: 50%;
     }
+
+    @include media(mobile){
+        .btn{
+            width: 100%;
+        }
+    }
 }
