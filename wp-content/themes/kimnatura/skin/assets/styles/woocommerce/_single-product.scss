@@ -1,10 +1,14 @@
 @include block('single-product'){
+    
     @include element('item'){
         display: flex;
         flex-wrap: wrap;
         position: relative;
         margin-top: 104px;
         overflow: hidden;
+        @include media(mobile){
+            flex-direction: column;
+        }
     }
     @include element('summary'){
         flex: 1;
@@ -94,6 +98,7 @@
         grid-template-columns: repeat(12, 1fr);
         margin-bottom: 64px;
         margin-top: 84px;
+
     } 
     @include element('tab'){
         grid-column: 2 / 11;

@@ -26,7 +26,7 @@ $hero-content-dots-inactive-color: #3A4542;
         }
         .slick-dots li button{
             background: $hero-content-dots-inactive-color;
-            opacity: .5;
+            opacity: .2;
         }
          .slick-dots li button
         ,.slick-dots.slick-active li button{
@@ -41,7 +41,7 @@ $hero-content-dots-inactive-color: #3A4542;
 
     }
     @include element('link'){
-
+        margin-top:$base-content-padding;
     }
     @include element('content'){
        
@@ -51,8 +51,8 @@ $hero-content-dots-inactive-color: #3A4542;
         left:$hero-content-left;
         bottom:$hero-content-bottom;
         right:$hero-content-right;
-        padding: $hero-content-padding;
-        width: 40%;
+       // padding: $hero-content-padding;
+        width: 32%;
         p,i,div{
             transform: translate3d(0,0,0);
         }

@@ -14,7 +14,7 @@ $(function() {
       //autoplaySpeed: 3000
     });
 
-$(".slider-slick").slick({
+$(".products__slider").slick({
 
   // normal options...
   infinite: false,

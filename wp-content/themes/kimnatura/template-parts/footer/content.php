@@ -18,7 +18,7 @@ $helper = new Helper();
       <div class="footer__links footer__content-media-style">
         <img class="footer__logo-img" src="<?php echo esc_url( KIM_IMAGE_URL . 'logo-white.svg' ); ?>" title="<?php echo esc_attr( $header_logo_info ); ?>" alt="<?php echo esc_attr( $header_logo_info ); ?>" />
         <p><?php echo get_theme_mod('footer_text'); ?>
-            Smisliti kako dodati tekst ovdje
+        Most web designers end up designing a blog at some point in their career, even if only for their personal sites. 
         </p>
       </div>
       <div class="footer__links">

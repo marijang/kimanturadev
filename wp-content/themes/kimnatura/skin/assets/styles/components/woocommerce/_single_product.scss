@@ -2,6 +2,9 @@
     @include e('item'){
         display: flex;
         position: relative;
+        @include media(mobile){
+            flex-direction: column;
+        }
     }
 
     @include e('regular-price'){
@@ -21,12 +24,18 @@
       }
     @include e('summary'){
        flex: 1;
-       margin-left: $base-content-padding;
+       @include media(desktop) {
+        margin-left: $base-content-padding;
+       }
+       
     }
     @include e('gallery'){
        flex: 1;
        max-width: 50%;
        position: relative;
+       @include media(mobile){
+        max-width: 100%;
+       }
      }
      @include element('price'){
         display: block;
@@ -46,20 +55,7 @@
         }
     }
     @include element('onsale'){
-        display: block;
-        //border-radius:$base-content-padding;
-        border: 1px solid $base-primary-color;
-        color: $base-primary-color;
-        position: absolute;
-        padding: $base-content-padding;
-        left: 50%;
-        transform: translateX(-150%);
-        span{
-
-        } 
-        &::after{ 
-           
-        }
+        @extend %woocommerce-sale;
      }
      @include element('meta'){
         display: block;
@@ -86,7 +82,9 @@
         //TODO @include typi('small');
     }
     @include element('tab-wrapper'){
-      margin: 0 $base-content-padding*7;
+      @include media(desktop) {
+        margin: 0 $base-content-padding*7;
+      }
     }
     @include element('tab'){
         //margin-bottom: vr(1);

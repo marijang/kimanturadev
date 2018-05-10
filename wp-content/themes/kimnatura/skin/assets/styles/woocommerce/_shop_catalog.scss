@@ -1,6 +1,9 @@
 @include block('shop-catalog'){
     padding: $grid-gutter 0;
     display: flex;
+    @include media('mobile'){
+        flex-direction: column;
+    }
 
     @include element('filter'){
        flex:1;
@@ -16,6 +19,9 @@
          padding-bottom: $base-content-padding;
          padding-left:$base-content-padding;
          padding-right:$base-content-padding;
+         @include media('mobile'){
+            flex-direction: column;
+        }
     }
 
     @include element('container'){
@@ -35,12 +41,12 @@
     @include element('items'){
         width: 100%;
         @extend %list-reset;
-        display: grid;
-        -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: $base-content-padding
+        @include media(desktop large){
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: $base-content-padding;
+        }
     }
 
     @include element('item'){
@@ -64,6 +70,7 @@
             }
             
         }
+    
     }
 
     @include element('title'){

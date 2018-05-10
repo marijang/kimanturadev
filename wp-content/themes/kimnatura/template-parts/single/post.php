@@ -12,7 +12,7 @@
 
 <!-- Single Content Section -->
 <div class="section__container">
-<article class="article section section__spacing-top--default" id="<?php echo esc_attr( $post->ID ); ?>">
+<article class="article section section__spacing-top--default section--first" id="<?php echo esc_attr( $post->ID ); ?>">
   <div class="article__container">
       <header class="article__header">
           <h2 class="article__title">

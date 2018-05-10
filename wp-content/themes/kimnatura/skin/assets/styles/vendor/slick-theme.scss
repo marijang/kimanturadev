@@ -84,6 +84,10 @@
     margin: 16px;
     height: 100%;
     min-height: 1px;
+    @include media(mobile){
+        margin:0;
+        margin-bottom: 16px;
+    }
 }
 [dir='rtl'] .slick-slide
 {
@@ -177,6 +181,10 @@ $slick-opacity-not-active: 0.25 !default;
     .slick-list {
         //margin: 32px;
         padding: 16px;
+        @include media(mobile){
+            padding: 0px;
+            margin-bottom: $base-content-padding*3;
+        }
         .slick-loading & {
         // background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
         }
@@ -219,7 +227,7 @@ $delay7: $duration + $delay6 - 3;
     display: block;
     height: 48px;
     width: 48px;
-    line-height: 0px;
+    line-height: 48px;
     font-size: 48px;
     cursor: pointer;
     background: transparent;
@@ -270,11 +278,11 @@ $delay7: $duration + $delay6 - 3;
     }
     @include media(mobile){
         bottom: -$base-content-padding*2;
-        bottom: -8px;
-        left: 20%;
+        bottom: -48px;
+        left: 30%;
         top: auto;
-        transform: translateX(-50%);
-        margin-right: $base-content-padding;
+        transform: translateX(0%);
+       // margin-right: $base-content-padding;
     }
 }
 
@@ -292,11 +300,11 @@ $delay7: $duration + $delay6 - 3;
     }
     @include media(mobile){
         bottom: -$base-content-padding*2;
-        bottom: -8px;
-        right: 20%;
+        bottom: -48px;
+        right: 30%;
         top: auto;
-        transform: translateX(-50%);
-        margin-right: $base-content-padding;
+        transform: translateX(0%);
+        //margin-right: $base-content-padding;
     }
 }
 
