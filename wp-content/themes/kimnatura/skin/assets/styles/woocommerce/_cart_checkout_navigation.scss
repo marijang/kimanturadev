@@ -6,10 +6,12 @@
     display: flex;
     align-items: center;
     align-content: stretch; 
-    @include container();
     margin-bottom: $grid-gutter*3;
     margin-top: $grid-gutter*3;
 
+    @include media(mobile){
+        padding-left: $base-content-padding!important;
+    }
     @include element('shop-checkout-navigation'){
         padding: 0;
         list-style: none;
@@ -29,6 +31,11 @@
        // @include typi('small');
         margin-right: $grid-gutter*3;
         position: relative;
+
+        @include media(mobile){
+            margin-right: $grid-gutter*1.5;
+            flex-grow: 0;
+        }
 
         &.is-activated{
             border: 1px solid $base-primary-color;
@@ -61,6 +68,17 @@
                 color:$base-white-color;
                 display: block;
             }
+
+            @include media(mobile){
+                flex-grow: 5;
+                .cart-checkout-navigation__step-number{
+                    display: none;
+                }
+                .cart-checkout-navigation__step-title{
+                    display: inline;
+                }
+            }
+            
         }
         &:last-child{
             margin-right: 0px;
@@ -76,6 +94,25 @@
            right: -48px;
            top: 0;
            padding: $grid-gutter;
+
+           @include media(mobile){
+               right: -38px;
+           }
+        }
+    }
+
+    @include element('step-number'){
+        display: none;
+
+        @include media(mobile){
+            display: inline;
+        }
+    }
+
+    @include element('step-title'){
+
+        @include media(mobile){
+            display: none;
         }
     }
 
