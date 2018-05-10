@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying all pages
- * Template Name: My Special Template
+ * Template Name: O nama
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -19,7 +19,7 @@ get_header();
 if ( have_posts() ) {
   while ( have_posts() ) {
     the_post();
-    get_template_part( 'template-parts/single/post' );
+    get_template_part( 'template-parts/single/page-onama' );
   }
 }
 
