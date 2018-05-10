@@ -41,7 +41,7 @@
         display: block;
         font-weight: $base-font-weight-bold;
         font-family: $base-font-family-primary;
-       // @include typi('large');
+        @include typi('larger');
         color: $base-primary-color;
         margin-bottom: $base-content-padding;
     } 

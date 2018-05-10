@@ -17,7 +17,7 @@
         @include e('variable'){
             @include hover(){
                 @include parse('e:movable'){
-                    transform: translateY(-168px);
+                    transform: translateY(-172px);
                 }
                 @include parse('e:image'){
                     transform: translateY(-80px) scale(0.5);

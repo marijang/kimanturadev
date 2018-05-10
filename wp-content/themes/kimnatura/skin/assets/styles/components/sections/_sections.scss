@@ -25,13 +25,16 @@ $section-description-space-bottom-small:$base-content-padding;
         }
         margin-top: $base-content-padding*2;
         margin-bottom: $base-content-padding*3;
+        min-height: 400px;
+        @extend %bg-image;
         @include media(mobile){
             margin: $base-content-padding 0; 
+            min-height: 178px;
         }
     }
     
     @include element('header'){
-        margin-bottom: $section-header-space-bottom; 
+       // margin-bottom: $section-header-space-bottom; 
         @include media(mobile){
              margin-bottom: $section-header-space-bottom-mobile;
         }
