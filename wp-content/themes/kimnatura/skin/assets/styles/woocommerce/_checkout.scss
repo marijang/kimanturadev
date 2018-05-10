@@ -1,11 +1,19 @@
 $checkout-box-title-margin: $base-content-padding*2;
 $checkout-btn-margin-top:  $base-content-padding*6;
+$checkout-btn-margin-top-mobile: $base-content-padding*2.5;
 
 @include b('checkout'){
     @include e('btn'){
         display: flex;
         justify-content: flex-end;
         margin-top: $checkout-btn-margin-top;
+
+        @include media(mobile){
+            margin-top: $checkout-btn-margin-top-mobile;
+            .btn{
+                width: 100%;
+            }
+        }
     }
 
     @include e('grid'){
@@ -15,10 +23,20 @@ $checkout-btn-margin-top:  $base-content-padding*6;
     @include e('form'){
         flex: 2;
         padding-right: $base-content-padding;
+
+        @include media(mobile){
+            .btn{
+                width: 100%;
+            }
+        }
     }
 
     @include e('review'){
         flex: 1;
+
+        @include media(mobile){
+            display: none;
+        }
     }
 
     @include e('review-box'){

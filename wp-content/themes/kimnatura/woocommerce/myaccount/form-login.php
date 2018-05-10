@@ -32,6 +32,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			jQuery('#log-box').removeClass('is-active');
 			jQuery('#reg-box').addClass('is-active');
 	});
+	jQuery('#log-toggle-mobile').on('click', function(){
+			jQuery('#reg-box').removeClass('is-active');
+			jQuery('#log-box').addClass('is-active');
+	});
+	jQuery('#reg-toggle-mobile').on('click', function(){
+		console.log('click');
+			jQuery('#log-box').removeClass('is-active');
+			jQuery('#reg-box').addClass('is-active');
+	});
 });
 </script>
 
@@ -44,8 +53,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <p class="login__mobile-buttons">
 	<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-	<a class="btn btn--ghost-inverted btn--small" name="login-toggle" id='log-toggle'><?php esc_html_e( 'Login', 'woocommerce' ); ?></a>
-	<a class="btn btn--ghost-inverted btn--small" name="register-toggle" id="reg-toggle"><?php esc_html_e( 'Register', 'woocommerce' ); ?></a>
+	<a class="btn btn--ghost-inverted btn--small" name="login-toggle" id='log-toggle-mobile'><?php esc_html_e( 'Login', 'woocommerce' ); ?></a>
+	<a class="btn btn--ghost-inverted btn--small" name="register-toggle" id="reg-toggle-mobile"><?php esc_html_e( 'Register', 'woocommerce' ); ?></a>
 </p>
 
 <div class="u-columns col2-set login__boxes" id="customer_login">
