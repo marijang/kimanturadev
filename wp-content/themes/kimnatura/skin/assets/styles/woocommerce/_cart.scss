@@ -148,7 +148,7 @@ $input-number-width: $base-content-padding*2.5;
         }
 
         @include media(mobile){
-            width: 100%;
+            width: 100%!important;
         }
     }
 
