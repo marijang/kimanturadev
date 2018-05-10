@@ -102,6 +102,7 @@ class Images {
       $src = $img[ $size ];
     } else {
       $src = KIM_IMAGE_URL . 'no-image-' . $size . '.jpg';
+      $src = '';
     }
 
     return [
