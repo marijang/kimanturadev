@@ -13,6 +13,11 @@ $hero-content-dots-inactive-color: #3A4542;
 @include block('hero'){
     @include element('item'){
         position: relative;
+       
+    }
+    @include element('bg'){
+        min-height: 400px;
+        @extend %bg-image;
     }
     @include element('slider-wrapper'){
 
@@ -56,9 +61,14 @@ $hero-content-dots-inactive-color: #3A4542;
         p,i,div{
             transform: translate3d(0,0,0);
         }
+        @include media(mobile){
+            width: 50%;
+            @include typi(small);
+        }
     }
     @include element('image'){
         width: 100%;
+      
     }
 
     
