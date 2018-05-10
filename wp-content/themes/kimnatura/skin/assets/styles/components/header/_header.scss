@@ -1,4 +1,6 @@
 $border-grey-color: $base-border-color-dark;
+$main-menu-mobile-bottom-spacing: $base-content-padding*2;
+
 
 @include b('header'){
     @include e('container'){
@@ -55,9 +57,10 @@ $border-grey-color: $base-border-color-dark;
         align-items: center;
         margin: 0 auto;
         ul {
-            // @include media(mobile){
-            //     flex-direction: column;
-            // }
+            @include media(mobile){
+                margin-bottom: $main-menu-mobile-bottom-spacing;
+                width: 100%;
+            }
             flex-direction: inherit;
             align-items: inherit;
         }
@@ -68,9 +71,9 @@ $border-grey-color: $base-border-color-dark;
             flex-direction: column;
             margin: 0;
             position: absolute;
-            top: 102px;
+            top: 78px;
             align-items: flex-start;
-            z-index: 50;
+            z-index: 1050;
             background: white;
             width: 100%;
 
@@ -128,6 +131,11 @@ $border-grey-color: $base-border-color-dark;
     @include e('logo-img'){
         height: 70px;
         width: 128px;
+
+        @include media(mobile){
+            height: 46px;
+            width: 78px;
+        }
     }
 
 }

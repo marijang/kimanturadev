@@ -98,8 +98,8 @@ $button-color-map: (
     bg: $base-primary-color,
     text: $base-white-color,
     border: $base-primary-color,
-    bg-hover: $base-primary-color,
-    text-hover: $base-white-color,
+    bg-hover: $base-white-color,
+    text-hover: $base-primary-color,
     border-hover: $base-primary-color
   ),
 
@@ -109,6 +109,15 @@ $button-color-map: (
     border: $base-primary-color,
     bg-hover: $base-primary-color,
     text-hover: $base-white-color,
+    border-hover: $base-primary-color
+  ),
+
+  ghost-inverted: (
+    bg: transparent,
+    text: $base-white-color,
+    border: $base-white-color,
+    bg-hover: $base-white-color,
+    text-hover: $base-primary-color,
     border-hover: $base-primary-color
   ),
 
