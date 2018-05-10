@@ -5,10 +5,14 @@
     @include element('wrap'){
         @include container();
         padding: $grid-gutter*2 0;
-        display: flex;
+        display: grid;
         align-items: center;
         align-content: center;
-
+        grid-template-rows: 1fr 1fr;
+        @include media(mobile){
+            grid-template-columns: 1fr 24px;
+            grid-template-rows: auto;
+        }
     }
     @include element('menu'){
         padding: 0;
@@ -16,11 +20,35 @@
         list-style: none;
         display: flex;
         flex: 1;
+
+        @include media(mobile){
+            flex-direction: column;
+        }
     }
     @include element('info'){
-        flex:1;
+        grid-row: 1/2;
         text-align: right;
         //TODO@include typi('normal');
+        @include media(mobile){
+            grid-row: 1/2;
+            grid-column: 1/2;
+            text-align: left;
+        }
+    }
+    @include element('logout'){
+        grid-row: 2/3;
+        text-align: right;
+        //TODO@include typi('normal');
+        @include media(mobile){
+            grid-row: 3/4;
+            grid-column: 1/3;
+            text-align: left;
+            display: none;
+
+            &.is-open{
+                display: block;
+            }
+        }
     }
     @include element('info-name'){
         font-weight: $base-font-weight-bold;
@@ -50,6 +78,32 @@
         }
         &.is-active{
             text-decoration: underline;
+        }
+    }
+    
+    @include element('account-menu'){
+        grid-row: 1/3;
+        @include media(mobile){
+            grid-row: 2/3;
+            grid-column: 1/3;
+            display: none;
+
+            &.is-open{
+                display: block;
+            }
+        }
+    }
+
+    @include element('settings'){
+        display: none;
+        &.is-active{
+            color: $base-primary-color;
+        }
+
+        @include media(mobile){
+            display: block;
+            grid-row: 1/2;
+            grid-column: 2/3;
         }
     }
    
