@@ -3,6 +3,9 @@ $login-description-bottom: $base-content-padding*3;
 $login-btn-top-margin: $base-content-padding*3;
 $login-button-top-margin: $base-content-padding*2.5;
 $login-button-bottom-margin: $base-content-padding*4;
+$login-button-bottom-margin-mobile: $base-content-padding*2;
+$mobile-spacing-between-buttons: $base-content-padding;
+$mobile-spacing-box: $base-content-padding*2 0;
 
 @include b('login'){
 
@@ -47,7 +50,9 @@ $login-button-bottom-margin: $base-content-padding*4;
                 display: none;
             }
 
-            
+            @include media(mobile){
+                display: block;
+            }
         }
 
         @include m('log'){
@@ -64,6 +69,15 @@ $login-button-bottom-margin: $base-content-padding*4;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+
+                    @include media(mobile){
+                        flex-direction: column-reverse;
+
+                        .btn {
+                            width: 100%;
+                            margin-bottom: $login-button-bottom-margin-mobile;
+                        }
+                    }
                 }
             }
             //margin-right: -64px;
@@ -89,8 +103,23 @@ $login-button-bottom-margin: $base-content-padding*4;
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
+
+                    @include media(mobile){
+                        .btn {
+                            width: 100%;
+                            margin-bottom: $login-button-bottom-margin-mobile;
+                        }
+                    }
                 }
             }
+        }
+
+        @include media(mobile){
+            display: none;
+            flex-basis: 100%;
+            box-shadow: none;
+            margin: 0;
+            padding: $mobile-spacing-box!important;
         }
     }
 
@@ -114,6 +143,17 @@ $login-button-bottom-margin: $base-content-padding*4;
 
     @include e('btn-row'){
         margin-top: $login-btn-top-margin;
+
+    }
+
+    @include e('mobile-buttons'){
+        display: none;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: $mobile-spacing-between-buttons;
+        @include media(mobile){
+            display: grid;
+        }
+
     }
 }
 
