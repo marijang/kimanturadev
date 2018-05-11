@@ -16,5 +16,6 @@ import './slider';
 import './headroom';
 
 import './owlanime';
+import './scrollmonitor';
 import './form-fields/selecttoggle';
 import './form-fields/inputnumber';

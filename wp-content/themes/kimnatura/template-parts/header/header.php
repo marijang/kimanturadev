@@ -43,6 +43,7 @@ $header_logo_info = $blog_name . ' - ' . $blog_description;
     <?php
     get_template_part( 'template-parts/header/user', '' );
   ?>
+  </div>
 </div>
 </div>
 
