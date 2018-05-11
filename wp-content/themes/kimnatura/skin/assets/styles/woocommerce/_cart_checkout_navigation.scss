@@ -1,3 +1,9 @@
+$cart-navigation-margin: $base-content-padding*3;
+$cart-navigation-margin-mobile: $base-content-padding;
+
+$cart-navigation-items-spacing-mobile: $base-content-padding;
+$cart-navigation-item-mobile-size: $base-content-padding*2.5;
+
 @include block('cart-checkout-navigation'){
 
     @include container();
@@ -6,11 +12,13 @@
     display: flex;
     align-items: center;
     align-content: stretch; 
-    margin-bottom: $grid-gutter*3;
-    margin-top: $grid-gutter*3;
+    margin-bottom:$cart-navigation-margin;
+    margin-top: $cart-navigation-margin;
 
     @include media(mobile){
         padding-left: $base-content-padding!important;
+        margin-bottom: $cart-navigation-margin-mobile;
+        margin-top: $cart-navigation-margin-mobile;
     }
     @include element('shop-checkout-navigation'){
         padding: 0;
@@ -24,17 +32,24 @@
     }
     @include element('item'){
         flex:1;
-        color:$multistep-text-color;
-        background: $multistep-background-color;
+        color:$base-dark-grey-color;
+        background: $base-grey-color;
         
-        padding: $grid-gutter;
+        padding: $base-content-padding;
        // @include typi('small');
-        margin-right: $grid-gutter*3;
+        margin-right: $base-content-padding*3;
         position: relative;
 
         @include media(mobile){
-            margin-right: $grid-gutter*1.5;
+            margin-right: $cart-navigation-items-spacing-mobile;
             flex-grow: 0;
+           // width: 40px;
+            padding: 4px;
+            height: $cart-navigation-item-mobile-size;
+            min-width: $cart-navigation-item-mobile-size;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         &.is-activated{
@@ -93,10 +108,12 @@
            position: absolute;
            right: -48px;
            top: 0;
-           padding: $grid-gutter;
+           padding: $base-content-padding;
 
            @include media(mobile){
-               right: -38px;
+               right: -$cart-navigation-items-spacing-mobile;
+               padding: 0;
+               top: calc(50% - 8px);
            }
         }
     }

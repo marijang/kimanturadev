@@ -2,6 +2,11 @@
     padding: 0 32px 32px 0;
     position: relative;
     display: grid;
+    @include media(mobile){
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
 
     @include e('img'){
         max-width: 100%;
@@ -15,7 +20,9 @@
         right: 0;
         background-color: $base-primary-color;
         color: $base-white-color;
-
+        @include media(mobile){
+            position: static;
+        }
         //height i width potrebno postaviti drugom klasom
     }
 }

@@ -94,6 +94,10 @@
         }
     }
 
+    @include element('login'){
+        grid-row: 1/3;
+    }
+
     @include element('settings'){
         display: none;
         &.is-active{

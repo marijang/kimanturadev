@@ -102,17 +102,17 @@ do_action( 'woocommerce_before_cart' ); ?>
 						echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );
 						?></td>
 
-						<td class="product-price item-center cart__price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
+						<!-- <td class="product-price item-center cart__price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
 							?>
-						</td>
+						</td> -->
 
-						<!-- <td class="product-subtotal" data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>">
+						<td class="product-subtotal cart__price item-center" data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
 							?>
-						</td> -->
+						</td> 
 						<td class="product-remove cart__remove item-center">
 							<?php
 								// @codingStandardsIgnoreLine
