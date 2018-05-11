@@ -95,7 +95,7 @@ $section-description-space-bottom-small:$base-content-padding;
     @include section-colors();
 
     @include element('bg'){
-        @include media('desktop'){
+        @include media(desktop large){
             background: url('/wp-content/themes/kimnatura/skin/public/images/cipka-r.png');
             background-repeat: no-repeat;
             background-position: bottom right;
