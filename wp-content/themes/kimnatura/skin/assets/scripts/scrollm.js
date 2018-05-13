@@ -1,9 +1,10 @@
-
+//import {scrollMonitor} from 'scrollMonitor';
 
 $(function() {
     var elem = document.getElementById('page-navigation');
     var scrollMonitor = require("scrollMonitor");
     var RevealFx = require("./revealfx");
+   
     $('.article-list').each(function(index, section) {
         var elementWatcher = scrollMonitor.create( section );
         elementWatcher.enterViewport(function() {

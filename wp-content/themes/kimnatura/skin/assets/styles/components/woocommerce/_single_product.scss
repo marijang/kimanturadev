@@ -6,7 +6,9 @@
             flex-direction: column;
         }
     }
-
+    @include e('title'){
+        margin-bottom:0px; 
+    }
     @include e('regular-price'){
         //  display: inherit!important;
           text-decoration: line-through!important;
@@ -33,6 +35,7 @@
        flex: 1;
        max-width: 50%;
        position: relative;
+       padding-right:$base-content-padding*2; 
        @include media(mobile){
         max-width: 100%;
        }
@@ -91,7 +94,7 @@
         //TODO @include typi('small');
     }
     @include element('variations-form'){
-        margin-top: $base-content-padding;
+        margin: $base-content-padding*2 0;
 
     }
     @include element('stock'){
@@ -117,7 +120,7 @@
        
     }
     @include element('reset-variations'){
-      display: none;  
+      display: none!important;  
     }
 
     @include element('variation-name'){

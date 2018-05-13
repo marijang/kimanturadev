@@ -7,6 +7,11 @@ import './browsers/firefox.png';
 import './browsers/opera.png';
 import './browsers/safari.png';
 
+//import './inline/inline-facebook.svg.php';
+
+import './cipka-r.png';
+import './logo-white.svg';
+
 // Favicons.
 // import './favicons/52.png';
 // import './favicons/70.png';
