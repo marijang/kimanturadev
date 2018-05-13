@@ -1,12 +1,16 @@
-$article-top-spacing:     0;
-$article-bottom-spacing:  $base-content-padding*7;
+$article-top-spacing:     $base-content-padding*2;
+$article-bottom-spacing:  $base-content-padding*3;
 $article-content-color:   $base-white-color;
 $article-content-padding: $base-content-padding*4;
 $article-min-height:      500px;
 
 @include block('article-list'){
-    margin-bottom: $article-bottom-spacing;
-    margin-top: $article-top-spacing;
+    padding-bottom: $article-bottom-spacing;
+    padding-top: $article-top-spacing;
+  
+    @include first(){
+      padding-top:0; 
+    }
     @include media(mobile){
         margin-top: $base-content-padding*2;
         margin-bottom: 0;

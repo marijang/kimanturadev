@@ -89,6 +89,7 @@ $section-description-space-bottom-small:$base-content-padding;
         
         @include p('e:image'){
             flex:1;
+            margin:0;
         }
     }
 

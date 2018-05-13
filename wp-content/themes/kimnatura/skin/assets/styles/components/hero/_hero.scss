@@ -1,6 +1,6 @@
-$hero-content-top:      $base-content-padding*2;
+$hero-content-top:      $base-content-padding*5;
 $hero-content-bottom:   auto;
-$hero-content-left:     $base-content-padding*2;
+$hero-content-left:     $base-content-padding*4;
 $hero-content-right:    auto;
 $hero-content-padding:  $base-content-padding;
 // Slick Dots
@@ -16,7 +16,7 @@ $hero-content-dots-inactive-color: #3A4542;
        
     }
     @include element('bg'){
-        min-height: 400px;
+        min-height: 600px;
         @extend %bg-image;
     }
     @include element('slider-wrapper'){
@@ -43,10 +43,16 @@ $hero-content-dots-inactive-color: #3A4542;
 
     }
     @include element('title'){
-
+        margin: 0;
+        text-transform: uppercase;
+    }
+    @include element('description'){
+        margin: 0;
+        font-style: italic;
+        margin-bottom: $base-content-padding;
     }
     @include element('link'){
-        margin-top:$base-content-padding;
+        margin-top:$base-content-padding*2;
     }
     @include element('content'){
        
@@ -57,7 +63,7 @@ $hero-content-dots-inactive-color: #3A4542;
         bottom:$hero-content-bottom;
         right:$hero-content-right;
        // padding: $hero-content-padding;
-        width: 32%;
+        //width: 32%;
         p,i,div{
             transform: translate3d(0,0,0);
         }

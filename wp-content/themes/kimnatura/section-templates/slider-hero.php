@@ -17,7 +17,7 @@ $result = get_posts( $args ) ;
 
 
 ?>
-<div class="hero__slider-wrapper section">
+<div class="hero__slider-wrapper section section__spacing-top--default section__spacing-bottom--medium">
 <div class="hero__slider hero-slider-slick slick-slider">
 <?php
 foreach($result as $post):
@@ -39,7 +39,7 @@ foreach($result as $post):
                     the_content(); 
                 }
             ?>
-            <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class="hero__link btn btn--ghost"><?php echo __('Saznaj više','kimnatura');?></a>
+            <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class="hero__link btn btn--primary-color"><?php echo __('Saznaj više','kimnatura');?></a>
         </div>
         </div>
          <?php //the_post_thumbnail( 'full-width',array('class' => 'kenburns-bottom hero__image'));  ?>
