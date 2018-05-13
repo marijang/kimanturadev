@@ -1,6 +1,7 @@
 $grid-gap-column: $base-content-padding*2;
 $grid-gap-row: $base-content-padding*2.5;
 $grid-gallery-space-bottom: $base-content-padding*6;
+$grid-gallery-space-bottom-mobile: $base-content-padding*3;
 $grid-icon-margin: $base-content-padding;
 $grid-item-title-space-bottom: $base-content-padding;
 
@@ -11,11 +12,18 @@ $grid-item-title-space-bottom: $base-content-padding;
     grid-gap: $grid-gap-column;
     margin-bottom: $grid-gallery-space-bottom;
 
-    // @include e('item'){
-    //     padding: 0 32px 32px 0;
-    //     position: relative;
-    //     display: grid;
-    // }
+    @include media(mobile){
+        grid-template-columns: 1fr;
+        margin-bottom: $grid-gallery-space-bottom-mobile;
+    }
+
+    @include e('item'){
+        @include media(mobile){
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+    }
 
     // @include e('img'){
     //     max-width: 100%;
@@ -26,6 +34,11 @@ $grid-item-title-space-bottom: $base-content-padding;
         min-height: 60%;
         max-height: calc(100% - 32px);
         width: 60%;
+
+        @include media(mobile){
+            width: 100%;
+            max-height: 100%;
+        }
     }
 
     @include e('icon-row'){
@@ -56,6 +69,10 @@ $grid-item-title-space-bottom: $base-content-padding;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: $grid-gap-column $grid-gap-row;
+
+    @include media(mobile){
+        grid-template-columns: 1fr;
+    }
 
     @include e('item'){
         padding: 0;

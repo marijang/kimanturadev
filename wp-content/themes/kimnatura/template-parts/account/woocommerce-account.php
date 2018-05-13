@@ -86,7 +86,7 @@
 		<?php
 		} else {
 		?>
-			<div class="page__user-profile">
+			<div class="navigation-user__login">
         
             <?php do_action('woocommerce_custom_login_form'); ?>
             
