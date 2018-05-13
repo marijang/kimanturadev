@@ -1,8 +1,9 @@
 //import {scrollMonitor} from 'scrollMonitor';
-
+//var scrollMonitor = require("scrollmonitor");
 $(function() {
     var elem = document.getElementById('page-navigation');
-    var scrollMonitor = require("scrollMonitor");
+    //console.log(scrollMonitor);
+    var scrollMonitor = require("scrollmonitor");
     var RevealFx = require("./revealfx");
    
     $('.article-list').each(function(index, section) {
