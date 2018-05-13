@@ -10,7 +10,7 @@
 global $wpdb,$post;
 
 
-$args = array( 'numberposts' => 2 ,'category_name' => '');
+$args = array( 'numberposts' => 2 ,'category_name' => 'blog');
 echo '<div class="section__bg">';
 echo '<div class="section section__spacing-top--medium section__spacing-bottom--medium">';
 ?>
