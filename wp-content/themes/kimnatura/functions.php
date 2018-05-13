@@ -45,7 +45,7 @@ if ( ! defined( 'WPINC' ) ) {
  * @since 2.0.0
  * @package Kimnatura
  */
-define( 'KIM_THEME_VERSION', '1.0.0' );
+define( 'KIM_THEME_VERSION', '1.0.1' );
 
 /**
  * Theme name global
@@ -97,7 +97,7 @@ init_theme();
 
 //inf_test();
 /* Exclude some categories */
-//add_action( 'pre_get_posts', 'test',10 );
+add_action( 'pre_get_posts', 'test',10 );
 
 function test( $query ) {
   $slugs = array('slider','homepage','sastojci');
