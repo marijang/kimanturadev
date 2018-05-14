@@ -16,9 +16,11 @@ $hero-content-dots-inactive-color: #3A4542;
        
     }
     @include element('bg'){
-        min-height: 600px;
+        min-height: 560px;
         @extend %bg-image;
-        
+        @include media(mobile){
+            min-height: 500px;
+        }   
     }
     @include element('slider-wrapper'){
 
@@ -75,6 +77,8 @@ $hero-content-dots-inactive-color: #3A4542;
         }
         @include media(mobile){
             width: 50%;
+            top:20px;
+            left:20px;
             @include typi(small);
         }
     }
