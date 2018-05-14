@@ -45,8 +45,8 @@ $slick-opacity-not-active: 0.25 !default;
         margin: $sastojci-bg-margin;
         @include media(mobile){
            margin:0;
-           height: 268px;
-           min-height: 268px;
+           //height: 272px;
+           min-height: 280px;
         }
     }
     @include element('slider-wrapper'){
@@ -152,6 +152,12 @@ $slick-opacity-not-active: 0.25 !default;
                 //margin-right: $base-content-padding;
             }
         }
+        .slick-slide{
+            @include media(mobile){
+                margin:0px;
+            }
+
+        }
 
     }
     @include element('paging'){
@@ -205,7 +211,7 @@ $slick-opacity-not-active: 0.25 !default;
             padding: 16px;
             top:0;
             @include typi(small);
-            min-height: 256px;
+            min-height: 280px;
         }
     }
     @include element('image'){
