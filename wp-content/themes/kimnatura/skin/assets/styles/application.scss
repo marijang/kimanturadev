@@ -116,6 +116,8 @@
 @import 'components/slick/hero_slick';
 @import 'components/others/featured_item';
 
+@import 'woocommerce/billing_fields';
+
 
 .screen-reader-text {
     position: absolute;
@@ -148,4 +150,59 @@
 	background: #000;
 	pointer-events: none;
 	opacity: 0;
+}
+
+@keyframes filler {
+    0% {
+        -webkit-transform: translateX(0) scaleY(1) scaleX(0);
+        transform: translateX(0) scaleY(1) scaleX(0)
+    }
+
+    50% {
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+        transform: translateX(0) scaleY(1) scaleX(1)
+    }
+
+    100% {
+        -webkit-transform: translateX(102%) scaleY(1) scaleX(1);
+        transform: translateX(102%) scaleY(1) scaleX(1)
+    }
+}
+
+
+.animated .animate-content {
+    opacity: 1;
+    transition-delay: .9s;
+    animation-delay: .9s
+}
+.animate-content {
+    opacity: 0;
+    transition: opacity .001s;
+    transition-delay: 0s;
+    animation-delay: 0s;
+}
+
+.animated .animate-bg {
+    will-change: width,transform;
+    animation-name: filler;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.81,0.15,0.26,0.99);
+    animation-fill-mode: forwards;
+    animation-duration: 1.15s;
+    transition-delay: .3s;
+    animation-delay: .3s
+}
+
+.animate-bg {
+    z-index: 99;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d5e2f2;
+    overflow: hidden;
+    transform: translateX(0) scaleY(1) scaleX(0);
+    transform-origin: 0 0;
 }

@@ -28,6 +28,10 @@ $hero-content-dots-inactive-color: #3A4542;
            .hero__bg{
                 animation: kenburns-bottom 5s ease-out both;
            }
+           .hero__content{
+               opacity:1;
+               visibility: visible;
+           }
         }
         // Slick
         .slick-dots{
@@ -74,7 +78,13 @@ $hero-content-dots-inactive-color: #3A4542;
         //width: 32%;
         p,i,div{
             transform: translate3d(0,0,0);
+            font-size: 22px;
+            margin: 0 0 40px;
         }
+        transition: 1s ease-in .5s;
+        visibility: hidden;
+        opacity: 0;
+        
         @include media(mobile){
             width: 50%;
             top:20px;

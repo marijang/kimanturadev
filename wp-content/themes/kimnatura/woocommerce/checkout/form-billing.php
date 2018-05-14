@@ -22,24 +22,73 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** @global WC_Checkout $checkout */
 
+use Kimnatura\Admin\Woo as Woo;
+$woo = new Woo;
+
 ?>
 <div class="woocommerce-billing-fields">
 	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
 	<div class="woocommerce-billing-fields__field-wrapper">
 		<?php
+		    $sort = array(
+				array('billing_first_name','billing_last_name'),
+				array('billing_email'),
+				array('billing_address_1','billing_country'),
+			
+				array('billing_city','billing_postcode')
+			);
 			$fields = $checkout->get_checkout_fields( 'billing' );
+
+
+			foreach($sort as $value){
+				echo '<div class="billing-fields">';
+                foreach($value as $item){
+					$field = $fields[$item];
+					$classes = implode('',$field['class']);
+					//echo '<div class="billing-fields__item">';
+					//echo '<div class="input-field">';
+					//echo '<input name="'.$item.'" type="text" class="'.$classes.'" value="'.$checkout->get_value( $item ).'">';
+					//echo '<label for="'.$item.'">'.$field['label'].'</label>';
+					$woo->woocommerce_form_field( $item, $field, $checkout->get_value( $item ) );
+					//echo '</div>';
+					//echo '</div>';
+				}
+				echo '</div>';
+			}
+/*
+			foreach($sort as $value){
+				$count = count($value);
+				echo '<div class="billing-fields">';
+                foreach($value as $item){
+					$field = $fields[$item];
+					$classes = implode('',$field['class']);
+					echo '<div class="billing-fields__item">';
+					echo '<div class="input-field">';
+					echo '<input name="'.$item.'" type="text" class="'.$classes.'" value="'.$checkout->get_value( $item ).'">';
+					echo '<label for="'.$item.'">'.$field['label'].'</label>';
+					//$woo->woocommerce_form_field( $item, $field, $checkout->get_value( $item ) );
+					echo '</div>';
+					echo '</div>';
+				}
+				echo '</div>';
+			}
+			*/
+			
+			
+	
+
 			foreach ( $fields as $key => $field ) {
 				if ( isset( $field['country_field'], $fields[ $field['country_field'] ] ) ) {
 					$field['country'] = $checkout->get_value( $field['country_field'] );
 				}
-				woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+				//woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
 			}
 		?>
 	</div>
 	<?php do_action( 'woocommerce_after_checkout_billing_form', $checkout ); ?>
 </div>
 
-<?php if ( ! is_user_logged_in() && $checkout->is_registration_enabled() ) : ?>
+<?php if ( ! is_user_logged_in() && $checkout->is_registration_enabled()&&1==2) : ?>
 	<div class="woocommerce-account-fields">
 		<?php if ( ! $checkout->is_registration_required() ) : ?>
 

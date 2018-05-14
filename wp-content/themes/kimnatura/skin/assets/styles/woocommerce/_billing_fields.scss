@@ -1,0 +1,10 @@
+@include b('billing-fields'){
+    display: flex;
+    @include element('item'){
+        flex: 1;
+        margin-right: $base-content-padding;
+        @include last(){
+            margin-right: 0px;
+        }
+    }
+}

@@ -90,8 +90,9 @@ $slick-opacity-not-active: 0.25 !default;
             padding: 0;
             border: none;
             outline: none;
-            text-indent: -9999px;
-            
+            content: ""; 
+           // text-indent: -9999px;
+            content: "";            
             &:hover, &:focus {
                 outline: none;
                 background: transparent;
@@ -107,7 +108,7 @@ $slick-opacity-not-active: 0.25 !default;
                 font-family: $slick-font-family;
                 font-size: 48px;
                 line-height: 1;
-                color: $sastojci-slick-arrow-color;
+                color: $base-white-color!important;
                 opacity: $slick-opacity-default;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;

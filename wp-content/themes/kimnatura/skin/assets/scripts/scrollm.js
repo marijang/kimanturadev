@@ -5,6 +5,14 @@ $(function() {
     //console.log(scrollMonitor);
     var scrollMonitor = require("scrollmonitor");
     var RevealFx = require("./revealfx");
+
+    $('.section').each(function(index, section) {
+        var elementWatcher = scrollMonitor.create( section );
+        elementWatcher.enterViewport(function() {
+            $(section).addClass('animated');
+            elementWatcher.destroy();
+        });
+    });
    
     $('.article-list').each(function(index, section) {
         var elementWatcher = scrollMonitor.create( section );

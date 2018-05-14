@@ -19,3 +19,4 @@ import './headroom';
 import './scrollm';
 import './form-fields/selecttoggle';
 import './form-fields/inputnumber';
+import './app';
