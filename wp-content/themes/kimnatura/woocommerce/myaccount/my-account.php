@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 //do_action( 'b4b_woocommerce_account_navigation1' );
+
 wc_print_notices();
 
 /**

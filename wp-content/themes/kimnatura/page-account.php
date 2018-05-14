@@ -14,13 +14,15 @@
  */
 
 get_header();
+
 ?>
-		<?php
+        <?php
+        get_template_part( 'template-parts/account/woocommerce-account' ); 
 	    do_action('b4b_account_before'); 
 		while ( have_posts() ) :
 			the_post();
         ?>
-        <section id="account-page" class="account section">
+        <section id="account-page" class="account section  section__spacing-top--default section--first section__spacing-bottom--medium">
             <header class="account__header section__header section__header--content">
                 <?php the_title( '<h1 class="section__title section__title--content">', '</h1>' ); ?>
                 <?php if (!is_user_logged_in()): ?>
