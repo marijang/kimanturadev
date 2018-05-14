@@ -239,6 +239,7 @@ $delay7: $duration + $delay6 - 3;
     padding: 0;
     border: none;
     outline: none;
+    text-indent: -9999px;
     &:hover, &:focus {
         outline: none;
         background: transparent;

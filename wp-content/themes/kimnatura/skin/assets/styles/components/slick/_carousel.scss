@@ -86,6 +86,7 @@ $slick-opacity-not-active: 0.25 !default;
     padding: 0;
     border: none;
     outline: none;
+    text-indent: -9999px;
     &:hover, &:focus {
         outline: none;
         background: transparent;
