@@ -106,6 +106,10 @@ class Theme {
       $main_script_vandors = '/skin/public/scripts/vendors/anime.min.js';
       wp_register_script( $this->theme_name . 'anime-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ) );
       wp_enqueue_script( $this->theme_name . 'anime-scripts-vendors' );
+
+      $main_script_vandors = '/skin/public/scripts/vendors/materialize.min.js';
+      wp_register_script( $this->theme_name . 'materialize-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ) );
+      wp_enqueue_script( $this->theme_name . 'materialize-scripts-vendors' );
     
 
       $main_script = '/skin/public/scripts/application.js';
@@ -135,6 +139,88 @@ class Theme {
   function add_shortcodes(){
     $contactmap = new Shortcodes\Gmap();
     add_shortcode( 'b4b-map', array($contactmap,'shortcode') );
+  }
+
+
+  function add_customizer( $wp_customize ) {
+    //All our sections, settings, and controls will be added here
+    $wp_customize->add_section( $this->theme_name.'_mailchimp', 
+        array(
+          'title'       => __( 'MailChimp', 'b4b' ), //Visible title of section
+          'priority'    => 35, //Determines what order this appears in
+          'capability'  => 'edit_theme_options', //Capability needed to tweak
+          'description' => __('Allows you to customize Mailchimp settings for '.$this->theme_name, 'b4b'), //Descriptive tooltip
+        ) 
+    );
+
+    $wp_customize->add_section( $this->theme_name.'_options', 
+        array(
+          'title'       => __( 'Options', 'b4b' ), //Visible title of section
+          'priority'    => 35, //Determines what order this appears in
+          'capability'  => 'edit_theme_options', //Capability needed to tweak
+          'description' => __('Allows you to customize some example settings for '.$this->theme_name, 'b4b'), //Descriptive tooltip
+        ) 
+    );
+    //2. Register new settings to the WP database...
+    $wp_customize->add_setting( 'mailchimp_newsletter_code', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+        array(
+          'default'    => '0000', //Default setting/value to save
+          'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+          'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+          'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+        ) 
+    );  
+    $wp_customize->add_setting( 'footer_text', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+        array(
+          'default'    => 'Test', //Default setting/value to save
+          'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+          'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+          'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+        ) 
+    );  
+    $wp_customize->add_setting( 'copyright_text', //No need to use a SERIALIZED name, as `theme_mod` settings already live under one db record
+      array(
+      'default'    => 'Test', //Default setting/value to save
+      'type'       => 'theme_mod', //Is this an 'option' or a 'theme_mod'?
+      'capability' => 'edit_theme_options', //Optional. Special permissions for accessing this setting.
+      'transport'  => 'postMessage', //What triggers a refresh of the setting? 'refresh' or 'postMessage' (instant)?
+      ) 
+    ); 
+
+    $wp_customize->add_control(
+      new \WP_Customize_Control(
+        $wp_customize,
+        'footer_control',
+        array(
+          'label'    => __( 'Footer Text', 'b4b' ),
+          'section'  => $this->theme_name.'_options',
+          'settings' => 'footer_text',
+          'type'     => 'textarea',
+          'choices'  => array(
+            'left'  => 'left',
+            'right' => 'right',
+          ),
+        )
+      )
+    );
+
+    $wp_customize->add_control(
+      new \WP_Customize_Control(
+        $wp_customize,
+        'mailchimp_newsletter_control',
+        array(
+          'label'    => __( 'Mailchimp Code', 'b4b' ),
+          'section'  => $this->theme_name.'_mailchimp',
+          'settings' => 'mailchimp_newsletter_code',
+          'type'     => 'text',
+          'choices'  => array(
+            'left'  => 'left',
+            'right' => 'right',
+          ),
+        )
+      )
+    );
+
   }
 
 }

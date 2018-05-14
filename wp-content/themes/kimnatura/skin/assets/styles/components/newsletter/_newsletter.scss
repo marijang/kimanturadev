@@ -1,0 +1,32 @@
+@include block('newsletter'){
+    background: url('/wp-content/themes/kimnatura/skin/public/images/newsletter.png') no-repeat center center;
+    background-size: cover;
+
+    margin-top: $base-content-padding*4!important;
+    margin-bottom: $base-content-padding*4!important;
+    min-height: 436px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    
+    @include media(mobile){
+        margin: $base-content-padding 0;
+        min-height: 100px;
+    }
+    @include element('title'){
+        margin-top: $grid-gutter*3;
+        margin-bottom: $grid-gutter*3;
+        text-align: center;
+    }
+    @include element('content'){
+        margin: auto;
+        width: 600px;
+        margin-bottom: $grid-gutter;
+    }
+    @include element('actions'){
+        margin: auto;
+        text-align: center;
+        //width: 300px;
+    }
+}

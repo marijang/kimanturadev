@@ -28,7 +28,7 @@ footer{
 
 @include block('footer'){
 
-    
+    margin-top: $base-content-padding*2;
     @include media(mobile){
        margin-top: $base-content-padding;
     }

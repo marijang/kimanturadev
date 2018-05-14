@@ -25,21 +25,9 @@ get_header();
     <div class="section__content">
        <?php the_post(); the_content(); ?>
     </div>
-    <div id="newsletter" class="modal">
-        <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
-        </div>
-        <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-        </div>
-        </div>
-        <button data-target="modal1" class="btn btn--primary modal-trigger">Modal</button>
-        <?php
-        echo do_shortcode('[mc4wp_form id="4266"]');
-        ?>
-    </div>
+    
 </section>
 <?php
+get_template_part( 'template-parts/single/newsletter' );
 get_sidebar();
 get_footer();

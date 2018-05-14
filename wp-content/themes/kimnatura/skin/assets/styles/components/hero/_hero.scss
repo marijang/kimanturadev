@@ -18,9 +18,15 @@ $hero-content-dots-inactive-color: #3A4542;
     @include element('bg'){
         min-height: 600px;
         @extend %bg-image;
+        
     }
     @include element('slider-wrapper'){
 
+        div.slick-active{
+           .hero__bg{
+                animation: kenburns-bottom 5s ease-out both;
+           }
+        }
         // Slick
         .slick-dots{
             position: absolute;

@@ -184,6 +184,9 @@ class Main {
     // Legacy Browsers.
     $this->loader->add_action( 'template_redirect', $legacy_browsers, 'redirect_to_legacy_browsers_page' );
 
+    // Customizer
+    $this->loader->add_action( 'customize_register',$theme,'add_customizer');
+
     /**
      * Optimizations
      *
