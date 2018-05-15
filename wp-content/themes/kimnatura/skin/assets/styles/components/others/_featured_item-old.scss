@@ -1,91 +1,85 @@
-
-$featured-list-popover-height:   $base-content-padding*4;
-
 @include b('featured-link'){
-
-    @include e('item'){
-        border: 1px solid $base-grey-color;
-        transition: all .3s ease-out;
         position: relative;
-        z-index: 1;
-        @include media(desktop large){
-            @include before(){
-                display: block;
-                height: 100%;
-                width: calc(100% + #{$base-content-padding/2});
-                height: calc(100% + #{$base-content-padding/2});
-                content: "";
-                position: absolute;
-                left: -$base-content-padding;
-                top: -$base-content-padding;
-                transition: background-color .1s ease-out;
-                background-color: transparent;
-                padding: $base-content-padding*2;
-            }
-            @include hover(){
-                transform: scale(1.02);
-                @include before(){
-                   
-                    background-color: #fff;
-                    box-shadow: 0 0 40px rgba(0,0,0,.15);
-                }
-            }
-        }   
-
-    }
- 
-
-        transition: all .3s ease-out;
-        position: relative;
-   
-        //transition: transform 5s;
-       // transition: 300ms ease-in;
+        transition: transform 5s;
+        transition: 300ms ease-in;
         transform-style: preserve-3d;
         display: block;
         color: inherit;
-        height: 450px;
-        user-select: none;
-        outline:0;
+        
         overflow: hidden;
+        user-select: none;
+       // margin: 16px;
+        outline:0;
+        //z-index: 1;
+        border: 1px solid $base-grey-color;
+
+        @include media(desktop large){
+            height: 452px;
+            @include after{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                content: '';
+                transition: opacity 100ms;
+                opacity: 0;
+                background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.2));
+            }
+        }
+
+    
+        
         @include e('variable'){
-            @include hover(){
-                @include parse('e:movable'){
-                    transform: translateY(-182px);
-                }
-                @include parse('e:image'){
-                    transform: translateY(-80px) scale(0.4);
+            @include media(desktop large){
+                @include hover(){
+                    @include parse('e:movable'){
+                        transform: translateY(-154px);
+                    }
+                    @include parse('e:image'){
+                        transform: translateY(-82px) scale(0.5);
+                    }
                 }
             }
         }
         @include e('simple'){
-            @include hover(){
-                @include parse('e:movable'){
-                    transform: translateY(-64px);
-                }
-                @include parse('e:image'){
-                    transform: translateY(-16px) scale(0.8);
+            @include media(desktop large){
+                @include hover(){
+                    @include parse('e:movable'){
+                        transform: translateY(-64px);
+                    }
+                    @include parse('e:image'){
+                        transform: translateY(-32px) scale(0.6);
+                    }
                 }
             }
         }
 
         @include parse(':hover', 'm:hover') {
             @include media(desktop large){
-             
-            }
-          
-            @include at(':after'){
-                opacity: 1;
+                box-shadow: 0px 5px 31px -1px rgba(0, 0, 0, 0.15);
+                transform: scale(1.04);
+                @include at(':after'){
+                    opacity: 1;
+                }
             }
             @include parse('e:button'){
                 color: $base-primary-color;
             }
         }
-
+    
+     
 
         @include element('image'){
             width: 100%;
             transition: transform 300ms;
-            height: 280px;
+            transform: scale(.8);
+            @include media(desktop large){
+                //height: 280px;
+                transform: scale(1);
+            }
+            
            
          }
         @include element('description'){
@@ -100,14 +94,17 @@ $featured-list-popover-height:   $base-content-padding*4;
  
          }
         @include element('movable'){
-            padding: $base-content-padding*2;
+            padding: $base-content-padding;
             border-top: 1px solid $base-light-grey-color;
             position: relative;
             transition: transform 300ms;
             text-align: left;
             background: $base-white-color;
-           transform: translateY(20px);
-            
+    
+            @include media(desktop large){
+                padding: $base-content-padding*2;
+                transform: translateY(52px);
+            }
         }
 
       
@@ -117,25 +114,35 @@ $featured-list-popover-height:   $base-content-padding*4;
         }
         @include element('price'){
             color: $base-primary-color;
-            font-size:22px;
-            padding-top: $base-content-padding;
+            @include typi(larger);
+            padding-top: $base-content-padding/2;
+            @include media(desktop large){
+                padding-top: $base-content-padding;
+            }
         }
 
         @include element('title'){
             @extend %heading-reset;
-            font-size:22px;
-
+            @include typi(larger);
         }
 
         @include e('options'){
+            display: none;
+            @include media(desktop large){
+                display: block;
+            }
+            
             h5{
                 @extend %heading-reset;
                 padding-top: $base-content-padding;
                 padding-bottom: $base-content-padding/2;
+                @include typi(small);
+                text-transform: uppercase;
             }
             div{
                 padding-bottom: $base-content-padding/4;
-                font-size:14px;
+                
+                @include typi(small);
             }
             span {
                // display: inline-block;
@@ -184,8 +191,12 @@ $featured-list-popover-height:   $base-content-padding*4;
 
 
         @include element('button'){
-    
-            margin-top: $base-content-padding;
+            display: none;
+            @include media(desktop large){
+                display: inline-flex;
+                margin-top: $base-content-padding;
+            }
+            
            
         }
      

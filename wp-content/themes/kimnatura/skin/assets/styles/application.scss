@@ -114,7 +114,7 @@
 @import 'components/slick/slick';
 @import 'components/slick/carousel';
 @import 'components/slick/hero_slick';
-@import 'components/others/featured_item';
+@import 'components/others/featured_item-old';
 
 @import 'woocommerce/billing_fields';
 
@@ -154,17 +154,14 @@
 
 @keyframes filler {
     0% {
-        -webkit-transform: translateX(0) scaleY(1) scaleX(0);
         transform: translateX(0) scaleY(1) scaleX(0)
     }
 
     50% {
-        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
         transform: translateX(0) scaleY(1) scaleX(1)
     }
 
     100% {
-        -webkit-transform: translateX(102%) scaleY(1) scaleX(1);
         transform: translateX(102%) scaleY(1) scaleX(1)
     }
 }
@@ -189,6 +186,7 @@
     animation-timing-function: cubic-bezier(0.81,0.15,0.26,0.99);
     animation-fill-mode: forwards;
     animation-duration: 1.15s;
+   // animation-duration: 10s;
     transition-delay: .3s;
     animation-delay: .3s
 }
@@ -205,4 +203,26 @@
     overflow: hidden;
     transform: translateX(0) scaleY(1) scaleX(0);
     transform-origin: 0 0;
+    //animation-fill-mode: backwards;
+}
+
+
+
+@include media(desktop large){
+    span.letter{
+        display: inline-block;
+        transform: translate3d(0,100%,0);
+        opacity: 0;
+        transition: all .45s ease-out;
+        position: relative;
+    }
+    span.word{
+        overflow: hidden;
+        display: inline-block;
+        overflow: hidden;
+    }
+    .animated span.letter{
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
 }

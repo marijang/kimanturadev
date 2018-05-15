@@ -9,6 +9,15 @@ $hero-content-dots-right:  $base-content-padding;
 // Colors
 $hero-content-dots-inactive-color: #3A4542;
 
+.animated{
+    @include media(desktop large){
+        .hero__description,
+        .hero__link{
+         opacity:1;
+         visibility: visible;
+        }
+    }
+}
 
 @include block('hero'){
     @include element('item'){
@@ -26,12 +35,12 @@ $hero-content-dots-inactive-color: #3A4542;
 
         div.slick-active{
            .hero__bg{
-                animation: kenburns-bottom 5s ease-out both;
+               // animation: kenburns-bottom 5s ease-out both;
            }
            .hero__content{
-               opacity:1;
-               visibility: visible;
+               
            }
+          
         }
         // Slick
         .slick-dots{
@@ -60,13 +69,23 @@ $hero-content-dots-inactive-color: #3A4542;
     }
     @include element('description'){
         margin: 0;
-        font-style: italic;
+       
         margin-bottom: $base-content-padding;
+        transition: 1s ease-in 1.5s;
+        @include media(desktop large){
+            opacity: 0;
+            visibility: hidden;
+        }
     }
     @include element('link'){
-        margin-top:$base-content-padding*2;
+        transition: 1s ease-in 1.5s;
+        @include media(desktop large){
+            opacity: 0;
+            visibility: hidden;
+        }
     }
     @include element('content'){
+
        
         z-index: 1;
         position: absolute;
@@ -74,16 +93,28 @@ $hero-content-dots-inactive-color: #3A4542;
         left:$hero-content-left;
         bottom:$hero-content-bottom;
         right:$hero-content-right;
+
+        h2{
+            @include typi(huge);
+            font-weight: 700;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
        // padding: $hero-content-padding;
         //width: 32%;
-        p,i,div{
-            transform: translate3d(0,0,0);
-            font-size: 22px;
-            margin: 0 0 40px;
+        em{
+            font-weight: 300;
+            font-style: italic;
         }
-        transition: 1s ease-in .5s;
-        visibility: hidden;
-        opacity: 0;
+        p,div{
+            //transform: translate3d(0,0,0);
+            font-size: 22px;
+            line-height: 1.45;
+            margin: 0 0 20px;
+            font-weight: normal;
+        }
+     
+        width: 42%;
         
         @include media(mobile){
             width: 50%;

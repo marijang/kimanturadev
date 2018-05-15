@@ -25,21 +25,40 @@ foreach($result as $post):
 
   $images = new Utils\Images();
   $image  = $images->get_post_image( 'full-width' );
+  $words  = explode(' ',get_the_title());
 ?>
 
     <div class="hero__item" >
     <div class="hero__bg" class="kenburns-bottom" style="background-image: url('<?php echo esc_url( $image['image'] ); ?>');"> </div>
         <div class="hero__content">
-            <h2 class="hero__title"><?php the_title(); ?></h2>
-            <?php the_subtitle( '<div class="hero__description"><em>', '</em></div>' ); ?>
+            <h2 class="hero__title"><?php //the_title(); ?>  
+            <?php 
+                $delay = 0.0;
+                foreach($words as $word ){
+                    $letters  = str_split($word, 1);
+                    echo ' <span class="word">';
+                    foreach($letters as $letter ){
+                    echo '<span class="letter" style="transition-delay: '.$delay.'s;">'.$letter.'</span>';
+                    $delay = $delay + 0.05;
+                    }
+                    echo '</span>';
+                }
+            ?>
+            </h2>
+            
+            <?php 
+            echo '<div class="hero__description" style="transition-delay: '.$delay.'s;">';
+            the_subtitle( '<em>', '</em>' ); ?>
             <?php 
                 if( has_excerpt() ){
                     the_excerpt();
                 } else {
                     the_content(); 
                 }
+            echo '</div>';
             ?>
-            <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class="hero__link btn btn--primary-color"><?php echo __('Saznaj više','kimnatura');?></a>
+            
+            <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class="hero__link btn btn--primary-color" style="transition-delay: <?php echo $delay;?>s;"><?php echo __('Saznaj više','kimnatura');?></a>
        
         </div>
          <?php //the_post_thumbnail( 'full-width',array('class' => 'kenburns-bottom hero__image'));  ?>
