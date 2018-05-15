@@ -40,7 +40,7 @@ class Gmap {
         $id = substr( sha1( "Google Map" . time() ), rand( 2, 10 ), rand( 5, 8 ) );
         ob_start();
         ?>
-        <div class='map' id="karta" style='position: relative;height:<?php echo $args['height'] ?>;'></div> 
+        <div class='map gmap__map' id="karta" style='position: relative;'></div> 
     
     
         <script type='text/javascript'>
