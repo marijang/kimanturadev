@@ -108,6 +108,7 @@ $hero-content-dots-inactive-color: #3A4542;
             font-weight: 300;
             font-style: italic;
             margin-bottom: $base-content-padding;
+            display: block;
         }
         p,div{
             //transform: translate3d(0,0,0);
