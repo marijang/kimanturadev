@@ -90,7 +90,9 @@ $hero-content-dots-inactive-color: #3A4542;
         z-index: 1;
         position: absolute;
         top:$hero-content-top;
+        top: 0;
         left:$hero-content-left;
+        left:0;
         bottom:$hero-content-bottom;
         right:$hero-content-right;
 
@@ -105,6 +107,7 @@ $hero-content-dots-inactive-color: #3A4542;
         em{
             font-weight: 300;
             font-style: italic;
+            margin-bottom: $base-content-padding;
         }
         p,div{
             //transform: translate3d(0,0,0);

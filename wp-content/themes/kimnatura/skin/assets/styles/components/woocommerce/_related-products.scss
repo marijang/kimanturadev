@@ -1,0 +1,19 @@
+@include b('animated'){
+    &.related-products{
+        @include media(desktop large){
+            .section__title{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+@include b('related-products'){
+    .section__title{
+        transform: translateY(40vh);
+        opacity: 0;
+        transition: transform 1.5s cubic-bezier(0,0.7,0.1,1),opacity 1.5s cubic-bezier(0.5,0,0.2,1);
+        transition-delay: .5s;
+    }
+}

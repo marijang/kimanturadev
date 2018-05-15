@@ -15,7 +15,7 @@ $woo  = new Woo();
 
 
 ?>
-<section class="section  page__related-products1 section__spacing-top--medium section__spacing-bottom--medium">
+<section class="section related-products section__spacing-top--medium section__spacing-bottom--medium">
     <?php if (is_front_page()) :?>
     <header class="section__header">
     <h3 class="section__title section__title--center"><?php echo  $title;?></h3>

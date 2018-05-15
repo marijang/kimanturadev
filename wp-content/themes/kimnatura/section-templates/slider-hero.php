@@ -24,7 +24,7 @@ foreach($result as $post):
   setup_postdata($post);
 
   $images = new Utils\Images();
-  $image  = $images->get_post_image( 'full-width' );
+  $image  = $images->get_post_image( 'slider-full-width' );
   $words  = explode(' ',get_the_title());
 ?>
 
