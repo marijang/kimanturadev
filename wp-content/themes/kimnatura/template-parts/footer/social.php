@@ -38,7 +38,7 @@ foreach($array as $item){
         <?php  get_template_part('skin/public/images/inline/inline',$item['image']) ?>
         </a>
     </li>
-</li>
+
 
 <?php
 }

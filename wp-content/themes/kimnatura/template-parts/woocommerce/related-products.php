@@ -15,7 +15,7 @@ $woo  = new Woo();
 
 
 ?>
-<section class="section  page__related-products1 section__spacing-top--medium section__spacing-bottom--medium">
+<section class="section related-products section__spacing-top--medium section__spacing-bottom--medium">
     <?php if (is_front_page()) :?>
     <header class="section__header">
     <h3 class="section__title section__title--center"><?php echo  $title;?></h3>
@@ -38,7 +38,6 @@ $woo  = new Woo();
 		    ?>
 		<div >
 
-   
         <a id="id-<?php the_id(); ?>" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="featured-link  <?php echo ($product->is_type( 'variable' ))?'featured-link__variable':'featured-link__simple'; ?>">
         <?php 
         if($product->is_on_sale()){
@@ -153,6 +152,7 @@ $woo  = new Woo();
                 <div class="featured-link__button btn btn--primary btn--small">Idi na proizvod</div>
             </div>
         </a>
+       
 			
 		</div>
 		<?php endwhile; 

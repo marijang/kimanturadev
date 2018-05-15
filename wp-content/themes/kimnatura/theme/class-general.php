@@ -59,6 +59,7 @@ class General {
     add_image_size( 'blog-list', 567, 493,true);
     add_image_size('gallery-large',668,437,true);
     add_image_size('gallery-small',468,437,true);
+    add_image_size( 'slider-full-width', 1200,560, true );
 
  
   }

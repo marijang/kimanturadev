@@ -239,6 +239,7 @@ $delay7: $duration + $delay6 - 3;
     padding: 0;
     border: none;
     outline: none;
+    content: ""; 
     &:hover, &:focus {
         outline: none;
         background: transparent;
@@ -344,9 +345,9 @@ $delay7: $duration + $delay6 - 3;
             line-height: 0px;
             font-size: 48px;
             color: transparent;
-            padding: 5px;
+            padding: 2px;
             background: $base-light-grey-color;
-            margin:8px;
+            //margin:8px;
             cursor: pointer;
             &:hover, &:focus {
                 outline: none;

@@ -96,10 +96,17 @@ $section-description-space-bottom-small:$base-content-padding;
     @include section-colors();
 
     @include element('bg'){
+
         @include media(desktop large){
+            //opacity: 0;
+            //transition: all .8s cubic-bezier(0.81,0.15,0.26,0.99);
             background: url('/wp-content/themes/kimnatura/skin/public/images/cipka-r.png');
             background-repeat: no-repeat;
             background-position: bottom right;
         } 
+        @include at('animated'){
+            opacity: 1;
+            transition-delay: 1.8s;
+        }
     }
 }

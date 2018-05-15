@@ -18,6 +18,7 @@ $result = get_posts( $args ) ;
 
 ?>
 <div class="sastojci__slider-wrapper section section__spacing-top--default section__spacing-bottom--medium">
+
 <div class="sastojci__slider sastojci-slider-slick slick-slider">
 <?php
 foreach($result as $post):
@@ -25,12 +26,19 @@ foreach($result as $post):
 
   $images = new Utils\Images();
   $image  = $images->get_post_image( 'full-width' );
+  $words    = explode(' ',get_the_title());
+  $letters  = str_split(get_the_title(), 1);
 ?>
 
     <div class="sastojci__item" >
     <div class="sastojci__bg" class="kenburns-bottom" style="background-image: url('<?php echo esc_url( $image['image'] ); ?>');">
-    </div><div class="sastojci__content">
-            <h2 class="sastojci__title"><?php the_title(); ?></h2>
+    <div class="animate-bg"></div> 
+    </div>
+    <div class="sastojci__content">
+            <div class="animate-bg"></div> 
+            <h2 class="sastojci__title"><?php the_title(); ?>
+         
+            </h2>
             <?php the_subtitle( '<div class="sastojci__description"><em>', '</em></div>' ); ?>
             <?php 
                 if( has_excerpt() ){

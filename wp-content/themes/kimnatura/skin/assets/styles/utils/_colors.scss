@@ -99,7 +99,7 @@ $button-color-map: (
     bg: $base-primary-color,
     text: $base-white-color,
     border: $base-primary-color,
-    bg-hover: $base-white-color,
+    bg-hover: transparent,
     text-hover: $base-primary-color,
     border-hover: $base-primary-color
   ),

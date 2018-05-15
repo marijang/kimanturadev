@@ -85,6 +85,7 @@ $slick-opacity-not-active: 0.25 !default;
     padding: 0;
     border: none;
     outline: none;
+    content: ""; 
     &:hover, &:focus {
         outline: none;
         background: transparent;
@@ -190,9 +191,9 @@ $slick-opacity-not-active: 0.25 !default;
             line-height: 0px;
             font-size: 48px;
             color: transparent;
-            padding: 5px;
+            padding: 2px;
             background: $base-light-grey-color;
-            margin:8px;
+           // margin:8px;
             cursor: pointer;
             &:hover, &:focus {
                 outline: none;
