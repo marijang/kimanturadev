@@ -12,10 +12,11 @@ $(function() {
       //cssEase: 'ease-in-out',
       //autoplay:true,
       //autoplaySpeed: 3000
+      fade:true,
       speed: 0,
       useCSS:false,
-      useTransform:false,
-      waitForAnimate: false,
+      useTransform:true,
+      waitForAnimate: true,
       
       responsive: [
         {

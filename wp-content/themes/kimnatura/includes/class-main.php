@@ -17,6 +17,8 @@ use Kimnatura\Plugins\Acf as Acf;
 use Kimnatura\Theme as Theme;
 use Kimnatura\Theme\Utils as Utils;
 use Kimnatura\Admin\Woo as Woo;
+
+use Kimnatura\Admin\Rest\Example as Example;
 /**
  * The main start class.
  *
@@ -80,8 +82,14 @@ class Main {
     $this->define_theme_hooks();
     $this->define_woo_hooks(); 
     $this->define_blog_hooks();
+    $this->define_rest();
 
 
+  }
+
+  public function define_rest(){
+    //var_dump(new Example);
+    Example::listen();
   }
 
   /**
