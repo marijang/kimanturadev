@@ -31,7 +31,7 @@ textarea.materialize-textarea {
   outline: none;
   height: $input-height;
   width: 100%;
-  font-size: $input-font-size;
+  @include typi(base);
   margin: $input-margin;
   padding: $input-padding;
   box-shadow: none;

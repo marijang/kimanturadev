@@ -169,7 +169,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	?>
 </div>
 
-<div class="cart__banner">Besplatna dostava iznad 200,00 kn</div>
+<!-- <div class="cart__banner">Besplatna dostava iznad 200,00 kn</div> -->
 
 
 <?php do_action( 'woocommerce_after_cart' ); ?>

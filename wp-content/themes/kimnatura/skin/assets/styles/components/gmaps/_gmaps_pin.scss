@@ -81,4 +81,11 @@
       transform: translateY(0) rotate(-45deg);
     }
   }
+
+  .gmap__map{
+    height: 600px;
+    @include media(mobile){
+      height: 380px;
+    }
+  }
   
