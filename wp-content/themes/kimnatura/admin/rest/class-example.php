@@ -16,11 +16,11 @@ Class Example extends WP_AJAX
 
     protected function run()
     {
-        echo "Usao";
+     
        
    // woocommerce_product_loop_start();
 
-    $load  = $this->get('load',1);
+    $load  = $this->get('load',6);
     $start = $this->get('start',0); 
     
     $args = array(
@@ -36,7 +36,7 @@ Class Example extends WP_AJAX
     $loop = new \WP_Query( $args );
     $total = $loop->found_posts; //$loop->post_count;
     $total_left = $total - $loop->post_count;
-    echo "<em>Ukupno postova:".$total.", ostalo jos ".$total_left.", prikazujem ".$load."</em>";
+    echo '<div class="total-products">Ukupno postova:'.$total.', ostalo jos '.$total_left.', prikazujem '.$load.'</em>';
    // var_dump($loop);
     woocommerce_product_loop_start();
     while ( $loop->have_posts() ) : $loop->the_post(); global $product;

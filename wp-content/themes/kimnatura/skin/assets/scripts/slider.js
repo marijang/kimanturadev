@@ -56,12 +56,12 @@ $('.hero-slider-slick').on('afterChange1', function(event, slick, currentSlide){
 
     $('.sastojci-slider-slick').slick({
       // normal options...
-            infinite: false,
             infinite: true,
             slidesToShow: 1,
             dots:true,
             arrows:true,
-     
+            fade:true,
+            autoplay:true,
             dotsClass: 'sastojci__paging',
             customPaging: function (slider, i) {
                 //FYI just have a look at the object to find available information
@@ -71,10 +71,10 @@ $('.hero-slider-slick').on('afterChange1', function(event, slick, currentSlide){
                 return  (i + 1) + '/' + slider.slideCount;
             },
 
-           // cssEase: 'ease-in-out',
-            speed: 500,
-  fade: true,
-  cssEase: 'linear',
+            cssEase: 'ease-in-out',
+           // speed: 500,
+            //fade: true,
+  //cssEase: 'linear',
             //fade: true,
             //autoplay:true,
             //autoplaySpeed: 3000
@@ -89,16 +89,14 @@ $('.hero-slider-slick').on('afterChange1', function(event, slick, currentSlide){
             ],
           });
 
-$('.sastojci-slider-slick').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+$('.sastojci-slider-slick1').on('beforeChange', function(event, slick, currentSlide, nextSlide){
     $('.sastojci-slider-slick').parent().removeClass('animated');
 });
-$('.sastojci-slider-slick').on('afterChange', function(event, slick, currentSlide){
+$('.sastojci-slider-slick1').on('afterChange', function(event, slick, currentSlide){
    var $slide = $(slick.$slides[currentSlide]);
     slick.$slides.removeClass('animated');
-    $slide.addClass('animated');
-    //$slide.css('background','red');
-    $('.sastojci-slider-slick').parent().removeClass('animated');
-    //alert('ok');
+  //  $slide.addClass('animated');
+    $('.sastojci-slider-slick1').parent().removeClass('animated');
 });
 
 $(".products__slider").slick({
@@ -110,6 +108,7 @@ $(".products__slider").slick({
   slidesToScroll: 3,
   dots:true,
   centerMode:false,
+
 
   // the magic
   responsive: [{

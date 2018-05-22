@@ -1,4 +1,8 @@
+
+
 $(function() {
+    var action = 'example';
+    var url = themeLocalization.ajaxurl + '?action=example&start=2&load=2';
     var allPanels = $('.shop-categories__childs').show();
     $('.shop-categories__icon').on('click', function(e){
         e.preventDefault();
@@ -28,6 +32,30 @@ $(function() {
             $target.val(total);
         });
     }
+
+    $('#show-more-products').on('click',function(e){
+        e.preventDefault(); 
+        var $this = $(this);
+        var $get  = $this.data('current');
+        var url = themeLocalization.ajaxurl + '?action=example&start='+$get+'&load=6';
+        $.ajax({
+            type : "get",
+            //dataType : "json",
+            url : url,
+           // data : {action: action, post_id : post_id, nonce: nonce},
+            success: function(response) {
+               if(response) {
+                  var $items =  $('.shop-catalog__items li',response); 
+                  var $num = $('.total-products',response); 
+                  $(".shop-catalog__items").append($items);
+                  $('.shop-catalog__num-of-items').html($num);
+               }
+               else {
+                  alert("Your vote could not be added")
+               }
+            }
+         });   
+    });
 
     $('input[name="product_cat[]"]').on('click',function(){
         setValue();
