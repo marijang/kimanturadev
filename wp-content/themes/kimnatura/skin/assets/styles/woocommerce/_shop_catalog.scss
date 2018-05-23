@@ -4,6 +4,8 @@
         &::before{
             animation: fade-out 1s 1;
             animation-fill-mode: forwards;
+            z-index: 0;
+            
         }
     }
     @for $i from 1 through 100 {
