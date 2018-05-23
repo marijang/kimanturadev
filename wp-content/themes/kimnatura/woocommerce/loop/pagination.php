@@ -30,9 +30,9 @@ if ( $total <= 1 ) {
 ?>
 <div class="shop-catalog__pagination">
 	<div class="shop-catalog__num-of-items">Total:<?php echo $total;?></div>
-	<a href="#" class="btn" data-current="<?php echo max( 1, $current ); ?>" id="show-more-products">Prikaži više</a>
+	<a href="#" class="btn btn--link" data-current="<?php echo max( 1, $current ); ?>" id="show-more-products">Prikaži više</a>
 </div>
-<nav class="woocommerce-pagination">
+<nav class="woocommerce-pagination" style="display:none;">
 	<?php
 		echo paginate_links( apply_filters( 'woocommerce_pagination_args', array( // WPCS: XSS ok.
 			'base'         => $base,

@@ -4,6 +4,7 @@ $(function() {
     var action = 'example';
     var url = themeLocalization.ajaxurl + '?action=example&start=2&load=2';
     var allPanels = $('.shop-categories__childs').show();
+    var loader = $('.shop-catalog__loader');
     $('.shop-categories__icon').on('click', function(e){
         e.preventDefault();
         var $this = $(this);
@@ -32,10 +33,11 @@ $(function() {
             $target.val(total);
         });
     }
-
+    
     $('#show-more-products').on('click',function(e){
         e.preventDefault(); 
         var $this = $(this);
+        loader.fadeIn('fast');
         var $get  = $this.data('current');
         var url = themeLocalization.ajaxurl + '?action=example&start='+$get+'&load=6';
         $.ajax({
@@ -49,6 +51,7 @@ $(function() {
                   var $num = $('.total-products',response); 
                   $(".shop-catalog__items").append($items);
                   $('.shop-catalog__num-of-items').html($num);
+                  loader.fadeOut('slow');
                }
                else {
                   alert("Your vote could not be added")
