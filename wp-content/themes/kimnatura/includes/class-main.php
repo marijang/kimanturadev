@@ -19,6 +19,7 @@ use Kimnatura\Theme\Utils as Utils;
 use Kimnatura\Admin\Woo as Woo;
 
 use Kimnatura\Admin\Rest\Example as Example;
+use Kimnatura\Admin\Rest\Search as Search;
 /**
  * The main start class.
  *
@@ -90,6 +91,7 @@ class Main {
   public function define_rest(){
     //var_dump(new Example);
     Example::listen();
+    Search::listen();
   }
 
   /**

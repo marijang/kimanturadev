@@ -29,6 +29,7 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
             
     }
     @include e('hamb'){
+        color: $base-text-color;
         grid-area: hamburger;
         display: none;
         &.is-active{

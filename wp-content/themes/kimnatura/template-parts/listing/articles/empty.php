@@ -8,5 +8,6 @@
 ?>
 
 <article class="article-empty">
-  <?php esc_html_e( 'Sorry no items found', 'kimnatura' ); ?>
+  <?php esc_html_e( 'Nismo ništa pronašli', 'kimnatura' ); ?>
+  <?php esc_html_e( 'Probajte upisati drugi traženi pojam', 'kimnatura' ); ?>
 </article>
