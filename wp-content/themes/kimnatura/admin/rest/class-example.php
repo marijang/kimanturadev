@@ -2,7 +2,7 @@
 /**
  * The Menu specific functionality.
  *
- * http://example.com/wp-admin/admin-ajax.php?action=example
+ * http://kimnatura.test/wp-admin/admin-ajax.php?action=example
  * @since   2.0.0
  * @package Kimnatura\Admin\Menu
  */
