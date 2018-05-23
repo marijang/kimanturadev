@@ -16,7 +16,7 @@
   ?>
 </head>
 <body <?php body_class(); ?>>
-
+<main class="main-wrap">
 <?php get_template_part( 'template-parts/header/header' ); ?>
 
 <main class="main-content">

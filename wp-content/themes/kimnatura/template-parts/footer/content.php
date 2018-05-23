@@ -35,3 +35,4 @@ $helper = new Helper();
   </small>
   </div>
 </footer>
+</main>
