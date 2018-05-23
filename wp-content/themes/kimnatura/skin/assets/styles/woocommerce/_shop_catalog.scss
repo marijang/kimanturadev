@@ -1,6 +1,42 @@
+.animated{
+    &.shop-catalog__item{
+        animation: .3s ease-in-out both fade-in-all;
+        &::before{
+            animation: fade-out 1s 1;
+            animation-fill-mode: forwards;
+            z-index: 0;
+            
+        }
+    }
+    @for $i from 1 through 100 {
+        &.shop-catalog__item {
+          &:nth-child(#{$i}) {
+            
+            // Delay the animation. Delay increases as items loop.
+            animation-delay: $i * (.09s);
+          }
+          &::before{
+            animation-delay:(.03s) * $i;
+          }
+        }
+    }
+}
+
+
 @include block('shop-catalog'){
     padding: $grid-gutter 0;
     display: flex;
+
+    @include element('loader'){
+        text-align: center;
+        display: none;
+        svg{
+            width: 100px;
+            height: 100px;
+            display:inline-block;
+          }
+    }
+
     @include media('mobile'){
         flex-direction: column;
     }
@@ -51,6 +87,20 @@
 
     @include element('item'){
        display: block;
+       position: relative;
+       &::before{
+           content: "";
+           display: block;
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+           background: #cfcfdf;
+           border-radius: 8px;
+           z-index: 1001;
+       }
+     
        a{
            
        }
@@ -107,6 +157,19 @@
         display: block;
         color:$base-text-color;
     }
+
+    @include element('pagination'){
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+    @include element('num-of-items'){
+        @include typi('small');
+        margin-bottom: $base-content-padding;
+      
+    }
+
+    
     
 }
 

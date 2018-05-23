@@ -2,6 +2,8 @@
     @include element('list'){
        @include typi('small');
        @extend  %accordion;
+       position: sticky;
+       top: 0vh;
     }
     @include element('item'){
         @include modifier('parent'){
