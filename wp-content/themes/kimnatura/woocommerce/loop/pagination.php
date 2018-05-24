@@ -18,6 +18,10 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+global $wp_query;
+
+$per_page = wc_get_loop_prop( 'loop' ); //get_option( 'posts_per_page' );
+
 
 $total   = isset( $total ) ? $total : wc_get_loop_prop( 'total_pages' );
 $current = isset( $current ) ? $current : wc_get_loop_prop( 'current_page' );
@@ -29,8 +33,12 @@ if ( $total <= 1 ) {
 }
 ?>
 <div class="shop-catalog__pagination">
-	<div class="shop-catalog__num-of-items">Total:<?php echo $total;?></div>
-	<a href="#" class="btn btn--link" data-current="<?php echo max( 1, $current ); ?>" id="show-more-products">Prikaži više</a>
+	<div class="shop-catalog__num-of-items">
+		 Total:<?php echo $total;?>,
+		 Trenutno:<?php echo $current;?>,
+		 Base:<?php echo $per_page;?>,
+	</div>
+	<a href="#" class="btn btn--link" data-current="<?php echo max( 1, $current ); ?>" data-per-page="<?php echo max( 1, $per_page ); ?>" id="show-more-products">Prikaži više</a>
 </div>
 <nav class="woocommerce-pagination" style="display:none;">
 	<?php

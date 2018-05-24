@@ -39,7 +39,8 @@ $(function() {
         var $this = $(this);
         loader.fadeIn('fast');
         var $get  = $this.data('current');
-        var url = themeLocalization.ajaxurl + '?action=example&start='+$get+'&load=6';
+        var $perpage  = $this.data('per-page');
+        var url = themeLocalization.ajaxurl + '?action=example&start='+$get+'&load='+$perpage;
         $.ajax({
             type : "get",
             //dataType : "json",
@@ -48,10 +49,23 @@ $(function() {
             success: function(response) {
                if(response) {
                   var $items =  $('.shop-catalog__items li',response); 
-                  var $num = $('.total-products',response); 
-                  $(".shop-catalog__items").append($items);
+                  var $num = $(response).filter('.total');
+
                   $('.shop-catalog__num-of-items').html($num);
+              
+
+               
+ 
+                 $.each( $items,function(index,item){
+                    $item = $(item);
+                    $item.css('transition-delay',(index * 0.3)+'s');
+                    $item.css('animation-delay',(index * 0.3)+'s');
+                    $(".shop-catalog__items").append($item);
+             
+                  });
+                 
                   loader.fadeOut('slow');
+                  $items.addClass('animated');
                }
                else {
                   alert("Your vote could not be added")

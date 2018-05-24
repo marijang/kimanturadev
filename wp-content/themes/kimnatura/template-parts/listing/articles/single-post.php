@@ -27,6 +27,7 @@ $image  = $images->get_post_image( 'listing' );
 Lorem
     </div>
     <div class="article-single__read-more">
+
         <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class="article-single__link"><?php echo __('Saznaj više','kimnatura');?></a>
     </div>
   </div>

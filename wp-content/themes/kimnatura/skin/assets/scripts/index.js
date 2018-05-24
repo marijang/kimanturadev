@@ -22,4 +22,4 @@ import './form-fields/inputnumber';
 import './app';
 
 import './search';
-import './loader';
+//import './loader';

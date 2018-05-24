@@ -1,23 +1,31 @@
 .animated{
     &.shop-catalog__item{
         animation: .3s ease-in-out both fade-in-all;
-        &::before{
+    
+       // opacity: 1;
+       // transition: max-height .3s;  
+        max-height: 400px;
+        /*
+        &::before1{
             animation: fade-out 1s 1;
             animation-fill-mode: forwards;
             z-index: 0;
             
         }
+        */
     }
     @for $i from 1 through 100 {
         &.shop-catalog__item {
           &:nth-child(#{$i}) {
-            
+            //transition-delay: $i * (.09s);
             // Delay the animation. Delay increases as items loop.
             animation-delay: $i * (.09s);
           }
+          /*
           &::before{
             animation-delay:(.03s) * $i;
           }
+          */
         }
     }
 }
@@ -86,9 +94,12 @@
     }
 
     @include element('item'){
+       transition: all 1.5s cubic-bezier(0.81,0.15,0.26,0.99);
        display: block;
+       overflow: hidden;
        position: relative;
-       &::before{
+       max-height: 0;
+       &::before1{
            content: "";
            display: block;
            position: absolute;
