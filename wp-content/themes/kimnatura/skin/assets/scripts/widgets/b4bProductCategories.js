@@ -41,6 +41,7 @@ $(function() {
         var $this = $(this);
         loader.fadeIn('fast');
         var $get  = $this.data('current')+1;
+        $this.data('current',$get);
         $this.fadeOut('fast');
         var $perpage  = $this.data('per-page');
         var url = themeLocalization.ajaxurl + '?action=example&start='+$get+'&load='+$perpage;
