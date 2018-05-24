@@ -28,19 +28,51 @@ $current = isset( $current ) ? $current : wc_get_loop_prop( 'current_page' );
 $base    = isset( $base ) ? $base : esc_url_raw( str_replace( 999999999, '%#%', remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) );
 $format  = isset( $format ) ? $format : '';
 
+$total_all = $wp_query->found_posts; //$loop->post_count;
+$total_left = $total_all - $wp_query->post_count;
+$last  = min( $total_all, $per_page * $current );
+$percentage = $last/$total_all*100;
+
 if ( $total <= 1 ) {
 	return;
 }
 ?>
 <div class="shop-catalog__pagination">
 	<div class="shop-catalog__num-of-items">
-		 Total:<?php echo $total;?>,
-		 Trenutno:<?php echo $current;?>,
-		 Base:<?php echo $per_page;?>,
+		<div class="total shop-catalog__results-wrap" data-products-left="<?php echo $total_left ?>">
+    	<div class="shop-catalog__results-count">You 've viewed <?php echo $last; ?> of <?php echo $total_all ?>' products.</div>
+    	<progress max="100" value="'.$percentage.'" class="shop-catalog__progress" aria-hidden="true"></progress>
+    </div>
 	</div>
-	<a href="#" class="btn btn--link" data-current="<?php echo max( 1, $current ); ?>" data-per-page="<?php echo max( 1, $per_page ); ?>" id="show-more-products">Prikaži više</a>
+	<a href="/page/2" class="btn btn--grey-color shop-catalog__btn-shop-more" data-current="<?php echo max( 1, $current ); ?>" data-per-page="<?php echo max( 1, $per_page ); ?>" id="show-more-products">Prikaži više</a>
+	<div class="shop-catalog__loader">
+	<!-- Loader 9 -->
+
+<svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  viewBox="0 0 64 64" enable-background="new 0 0 0 0" xml:space="preserve">
+    <rect x="20" y="20" width="4" height="10" fill="#000">
+      <animateTransform attributeType="xml"
+        attributeName="transform" type="translate"
+        values="0 0; 0 20; 0 0"
+        begin="0" dur="0.6s" repeatCount="indefinite" />
+    </rect>
+    <rect x="30" y="20" width="4" height="10" fill="#000">
+      <animateTransform attributeType="xml"
+        attributeName="transform" type="translate"
+        values="0 0; 0 20; 0 0"
+        begin="0.2s" dur="0.6s" repeatCount="indefinite" />
+    </rect>
+    <rect x="40" y="20" width="4" height="10" fill="#000">
+      <animateTransform attributeType="xml"
+        attributeName="transform" type="translate"
+        values="0 0; 0 20; 0 0"
+        begin="0.4s" dur="0.6s" repeatCount="indefinite" />
+    </rect>
+</svg>
 </div>
-<nav class="woocommerce-pagination" style="display:none;">
+
+</div>
+<nav class="woocommerce-pagination" style="display:none1;">
 	<?php
 		echo paginate_links( apply_filters( 'woocommerce_pagination_args', array( // WPCS: XSS ok.
 			'base'         => $base,

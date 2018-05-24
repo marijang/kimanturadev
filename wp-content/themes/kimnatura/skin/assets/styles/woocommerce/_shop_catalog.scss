@@ -39,12 +39,32 @@
         text-align: center;
         display: none;
         svg{
-            width: 100px;
-            height: 100px;
+            width: 64px;
+            height: 64px;
             display:inline-block;
           }
     }
-
+    @include element('progress'){
+        height: 2px;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        background: $base-grey-color;
+        border: none;
+        color: $base-primary-color;
+        display: block;
+        margin: $base-content-padding/2 auto;
+        width: 40%;
+        &::-webkit-progress-bar{
+            background: $base-grey-color;
+        } 
+        &::-webkit-progress-value {
+            background: $base-primary-color;
+        }
+        &::-moz-progress-bar {
+            background: $base-primary-color;
+        }
+    }
     @include media('mobile'){
         flex-direction: column;
     }
@@ -151,6 +171,15 @@
         //@include typi('h6');
         font-weight: 700;
     } 
+
+    @include element('results-wrap'){
+        display: flex;
+        flex-direction: column;
+        margin: $base-content-padding;
+        text-align: center;
+        justify-content: center;
+    } 
+
     @include element('ordering'){
      
     } 
@@ -176,9 +205,14 @@
     }
     @include element('num-of-items'){
         @include typi('small');
-        margin-bottom: $base-content-padding;
+        margin: $base-content-padding 0;
       
     }
+    @include element('btn-shop-more'){
+        margin: 0 auto;
+    }
+
+    
 
     
     
