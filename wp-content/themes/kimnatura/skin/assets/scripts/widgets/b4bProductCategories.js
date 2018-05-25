@@ -3,7 +3,7 @@
 $(function() {
     var action = 'example';
     var url = themeLocalization.ajaxurl + '?action=example&start=2&load=2';
-    var allPanels = $('.shop-categories__childs').show();
+   // var allPanels = $('.shop-categories__childs').show();
     var loader = $('.shop-catalog__loader');
     $('.shop-categories__icon').on('click', function(e){
         e.preventDefault();
