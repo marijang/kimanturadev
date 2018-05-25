@@ -30,7 +30,8 @@ $(document).ready( function() {
 		document.addEventListener('keyup', function(ev) {
 			// escape key.
 			if( ev.keyCode == 27 ) {
-				closeSearch();
+                closeSearch();
+                closeCtrl.click();
 			}
 		});
     }
@@ -136,6 +137,7 @@ $(function() {
 
     $( "#search-form" ).submit(search);
     $( '#search-input' ).keyup(search);
+    $('#btn-search-close').click(search);
 
 	
 });
