@@ -7,7 +7,7 @@
 
 use Kimnatura\Theme\Utils as Utils;
 $images = new Utils\Images();
-$image  = $images->get_post_image( 'listing' );
+$image  = $images->get_post_image( 'shop-catalog' );
 ?>
 <article class="article-single">
   <div class="article-single__container">
