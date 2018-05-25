@@ -36,6 +36,12 @@ $(function() {
         $target.val(total);
     }
     
+    function calcHeight(){
+        var countElements = Math.ceil($('.shop-catalog__items li').length/3);
+        var elementHeight = $('.shop-catalog__item:first').outerHeight();
+        return (countElements*elementHeight)+'px';
+    }
+
     $('#show-more-products').on('click',function(e){
         e.preventDefault(); 
         var $this = $(this);
@@ -70,6 +76,7 @@ $(function() {
                     $(".shop-catalog__items").append($item);
                     $items.addClass('animated');
                 });
+                 $('.shop-catalog__items').css('max-height',calcHeight());
                 
                   
                  

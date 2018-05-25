@@ -1,7 +1,10 @@
 import 'slick-carousel';
 
 $(function() {
-
+  $('.hero-slider-slick').on('init', function(event, slick){
+    event.preventDefault();
+    $('.hero-slider-slick .slick-active').find('.hero__item').addClass('animated');
+});
   $('.hero-slider-slick').slick({
 // normal options...
       infinite: false,
@@ -30,28 +33,20 @@ $(function() {
       ],
     });
 
+
 $('.hero-slider-slick').on('beforeChange', function(event, slick, currentSlide, nextSlide){
   event.preventDefault();
-  console.log(event);
- // slick.preventDefault();
-  $('.hero-slider-slick').parent().removeClass('animated');
   var $slide = $(slick.$slides[currentSlide]);
-  var $nextslide = $(slick.$slides[nextSlide]);
-  $slide.removeClass('animated');
-  $nextslide.addClass('animated');
-  //$slide.find('h2').html('ok');
-  //alert('before');
-  $('.hero-slider-slick').parent().removeClass('animated');
+  console.log($slide.find('.hero_item'));
+  $slide.find('.hero_item').removeClass('animated');
+ // var activeSlide = $('.hero-slider-slick .slick-active').find('.hero__item');
+  var otherSlides = $('.hero-slider-slick .slick-slide').find('.hero__item');
+  otherSlides.removeClass('animated');
   event.preventDefault();
-
 });
-$('.hero-slider-slick').on('afterChange1', function(event, slick, currentSlide){
+$('.hero-slider-slick').on('afterChange', function(event, slick, currentSlide){
   var $slide = $(slick.$slides[currentSlide]);
-  slick.$slides.removeClass('animated');
-  $slide.addClass('animated');
-  //$slide.css('background','red');
-  $('.hero-slider-slick').parent().removeClass('animated');
-  //alert('ok');
+  $slide.find('.hero__item').addClass('animated');
 });
 
     $('.sastojci-slider-slick').slick({
