@@ -20,23 +20,26 @@ Class Example extends WP_AJAX
        
    // woocommerce_product_loop_start();
 
-    $load  = $this->get('load',6);
+    $load  = $this->get('load',12);
     $start = $this->get('start',0); 
     
     $args = array(
         'post_type' => 'product',
         'posts_per_page' => $load, //$_POST['load'],
-        'offset' => (($start + $load) - $load) 
-       // 'orderby' => 'date', // we will sort posts by date
-        //'order'	=> $_POST['date'] // ASC или DESC
+        'paged' => $start
+        //'offset' => (($start + $load) - $load) 
     );
-   // $args = array( 'post_type' => 'product', 'posts_per_page' => $_POST['load'], 'product_cat' => ($subCatList ? $subCatList : $bool->slug), 'orderby' => 'title', 'order' => 'ASC', 'offset' => (($_POST['start'] + $_POST['load']) - $_POST['load']) );
-    //$query = new WP_Query( $args );
     // Asos primjer load more
     $loop = new \WP_Query( $args );
     $total = $loop->found_posts; //$loop->post_count;
-    $total_left = $total - $loop->post_count;
-    echo '<div class="total-products">Ukupno postova:'.$total.', ostalo jos '.$total_left.', prikazujem '.$load.'</em>';
+    
+    $last  = min( $total, $load * $start );
+    $total_left = $total - $last;
+    $percentage = $last/$total*100;
+    echo '<div class="total shop-catalog__results-wrap" data-products-left="'.$total_left.'">
+    <div class="shop-catalog__results-count">You\'ve viewed '.$last.' of '.$total.' products.</div>
+    <progress max="100" value="'.$percentage.'" class="shop-catalog__progress" aria-hidden="true"></progress>
+    </div>';
    // var_dump($loop);
     woocommerce_product_loop_start();
     while ( $loop->have_posts() ) : $loop->the_post(); global $product;

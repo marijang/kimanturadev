@@ -39,6 +39,9 @@ $base-primary-color:     #3DC19E;
 $base-grey-color:        #FAFAFA; //#FAFAFA;
 $base-light-grey-color:  #F9F9F9;
 
+$base-grey-dark-color: #d2d2d2;
+$base-grey-light-color:#eee;
+
 $global-input-focus-color: rgba($base-black-color, 0.2);
 
 // Defaults
@@ -93,6 +96,15 @@ $button-color-map: (
     bg-hover: $base-primary-color,
     text-hover: $base-white-color,
     border-hover: $base-primary-color
+  ),
+
+  grey: (
+    bg: transparent,
+    text: $base-black-color,
+    border: $base-grey-light-color,
+    bg-hover: $base-grey-dark-color,
+    text-hover: $base-black-color,
+    border-hover: $base-grey-dark-color
   ),
 
   primary: (

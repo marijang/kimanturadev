@@ -29,7 +29,7 @@ foreach($result as $post):
 ?>
 
     <div class="hero__item" >
-    <div class="hero__bg" class="kenburns-bottom" style="background-image: url('<?php echo esc_url( $image['image'] ); ?>');"> </div>
+    <div class="hero__bg" class="kenburns-bottom"  style="background-image: url('<?php echo esc_url( $image['image'] ); ?>'); transition-delay: 1.5s;"> </div>
         <div class="hero__content">
             <h2 class="hero__title"><?php //the_title(); ?>  
             <?php 
@@ -58,7 +58,7 @@ foreach($result as $post):
             echo '</div>';
             ?>
             
-            <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class="hero__link btn btn--primary-color" style="transition-delay: <?php echo $delay;?>s;"><?php echo __('Saznaj više','kimnatura');?></a>
+            <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class=" btn btn btn--ghost" ><?php echo __('Saznaj više','kimnatura');?></a>
        
         </div>
          <?php //the_post_thumbnail( 'full-width',array('class' => 'kenburns-bottom hero__image'));  ?>
