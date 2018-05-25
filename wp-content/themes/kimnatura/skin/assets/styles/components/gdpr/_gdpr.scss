@@ -1,0 +1,5 @@
+@include b('gdpr'){
+    @include e('checkbox-wrap'){
+        @include typi('small');
+    }
+}
