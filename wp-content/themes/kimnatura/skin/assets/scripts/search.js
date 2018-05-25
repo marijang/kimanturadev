@@ -16,7 +16,8 @@ $(document).ready( function() {
 		searchContainer = document.querySelector('.search'),
         inputSearch = searchContainer.querySelector('.search__input'),
         search = document.getElementById('search-wrap'),
-        searchUp = document.getElementById('search-nav'),
+        searchUp = document.getElementById('search-up'),
+        searchDown = document.getElementById('search-down'),
         body = $('body');
 
 	function init() {
@@ -37,14 +38,15 @@ $(document).ready( function() {
     function searchScroll() {
         if ($(search).scrollTop() > 0){
             $(searchUp).addClass("scrolled");
-            console.log('add');
+            $(searchDown).addClass("scrolled");
 		}
 		else
 		{
             $(searchUp).removeClass("scrolled");
-            console.log('remove');
+            $(searchDown).removeClass("scrolled");
 		}
     }
+
 
 	function openSearch() {
         body.addClass('search-show');

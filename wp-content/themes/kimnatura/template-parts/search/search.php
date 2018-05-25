@@ -1,6 +1,6 @@
 <div class="search" id="search-wrap">
     <!-- <div class="search__content"> -->
-        <div id="search-nav" class="search__inner search__inner--up">
+        <div id="search-up" class="search__inner search__inner--up">
 			
             <div class="search__header">
     
@@ -22,7 +22,7 @@
             </div>
 				
 		</div>
-			<div class="search__inner search__inner--down">
+			<div class="search__inner search__inner--down" id='search-down'>
 				<section id="search-results" class="section section__spacing-top--medium section__spacing-bottom--medium">
                 </section>
             </div>

@@ -29,7 +29,7 @@ $search-grid-row-gap: $base-content-padding*3;
 }
 
 .search__inner {
-	position: absolute;
+	//position: absolute;
 	width: 100vw;
     background: #f0f0f0;
     
@@ -72,8 +72,9 @@ $search-grid-row-gap: $base-content-padding*3;
         }
 
         .search__inner--down {
-            position: absolute;
-            top: 102px;
+            //position: absolute;
+            //top: 102px;
+            transform: translate(0,102px);
         }
 
         .search__info {
@@ -90,7 +91,13 @@ $search-grid-row-gap: $base-content-padding*3;
     //top: 40%;
     min-height: 60%;
 	color: $base-text-color;
-	background: $base-white-color;
+    background: $base-white-color;
+    //transform: translate(0,40%);
+
+    &.scrolled {
+        position: absolute;
+        top: 102px;
+    }
 }
 
 .btn--search-close {
