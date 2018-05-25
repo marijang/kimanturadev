@@ -1,5 +1,20 @@
 //If there is no items in listing
 
-// .article-empty {
+.article-empty {
+    @include e('header'){
+        margin-top: 80px;
+        @extend %heading-reset;
+        text-align: center;
+    }
 
-// }
+    @include e('title'){
+        @extend %heading-reset;
+        font-weight: 500;
+    }
+
+    @include e('description'){
+        @extend %heading-reset;
+    }
+
+    @extend %heading-reset;
+}

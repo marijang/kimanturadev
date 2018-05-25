@@ -1,33 +1,45 @@
+$search-results-image-height: 180px;
+$search-results-content-spacing: $base-content-padding;
+
 @include b('article-single'){
+    height: $search-results-image-height;
     @include e('container'){
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 40px 40px 40px;
-        grid-gap: 32px;
+        grid-template-rows: 1fr;
+        grid-gap: 16px;
     }
 
     @include e('image'){
         grid-column: 1/2;
-        grid-row: 1/4;
+        //grid-row: 1/4;
 
         img {
             width: 100%;
-            height: 100%;
+            height: $search-results-image-height;
         }
     }
 
     @include e('title'){
-        grid-column: 2/3;
-        grid-row: 1/2;
+        //grid-column: 2/3;
+        margin-bottom: $search-results-content-spacing;
+        //grid-row: 1/2;
     }
 
     @include e('description'){
-        grid-column: 2/3;
-        grid-row: 2/3;
+        //grid-column: 2/3;
+        margin-bottom: $search-results-content-spacing;
+        //grid-row: 2/3;
     }
 
     @include e('read-more'){
-        grid-column: 2/3;
-        grid-row: 3/4;
+        //grid-column: 2/3;
+        //grid-row: 3/4;
+        @include typi(medium);
+    }
+
+    @include e('heading'){
+        @include typi(largest);
+        font-weight: 600;
     }
 }

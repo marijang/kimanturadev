@@ -24,16 +24,14 @@ Class Search extends WP_AJAX
         $args = array(
             'post_status' => 'publish', //$_POST['load'],
             // 's' => $search,
-            'posts_per_page' => 2
-            // 'orderby' => 'date', // we will sort posts by date
-             //'order'	=> $_POST['date'] // ASC или DESC
+            'posts_per_page' => 2,
+            'post_type' => array('post','product')
          );
     } else {
         $args = array(
             'post_status' => 'publish', //$_POST['load'],
-            's' => $search
-            // 'orderby' => 'date', // we will sort posts by date
-             //'order'	=> $_POST['date'] // ASC или DESC
+            's' => $search,
+            'post_type' => array('post','product')
          );
     }
     
@@ -42,25 +40,27 @@ Class Search extends WP_AJAX
 
     if ( $query->have_posts() ) {
     //var_dump($query);
-//     woocommerce_product_loop_start();
-    while ( $query->have_posts() ) : $query->the_post(); setup_postdata($post);// global $product;
-//             //echo "ok";
-  
-// 			/**
-// 			 * Hook: woocommerce_shop_loop.
-// 			 *
-// 			 * @hooked WC_Structured_Data::generate_product_data() - 10
-// 			 */
-// 			do_action( 'woocommerce_shop_loop' );
-        get_template_part( 'template-parts/listing/articles/single-post' );
-// 			wc_get_template_part( 'content', 'product' );
-         endwhile;
-//   //  }
-
+        echo   '<header class="section__header">';
+        if($search==''){
+            echo '<h1 id="search-title" class="section__title">Zadnje s našeg bloga</h1>';
         } else {
-            get_template_part( 'template-parts/listing/articles/empty' );
+            echo '<h1 id="search-title" class="section__title">Rezultati pretraživanja</h1>';
         }
-        wp_reset_postdata();
+        echo '</header><!-- .entry-header -->
+                <div id="search-results" class="search__related">';
+
+        while ( $query->have_posts() ) : $query->the_post(); setup_postdata($post);// global $product;
+            
+            get_template_part( 'template-parts/listing/articles/single-post' );
+        endwhile;
+
+
+    } else {
+            echo '<div id="search-results" class="search__empty" style="height: 100%;">';
+            get_template_part( 'template-parts/listing/articles/empty' );
+    }
+    echo '</div>';
+    wp_reset_postdata();
 
 //     woocommerce_product_loop_end();
 
