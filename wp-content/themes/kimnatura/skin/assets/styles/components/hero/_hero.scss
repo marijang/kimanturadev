@@ -39,10 +39,12 @@ $hero-transition-duration-in: .9s;
         position: relative;
         span.letter{
             display: inline-block;
-            transform: translate3d(0,100%,0);
-            opacity: 0;
-            transition: all $hero-transition-duration ease-out;
-            position: relative;
+            @include media(desktop large){
+                transform: translate3d(0,100%,0);
+                opacity: 0;
+                transition: all $hero-transition-duration ease-out;
+                position: relative;
+            }
             
         }
         span.word{
@@ -53,16 +55,14 @@ $hero-transition-duration-in: .9s;
        
     }
     @include element('bg'){
-        min-height: 560px;
-        //animation: fade-in 3.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-
-        transition: $hero-transition-duration-in ease-in $hero-transition-duration;
-        opacity: 0;
+        min-height: 340px;
+        opacity: 1;
         @extend %bg-image;
-        @include media(mobile){
-            opacity: 1;
-            min-height: 500px;
-        }   
+        @include media(desktop large){
+            opacity: 0;
+            transition: $hero-transition-duration-in ease-in $hero-transition-duration;
+            min-height: 560px;
+        } 
     }
     @include element('slider-wrapper'){
 
@@ -128,7 +128,6 @@ $hero-transition-duration-in: .9s;
     }
     @include element('description'){
         margin: 0;
-       
         margin-bottom: $base-content-padding;
         transition: 0 ease-in $hero-transition-duration;
         @include media(desktop large){
@@ -144,19 +143,26 @@ $hero-transition-duration-in: .9s;
         }
     }
     @include element('content'){
-
-       
         z-index: 1;
         position: absolute;
-        top:$hero-content-top;
-        top: 0;
-        left:$hero-content-left;
-        left:0;
-        bottom:$hero-content-bottom;
-        right:$hero-content-right;
+        width: 50%;
+        top:16px;
+        left:0px;
+        @include media(desktop large){
+            top:$hero-content-top;
+            top: 0;
+            left:$hero-content-left;
+            left:0;
+            bottom:$hero-content-bottom;
+            right:$hero-content-right;
+            width: 42%;
+        }
 
         h2{
-            @include typi(huge);
+            @include typi(large);
+            @include media(desktop large){
+                @include typi(huge);
+            }
             font-weight: 700;
             letter-spacing: 1px;
             line-height: 1.2;
@@ -171,20 +177,19 @@ $hero-transition-duration-in: .9s;
         }
         p,div{
             //transform: translate3d(0,0,0);
-            font-size: 22px;
+            @include typi(small);
+            @include media(desktop large){
+                font-size: 22px;
+            }
+            
             line-height: 1.45;
             margin: 0 0 20px;
             font-weight: normal;
         }
      
-        width: 42%;
+       
         
-        @include media(mobile){
-            width: 50%;
-            top:20px;
-            left:20px;
-            @include typi(small);
-        }
+        
     }
     @include element('image'){
         width: 100%;

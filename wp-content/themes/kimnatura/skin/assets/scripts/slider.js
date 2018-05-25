@@ -26,7 +26,7 @@ $(function() {
           breakpoint: 600,
           settings: {
             arrows:true,
-
+            fade:false,
             dots: false
           }
         }
@@ -34,7 +34,7 @@ $(function() {
     });
 
 
-    
+
 
 
 $('.hero-slider-slick').on('beforeChange', function(event, slick, currentSlide, nextSlide){
