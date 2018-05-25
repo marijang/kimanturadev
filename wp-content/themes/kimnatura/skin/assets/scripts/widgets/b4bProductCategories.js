@@ -37,7 +37,7 @@ $(function() {
     }
     
     function calcHeight(){
-        var countElements = Math.ceil($('.shop-catalog__items li').length/3);
+        var countElements = Math.ceil($('.shop-catalog__items li').length/3)+1;
         var elementHeight = $('.shop-catalog__item:first').outerHeight();
         return (countElements*elementHeight)+'px';
     }
