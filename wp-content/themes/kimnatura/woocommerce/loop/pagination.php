@@ -72,7 +72,7 @@ if ( $total <= 1 ) {
 </div>
 
 </div>
-<nav class="woocommerce-pagination" style="display:none1;">
+<nav class="woocommerce-pagination" style="display:none;">
 	<?php
 		echo paginate_links( apply_filters( 'woocommerce_pagination_args', array( // WPCS: XSS ok.
 			'base'         => $base,
