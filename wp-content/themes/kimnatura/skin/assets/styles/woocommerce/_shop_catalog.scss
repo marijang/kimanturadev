@@ -105,7 +105,7 @@
     @include element('items'){
         width: 100%;
         @extend %list-reset;
-        max-height: 2000px;
+        max-height: 2500px;
         transition: all 1.5s cubic-bezier(0.81, 0.15, 0.26, 0.99);
         @include media(desktop large){
             display: grid;

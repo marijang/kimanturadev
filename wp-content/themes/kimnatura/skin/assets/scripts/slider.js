@@ -34,6 +34,9 @@ $(function() {
     });
 
 
+    
+
+
 $('.hero-slider-slick').on('beforeChange', function(event, slick, currentSlide, nextSlide){
   event.preventDefault();
   var $slide = $(slick.$slides[currentSlide]);
