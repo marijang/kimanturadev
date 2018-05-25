@@ -16,19 +16,21 @@ $image  = $images->get_post_image( 'listing' );
            <?php  the_post_thumbnail( 'blog-list'); ?>
       </a>
     </div>
+    <div>
     <div class="article-single__title">
       <header>
-        <p class="article-single__heading">
+        <div class="article-single__heading">
           <?php esc_html( the_title() ); ?>
-        </p>
+    </div>
       </header>
     </div>
     <div class="article-single__description">
-Lorem
+    lorem ipsum dolor sit omen
     </div>
     <div class="article-single__read-more">
         <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class="article-single__link"><?php echo __('Saznaj više','kimnatura');?></a>
     </div>
   </div>
+</div>
   <?php require locate_template( 'template-parts/parts/google-rich-snippets.php' ); ?>
 </article>

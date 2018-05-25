@@ -15,7 +15,8 @@ $(document).ready( function() {
 		closeCtrl = document.getElementById('btn-search-close'),
 		searchContainer = document.querySelector('.search'),
         inputSearch = searchContainer.querySelector('.search__input'),
-        searchUp = document.getElementById('#search-nav'),
+        search = document.getElementById('search-wrap'),
+        searchUp = document.getElementById('search-nav'),
         body = $('body');
 
 	function init() {
@@ -31,13 +32,25 @@ $(document).ready( function() {
 				closeSearch();
 			}
 		});
-	}
+    }
+    
+    function searchScroll() {
+        if ($(search).scrollTop() > 0){
+            $(searchUp).addClass("scrolled");
+            console.log('add');
+		}
+		else
+		{
+            $(searchUp).removeClass("scrolled");
+            console.log('remove');
+		}
+    }
 
 	function openSearch() {
         body.addClass('search-show');
 		mainContainer.classList.add('main-wrap--hide');
         searchContainer.classList.add('search--open');
-        window.addEventListener('scroll', searchScroll);
+        search.addEventListener('scroll', searchScroll);
 		setTimeout(function() {
 			inputSearch.focus();
 		}, 500);
@@ -47,15 +60,12 @@ $(document).ready( function() {
         body.removeClass('search-show');
 		mainContainer.classList.remove('main-wrap--hide');
         searchContainer.classList.remove('search--open');
-        window.removeEventListener('scroll', searchScroll);
+        search.removeEventListener('scroll', searchScroll);
 		inputSearch.blur();
 		inputSearch.value = '';
     }
     
-    function searchScroll() {
-        console.log('tu sam');
-        searchUp.toggleClass('scrolled', $(document).scrollTop() > 0);
-    }
+    
 
     init();
     
@@ -89,7 +99,6 @@ $(function() {
            // data : {action: action, post_id : post_id, nonce: nonce},
             success: function(response) {
                if(response) {
-                   $("#search-title").html("Zadnje s našeg bloga");
                    $("#search-results").html(response);
                }
                else {
@@ -99,11 +108,13 @@ $(function() {
          });   
     });
 
-    $( "#search-form" ).submit(function( event ) {
+    
+
+    function search( event ) {
         event.preventDefault();
         var $this = $(this);
         var $input = $this.find('input[name="s"]');
-        var search = $input.val();
+        var search = $this.val();
         var url = themeLocalization.ajaxurl + '?action=search&search='+search;
         $.ajax({
             type : "get",
@@ -112,7 +123,6 @@ $(function() {
            // data : {action: action, post_id : post_id, nonce: nonce},
             success: function(response) {
                if(response) {
-                    $("#search-title").html("Rezultati pretraživanja");
                     $("#search-results").html(response);
                }
                else {
@@ -120,8 +130,15 @@ $(function() {
                }
             }
          });
-      });
+        };
 
+    $( "#search-form" ).submit(search);
+    $( '#search-input' ).keyup(search);
 
 	
 });
+
+
+
+
+
