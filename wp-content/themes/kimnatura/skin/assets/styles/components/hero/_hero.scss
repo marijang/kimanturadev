@@ -9,26 +9,58 @@ $hero-content-dots-right:  $base-content-padding;
 // Colors
 $hero-content-dots-inactive-color: #3A4542;
 
-.animated{
+$hero-transition-duration: .2s;
+$hero-transition-duration-in: .9s;
+
+
+.hero__item.animated{
     @include media(desktop large){
         .hero__description,
         .hero__link{
-         opacity:1;
-         visibility: visible;
+           opacity:1;
+           visibility: visible;
+           transition-duration: $hero-transition-duration-in;
+        }
+        .hero__bg{
+            opacity: 1;
+        }
+        span.letter{
+            transform: translate3d(0,0,0);
+            opacity: 1;
         }
     }
 }
 
 @include block('hero'){
+
+   
+
     @include element('item'){
         position: relative;
+        span.letter{
+            display: inline-block;
+            transform: translate3d(0,100%,0);
+            opacity: 0;
+            transition: all $hero-transition-duration ease-out;
+            position: relative;
+            
+        }
+        span.word{
+            overflow: hidden;
+            display: inline-block;
+            overflow: hidden;
+        }
        
     }
     @include element('bg'){
         min-height: 560px;
-        animation: fade-in 3.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        //animation: fade-in 3.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+        transition: $hero-transition-duration-in ease-in $hero-transition-duration;
+        opacity: 0;
         @extend %bg-image;
         @include media(mobile){
+            opacity: 1;
             min-height: 500px;
         }   
     }
@@ -98,14 +130,14 @@ $hero-content-dots-inactive-color: #3A4542;
         margin: 0;
        
         margin-bottom: $base-content-padding;
-        transition: 1s ease-in 1.5s;
+        transition: 0 ease-in $hero-transition-duration;
         @include media(desktop large){
             opacity: 0;
             visibility: hidden;
         }
     }
     @include element('link'){
-        transition: 1s ease-in 1.5s;
+        transition: $hero-transition-duration ease-in $hero-transition-duration;
         @include media(desktop large){
             opacity: 0;
             visibility: hidden;
