@@ -33,7 +33,7 @@ do_action( 'woocommerce_before_main_content' );
 
 ?>
 
-<div class="section">
+<div class="section shop-catalog__section">
 
 <header class="section__header">
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>

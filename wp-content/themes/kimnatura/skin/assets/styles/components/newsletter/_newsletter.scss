@@ -1,11 +1,13 @@
 @include block('animated'){
-    .newsletter__bg{
-        opacity: 1;
-        box-shadow: 0 41px 43.56px 0.44px rgba(0,0,0,0.32);
-        transform: scale(1) translate(0,0);
-        transition: all .8s ease-in .3s,transform .8s ease-in .5s;
-        @extend %bg-image;
-        background-size: cover;
+    @include media(desktop large){
+        .newsletter__bg{
+            opacity: 1;
+            box-shadow: 0 41px 43.56px 0.44px rgba(0,0,0,0.32);
+            transform: scale(1) translate(0,0);
+            transition: all .8s ease-in .3s,transform .8s ease-in .5s;
+            @extend %bg-image;
+            background-size: cover;
+        }
     }
 }
 
@@ -15,8 +17,7 @@
     //overflow: hidden;
     @include e('bg'){
         background: rgba(255,255,255,0.961);
-        background: url('/wp-content/themes/kimnatura/skin/public/images/newsletter.png') no-repeat center center;
-        opacity: 0;
+        background: url('/wp-content/themes/kimnatura/skin/public/images/newsletter.png') no-repeat center center;     
         background-size: cover;
         @extend %bg-image;
         top: 0;
@@ -25,9 +26,12 @@
         right: 0;
         position: absolute;
         width: 100%;
-        transition: all .8s ease-in .3s,transform .8s ease-in .5s;
-        transform: scale(0.98);
-        z-index: -1;
+        @include media(desktop large){
+            transition: all .8s ease-in .3s,transform .8s ease-in .5s;
+            transform: scale(0.98);
+            z-index: -1;
+            opacity: 0;
+        }
     }
    
     .section__title{
