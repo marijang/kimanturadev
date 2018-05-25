@@ -42,6 +42,7 @@ $search-grid-row-gap: $base-content-padding*3;
 	color: $base-white-color;
     background: $primary-color;
     z-index: 1001;
+    position: static;
      
     
     &.scrolled {
@@ -88,14 +89,14 @@ $search-grid-row-gap: $base-content-padding*3;
 }
 
 .search__inner--down {
-    //top: 40%;
+    position: absolute;
+    top: 40%;
     min-height: 60%;
 	color: $base-text-color;
     background: $base-white-color;
     //transform: translate(0,40%);
 
     &.scrolled {
-        position: absolute;
         top: 102px;
     }
 }
@@ -117,7 +118,7 @@ $search-grid-row-gap: $base-content-padding*3;
 	width: 100%;
 	max-width: 769px;
     margin: 0 auto;
-    transform: translate(0,100px);
+    transform: translate(0,35%);
     transition: transform .6s;
 }
 
@@ -245,8 +246,8 @@ $search-grid-row-gap: $base-content-padding*3;
     @include media(mobile){
         grid-template-rows: 46px auto;
         grid-template-areas: 
-                "log1 . . btn-close1"
-                "search1 search1 search1 search1";
+                "log . . btn-close"
+                "search search search search";
     }
 }
 
@@ -314,7 +315,8 @@ $search-grid-row-gap: $base-content-padding*3;
 
  .search--open {
     pointer-events: auto;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
  .search::before {
