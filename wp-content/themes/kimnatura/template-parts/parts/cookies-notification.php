@@ -17,7 +17,9 @@ if ( ! empty( $cookies_notification ) && ! isset( $_COOKIE['cookie-law'] ) ) { /
          <i class="material-icons">clear</i>
       </div>
       <div class="cookies-notification__desc content-style content-style--small">
-        <?php echo wp_kses_post( $cookies_notification ); ?>
+        <?php //echo wp_kses_post( $cookies_notification ); 
+        get_template_part( 'template-parts/parts/gdpr-policy' );
+        ?>
       </div>
       <a href="#" class="btn btn--small btn--ghost cookies-notification__btn js-cookies-notification-btn">
         <?php esc_html_e( 'I agree', 'kimnatura' ); ?>
