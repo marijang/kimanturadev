@@ -1,6 +1,6 @@
 .animated{
     &.shop-catalog__item{
-        animation: .3s ease-in-out both fade-in-all;
+        animation: .2s ease-in-out both fade-in-all;
     
        // opacity: 1;
        // transition: max-height .3s;  
@@ -166,9 +166,16 @@
     @include element('results'){
         margin: 0;  
         flex:1;
-        //@include typi('h6');
-        font-weight: 700;
+        @include typi('small');
+        font-weight: 400;
     } 
+    @include element('ordering'){
+        margin: 0;  
+
+        @include typi('small');
+        font-weight: 400;
+    } 
+    
 
     @include element('results-wrap'){
         display: flex;
