@@ -1,26 +1,49 @@
-$cookies-notification-bg-color: rgba($base-primary-color, 0.1);
+$cookies-notification-bg-color: rgba($base-white-color, 1);
 
 .cookies-notification {
   background-color: $cookies-notification-bg-color;
-  padding: 10px $base-content-padding;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+
+  padding: $base-content-padding*2;
   position: fixed;
   z-index: $cookies-notification-index;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: $base-content-padding;
+  right: $base-content-padding;
+  width: 32%;
+
+
+
+  @include media(mobile down) {
+    width: 100%;
+  }
+
+  &__close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: .64;
+    &:hover{
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
 
   &__wrap {
     position: relative;
-    display: flex;
-    align-items: center;
+    //display: flex;
+    //align-items: center;
+    //flex-direction: column;
+    @include typi(small);
+    padding-top: $base-content-padding*2;
 
     @include media(mobile down) {
       text-align: center;
       flex-flow: column;
     }
     @include media(tablet up) {
-      height: 40px;
-      padding-right: 180px;
+      //height: 40px;
+     // padding-right: 180px;
       width: 100%;
     }
   }
@@ -28,12 +51,14 @@ $cookies-notification-bg-color: rgba($base-primary-color, 0.1);
   &__btn {
     @include media(mobile down) {
       margin-top: 10px;
+      width: 100%;
     }
     @include media(tablet up) {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      margin-top: $base-content-padding;
+      //position: absolute;
+     // right: 0;
+      //top: 50%;
+      //transform: translateY(-50%);
     }
   }
 }

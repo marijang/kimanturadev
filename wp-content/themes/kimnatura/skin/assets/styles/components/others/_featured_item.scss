@@ -38,7 +38,7 @@ $featured-list-popover-height:   $base-content-padding*4;
                 position: absolute;
                 left: -$base-content-padding;
                 top: -$base-content-padding;
-                transition: background-color .1s ease-out;
+                transition: all .1s ease-out;
                 background-color: transparent;
                 padding: $base-content-padding*2;
             }

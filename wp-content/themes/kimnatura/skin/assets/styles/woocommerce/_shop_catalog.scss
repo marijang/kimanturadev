@@ -14,21 +14,7 @@
         }
         */
     }
-    /*
-    @for $i from 1 through 100 {
-        &.shop-catalog__item {
-          &:nth-child(#{$i}) {
-            //transition-delay: $i * (.09s);
-            // Delay the animation. Delay increases as items loop.
-            animation-delay: $i * (.09s);
-          }
-          /*
-          &::before{
-            animation-delay:(.03s) * $i;
-          }
-         
-        }
-    } */
+ 
     
 }
 

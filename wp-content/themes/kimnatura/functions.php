@@ -39,6 +39,9 @@ if ( ! defined( 'WPINC' ) ) {
   die;
 }
 
+
+$inf_theme_options['cookies_notification_description'] = 'Za pružanje boljeg korisničkog iskustva, ova stranica koristi cookies. Nastavkom pregleda stranice slažete se s korištenjem kolačića.';
+
 /**
  * Theme version global
  *
