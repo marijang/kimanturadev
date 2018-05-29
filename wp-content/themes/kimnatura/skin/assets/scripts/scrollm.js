@@ -14,6 +14,17 @@ $(function() {
         });
     });
    
+
+    $('.gallery').each(function(index, section) {
+        var elementWatcher = scrollMonitor.create( section );
+        elementWatcher.enterViewport(function() {
+           // $('.addthis_toolbox').fadeOut();
+        });
+        elementWatcher.exitViewport(function() {
+           // $('.addthis_toolbox').fadeIn();
+         });
+    });
+
     $('.article-list').each(function(index, section) {
         var elementWatcher = scrollMonitor.create( section );
         elementWatcher.enterViewport(function() {

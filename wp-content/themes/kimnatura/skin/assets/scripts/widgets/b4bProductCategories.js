@@ -2,7 +2,14 @@
 
 $(function() {
     var action = 'example';
-    var url = themeLocalization.ajaxurl + '?action=example&start=2&load=2';
+    
+    if (themeLocalization){
+        var url = themeLocalization.ajaxurl + '?action=example&start=2&load=2';
+    }else{
+        var themeLocalization = { "ajaxurl" : ''};
+        var url = '';
+    }
+   
    // var allPanels = $('.shop-categories__childs').show();
     var loader = $('.shop-catalog__loader');
     $('.shop-categories__icon').on('click', function(e){

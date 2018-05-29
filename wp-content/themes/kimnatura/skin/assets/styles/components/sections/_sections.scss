@@ -12,6 +12,17 @@ $section-description-space-bottom-small:$base-content-padding;
     @include section-spacings('top');
     @include section-spacings('bottom');
 
+    .addthis_toolbox{
+        position: sticky;
+        top: 10vh;
+        display: inline-block;
+        margin-top: 60px;
+        .custom_images{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
     @include e('link'){
        margin-top: $base-content-padding;
        display: block;
