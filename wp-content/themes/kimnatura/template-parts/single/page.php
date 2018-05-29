@@ -21,6 +21,7 @@ $image  = $images->get_post_image( 'full_width' );
     <?php the_subtitle( '<p class="section__description">', '</p>' ); ?>
   </header>
   <div class="section__content">
+
     <?php the_content(); ?>
   </div>
   <?php require locate_template( 'template-parts/parts/google-rich-snippets.php' ); ?>

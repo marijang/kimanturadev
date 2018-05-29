@@ -21,7 +21,22 @@ $(function() {
            // $('.addthis_toolbox').fadeOut();
         });
         elementWatcher.exitViewport(function() {
-           // $('.addthis_toolbox').fadeIn();
+            $('.addthis_toolbox').fadeIn();
+         });
+         elementWatcher.lock();
+
+         elementWatcher.stateChange(function() {
+            $offset = $(section).offset().top- $(window).scrollTop() - $('.addthis_toolbox').height() ;
+            console.log($(section).offset().top- $(window).scrollTop());
+            console.log(elementWatcher.bottom);
+            console.log(elementWatcher.height);
+            if ( $offset < 0){
+                if(!this.isAboveViewport){
+                    $('.addthis_toolbox').fadeOut();
+                }
+                
+            }
+            $(section).toggleClass('fixed', this.isAboveViewport)
          });
     });
 
