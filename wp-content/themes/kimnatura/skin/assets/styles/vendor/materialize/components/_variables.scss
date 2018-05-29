@@ -163,7 +163,7 @@ $dropdown-item-height: 50px !default;
 // ==========================================================================
 
 // Text Inputs + Textarea
-$input-height: 3rem !default;
+$input-height: 2rem !default;
 $input-border-color: color("grey", "base") !default;
 $input-border: 1px solid $input-border-color !default;
 $input-background: #fff !default;
@@ -185,7 +185,7 @@ $placeholder-text-color: lighten($input-border-color, 20%) !default;
 // Radio Buttons
 $radio-fill-color: $secondary-color !default;
 $radio-empty-color: #5a5a5a !default;
-$radio-border: 2px solid $radio-fill-color !default;
+$radio-border: 1px solid $radio-fill-color !default;
 
 // Range
 $range-height: 14px !default;
@@ -199,7 +199,7 @@ $select-focus: 1px solid lighten($secondary-color, 47%) !default;
 $select-option-hover: rgba(0,0,0,.08) !default;
 $select-option-focus: rgba(0,0,0,.08) !default;
 $select-option-selected: rgba(0,0,0,.03) !default;
-$select-padding: 5px !default;
+$select-padding: 4px !default;
 $select-radius: 2px !default;
 $select-disabled-color: rgba(0,0,0,.3) !default;
 

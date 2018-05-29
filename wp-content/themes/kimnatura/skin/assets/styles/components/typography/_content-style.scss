@@ -1,0 +1,16 @@
+@include b('content-style'){
+    @include m('small'){
+        @include typi(small);
+        h4{
+            margin-bottom: $base-content-padding;
+            margin-top: 0;
+        }
+        p,ul{
+            padding-bottom: $base-content-padding;
+        }
+        ul{
+            list-style-type: disc;
+            margin-left: $base-content-padding;
+        }
+    }
+}

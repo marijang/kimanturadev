@@ -1,13 +1,17 @@
 @include block('shop-categories'){
+   
     @include element('list'){
        @include typi('small');
        @extend  %accordion;
        position: sticky;
        top: 0vh;
+       input[type="checkbox"] + span:not(.lever) {
+        @include typi('small');
+       }
     }
     @include element('item'){
         @include modifier('parent'){
-            font-weight: 600;
+            font-weight: 400;
             padding: $grid-gutter!important;
         }
         @include modifier('child'){

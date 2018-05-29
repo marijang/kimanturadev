@@ -3,3 +3,12 @@
         @include typi('small');
     }
 }
+
+
+// Woocommerce GDPR PLugin
+.wpgdprc-checkbox{
+    margin: $base-content-padding;
+    span{
+        @include typi(small);
+    }
+} 

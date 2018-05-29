@@ -54,6 +54,11 @@ class Menu {
     return array(
         'header_main_nav' => esc_html__( 'Main Menu', 'kimnatura' ),
         'footer_main_nav' => esc_html__( 'Footer Menu', 'kimnatura' ),
+        'mm1_main_nav' => esc_html__( 'Mega Menu 01', 'kimnatura' ),
+        'mm2_main_nav' => esc_html__( 'Mega Menu 02', 'kimnatura' ),
+        'mm3_main_nav' => esc_html__( 'Mega Menu 03', 'kimnatura' ),
+        'mm4_main_nav' => esc_html__( 'Mega Menu 04', 'kimnatura' ),
+        'mm5_main_nav' => esc_html__( 'Mega Menu 05', 'kimnatura' ),
     );
   }
 

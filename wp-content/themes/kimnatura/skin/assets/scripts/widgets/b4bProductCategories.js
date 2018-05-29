@@ -2,7 +2,14 @@
 
 $(function() {
     var action = 'example';
-    var url = themeLocalization.ajaxurl + '?action=example&start=2&load=2';
+    
+    if (themeLocalization){
+        var url = themeLocalization.ajaxurl + '?action=example&start=2&load=2';
+    }else{
+        var themeLocalization = { "ajaxurl" : ''};
+        var url = '';
+    }
+   
    // var allPanels = $('.shop-categories__childs').show();
     var loader = $('.shop-catalog__loader');
     $('.shop-categories__icon').on('click', function(e){
@@ -39,7 +46,7 @@ $(function() {
     function calcHeight(){
         var countElements = Math.ceil($('.shop-catalog__items li').length/3)+1;
         var elementHeight = $('.shop-catalog__item:first').outerHeight()*2;
-        return (countElements*elementHeight)+'px';
+        return (countElements*elementHeight);
     }
 
     $('#show-more-products').on('click',function(e){
@@ -48,14 +55,12 @@ $(function() {
         loader.fadeIn('fast');
         var $get  = $this.data('current')+1;
         $this.data('current',$get);
-        $this.fadeOut('fast');
+        $this.hide();
         var $perpage  = $this.data('per-page');
         var url = themeLocalization.ajaxurl + '?action=example&start='+$get+'&load='+$perpage;
         $.ajax({
             type : "get",
-            //dataType : "json",
             url : url,
-           // data : {action: action, post_id : post_id, nonce: nonce},
             success: function(response) {
                if(response) {
                   var $items =  $('.shop-catalog__items li',response); 
@@ -64,7 +69,6 @@ $(function() {
                   $products_left = $num.data('products-left');
                   if($products_left==0){
                     $('.shop-catalog__num-of-items').html($num);
-                
                   }else{
                     $('.shop-catalog__num-of-items').html($num);        
                     $this.fadeIn('slow');
@@ -75,13 +79,9 @@ $(function() {
                     $item.css('animation-delay',(index * 0.3)+'s');
                     $(".shop-catalog__items").append($item);
                     $items.addClass('animated');
-                });
+                 });
                  $('.shop-catalog__items').css('max-height',calcHeight());
-                
-                  
-                 
                   loader.fadeOut('fast');
-                  
                }
                else {
                   alert("Your vote could not be added")
