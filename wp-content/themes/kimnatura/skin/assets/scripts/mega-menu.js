@@ -9,9 +9,9 @@
  * http://www.codrops.com
  */
 $(document).ready( function() {
-   
+
     var mainContainer = document.querySelector('.main-wrap'),
-    openCtrl = document.getElementById('btn-mega-menu'),
+    openCtrl = document.getElementById('#menu>ul>li>a'),
     closeCtrl = document.getElementById('btn-mega-menu-close'),
     megamenuContainer = document.querySelector('.mega-menu'),
     inputmegamenu = mega-menuContainer.querySelector('.mega-menu__input'),
