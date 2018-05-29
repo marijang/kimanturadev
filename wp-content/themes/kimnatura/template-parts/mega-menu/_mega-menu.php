@@ -8,22 +8,22 @@
                         <img class="mega-menu__logo-img" src="<?php echo esc_url( KIM_IMAGE_URL . 'logo-white.svg' ); ?>" title="<?php echo esc_attr( $header_logo_info ); ?>" alt="<?php echo esc_attr( $header_logo_info ); ?>" />
                     </a>
                 
-                    <div class="search__btn-close" id="btn-search-close"><i class="material-icons">close</i></div>
+                    <div class="mega-menu__btn-close" id="btn-mega-menu-close"><i class="material-icons">close</i></div>
                         <!-- <button id="btn-search-close" class="btn btn--search-close" aria-label="Close search form">
                             <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
                         </button> -->
             
-                <div class="search__form-wrapper">
-                    <form class="search__form" role="search" method="get" onsubmit="event.preventDefault()" id="search-form">
-                        <input id="search-input" class="search__input" value="<?php the_search_query(); ?>" name="s" type="search" placeholder="Traži" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
-                        <span class="search__info">Upišite pojam za pretraživanje</span>
+                <div class="mega-menu__form-wrapper">
+                    <form class="mega-menu__form" role="mega-menu" method="get" onsubmit="event.preventDefault()" id="mega-menu-form">
+                        <input id="mega-menu-input" class="mega-menu__input" value="<?php the_search_query(); ?>" name="s" type="search" placeholder="Traži" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                        <span class="mega-menu__info">Upišite pojam za pretraživanje</span>
                     </form>
                 </div>
             </div>
 				
 		</div>
-			<div class="search__inner search__inner--down" id='search-down'>
-				<section id="search-results" class="section section__spacing-top--medium section__spacing-bottom--medium">
+			<div class="mega-menu__inner mega-menu__inner--down" id='mega-menu-down'>
+				<section id="mega-menu-results" class="section section__spacing-top--medium section__spacing-bottom--medium">
                 </section>
             </div>
     <!-- </div> -->
