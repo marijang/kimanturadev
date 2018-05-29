@@ -11,13 +11,13 @@
 $(document).ready( function() {
 
     var mainContainer = document.querySelector('.main-wrap'),
-    openCtrl = document.getElementById('#menu>ul>li>a'),
+    openCtrl = $('#menu>ul>li>a').first()[0],
     closeCtrl = document.getElementById('btn-mega-menu-close'),
     megamenuContainer = document.querySelector('.mega-menu'),
-    inputmegamenu = mega-menuContainer.querySelector('.mega-menu__input'),
-    megamenu = document.getElementById('mega-menu-wrap'),
-    megamenuUp = document.getElementById('mega-menu-up'),
-    megamenuDown = document.getElementById('mega-menu-down'),
+    // inputmegamenu = mega-menuContainer.querySelector('.mega-menu__input'),
+    //megamenu = document.getElementById('mega-menu-wrap'),
+    // megamenuUp = document.getElementById('mega-menu-up'),
+    // megamenuDown = document.getElementById('mega-menu-down'),
     body = $('body');
 
 function init() {
@@ -25,31 +25,40 @@ function init() {
 }
 
 function initEvents() {
-    openCtrl.addEventListener('click', openmegamenu);
+    console.log('init')
+    openCtrl.addEventListener('click', function(ev){
+        ev.preventDefault();
+        body.addClass('mega-menu-show');
+        mainContainer.classList.add('main-wrap--hide');
+        megamenuContainer.classList.add('mega-menu--open');
+        //megamenu.addEventListener('scroll', megamenuScroll);
+    });
     closeCtrl.addEventListener('click', closemegamenu);
     document.addEventListener('keyup', function(ev) {
-        // escape key.
+         // escape key.
         if( ev.keyCode == 27 ) {
-            closemegamenu();
-            closeCtrl.click();
-        }
+             closemegamenu();
+             closeCtrl.click();
+         }
     });
 }
 
-function megamenuScroll() {
-    if ($(megamenu).scrollTop() > 0){
-        $(megamenuUp).addClass("scrolled");
-        $(megamenuDown).addClass("scrolled");
-    }
-    else
-    {
-        $(megamenuUp).removeClass("scrolled");
-        $(megamenuDown).removeClass("scrolled");
-    }
-}
+// function megamenuScroll() {
+//     if ($(megamenu).scrollTop() > 0){
+//         $(megamenuUp).addClass("scrolled");
+//         $(megamenuDown).addClass("scrolled");
+//     }
+//     else
+//     {
+//         $(megamenuUp).removeClass("scrolled");
+//         $(megamenuDown).removeClass("scrolled");
+//     }
+// }
 
 
-function openmegamenu() {
+function openmegamenu(event) {
+    console.log('unutra sam');
+    event.preventDefault();
     body.addClass('mega-menu-show');
     mainContainer.classList.add('main-wrap--hide');
     megamenuContainer.classList.add('mega-menu--open');

@@ -17,6 +17,7 @@ $search-grid-row-gap: $base-content-padding*3;
 	height: 100vh;
 }
 
+
 .search::before {
 	content: '';
 	position: absolute;
@@ -83,7 +84,7 @@ $search-grid-row-gap: $base-content-padding*3;
         }
 
         .search__form {
-            transform: translate(0,0);
+            transform: translate(0,20%);
         }
     }
 }

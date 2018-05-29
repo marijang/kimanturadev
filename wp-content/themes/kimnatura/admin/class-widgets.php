@@ -76,10 +76,10 @@ class Widgets {
           'name' => __( 'Mega Menu', 'kimnatura' ),
           'id' => 'mega-menu',
           'description' => __( 'Mega Menu', 'kimnatura' ),
-          'before_widget' => '',
-          'after_widget' => "",
-          'before_title' => '',
-          'after_title' => '',
+          'before_widget' => '<div class="mega-menu__column">',
+          'after_widget' => "</div>",
+          'before_title' => '<h4 class="mega-menu__column-title">',
+          'after_title' => '</h4>',
       )
     );
   }

@@ -1,5 +1,7 @@
 $header-height: 102px;
 $mega-menu-grid-column-gap: $base-content-padding*2;
+$mega-menu-grid-gap: $base-content-padding;
+$mega-menu-spacing-before-grid: $base-content-padding*3;
 $mega-menu-grid-row-gap: $base-content-padding*3;
 
 /* Layout for mega-menu container */
@@ -28,6 +30,21 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
 	background: rgba(0,0,0,0.3);
 }
 
+.mega-menu::after {
+    content: '';
+        @include media(desktop large){
+            //opacity: 0;
+            //transition: all .8s cubic-bezier(0.81,0.15,0.26,0.99);
+            background: url('/wp-content/themes/kimnatura/skin/public/images/cipka-bottom-1.png');
+            background-repeat: no-repeat;
+            background-position: bottom right;
+        } 
+        @include at('animated'){
+            opacity: 1;
+            transition-delay: 1.8s;
+        }
+}
+
 .mega-menu__inner {
 	//position: absolute;
 	width: 100vw;
@@ -36,9 +53,9 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
 }
 
 .mega-menu__inner--up {
-    height: 40%;
+    height: 100%;
     min-height: 200px;
-    max-height: 1200px;
+    //max-height: 1200px;
 	color: $base-white-color;
     background: $primary-color;
     z-index: 1001;
@@ -239,9 +256,7 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
     // grid-template-areas: "logo not not btn-close" 
     //                      "not mega-menu mega-menu not";
     grid-template-areas: 
-                "log mega-menu mega-menu btn-close"
-                ". mega-menu mega-menu .";
-    height: 100%;
+                "log mega-menu mega-menu btn-close";
 
     @include media(mobile){
         grid-template-rows: 46px auto;
@@ -249,6 +264,32 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
                 "log . . btn-close"
                 "mega-menu mega-menu mega-menu mega-menu";
     }
+}
+
+.mega-menu__grid {
+    @include container();
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    margin-top: $mega-menu-spacing-before-grid;
+}
+
+.mega-menu__column {
+    ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: $mega-menu-grid-gap;
+    }
+
+    a {
+        color: $base-white-color;
+    }
+
+    
+}
+
+.mega-menu__column-title {
+    @extend %heading-reset;
+    margin-bottom: $mega-menu-grid-gap;
 }
 
 .mega-menu__logo-link{

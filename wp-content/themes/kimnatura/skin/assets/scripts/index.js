@@ -22,4 +22,5 @@ import './form-fields/inputnumber';
 import './app';
 
 import './search';
+import './mega-menu';
 //import './loader';
