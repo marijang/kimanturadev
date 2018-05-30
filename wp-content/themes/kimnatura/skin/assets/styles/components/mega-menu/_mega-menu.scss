@@ -275,8 +275,8 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
     @include container();
     display: grid;
     grid-template-columns: repeat(5,auto);
-    margin-top: $mega-menu-spacing-before-grid;
-    margin-bottom: $mega-menu-spacing-before-grid;
+    padding-top: $mega-menu-spacing-before-grid;
+    padding-bottom: $mega-menu-spacing-before-grid;
     grid-gap: $mega-menu-grid-gap;
 
     @include media(mobile){
