@@ -38,7 +38,7 @@ $search-grid-row-gap: $base-content-padding*3;
 
 .search__inner--up {
     height: 40%;
-    min-height: 200px;
+    //min-height: 200px;
     max-height: 1200px;
 	color: $base-white-color;
     background: $primary-color;
@@ -293,6 +293,7 @@ $search-grid-row-gap: $base-content-padding*3;
 
 .search-show{
     overflow: hidden;
+    position: relative;
 }
 
 /************************/
