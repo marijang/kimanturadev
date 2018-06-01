@@ -20,6 +20,7 @@ use Kimnatura\Admin\Woo as Woo;
 
 use Kimnatura\Admin\Rest\Example as Example;
 use Kimnatura\Admin\Rest\Search as Search;
+use Kimnatura\Admin\MailChimp as MailChimp;
 /**
  * The main start class.
  *
@@ -131,7 +132,10 @@ class Main {
     $widgets     = new Admin\Widgets( $this->get_theme_info() );
     $menu        = new Menu\Menu( $this->get_theme_info() );
     $media       = new Admin\Media( $this->get_theme_info() );
+    $mailchimp   = new Admin\MailChimp;
   
+    // Mailchimp
+    $this->loader->add_action('mc4wp_form_response_position', $mailchimp,'mc4wp_form_response_position');
 
     // Admin.
     $this->loader->add_action( 'login_enqueue_scripts', $admin, 'enqueue_styles' );

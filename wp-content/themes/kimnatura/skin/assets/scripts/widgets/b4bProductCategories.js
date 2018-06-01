@@ -27,6 +27,12 @@ $(function() {
         
     });
 
+    // Open default
+    $('.shop-categories__item input:checked').each(function(index,item){
+        $(item).closest( "li" ).addClass('is-expanded');
+        $(item).closest( "li ul").show();
+    });
+
     var setValue = function(){
     var total = '';
     $target = $('input[name="product_cat"]');

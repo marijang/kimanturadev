@@ -16,7 +16,12 @@ $section-description-space-bottom-small:$base-content-padding;
         position: sticky;
         top: 10vh;
         display: inline-block;
-        margin-top: 60px;
+        top: 50vh;
+        -webkit-transform: translate(0px, -50%);
+        -ms-transform: translate(0px, -50%);
+        transform: translate(0px, -50%);
+        width: 50px;
+        height: 150px;
         .custom_images{
             display: flex;
             flex-direction: column;

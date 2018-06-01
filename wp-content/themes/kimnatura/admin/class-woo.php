@@ -213,8 +213,13 @@ class Woo {
         }
         $productIDs = array_unique (array_merge ($upsell , $cross,$related,$category));
     }else{
+       // echo $post->ID();
+       $productIDs ='';
+       if (isset($post)){
         $productIDs = get_post_meta($post->ID,'custom_productIds',true);
-        $title =  __('Vezani proizvodi','b4b');
+       }
+       
+        $title =  __('Vezani proizvodi','kimnatura');
     }
     
     if ($productIDs == ''){
