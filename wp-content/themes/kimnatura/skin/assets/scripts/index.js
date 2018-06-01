@@ -23,4 +23,4 @@ import './app';
 
 import './search';
 import './mega-menu';
-//import './loader';
+import './loader';

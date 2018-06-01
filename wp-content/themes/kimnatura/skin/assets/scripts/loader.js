@@ -2,7 +2,7 @@
 $(function() {
     $("body").addClass("loader-open");
     $(".loader__wrap").addClass("view");
-
+  
     $(document).ready(function() {
         $(window).on("load", function() {
             setTimeout(function() {
@@ -10,8 +10,8 @@ $(function() {
                 setTimeout(function() {
                     $("body").removeClass("loader-open");
                    
-                },1600)
-            }, 1500) //1500
+                },1100)
+            }, 1000) //1500
         });
 
     });

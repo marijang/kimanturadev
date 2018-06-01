@@ -74,3 +74,13 @@
         //width: 300px;
     }
 }
+
+// Mailchimp
+.mc4wp-response{
+    .mc4wp-alert.mc4wp-error{
+        color:#d14;
+    }
+    .mc4wp-alert.mc4wp-notice{
+        color: $base-primary-color;
+    }
+}

@@ -244,7 +244,7 @@
 .loader__wrap.loader-hidden {
     opacity: 0;
     visibility: hidden;
-    transition: .8s cubic-bezier(0.81,0.15,0.26,0.99) 1.9s
+    transition: .8s cubic-bezier(0.81,0.15,0.26,0.99) 1s
 }
 
 .loader__wrap.loader-hidden .loader__bg {
@@ -253,7 +253,7 @@
 }
 
 .loader__wrap.loader-hidden .loader {
-    animation: roll-in-blurred-right .3s cubic-bezier(0.81,0.15,0.26,0.99) both;
+  //  animation: roll-in-blurred-right .3s cubic-bezier(0.81,0.15,0.26,0.99) both;
    // opacity: 0;
     transition: .3s cubic-bezier(0.81,0.15,0.26,0.99) 0s
 }
@@ -278,16 +278,16 @@
     width: 120px;
     height: 66px;
     opacity: 0;
-   // transition: .3s cubic-bezier(0.81,0.15,0.26,0.99) 1.5s;
-    background:$base-primary-color;
-    padding:32px;
+    transition: .3s cubic-bezier(0.81,0.15,0.26,0.99) 1s;
+   // background:$base-primary-color;
+   // padding:32px;
     backface-visibility: hidden;
-    border-radius: 10px;
-    animation: roll-in-blurred-right 1.6s cubic-bezier(0.81,0.15,0.26,0.99)  both;
+    border-radius: 2px;
+    //animation: roll-in-blurred-right 1.6s cubic-bezier(0.81,0.15,0.26,0.99)  both;
 }
 
 .loader-img {
-   
+   //  margin: 8px;
     position: absolute;
     top: 0;
     left: 0;
