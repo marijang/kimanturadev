@@ -19,6 +19,7 @@ $(document).ready( function() {
     // megamenuUp = document.getElementById('mega-menu-up'),
     // megamenuDown = document.getElementById('mega-menu-down'),
     body = $('body');
+    html = $('html');
 
 function init() {
     initEvents();	
@@ -57,9 +58,10 @@ function initEvents() {
 
 
 function openmegamenu(event) {
-    console.log('unutra sam');
+    //console.log('unutra sam');
     event.preventDefault();
     body.addClass('mega-menu-show');
+    html.addClass('mega-menu-show');
     mainContainer.classList.add('main-wrap--hide');
     megamenuContainer.classList.add('mega-menu--open');
     megamenu.addEventListener('scroll', megamenuScroll);
@@ -70,6 +72,7 @@ function openmegamenu(event) {
 
 function closemegamenu() {
     body.removeClass('mega-menu-show');
+    html.removeClass('mega-menu-show');
     mainContainer.classList.remove('main-wrap--hide');
     megamenuContainer.classList.remove('mega-menu--open');
     megamenu.removeEventListener('scroll', megamenuScroll);
