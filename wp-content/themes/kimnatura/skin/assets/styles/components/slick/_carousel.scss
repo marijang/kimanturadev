@@ -108,6 +108,17 @@ $slick-opacity-not-active: 0.25 !default;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+        @include media(tablet ipad){
+            display: none!important;
+            font-size: 32px;
+            line-height: 32px;
+            height: 32px;
+            width: 32px;
+            &:before {
+                font-size: 32px;
+                display: none;
+            }
+        }
     }
 
 
@@ -115,6 +126,7 @@ $slick-opacity-not-active: 0.25 !default;
 
     .slick-prev {
         left: -$base-content-padding*2;
+       
         [dir="rtl"] & {
             left: auto;
             right: -$base-content-padding*2;
@@ -132,6 +144,9 @@ $slick-opacity-not-active: 0.25 !default;
             top: auto;
             transform: translateX(0%);
         // margin-right: $base-content-padding;
+        }
+        @include media(tablet ipad){
+            left: -$base-content-padding
         }
     }
 
@@ -154,6 +169,9 @@ $slick-opacity-not-active: 0.25 !default;
             top: auto;
             transform: translateX(0%);
             //margin-right: $base-content-padding;
+        }
+        @include media(tablet ipad){
+            right: -$base-content-padding
         }
     }
 
@@ -187,6 +205,7 @@ $slick-opacity-not-active: 0.25 !default;
         -webkit-transition: height 0.2s ease-in-out;
         transition: height 0.2s ease-in-out;
         border: 0;
+       
    
     }
     .slick-dots{

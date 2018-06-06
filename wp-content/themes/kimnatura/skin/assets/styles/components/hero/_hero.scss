@@ -32,8 +32,11 @@ $hero-transition-duration-in: .9s;
 }
 
 @include block('hero'){
+     
+   @include e('slider-wrapper'){
+        margin-top: $base-content-padding;
 
-   
+   }
 
     @include element('item'){
         position: relative;
@@ -150,7 +153,7 @@ $hero-transition-duration-in: .9s;
         left:0px;
         @include media(desktop large){
             top:$hero-content-top;
-            top: 0;
+            top: $base-content-padding*2;
             left:$hero-content-left;
             left:0;
             bottom:$hero-content-bottom;
@@ -162,10 +165,11 @@ $hero-transition-duration-in: .9s;
             @include typi(large);
             @include media(desktop large){
                 @include typi(huge);
+                line-height: 1.2;
             }
             font-weight: 700;
             letter-spacing: 1px;
-            line-height: 1.2;
+            line-height: 1;
         }
        // padding: $hero-content-padding;
         //width: 32%;

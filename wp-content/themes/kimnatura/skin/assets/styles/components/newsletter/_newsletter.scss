@@ -1,14 +1,20 @@
 @include block('animated'){
+    @include media(tablet ipad){
+        .newsletter__bg{
+             box-shadow: none!important;
+             opacity: 1;
+        }
+    }
     @include media(desktop large){
         .newsletter__bg{
             opacity: 1;
             box-shadow: 0 41px 43.56px 0.44px rgba(0,0,0,0.32);
             transform: scale(1) translate(0,0);
             transition: all .8s ease-in .3s,transform .8s ease-in .5s;
-       
             background-size: cover;
         }
     }
+   
 }
 
 
