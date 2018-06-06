@@ -65,6 +65,8 @@ class General {
   }
 
 
+
+
   public function wpshout_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
       'gallery-large' => __( 'Gallery Large' ),

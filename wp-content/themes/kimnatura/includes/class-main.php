@@ -14,6 +14,7 @@ namespace Kimnatura\Includes;
 use Kimnatura\Admin as Admin;
 use Kimnatura\Admin\Menu as Menu;
 use Kimnatura\Plugins\Acf as Acf;
+use Kimnatura\Plugins\MultipleFeaturedImages as Mfi;
 use Kimnatura\Theme as Theme;
 use Kimnatura\Theme\Utils as Utils;
 use Kimnatura\Admin\Woo as Woo;
@@ -133,9 +134,12 @@ class Main {
     $menu        = new Menu\Menu( $this->get_theme_info() );
     $media       = new Admin\Media( $this->get_theme_info() );
     $mailchimp   = new Admin\MailChimp;
-  
+    $mfi         = new Mfi($this->get_theme_info());
     // Mailchimp
     $this->loader->add_action('mc4wp_form_response_position', $mailchimp,'mc4wp_form_response_position');
+
+    // Plugins
+    $this->loader->add_filter('kdmfi_featured_images',$mfi,'kdmfi_featured_images');
 
     // Admin.
     $this->loader->add_action( 'login_enqueue_scripts', $admin, 'enqueue_styles' );
