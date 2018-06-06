@@ -25,6 +25,7 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
 
     @include element('link'){
             color: $base-dark-color;
+            font-family: $base-navigation-font;
         //   text-decoration: $link-decoration;
             position: relative;
             //font-weight: bold;

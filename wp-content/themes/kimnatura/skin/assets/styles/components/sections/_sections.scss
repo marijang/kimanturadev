@@ -50,9 +50,12 @@ $section-description-space-bottom-small:$base-content-padding;
     }
     
     @include element('header'){
-        margin-bottom: $section-header-space-bottom; 
+        margin-bottom: $section-header-space-bottom*2; 
         @include media(mobile){
              margin-bottom: $section-header-space-bottom-mobile;
+        }
+        @include media(tablet ipad){
+            margin-bottom: $section-header-space-bottom-mobile;
         }
     }
 
