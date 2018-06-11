@@ -7,6 +7,8 @@
        top: 0vh;
        input[type="checkbox"] + span:not(.lever) {
         @include typi('small');
+        line-height: 1.8;
+        font-family: $base-font-family-primary;
        }
     }
     @include element('item'){
