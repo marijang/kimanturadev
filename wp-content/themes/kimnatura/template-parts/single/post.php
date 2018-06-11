@@ -26,9 +26,10 @@ $image  = $images->get_post_image( 'full_width' );
   </div>
 
   <div class="section__content content-about-us-style">
-    <?php require locate_template( 'template-parts/parts/addthis.php' ); ?>
-    <?php the_content(); ?>
-
+    <?php //require locate_template( 'template-parts/parts/addthis.php' ); ?>
+    <div class="section__content-share">
+        <?php the_content(); ?>
+    </div>
   </div>
   <?php require locate_template( 'template-parts/parts/google-rich-snippets.php' ); ?>
 </article>
