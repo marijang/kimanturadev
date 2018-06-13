@@ -13,7 +13,7 @@ $gallery-spacing-bottom: $base-content-padding*3;
     grid-auto-rows: $gallery-image-height;
     grid-gap: $gallery-gap;
     margin-bottom: $gallery-spacing-bottom;
-
+    margin-top: $base-content-padding;
 
 
     @include media(mobile){

@@ -11,10 +11,7 @@ $blog_name        = get_bloginfo( 'name' );
 $blog_description = get_bloginfo( 'description' );
 $header_logo_info = $blog_name . ' - ' . $blog_description;
 ?>
-<div class="loader__wrap view1 loader-hidden">
-    <div class="loader__bg"></div>
-    <div class="loader"><div class="loader-img"></div></div>
-</div>
+
 <progress class="reading__progress js-progress" value="0" max="1"></progress>
 <script>
 	jQuery( document ).ready(function() {
