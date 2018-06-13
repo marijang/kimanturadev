@@ -83,6 +83,7 @@
     @include element('description'){
         //margin-bottom: vr(1);
         //TODO @include typi('small');
+        margin-bottom: $base-content-padding;
     }
     @include element('tab-wrapper'){
       @include media(desktop) {
