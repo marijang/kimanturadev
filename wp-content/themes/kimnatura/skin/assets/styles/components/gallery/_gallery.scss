@@ -41,7 +41,7 @@ $gallery-spacing-bottom: $base-content-padding*3;
   }
 
 .gallery-columns-2{
-    grid-template-columns: 1fr;
+   // grid-template-columns: 1fr;
 }
 
 .gallery-item:nth-child(4n+1){
