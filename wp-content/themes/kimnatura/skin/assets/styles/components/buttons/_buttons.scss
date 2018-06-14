@@ -22,7 +22,11 @@
     timing-function: ease-in;
     duration: 0.3s;
   }
-
+  &:disabled {
+    background: #ccc;
+    color:#444;
+    border-color: #ccc;
+  }
   @include button-sizes;
   @include button-colors;
 

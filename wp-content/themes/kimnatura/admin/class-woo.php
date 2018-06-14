@@ -162,6 +162,17 @@ class Woo {
         //var_dump($fields);
         return $fields;
   }
+
+   /**
+   * Cart Empty message
+   *
+   * @since 2.0.0
+   */
+  function woocommerce_cart_is_empty_message() {
+    echo '<h3 class="cart-empty">';
+    _e( 'Your cart is currently empty.', 'woocommerce' );
+    echo '</h3>';
+  }
   
   /**
    * Create new image sizes
@@ -255,8 +266,14 @@ class Woo {
 
   public function multi_step() {
 
-    $this->enqueue_scripts_filter();
+    $cart_total = WC()->cart->get_displayed_subtotal();
     $t = '';
+    if ($cart_total > 0) {
+
+  
+
+    $this->enqueue_scripts_filter();
+   
     //$t.='C Step='.$step;
     if (is_cart()) {
       $step =  0;
@@ -338,6 +355,7 @@ class Woo {
   
   
     $t  .=  "</ul>";
+    }
     //$t  .= '<div class="page__content">';  
     //$t  .= 'Show:'.($step == 0) ? 'is-active' : 'prazno';
     return $t;
@@ -385,7 +403,8 @@ public function shipping_method_notice() {
 			$message =  sprintf( 'Add %s more to get free shipping!', wc_price( $remaining ) );
 		}
 	}
-	// Show info if price is not calculated just for info
+    // Show info if price is not calculated just for info
+    if($cart_total >0){
 	if (!isset($remaining)){
 		$delivery_zones = \WC_Shipping_Zones::get_zones();
 		foreach ((array) $delivery_zones as $key => $the_zone ) {
@@ -407,7 +426,7 @@ public function shipping_method_notice() {
 				// var_dump($value);
 			}
         }
-    
+    }
 	}
     if ( is_cart() ){
         if ($message!=''){
@@ -438,7 +457,7 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
 			$tersma[] = $term->slug;
 		}
 	}
-	$attribute =  $product->get_attribute('pakovanje');
+	$attribute =  $product->get_attribute('pa_pakovanje');
 	return 
 		 '<div class="cart__item-name">'
 		. $product->get_title()
@@ -612,42 +631,7 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
             $this->get_variation_single_price($variable_product,$variation_id  );
 
         }
-        /*
-        foreach ( $attributes as $attribute_name => $attribute ) :
-            $s = sanitize_title( $attribute_name );
-            echo '<h5>'.wc_attribute_label( $attribute_name ).'</h5>';  
-            foreach ( $available_variations as $options) {
-                $variation_id = $options['variation_id'];
-                $optionattr = $options['attributes'];
-                $variable_product = new WC_Product_Variation( $variation_id );
-                echo '<div>'; 
-
-                echo '<span class="featured-link__option-name">'.$optionattr['attribute_'.sanitize_title($attribute_name)].'</span>'; 
-                // from get_price_html
-                if ( $variable_product->is_on_sale() ) {
-                    $price = wc_format_sale_price( 
-                                  wc_get_price_to_display( $variable_product, 
-                                                           array( 'price' => $variable_product->get_regular_price() ) ),
-                                                           wc_get_price_to_display( $variable_product ) 
-                             ) . $variable_product->get_price_suffix();
-                    $price = 
-                             '<span class="featured-link__sale-price">'
-                             .wc_price(wc_get_price_to_display( $variable_product ))
-                             .$variable_product->get_price_suffix()
-                             .'</span>'
-                             .'<span class="featured-link__regular-price">'
-                             .wc_price($variable_product->get_regular_price()).$variable_product->get_price_suffix()
-                             .'</span>';
-                } else {
-                    $price = wc_price( wc_get_price_to_display( $variable_product ) ) . $variable_product->get_price_suffix();
-                }
-                echo '<span class="featured-link__option-price">'.$price.'</span>';
-                echo '</div>';
-
-             }      
-
-        endforeach;
-        */
+ 
     }
 
     function get_variation_single_price($variable_product,$variation_id){

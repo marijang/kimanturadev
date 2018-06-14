@@ -70,7 +70,7 @@
     })
     
     $('body').on("init_payment_methods",function(o){
-        alert('to je to');
+  
         $('input[type="checkbox"]').addClass("filled-in");
        
     });

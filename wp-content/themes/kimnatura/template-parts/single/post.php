@@ -35,7 +35,7 @@ if (kdmfi_has_featured_image('featured-image-2')){
      
   </div>
 
-  <div class="section__content content-about-us-style section__content--has-share">
+  <div class="section__content content-about-us-style1 section__content--has-share">
     <div class="section__share-add-wrap">
         <?php require locate_template( 'template-parts/parts/addthis.php' ); ?>
     </div>

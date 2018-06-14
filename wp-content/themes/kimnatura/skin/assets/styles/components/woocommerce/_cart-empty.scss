@@ -1,0 +1,14 @@
+@include b('cart-empty'){
+    @include e('wrap'){
+        min-height: 35vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        @include media(desktop large){
+            margin-bottom: $base-content-padding*3;
+        }
+        
+    }
+    
+}

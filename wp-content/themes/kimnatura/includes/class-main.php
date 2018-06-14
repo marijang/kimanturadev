@@ -266,6 +266,8 @@ class Main {
     $this->loader->add_action( 'after_setup_theme', $woo, 'add_theme_support' );
     $this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_styles' );
     $this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_scripts' );
+    $this->loader->remove_action( 'woocommerce_cart_is_empty', 'wc_empty_cart_message',10);
+    $this->loader->add_action( 'woocommerce_cart_is_empty', $woo, 'woocommerce_cart_is_empty_message',10,1);
     // Enque styles and scripts.
     //$this->loader->add_action( 'wp_enqueue_scripts', $theme, 'enqueue_styles' );
     //$this->loader->add_action( 'wp_enqueue_scripts', $theme, 'enqueue_scripts' );

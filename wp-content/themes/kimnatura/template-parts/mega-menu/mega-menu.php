@@ -17,7 +17,7 @@
 
             <div class="mega-menu__grid"><?php dynamic_sidebar('mega-menu'); ?></div>
             <div class="mega-menu__show-all">
-                <a href="/shop" class=" btn btn btn--white-color">Vidi sve proizvode</a>
+                <a href="<?php echo wc_get_page_permalink( 'shop' )?>" class=" btn btn btn--white-color">Vidi sve proizvode</a>
             </div>
 				
         </div>
