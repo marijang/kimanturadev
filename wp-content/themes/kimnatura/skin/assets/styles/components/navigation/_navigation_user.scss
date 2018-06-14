@@ -72,7 +72,7 @@
     @include element('menu-link'){
         color:$base-text-color;
         display: block;
-        
+        font-family: $base-font-family;
         &:hover{
             color:$base-primary-color;  
         }

@@ -132,7 +132,8 @@
             @include typi(larger);
             padding-top: $base-content-padding/2;
             @include media(desktop large){
-                padding-top: $base-content-padding;
+                padding-top: $base-content-padding/2;
+             
             }
         }
 

@@ -1,13 +1,17 @@
 
+'use strict';
 
 $(function() {
+
+
     var action = 'example';
-    
+   // var url = themeLocalization.ajaxurl + '?action=example&start=2&load=2';
+   
     if (themeLocalization){
-        var url = themeLocalization.ajaxurl + '?action=example&start=2&load=2';
+        //var url = themeLocalization.ajaxurl + '?action=example&start=2&load=2';
     }else{
-        var themeLocalization = { "ajaxurl" : ''};
-        var url = '';
+       // var themeLocalization = { "ajaxurl" : ''};
+       // var url = '';
     }
    
    // var allPanels = $('.shop-categories__childs').show();
@@ -56,6 +60,7 @@ $(function() {
     }
 
     $('#show-more-products').on('click',function(e){
+        console.log(themeLocalization);
         e.preventDefault(); 
         var $this = $(this);
         loader.fadeIn('fast');
@@ -63,6 +68,7 @@ $(function() {
         $this.data('current',$get);
         $this.hide();
         var $perpage  = $this.data('per-page');
+        var $products_left;
         var url = themeLocalization.ajaxurl + '?action=example&start='+$get+'&load='+$perpage;
         $.ajax({
             type : "get",
@@ -80,7 +86,7 @@ $(function() {
                     $this.fadeIn('slow');
                   }
                   $.each( $items,function(index,item){
-                    $item = $(item);
+                    var $item = $(item);
                     $item.css('transition-delay',(index * 0.3)+'s');
                     $item.css('animation-delay',(index * 0.3)+'s');
                     $(".shop-catalog__items").append($item);
@@ -104,5 +110,4 @@ $(function() {
             window.location.href = "/shop/";
         }
     });
-	
 });

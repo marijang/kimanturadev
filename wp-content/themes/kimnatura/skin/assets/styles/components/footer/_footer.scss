@@ -23,6 +23,10 @@ footer{
     }
     @include e('link'){
         color: $footer-link-color;
+        &:hover{
+            text-decoration: underline;
+            color: $footer-link-color;
+        }
     }
 }
 
