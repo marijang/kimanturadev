@@ -51,6 +51,7 @@ $slick-opacity-not-active: 0.25 !default;
             background-color:black;
             
         }
+        
     }
     .sastojci__bg{
         opacity: 1;
@@ -275,6 +276,7 @@ $slick-opacity-not-active: 0.25 !default;
             animation-delay: 0s;
             transition: all 0s;
             transition: opacity .001s;
+            min-height: 320px;
         }
       
     }
