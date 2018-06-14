@@ -8,13 +8,13 @@
 ?>
 
 <!-- AddThis Button BEGIN -->
-
+<div class="section__share-sticky">
 <script type="text/javascript">
 var addthis_share1 = {
-   url: "THE URL",
-   title: "THE TITLE",
-   description: "THE DESCRIPTION",
-   media: "THE IMAGE"
+   url: "<?php the_title(); ?>",
+   title: "<?php the_title(); ?>",
+   description: "<?php echo esc_html( strip_tags( get_the_excerpt() ) ); ?>",
+   media: "<?php echo esc_html( $image['image'] ); ?>"
 }
 </script>
 <div class="addthis_sharing_toolbox addthis_toolbox" data-url="<?php the_permalink(); ?>" data-title="<?php the_title_attribute(); ?>">
@@ -33,3 +33,4 @@ var addthis_share1 = {
 
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php get_theme_mod('addthis_code')?>"></script>
 <!-- AddThis Button END -->
+</div>

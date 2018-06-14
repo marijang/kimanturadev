@@ -8,7 +8,7 @@ $content-about-us-padding: 0 100px;
         font-style: normal;
     }
     h3,h4,p,ol,h1,ul{
-        padding:$content-about-us-padding;
+        //padding:$content-about-us-padding;
         @include media('mobile'){
             padding: 0;
         }

@@ -15,7 +15,7 @@ $(function() {
     });
    
 
-    $('.gallery').each(function(index, section) {
+    $('.gallery1').each(function(index, section) {
         var elementWatcher = scrollMonitor.create( section );
         elementWatcher.enterViewport(function() {
            // $('.addthis_toolbox').fadeOut();

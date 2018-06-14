@@ -95,12 +95,13 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
 		background: $base-primary-color;
         color: white;
         font-size: 14px;
+        line-height: 16px;
+        height: 16px;
         position: absolute;
         top: -16px;
         right: -14px;
         padding: 0px 6px;
-            border-radius: 24px;
-            font-weight: 500;
+        border-radius: 50px;
 
         /* width: 16px; */
         /* height: 18px; */

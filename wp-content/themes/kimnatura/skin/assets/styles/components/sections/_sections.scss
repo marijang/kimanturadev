@@ -12,16 +12,18 @@ $section-description-space-bottom-small:$base-content-padding;
     @include section-spacings('top');
     @include section-spacings('bottom');
 
+    @include e('content'){
+        @include m('has-share'){
+            display: flex;
+            flex: 0 auto;
+            justify-content: space-between;
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+    }
+
     .addthis_toolbox{
-        position: sticky;
-        top: 10vh;
-        display: inline-block;
-        top: 50vh;
-        -webkit-transform: translate(0px, -50%);
-        -ms-transform: translate(0px, -50%);
-        transform: translate(0px, -50%);
-        width: 50px;
-        height: 150px;
+        
         .custom_images{
             display: flex;
             flex-direction: column;
@@ -32,6 +34,45 @@ $section-description-space-bottom-small:$base-content-padding;
        margin-top: $base-content-padding;
        display: block;
     }
+
+    @include e('share-sticky'){
+        position: sticky;
+        top: 50vh;
+        transform: translate(0px, -50%);
+        margin-top: 90px;
+        margin-left: 50px;
+        width: 50px;
+        height: 150px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+        border-radius: 10px;
+     }
+
+    @include e('share-add-wrap'){
+        flex: 1;
+        width: 50px;
+      
+        margin-top: 90px;
+        display: flex;
+        margin-top: -10px;
+        z-index: 1;
+       
+     }
+
+    @include e('content-share'){
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 0;
+        flex-direction: column;
+        z-index: 2;
+        .gallery{
+            margin-left: -150px;
+            margin-right: -100px;
+        }
+     }
+
+
+
    // background: red;
     @include container();
     @include element('image'){
@@ -61,7 +102,7 @@ $section-description-space-bottom-small:$base-content-padding;
 
     @include element('title'){
         @extend %heading-reset;
-        margin-bottom: $base-content-padding;
+       // margin-bottom: $base-content-padding;
 
         @include m('center'){
             text-align: center;

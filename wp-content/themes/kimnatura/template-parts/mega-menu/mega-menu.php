@@ -16,6 +16,9 @@
             </div>
 
             <div class="mega-menu__grid"><?php dynamic_sidebar('mega-menu'); ?></div>
+            <div class="mega-menu__show-all">
+                <a href="/shop" class=" btn btn btn--ghost">Vidi sve proizvode</a>
+            </div>
 				
         </div>
     <!-- </div> -->

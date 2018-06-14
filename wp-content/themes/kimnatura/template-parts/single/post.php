@@ -10,6 +10,14 @@ use Kimnatura\Theme\Utils as Utils;
 $images = new Utils\Images();
 $image  = $images->get_post_image( 'full_width' );
 
+
+// Check if set featured image 2
+if (kdmfi_has_featured_image('featured-image-2')){
+    $image['image'] = kdmfi_get_featured_image_src( 'featured-image-2', 'full_width' );
+}
+
+
+
 ?>
 
 
@@ -21,12 +29,16 @@ $image  = $images->get_post_image( 'full_width' );
     </h1>
     <?php the_subtitle( '<p class="section__description">', '</p>' ); ?>
   </header>
+
+ 
   <div class="single__image section__image" style="background-image: url('<?php echo esc_url( $image['image'] ); ?>');">
      
   </div>
 
-  <div class="section__content content-about-us-style">
-    <?php //require locate_template( 'template-parts/parts/addthis.php' ); ?>
+  <div class="section__content content-about-us-style section__content--has-share">
+    <div class="section__share-add-wrap">
+        <?php require locate_template( 'template-parts/parts/addthis.php' ); ?>
+    </div>
     <div class="section__content-share">
         <?php the_content(); ?>
     </div>

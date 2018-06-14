@@ -70,17 +70,23 @@ class Images {
           'image'  => esc_url( $image[0] ),
           'width'  => esc_html( $image[1] ),
           'height' => esc_html( $image[2] ),
+          'post_id'=> $post_id,
+          'image_id'=>$attachemnt_id
       ];
     } else {
       $image_array = [
           'image'  => esc_url( KIM_IMAGE_URL . 'no-image-' . $size . '.jpg' ),
           'width'  => '',
           'height' => '',
+          'post_id'=> $post_id,
+          'image_id'=>$attachemnt_id
       ];
 
       if ( ! empty( $no_image ) ) {
         $image_array['image'] = esc_url( $no_image );
         $image_array['image'] = '';
+        $image_array['post_id'] = $post_id;
+        $image_array['image_id'] =null;
       }
     }
 
