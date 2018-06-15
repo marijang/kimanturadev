@@ -6,6 +6,11 @@
             flex-direction: column;
         }
     }
+    .images{
+        @include media(desktop large){
+            margin: 0 32px 0 0;
+        }
+    }
     @include e('title'){
         margin-bottom:0px; 
     }
@@ -165,7 +170,9 @@
 }
 
 .woocommerce-product-gallery__trigger{
-    display: none;
+  
+
+
 }
 
 .flex-control-nav{
