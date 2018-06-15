@@ -320,14 +320,14 @@ class Woo {
     $t  .= '</header>';
     */
       //$t.='Step='.$step;
-    $t  .= '<ul class="cart-checkout-navigation">';
+    $t  .= '<ul class="cart-checkout-navigation browser-default">';
     // First item
     $t  .= '<li id="wc-multistep-cart" data-step="cart" class="cart-checkout-navigation__item '. ( ($step == 0 ) ? 'is-active' : '').' '. ( ($step > 0 ) ? 'is-activated' : '').'" >';
     //$t  .= __('Košarica','b4b');
     if ($step>0){
       $t .= '<a href="'.get_permalink( wc_get_page_id( 'cart' )).'">
               <span class="cart-checkout-navigation__step-number">1</span>
-              <span class="cart-checkout-navigation__step-title">'.__('Košarica','b4b').'<span>
+              <span class="cart-checkout-navigation__step-title">'.__('Košarica ','b4b').'<span>
             </a>';
     }else{
       $t .= '<a href="'.get_permalink( wc_get_page_id( 'cart' )).'">
@@ -337,10 +337,10 @@ class Woo {
     }
     $t  .= '</li>';
     // Second item
-    $t  .= '<li id="wc-multistep-details" data-step="customer-details" class="cart-checkout-navigation__item '. ( ($step == 1) ? 'is-active' : '').'" >';
-    $t  .= '<span class="cart-checkout-navigation__step-number">2</span>';
+    $t  .= '<li id="wc-multistep-details" data-step="customer-details" class="cart-checkout-navigation__item '. ( ($step == 1) ? 'is-active' : '').' '. ( ($step == 0) ? 'is-disabled' : '').'" >';
+    $t  .= '<a href="'.get_permalink( wc_get_page_id( 'checkout' )).'"><span class="cart-checkout-navigation__step-number">2</span>';
     $t  .= '<span class="cart-checkout-navigation__step-title">'.__('Dostava','b4b').'<span>';
-    $t  .= '</li>';
+    $t  .= ' </a></li>';
     // Third item
     $t  .= '<li id="wc-multistep-payment" data-step="payment" class="cart-checkout-navigation__item '. ( ($step == 2) ? 'is-active' : '').'" >';
     $t  .= '<span class="cart-checkout-navigation__step-number">3</span>';
@@ -428,7 +428,7 @@ public function shipping_method_notice() {
         }
     }
 	}
-    if ( is_cart() ){
+    if ( is_cart()&&$cart_total >0 ){
         if ($message!=''){
             echo '<div class="cart__banner">'.$message.'</div>';
         }
@@ -929,12 +929,16 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
         if ( ! empty( $field ) ) {
             $field_html = '';
 
-            if ( $args['label'] && 'checkbox' !== $args['type'] ) {
+            if ( $args['label'] && 'checkbox' !== $args['type'] && 'select1' != $args['type'] && 'country' != $args['type']  ) {
                 //$field_html .=  '<label for="' . esc_attr( $label_id ) . '1">labela'.$args['label'].'</label>';
                 $field_html .= '<label for="' . esc_attr( $label_id ) . '" class="' . esc_attr( implode( ' ', $args['label_class'] ) ) . '">' . $args['label'] . '</label>';
             }
 
             $field_html .= $field;
+//var_dump($args['type']);
+            if ( 'country' == $args['type']) {
+                 $field_html .= '<label for="' . esc_attr( $label_id ) . '" class="select-label-fix ' . esc_attr( implode( ' ', $args['label_class'] ) ) . '">' . $args['label'] . '</label>';
+            }
 
             if ( $args['description'] ) {
                 $field_html .= '<span class="description">' . esc_html( $args['description'] ) . '</span>';

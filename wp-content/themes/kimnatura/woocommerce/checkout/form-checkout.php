@@ -32,19 +32,19 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 ?>
 
-<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+<form name="checkout" method="post" class="cart-checkout-navigation__form checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 	<!--ovo je tu prebačeno iz form-billinga -->
 	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
 
 	<h1 class="section__title"><?php _e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h1>
 
 	<?php else : ?>
-	        <header id="wc-multistep-details-title" class="section__header">
+	        <header id="wc-multistep-details-title" class="section__header cart-checkout-navigation__header">
 				<h1 class="section__title"><?php _e( 'Informacije o dostavi', 'woocommerce' ); ?></h1>
 				<p class="section__description checkout__desc"><?php _e( 'Popunite polja za dostavu', 'woocommerce' ); ?></p>
 			</header>
 			
-			<header id="wc-multistep-payment-title" style="display:none;" class="section__header">
+			<header id="wc-multistep-payment-title" style="display:none;" class="section__header cart-checkout-navigation__header">
 				<h1 class="section__title"><?php _e( 'Način plaćanja', 'woocommerce' ); ?></h1>
 				<p class="section__description checkout__desc"><?php _e( 'Odaberite metodu plaćanja', 'woocommerce' ); ?></p>
 			</header>

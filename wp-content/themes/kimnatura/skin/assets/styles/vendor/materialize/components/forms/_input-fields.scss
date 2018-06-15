@@ -33,7 +33,7 @@ textarea.materialize-textarea {
   width: 100%;
   @include typi(base);
   margin: $input-margin;
-  padding: $input-padding;
+  padding-bottom: $input-padding;
   box-shadow: none;
   box-sizing: content-box;
   transition: box-shadow .3s, border .3s;
@@ -178,6 +178,7 @@ textarea.materialize-textarea {
   & > label {
     color: $input-border-color;
     position: absolute;
+    letter-spacing: 0;
     top: 0;
     left: 0;
     font-size: 1rem;

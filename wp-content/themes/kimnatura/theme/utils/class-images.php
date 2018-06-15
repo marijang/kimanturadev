@@ -79,7 +79,7 @@ class Images {
           'width'  => '',
           'height' => '',
           'post_id'=> $post_id,
-          'image_id'=>$attachemnt_id
+          'image_id'=>$attachment_id
       ];
 
       if ( ! empty( $no_image ) ) {

@@ -1,3 +1,5 @@
+
+
 (function($){
     $('#payment').hide();
     var navigation = $('.cart-checkout-navigation');
@@ -23,12 +25,9 @@
        
     }
 
-
-
-
-    // hide payments
-  
-   // $('#customer_details').hide();
+    $('body').on('updated_checkout',function(){
+        
+    });
 
     prevStepButton.on('click',function(e){
         activestep.removeClass('is-active');
@@ -53,13 +52,19 @@
     });
 
     $('#wc-multistep-details').on('click',function(e){
-        $('#payment-details,#wc-multistep-payment-title').hide();
-        $('#customer-details,#wc-multistep-details-title').show();
-        $(this).addClass('is-active');
-        $('#wc-multistep-payment').removeClass('is-active');
-
-        e.preventDefault();
+        if ($(this).hasClass('is-disabled')){
+           
+        }else{
+            $('#payment-details,#wc-multistep-payment-title').hide();
+            $('#customer-details,#wc-multistep-details-title').show();
+            $(this).addClass('is-active');
+            $('#wc-multistep-payment').removeClass('is-active');
+            e.preventDefault();
+        }
+        
     });
+
+
     $('#proceed-to-payment').on('click',function(){
         init();
         $('#payment-details,#wc-multistep-payment-title').show();

@@ -5,6 +5,9 @@
  * @package Kimnatura\Template_Parts\Account
  */
 
+
+
+$cart_total = WC()->cart->get_displayed_subtotal();
 ?>
 <script>
 	jQuery( document ).ready(function() {
@@ -22,6 +25,9 @@
 		});
 	});
 </script>
+
+<?php if ($cart_total>0){?>
+
 <div class="navigation-user">
         <div class="navigation-user__wrap">
 	    <?php
@@ -88,11 +94,12 @@
 		?>
 			<div class="navigation-user__login">
         
-            <?php do_action('woocommerce_custom_login_form'); ?>
+                 <?php do_action('woocommerce_custom_login_form'); ?>
             
 			</div>
 		<?php
 		}
 		?>
 		</div>
-        </div>
+		</div>
+<?php }?>
