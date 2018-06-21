@@ -40,7 +40,7 @@ $(document).ready( function() {
 
     var setValue = function(){
     var total = '';
-    $target = $('input[name="product_cat"]');
+    var $target = $('input[name="product_cat"]');
     $.each($('input[name="product_cat[]"]:checked'), function( index, item ){ 
             value = $(this).val();
             
