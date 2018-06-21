@@ -18,6 +18,11 @@ $result = get_posts( $args ) ;
 
 ?>
 <div class="hero__slider-wrapper section section__spacing-top--default section__spacing-bottom--medium">
+<div class="hero__slider-indicator">
+<div class="scroll-indicator">
+	<div class="dots"></div>
+</div>
+</div>
 <div class="hero__slider hero-slider-slick slick-slider">
 <?php
 $i = 0;

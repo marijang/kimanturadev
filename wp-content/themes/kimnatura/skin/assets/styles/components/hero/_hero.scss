@@ -34,9 +34,20 @@ $hero-transition-duration-in: .9s;
 @include block('hero'){
      
    @include e('slider-wrapper'){
-        margin-top: $base-content-padding;
+      //  margin-top: $base-content-padding;
 
    }
+   @include e('slider-indicator'){
+       position: absolute;
+       display: none;
+       @include media(desktop large){
+           display: block;
+           bottom: $base-content-padding*2;
+           left: $base-content-padding*2;
+        }
+   }
+
+   
 
     @include element('item'){
         position: relative;
@@ -68,7 +79,7 @@ $hero-transition-duration-in: .9s;
         } 
     }
     @include element('slider-wrapper'){
-
+        position: relative;
         div.slick-active{
            .hero__bg{
                // animation: kenburns-bottom 5s ease-out both;
@@ -95,6 +106,7 @@ $hero-transition-duration-in: .9s;
             justify-content: center;
             min-height: 16px;
             align-items: flex-start;
+            margin: 0;
         }
          .slick-dots li button:hover
         ,.slick-dots.slick-active li button{
@@ -151,8 +163,10 @@ $hero-transition-duration-in: .9s;
     @include element('link'){
         transition: $hero-transition-duration ease-in $hero-transition-duration;
         text-align: center;
+        margin-top: $base-content-padding;
         @include media(desktop large){
             opacity: 0;
+            margin-top: 0;
             text-align: left;
             visibility: hidden;
         }
@@ -234,3 +248,85 @@ $hero-transition-duration-in: .9s;
     
 }
 
+.scroll-indicator {
+	width: 12px;
+	margin: 0 auto;
+	position: relative;
+	opacity: .5;
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&::before {
+		width: 12px;
+		height: 12px;
+		border-radius: 10px;
+		border: 1px solid #fff;
+		animation: dot 3s infinite ease-in-out;
+	}
+	&::after {
+		width: 7px;
+		height: 7px;
+		border-right: 1px solid #fff;
+		border-bottom: 1px solid #fff;
+		transform: rotate(45deg);
+		animation: arrow 3s infinite ease-in-out;
+		animation-delay: .75s;
+		opacity: .25;
+	}
+	& > div {
+		display: block;
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			margin: 5px auto;
+			border-radius: 10px;
+			border: 1px solid #fff;
+			animation: dot 3s infinite ease-in-out;
+		}
+		&::before {
+			width: 8px;
+			height: 8px;
+			animation-delay: .25s;
+		}
+		&::after {
+			width: 6px;
+			height: 6px;
+			animation-delay: .5s;
+		}
+	}
+}
+
+@keyframes dot {
+	0% {
+		transform: scale(.75);
+		opacity: .25;
+	}
+	25% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(.75);
+		opacity: .25;
+	}
+}
+
+@keyframes arrow {
+	0% {
+		transform: scale(.75) rotate(45deg);
+		opacity: .25;
+	}
+	25% {
+		transform: scale(1) rotate(45deg);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(.75) rotate(45deg);
+		opacity: .25;
+	}
+}
