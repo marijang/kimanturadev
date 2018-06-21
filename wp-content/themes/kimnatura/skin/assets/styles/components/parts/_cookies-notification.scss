@@ -2,10 +2,9 @@ $cookies-notification-bg-color: rgba($base-white-color, 1);
 
 .cookies-notification {
   background-color: $cookies-notification-bg-color;
-  background: #FFFFFF;
+  background: #f9f9f9;;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-
-  padding: $base-content-padding*2;
+  padding: $base-content-padding $base-content-padding*2;
   position: fixed;
   z-index: $cookies-notification-index;
   bottom: 0;
@@ -20,6 +19,7 @@ $cookies-notification-bg-color: rgba($base-white-color, 1);
   }
 
   &__close{
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -30,9 +30,22 @@ $cookies-notification-bg-color: rgba($base-white-color, 1);
     }
   }
 
+  &__desc{
+    flex: 1;
+    p{
+      padding: 0;
+    }
+    a{
+      text-decoration: underline;
+      :hover{
+        text-decoration: none;
+      }
+    }
+  }
+
   &__wrap {
     position: relative;
-    //display: flex;
+    display: flex;
     //align-items: center;
     //flex-direction: column;
     @include typi(small);
