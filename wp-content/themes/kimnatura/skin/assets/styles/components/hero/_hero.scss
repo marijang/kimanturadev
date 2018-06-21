@@ -186,12 +186,14 @@ $hero-transition-duration-in: .9s;
             margin: 0 16px;
             background: $base-primary-color;
             opacity: .9;
+            padding: 8px 0;
             @include media(desktop large){
                 @include typi(huge);
                 line-height: 1.2;
                 text-align: left;
                 margin: 0;
                 opacity: 1;
+                padding: 0;
                 background: none;
             }
         }
