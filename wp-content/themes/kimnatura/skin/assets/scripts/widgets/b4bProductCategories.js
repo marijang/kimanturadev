@@ -42,7 +42,7 @@ $(document).ready( function() {
     var total = '';
     var $target = $('input[name="product_cat"]');
     $.each($('input[name="product_cat[]"]:checked'), function( index, item ){ 
-            value = $(this).val();
+            var value = $(this).val();
             
             if(index==0){
                 total = value;
@@ -61,7 +61,7 @@ $(document).ready( function() {
     }
 
     $('#show-more-products').on('click',function(e){
-        console.log(themeLocalization);
+        
         e.preventDefault(); 
         var $this = $(this);
         loader.fadeIn('fast');
