@@ -18,9 +18,11 @@ $image  = $images->get_post_image( 'full_width' );
     </h1>
     <?php the_subtitle( '<p class="section__description">', '</p>' ); ?>
   </header>
-  <div class="single__image section__image" style="background-image: url('<?php echo esc_url( $image['image'] ); ?>');">
-    
+  <?php if (isset($image['image'])){ ?>
+<div class="single__image section__image" style="background-image: url('<?php echo esc_url( $image['image'] ); ?>');">
+  
   </div>
+<?php }?>
   <div class="section__content content-about-us-style">
     <?php the_content(); ?>
   </div>
