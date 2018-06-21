@@ -65,7 +65,7 @@ foreach($result as $post):
             echo '</div>';
             ?>
             <div class="hero__link" style="transition-delay:<?php echo $delay+0.03;?>s;">
-            <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class=" btn btn btn--ghost" ><?php echo __('Saznaj više','kimnatura');?></a>
+            <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class=" btn btn btn--primary-color" ><?php echo __('Saznaj više','kimnatura');?></a>
             </div>
         </div>
          <?php //the_post_thumbnail( 'full-width',array('class' => 'kenburns-bottom hero__image'));  ?>

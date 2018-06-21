@@ -144,6 +144,7 @@ $hero-transition-duration-in: .9s;
             padding: 0px;
             background: none;
             visibility: hidden;
+            color: #000;
             margin-bottom: $base-content-padding;
         }
     }
@@ -186,7 +187,7 @@ $hero-transition-duration-in: .9s;
             margin: 0 16px;
             background: $base-primary-color;
             opacity: .9;
-            padding: 8px 0;
+            padding: 8px 0 0;
             @include media(desktop large){
                 @include typi(huge);
                 line-height: 1.2;
@@ -213,10 +214,11 @@ $hero-transition-duration-in: .9s;
             @include typi(small);
             @include media(desktop large){
                 font-size: 22px;
+                margin: 0 0 20px;
             }
             
             line-height: 1.45;
-            margin: 0 0 20px;
+            
             font-weight: normal;
         }
      
