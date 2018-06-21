@@ -8,9 +8,9 @@ $cookies-notification-bg-color: rgba($base-white-color, 1);
   padding: $base-content-padding*2;
   position: fixed;
   z-index: $cookies-notification-index;
-  bottom: $base-content-padding;
-  right: $base-content-padding;
-  left:$base-content-padding;
+  bottom: 0;
+  right: 0;
+  left:0;
   width: 100%;
 
 
