@@ -18,13 +18,7 @@ class b4bProductCategories_widget extends WP_Widget {
             'description' => 'Custom B4b Woocommerce Category Widget' 
             );
         parent::__construct( 'b4bProductCategories_widget', 'B4B Product Categories Widget', $widget_options );
-        wp_enqueue_script(
-            'b4bProductCategories',
-            get_template_directory_uri(). '/skin/public/scripts/widgets/b4bProductCategories.js',
-            array(),
-            false,
-            true
-        );
+        
         $this->scripts['b4bProductCategories_widget'] = false;
         add_action( 'wp_print_footer_scripts', array( &$this, 'remove_scripts' ) );
     }
@@ -34,7 +28,13 @@ class b4bProductCategories_widget extends WP_Widget {
         $title = apply_filters( 'widget_title', $instance[ 'title' ] );
 
         $this->scripts['b4bProductCategories_widget'] = true;
-    
+        wp_enqueue_script(
+            'b4bProductCategories',
+            get_template_directory_uri(). '/skin/public/scripts/widgets/b4bProductCategories.js',
+            array(),
+            false,
+            true
+        );
         // before and after widget arguments are defined by themes
         //$blog_title = get_bloginfo( 'name' );
         //$tagline = get_bloginfo( 'description' );
