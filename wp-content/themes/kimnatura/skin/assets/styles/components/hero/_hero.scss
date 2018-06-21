@@ -135,11 +135,16 @@ $hero-transition-duration-in: .9s;
         transition: 0 ease-in $hero-transition-duration;
         padding: 16px;
         background: $base-primary-color;
+
+        margin: 0 16px;
+        color: #fff;
+        opacity: .9;
         @include media(desktop large){
             opacity: 0;
             padding: 0px;
             background: none;
             visibility: hidden;
+            margin-bottom: $base-content-padding;
         }
     }
     @include element('link'){
@@ -157,6 +162,10 @@ $hero-transition-duration-in: .9s;
         width: 100%;
         top:16px;
         left:0px;
+        @include media(mobile){
+            color:#fff;
+        }
+        
         @include media(desktop large){
             top:$hero-content-top;
             top: $base-content-padding;
@@ -172,13 +181,18 @@ $hero-transition-duration-in: .9s;
             font-weight: 700;
             letter-spacing: 1px;
             line-height: 1;
-            margin-bottom: 16px;
+            margin-bottom: 0px;
             text-align: center;
+            margin: 0 16px;
+            background: $base-primary-color;
+            opacity: .9;
             @include media(desktop large){
                 @include typi(huge);
                 line-height: 1.2;
                 text-align: left;
-                margin-bottom: 0;
+                margin: 0;
+                opacity: 1;
+                background: none;
             }
         }
        // padding: $hero-content-padding;
