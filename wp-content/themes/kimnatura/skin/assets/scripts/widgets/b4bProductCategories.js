@@ -1,7 +1,8 @@
 
 'use strict';
 
-$(function() {
+//$(function() {
+$(document).ready( function() {
 
 
     var action = 'example';
