@@ -133,22 +133,28 @@ $hero-transition-duration-in: .9s;
         margin: 0;
         margin-bottom: $base-content-padding;
         transition: 0 ease-in $hero-transition-duration;
+        padding: 16px;
+        background: $base-primary-color;
         @include media(desktop large){
             opacity: 0;
+            padding: 0px;
+            background: none;
             visibility: hidden;
         }
     }
     @include element('link'){
         transition: $hero-transition-duration ease-in $hero-transition-duration;
+        text-align: center;
         @include media(desktop large){
             opacity: 0;
+            text-align: left;
             visibility: hidden;
         }
     }
     @include element('content'){
         z-index: 1;
         position: absolute;
-        width: 50%;
+        width: 100%;
         top:16px;
         left:0px;
         @include media(desktop large){
@@ -163,13 +169,17 @@ $hero-transition-duration-in: .9s;
 
         h2{
             @include typi(large);
-            @include media(desktop large){
-                @include typi(huge);
-                line-height: 1.2;
-            }
             font-weight: 700;
             letter-spacing: 1px;
             line-height: 1;
+            margin-bottom: 16px;
+            text-align: center;
+            @include media(desktop large){
+                @include typi(huge);
+                line-height: 1.2;
+                text-align: left;
+                margin-bottom: 0;
+            }
         }
        // padding: $hero-content-padding;
         //width: 32%;
@@ -178,6 +188,9 @@ $hero-transition-duration-in: .9s;
             font-style: italic;
             margin-bottom: $base-content-padding;
             display: block;
+            @include media(desktop large){
+            
+            }
         }
         p,div{
             //transform: translate3d(0,0,0);
