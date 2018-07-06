@@ -930,7 +930,7 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
 
             if ( $args['label'] && 'checkbox' !== $args['type'] && 'select1' != $args['type'] && 'country' != $args['type']  ) {
                 //$field_html .=  '<label for="' . esc_attr( $label_id ) . '1">labela'.$args['label'].'</label>';
-                $field_html .= '<label for="' . esc_attr( $label_id ) . '" class="' . esc_attr( implode( ' ', $args['label_class'] ) ) . '">' . $args['label'] . '</label>';
+                $field_html .= '<label for="' . esc_attr( $label_id ) . '" class="' . esc_attr( implode( ' ', $args['label_class'] ) ) . '"><span>' . $args['label'] . '</span></label>';
             }
 
             $field_html .= $field;
