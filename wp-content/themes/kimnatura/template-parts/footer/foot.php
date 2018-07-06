@@ -11,7 +11,7 @@
 
 
 
-require locate_template( 'template-parts/parts/cookies-notification.php' ); ?>
+//require locate_template( 'template-parts/parts/cookies-notification.php' ); ?>
 
 
 
