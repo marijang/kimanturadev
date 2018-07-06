@@ -33,6 +33,7 @@ $woo = new Woo;
 		    $sort = array(
 				array('billing_first_name','billing_last_name'),
 				array('billing_email'),
+				array('billing_phone'),
 				array('billing_address_1','billing_country'),
 			
 				array('billing_city','billing_postcode')
