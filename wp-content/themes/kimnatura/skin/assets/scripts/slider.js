@@ -27,7 +27,8 @@ $(function() {
           settings: {
             arrows:true,
             fade:false,
-            dots: false
+            dots: false,
+            adaptiveHeight: true
           }
         }
       ],

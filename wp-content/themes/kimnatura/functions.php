@@ -23,6 +23,10 @@
  */
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
+
+
+
+
 //exclude_category(1);
 //use Kimnatura\Includes\Loader;
 //$loader = new Loader();
@@ -323,3 +327,4 @@ function terms_and_conditions_validation( $username, $email, $validation_errors 
 
     return $validation_errors;
 }
+

@@ -8,7 +8,6 @@
  */
 
 ?>
-sdsdasda
 <article id="post-<?php the_ID(); ?>" <?php post_class('page__article'); ?>>
 	<header class="section__header">
 		<?php the_title( '<h1 class="section__title">', '</h1>' ); ?>

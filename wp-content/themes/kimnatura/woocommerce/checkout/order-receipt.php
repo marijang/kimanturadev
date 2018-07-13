@@ -19,6 +19,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
 ?>
 
 <ul class="order_details">

@@ -141,6 +141,9 @@ $hero-transition-duration-in: .9s;
     @include element('title'){
         margin: 0;
         text-transform: uppercase;
+        @include media(mobile){
+            background-color: transparent;
+         }
     }
     @include element('description'){
         margin: 0;
@@ -160,6 +163,10 @@ $hero-transition-duration-in: .9s;
             color: #000;
             margin-bottom: $base-content-padding;
         }
+        @include media(mobile){
+            background-color: transparent;
+            color: $color-black;
+         }
     }
     @include element('link'){
         transition: $hero-transition-duration ease-in $hero-transition-duration;
@@ -179,7 +186,9 @@ $hero-transition-duration-in: .9s;
         top:16px;
         left:0px;
         @include media(mobile){
-            color:#fff;
+            color:$color-black;
+            position: initial;
+            background-color: transparent;
         }
         
         @include media(desktop large){
@@ -193,6 +202,9 @@ $hero-transition-duration-in: .9s;
         }
 
         h2{
+            @include media(mobile){
+                background-color: transparent;
+            }
             @include typi(large);
             font-weight: 700;
             letter-spacing: 1px;

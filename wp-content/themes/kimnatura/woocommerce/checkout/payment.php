@@ -50,7 +50,7 @@ if ( ! is_ajax() ) {
 
 		<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt btn btn--primary-color" name="woocommerce_checkout_place_order " id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button>' ); // @codingStandardsIgnoreLine ?>
+		<?php echo apply_filters( 'woocommerce_order_button_html', '<a  class="button alt btn btn--primary-color" name="woocommerce_checkout_place_order " id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</a>' ); // @codingStandardsIgnoreLine ?>
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 
@@ -60,4 +60,23 @@ if ( ! is_ajax() ) {
 <?php
 if ( ! is_ajax() ) {
 	do_action( 'woocommerce_review_order_after_payment' );
-}
+}?>
+
+<script>
+$("#place_order").click(function(){
+	var checked = $("#terms:checked").length;
+	if (checked) {
+		$("form[name='checkout']").submit();
+	} else {
+		$('#terms-error').addClass('checkbox__error-label--active');
+		$('#terms').parent().addClass("checkbox__error");
+	}
+});
+$('#terms').change(function() {
+	if ($(this).parent().hasClass('checkbox__error')) {
+		$(this).parent().removeClass('checkbox__error');
+		$('#terms-error').removeClass('checkbox__error-label--active');
+	}
+})
+
+</script>

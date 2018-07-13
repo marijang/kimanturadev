@@ -199,3 +199,29 @@
     border-color: $input-disabled-solid-color;
   }
 }
+
+.checkbox__error {
+  color: $input-error-color!important;
+}
+
+@include b('checkbox') {
+  @include e('error') {
+    color: $input-error-color!important;
+
+    
+  }
+
+  @include e('error-label') {
+    min-height: 18px;
+    display: block;
+    font-size: 12px;
+    color: $input-error-color!important;
+    margin-left: 35px;
+    display: none;
+
+    @include m('active') {
+      display: block!important;
+    }
+    }
+}
+

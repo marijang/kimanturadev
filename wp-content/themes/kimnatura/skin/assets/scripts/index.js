@@ -4,6 +4,8 @@
 //import './bugsnag-js';
 
 //import './lazyloading';
+
+import './jquery.validate.min';
 import './fonts';
 
 //import './form-fields';
@@ -23,4 +25,5 @@ import './app';
 
 import './search';
 import './mega-menu';
+
 //import './loader';
