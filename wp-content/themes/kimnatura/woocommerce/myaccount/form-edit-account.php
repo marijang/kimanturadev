@@ -20,6 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+
+
 do_action( 'woocommerce_before_edit_account_form' ); ?>
 <div class="account__content">
 <form class="woocommerce-EditAccountForm edit-account" action="" method="post">
@@ -76,3 +78,4 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 </div>
 
 <?php do_action( 'woocommerce_after_edit_account_form' ); ?>
+

@@ -18,7 +18,7 @@ if(!$current_user->firstname ){
 
 <ul id="site-header-cart" class="main-navigation main-navigation--secondary">
     <li class="main-navigation__item desktop-only">
-        <a href="" class="main-navigation__link">EN</a>
+       <!-- <a href="" class="main-navigation__link">EN</a> -->
     </li>
     <li class="main-navigation__item" id="eng">
         <a href="#" id="btn-search" class="main-navigation__link">

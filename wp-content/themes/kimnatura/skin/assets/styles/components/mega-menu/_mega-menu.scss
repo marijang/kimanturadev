@@ -12,6 +12,9 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
 
 .mega-menu__show-all{
     text-align: center;
+    @include media(mobile){ 
+        padding-bottom: 16px;
+    }
 }
 
 .mega-menu {

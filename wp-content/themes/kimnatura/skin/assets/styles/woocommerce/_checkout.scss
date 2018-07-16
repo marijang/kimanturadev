@@ -84,4 +84,29 @@ $checkout-margin-top:  $base-content-padding*3;
     @include e('subtotal'){
         font-weight: normal!important;
     }
+
+
+}
+
+.terms {
+    @include media(mobile){
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+}
+
+@include b('thanks'){
+    @include e('button') {
+        margin-top: 16px;
+    }
+
+    @include e('title') {
+        @include typi('huge'); 
+        font-weight: 500;
+        margin-bottom: 32px;
+
+        div {
+            @include typi('largest'); 
+        }
+    }
 }

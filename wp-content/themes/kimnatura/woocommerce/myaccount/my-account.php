@@ -22,6 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 //do_action( 'b4b_woocommerce_account_navigation1' );
 
+
+
 wc_print_notices();
 
 /**
@@ -29,6 +31,7 @@ wc_print_notices();
  * @since 2.6.0
  */
 //do_action( 'woocommerce_account_navigation' ); ?>
+
 
 <div class="woocommerce-MyAccount-content">
 

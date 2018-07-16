@@ -182,7 +182,8 @@ $search-grid-row-gap: $base-content-padding*3;
 	padding: 0.85em 0;
     text-align: right;
     @include media(mobile){
-        text-align: center;
+		text-align: center;
+		padding-bottom: 4px;
     }
 
 }

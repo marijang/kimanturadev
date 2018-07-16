@@ -21,36 +21,66 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 ?>
-<p><?php
-	/* translators: 1: order number 2: order date 3: order status */
-	printf(
-		__( 'Order #%1$s was placed on %2$s and is currently %3$s.', 'woocommerce' ),
-		'<mark class="order-number">' . $order->get_order_number() . '</mark>',
-		'<mark class="order-date">' . wc_format_datetime( $order->get_date_created() ) . '</mark>',
-		'<mark class="order-status">' . wc_get_order_status_name( $order->get_status() ) . '</mark>'
-	);
-?></p>
 
-<?php if ( $notes = $order->get_customer_order_notes() ) : ?>
-	<h2><?php _e( 'Order updates', 'woocommerce' ); ?></h2>
-	<ol class="woocommerce-OrderUpdates commentlist notes">
-		<?php foreach ( $notes as $note ) : ?>
-		<li class="woocommerce-OrderUpdate comment note">
-			<div class="woocommerce-OrderUpdate-inner comment_container">
-				<div class="woocommerce-OrderUpdate-text comment-text">
-					<p class="woocommerce-OrderUpdate-meta meta"><?php echo date_i18n( __( 'l jS \o\f F Y, h:ia', 'woocommerce' ), strtotime( $note->comment_date ) ); ?></p>
-					<div class="woocommerce-OrderUpdate-description description">
-						<?php echo wpautop( wptexturize( $note->comment_content ) ); ?>
-					</div>
-	  				<div class="clear"></div>
-	  			</div>
-				<div class="clear"></div>
-			</div>
-		</li>
-		<?php endforeach; ?>
-	</ol>
-<?php endif; ?>
+<div class="woocommerce-order">
+	<?php if ( $order ) : ?>
 
-<?php do_action( 'woocommerce_view_order', $order_id ); ?>
+		<?php if ( $order->has_status( 'failed' ) ) : ?>
+
+			<p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed"><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'woocommerce' ); ?></p>
+
+			<p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed-actions">
+				<a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" class="button pay"><?php _e( 'Pay', 'woocommerce' ) ?></a>
+				<?php if ( is_user_logged_in() ) : ?>
+					<a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="button pay"><?php _e( 'My account', 'woocommerce' ); ?></a>
+				<?php endif; ?>
+			</p>
+
+		<?php else : ?>
+		<div class="thanks__title">
+		 <div>Potvrdu o plaćanju možete preuzeti u .pdf formatu </div> </div>
+			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
+
+				<li class="woocommerce-order-overview__order order">
+					<?php _e( 'Order number:', 'woocommerce' ); ?>
+					<strong><?php echo $order->get_order_number(); ?></strong>
+				</li>
+
+				<li class="woocommerce-order-overview__date date">
+					<?php _e( 'Date:', 'woocommerce' ); ?>
+					<strong><?php echo wc_format_datetime( $order->get_date_created() ); ?></strong>
+				</li>
+
+				<?php if ( is_user_logged_in() && $order->get_user_id() === get_current_user_id() && $order->get_billing_email() ) : ?>
+					<li class="woocommerce-order-overview__email email">
+						<?php _e( 'Email:', 'woocommerce' ); ?>
+						<strong><?php echo $order->get_billing_email(); ?></strong>
+					</li>
+				<?php endif; ?>
+
+				<li class="woocommerce-order-overview__total total">
+					<?php _e( 'Total:', 'woocommerce' ); ?>
+					<strong><?php echo $order->get_formatted_order_total(); ?></strong>
+				</li>
+
+				<?php if ( $order->get_payment_method_title() ) : ?>
+					<li class="woocommerce-order-overview__payment-method method">
+						<?php _e( 'Payment method:', 'woocommerce' ); ?>
+						<strong><?php echo wp_kses_post( $order->get_payment_method_title() ); ?></strong>
+					</li>
+				<?php endif; ?>
+
+			</ul>
+
+			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', '' , $order ); ?></p>
+
+		<?php endif; ?>
+		
+
+	<?php else : ?>
+		<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', '' , null ); ?></p>
+
+	<?php endif; ?>
+
+</div>

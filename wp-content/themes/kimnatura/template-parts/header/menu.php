@@ -25,9 +25,9 @@ if(!$current_user->firstname ){
     echo esc_html( $menu->bem_menu( 'header_main_nav', ' main-navigation--primary main-navigation' ) );
   ?>
   <div class="header__mobile-user-menu mobile-only">
-      <a href="" class="main-navigation__link header__mobile-lang">Engleski</a>
+      <!--<a href="" class="main-navigation__link header__mobile-lang">Engleski</a>-->
   <?php if(is_user_logged_in()):  ?>
-    <a href="/my-account" class="main-navigation__link is-logged-in">
+    <a href="/my-account/edit-account" class="main-navigation__link is-logged-in">
             <i class="material-icons">account_circle</i>
             <span class="main-navigation__user-info"><?php echo $name;  ?></span>
             </a>

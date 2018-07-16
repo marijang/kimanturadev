@@ -19,3 +19,28 @@
         }
     }
 }
+
+.woocommerce-orders-table__header-order-number {
+    @include media(mobile){ 
+        display: none;
+     }
+}
+
+
+.woocommerce-orders-table__cell-order-number {
+    @include media(mobile){ 
+        display: none;
+     }
+}
+
+.woocommerce-orders-table__header-order-total {
+    @include media(mobile){ 
+        display: none;
+     }
+}
+
+.woocommerce-orders-table__cell-order-total {
+    @include media(mobile){ 
+        display: none;
+     }
+}
