@@ -1,6 +1,7 @@
 //import {scrollMonitor} from 'scrollMonitor';
 //var scrollMonitor = require("scrollmonitor");
 $(function() {
+if ( !(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
     var elem = document.getElementById('page-navigation');
     //console.log(scrollMonitor);
     var scrollMonitor = require("scrollmonitor");
@@ -87,5 +88,5 @@ $(function() {
         });
 
     });
-
+}
 });
