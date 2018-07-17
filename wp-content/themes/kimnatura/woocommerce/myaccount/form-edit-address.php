@@ -41,6 +41,7 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 					if ( isset( $field['country_field'], $address[ $field['country_field'] ] ) ) {
 						$field['country'] = wc_get_post_data_by_key( $field['country_field'], $address[ $field['country_field'] ]['value'] );
 					}
+					if ($key != 'shipping_address_2' && $key != 'billing_address_2') 
 					woocommerce_form_field( $key, $field, wc_get_post_data_by_key( $key, $field['value'] ) );
 				}
 				?>

@@ -329,7 +329,7 @@ function terms_and_conditions_validation( $username, $email, $validation_errors 
 }
 
 
-
+// Link za preuzimanje računa
 add_filter('woocommerce_thankyou_order_received_text', 'wpo_wcpdf_thank_you_link', 10, 2);
 function wpo_wcpdf_thank_you_link( $text, $order ) {
     if ( is_user_logged_in() ) {
@@ -339,3 +339,8 @@ function wpo_wcpdf_thank_you_link( $text, $order ) {
     }
     return $text;
 }
+
+
+add_filter( 'login_redirect', function( $url, $query, $user ) {
+	return home_url();
+}, 10, 3 );

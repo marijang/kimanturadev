@@ -26,12 +26,12 @@ $cart_total = WC()->cart->get_displayed_subtotal();
 	});
 </script>
 
-<?php if ($cart_total>0){?>
 
+<?php if (is_user_logged_in()) : ?>
 <div class="navigation-user">
         <div class="navigation-user__wrap">
 	    <?php
-		if ( is_user_logged_in() ) {
+		
 			$current_user = wp_get_current_user();
         ?>
 				<nav id="settings-menu" class="account__navigation-user navigation-user__account-menu">
@@ -89,17 +89,7 @@ $cart_total = WC()->cart->get_displayed_subtotal();
 		   <a href="<?php echo 	esc_url( wc_logout_url( wc_get_page_permalink( 'myaccount' ) ) ); ?>" class="navigation-user__info-link" ><?php echo __('Odjavite se','b4b') ?></a>
 		</div>
 		<div class="navigation-user__settings" id="settings-toggle"><i class="material-icons">settings</i></div>
-		<?php
-		} else {
-		?>
-			<div class="navigation-user__login">
-        
-                 <?php do_action('woocommerce_custom_login_form'); ?>
-            
-			</div>
-		<?php
-		}
-		?>
+		
 		</div>
 		</div>
-<?php }?>
+<?php endif ?>

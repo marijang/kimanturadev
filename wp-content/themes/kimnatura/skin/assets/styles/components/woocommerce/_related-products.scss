@@ -44,3 +44,17 @@
         display: none;
      }
 }
+
+.invoice {
+    @include media(mobile){ 
+        display: none;
+    }
+}
+
+
+.mobile-invoice {
+    display: none;
+    @include media(mobile){ 
+        display: initial;
+    }
+}
