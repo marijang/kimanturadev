@@ -27,11 +27,10 @@ $cart_total = WC()->cart->get_displayed_subtotal();
 </script>
 
 
-<?php if (is_user_logged_in()) : ?>
+<?php if (is_user_logged_in() && strpos(home_url( $wp->request ), 'cart') === false && strpos(home_url( $wp->request ), 'checkout') === false) : ?>
 <div class="navigation-user">
         <div class="navigation-user__wrap">
 	    <?php
-		
 			$current_user = wp_get_current_user();
         ?>
 				<nav id="settings-menu" class="account__navigation-user navigation-user__account-menu">

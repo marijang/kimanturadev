@@ -337,3 +337,11 @@
 }
 
 
+.ct-ultimate-gdpr-cookie-buttons {
+    @include media(mobile){
+        display: flex;
+        align-items: center;
+    }
+}
+
+
