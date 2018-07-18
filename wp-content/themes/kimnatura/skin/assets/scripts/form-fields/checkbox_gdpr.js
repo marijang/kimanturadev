@@ -12,9 +12,10 @@ $( document ).ready(function() {
         var cb = $(this).find('input');
         if (cb.attr('checked')) {
             cb.attr('checked', false);
+            //cb.parent().addClass('checkbox__invalid');
         } else {
             cb.attr('checked', true);
-            cb.removeClass('checkbox__invalid');
+            cb.parent().removeClass('checkbox__invalid');
         }
     });
    

@@ -1,10 +1,8 @@
 .checkbox__invalid {
     span:before {
-      color: $error-red;
+      border: 1px solid $error-red!important;
     }
     span {
-      color: $error-red;
+      //color: $error-red;
     }
-  
-  
   }

@@ -24,22 +24,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <script>
 	jQuery( document ).ready(function() {
+		jQuery('.ct-ultimate-gdpr-consent-field').parent().css('display', 'none');
 		jQuery('#log-toggle').on('click', function(){
 			jQuery('#reg-box').removeClass('is-active');
 			jQuery('#log-box').addClass('is-active');
+			jQuery('.ct-ultimate-gdpr-consent-field').parent().css('display', 'none');
 	});
 	jQuery('#reg-toggle').on('click', function(){
 			jQuery('#log-box').removeClass('is-active');
 			jQuery('#reg-box').addClass('is-active');
+			jQuery('.ct-ultimate-gdpr-consent-field').parent().css('display', 'inline-block');
 	});
 	jQuery('#log-toggle-mobile').on('click', function(){
 			jQuery('#reg-box').removeClass('is-active');
 			jQuery('#log-box').addClass('is-active');
+			jQuery('.ct-ultimate-gdpr-consent-field').parent().css('display', 'none');
 	});
 	jQuery('#reg-toggle-mobile').on('click', function(){
-		console.log('click');
 			jQuery('#log-box').removeClass('is-active');
 			jQuery('#reg-box').addClass('is-active');
+			jQuery('.ct-ultimate-gdpr-consent-field').parent().css('display', 'inline-block');
 	});
 });
 </script>
@@ -70,13 +74,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 
-			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row">
+			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row input-field">
 				<label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?> <span class="required">*</span></label>
 				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+				<span class="helper-text errorClass" data-error="wrong"></span>
 			</p>
-			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row">
+			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row input-field">
 				<label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
 				<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" />
+				<span class="helper-text errorClass" data-error="wrong"></span>
 			</p>
 
 			<?php do_action( 'woocommerce_login_form' ); ?>
