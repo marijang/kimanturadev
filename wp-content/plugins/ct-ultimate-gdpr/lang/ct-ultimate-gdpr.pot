@@ -1,0 +1,4433 @@
+# Copyright (C) 2018 Ultimate GDPR
+# This file is distributed under the same license as the Ultimate GDPR package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ultimate GDPR 1.6.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/ct-ultimate-gdpr\n"
+"POT-Creation-Date: 2018-06-28 19:16:56+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: includes/controller/controller-admin.php:180
+#: includes/controller/controller-cookie.php:165
+msgid "Enabled"
+msgstr ""
+
+#: includes/controller/controller-admin.php:181
+#: includes/controller/controller-cookie.php:166
+msgid "Enable"
+msgstr ""
+
+#: includes/controller/controller-admin.php:182
+#: includes/controller/controller-cookie.php:167
+msgid "Disabled"
+msgstr ""
+
+#: includes/controller/controller-admin.php:183
+#: includes/controller/controller-cookie.php:168
+msgid "Disable"
+msgstr ""
+
+#. #-#-#-#-#  ct-ultimate-gdpr.pot (Ultimate GDPR 1.6.0)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: includes/controller/controller-admin.php:201
+#: includes/controller/controller-admin.php:202
+#: includes/views/admin/admin-breach.php:21
+#: includes/views/admin/admin-cookie.php:21
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:21
+#: includes/views/admin/admin-data-access.php:32
+#: includes/views/admin/admin-forgotten.php:30
+#: includes/views/admin/admin-plugins.php:21
+#: includes/views/admin/admin-policy.php:21
+#: includes/views/admin/admin-pseudonymization.php:30
+#: includes/views/admin/admin-rectification.php:32
+#: includes/views/admin/admin-services.php:21
+#: includes/views/admin/admin-terms.php:22
+msgid "Ultimate GDPR"
+msgstr ""
+
+#: includes/controller/controller-breach.php:87
+#: includes/controller/controller-breach.php:88
+#: includes/controller/controller-breach.php:116
+#: includes/views/admin/admin-breach.php:36
+#: includes/views/admin/admin-data-access.php:47
+#: includes/views/admin/admin-forgotten.php:43
+#: includes/views/admin/admin-rectification.php:47
+msgid "Data Breach"
+msgstr ""
+
+#: includes/controller/controller-breach.php:125
+#: includes/controller/controller-data-access.php:519
+msgid "Mail title"
+msgstr ""
+
+#: includes/controller/controller-breach.php:133
+#: includes/controller/controller-data-access.php:527
+msgid "Mail content"
+msgstr ""
+
+#: includes/controller/controller-breach.php:141
+msgid "Collect user emails from services"
+msgstr ""
+
+#: includes/controller/controller-breach.php:212
+msgid "[Ultimate GDPR] Data breach information from %s"
+msgstr ""
+
+#: includes/controller/controller-breach.php:215
+msgid "There was a data breach on our page..."
+msgstr ""
+
+#: includes/controller/controller-cookie.php:956
+#: includes/controller/controller-cookie.php:4638
+msgid ""
+"<h3>Please navigate to <a href='%s'>Service Manager</a> tab to see all "
+"detected cookies.</h3>"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1021
+msgid ""
+"user id: %d \r\n"
+"consent level: %s \r\n"
+"consent given: %s \r\n"
+"consent expires: %s \r\n"
+"\r\n"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1041
+#: includes/controller/controller-cookie.php:1042
+msgid "Cookie Consent"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1050
+#: includes/controller/controller-cookie.php:1051
+msgid "Services Manager"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1073
+#: includes/controller/controller-cookie.php:1208
+msgid "Cookie popup content"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1080
+msgid "Buttons labels"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1087
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:399
+msgid "Options"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1094
+msgid "Google Analytics Tracking ID"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1106
+msgid "Cookie check"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1113
+msgid "Buttons styles"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1120
+#: includes/controller/controller-cookie.php:3214
+#: includes/views/cookie-group-popup.php:165
+#: includes/views/cookie-popup.php:124
+msgid "Read more"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1127
+#: includes/controller/controller-cookie.php:1396
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:42
+msgid "Position"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1134
+msgid "Box styles"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1141
+#: includes/controller/controller-cookie.php:1449
+msgid "Custom style CSS"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1150
+msgid "Advanced Cookies Settings"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1158
+msgid "Trigger cookie"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1165
+msgid "Modal styles"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1172
+msgid "Lists of features"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1180
+msgid "Labels"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1187
+msgid "Additional settings"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1200
+msgid ""
+"Fill in with default content for selected language (remember to save changes)"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1217
+msgid "Cookie popup 'accept' button label (leave empty for default)"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1225
+msgid "Cookie popup 'read more' button label (leave empty for default)"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1233
+msgid "Cookie popup 'change settings' button label (leave empty for default)"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1242
+msgid "Display cookie popup on all pages"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1250
+msgid "Check if user is from European Union"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1258
+msgid "Select page where to display the cookie popup"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1271
+msgid "Choose how often cookie check should be performed"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1279
+msgid "Choose default level of new cookies"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1287
+msgid "Cookies whitelist (never block these cookies, comma separated)"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1295
+msgid "Block selected/all cookies until user consents"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1303
+#: includes/controller/controller-policy.php:121
+#: includes/controller/controller-terms.php:439
+msgid "Set consent expire time [s]"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1317
+msgid "Button shape"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1326
+msgid "Button size"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1335
+msgid "Button text color"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1345
+msgid "Button background color"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1354
+msgid "Button border color"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1365
+msgid "Read more page"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1373
+msgid "Read More Custom URL"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1382
+msgid "Active Tab"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1404
+msgid "Distance from border [px]"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1415
+msgid "Box style"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1423
+msgid "Box shape"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1431
+msgid "Background color"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1439
+msgid "Text color"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1466
+msgid "Show advanced cookie popup always, even when the consent is given"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1474
+msgid "Use advanced cookie groups popup"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1482
+#: includes/controller/controller-cookie.php:1490
+msgid "Advanced cookie groups popup header content"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1501
+msgid "Trigger cookie settings by"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1509
+msgid "Trigger cookie settings icon"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1517
+msgid "Trigger cookie settings text"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1525
+msgid "Trigger cookie settings background color"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1533
+msgid "Trigger cookie settings shape"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1541
+msgid "Trigger cookie settings position"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1549
+msgid "Trigger cookie settings color"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1559
+msgid "List of features available for Essential level (semicolon separated)"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1567
+msgid ""
+"List of features not available for Essential level (semicolon separated)"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1575
+msgid ""
+"List of features available for Functionality level (semicolon separated)"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1583
+msgid ""
+"List of features not available for Functionality level (semicolon separated)"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1591
+msgid "List of features available for Analytics level (semicolon separated)"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1599
+msgid ""
+"List of features not available for Analytics level (semicolon separated)"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1607
+msgid "List of features available for Advertising level (semicolon separated)"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1615
+msgid ""
+"List of features not available for Advertising level (semicolon separated)"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1626
+msgid "Cookie modal header color"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1634
+msgid "Cookie modal text color"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1646
+msgid "<i>This website will</i> label"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1654
+msgid "<i>This website won't</i> label"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1662
+msgid "Hide \"Block All\" level features"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1670
+msgid "Hide \"Essential\" level features"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1678
+msgid "Hide \"Functionality\" level features"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1686
+msgid "Hide \"Analytics\" level features"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1694
+msgid "Hide \"Advertising\" level features"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1702
+msgid "<i>Block all</i> label"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1710
+msgid "<i>Essentials</i> label"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1718
+msgid "<i>Functionality</i> label"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1726
+msgid "<i>Analytics</i> label"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1734
+msgid "<i>Advertising</i> label"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1744
+msgid ""
+"Advanced cookie popup 'save & close' button label (leave empty for default)"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1752
+msgid "Select default privacy group"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1760
+msgid "Reload page when user saves changes"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1769
+msgid "Select privacy group after user accepts cookies in the popup"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1867
+msgid "Never"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1868
+msgid "Weekly"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1869
+msgid "Monthly"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1870
+msgid "Quarterly"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:1925
+msgid "Load"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2146
+msgid "Classic"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2147
+msgid "Modern"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2176
+#: includes/controller/controller-cookie.php:2206
+#: includes/controller/controller-cookie.php:3131
+msgid "Rounded"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2177
+#: includes/controller/controller-cookie.php:2207
+#: includes/controller/controller-cookie.php:3132
+msgid "Squared"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2276
+msgid "Normal"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2277
+#: vendor/acf/advanced-custom-fields/acf.php:788
+msgid "Large"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2897
+msgid "Front page"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2900
+msgid "Posts page"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2925
+msgid "Bottom left"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2926
+msgid "Bottom right"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2927
+msgid "Bottom panel"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2928
+msgid "Top left"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2929
+msgid "Top right"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2930
+msgid "Top panel"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2976
+msgid "Text Only"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2977
+msgid "Icon Only"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:2978
+msgid "Icon and Text"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3058
+msgid "Top Left"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3059
+msgid "Top center"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3060
+msgid "Top Right"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3061
+msgid "Center Left"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3062
+msgid "Center Right"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3063
+msgid "Bottom Left"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3064
+msgid "Bottom Center"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3065
+msgid "Bottom Right"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3130
+msgid "Round"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3213
+#: includes/views/cookie-group-popup.php:151
+#: includes/views/cookie-popup.php:109
+#: includes/views/shortcode/shortcode-policy-accept.php:54
+#: includes/views/shortcode/shortcode-terms-accept.php:54
+msgid "Accept"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3215
+#: includes/views/cookie-group-popup.php:179
+msgid "Change Settings"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3230
+#: includes/views/cookie-group-popup.php:235
+#: includes/views/cookie-group-popup.php:279
+msgid "Trigger"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3238
+#: includes/model/model-group.php:73 includes/model/model-group.php:91
+msgid "Block all"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3239
+msgid "Essentials"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3240
+#: includes/model/model-group.php:55 includes/model/model-group.php:88
+msgid "Functionality"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3241
+#: includes/model/model-group.php:61 includes/model/model-group.php:89
+msgid "Analytics"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:3242
+#: includes/model/model-group.php:67 includes/model/model-group.php:90
+msgid "Advertising"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:4543
+msgid "Every week"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:4547
+msgid "Every month"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:4551
+msgid "Every quarter"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:4625
+msgid "Cookies detected: %s, Cookies saved: %s"
+msgstr ""
+
+#: includes/controller/controller-cookie.php:4696
+msgid ""
+"There was a problem with connecting to the cookie scanner. Please try again "
+"later."
+msgstr ""
+
+#: includes/controller/controller-data-access.php:160
+msgid "Wrong email!"
+msgstr ""
+
+#: includes/controller/controller-data-access.php:166
+#: includes/controller/controller-forgotten.php:219
+#: includes/controller/controller-rectification.php:181
+msgid "Recaptcha error!"
+msgstr ""
+
+#: includes/controller/controller-data-access.php:179
+msgid "[Ultimate GDPR] New Data Access request"
+msgstr ""
+
+#: includes/controller/controller-data-access.php:181
+msgid "There is a new data access request from email %s. See details at %s"
+msgstr ""
+
+#: includes/controller/controller-data-access.php:190
+#: includes/controller/controller-forgotten.php:259
+#: includes/controller/controller-rectification.php:208
+msgid "Your request was sent!"
+msgstr ""
+
+#: includes/controller/controller-data-access.php:300
+#: includes/controller/controller-rectification.php:311
+msgid "Data was sent to email: %s"
+msgstr ""
+
+#: includes/controller/controller-data-access.php:339
+#: includes/controller/controller-rectification.php:350
+msgid "The following emails were removed from the list: %s"
+msgstr ""
+
+#: includes/controller/controller-data-access.php:422
+#: includes/views/admin/admin-data-access.php:97
+#: includes/views/admin/admin-forgotten.php:132
+#: includes/views/admin/admin-rectification.php:95
+msgid "Not sent"
+msgstr ""
+
+#: includes/controller/controller-data-access.php:460
+#: includes/controller/controller-data-access.php:461
+#: includes/views/admin/admin-breach.php:33
+#: includes/views/admin/admin-data-access.php:44
+#: includes/views/admin/admin-forgotten.php:40
+#: includes/views/admin/admin-rectification.php:44
+msgid "Data Access"
+msgstr ""
+
+#: includes/controller/controller-data-access.php:501
+msgid "Data access settings"
+msgstr ""
+
+#: includes/controller/controller-data-access.php:511
+msgid "Email to send new request notifications to"
+msgstr ""
+
+#: includes/controller/controller-data-access.php:601
+msgid "[Ultimate GDPR] Data request results from %s"
+msgstr ""
+
+#: includes/controller/controller-data-access.php:602
+msgid "Please find data attached"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:106
+msgid "[Ultimate GDPR] New Right To Be Forgotten request from %s"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:125
+#: includes/controller/controller-forgotten.php:344
+msgid ""
+"There is a new Right To Be Forgotten request from email %s. See details at %s"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:176
+#: includes/controller/controller-forgotten.php:177
+#: includes/views/admin/admin-breach.php:30
+#: includes/views/admin/admin-data-access.php:41
+#: includes/views/admin/admin-forgotten.php:37
+#: includes/views/admin/admin-rectification.php:41
+msgid "Right To Be Forgotten"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:253
+msgid "[Ultimate GDPR] Please confirm request to be forgotten from %s"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:303
+#: includes/controller/controller-rectification.php:96
+msgid "Your request was already confirmed."
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:328
+#: includes/controller/controller-rectification.php:121
+msgid "Your request was successfully confirmed."
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:365
+#: includes/controller/controller-rectification.php:161
+msgid "Your request was not confirmed. Please check the link or contact admin."
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:481
+msgid "[Ultimate GDPR] Emails were sent to the following users: %s"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:519
+msgid "[Ultimate GDPR] The following emails were removed from list: %s"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:550
+msgid "Non existing service id: %s"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:570
+msgid "There was an error forgetting %s service: %s"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:595
+msgid "[Ultimate GDPR] Services data were removed"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:613
+msgid "Right to be forgotten settings"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:623
+msgid "Admin email to send new request notifications to"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:631
+msgid "User notification email subject"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:639
+msgid "User notification email message"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:647
+#: includes/controller/controller-rectification.php:549
+msgid ""
+"Set custom URL to the page containing Ultimate GDPR shortcode as the e-mail "
+"confirmation target page (or leave empty for autodetect)"
+msgstr ""
+
+#: includes/controller/controller-forgotten.php:731
+#: includes/controller/controller-forgotten.php:732
+msgid "[Ultimate GDPR] Your data has been forgotten"
+msgstr ""
+
+#: includes/controller/controller-plugins.php:135
+#: includes/controller/controller-plugins.php:136
+msgid "Plugins"
+msgstr ""
+
+#: includes/controller/controller-policy.php:20
+#: includes/controller/controller-policy.php:21
+#: includes/controller/controller-policy.php:45
+#: includes/controller/controller-policy.php:818
+#: includes/views/admin/admin-policy.php:32
+#: includes/views/admin/admin-terms.php:33
+msgid "Privacy Policy"
+msgstr ""
+
+#: includes/controller/controller-policy.php:54
+#: includes/controller/controller-pseudonymization.php:154
+#: includes/controller/controller-terms.php:388
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:300
+#: vendor/acf/advanced-custom-fields/core/fields/tab.php:65
+msgid "Instructions"
+msgstr ""
+
+#: includes/controller/controller-policy.php:65
+msgid "Require logged in users to accept Privacy Policy (redirect)"
+msgstr ""
+
+#: includes/controller/controller-policy.php:73
+msgid "Require not logged in users/guests to accept Privacy Policy (redirect)"
+msgstr ""
+
+#: includes/controller/controller-policy.php:81
+msgid "WordPress Privacy Policy page"
+msgstr ""
+
+#: includes/controller/controller-policy.php:89
+msgid "Page with existing Privacy Policy"
+msgstr ""
+
+#: includes/controller/controller-policy.php:97
+msgid "Privacy Policy Custom URL"
+msgstr ""
+
+#: includes/controller/controller-policy.php:105
+msgid "Page to redirect to after Privacy Policy accepted"
+msgstr ""
+
+#: includes/controller/controller-policy.php:113
+#: includes/controller/controller-terms.php:431
+msgid "Shortcode Button Styling"
+msgstr ""
+
+#: includes/controller/controller-policy.php:129
+msgid ""
+"Privacy Policy version, eg. 1.0 (if you change it, user has to give consent "
+"again)"
+msgstr ""
+
+#: includes/controller/controller-policy.php:137
+msgid ""
+"Redirect to Privacy Policy first (if Terms and Conditions also redirect)"
+msgstr ""
+
+#: includes/controller/controller-policy.php:145
+msgid ""
+"Convert the following text to Privacy Policy link in all services templates, "
+"eg. 'Privacy Policy'"
+msgstr ""
+
+#: includes/controller/controller-policy.php:153
+#: includes/controller/controller-terms.php:463
+msgid ""
+"Do not block user agents (eg. bots) containing the following texts (comma "
+"separated)"
+msgstr ""
+
+#: includes/controller/controller-policy.php:190
+msgid "Click here to create"
+msgstr ""
+
+#: includes/controller/controller-policy.php:201
+msgid ""
+"1. Place %s shortcode on your existing Privacy Policy page to add an accept "
+"button.%s2. Select Privacy Policy page below, so users can be redirected "
+"there to give their consent."
+msgstr ""
+
+#: includes/controller/controller-policy.php:280
+#: includes/controller/controller-terms.php:146
+msgid ""
+"user id: %d \r\n"
+"consent version: %s \r\n"
+"consent given: %s \r\n"
+"consent expires: %s \r\n"
+"\r\n"
+msgstr ""
+
+#: includes/controller/controller-policy.php:637
+msgid "WordPress Privacy page"
+msgstr ""
+
+#: includes/controller/controller-policy.php:693
+#: includes/controller/controller-terms.php:661
+msgid "Last visited page"
+msgstr ""
+
+#: includes/controller/controller-policy.php:694
+#: includes/controller/controller-terms.php:662
+msgid "Don't redirect"
+msgstr ""
+
+#: includes/controller/controller-policy.php:720
+#: includes/controller/controller-terms.php:584
+msgid "Theme Default"
+msgstr ""
+
+#: includes/controller/controller-policy.php:721
+#: includes/controller/controller-terms.php:585
+msgid "Cookie box buttons"
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:110
+#: includes/controller/controller-pseudonymization.php:111
+#: includes/controller/controller-pseudonymization.php:134
+msgid "Pseudonymization"
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:125
+#: includes/controller/controller-pseudonymization.php:264
+msgid "Encryption is not possible. Please check your openssl library."
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:143
+msgid "Warning"
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:165
+msgid "Automatically encrypt new data"
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:173
+msgid ""
+"Automatically decrypt all data on the fly (if you have anything encrypted, "
+"this is recommended)"
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:181
+msgid "Select data to encrypt"
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:229
+msgid ""
+"This feature is experimental and may lead to irreversible data lost! After "
+"encryption, it may be impossible for anyone to decrypt your data. "
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:241
+msgid ""
+"Pseudonymization feature allows you to encrypt some of the data stored in "
+"the database. That way, if anyone got access to your database, the user's "
+"data would be pseudonymized. Database contents are permanently encrypted and "
+"can be decrypted on the fly when accessed by users. You can also permanently "
+"decrypt all your contents."
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:244
+msgid "How to use:"
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:246
+msgid "1. Make a backup"
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:248
+msgid "2. Select which data to encrypt"
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:250
+msgid ""
+"3. (Optionally) Select 'automatically encrypt new data' for continuous "
+"encryption of all incoming data"
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:252
+msgid "4. Click 'Save changes'"
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:254
+msgid ""
+"5. (Optionally) Click 'Encrypt selected' to encrypt all current data which "
+"has not been yet encrypted"
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:278
+msgid "Data encrypted successfully"
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:288
+msgid "Decryption is not possible. Please check your openssl library."
+msgstr ""
+
+#: includes/controller/controller-pseudonymization.php:302
+msgid "Data decrypted successfully"
+msgstr ""
+
+#: includes/controller/controller-rectification.php:132
+msgid "[Ultimate GDPR] New Data Rectification request from %s"
+msgstr ""
+
+#: includes/controller/controller-rectification.php:140
+msgid ""
+"There is a new Data Rectification request from email %s. See details at %s"
+msgstr ""
+
+#: includes/controller/controller-rectification.php:202
+msgid "[Ultimate GDPR] Please confirm your data rectification request from %s"
+msgstr ""
+
+#: includes/controller/controller-rectification.php:479
+#: includes/controller/controller-rectification.php:480
+#: includes/views/admin/admin-breach.php:39
+#: includes/views/admin/admin-data-access.php:50
+#: includes/views/admin/admin-forgotten.php:46
+#: includes/views/admin/admin-rectification.php:50
+msgid "Data Rectification"
+msgstr ""
+
+#: includes/controller/controller-rectification.php:515
+msgid "Data Rectification settings"
+msgstr ""
+
+#: includes/controller/controller-rectification.php:525
+msgid "Email to send admin notifications to"
+msgstr ""
+
+#: includes/controller/controller-rectification.php:533
+msgid "User mail title"
+msgstr ""
+
+#: includes/controller/controller-rectification.php:541
+msgid "User mail content"
+msgstr ""
+
+#: includes/controller/controller-rectification.php:635
+msgid "[Ultimate GDPR] Data rectification notice from %s"
+msgstr ""
+
+#: includes/controller/controller-rectification.php:636
+msgid "Your data has been rectified"
+msgstr ""
+
+#: includes/controller/controller-services.php:72
+#: includes/controller/controller-services.php:73
+#: includes/controller/controller-services.php:253
+#: includes/controller/controller-services.php:269
+msgid "Services"
+msgstr ""
+
+#: includes/controller/controller-services.php:89
+#: includes/controller/controller-services.php:96
+#: includes/controller/controller-services.php:103
+msgid "Services options"
+msgstr ""
+
+#: includes/controller/controller-services.php:114
+msgid "Recaptcha key (for myaccount shortcode submissions)"
+msgstr ""
+
+#: includes/controller/controller-services.php:122
+msgid "Recaptcha secret key (for myaccount shortcode submissions)"
+msgstr ""
+
+#: includes/controller/controller-services.php:251
+msgctxt "Post Type General Name"
+msgid "Services"
+msgstr ""
+
+#: includes/controller/controller-services.php:252
+msgctxt "Post Type Singular Name"
+msgid "Services"
+msgstr ""
+
+#: includes/controller/controller-services.php:254
+msgid "Parent Services"
+msgstr ""
+
+#: includes/controller/controller-services.php:255
+msgid "All Services"
+msgstr ""
+
+#: includes/controller/controller-services.php:256
+msgid "View Service"
+msgstr ""
+
+#: includes/controller/controller-services.php:257
+msgid "Add New Service"
+msgstr ""
+
+#: includes/controller/controller-services.php:258
+#: vendor/acf/advanced-custom-fields/acf.php:531
+msgid "Add New"
+msgstr ""
+
+#: includes/controller/controller-services.php:259
+msgid "Edit Service"
+msgstr ""
+
+#: includes/controller/controller-services.php:260
+msgid "Update Service"
+msgstr ""
+
+#: includes/controller/controller-services.php:261
+msgid "Search Services"
+msgstr ""
+
+#: includes/controller/controller-services.php:262
+msgid "Not Found"
+msgstr ""
+
+#: includes/controller/controller-services.php:263
+msgid "Not found in Trash"
+msgstr ""
+
+#: includes/controller/controller-services.php:268
+msgid "services"
+msgstr ""
+
+#: includes/controller/controller-terms.php:167
+#: includes/controller/controller-terms.php:168
+msgid "Terms And Conditions"
+msgstr ""
+
+#: includes/controller/controller-terms.php:379
+#: includes/controller/controller-terms.php:722
+#: includes/views/admin/admin-policy.php:29
+#: includes/views/admin/admin-terms.php:30
+msgid "Terms and Conditions"
+msgstr ""
+
+#: includes/controller/controller-terms.php:399
+msgid "Require logged in users to accept Terms and Conditions (redirect)"
+msgstr ""
+
+#: includes/controller/controller-terms.php:407
+msgid ""
+"Require not logged in users/guests to accept Terms and Conditions (redirect)"
+msgstr ""
+
+#: includes/controller/controller-terms.php:415
+msgid "Page with existing Terms and Conditions"
+msgstr ""
+
+#: includes/controller/controller-terms.php:423
+msgid "Page to redirect to after Terms accepted"
+msgstr ""
+
+#: includes/controller/controller-terms.php:447
+msgid ""
+"Terms version, eg. 1.0 (if you change it, user has to give consent again)"
+msgstr ""
+
+#: includes/controller/controller-terms.php:455
+msgid ""
+"Convert the following text to Terms and Conditions link in all services "
+"templates, eg. 'Terms and Conditions'"
+msgstr ""
+
+#: includes/controller/controller-terms.php:476
+msgid ""
+"1. Place %s shortcode on your existing Terms and Conditions page to add an "
+"accept button.%s2. Select Terms and Conditions page below, so users can be "
+"redirected there to give their consent."
+msgstr ""
+
+#: includes/helpers.php:105
+msgid "To confirm, please follow this link: %s"
+msgstr ""
+
+#: includes/model/model-group.php:48 includes/model/model-group.php:87
+msgid "Essential"
+msgstr ""
+
+#: includes/service/service-addthis.php:93
+msgid ""
+"[%s] Block Addthis cookies when a user doesn't accept Functionality cookies"
+msgstr ""
+
+#: includes/service/service-arforms.php:129
+msgid "[ARForms] Description"
+msgstr ""
+
+#: includes/service/service-arforms.php:138
+#: includes/service/service-bbpress.php:170
+#: includes/service/service-buddypress.php:342
+#: includes/service/service-contact-form-7.php:102
+#: includes/service/service-eform.php:137
+#: includes/service/service-events-manager.php:111
+#: includes/service/service-formidable-forms.php:144
+#: includes/service/service-gravity-forms.php:105
+#: includes/service/service-quform.php:124
+msgid "[%s] Inject consent checkbox to all forms"
+msgstr ""
+
+#: includes/service/service-arforms.php:148
+msgid "ARForms"
+msgstr ""
+
+#: includes/service/service-arforms.php:260
+msgid "ARForms gathers data entered by users in forms"
+msgstr ""
+
+#: includes/service/service-bbpress.php:162
+#: includes/service/service-buddypress.php:334
+#: includes/service/service-contact-form-7.php:93
+#: includes/service/service-eform.php:128
+#: includes/service/service-formidable-forms.php:135
+#: includes/service/service-mailster.php:150
+#: includes/service/service-quform.php:115
+msgid "[%s] Description"
+msgstr ""
+
+#: includes/service/service-bbpress.php:186
+#: includes/service/service-buddypress.php:352
+msgid ""
+"[%s] Enter the existing user's email whom the posts will be reassigned to "
+"(or leave empty to delete them when forgetting)"
+msgstr ""
+
+#: includes/service/service-bbpress.php:253
+msgid "bbPress gathers users activity in forums"
+msgstr ""
+
+#: includes/service/service-bbpress.php:284
+msgid "<strong>ERROR</strong>: Please consent to storage of your data"
+msgstr ""
+
+#: includes/service/service-buddypress.php:111
+#: includes/service/service-wp-user.php:61
+msgid "Could not delete user data for user: %s"
+msgstr ""
+
+#: includes/service/service-buddypress.php:147
+#: includes/service/service-buddypress.php:159
+#: includes/service/service-buddypress.php:171
+#: includes/service/service-buddypress.php:183
+#: includes/service/service-buddypress.php:195
+#: includes/service/service-buddypress.php:218
+#: includes/service/service-buddypress.php:229
+#: includes/service/service-buddypress.php:240
+#: includes/service/service-buddypress.php:251
+#: includes/service/service-buddypress.php:262
+msgid "Could not reassign user data for user: %s"
+msgstr ""
+
+#: includes/service/service-buddypress.php:420
+msgid "BuddyPress gathers users activity in profile pages and groups"
+msgstr ""
+
+#: includes/service/service-contact-form-7.php:112
+msgid ""
+"[Contact Form 7] Inject consent checkbox as the first field instead of the "
+"last"
+msgstr ""
+
+#: includes/service/service-contact-form-7.php:188
+msgid "Contact Form 7 gathers data entered by users in forms"
+msgstr ""
+
+#: includes/service/service-eform.php:233
+msgid "eForm gathers data entered by users in forms"
+msgstr ""
+
+#: includes/service/service-events-manager.php:102
+msgid "[Events Manager] Description"
+msgstr ""
+
+#: includes/service/service-events-manager.php:170
+msgid "%s is required."
+msgstr ""
+
+#: includes/service/service-events-manager.php:171
+#: includes/service/service-formidable-forms.php:246
+#: includes/service/service-woocommerce.php:386
+msgid "Consent"
+msgstr ""
+
+#: includes/service/service-events-manager.php:185
+msgid "Events Manager gathers data entered by users in booking order forms"
+msgstr ""
+
+#: includes/service/service-facebook-pixel.php:101
+msgid ""
+"[%s] Block Facebook Pixel cookies when a user doesn't accept Advertising "
+"cookies"
+msgstr ""
+
+#: includes/service/service-formidable-forms.php:154
+msgid ""
+"[Formidable Forms] Inject consent checkbox as the first field instead of the "
+"last"
+msgstr ""
+
+#: includes/service/service-formidable-forms.php:222
+#: includes/service/service-formidable-forms.php:265
+msgid "This field is required"
+msgstr ""
+
+#: includes/service/service-formidable-forms.php:311
+msgid "Formidable Forms gathers data entered by users in forms"
+msgstr ""
+
+#: includes/service/service-google-analytics.php:56
+msgid ""
+"Google Analytics Tracking ID (disable tracking for this ID when cookies "
+"consent not given), eg. UA-118586768-1"
+msgstr ""
+
+#: includes/service/service-gravity-forms.php:96
+msgid "[Gravity Forms] Description"
+msgstr ""
+
+#: includes/service/service-gravity-forms.php:115
+msgid ""
+"[Gravity Forms] Inject consent checkbox as the first field instead of the "
+"last"
+msgstr ""
+
+#: includes/service/service-gravity-forms.php:123
+msgid "Gravity Forms"
+msgstr ""
+
+#: includes/service/service-gravity-forms.php:253
+#: includes/views/admin/admin-plugins.php:94
+#: includes/views/admin/admin-plugins.php:112
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:463
+#: vendor/acf/advanced-custom-fields/core/fields/page_link.php:137
+#: vendor/acf/advanced-custom-fields/core/fields/page_link.php:158
+#: vendor/acf/advanced-custom-fields/core/fields/post_object.php:339
+#: vendor/acf/advanced-custom-fields/core/fields/post_object.php:360
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:223
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:242
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:498
+#: vendor/acf/advanced-custom-fields/core/fields/user.php:331
+#: vendor/acf/advanced-custom-fields/core/fields/wysiwyg.php:344
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:194
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:217
+msgid "Yes"
+msgstr ""
+
+#: includes/service/service-gravity-forms.php:307
+msgid "Gravity forms gathers data entered by users in forms"
+msgstr ""
+
+#: includes/service/service-mailchimp.php:76
+msgid "[Mailchimp] Description"
+msgstr ""
+
+#: includes/service/service-mailchimp.php:84
+msgid "[Mailchimp] Inject consent checkbox to order fields"
+msgstr ""
+
+#: includes/service/service-mailchimp.php:92
+msgid ""
+"[Mailchimp] Inject consent checkbox as the first field instead of the last"
+msgstr ""
+
+#: includes/service/service-mailchimp.php:177
+msgid "Consent is mandatory to proceed"
+msgstr ""
+
+#: includes/service/service-mailchimp.php:187
+msgid "Mailchimp gathers data entered by users in forms"
+msgstr ""
+
+#: includes/service/service-mailster.php:122
+#: includes/service/service-quform.php:87
+msgid "There were problems forgetting data for user: %s"
+msgstr ""
+
+#: includes/service/service-mailster.php:159
+msgid "[%s] Inject consent checkbox to subscribe forms"
+msgstr ""
+
+#: includes/service/service-mailster.php:170
+#: includes/service/service-quform.php:135
+msgid "[%s] Inject consent checkbox as the first field instead of the last"
+msgstr ""
+
+#: includes/service/service-mailster.php:181
+msgid "[%s] Inject consent checkbox to unsubscribe forms"
+msgstr ""
+
+#: includes/service/service-mailster.php:192
+msgid "Mailster"
+msgstr ""
+
+#: includes/service/service-mailster.php:398
+msgid "Consent is missing"
+msgstr ""
+
+#: includes/service/service-mailster.php:409
+msgid "Mailster collects signed in user data"
+msgstr ""
+
+#: includes/service/service-quform.php:308
+msgid "Quform gathers data entered by users in forms"
+msgstr ""
+
+#: includes/service/service-woocommerce.php:74
+#: includes/service/service-woocommerce.php:149
+#: includes/service/service-woocommerce.php:181
+msgid "WooCommerce"
+msgstr ""
+
+#: includes/service/service-woocommerce.php:157
+msgid "[WooCommerce] Description"
+msgstr ""
+
+#: includes/service/service-woocommerce.php:165
+msgid "[WooCommerce] Inject consent checkbox to order fields"
+msgstr ""
+
+#: includes/service/service-woocommerce.php:173
+msgid "[WooCommerce] Inject consent checkbox to account forms"
+msgstr ""
+
+#: includes/service/service-woocommerce.php:189
+msgid "[WooCommerce] Pseudonymize first and last name"
+msgstr ""
+
+#: includes/service/service-woocommerce.php:197
+msgid "[WooCommerce] Pseudonymize address information"
+msgstr ""
+
+#: includes/service/service-woocommerce.php:205
+msgid "[WooCommerce] Pseudonymize billing email"
+msgstr ""
+
+#: includes/service/service-woocommerce.php:403
+#: includes/service/service-wp-user.php:295
+#: includes/service/service-wp-user.php:315
+#: includes/service/service-wp-user.php:335
+msgid "Consent is required"
+msgstr ""
+
+#: includes/service/service-woocommerce.php:488
+msgid "WooCommerce gathers data entered by users in shop orders"
+msgstr ""
+
+#: includes/service/service-wordfence.php:70
+msgid ""
+"[%s] Block Wordfence cookies when a user doesn't accept Functionality cookies"
+msgstr ""
+
+#: includes/service/service-wp-comments.php:40
+msgid "WP Comments"
+msgstr ""
+
+#: includes/service/service-wp-comments.php:71
+msgid "Anonymous"
+msgstr ""
+
+#: includes/service/service-wp-comments.php:83
+msgid "Could not update comment data for comments: %s"
+msgstr ""
+
+#: includes/service/service-wp-comments.php:109
+msgid "[WP Comments] Description"
+msgstr ""
+
+#: includes/service/service-wp-comments.php:117
+msgid "[WP Comments] Inject consent checkbox to comments fields"
+msgstr ""
+
+#: includes/service/service-wp-comments.php:179
+msgid "Please give consent to collect your data"
+msgstr ""
+
+#: includes/service/service-wp-comments.php:188
+msgid "WordPress Comments are data entered by users in comments"
+msgstr ""
+
+#: includes/service/service-wp-job-manager.php:50
+msgid "Could not delete posts for user: %s"
+msgstr ""
+
+#: includes/service/service-wp-job-manager.php:78
+msgid "[WP Job Manager] Description"
+msgstr ""
+
+#: includes/service/service-wp-posts.php:29
+msgid "WordPress Posts"
+msgstr ""
+
+#: includes/service/service-wp-posts.php:82
+msgid "Could not update post data for posts: %s"
+msgstr ""
+
+#: includes/service/service-wp-posts.php:100
+msgid "[WP Posts] Delete posts instead of reassigning to a different user?"
+msgstr ""
+
+#: includes/service/service-wp-posts.php:116
+msgid "[WordPress Posts] Description"
+msgstr ""
+
+#: includes/service/service-wp-posts.php:124
+msgid ""
+"[WP Posts] Enter the user email whom the posts will be reassigned to "
+"(default is admin)"
+msgstr ""
+
+#: includes/service/service-wp-posts.php:182
+msgid "WordPress posts author data"
+msgstr ""
+
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:159
+msgid "[WP Simple Paypal Shopping Cart] Pseudonymize user order data"
+msgstr ""
+
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:242
+msgid "WP Simple Paypal Shopping Cart gathers consumer orders data"
+msgstr ""
+
+#: includes/service/service-wp-user.php:35
+#: includes/service/service-wp-user.php:79
+msgid "WP User Data"
+msgstr ""
+
+#: includes/service/service-wp-user.php:95
+msgid "[WP User Data] Description"
+msgstr ""
+
+#: includes/service/service-wp-user.php:103
+msgid "[WP User Data] Pseudonymize first and last name"
+msgstr ""
+
+#: includes/service/service-wp-user.php:119
+msgid "[WP User] Inject consent checkbox to User network signup form fields"
+msgstr ""
+
+#: includes/service/service-wp-user.php:127
+msgid "[WP User] Inject consent checkbox to User register form fields"
+msgstr ""
+
+#: includes/service/service-wp-user.php:135
+msgid "[WP User] Inject consent checkbox to lost password form fields"
+msgstr ""
+
+#: includes/service/service-wp-user.php:388
+msgid "WordPress user data stored as user meta data in database"
+msgstr ""
+
+#: includes/service/service-youtube.php:100
+msgid "[Youtube] Remove youtube iframes until Necessary cookies accepted"
+msgstr ""
+
+#: includes/service/service-youtube.php:135
+msgid "Youtube creates cookies"
+msgstr ""
+
+#: includes/shortcode/shortcode-privacy-policy.php:17 vendor/acf-fields.php:53
+msgid "Cookie names"
+msgstr ""
+
+#: includes/shortcode/shortcode-privacy-policy.php:20 vendor/acf-fields.php:66
+msgid "Type of cookie"
+msgstr ""
+
+#: includes/shortcode/shortcode-privacy-policy.php:23
+msgid "First or Third party"
+msgstr ""
+
+#: includes/shortcode/shortcode-privacy-policy.php:26
+msgid "Can be blocked"
+msgstr ""
+
+#: includes/shortcode/shortcode-privacy-policy.php:29
+msgid "Session or Persistent"
+msgstr ""
+
+#: includes/shortcode/shortcode-privacy-policy.php:32
+#: vendor/acf-fields.php:113
+msgid "Expiry Time"
+msgstr ""
+
+#: includes/shortcode/shortcode-privacy-policy.php:35
+#: vendor/acf-fields.php:126
+msgid "Purpose"
+msgstr ""
+
+#: includes/shortcode/shortcode-privacy-policy.php:73 vendor/acf-fields.php:81
+msgid "First party"
+msgstr ""
+
+#: includes/shortcode/shortcode-privacy-policy.php:73 vendor/acf-fields.php:82
+msgid "Third party"
+msgstr ""
+
+#: includes/shortcode/shortcode-privacy-policy.php:84
+#: vendor/acf-fields.php:104
+msgid "Session"
+msgstr ""
+
+#: includes/shortcode/shortcode-privacy-policy.php:84
+#: vendor/acf-fields.php:105
+msgid "Persistent"
+msgstr ""
+
+#: includes/views/admin/admin-breach-send.php:17
+msgid "Emails were sent."
+msgstr ""
+
+#: includes/views/admin/admin-breach-send.php:25
+msgid "You will send emails to the following emails:"
+msgstr ""
+
+#: includes/views/admin/admin-breach-send.php:40
+msgid "Send"
+msgstr ""
+
+#: includes/views/admin/admin-breach.php:22
+#: includes/views/admin/admin-cookie.php:22
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:22
+#: includes/views/admin/admin-data-access.php:33
+#: includes/views/admin/admin-forgotten.php:31
+#: includes/views/admin/admin-plugins.php:22
+#: includes/views/admin/admin-policy.php:22
+#: includes/views/admin/admin-pseudonymization.php:31
+#: includes/views/admin/admin-rectification.php:33
+#: includes/views/admin/admin-services.php:22
+#: includes/views/admin/admin-terms.php:23
+msgid "Settings"
+msgstr ""
+
+#: includes/views/admin/admin-breach.php:56
+msgid "Press 'Save changes' before sending emails if you changed any options"
+msgstr ""
+
+#: includes/views/admin/admin-breach.php:70
+msgid "Go to send emails screen"
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:57
+msgid "Cookie popup"
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:60
+msgid "Preferences"
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:63
+msgid "Advanced settings"
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:79
+msgid "Press 'Save changes' before downloading logs if you changed any options"
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:90
+#: includes/views/admin/admin-policy.php:58
+#: includes/views/admin/admin-terms.php:59
+msgid "Download consents log"
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:96
+msgid "Detect cookies"
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:99
+msgid ""
+"Your website should be publicly accessible so that the Cookie Detector can "
+"work properly."
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:107
+msgid "Close"
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:109
+msgid "Cookies Scanner"
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:111
+msgid "Our busy bees are searching for cookies on:"
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:111
+msgid "posts and pages"
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:111
+msgid " of your WordPress site."
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:119
+msgid "It can take up to few minutes. Thanks for your patience!"
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:122
+msgid "We are currently scanning:"
+msgstr ""
+
+#: includes/views/admin/admin-cookie.php:128
+msgid "Currently scanned URL:"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:30
+#: includes/views/admin/admin-plugins.php:30
+msgid "Introduction"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:33
+#: includes/views/admin/admin-plugins.php:33
+msgid "Compatibility"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:42
+msgid "The GDPR was approved and adopted by the EU Parliament in April 2016."
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:43
+msgid ""
+" The regulation will take effect after a two-year transition period and, "
+"unlike a Directive it does not require any enabling legislation to be passed "
+"by government; meaning it will be in force May 2018."
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:47
+msgid ""
+"The GDPR not only applies to organisations located within the EU but it will "
+"also apply to organisations located outside of the EU if they offer goods or "
+"services to, or monitor the behaviour of, EU data subjects. It applies to "
+"all companies processing and holding the personal data of data subjects "
+"residing in the European Union, regardless of the company's location."
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:52
+msgid ""
+"This plugin will create a form where users can request access to or deletion "
+"of their personal data, stored on\n"
+"                your website. It is also possible to:"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:57
+msgid ""
+"create a custom cookie notice and block all cookies until cookie consent is "
+"given"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:58
+msgid ""
+"set up redirects for your Terms and Conditions and Privacy Policy pages "
+"until consent is given"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:59
+msgid ""
+"browse user requests for data access/deletion and set custom email "
+"notifications"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:60
+msgid ""
+"send custom email informing about data breach to all users which left their "
+"email at your site"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:61
+msgid "automatically add consent boxes for various forms on your website"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:62
+msgid "pseudonymize some of user data stored in database"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:63
+msgid "check currently activated plugins for GDPR compliance"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:68
+msgid ""
+"To start, browse through settings. Then, create a new page with shortcode:"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:68
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:86
+msgid "[ultimate_gdpr_myaccount]"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:75
+msgid "Available Shortcodes"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:82
+msgid "User Settings:"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:94
+msgid "Privacy Policy Button:"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:98
+msgid "[ultimate_gdpr_policy_accept]"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:106
+msgid "Terms and Conditions Button:"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:110
+msgid "[ultimate_gdpr_terms_accept]"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:118
+msgid "Cookie Popup Link:"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:122
+msgid "[ultimate_gdpr_cookie_popup]"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:130
+msgid "Display Cookies List:"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:134
+msgid "[render_cookies_list]"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:146
+msgid "System requirements:"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:153
+msgid "PHP Version:"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:157
+msgid "7.2+"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:165
+msgid "Memory limit:"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:169
+msgid "64 MB"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:177
+msgid "Disk space:"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:181
+msgid "10 MB"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:196
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:199
+msgid "Any questions?"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+msgid "Please have a look at the"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+msgid "Support forum"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+msgid "or ask your questions via e-mail"
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:201
+msgid "Link to our "
+msgstr ""
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:201
+msgid "Documentation"
+msgstr ""
+
+#: includes/views/admin/admin-data-access-user-details.php:16
+msgid "Collected data for user: %s"
+msgstr ""
+
+#: includes/views/admin/admin-data-access-user-details.php:20
+#: includes/views/admin/admin-data-access-user-details.php:34
+#: includes/views/admin/admin-rectification-user-details.php:34
+msgid "Go back"
+msgstr ""
+
+#: includes/views/admin/admin-data-access-user-details.php:26
+msgid "No data collected for this service"
+msgstr ""
+
+#: includes/views/admin/admin-data-access.php:71
+msgid "Data access requests list"
+msgstr ""
+
+#: includes/views/admin/admin-data-access.php:76
+#: includes/views/admin/admin-forgotten.php:70
+#: includes/views/admin/admin-rectification.php:74
+msgid "User ID"
+msgstr ""
+
+#: includes/views/admin/admin-data-access.php:77
+#: includes/views/admin/admin-forgotten.php:71
+#: includes/views/admin/admin-rectification.php:75
+#: vendor/acf/advanced-custom-fields/core/fields/email.php:19
+msgid "Email"
+msgstr ""
+
+#: includes/views/admin/admin-data-access.php:78
+#: includes/views/admin/admin-forgotten.php:73
+#: includes/views/admin/admin-rectification.php:76
+msgid "Date of request"
+msgstr ""
+
+#: includes/views/admin/admin-data-access.php:79
+#: includes/views/admin/admin-rectification.php:77
+msgid "Date of data sent"
+msgstr ""
+
+#: includes/views/admin/admin-data-access.php:80
+#: includes/views/admin/admin-rectification.php:78
+msgid "Select for action"
+msgstr ""
+
+#: includes/views/admin/admin-data-access.php:81
+#: includes/views/admin/admin-rectification.php:79
+msgid "See details"
+msgstr ""
+
+#: includes/views/admin/admin-data-access.php:94
+#: includes/views/admin/admin-forgotten.php:88
+#: includes/views/admin/admin-rectification.php:92
+msgid "Not registered"
+msgstr ""
+
+#: includes/views/admin/admin-data-access.php:105
+msgid "Preview data"
+msgstr ""
+
+#: includes/views/admin/admin-data-access.php:124
+#: includes/views/admin/admin-rectification.php:122
+msgid "Send data to selected emails"
+msgstr ""
+
+#: includes/views/admin/admin-data-access.php:126
+#: includes/views/admin/admin-forgotten.php:153
+#: includes/views/admin/admin-rectification.php:124
+msgid "Remove selected requests from list"
+msgstr ""
+
+#: includes/views/admin/admin-data-access.php:128
+#: includes/views/admin/admin-forgotten.php:155
+#: includes/views/admin/admin-rectification.php:126
+msgid "Remove all sent requests from list"
+msgstr ""
+
+#: includes/views/admin/admin-forgotten.php:65
+msgid "Right To Be Forgotten request list"
+msgstr ""
+
+#: includes/views/admin/admin-forgotten.php:72
+msgid "Services to forget (user selected)"
+msgstr ""
+
+#: includes/views/admin/admin-forgotten.php:74
+msgid "Date of mail sent"
+msgstr ""
+
+#: includes/views/admin/admin-forgotten.php:75
+msgid "Email user / remove request"
+msgstr ""
+
+#: includes/views/admin/admin-forgotten.php:95
+msgid "Select all"
+msgstr ""
+
+#: includes/views/admin/admin-forgotten.php:114
+msgid "Forgotten at %s"
+msgstr ""
+
+#: includes/views/admin/admin-forgotten.php:151
+msgid "Forget and notify selected users"
+msgstr ""
+
+#: includes/views/admin/admin-plugins.php:42
+#: vendor/optimus-prime-plugin-update/class-ct-optimus-prime-plugin-update.php:134
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2641
+msgid "Plugin"
+msgstr ""
+
+#: includes/views/admin/admin-plugins.php:43
+msgid "Collects user data"
+msgstr ""
+
+#: includes/views/admin/admin-plugins.php:44
+msgid "Compatible with Ultimate GDPR"
+msgstr ""
+
+#: includes/views/admin/admin-plugins.php:96
+#: includes/views/admin/admin-plugins.php:116
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:462
+#: vendor/acf/advanced-custom-fields/core/fields/page_link.php:138
+#: vendor/acf/advanced-custom-fields/core/fields/page_link.php:159
+#: vendor/acf/advanced-custom-fields/core/fields/post_object.php:340
+#: vendor/acf/advanced-custom-fields/core/fields/post_object.php:361
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:224
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:243
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:499
+#: vendor/acf/advanced-custom-fields/core/fields/user.php:332
+#: vendor/acf/advanced-custom-fields/core/fields/wysiwyg.php:345
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:195
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:218
+msgid "No"
+msgstr ""
+
+#: includes/views/admin/admin-plugins.php:98
+msgid "Probably"
+msgstr ""
+
+#: includes/views/admin/admin-plugins.php:100
+msgid "Unknown"
+msgstr ""
+
+#: includes/views/admin/admin-plugins.php:114
+msgid "Partly"
+msgstr ""
+
+#: includes/views/admin/admin-policy.php:47
+#: includes/views/admin/admin-terms.php:48
+msgid ""
+"Press \"Save changes\" before downloading logs if you changed any options"
+msgstr ""
+
+#: includes/views/admin/admin-pseudonymization.php:47
+msgid ""
+"Press 'Save changes' before pressing encryption buttons if you changed any "
+"options"
+msgstr ""
+
+#: includes/views/admin/admin-pseudonymization.php:58
+msgid "Encrypt selected"
+msgstr ""
+
+#: includes/views/admin/admin-pseudonymization.php:60
+msgid "Decrypt selected"
+msgstr ""
+
+#: includes/views/admin/admin-rectification-user-details.php:16
+msgid "Rectified data for user: %s"
+msgstr ""
+
+#: includes/views/admin/admin-rectification-user-details.php:18
+msgid "Current data:"
+msgstr ""
+
+#: includes/views/admin/admin-rectification-user-details.php:24
+msgid "Rectified data:"
+msgstr ""
+
+#: includes/views/admin/admin-rectification.php:69
+msgid "Data rectification requests list"
+msgstr ""
+
+#: includes/views/admin/admin-rectification.php:103
+msgid "See rectified data"
+msgstr ""
+
+#: includes/views/cookie-group-popup-header-content.php:20
+msgid "Privacy settings"
+msgstr ""
+
+#: includes/views/cookie-group-popup-header-content.php:22
+msgid "Decide which cookies you want to allow."
+msgstr ""
+
+#: includes/views/cookie-group-popup-header-content.php:23
+msgid ""
+"You can change these settings at any time. However, this can result in some "
+"functions no longer being available. For information on deleting the "
+"cookies, please consult your browser’s help function."
+msgstr ""
+
+#: includes/views/cookie-group-popup-header-content.php:24
+msgid "Learn more about the cookies we use."
+msgstr ""
+
+#: includes/views/cookie-group-popup-header-content.php:26
+msgid "With the slider, you can enable or disable different types of cookies:"
+msgstr ""
+
+#: includes/views/cookie-group-popup.php:229
+#: includes/views/cookie-group-popup.php:240
+#: includes/views/cookie-group-popup.php:273
+#: includes/views/cookie-group-popup.php:284
+msgid "Cookie Box Settings"
+msgstr ""
+
+#: includes/views/cookie-group-popup.php:415
+#: includes/views/cookie-group-popup.php:460
+#: includes/views/cookie-group-popup.php:480
+#: includes/views/cookie-group-popup.php:504
+#: includes/views/cookie-group-popup.php:548
+msgid "This website will:"
+msgstr ""
+
+#: includes/views/cookie-group-popup.php:435
+#: includes/views/cookie-group-popup.php:524
+#: includes/views/cookie-group-popup.php:569
+msgid "This website wont't:"
+msgstr ""
+
+#: includes/views/cookie-group-popup.php:593
+msgid "Save & Close"
+msgstr ""
+
+#: includes/views/service/service-arforms-consent-field.php:17
+#: includes/views/service/service-contact-form-7-consent-field.php:20
+#: includes/views/service/service-eform-consent-field.php:19
+#: includes/views/service/service-events-manager-consent-field.php:17
+#: includes/views/service/service-formidable-forms-consent-field.php:12
+#: includes/views/service/service-quform-consent-field.php:12
+#: includes/views/service/service-woocommerce-consent-field-label.php:12
+#: includes/views/service/service-woocommerce-consent-field.php:16
+#: includes/views/service/service-wp-comments-consent-field.php:16
+#: includes/views/service/service-wp-user-consent-field.php:17
+msgid "I consent to the storage of my data according to the Privacy Policy"
+msgstr ""
+
+#: includes/views/service/service-arforms-consent-field.php:24
+msgid "This field cannot be blank."
+msgstr ""
+
+#: includes/views/service/service-arforms-consent-field.php:26
+msgid "OK"
+msgstr ""
+
+#: includes/views/service/service-bbpress-consent-field.php:16
+#: includes/views/service/service-buddypress-consent-field.php:16
+msgid ""
+"I consent to the storage of my data according to the Privacy Policy "
+"(required)"
+msgstr ""
+
+#: includes/views/service/service-gravity-forms-consent-field-description.php:12
+msgid "Follow this link to access Privacy Policy"
+msgstr ""
+
+#: includes/views/service/service-gravity-forms-consent-field-error-message.php:12
+msgid "You must accept the Privacy Policy before submitting the form"
+msgstr ""
+
+#: includes/views/service/service-gravity-forms-consent-field-label.php:12
+#: includes/views/service/service-mailster-consent-field.php:16
+msgid "I consent to storage of my data according to Privacy Policy"
+msgstr ""
+
+#: includes/views/service/service-mailchimp-consent-field.php:16
+msgid "I consent to the storage of my data according to the Privacy Policy "
+msgstr ""
+
+#: includes/views/service/service-quform-consent-field-error-message.php:12
+msgid "This field is mandatory"
+msgstr ""
+
+#: includes/views/shortcode/shortcode-myaccount.php:31
+msgid "Personal Data Access"
+msgstr ""
+
+#: includes/views/shortcode/shortcode-myaccount.php:32
+msgid "Forget me"
+msgstr ""
+
+#: includes/views/shortcode/shortcode-myaccount.php:33
+msgid "Data rectification"
+msgstr ""
+
+#: includes/views/shortcode/shortcode-myaccount.php:39
+msgid ""
+"Below, you can request for your personal data that's collected by this "
+"website sent to you in an e-mail."
+msgstr ""
+
+#: includes/views/shortcode/shortcode-myaccount.php:48
+msgid ""
+"I consent to have my email collected in order to receive my requested data. "
+"See Privacy Policy page for more information."
+msgstr ""
+
+#: includes/views/shortcode/shortcode-myaccount.php:57
+#: includes/views/shortcode/shortcode-myaccount.php:109
+#: includes/views/shortcode/shortcode-myaccount.php:160
+msgid "Submit"
+msgstr ""
+
+#: includes/views/shortcode/shortcode-myaccount.php:64
+msgid ""
+"Below, you can browse services which collects your personal data on this "
+"website. Check services you wish to be forgotten by. This will send a "
+"request to the website admin. You will be notified by e-mail once this is "
+"done.\""
+msgstr ""
+
+#: includes/views/shortcode/shortcode-myaccount.php:101
+#: includes/views/shortcode/shortcode-myaccount.php:151
+msgid ""
+"I consent to have my email collected in order to process this request. See "
+"Privacy Policy page for more information."
+msgstr ""
+
+#: includes/views/shortcode/shortcode-myaccount.php:119
+msgid ""
+"Below, you can send a request to have your data rectified by  the website "
+"admin. Enter what you would like to be rectified. You will be notified by e-"
+"mail once this is done."
+msgstr ""
+
+#: includes/views/shortcode/shortcode-myaccount.php:127
+msgid "Current data"
+msgstr ""
+
+#: includes/views/shortcode/shortcode-myaccount.php:136
+msgid "Rectified data"
+msgstr ""
+
+#: includes/views/shortcode/shortcode-policy-accept.php:34
+msgid "You have already accepted Privacy Policy"
+msgstr ""
+
+#: includes/views/shortcode/shortcode-policy-accept.php:43
+#: includes/views/shortcode/shortcode-terms-accept.php:43
+msgid "Decline"
+msgstr ""
+
+#: includes/views/shortcode/shortcode-terms-accept.php:34
+msgid "You have already accepted Terms and Conditions"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:51
+#: vendor/acf/advanced-custom-fields/acf.php:530
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:213
+msgid "Advanced Custom Fields"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:529
+msgid "Field&nbsp;Groups"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:532
+msgid "Add New Field Group"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:533
+msgid "Edit Field Group"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:534
+msgid "New Field Group"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:535
+msgid "View Field Group"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:536
+msgid "Search Field Groups"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:537
+msgid "No Field Groups found"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:538
+msgid "No Field Groups found in Trash"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:623
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:99
+msgid "Custom Fields"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:641
+#: vendor/acf/advanced-custom-fields/acf.php:644
+msgid "Field group updated."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:642
+msgid "Custom field updated."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:643
+msgid "Custom field deleted."
+msgstr ""
+
+#. translators: %s: date and time of the revision
+#: vendor/acf/advanced-custom-fields/acf.php:646
+msgid "Field group restored to revision from %s"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:647
+msgid "Field group published."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:648
+msgid "Field group saved."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:649
+msgid "Field group submitted."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:650
+msgid "Field group scheduled for."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:651
+msgid "Field group draft updated."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:786
+msgid "Thumbnail"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:787
+msgid "Medium"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/acf.php:789
+msgid "Full"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/actions/export.php:26
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:58
+msgid "Error"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/actions/export.php:33
+msgid "No ACF groups selected"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/api.php:1171
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2818
+msgid "Update"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/api.php:1172
+msgid "Post updated"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:42
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:306
+msgid "Add-ons"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:130
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:428
+msgid "Repeater Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:131
+msgid "Create infinite rows of repeatable data with this versatile interface!"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:137
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:436
+msgid "Gallery Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:138
+msgid "Create image galleries in a simple and intuitive interface!"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:144
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:444
+msgid "Options Page"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:145
+msgid "Create global data to use throughout your website!"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:151
+msgid "Flexible Content Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:152
+msgid "Create unique designs with a flexible content layout manager!"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:161
+msgid "Gravity Forms Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:162
+msgid "Creates a select field populated with Gravity Forms!"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:168
+msgid "Date & Time Picker"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:169
+msgid "jQuery date & time picker"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:175
+msgid "Google Map Extended"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:176
+msgid "Find addresses and coordinates of a desired location"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:182
+msgid "Contact Form 7 Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:183
+msgid "Assign one or more contact form 7 forms to a post"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:193
+msgid "Advanced Custom Fields Add-Ons"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:196
+msgid ""
+"The following Add-ons are available to increase the functionality of the "
+"Advanced Custom Fields plugin."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:197
+msgid ""
+"Each Add-on can be installed as a separate plugin (receives updates) or "
+"included in your theme (does not receive updates)."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:219
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:240
+msgid "Installed"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:221
+msgid "Purchase & Install"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/addons.php:242
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:421
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:430
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:438
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:446
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:454
+msgid "Download"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:50
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:159
+msgid "Export"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:216
+msgid "Export Field Groups"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:221
+msgid "Field Groups"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:222
+msgid "Select the field groups to be exported"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:239
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:252
+msgid "Export to XML"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:242
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:267
+msgid "Export to PHP"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:253
+msgid ""
+"ACF will create a .xml export file which is compatible with the native WP "
+"import plugin."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:254
+msgid ""
+"Imported field groups <b>will</b> appear in the list of editable field "
+"groups. This is useful for migrating fields groups between Wp websites."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:256
+msgid "Select field group(s) from the list and click \"Export XML\""
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:257
+msgid "Save the .xml file when prompted"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:258
+msgid "Navigate to Tools &raquo; Import and select WordPress"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:259
+msgid "Install WP import plugin if prompted"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:260
+msgid "Upload and import your exported .xml file"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:261
+msgid "Select your user and ignore Import Attachments"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:262
+msgid "That's it! Happy WordPressing"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:268
+msgid "ACF will create the PHP code to include in your theme."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:269
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:310
+msgid ""
+"Registered field groups <b>will not</b> appear in the list of editable field "
+"groups. This is useful for including fields in themes."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:270
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:311
+msgid ""
+"Please note that if you export and register field groups within the same WP, "
+"you will see duplicate fields on your edit screens. To fix this, please move "
+"the original field group to the trash or remove the code from your functions."
+"php file."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:272
+msgid "Select field group(s) from the list and click \"Create PHP\""
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:273
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:302
+msgid "Copy the PHP code generated"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:274
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:303
+msgid "Paste into your functions.php file"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:275
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:304
+msgid "To activate any Add-ons, edit and use the code in the first few lines."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:295
+msgid "Export Field Groups to PHP"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:309
+msgid "Notes"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:316
+msgid "Include in theme"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:317
+msgid ""
+"The Advanced Custom Fields plugin can be included within a theme. To do so, "
+"move the ACF plugin inside your theme and add the following code to your "
+"functions.php file:"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:323
+msgid ""
+"To remove all visual interfaces from the ACF plugin, you can use a constant "
+"to enable lite mode. Add the following code to your functions.php file "
+"<b>before</b> the include_once code:"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:331
+msgid "Back to export"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/export.php:400
+msgid "No field groups were selected"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:359
+msgid "Move to trash. Are you sure?"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:360
+msgid "checked"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:361
+msgid "No toggle fields available"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:362
+msgid "Field group title is required"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:363
+msgid "copy"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:364
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:62
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:159
+msgid "or"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:365
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:397
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:459
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:148
+msgid "Fields"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:366
+msgid "Parent fields"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:367
+msgid "Sibling fields"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:368
+msgid "Hide / Show All"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:398
+msgid "Location"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:461
+msgid "Show Field Key:"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:635
+msgid "Front Page"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:636
+msgid "Posts Page"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:637
+msgid "Top Level Page (parent of 0)"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:638
+msgid "Parent Page (has children)"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:639
+msgid "Child Page (has parent)"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:647
+msgid "Default Template"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:729
+msgid "Published"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:730
+msgid "Pending Review"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:731
+msgid "Draft"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:732
+msgid "Future"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:733
+msgid "Private"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:734
+msgid "Revision"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:735
+msgid "Trash"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:748
+msgid "Super Admin"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:763
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:784
+#: vendor/acf/advanced-custom-fields/core/controllers/field_group.php:791
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:186
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:177
+#: vendor/acf/advanced-custom-fields/core/fields/page_link.php:109
+#: vendor/acf/advanced-custom-fields/core/fields/post_object.php:286
+#: vendor/acf/advanced-custom-fields/core/fields/post_object.php:310
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:582
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:606
+#: vendor/acf/advanced-custom-fields/core/fields/user.php:276
+msgid "All"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:147
+msgid "Title"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:215
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:252
+msgid "Changelog"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:216
+msgid "See what's new in %1$sversion %2$s%3$s"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:218
+msgid "Resources"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:220
+msgid "Getting Started"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:221
+msgid "Field Types"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:222
+msgid "Functions"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:223
+msgid "Actions"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:224
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:625
+msgid "Filters"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:225
+msgid "'How to' guides"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:226
+msgid "Tutorials"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:231
+msgid "Created by"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:243
+msgid "Welcome to Advanced Custom Fields"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:244
+msgid "Thank you for updating to the latest version!"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:244
+msgid ""
+"ACF %s is more polished and enjoyable than ever before. We hope you like it."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:251
+msgid "What’s New"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:254
+msgid "Download Add-ons"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:308
+msgid "Activation codes have grown into plugins!"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:309
+msgid ""
+"Add-ons are now activated by downloading and installing individual plugins. "
+"Although these plugins will not be hosted on the wordpress.org repository, "
+"each Add-on will continue to receive updates in the usual way."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:315
+msgid "All previous Add-ons have been successfully installed"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:319
+msgid "This website uses premium Add-ons which need to be downloaded"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:319
+msgid "Download your activated Add-ons"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:324
+msgid ""
+"This website does not use premium Add-ons and will not be affected by this "
+"change."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:334
+msgid "Easier Development"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:336
+msgid "New Field Types"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:338
+msgid "Taxonomy Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:339
+msgid "User Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:340
+msgid "Email Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:341
+msgid "Password Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:343
+msgid "Custom Field Types"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:344
+msgid ""
+"Creating your own field type has never been easier! Unfortunately, version 3 "
+"field types are not compatible with version 4."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:345
+msgid ""
+"Migrating your field types is easy, please %sfollow this tutorial%s to learn "
+"more."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:347
+msgid "Actions &amp; Filters"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:348
+msgid ""
+"All actions & filters have received a major facelift to make customizing ACF "
+"even easier! Please %sread this guide%s to find the updated naming "
+"convention."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:350
+msgid "Preview draft is now working!"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:351
+msgid "This bug has been squashed along with many other little critters!"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:351
+msgid "See the full changelog"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:355
+msgid "Important"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:357
+msgid "Database Changes"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:358
+msgid ""
+"Absolutely <strong>no</strong> changes have been made to the database "
+"between versions 3 and 4. This means you can roll back to version 3 without "
+"any issues."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:360
+msgid "Potential Issues"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:361
+msgid ""
+"Due to the sizable changes surrounding Add-ons, field types and action/"
+"filters, your website may not operate correctly. It is important that you "
+"read the full %sMigrating from v3 to v4%s guide to view the full list of "
+"changes."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:364
+msgid "Really Important!"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:364
+msgid ""
+"If you updated the ACF plugin without prior knowledge of such changes, "
+"please roll back to the latest %sversion 3%s of this plugin."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:369
+msgid "Thank You"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:370
+msgid ""
+"A <strong>BIG</strong> thank you to everyone who has helped test the version "
+"4 beta and for all the support I have received."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:371
+msgid "Without you all, this release would not have been possible!"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:375
+msgid "Changelog for"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:392
+msgid "Learn more"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:398
+msgid "Overview"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:400
+msgid ""
+"Previously, all Add-ons were unlocked via an activation code (purchased from "
+"the ACF Add-ons store). New to v4, all Add-ons act as separate plugins which "
+"need to be individually downloaded, installed and updated."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:402
+msgid ""
+"This page will assist you in downloading and installing each available Add-"
+"on."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:404
+msgid "Available Add-ons"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:406
+msgid "The following Add-ons have been detected as activated on this website."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:419
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:109
+msgid "Name"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:420
+msgid "Activation Code"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:452
+msgid "Flexible Content"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:462
+msgid "Installation"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:464
+msgid "For each Add-on available, please perform the following:"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:466
+msgid "Download the Add-on plugin (.zip file) to your desktop"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:467
+msgid "Navigate to %sPlugins > Add New > Upload%s"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:468
+msgid "Use the uploader to browse, select and install your Add-on (.zip file)"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:469
+msgid ""
+"Once the plugin has been uploaded and installed, click the 'Activate Plugin' "
+"link"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:470
+msgid "The Add-on is now installed and activated!"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/field_groups.php:484
+msgid "Awesome. Let's get to work"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/input.php:63
+msgid "Expand Details"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/input.php:64
+msgid "Collapse Details"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/input.php:67
+msgid "Validation Failed. One or more fields below are required."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/upgrade.php:77
+msgid "Upgrade"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/upgrade.php:599
+msgid "Modifying field group options 'show on page'"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/upgrade.php:653
+msgid "Modifying field option 'taxonomy'"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/controllers/upgrade.php:750
+msgid "Moving user custom fields from wp_options to wp_usermeta"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/early-access.php:340
+msgid "(Early access enabled)"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/_base.php:124
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:74
+msgid "Basic"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/checkbox.php:19
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:475
+msgid "Checkbox"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/checkbox.php:20
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:19
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:19
+#: vendor/acf/advanced-custom-fields/core/fields/true_false.php:20
+msgid "Choice"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/checkbox.php:146
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:147
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:177
+msgid "Choices"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/checkbox.php:147
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:178
+msgid "Enter each choice on a new line."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/checkbox.php:148
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:179
+msgid "For more control, you may specify both a value and label like this:"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/checkbox.php:149
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:153
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:180
+msgid "red : Red"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/checkbox.php:149
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:154
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:180
+msgid "blue : Blue"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/checkbox.php:166
+#: vendor/acf/advanced-custom-fields/core/fields/color_picker.php:89
+#: vendor/acf/advanced-custom-fields/core/fields/email.php:106
+#: vendor/acf/advanced-custom-fields/core/fields/number.php:116
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:196
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:197
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:116
+#: vendor/acf/advanced-custom-fields/core/fields/textarea.php:103
+#: vendor/acf/advanced-custom-fields/core/fields/true_false.php:94
+#: vendor/acf/advanced-custom-fields/core/fields/wysiwyg.php:287
+msgid "Default Value"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/checkbox.php:167
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:198
+msgid "Enter each default value on a new line"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/checkbox.php:183
+#: vendor/acf/advanced-custom-fields/core/fields/message.php:20
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:212
+#: vendor/acf/advanced-custom-fields/core/fields/tab.php:20
+msgid "Layout"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/checkbox.php:194
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:223
+msgid "Vertical"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/checkbox.php:195
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:224
+msgid "Horizontal"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/color_picker.php:19
+msgid "Color Picker"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/color_picker.php:20
+#: vendor/acf/advanced-custom-fields/core/fields/date_picker/date_picker.php:20
+#: vendor/acf/advanced-custom-fields/core/fields/google-map.php:19
+msgid "jQuery"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/date_picker/date_picker.php:19
+msgid "Date Picker"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/date_picker/date_picker.php:55
+msgid "Done"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/date_picker/date_picker.php:56
+msgid "Today"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/date_picker/date_picker.php:59
+msgid "Show a different month"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/date_picker/date_picker.php:126
+msgid "Save format"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/date_picker/date_picker.php:127
+msgid ""
+"This format will determine the value saved to the database and returned via "
+"the API"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/date_picker/date_picker.php:128
+msgid "\"yymmdd\" is the most versatile save format. Read more about"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/date_picker/date_picker.php:128
+#: vendor/acf/advanced-custom-fields/core/fields/date_picker/date_picker.php:144
+msgid "jQuery date formats"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/date_picker/date_picker.php:142
+msgid "Display format"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/date_picker/date_picker.php:143
+msgid "This format will be seen by the user when entering a value"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/date_picker/date_picker.php:144
+msgid ""
+"\"dd/mm/yy\" or \"mm/dd/yy\" are the most used display formats. Read more "
+"about"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/date_picker/date_picker.php:158
+msgid "Week Starts On"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/dummy.php:19
+msgid "Dummy"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/email.php:107
+#: vendor/acf/advanced-custom-fields/core/fields/number.php:117
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:117
+#: vendor/acf/advanced-custom-fields/core/fields/textarea.php:104
+#: vendor/acf/advanced-custom-fields/core/fields/wysiwyg.php:288
+msgid "Appears when creating a new post"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/email.php:123
+#: vendor/acf/advanced-custom-fields/core/fields/number.php:133
+#: vendor/acf/advanced-custom-fields/core/fields/password.php:105
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:131
+#: vendor/acf/advanced-custom-fields/core/fields/textarea.php:118
+msgid "Placeholder Text"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/email.php:124
+#: vendor/acf/advanced-custom-fields/core/fields/number.php:134
+#: vendor/acf/advanced-custom-fields/core/fields/password.php:106
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:132
+#: vendor/acf/advanced-custom-fields/core/fields/textarea.php:119
+msgid "Appears within the input"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/email.php:138
+#: vendor/acf/advanced-custom-fields/core/fields/number.php:148
+#: vendor/acf/advanced-custom-fields/core/fields/password.php:120
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:146
+msgid "Prepend"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/email.php:139
+#: vendor/acf/advanced-custom-fields/core/fields/number.php:149
+#: vendor/acf/advanced-custom-fields/core/fields/password.php:121
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:147
+msgid "Appears before the input"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/email.php:153
+#: vendor/acf/advanced-custom-fields/core/fields/number.php:163
+#: vendor/acf/advanced-custom-fields/core/fields/password.php:135
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:161
+msgid "Append"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/email.php:154
+#: vendor/acf/advanced-custom-fields/core/fields/number.php:164
+#: vendor/acf/advanced-custom-fields/core/fields/password.php:136
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:162
+msgid "Appears after the input"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:19
+msgid "File"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:20
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:20
+#: vendor/acf/advanced-custom-fields/core/fields/wysiwyg.php:20
+msgid "Content"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:26
+msgid "Select File"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:27
+msgid "Edit File"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:28
+msgid "Update File"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:29
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:30
+msgid "Uploaded to this post"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:113
+msgid "Size"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:123
+msgid "No File Selected"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:123
+msgid "Add File"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:153
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:125
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:523
+msgid "Return Value"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:164
+msgid "File Object"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:165
+msgid "File URL"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:166
+msgid "File ID"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:175
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:165
+msgid "Library"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/file.php:187
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:178
+msgid "Uploaded to post"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/google-map.php:18
+msgid "Google Map"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/google-map.php:33
+msgid "Locating"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/google-map.php:34
+msgid "Sorry, this browser does not support geolocation"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/google-map.php:120
+msgid "Clear location"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/google-map.php:125
+msgid "Find current location"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/google-map.php:126
+msgid "Search for address..."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/google-map.php:162
+msgid "Center"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/google-map.php:163
+msgid "Center the initial map"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/google-map.php:199
+msgid "Zoom"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/google-map.php:200
+msgid "Set the initial zoom level"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/google-map.php:217
+msgid "Height"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/google-map.php:218
+msgid "Customise the map height"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:19
+msgid "Image"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:27
+msgid "Select Image"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:28
+msgid "Edit Image"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:29
+msgid "Update Image"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:90
+msgid "Remove"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:91
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:108
+msgid "Edit"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:97
+msgid "No image selected"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:97
+msgid "Add Image"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:126
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:557
+msgid "Specify the returned value on front end"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:136
+msgid "Image Object"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:137
+msgid "Image URL"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:138
+msgid "Image ID"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:146
+msgid "Preview Size"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:147
+msgid "Shown when entering data"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/image.php:166
+msgid "Limit the media library choice"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/message.php:19
+#: vendor/acf/advanced-custom-fields/core/fields/message.php:70
+#: vendor/acf/advanced-custom-fields/core/fields/true_false.php:79
+msgid "Message"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/message.php:71
+msgid "Text &amp; HTML entered here will appear inline with the fields"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/message.php:72
+msgid "Please note that all text will first be passed through the wp function "
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/number.php:19
+msgid "Number"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/number.php:178
+msgid "Minimum Value"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/number.php:194
+msgid "Maximum Value"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/number.php:210
+msgid "Step Size"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/page_link.php:18
+msgid "Page Link"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/page_link.php:19
+#: vendor/acf/advanced-custom-fields/core/fields/post_object.php:19
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:19
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:19
+#: vendor/acf/advanced-custom-fields/core/fields/user.php:19
+msgid "Relational"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/page_link.php:103
+#: vendor/acf/advanced-custom-fields/core/fields/post_object.php:280
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:576
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:655
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:75
+msgid "Post Type"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/page_link.php:127
+#: vendor/acf/advanced-custom-fields/core/fields/post_object.php:329
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:214
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:489
+#: vendor/acf/advanced-custom-fields/core/fields/user.php:322
+msgid "Allow Null?"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/page_link.php:148
+#: vendor/acf/advanced-custom-fields/core/fields/post_object.php:350
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:233
+msgid "Select multiple values?"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/password.php:19
+msgid "Password"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/post_object.php:18
+msgid "Post Object"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/post_object.php:194
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:164
+msgid "(no title)"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/post_object.php:304
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:600
+msgid "Filter from Taxonomy"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:18
+msgid "Radio Button"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:105
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:91
+msgid "Other"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:148
+msgid "Enter your choices one per line"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:150
+msgid "Red"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:151
+msgid "Blue"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:175
+msgid "Add 'other' choice to allow for custom values"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/radio.php:187
+msgid "Save 'other' values to the field's choices"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:18
+msgid "Relationship"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:29
+msgid "Maximum values reached ( {max} values )"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:451
+msgid "Search..."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:462
+msgid "Filter by post type"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:556
+msgid "Return Format"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:567
+msgid "Post Objects"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:568
+msgid "Post IDs"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:634
+msgid "Search"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:635
+msgid "Post Type Select"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:643
+msgid "Elements"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:644
+msgid "Selected elements will be displayed in each result"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:653
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:106
+msgid "Featured Image"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:654
+msgid "Post Title"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/relationship.php:666
+msgid "Maximum posts"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:18
+#: vendor/acf/advanced-custom-fields/core/fields/select.php:109
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:480
+#: vendor/acf/advanced-custom-fields/core/fields/user.php:313
+msgid "Select"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/tab.php:19
+msgid "Tab"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/tab.php:68
+msgid ""
+"Use \"Tab Fields\" to better organize your edit screen by grouping your "
+"fields together under separate tab headings."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/tab.php:69
+msgid ""
+"All the fields following this \"tab field\" (or until another \"tab field\" "
+"is defined) will be grouped together."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/tab.php:70
+msgid "Use multiple tabs to divide your fields into sections."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:18
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:430
+msgid "Taxonomy"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:374
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:383
+msgid "None"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:464
+#: vendor/acf/advanced-custom-fields/core/fields/user.php:298
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:77
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:158
+msgid "Field Type"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:474
+#: vendor/acf/advanced-custom-fields/core/fields/user.php:307
+msgid "Multiple Values"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:476
+#: vendor/acf/advanced-custom-fields/core/fields/user.php:309
+msgid "Multi Select"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:478
+#: vendor/acf/advanced-custom-fields/core/fields/user.php:311
+msgid "Single Value"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:479
+msgid "Radio Buttons"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:508
+msgid "Load & Save Terms to Post"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:516
+msgid ""
+"Load value based on the post's terms and update the post's terms on save"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:533
+msgid "Term Object"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/taxonomy.php:534
+msgid "Term ID"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:19
+msgid "Text"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:176
+#: vendor/acf/advanced-custom-fields/core/fields/textarea.php:164
+msgid "Formatting"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:177
+#: vendor/acf/advanced-custom-fields/core/fields/textarea.php:165
+msgid "Affects value on front end"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:186
+#: vendor/acf/advanced-custom-fields/core/fields/textarea.php:174
+msgid "No formatting"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:187
+#: vendor/acf/advanced-custom-fields/core/fields/textarea.php:176
+msgid "Convert HTML into tags"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:195
+#: vendor/acf/advanced-custom-fields/core/fields/textarea.php:133
+msgid "Character Limit"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/text.php:196
+#: vendor/acf/advanced-custom-fields/core/fields/textarea.php:134
+msgid "Leave blank for no limit"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/textarea.php:19
+msgid "Text Area"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/textarea.php:148
+msgid "Rows"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/textarea.php:149
+msgid "Sets the textarea height"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/textarea.php:175
+msgid "Convert new lines into &lt;br /&gt; tags"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/true_false.php:19
+msgid "True / False"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/true_false.php:80
+msgid "eg. Show extra content"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/user.php:18
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:94
+msgid "User"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/user.php:271
+msgid "Filter by role"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/wysiwyg.php:19
+msgid "Wysiwyg Editor"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/wysiwyg.php:302
+msgid "Toolbar"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/fields/wysiwyg.php:334
+msgid "Show Media Upload Buttons?"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:24
+msgid "New Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:58
+msgid "Field type does not exist"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:74
+msgid "Field Order"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:75
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:126
+msgid "Field Label"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:76
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:142
+msgid "Field Name"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:78
+msgid "Field Key"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:90
+msgid ""
+"No fields. Click the <strong>+ Add Field</strong> button to create your "
+"first field."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:105
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:108
+msgid "Edit this Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:109
+msgid "Duplicate this Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:109
+msgid "Duplicate"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:110
+msgid "Delete this Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:110
+msgid "Delete"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:127
+msgid "This is the name which will appear on the EDIT page"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:143
+msgid "Single word, no spaces. Underscores and dashes allowed"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:172
+msgid "Field Instructions"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:173
+msgid "Instructions for authors. Shown when submitting data"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:186
+msgid "Required?"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:209
+msgid "Conditional Logic"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:260
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:117
+msgid "is equal to"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:261
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:118
+msgid "is not equal to"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:279
+msgid "Show this field when"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:285
+msgid "all"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:286
+msgid "any"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:289
+msgid "these rules are met"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:303
+msgid "Close Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:316
+msgid "Drag and drop to reorder"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_fields.php:317
+msgid "+ Add Field"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:48
+msgid "Rules"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:49
+msgid ""
+"Create a set of rules to determine which edit screens will use these "
+"advanced custom fields"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:60
+msgid "Show this field group if"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:76
+msgid "Logged in User Type"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:78
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:79
+msgid "Post"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:80
+msgid "Post Category"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:81
+msgid "Post Format"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:82
+msgid "Post Status"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:83
+msgid "Post Taxonomy"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:85
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:86
+msgid "Page"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:87
+msgid "Page Type"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:88
+msgid "Page Parent"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:89
+msgid "Page Template"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:92
+msgid "Attachment"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:93
+msgid "Taxonomy Term"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:146
+msgid "and"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_location.php:161
+msgid "Add rule group"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:25
+msgid "Order No."
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:26
+msgid "Field groups are created in order <br />from lowest to highest"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:52
+msgid "High (after title)"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:53
+msgid "Normal (after content)"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:54
+msgid "Side"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:64
+msgid "Style"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:74
+msgid "Seamless (no metabox)"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:75
+msgid "Standard (WP metabox)"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:84
+msgid "Hide on screen"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:85
+msgid "<b>Select</b> items to <b>hide</b> them from the edit screen"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:86
+msgid ""
+"If multiple field groups appear on an edit screen, the first field group's "
+"options will be used. (the one with the lowest order number)"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:96
+msgid "Permalink"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:97
+msgid "Content Editor"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:98
+msgid "Excerpt"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:100
+msgid "Discussion"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:101
+msgid "Comments"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:102
+msgid "Revisions"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:103
+msgid "Slug"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:104
+msgid "Author"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:105
+msgid "Format"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:107
+msgid "Categories"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:108
+msgid "Tags"
+msgstr ""
+
+#: vendor/acf/advanced-custom-fields/core/views/meta_box_options.php:109
+msgid "Send Trackbacks"
+msgstr ""
+
+#: vendor/acf-fields.php:28
+msgid "Service name"
+msgstr ""
+
+#: vendor/acf-fields.php:40
+msgid "Script names"
+msgstr ""
+
+#: vendor/acf-fields.php:43
+msgid "Please input comma separated script names"
+msgstr ""
+
+#: vendor/acf-fields.php:56
+msgid "Please input comma separated cookie names"
+msgstr ""
+
+#: vendor/acf-fields.php:76
+msgid "First or Third party?"
+msgstr ""
+
+#: vendor/acf-fields.php:90
+msgid "Can be blocked?"
+msgstr ""
+
+#: vendor/acf-fields.php:98
+msgid "Session or Persistent?"
+msgstr ""
+
+#: vendor/acf-fields.php:138
+msgid "Is active?"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-ct-optimus-prime-plugin-update.php:94
+msgid "Downloading update..."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-ct-optimus-prime-plugin-update.php:230
+msgid "Could not get new version info from OP"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:337
+msgid "Install Required Plugins"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:338
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:340
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:342
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:343
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:380
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:385
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:390
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:395
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:396
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:919
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3675
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:397
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3254
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:398
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3047
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:400
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:402
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:404
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:405
+msgid "Dismiss this notice"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:406
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:407
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:610
+#: vendor/optimus-prime-plugin-update/settings.php:80
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:611
+#: vendor/optimus-prime-plugin-update/settings.php:81
+msgid "Update Required"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:728
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:922
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1053
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2627
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3678
+msgid "Return to Dashboard"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1026
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1026
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1029
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1029
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1213
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3043
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2076
+msgid "TGMPA v%s"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2367
+msgid "Required"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2370
+msgid "Recommended"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2386
+msgid "WordPress Repository"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2389
+msgid "External Source"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2392
+msgid "Pre-Packaged"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2409
+msgid "Not Installed"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2413
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2415
+msgid "Active"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2421
+msgid "Required Update not Available"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2424
+msgid "Requires Update"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2427
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2436
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2482
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2486
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2490
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2494
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2576
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2584
+msgid "Installed version:"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2592
+msgid "Minimum required version:"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2604
+msgid "Available version:"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2642
+msgid "Source"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2643
+msgid "Type"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2647
+msgid "Version"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2648
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2697
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2702
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2708
+msgid "Activate %2$s"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2778
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2811
+msgid "Install"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2821
+msgid "Activate"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2854
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2897
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3003
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3029
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3253
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3593
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3596
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3598
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3602
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3604
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3605
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3607
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3610
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3612
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3613
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3615
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Complete General Data Protection Regulation compliance toolkit plugin for "
+"WordPress."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "CreateIT"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.createit.pl"
+msgstr ""

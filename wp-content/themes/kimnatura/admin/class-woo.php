@@ -343,8 +343,8 @@ class Woo {
 }
     $t  .= '</li>';
     // Second item
-     $t  .= '<li id="wc-multistep-details" data-step="customer-details" class="cart-checkout-navigation__item '. ( ($step == 1 && !is_wc_endpoint_url( 'order-received' ) && !is_wc_endpoint_url( 'cart' )) ? 'is-active' : '').' '. ( ($step == 0 || is_wc_endpoint_url( 'order-received' ) ) ? 'is-disabled' : '').'" >';
-    if (!is_wc_endpoint_url( 'order-received' ) && !is_wc_endpoint_url( 'cart' )) {  $t  .= '<a href="'.get_permalink( wc_get_page_id( 'checkout' )).'">'; }
+     $t  .= '<li id="wc-multistep-details" data-step="customer-details" class="cart-checkout-navigation__item '. ( ($step == 1 && !is_wc_endpoint_url( 'order-received' ) ) ? 'is-active' : '').' '. ( ($step == 0 || is_wc_endpoint_url( 'order-received' ) ) ? 'is-disabled' : '').'" >';
+    if (!is_wc_endpoint_url( 'order-received' ) && $step > 0) {  $t  .= '<a href="'.get_permalink( wc_get_page_id( 'checkout' )).'">'; }
     $t  .= '<span class="cart-checkout-navigation__step-number">2</span><span class="cart-checkout-navigation__step-title">'.__('Dostava','b4b').'<span>';
     $t  .= ' </a></li>';
     // Third item

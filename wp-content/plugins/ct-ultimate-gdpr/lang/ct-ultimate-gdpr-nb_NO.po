@@ -1,0 +1,998 @@
+# Copyright (C) 2018 Ultimate GDPR
+# This file is distributed under the same license as the Ultimate GDPR package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ultimate GDPR 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/ct-ultimate-gdpr\n"
+"POT-Creation-Date: 2018-04-10 15:20+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-04-20 11:29+0200\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+"Last-Translator: \n"
+"Language: nb_NO\n"
+
+#. Plugin Name of the plugin/theme
+#: includes/controller/controller-admin.php:188
+#: includes/controller/controller-admin.php:189
+msgid "Ultimate GDPR"
+msgstr "Ultimate GDPR"
+
+#: includes/controller/controller-breach.php:82
+#: includes/controller/controller-breach.php:83
+#: includes/controller/controller-breach.php:111
+msgid "Data Breach"
+msgstr "Databrudd"
+
+#: includes/controller/controller-breach.php:120
+#: includes/controller/controller-data-access.php:505
+msgid "Mail title"
+msgstr "Tittel"
+
+#: includes/controller/controller-breach.php:128
+#: includes/controller/controller-data-access.php:513
+msgid "Mail content"
+msgstr "Innhold"
+
+#: includes/controller/controller-breach.php:136
+msgid "Collect user emails from services"
+msgstr "Samle bruker e-post fra tjenester"
+
+#: includes/controller/controller-breach.php:205
+msgid "[Ultimate GDPR] Data breach information from %s"
+msgstr "[Ultimate GDPR] Databrudd fra %s"
+
+#: includes/controller/controller-breach.php:208
+msgid "There was a data breach on our page..."
+msgstr "Det har oppstått et problem på nettsiden..."
+
+#: includes/controller/controller-cookie.php:364
+#: includes/controller/controller-cookie.php:365
+msgid "Cookie Consent"
+msgstr "Cookie samtykke"
+
+#: includes/controller/controller-cookie.php:390
+msgid "Cookie consent settings"
+msgstr "Innstillinger for cookie samtykke"
+
+#: includes/controller/controller-cookie.php:400
+msgid "Cookie notice content"
+msgstr "Cookie varsel innhold"
+
+#: includes/controller/controller-cookie.php:408
+msgid "Display cookie notice on all pages"
+msgstr "Vise cookie varsel på alle sider"
+
+#: includes/controller/controller-cookie.php:416
+msgid "Select pages to display cookie notice on"
+msgstr "Velg sider som skal vise cookie varsel"
+
+#: includes/controller/controller-cookie.php:424
+msgid "Block all cookies until user consents"
+msgstr "Blokker alle cookies til bruker godtar"
+
+#: includes/controller/controller-cookie.php:432
+#: includes/controller/controller-policy.php:94
+#: includes/controller/controller-terms.php:298
+msgid "Set consent expire time [s]"
+msgstr "Angi tid før samtykke utløper [s]"
+
+#: includes/controller/controller-cookie.php:440
+msgid "Text color"
+msgstr "Tekstfarge"
+
+#: includes/controller/controller-cookie.php:448
+msgid "Background color"
+msgstr "Bakgrunnsfarge"
+
+#: includes/controller/controller-cookie.php:456
+msgid "Position"
+msgstr "Posisjon"
+
+#: includes/controller/controller-cookie.php:464
+msgid "Distance from border [px]"
+msgstr "Avstand fra kant [px]"
+
+#: includes/controller/controller-cookie.php:472
+msgid "Custom style CSS"
+msgstr "Tilpasset stil CSS"
+
+#: includes/controller/controller-cookie.php:480
+msgid "Read more page"
+msgstr "Les mer side"
+
+#: includes/controller/controller-cookie.php:671
+msgid "Front page"
+msgstr "Forside"
+
+#: includes/controller/controller-cookie.php:674
+msgid "Posts page"
+msgstr "Post side"
+
+#: includes/controller/controller-cookie.php:699
+msgid "Bottom left"
+msgstr "Nederst til venstre"
+
+#: includes/controller/controller-cookie.php:700
+msgid "Bottom right"
+msgstr "Nederst til høyre"
+
+#: includes/controller/controller-cookie.php:701
+msgid "Top left"
+msgstr "Øverst til venstre"
+
+#: includes/controller/controller-cookie.php:702
+msgid "Top right"
+msgstr "Øverst til høyre"
+
+#: includes/controller/controller-data-access.php:180
+msgid "[Ultimate GDPR] New Data Access request"
+msgstr "[Ultimate GDPR] Forespørsel om datatilgang"
+
+#: includes/controller/controller-data-access.php:182
+msgid "There is a new data access request from email %s. See details at %s"
+msgstr ""
+"Det er en ny forespørsel om datatilgang fra epost %s. Se detaljer på %s"
+
+#: includes/controller/controller-data-access.php:293
+msgid "Data was sent to emails: %s"
+msgstr "Data ble sendt ti epost: %s"
+
+#: includes/controller/controller-data-access.php:335
+msgid "The following emails were removed from list: %s"
+msgstr "Følgende epost ble fjernet fra listen: %s"
+
+#: includes/controller/controller-data-access.php:415
+#: includes/views/admin/admin-data-access.php:67
+#: includes/views/admin/admin-forgotten.php:106
+msgid "Not sent"
+msgstr "IKKE SENDT"
+
+#: includes/controller/controller-data-access.php:449
+#: includes/controller/controller-data-access.php:450
+msgid "Data Access"
+msgstr "Datatilgang"
+
+#: includes/controller/controller-data-access.php:487
+#: includes/controller/controller-forgotten.php:552
+msgid "Data access settings"
+msgstr "Innstillingene for datatilgang"
+
+#: includes/controller/controller-data-access.php:497
+#: includes/controller/controller-forgotten.php:562
+#: includes/controller/controller-forgotten.php:578
+#: includes/controller/controller-forgotten.php:586
+msgid "Email to send new requests notifications to"
+msgstr "Epost for sending av nye varsler"
+
+#: includes/controller/controller-data-access.php:583
+msgid "[Ultimate GDPR] Data request results from %s"
+msgstr "[Ultimate GDPR] Forespørsel om data fra %s"
+
+#: includes/controller/controller-data-access.php:584
+msgid "Please find data attached"
+msgstr "Vennligst finn data vedlagt"
+
+#: includes/controller/controller-forgotten.php:129
+#: includes/controller/controller-forgotten.php:130
+msgid "Right To Be Forgotten"
+msgstr "Rett til å bli glemt"
+
+#: includes/controller/controller-forgotten.php:200
+msgid "[Ultimate GDPR] Please confirm request to be forgotten from %s"
+msgstr "[Ultimate GDPR] Vennligst bekreft ditt ønske om å bli glemt fra %s"
+
+#: includes/controller/controller-forgotten.php:238
+msgid "Your request was already confirmed."
+msgstr "Forespørselen din ble mottatt."
+
+#: includes/controller/controller-forgotten.php:263
+msgid "Your request was successfully confirmed."
+msgstr "Forespørselen din ble mottatt."
+
+#: includes/controller/controller-forgotten.php:274
+msgid "[Ultimate GDPR] New Right To Be Forgotten request from %s"
+msgstr "[Ultimate GDPR] Ny rett til å bli glemt forespørsel fra %s"
+
+#: includes/controller/controller-forgotten.php:282
+msgid ""
+"There is a new Right To Be Forgotten request from email %s. See details at %s"
+msgstr ""
+"Det er en ny rett til å bli glemt forespørsel fra epost %s. Se detaljer på %s"
+
+#: includes/controller/controller-forgotten.php:302
+msgid "Your request was not confirmed. Please check the link or contact admin."
+msgstr ""
+"Forespørselen ble ikke bekreftet. Kontroller koblingen eller kontakt admin."
+
+#: includes/controller/controller-forgotten.php:418
+msgid "[Ultimate GDPR] Emails were sent to the following users: %s"
+msgstr "[Ultimate GDPR] Epost ble sendt til følgende brukere: %s"
+
+#: includes/controller/controller-forgotten.php:460
+msgid "[Ultimate GDPR] The following emails were removed from list: %s"
+msgstr "[Ultimate GDPR] Følgende eposter ble fjernet fra listen: %s"
+
+#: includes/controller/controller-forgotten.php:490
+msgid "Non existing service id: %s"
+msgstr "Ikke eksisterende service id: %s"
+
+#: includes/controller/controller-forgotten.php:510
+msgid "There was an error forgetting %s service: %s"
+msgstr "Det skjedde en feil ved glemming av %s service: %s"
+
+#: includes/controller/controller-forgotten.php:534
+msgid "[Ultimate GDPR] Services data were removed"
+msgstr "[Ultimate GDPR] Service data ble fjernet"
+
+#: includes/controller/controller-forgotten.php:570
+msgid ""
+"Set custom URL to the page containing Ultimate GDPR shortcode for e-mail "
+"confirmations (or leave empty for autodetect)"
+msgstr ""
+"Set valgfri URL til side som inneholder Ultimate GDPR shortcode for epost "
+"bekreftelser (eller la være tom for autodetect)"
+
+#: includes/controller/controller-forgotten.php:670
+#: includes/controller/controller-forgotten.php:671
+msgid "[Ultimate GDPR] Your data has been forgotten"
+msgstr "[Ultimate GDPR] Dataene har blitt glemt"
+
+#: includes/controller/controller-plugins.php:135
+#: includes/controller/controller-plugins.php:136
+msgid "Plugins"
+msgstr "Plugins"
+
+#: includes/controller/controller-policy.php:20
+#: includes/controller/controller-policy.php:21
+#: includes/controller/controller-policy.php:45
+msgid "Privacy Policy"
+msgstr "Personvern"
+
+#: includes/controller/controller-policy.php:54
+#: includes/controller/controller-pseudonymization.php:148
+#: includes/controller/controller-terms.php:258
+msgid "Instructions"
+msgstr "Instruksjoner"
+
+#: includes/controller/controller-policy.php:62
+msgid "Require logged in users to accept Privacy Policy (redirect)"
+msgstr "Kreve påloggede brukere til å godta personvern (redirect)"
+
+#: includes/controller/controller-policy.php:70
+msgid "Require not logged in guest to accept Privacy Policy (redirect)"
+msgstr "Kreve ikke-innlogget gjest å akseptere personvern (redirect)"
+
+#: includes/controller/controller-policy.php:78
+msgid "Page with existing Privacy Policy"
+msgstr "Side med eksiterende personvern"
+
+#: includes/controller/controller-policy.php:86
+msgid "Page to redirect to after Privacy Policy accepted"
+msgstr "Side å omdirigere til etter at personvern er godkjent"
+
+#: includes/controller/controller-policy.php:102
+msgid ""
+"Privacy Policy version, eg. 1.0 (if you change it, user has to give consent "
+"again)"
+msgstr ""
+"Personvernpolicy versjon, f.eks. 1.0 (Hvis du endrer må bruker gi samtykke "
+"igjen)"
+
+#: includes/controller/controller-policy.php:110
+msgid ""
+"Redirect to Privacy Policy first (if Terms and Conditions also redirect)"
+msgstr "Omadressere til personvern først (hvis vilkårene også omadressere)"
+
+#: includes/controller/controller-policy.php:125
+msgid ""
+"1. Place %s shortcode on your existing Privacy Policy page to add an accept "
+"button.%s2. Select Privacy Policy page below, so users can be redirected "
+"there to give their consent."
+msgstr ""
+"1. Sett inn %s shortcode på din eksisterende personvern side for å legge til "
+"en ‘godta’ knapp.%s2. Velg personvern side under, så brukere kan bli "
+"redirectet til riktig side."
+
+#: includes/controller/controller-policy.php:455
+#: includes/controller/controller-terms.php:443
+msgid "Last visited page"
+msgstr "Sist besøkte siden"
+
+#: includes/controller/controller-policy.php:456
+#: includes/controller/controller-terms.php:444
+msgid "Don't redirect"
+msgstr "Ikke redirect"
+
+#: includes/controller/controller-pseudonymization.php:107
+#: includes/controller/controller-pseudonymization.php:108
+#: includes/controller/controller-pseudonymization.php:131
+msgid "Pseudonymization"
+msgstr "Anonymisering"
+
+#: includes/controller/controller-pseudonymization.php:122
+#: includes/controller/controller-pseudonymization.php:255
+msgid "Encryption is not possible. Please check your openssl library."
+msgstr "Kryptering er ikke mulig. Kontroller openssl biblioteket."
+
+#: includes/controller/controller-pseudonymization.php:140
+msgid "Warning"
+msgstr "Advarsel"
+
+#: includes/controller/controller-pseudonymization.php:156
+msgid "Automatically encrypt new data"
+msgstr "Automatisk kryptering av ny data"
+
+#: includes/controller/controller-pseudonymization.php:164
+msgid ""
+"Automatically decrypt all data on the fly (if you have anything encrypted, "
+"this is recommended)"
+msgstr ""
+"Automatisk dekryptering av data (hvis du har noe kryptert er dette anbefalt)"
+
+#: includes/controller/controller-pseudonymization.php:172
+msgid "Select data to encrypt"
+msgstr "Velg data for kryptering"
+
+#: includes/controller/controller-pseudonymization.php:220
+msgid ""
+"This feature is experimental and may lead to irreversible data lost! After "
+"encryption, it may be impossible for anyone to decrypt your data. "
+msgstr ""
+"Denne funksjonen er eksperimentell og kan føre til at uopprettelige data går "
+"tapt! Etter kryptering kan det være umulig for noen å dekryptere dataene "
+"dine. "
+
+#: includes/controller/controller-pseudonymization.php:232
+msgid ""
+"Pseudonymization feature allows you to encrypt some of data stored in "
+"database. That way if anyone got access to your database, user data would be "
+"pseudonymized. Database contents are permanently encrypted and can be "
+"decrypted on the fly when accesed by users. You can also permanently decrypt "
+"all your contents."
+msgstr ""
+"Anonymiseringsfunksjonen lar deg kryptere noe data lagret i databasen. På "
+"den måten hvis noen fikk tilgang til databasen, ville brukerdata bli "
+"anonymisert. Databasens innhold er kryptert permanent og kan dekrypteres når "
+"det blir aksessert av brukerne. Du kan også dekryptere hele innholdet "
+"permanent."
+
+#: includes/controller/controller-pseudonymization.php:235
+msgid "How to use:"
+msgstr "Hvordan bruke:"
+
+#: includes/controller/controller-pseudonymization.php:237
+msgid "1. Make a backup"
+msgstr "1. Lage en backup"
+
+#: includes/controller/controller-pseudonymization.php:239
+msgid "2. Select which data to encrypt"
+msgstr "2. Velg dataene du vil kryptere"
+
+#: includes/controller/controller-pseudonymization.php:241
+msgid ""
+"3. (Optionally) Select 'automatically encrypt new data' for continuous "
+"encryption of all incoming data"
+msgstr ""
+"3. (Valgfritt) Velg ‘automatisk kryptering av ny data’ for kryptering av all "
+"innkomne data"
+
+#: includes/controller/controller-pseudonymization.php:243
+msgid "4. Click 'Save changes'"
+msgstr "4. Klikk ‘lagre endringer’"
+
+#: includes/controller/controller-pseudonymization.php:245
+msgid ""
+"5. (Optionally) Click 'Encrypt selected' to encrypt all current data which "
+"has not been yet encrypted"
+msgstr ""
+"5. (Valgfritt) Velg ‘krypter valgte’ for å kryptere alle valgte data som "
+"ikke er kryptert enda"
+
+#: includes/controller/controller-pseudonymization.php:269
+msgid "Data encrypted successfully"
+msgstr "Data dekryptert vellykket"
+
+#: includes/controller/controller-pseudonymization.php:279
+msgid "Decryption is not possible. Please check your openssl library."
+msgstr "Dekryptering er ikke mulig. Vennligst sjekk ditt openssl-bibliotek."
+
+#: includes/controller/controller-pseudonymization.php:293
+msgid "Data decrypted successfully"
+msgstr "Data dekryptert vellykket"
+
+#: includes/controller/controller-services.php:64
+#: includes/controller/controller-services.php:65
+msgid "Services"
+msgstr "Tjenester"
+
+#: includes/controller/controller-services.php:81
+msgid "Services options"
+msgstr "Tjeneste valg"
+
+#: includes/controller/controller-terms.php:78
+#: includes/controller/controller-terms.php:79
+msgid "Terms And Conditions"
+msgstr "Vilkår og betingelser"
+
+#: includes/controller/controller-terms.php:249
+msgid "Terms and Conditions"
+msgstr "Vilkår og betingelser"
+
+#: includes/controller/controller-terms.php:266
+msgid "Require logged in users to accept Terms and Conditions (redirect)"
+msgstr ""
+"Krev at innloggede brukere må godta vilkår og betingelser (omadressering)"
+
+#: includes/controller/controller-terms.php:274
+msgid "Require not logged in guest to accept Terms and Conditions (redirect)"
+msgstr ""
+"Krev ikke-innlogget gjester å godta vilkår og betingelser (omadressering)"
+
+#: includes/controller/controller-terms.php:282
+msgid "Page with existing Terms and Conditions"
+msgstr "Side med vilkår og betingelser"
+
+#: includes/controller/controller-terms.php:290
+msgid "Page to redirect to after Terms accepted"
+msgstr "Side for viderekobling etter aksept av Vilkår"
+
+#: includes/controller/controller-terms.php:306
+msgid ""
+"Terms version, eg. 1.0 (if you change it, user has to give consent again)"
+msgstr ""
+"Personvernpolicy versjon, f.eks. 1.0 (Hvis du endrer må bruker gi samtykke "
+"igjen)"
+
+#: includes/controller/controller-terms.php:319
+msgid ""
+"1. Place %s shortcode on your existing Terms and Conditions page to add an "
+"accept button.%s2. Select Terms and Conditions page below, so users can be "
+"redirected there to give their consent."
+msgstr ""
+"1. Sett inn %s shortcode på din eksisterende personvern side for å legge til "
+"en ‘godta knapp’.%s2. Velg personvern side under, så brukere kan bli "
+"redirectet til riktig side."
+
+#: includes/helpers.php:104
+msgid "To confirm, please follow this link: %s"
+msgstr "For å bekrefte, vennligst følg denne linken: %s"
+
+#: includes/service/service-contact-form-7.php:67
+msgid "[%s] Description"
+msgstr "[%s] beskrivelse"
+
+#: includes/service/service-contact-form-7.php:75
+msgid "[Contact Form 7] Inject consent checkbox to all forms"
+msgstr "[Contact Form 7] Sett inn samtykke i alle skjema"
+
+#: includes/service/service-contact-form-7.php:83
+msgid ""
+"[Contact Form 7] Inject consent checkbox as the first field instead of the "
+"last"
+msgstr ""
+"[Contact Form 7] Sett inn ‘godta’ boks i begynnelsen i stede for på slutten"
+
+#: includes/service/service-contact-form-7.php:159
+msgid "Contact Form 7 gathers data entered by users in forms"
+msgstr "Contact Form 7 samler inn data som brukere skriver inn i skjema"
+
+#: includes/service/service-events-manager.php:94
+msgid "[Events Manager] Description"
+msgstr "[Events Manager] Beskrivelse"
+
+#: includes/service/service-events-manager.php:102
+msgid "[Events Manager] Inject consent checkbox to all forms"
+msgstr "[Events Manager] Sett inn ‘godta’ boks i alle skjema"
+
+#: includes/service/service-events-manager.php:158
+msgid "%s is required."
+msgstr "%s er påkrevd."
+
+#: includes/service/service-events-manager.php:159
+msgid "Consent"
+msgstr "Samtykke"
+
+#: includes/service/service-events-manager.php:173
+msgid "Events Manager gathers data entered by users in booking order forms"
+msgstr "Events Manager samler data brukere har skrevet inn i skjema"
+
+#: includes/service/service-gravity-forms.php:87
+msgid "[Gravity Forms] Description"
+msgstr "[Gravity Form] Beskrivelse"
+
+#: includes/service/service-gravity-forms.php:95
+msgid "[Gravity Forms] Inject consent checkbox to all forms"
+msgstr "[Gravity Forms] Sett inn ‘godta’ boks i alle skjema"
+
+#: includes/service/service-gravity-forms.php:103
+msgid ""
+"[Gravity Forms] Inject consent checkbox as the first field instead of the "
+"last"
+msgstr ""
+"[Gravity Forms] Sett inn ‘godta’ boks i begynnelsen i stede for på slutten"
+
+#: includes/service/service-gravity-forms.php:111
+msgid "Gravity Forms"
+msgstr "Gravity Forms"
+
+#: includes/service/service-gravity-forms.php:241
+#: includes/service/service-gravity-forms.php:242
+#: includes/views/admin/admin-plugins.php:71
+#: includes/views/admin/admin-plugins.php:89
+msgid "Yes"
+msgstr "Ja"
+
+#: includes/service/service-gravity-forms.php:283
+msgid "Gravity forms gathers data entered by users in forms"
+msgstr "Gravity forms samler inn data som brukere skriver inn i skjema"
+
+#: includes/service/service-mailchimp.php:68
+msgid "[Mailchimp] Description"
+msgstr "[Mailchimp] Beskrivelse"
+
+#: includes/service/service-mailchimp.php:76
+msgid "[Mailchimp] Inject consent checkbox to order fields"
+msgstr "[Mailchimp] Sett inn samtykke bokse i bestillingsfelt"
+
+#: includes/service/service-mailchimp.php:84
+msgid ""
+"[Mailchimp] Inject consent checkbox as the first field instead of the last"
+msgstr ""
+"[Mailchimp] Sett inn ‘godta’ boks i begynnelse av i stede for på slutten"
+
+#: includes/service/service-mailchimp.php:169
+msgid "Consent is mandatory to proceed"
+msgstr "Samtykke er obligatorisk for å fortsette"
+
+#: includes/service/service-mailchimp.php:179
+msgid "Mailchimp gathers data entered by users in forms"
+msgstr "Mailchimp samler inn data som brukere skriver inn i skjema"
+
+#: includes/service/service-woocommerce.php:55
+#: includes/service/service-woocommerce.php:122
+#: includes/service/service-woocommerce.php:146
+msgid "Woocommerce"
+msgstr "Woocommerce"
+
+#: includes/service/service-woocommerce.php:130
+msgid "[Woocommerce] Description"
+msgstr "[Woocommerce] Beskrivelse"
+
+#: includes/service/service-woocommerce.php:138
+msgid "[Woocommerce] Inject consent checkbox to order fields"
+msgstr "[Woocommerce] Sett inn samtykke boks i bestillingsfelt"
+
+#: includes/service/service-woocommerce.php:154
+msgid "[Woocommerce] Pseudonymize first and last name"
+msgstr "[Woocommerce] Anonymiser for- og etternavn"
+
+#: includes/service/service-woocommerce.php:162
+msgid "[Woocommerce] Pseudonymize address information"
+msgstr "[Woocommerce] Anonymiser adresseinformasjon"
+
+#: includes/service/service-woocommerce.php:170
+msgid "[Woocommerce] Pseudonymize billing email"
+msgstr "[Woocommerce] Anonymoser faktura e-post"
+
+#: includes/service/service-woocommerce.php:356
+msgid "WooCommerce gathers data entered by users in shop orders"
+msgstr "WooCommerce samler inn data som brukere skriver inn i skjema"
+
+#: includes/service/service-wp-comments.php:25
+msgid "WP Comments"
+msgstr "WP kommentarer"
+
+#: includes/service/service-wp-comments.php:56
+msgid "Anonymous"
+msgstr "Annonym"
+
+#: includes/service/service-wp-comments.php:68
+msgid "Could not update comment data for comments: %s"
+msgstr "Kunne ikke oppdatere kommentardata for kommentar: %s"
+
+#: includes/service/service-wp-comments.php:87
+msgid "[WP Comments] Description"
+msgstr "[WP Comments] Beskrivelse"
+
+#: includes/service/service-wp-comments.php:95
+msgid "[WP Comments] Inject consent checkbox to comments fields"
+msgstr "[WP Comments] Sett inn samtykke boks i kommentarfelt"
+
+#: includes/service/service-wp-comments.php:155
+msgid "Please give consent to collecting your data"
+msgstr "Vennligst gi samtykke til innsamling av data"
+
+#: includes/service/service-wp-comments.php:164
+msgid "WordPress Comments are data entered by users in comments"
+msgstr "Wordpress Comment er data som brukere skriver inn i skjema"
+
+#: includes/service/service-wp-posts.php:27
+msgid "WordPress Posts"
+msgstr "WordPress Innlegg"
+
+#: includes/service/service-wp-posts.php:80
+msgid "Could not update post data for posts: %s"
+msgstr "Kan ikke oppdatere post-dataene for innlegg: %s"
+
+#: includes/service/service-wp-posts.php:92
+msgid "[WP Posts] Delete posts instead of reassign to different user?"
+msgstr "[WP Posts] Slett innlegg istedenfor å overføre til annen bruker?"
+
+#: includes/service/service-wp-posts.php:108
+msgid "[WordPress Posts] Description"
+msgstr "[WordPress Posts] Beskrivelse"
+
+#: includes/service/service-wp-posts.php:116
+msgid ""
+"[WP Posts] Enter the user email whom the posts will be reassigned to "
+"(default is admin)"
+msgstr ""
+"[WP innlegg] Fyll inn e-post som skal behandle forespørsel (standard er "
+"admin)"
+
+#: includes/service/service-wp-posts.php:174
+msgid "WordPress posts author data"
+msgstr "WordPress poster forfatter"
+
+#: includes/service/service-wp-user.php:23
+#: includes/service/service-wp-user.php:60
+msgid "WP User data"
+msgstr "WP Brukerdata"
+
+#: includes/service/service-wp-user.php:49
+msgid "Could not delete user data for user: %s"
+msgstr "Kan ikke slette brukerdata for bruker: %s"
+
+#: includes/service/service-wp-user.php:76
+msgid "[WP User data] Description"
+msgstr "[WP Brukerdata] Beskrivelse"
+
+#: includes/service/service-wp-user.php:84
+msgid "[WP User data] Pseudonymize first and last name"
+msgstr "[WP bruker data] Pseudonymize fornavn og etternavn"
+
+#: includes/service/service-wp-user.php:179
+msgid "WordPress user data stored as user meta data in database"
+msgstr "WordPress brukerdata lagret som bruker metadata i databasen"
+
+#: includes/views/admin/admin-breach-send.php:17
+msgid "Emails were sent."
+msgstr "E-poster ble sendt."
+
+#: includes/views/admin/admin-breach-send.php:25
+msgid "You will send emails to the following emails:"
+msgstr "Du vil sende epost til følgende eposter:"
+
+#: includes/views/admin/admin-breach-send.php:40
+msgid "Send"
+msgstr "Send"
+
+#: includes/views/admin/admin-breach.php:30
+msgid "Press 'Save changes' before sending emails if you changed any options"
+msgstr ""
+"Trykk ‘Lagre endringer’ før utsendelse av epost hvis du har endret noen "
+"innstillinger"
+
+#: includes/views/admin/admin-breach.php:37
+msgid "Go to send emails screen"
+msgstr "Gå til ’send post’ skjerm"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:17
+msgid "Introduction"
+msgstr "Introduksjon"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:21
+msgid ""
+"The GDPR was approved and adopted by the EU Parliament in April 2016. The "
+"regulation will take effect after a two-year transition period and, unlike a "
+"Directive it does not require any enabling legislation to be passed by "
+"government; meaning it will be in force May 2018."
+msgstr ""
+"GDPR ble godkjent og vedtatt av EU-parlamentet i April 2016. Forskrift trer "
+"i kraft mai 2018."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:25
+msgid ""
+"The GDPR not only applies to organisations located within the EU but it will "
+"also apply to organisations located outside of the EU if they offer goods or "
+"services to, or monitor the behaviour of, EU data subjects. It applies to "
+"all companies processing and holding the personal data of data subjects "
+"residing in the European Union, regardless of the company's location."
+msgstr ""
+"GDPR gjelder ikke bare for firma lokalisert i EU, men gjelder også for de "
+"utenfor EU som tilbyr tjenester til personer tilhørende EU."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:30
+msgid ""
+"This plugin will create a form where users can request access to or deletion "
+"of their personal data, stored on\n"
+"        your website. It is also possible to:"
+msgstr ""
+"Denne plugin vil opprette et skjema hvor brukere kan be om tilgang til eller "
+"sletting av personopplysninger,\n"
+"\n"
+"        på nettstedet ditt. Det er også mulig å:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:35
+msgid ""
+"create a custom cookie notice and block all cookies until cookie consent is "
+"given"
+msgstr ""
+"lage en egen ‘cookie-melding’ og blokkere alle cookies inntil godkjenning av "
+"cookies er gitt"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:36
+msgid ""
+"set up redirects for your Terms and Conditions and Privacy Policy pages "
+"until consent is given"
+msgstr ""
+"sette opp viderekoblinger til dine vilkår og pesonvernbestemmelser inntil "
+"aksept blir gitt"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:37
+msgid ""
+"browse user requests for data access/deletion and set custom email "
+"notifications"
+msgstr ""
+"bla gjennom forespørsler om datatilgang/sletting og sett valgfri epostkonto "
+"for varsling"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:38
+msgid ""
+"send custom email informing about data breach to all users which left their "
+"email at your site"
+msgstr ""
+"send e-post med informasjon om databrudd til alle brukere som har sendt e-"
+"posten deres på nettstedet ditt"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:39
+msgid "automatically add consent boxes for various forms on your website"
+msgstr "automatisk legg til ‘godta’ bokser for skjema på nettsiden"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:40
+msgid "pseudonymize some of user data stored in database"
+msgstr "anonymiser noe av brukerdata som er lagret i databasen"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:41
+msgid "check currently activated plugins for GDPR compliance"
+msgstr "sjekk aktiverte plugins for GDPR compliance"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:46
+msgid ""
+"To start, browse through settings. Then, create a new page with shortcode: "
+"[ultimate_gdpr_myaccount]"
+msgstr ""
+"For å starte, kan du bla gjennom innstillingene. Deretter oppretter du en ny "
+"side med shortcode: [ultimate_gdpr_myaccount]"
+
+#: includes/views/admin/admin-data-access-user-details.php:16
+msgid "Collected data for user: %s"
+msgstr "Innsamlet data for bruker: %s"
+
+#: includes/views/admin/admin-data-access-user-details.php:20
+#: includes/views/admin/admin-data-access-user-details.php:34
+msgid "Go back"
+msgstr "Gå tilbake"
+
+#: includes/views/admin/admin-data-access-user-details.php:26
+msgid "No data collected for this service"
+msgstr "Ingen data innsamlet for denne tjenesten"
+
+#: includes/views/admin/admin-data-access.php:41
+msgid "Data access requests list"
+msgstr "Data forespørsler liste"
+
+#: includes/views/admin/admin-data-access.php:46
+#: includes/views/admin/admin-forgotten.php:44
+msgid "User ID"
+msgstr "Bruker ID"
+
+#: includes/views/admin/admin-data-access.php:47
+#: includes/views/admin/admin-forgotten.php:45
+msgid "Email"
+msgstr "Epost"
+
+#: includes/views/admin/admin-data-access.php:48
+#: includes/views/admin/admin-forgotten.php:47
+msgid "Date of request"
+msgstr "Dato for forespørsel"
+
+#: includes/views/admin/admin-data-access.php:49
+msgid "Date of data sent"
+msgstr "Datoen for data sendt"
+
+#: includes/views/admin/admin-data-access.php:50
+msgid "Select for action"
+msgstr "Velg for handling"
+
+#: includes/views/admin/admin-data-access.php:51
+msgid "See details"
+msgstr "Se detaljer"
+
+#: includes/views/admin/admin-data-access.php:64
+#: includes/views/admin/admin-forgotten.php:62
+msgid "Not registered"
+msgstr "Ikke registrert"
+
+#: includes/views/admin/admin-data-access.php:75
+msgid "Preview data"
+msgstr "Forhåndsvis data"
+
+#: includes/views/admin/admin-data-access.php:94
+msgid "Send data to selected emails"
+msgstr "Sende data til valgte e-post"
+
+#: includes/views/admin/admin-data-access.php:96
+#: includes/views/admin/admin-forgotten.php:127
+msgid "Remove selected requests from list"
+msgstr "Fjern valgte element fra lista"
+
+#: includes/views/admin/admin-data-access.php:98
+#: includes/views/admin/admin-forgotten.php:129
+msgid "Remove all sent requests from list"
+msgstr "Fjern alle sendte forespørsler fra liste"
+
+#: includes/views/admin/admin-forgotten.php:39
+msgid "Right To Be Forgotten requests list"
+msgstr "‘Rett til å bli glemt’ forespørsxlsliste"
+
+#: includes/views/admin/admin-forgotten.php:46
+msgid "Services to forget (user selected)"
+msgstr "Tjenester å glemme (brukervalgt)"
+
+#: includes/views/admin/admin-forgotten.php:48
+msgid "Date of mail sent"
+msgstr "Dato for sendt e-post"
+
+#: includes/views/admin/admin-forgotten.php:49
+msgid "Email user / remove request"
+msgstr "Send epost til bruker / fjerne forespørsel"
+
+#: includes/views/admin/admin-forgotten.php:69
+msgid "Select all"
+msgstr "Velg alle"
+
+#: includes/views/admin/admin-forgotten.php:88
+msgid "Forgotten at %s"
+msgstr "Glemt %s"
+
+#: includes/views/admin/admin-forgotten.php:125
+msgid "Forget and notify selected users"
+msgstr "Slett og varsle valgte brukere"
+
+#: includes/views/admin/admin-plugins.php:19
+msgid "Plugin"
+msgstr "Plugin"
+
+#: includes/views/admin/admin-plugins.php:20
+msgid "Collects user data"
+msgstr "Samler brukerdata"
+
+#: includes/views/admin/admin-plugins.php:21
+msgid "Compatible with Ultimate GDPR"
+msgstr "Kompatibel med Ultimate GDPR"
+
+#: includes/views/admin/admin-plugins.php:73
+#: includes/views/admin/admin-plugins.php:93
+msgid "No"
+msgstr "Nei"
+
+#: includes/views/admin/admin-plugins.php:75
+msgid "Probably"
+msgstr "Sannsynligvis"
+
+#: includes/views/admin/admin-plugins.php:77
+msgid "Unknown"
+msgstr "Ukjent"
+
+#: includes/views/admin/admin-plugins.php:91
+msgid "Partly"
+msgstr "Delvis"
+
+#: includes/views/admin/admin-pseudonymization.php:40
+msgid ""
+"Press 'Save changes' before pressing encryption buttons if you changed any "
+"options"
+msgstr ""
+"Trykk på \"Lagre endringer\" før du trykker på krypteringsknappen hvis du "
+"har endret noen alternativer"
+
+#: includes/views/admin/admin-pseudonymization.php:45
+msgid "Encrypt selected"
+msgstr "Kryptere valgte"
+
+#: includes/views/admin/admin-pseudonymization.php:47
+msgid "Decrypt selected"
+msgstr "Dekrypter valgte"
+
+#: includes/views/cookie-popup.php:39
+#: includes/views/shortcode/shortcode-policy-accept.php:31
+#: includes/views/shortcode/shortcode-terms-accept.php:31
+msgid "Accept"
+msgstr "Godta"
+
+#: includes/views/cookie-popup.php:44
+msgid "Read more"
+msgstr "Les mer"
+
+#: includes/views/service/service-contact-form-7-consent-field.php:20
+#: includes/views/service/service-events-manager-consent-field.php:16
+#: includes/views/service/service-gravity-forms-consent-field.php:12
+#: includes/views/service/service-mailchimp-consent-field.php:15
+#: includes/views/service/service-woocommerce-consent-field.php:12
+#: includes/views/service/service-wp-comments-consent-field.php:15
+msgid "I consent to storage of my data according to Privacy Policy"
+msgstr "Jeg samtykker til lagring av mine data i henhold til personvernreglene"
+
+#: includes/views/shortcode/shortcode-myaccount.php:31
+msgid "Personal Data Access"
+msgstr "Personlig datatilgang"
+
+#: includes/views/shortcode/shortcode-myaccount.php:32
+msgid "Forget me"
+msgstr "Glem meg"
+
+#: includes/views/shortcode/shortcode-myaccount.php:37
+msgid ""
+"Below you can browser services which collect your personal data on this "
+"website. Check services you wish to be forgotten by. This will send a "
+"request to website admin."
+msgstr ""
+"Nedenfor kan du leser tjenester som samler dine personlige data på denne "
+"nettsiden. Kryss av tjenester du ønsker å bli glemt av. Dette vil sende en "
+"forespørsel til admin."
+
+#: includes/views/shortcode/shortcode-myaccount.php:74
+msgid ""
+"I consent to my email being collected in order to process this request. See "
+"Privacy Policy page for more information."
+msgstr ""
+"Jeg samtykker i at min e-post blir samlet inn for å motta mine forespurte "
+"data. Se ‘Personvernside’ for mer informasjon."
+
+#: includes/views/shortcode/shortcode-myaccount.php:78
+#: includes/views/shortcode/shortcode-myaccount.php:97
+msgid "Submit"
+msgstr "Send inn"
+
+#: includes/views/shortcode/shortcode-myaccount.php:93
+msgid ""
+"I consent to my email being collected in order to receive my requested data. "
+"See Privacy Policy page for more information."
+msgstr ""
+"Jeg samtykker i at min e-post blir samlet inn for å motta mine forespurte "
+"data. Se ‘Personvernside’ for mer informasjon."
+
+#: includes/views/shortcode/shortcode-policy-accept.php:25
+msgid "You have already accepted Privacy Policy"
+msgstr "Du har allerede godtatt personvernerklæring"
+
+#: includes/views/shortcode/shortcode-terms-accept.php:25
+msgid "You have already accepted Terms and Conditions"
+msgstr "Du har allerede godtatt vilkår og betingelser"
+
+#. Description of the plugin/theme
+msgid ""
+"Complete General Data Protection Regulation compliance toolkit plugin for "
+"WordPress."
+msgstr "Komplett GDPR verktøy for WordPress."
+
+#. Author of the plugin/theme
+msgid "CreateIT"
+msgstr "CreateIT"
+
+msgid "Enabled"
+msgstr "Aktivert"
+
+msgid "Enable"
+msgstr "Aktiver"
+
+msgid "Disabled"
+msgstr "Deaktivert"
+
+msgid "Disable"
+msgstr "Deaktiver"

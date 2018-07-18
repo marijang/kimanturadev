@@ -1,0 +1,1092 @@
+#toplevel_page_ct-ultimate-gdpr {
+  position: relative;
+}
+
+#toplevel_page_ct-ultimate-gdpr:hover:before,
+#toplevel_page_ct-ultimate-gdpr:before {
+  content: url("images/menu-icon-active.png");
+  width: 15px;
+  height: 17px;
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  z-index: 1;
+}
+
+#toplevel_page_ct-ultimate-gdpr:focus:before,
+#toplevel_page_ct-ultimate-gdpr:active:before,
+.wp-menu-open#toplevel_page_ct-ultimate-gdpr:before {
+  content: url("images/menu-icon-inactive.png");
+}
+
+/* caussed woocommerce panels disappearance */
+/*.hidden {*/
+/*display: none!important;*/
+/*}*/
+.ct-ip-search-input {
+  font-style: italic;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-width: 0 0 2px;
+  border-style: solid;
+  border-color: #E8E8E8;
+  width: 100%;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.ct-iconpicker {
+  display: inline-block;
+}
+
+.ct-iconpicker .ct-ip-holder .ct-ip-icon {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #c1c1c1;
+  position: relative;
+  cursor: pointer;
+  background-color: white;
+}
+
+.ct-iconpicker .ct-ip-holder .ct-ip-icon::after {
+  content: "\f107";
+  font-family: "FontAwesome";
+  position: absolute;
+  top: -1px;
+  right: -20px;
+  width: 20px;
+  height: 40px;
+  border: 1px solid #c1c1c1;
+}
+
+.ct-iconpicker .ct-ip-popup {
+  max-width: 327px;
+  max-height: 312px;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 4px;
+  border: 1px solid #c1c1c1;
+  display: none;
+  background: white;
+}
+
+.ct-iconpicker .ct-ip-popup ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ct-iconpicker .ct-ip-popup ul li {
+  display: inline-block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  padding: 4px;
+}
+
+.ct-iconpicker .ct-ip-popup ul li a {
+  display: block;
+  color: #000;
+  line-height: 42px;
+  text-align: center;
+  border: 1px solid #c1c1c1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.ct-iconpicker .ct-ip-popup ul li a:hover {
+  color: #fff;
+  background-color: #565d66;
+  border-color: #565d66;
+}
+
+#acf-id {
+  display: none !important;
+}
+
+/* GENERAL */
+code {
+  color: #000 !important;
+}
+
+/* ACCORDION */
+.ct-acc-active {
+  background-color: #1c9bd7 !important;
+  color: #fff !important;
+}
+
+.ct-acc-active:after {
+  content: '\f077' !important;
+}
+
+/* END ACCORDION */
+.ct-ultimate-gdpr-wrap .card {
+  border-radius: 0;
+  max-width: 100%;
+}
+
+.toplevel_page_ct-ultimate-gdpr.auto-fold #wpcontent,
+[class*="ultimate-gdpr_page_ct-ultimate-gdpr-"].auto-fold #wpcontent,
+.post-type-ct_ugdpr_service.auto-fold #wpcontent {
+  padding: 0 10px;
+}
+
+.toplevel_page_ct-ultimate-gdpr #wpcontent,
+[class*="ultimate-gdpr_page_ct-ultimate-gdpr-"] #wpcontent,
+.post-type-ct_ugdpr_service #wpcontent {
+  background-color: #f1f1f1;
+}
+
+#wpbody-content > .ct-ultimate-gdpr-wrap {
+  padding-top: 75px;
+}
+
+.toplevel_page_ct-ultimate-gdpr .ct-ultimate-gdpr-inner-wrap p,
+[class*="ultimate-gdpr_page_ct-ultimate-gdpr-"] .ct-ultimate-gdpr-inner-wrap p,
+.post-type-ct_ugdpr_service .ct-ultimate-gdpr-inner-wrap p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 20px 0 0 0;
+}
+
+.toplevel_page_ct-ultimate-gdpr h2,
+[class*="ultimate-gdpr_page_ct-ultimate-gdpr-"] h2,
+.post-type-ct_ugdpr_service h2 {
+  font-size: 18px;
+}
+
+.toplevel_page_ct-ultimate-gdpr ol,
+[class*="ultimate-gdpr_page_ct-ultimate-gdpr-"] ol,
+.post-type-ct_ugdpr_service ol {
+  margin-top: 20px;
+}
+
+.toplevel_page_ct-ultimate-gdpr .ct-ultimate-gdpr-inner-wrap ol li,
+[class*="ultimate-gdpr_page_ct-ultimate-gdpr-"] .ct-ultimate-gdpr-inner-wrap ol li,
+.post-type-ct_ugdpr_service .ct-ultimate-gdpr-inner-wrap ol li {
+  margin-left: 20px;
+}
+
+.toplevel_page_ct-ultimate-gdpr .ct-ultimate-gdpr-inner-wrap li,
+[class*="ultimate-gdpr_page_ct-ultimate-gdpr-"] .ct-ultimate-gdpr-inner-wrap li,
+.post-type-ct_ugdpr_service .ct-ultimate-gdpr-inner-wrap li {
+  font-size: 13px;
+  margin-left: 20px;
+}
+
+.toplevel_page_ct-ultimate-gdpr .form-table input[type="text"],
+[class*="ultimate-gdpr_page_ct-ultimate-gdpr-"] .form-table input[type="text"],
+.post-type-ct_ugdpr_service .form-table input[type="text"],
+.toplevel_page_ct-ultimate-gdpr .form-table textarea,
+[class*="ultimate-gdpr_page_ct-ultimate-gdpr-"] .form-table textarea,
+.post-type-ct_ugdpr_service .form-table textarea,
+.toplevel_page_ct-ultimate-gdpr .form-table select,
+[class*="ultimate-gdpr_page_ct-ultimate-gdpr-"] .form-table select,
+.post-type-ct_ugdpr_service .form-table select {
+  width: 100%;
+}
+
+[class*="ct-ultimate-gdpr"] table {
+  max-width: 1228px;
+}
+
+[class*="ct-ultimate-gdpr"] .form-table th {
+  font-weight: 400;
+  min-width: 260px;
+  padding: 0;
+}
+
+[class*="ct-ultimate-gdpr"] .form-table td {
+  padding-bottom: 25px;
+}
+
+.ct-ultimate-gdpr-inner-wrap {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px #dcdcdc !important;
+  box-shadow: 0 0 5px #dcdcdc !important;
+  color: #444444;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 23px;
+  padding: 20px;
+}
+
+.ct-ultimate-gdpr-compact-list li {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.ct-ultimate-gdpr-head {
+  margin: 0 0 10px 0;
+  display: block;
+}
+
+.ct-ultimate-gdpr-link {
+  color: #0073aa;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.ct-ultimate-gdpr-inner-wrap p:first-child {
+  margin-top: 0;
+}
+
+table.ct-ultimate-gdpr-inner-wrap {
+  padding: 0;
+}
+
+.nav-tab-wrapper {
+  display: block;
+  padding-top: 25px;
+}
+
+h2 .nav-tab {
+  margin-right: 0;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+h2 .nav-tab:before {
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.nav-tab:first-child {
+  margin-left: 0;
+}
+
+.nav-tab-active,
+.nav-tab-active:focus,
+.nav-tab-active:focus:active,
+.nav-tab-active:hover {
+  -webkit-box-shadow: none;
+  border-bottom: 1px solid #ccc;
+  cursor: auto;
+  outline: none;
+  text-decoration: none;
+}
+
+.ct-ultimate-gdpr-wrap form {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 568px) {
+  .nav-tab {
+    padding: 5px 25px;
+  }
+  h2 .nav-tab {
+    padding: 5px 25px;
+    width: auto;
+  }
+  .nav-tab-active,
+  .nav-tab-active:focus,
+  .nav-tab-active:focus:active,
+  .nav-tab-active:hover {
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  h2.nav-tab-active {
+    border-bottom: none;
+  }
+}
+
+@media screen and (min-width: 812px) {
+  [class*="ct-ultimate-gdpr"] .form-table th {
+    padding-right: 40px;
+    padding-top: 25px;
+  }
+  [class*="ct-ultimate-gdpr"] .form-table td {
+    padding: 25px 0 48px;
+    vertical-align: top;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .toplevel_page_ct-ultimate-gdpr.auto-fold #wpcontent,
+  [class*="ultimate-gdpr_page_ct-ultimate-gdpr-"].auto-fold #wpcontent,
+  .post-type-ct_ugdpr_service.auto-fold #wpcontent {
+    padding: 0 20px;
+  }
+}
+
+/* PLUGIN BRANDING */
+.ct-ultimate-gdpr-wrap .ct-ultimate-gdpr-branding {
+  background-color: #1b9bd8;
+  height: 75px;
+  left: -20px;
+  padding-left: 20px;
+  padding-top: 15px;
+  position: absolute;
+  top: 46px;
+  width: 107%;
+  z-index: 0;
+}
+
+@media screen and (min-width: 667px) {
+  .ct-ultimate-gdpr-wrap .ct-ultimate-gdpr-branding {
+    top: 0;
+    width: 103%;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .ct-ultimate-gdpr-wrap .ct-ultimate-gdpr-branding {
+    width: 102%;
+  }
+}
+
+.ct-ultimate-gdpr-wrap .ct-ultimate-gdpr-img {
+  float: left;
+}
+
+.ct-ultimate-gdpr-wrap .text {
+  color: #fff;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.ct-ultimate-gdpr-wrap .ct-ultimate-gdpr-plugin-name {
+  font-size: 24px;
+  line-height: 20px;
+  margin-bottom: 3px;
+}
+
+/* END PLUGIN BRANDING */
+/* MESSAGE */
+.ct-ultimate-gdpr-message {
+  display: inline-block;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ct-ultimate-gdpr-msg-clone {
+  border-left: 5px solid #0085ba;
+  width: 100%;
+}
+
+.ct-ultimate-gdpr-msg-clone.msg-type {
+  font-size: 14px;
+}
+
+.ct-ultimate-gdpr-msg-clone.warning {
+  border-left: 5px solid #ee2c2c;
+}
+
+.ct-ultimate-gdpr-msg-clone h4 {
+  font-size: 13px;
+}
+
+/* END MESSAGE */
+/* CHECKBOX */
+.ct-ultimate-gdpr-checkbox-switch {
+  -moz-box-shadow: inset 0 0 10px #c1c1c1;
+  -webkit-box-shadow: inset 0 0 10px #c1c1c1;
+  background-color: #dcdcdc;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  color: #a0a0a0;
+  cursor: pointer;
+  max-width: 300px;
+  position: relative;
+  box-shadow: inset 0 0 10px #c1c1c1;
+}
+
+.ct-ultimate-gdpr-checkbox-switch .on,
+.ct-ultimate-gdpr-checkbox-switch .off {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px 0;
+  text-align: center;
+  width: 50%;
+}
+
+.ct-ultimate-gdpr-checkbox-switch .switch {
+  -webkit-transition: all .3s ease-in-out;
+  background-color: #0085ba;
+  border: 1px solid #0975a0;
+  border-left: 1px solid #1a92c1;
+  border-radius: 5px;
+  border-right: 1px solid #1a92c1;
+  border-top: 1px solid #54add1;
+  color: #fff;
+  cursor: default;
+  height: 100%;
+  left: 0;
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: all .3s ease-in-out;
+  width: 50%;
+}
+
+/* END CHECKBOX */
+/* TR CHILDREN AS BLOCK */
+@media screen and (min-width: 812px) {
+  .ct-ultimate-gdpr-wrap.ct-tab-1 .section-1 tr th,
+  .ct-ultimate-gdpr-wrap.ct-tab-1 .section-1 tr td,
+  .ct-ultimate-gdpr-wrap.ct-tab-2 .section-6 tr th,
+  .ct-ultimate-gdpr-wrap.ct-tab-2 .section-6 tr td {
+    display: block;
+    width: 100%;
+  }
+  .ct-ultimate-gdpr-wrap.ct-tab-3 .section-4 tbody tr:nth-child(3) th,
+  .ct-ultimate-gdpr-wrap.ct-tab-3 .section-4 tbody tr:nth-child(3) td {
+    display: block;
+    width: 200%;
+  }
+}
+
+/* END TR CHILDREN AS BLOCK */
+/* BOOTSTRAP CARD */
+.ct-ultimate-gdpr-wrap .card-columns {
+  -webkit-column-count: 1;
+  column-count: 1;
+}
+
+@media (min-width: 1366px) {
+  .ct-ultimate-gdpr-wrap .card-columns {
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+/* END BOOTSTRAP CARD */
+/* COMPATIBILITY */
+.widefat tfoot td,
+.widefat th,
+.widefat thead td {
+  font-size: 13px;
+}
+
+.widefat td,
+.widefat th {
+  padding: 8px 20px;
+}
+
+@media screen and (max-width: 782px) {
+  .ultimate-gdpr_page_ct-ultimate-gdpr-plugins .wp-list-table tr:not(.inline-edit-row):not(.no-items) td:not(.check-column) {
+    display: table-cell;
+  }
+}
+
+/* END COMPATIBILITY */
+/* COOKIE CONSENT */
+.ultimate-gdpr_page_ct-ultimate-gdpr-cookie .nav-tab {
+  width: 33.3%;
+}
+
+#cookie-popup,
+#cookie-advanced {
+  font-size: 0;
+}
+
+#cookie-popup:before {
+  content: 'Popup';
+}
+
+#cookie-advanced:before {
+  content: 'Advanced';
+}
+
+.ct-ultimate-gdpr-wrap .card {
+  border-radius: 0;
+}
+
+.ct-ultimate-gdpr-wrap .card-header {
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.ct-ultimate-gdpr-no-pad {
+  padding: 0;
+}
+
+.ultimate-gdpr_page_ct-ultimate-gdpr-cookie .ct-ultimate-gdpr-wrap .form-table th,
+.ultimate-gdpr_page_ct-ultimate-gdpr-cookie .ct-ultimate-gdpr-wrap .form-table td {
+  padding: 10px 20px;
+  width: 100%;
+}
+
+input.button.button-primary[name="ct-ultimate-gdpr-cookie-content-language"] {
+  margin-top: 10px;
+  text-align: center;
+  width: auto;
+}
+
+.ultimate-gdpr_page_ct-ultimate-gdpr-cookie .ct-ultimate-gdpr-wrap .ct-tab-3 .form-table.section-1 tbody th,
+.ultimate-gdpr_page_ct-ultimate-gdpr-cookie .ct-ultimate-gdpr-wrap .ct-tab-3 .form-table.section-1 tbody td {
+  display: block;
+  width: 100%;
+}
+
+.ct-ultimate-gdpr-width {
+  max-width: 1228px;
+}
+
+.ct-ultimate-gdpr-half-width {
+  display: inline-block;
+  max-width: 614px;
+  width: 100%;
+}
+
+@media screen and (min-width: 667px) {
+  .ultimate-gdpr_page_ct-ultimate-gdpr-cookie .nav-tab {
+    width: auto;
+  }
+  #cookie-popup,
+  #cookie-advanced {
+    font-size: 14px;
+  }
+  #cookie-popup:before,
+  #cookie-advanced:before {
+    content: '';
+    vertical-align: baseline;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  .ultimate-gdpr_page_ct-ultimate-gdpr-cookie #wpbody .form-table td select {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 812px) {
+  .ultimate-gdpr_page_ct-ultimate-gdpr-cookie .ct-ultimate-gdpr-wrap .form-table th,
+  .ultimate-gdpr_page_ct-ultimate-gdpr-cookie .ct-ultimate-gdpr-wrap .form-table td {
+    width: 50%;
+  }
+  .ultimate-gdpr_page_ct-ultimate-gdpr-cookie .ct-ultimate-gdpr-wrap .ct-tab-3 .form-table.section-1 tbody th,
+  .ultimate-gdpr_page_ct-ultimate-gdpr-cookie .ct-ultimate-gdpr-wrap .ct-tab-3 .form-table.section-1 tbody td {
+    display: block;
+    width: 200%;
+  }
+}
+
+/* END COOKIE CONSENT */
+/* ADVANCED SETTINGS ( COOKIE ) */
+.ct-ultimate-gdpr-wrap .form-table.section-3 {
+  margin-top: 0;
+}
+
+.ct-ultimate-gdpr-wrap.ct-tab-3 .form-table.section-3 th {
+  -webkit-transition: all .3s ease-in-out;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #eeeeee;
+  border-top: 1px solid #eeeeee;
+  cursor: pointer;
+  display: block;
+  padding-bottom: 12px;
+  padding-right: 30px;
+  padding-top: 12px;
+  position: relative;
+  transition: all .3s ease-in-out;
+  width: 100%;
+}
+
+.ct-ultimate-gdpr-wrap .form-table.section-3 tbody tr:first-child {
+  border-top: 0 solid;
+}
+
+.ct-ultimate-gdpr-wrap.ct-tab-3 .form-table.section-3 th:after,
+[class*="acc-head-"] th:after {
+  content: '\f078';
+  font-family: fontAwesome;
+  font-size: 10px;
+  position: absolute;
+  right: 10px;
+  top: calc( 50% - 7px);
+}
+
+.ct-ultimate-gdpr-wrap .form-table.section-3 td {
+  display: block;
+  width: 100%;
+}
+
+/* END ADVANCED SETTINGS ( COOKIE ) */
+/* COOKIE POPUP TAB 1 SECTION 1 */
+@media screen and (min-width: 1367px) {
+  .ct-tab-1 .card:nth-child(2),
+  .ct-tab-1 .card:nth-child(3) {
+    max-width: 604px;
+  }
+  .ct-ultimate-gdpr-wrap.ct-tab-1 .card:first-child {
+    max-width: 1228px;
+  }
+}
+
+/* END COOKIE POPUP TAB 1 SECTION 1 */
+/* SERVICES */
+.ultimate-gdpr_page_ct-ultimate-gdpr-services .card-body {
+  padding: 0;
+}
+
+.ultimate-gdpr_page_ct-ultimate-gdpr-services .form-table tbody tr {
+  padding: 20px;
+  display: block;
+}
+
+.ultimate-gdpr_page_ct-ultimate-gdpr-services .form-table th {
+  padding: 0;
+}
+
+.ultimate-gdpr_page_ct-ultimate-gdpr-services .form-table td {
+  padding: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 812px) {
+  .ultimate-gdpr_page_ct-ultimate-gdpr-services .form-table td {
+    padding-left: 20px;
+  }
+}
+
+/* END SERVICES */
+/* INTRODUCTION */
+.toplevel_page_ct-ultimate-gdpr .nav-tab,
+.ultimate-gdpr_page_ct-ultimate-gdpr-plugins .nav-tab {
+  width: 50%;
+}
+
+.toplevel_page_ct-ultimate-gdpr .ct-ultimate-gdpr-avail-sc li {
+  margin-left: 0;
+}
+
+@media screen and (min-width: 667px) {
+  .toplevel_page_ct-ultimate-gdpr .nav-tab,
+  .ultimate-gdpr_page_ct-ultimate-gdpr-plugins .nav-tab {
+    width: auto;
+  }
+}
+
+/* END INTRODUCTION */
+/*
+ * RIGHT TO BE FORGOTTEN
+ * DATA ACCESS
+ * DATA BREACH
+ * DATA RECTIFICATION
+ */
+.ultimate-gdpr_page_ct-ultimate-gdpr-forgotten .nav-tab,
+.ultimate-gdpr_page_ct-ultimate-gdpr-dataaccess .nav-tab,
+.ultimate-gdpr_page_ct-ultimate-gdpr-breach .nav-tab,
+.ultimate-gdpr_page_ct-ultimate-gdpr-rectification .nav-tab {
+  font-size: 0;
+  padding: 5px 8px;
+}
+
+.ultimate-gdpr_page_ct-ultimate-gdpr-forgotten .nav-tab:first-child:before,
+.ultimate-gdpr_page_ct-ultimate-gdpr-dataaccess .nav-tab:first-child:before,
+.ultimate-gdpr_page_ct-ultimate-gdpr-breach .nav-tab:first-child:before,
+.ultimate-gdpr_page_ct-ultimate-gdpr-rectification .nav-tab:first-child:before {
+  content: 'Forgotten';
+}
+
+.ultimate-gdpr_page_ct-ultimate-gdpr-forgotten .nav-tab:nth-child(2):before,
+.ultimate-gdpr_page_ct-ultimate-gdpr-dataaccess .nav-tab:nth-child(2):before,
+.ultimate-gdpr_page_ct-ultimate-gdpr-breach .nav-tab:nth-child(2):before,
+.ultimate-gdpr_page_ct-ultimate-gdpr-rectification .nav-tab:nth-child(2):before {
+  content: 'Access';
+}
+
+.ultimate-gdpr_page_ct-ultimate-gdpr-forgotten .nav-tab:nth-child(3):before,
+.ultimate-gdpr_page_ct-ultimate-gdpr-dataaccess .nav-tab:nth-child(3):before,
+.ultimate-gdpr_page_ct-ultimate-gdpr-breach .nav-tab:nth-child(3):before,
+.ultimate-gdpr_page_ct-ultimate-gdpr-rectification .nav-tab:nth-child(3):before {
+  content: 'Breach';
+}
+
+.ultimate-gdpr_page_ct-ultimate-gdpr-forgotten .nav-tab:nth-child(4):before,
+.ultimate-gdpr_page_ct-ultimate-gdpr-dataaccess .nav-tab:nth-child(4):before,
+.ultimate-gdpr_page_ct-ultimate-gdpr-breach .nav-tab:nth-child(4):before,
+.ultimate-gdpr_page_ct-ultimate-gdpr-rectification .nav-tab:nth-child(4):before {
+  content: 'Rectification';
+}
+
+@media screen and (min-width: 375px) {
+  .ultimate-gdpr_page_ct-ultimate-gdpr-forgotten .nav-tab,
+  .ultimate-gdpr_page_ct-ultimate-gdpr-dataaccess .nav-tab,
+  .ultimate-gdpr_page_ct-ultimate-gdpr-breach .nav-tab,
+  .ultimate-gdpr_page_ct-ultimate-gdpr-rectification .nav-tab {
+    padding: 5px 4px;
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .ultimate-gdpr_page_ct-ultimate-gdpr-forgotten .nav-tab,
+  .ultimate-gdpr_page_ct-ultimate-gdpr-dataaccess .nav-tab,
+  .ultimate-gdpr_page_ct-ultimate-gdpr-breach .nav-tab,
+  .ultimate-gdpr_page_ct-ultimate-gdpr-rectification .nav-tab {
+    font-size: 14px;
+    padding: 5px 17px;
+    width: auto;
+  }
+  .ultimate-gdpr_page_ct-ultimate-gdpr-forgotten .nav-tab:before,
+  .ultimate-gdpr_page_ct-ultimate-gdpr-dataaccess .nav-tab:before,
+  .ultimate-gdpr_page_ct-ultimate-gdpr-breach .nav-tab:before,
+  .ultimate-gdpr_page_ct-ultimate-gdpr-rectification .nav-tab:before {
+    content: '' !important;
+    vertical-align: baseline;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  .ultimate-gdpr_page_ct-ultimate-gdpr-forgotten .wp-list-table tr:not(.inline-edit-row):not(.no-items) td:not(.check-column) {
+    display: table-cell;
+  }
+}
+
+/*
+ * END RIGHT TO BE FORGOTTEN
+ * END DATA ACCESS
+ * END DATA BREACH
+ * END DATA RECTIFICATION
+ */
+/* TERMS and POLICY */
+.ultimate-gdpr_page_ct-ultimate-gdpr-terms .nav-tab-wrapper a,
+.ultimate-gdpr_page_ct-ultimate-gdpr-policy .nav-tab-wrapper a {
+  width: 50%;
+}
+
+@media screen and (min-width: 667px) {
+  .ultimate-gdpr_page_ct-ultimate-gdpr-terms .nav-tab-wrapper a,
+  .ultimate-gdpr_page_ct-ultimate-gdpr-policy .nav-tab-wrapper a {
+    width: auto;
+  }
+}
+
+/* END TERMS and POLICY */
+/*KEN START button on submit*/
+.ct-submit-section {
+  margin-bottom: 20px;
+}
+
+.ct-submit-section p.submit {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+/*h2 margin*/
+form h2 {
+  margin-top: 30px;
+}
+
+h2.ct-table-header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*notice caution*/
+.ct-ultimate-gdpr-msg-clone-static-caution {
+  border-left: 5px solid #ffb900;
+  width: 100%;
+}
+
+.ct-ultimate-gdpr-wrap div.error {
+  margin-top: 20px;
+  margin-left: 0px;
+  padding: 20px;
+}
+
+.ct-ultimate-gdpr-wrap div.error h3 {
+  font-size: 16px;
+}
+
+.ct-ultimate-gdpr-wrap div.warning {
+  margin-top: 20px;
+  margin-left: 0px;
+  padding: 20px;
+}
+
+.ct-ultimate-gdpr-wrap div.warning h3 {
+  font-size: 16px;
+}
+
+.ct-ultimate-gdpr-wrap div.notice {
+  margin-top: 20px;
+  margin-left: 0px;
+  padding: 20px;
+}
+
+.ct-ultimate-gdpr-wrap div.notice h3 {
+  font-size: 16px;
+}
+
+/*services*/
+.ultimate-gdpr_page_ct-ultimate-gdpr-services .ct-ultimate-gdpr-wrap .ct-ultimate-gdpr-half-width {
+  float: none;
+  max-width: 1228px;
+  margin-top: -5px;
+}
+
+/*services recaptcha field*/
+.ultimate-gdpr_page_ct-ultimate-gdpr-services .ct-ultimate-gdpr-inner-wrap:first-child .form-table input[type="text"] {
+  width: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .ultimate-gdpr_page_ct-ultimate-gdpr-services .ct-ultimate-gdpr-inner-wrap:first-child .form-table input[type="text"] {
+    width: 100%;
+  }
+}
+
+/*services recaptcha field end*/
+.ultimate-gdpr_page_ct-ultimate-gdpr-services #accordion {
+  margin-top: 25px;
+}
+
+.ultimate-gdpr_page_ct-ultimate-gdpr-services #accordion .card:first-child {
+  margin-bottom: 25px !important;
+}
+
+.card-header .btn.btn-link {
+  display: contents;
+  text-decoration: none;
+  line-height: 24px;
+  color: #444;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.card-header .btn.btn-link:after {
+  /* symbol for "opening" panels */
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #000;
+  font-size: 18px;
+  padding-right: 0.5em;
+  /* essential for enabling glyphicon */
+  content: "\f0de";
+  /* adjust as needed, taken from bootstrap.css */
+  float: right;
+  /* adjust as needed */
+  color: grey;
+  margin-top: 4px;
+  /* adjust as needed */
+}
+
+.card-header .btn.btn-link.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "\f0dd";
+  margin-top: -4px;
+  /* adjust as needed, taken from bootstrap.css */
+}
+
+/*firefox only*/
+@-moz-document url-prefix() {
+  .card-header .btn.btn-link:after {
+    margin-top: -16px;
+  }
+  .card-header .btn.btn-link.collapsed:after {
+    margin-top: -25px;
+  }
+}
+
+/*psuedo*/
+.ultimate-gdpr_page_ct-ultimate-gdpr-pseudonymization .ct-ultimate-gdpr-wrap div.warning {
+  margin-left: -15px;
+}
+
+/*services accordion click*/
+.ct-ultimate-gdpr-wrap .card-header.active {
+  background-color: #1c9bd7;
+  border-radius: 0px;
+}
+
+.ct-ultimate-gdpr-wrap .card-header.active .btn-link {
+  color: #fff;
+  display: block;
+  line-height: normal;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.ct-ultimate-gdpr-wrap .card-header .btn-link {
+  display: block;
+  line-height: normal;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.ct-ultimate-gdpr-wrap .card-header.active .btn-link:after {
+  color: #fff;
+}
+
+/*notice hide default wordpress*/
+#wpbody-content div.updated:not(.ct-ultimate-gdpr), #wpbody-content div.error:not(.ct-ultimate-gdpr), #wpbody-content div.notice:not(.ct-ultimate-gdpr) {
+  display: none;
+}
+
+/*card-columns margin bottom*/
+.card {
+  margin-bottom: 3px !important;
+}
+
+#ct-ultimate-gdpr-cookies-scanner {
+  display: none;
+  position: fixed;
+  z-index: 1000000;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.ct-ultimate-gdpr-cookies-scanner-content {
+  padding: 30px 0 60px 0;
+  background: #ebebeb;
+  margin: 100px auto auto auto;
+  width: 100%;
+  max-width: 670px;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.ct-ultimate-gdpr-cookies-scanner__Notice {
+  margin-top: -15px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #2674ac;
+}
+
+.ct-ultimate-gdpr-cookies-scanner__Message {
+  margin-top: -12px;
+}
+
+.ct-ultimate-gdpr-cookies-scanner__Notice.ct-ultimate-gdpr-cookies-scanner__Notice--Bold {
+  font-weight: 900;
+}
+
+.ct-ultimate-gdpr-cookies-scanner-content h2 {
+  margin: 0 0 50px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ct-ultimate-gdpr-cookies-scanner-content__details p {
+  font-size: 18px;
+}
+
+.ct-ultimate-gdpr-cookies-scanner-content__progress {
+  padding: 40px 0;
+}
+
+.ct-ultimate-gdpr-cookies-scanner-content__scan,
+.ct-ultimate-gdpr-cookies-scanner-content__url {
+  height: 18px;
+  padding: 25px 100px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+
+.ct-ultimate-gdpr-cookies-scanner-content__scan {
+  background: #fff;
+  margin-top: 30px;
+}
+
+.ct-ultimate-gdpr-cookies-scanner-content__url {
+  background: #d7d7d7;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+
+.ct-ultimate-gdpr__ProgressBar {
+  width: 120px;
+  height: 120px;
+  margin: 40px auto 30px auto;
+  padding: 0;
+  position: relative;
+}
+
+.ct-ultimate-gdpr__ProgressBar::before {
+  display: block;
+  content: '';
+  width: 108px;
+  height: 108px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 6px solid #fff;
+  border-left-color: #f47e14;
+  border-bottom-color: #f47e14;
+  border-radius: 50%;
+  background: transparent;
+  padding: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-animation-name: loading;
+          animation-name: loading;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.ct-ultimate-gdpr__ProgressBar::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90px;
+  height: 90px;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+  background: url("images/gdpr-bee.png");
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.ct-ultimate-gdpr-cookies-scanner__Close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.ct-ultimate-gdpr-hide {
+  display: none;
+}

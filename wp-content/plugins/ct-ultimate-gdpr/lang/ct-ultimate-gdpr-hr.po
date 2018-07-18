@@ -1,0 +1,2931 @@
+# Copyright (C) 2018 Ultimate GDPR
+# This file is distributed under the same license as the Ultimate GDPR package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ultimate GDPR 1.6.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/ct-ultimate-gdpr\n"
+"POT-Creation-Date: 2018-06-27 08:18+0000\n"
+"PO-Revision-Date: 2018-06-27 17:55+0800\n"
+"Last-Translator: createit <j.modelo@createit.pl>\n"
+"Language-Team: Croatian\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 2.0.5\n"
+
+#: includes/helpers.php:105
+#, php-format
+msgid "To confirm, please follow this link: %s"
+msgstr "Za potvrdu, molimo pratite ovaj link: %s"
+
+#: vendor/acf-fields.php:28
+msgid "Service name"
+msgstr "Naziv usluge"
+
+#: vendor/acf-fields.php:40
+msgid "Script names"
+msgstr "Imena skripte"
+
+#: vendor/acf-fields.php:43
+msgid "Please input comma separated script names"
+msgstr "Unesite nazive skripti razdvojenih zarezom"
+
+#: vendor/acf-fields.php:53 includes/shortcode/shortcode-privacy-policy.php:17
+msgid "Cookie names"
+msgstr "Imena kolačića"
+
+#: vendor/acf-fields.php:56
+msgid "Please input comma separated cookie names"
+msgstr "Unesite nazive kolačića razdvojenih zarezom"
+
+#: vendor/acf-fields.php:66 includes/shortcode/shortcode-privacy-policy.php:20
+msgid "Type of cookie"
+msgstr "Tip kolačića"
+
+#: vendor/acf-fields.php:76
+msgid "First or Third party?"
+msgstr "Prva ili treća strana?"
+
+#: vendor/acf-fields.php:81 includes/shortcode/shortcode-privacy-policy.php:73
+msgid "First party"
+msgstr "Prva strana"
+
+#: vendor/acf-fields.php:82 includes/shortcode/shortcode-privacy-policy.php:73
+msgid "Third party"
+msgstr "Treća strana"
+
+#: vendor/acf-fields.php:90
+msgid "Can be blocked?"
+msgstr "Može li biti blokirano?"
+
+#: vendor/acf-fields.php:98
+msgid "Session or Persistent?"
+msgstr "Sjednica ili upornost?"
+
+#: vendor/acf-fields.php:104 includes/shortcode/shortcode-privacy-policy.php:84
+msgid "Session"
+msgstr "Sjednica"
+
+#: vendor/acf-fields.php:105 includes/shortcode/shortcode-privacy-policy.php:84
+msgid "Persistent"
+msgstr "Uporan"
+
+#: vendor/acf-fields.php:113 includes/shortcode/shortcode-privacy-policy.php:32
+msgid "Expiry Time"
+msgstr "Vrijeme trajanja"
+
+#: vendor/acf-fields.php:126 includes/shortcode/shortcode-privacy-policy.php:35
+msgid "Purpose"
+msgstr "Svrha"
+
+#: vendor/acf-fields.php:138
+msgid "Is active?"
+msgstr "Je li aktivno?"
+
+#: includes/views/cookie-popup.php:99 includes/views/cookie-group-popup.php:123
+#: includes/controller/controller-cookie.php:3066
+#: includes/views/shortcode/shortcode-policy-accept.php:55
+#: includes/views/shortcode/shortcode-terms-accept.php:55
+msgid "Accept"
+msgstr "Prihvati"
+
+#: includes/views/cookie-popup.php:107
+#: includes/views/cookie-group-popup.php:131
+#: includes/controller/controller-cookie.php:1120
+#: includes/controller/controller-cookie.php:3067
+msgid "Read more"
+msgstr "Pročitaj više"
+
+#: includes/views/cookie-group-popup-header-content.php:20
+msgid "Privacy settings"
+msgstr "Osobne postavke"
+
+#: includes/views/cookie-group-popup-header-content.php:22
+msgid "Decide which cookies you want to allow."
+msgstr "Odluči koje kolačiće želite prihvatiti."
+
+#: includes/views/cookie-group-popup-header-content.php:23
+msgid ""
+"You can change these settings at any time. However, this can result in some "
+"functions no longer being available. For information on deleting the "
+"cookies, please consult your browser’s help function."
+msgstr ""
+"Te postavke možete promijeniti u bilo kojem trenutku. Međutim, to može "
+"rezultirati da neke funkcije više nisu dostupne. Informacije o brisanju "
+"kolačića potražite u funkciji pomoći vašeg preglednika."
+
+#: includes/views/cookie-group-popup-header-content.php:24
+msgid "Learn more about the cookies we use."
+msgstr "NAUČI VIŠE O KOLAČIĆIMA KOJE KORISTIMO."
+
+#: includes/views/cookie-group-popup-header-content.php:26
+msgid "With the slider, you can enable or disable different types of cookies:"
+msgstr ""
+"Pomoću klizača možete omogućiti ili onemogućiti različite vrste kolačića:"
+
+#: includes/views/cookie-group-popup.php:139
+#: includes/controller/controller-cookie.php:3068
+msgid "Change Settings"
+msgstr "Promjeni postavke"
+
+#: includes/views/cookie-group-popup.php:190
+#: includes/views/cookie-group-popup.php:201
+msgid "Cookie Box Settings"
+msgstr "Postavke kolačića"
+
+#: includes/views/cookie-group-popup.php:196
+#: includes/controller/controller-cookie.php:3084
+msgid "Trigger"
+msgstr "Okidač"
+
+#: includes/views/cookie-group-popup.php:306
+#: includes/views/cookie-group-popup.php:351
+#: includes/views/cookie-group-popup.php:371
+#: includes/views/cookie-group-popup.php:395
+#: includes/views/cookie-group-popup.php:439
+msgid "This website will:"
+msgstr "Ova stranica će:"
+
+#: includes/views/cookie-group-popup.php:326
+#: includes/views/cookie-group-popup.php:415
+#: includes/views/cookie-group-popup.php:460
+msgid "This website wont't:"
+msgstr "Ova stranica neće:"
+
+#: includes/views/cookie-group-popup.php:484
+msgid "Save & Close"
+msgstr "Spremi i zatvori"
+
+#: includes/controller/controller-forgotten.php:106
+#, php-format
+msgid "[Ultimate GDPR] New Right To Be Forgotten request from %s"
+msgstr "[Ultimate GDPR] Novi zahtjev za pravo da budeš zaboravljen %s"
+
+#: includes/controller/controller-forgotten.php:125
+#: includes/controller/controller-forgotten.php:344
+#, php-format
+msgid ""
+"There is a new Right To Be Forgotten request from email %s. See details at %s"
+msgstr ""
+"Postoji novi zahtjev za pravo da budeš zaboravljen iz mailova u %s. Vidi "
+"detalje u %s"
+
+#: includes/controller/controller-forgotten.php:176
+#: includes/controller/controller-forgotten.php:177
+#: includes/views/admin/admin-forgotten.php:37
+#: includes/views/admin/admin-breach.php:30
+#: includes/views/admin/admin-data-access.php:41
+#: includes/views/admin/admin-rectification.php:41
+msgid "Right To Be Forgotten"
+msgstr "Pravo da budeš zaboravljen"
+
+#: includes/controller/controller-forgotten.php:219
+#: includes/controller/controller-rectification.php:181
+#: includes/controller/controller-data-access.php:166
+msgid "Recaptcha error!"
+msgstr "Pogreška rekaptaze!"
+
+#: includes/controller/controller-forgotten.php:253
+#, php-format
+msgid "[Ultimate GDPR] Please confirm request to be forgotten from %s"
+msgstr ""
+"[Ultimate GDPR] Molim vas da potvrdite zahtjev da budete zabotavljeni u %s"
+
+#: includes/controller/controller-forgotten.php:259
+#: includes/controller/controller-rectification.php:208
+#: includes/controller/controller-data-access.php:190
+msgid "Your request was sent!"
+msgstr "Vaš zahtjev je poslan!"
+
+#: includes/controller/controller-forgotten.php:303
+#: includes/controller/controller-rectification.php:96
+msgid "Your request was already confirmed."
+msgstr "Vaš zahtjev je već potvrđen."
+
+#: includes/controller/controller-forgotten.php:328
+#: includes/controller/controller-rectification.php:121
+msgid "Your request was successfully confirmed."
+msgstr "Vaš zahtjev je uspješno potvrđen."
+
+#: includes/controller/controller-forgotten.php:365
+#: includes/controller/controller-rectification.php:161
+msgid "Your request was not confirmed. Please check the link or contact admin."
+msgstr ""
+"Vaš zahtjev nije potvrđen. Molim vas potvrdite link ili kontaktirajte admina."
+
+#: includes/controller/controller-forgotten.php:481
+#, php-format
+msgid "[Ultimate GDPR] Emails were sent to the following users: %s"
+msgstr "[Ultimate GDPR] E - pošta je poslana sljedecim korisnicima u %s"
+
+#: includes/controller/controller-forgotten.php:519
+#, php-format
+msgid "[Ultimate GDPR] The following emails were removed from list: %s"
+msgstr "[Ultimate GDPR] Sljedeći mailovi su uklonjeni s popisa u postocima: %s"
+
+#: includes/controller/controller-forgotten.php:550
+#, php-format
+msgid "Non existing service id: %s"
+msgstr "Nema postojeće usluge u: %s"
+
+#: includes/controller/controller-forgotten.php:570
+#, php-format
+msgid "There was an error forgetting %s service: %s"
+msgstr "Dogodila se pogreška tijekom zaboravljanja %s usluge: %s"
+
+#: includes/controller/controller-forgotten.php:595
+msgid "[Ultimate GDPR] Services data were removed"
+msgstr "[Ultimate GDPR] Podaci o usluzi su uklonjeni"
+
+#: includes/controller/controller-forgotten.php:613
+msgid "Right to be forgotten settings"
+msgstr "Pravo da budes zaboravljen x"
+
+#: includes/controller/controller-forgotten.php:623
+msgid "Admin email to send new request notifications to"
+msgstr ""
+"Pošaljite e-mail administratora da biste poslali nove obavijesti o zahtjevu"
+
+#: includes/controller/controller-forgotten.php:631
+msgid "User notification email subject"
+msgstr "Email obavijesti korisnika"
+
+#: includes/controller/controller-forgotten.php:639
+msgid "User notification email message"
+msgstr "Email s porukom obavijesti za  korisnika"
+
+#: includes/controller/controller-forgotten.php:647
+#: includes/controller/controller-rectification.php:549
+msgid ""
+"Set custom URL to the page containing Ultimate GDPR shortcode as the e-mail "
+"confirmation target page (or leave empty for autodetect)"
+msgstr ""
+"Postavite prilagođeni URL na stranicu s Konačni Skraćeni kod GPostavite "
+"prilagođeni URL na stranicu s Konačnim kratkim kodom GDPR kao stranicu cilja "
+"potvrde e-pošte (ili ostavite prazno za automatsko otkrivanje)DPR kao "
+"stranicu potvrde e-pošte (ili ostavite prazno za automatsko otkrivanje)"
+
+#: includes/controller/controller-forgotten.php:731
+#: includes/controller/controller-forgotten.php:732
+msgid "[Ultimate GDPR] Your data has been forgotten"
+msgstr "[Ultimate GDPR] Vaši podaci su zaboravljeni"
+
+#: includes/controller/controller-plugins.php:135
+#: includes/controller/controller-plugins.php:136
+msgid "Plugins"
+msgstr "Plugins"
+
+#: includes/controller/controller-policy.php:20
+#: includes/controller/controller-policy.php:21
+#: includes/controller/controller-policy.php:45
+#: includes/controller/controller-policy.php:818
+#: includes/views/admin/admin-policy.php:32
+#: includes/views/admin/admin-terms.php:33
+msgid "Privacy Policy"
+msgstr "Pravila o privatnosti"
+
+#: includes/controller/controller-policy.php:54
+#: includes/controller/controller-terms.php:388
+#: includes/controller/controller-pseudonymization.php:154
+msgid "Instructions"
+msgstr "Upute"
+
+#: includes/controller/controller-policy.php:65
+msgid "Require logged in users to accept Privacy Policy (redirect)"
+msgstr ""
+"Zatraži ulogirane korisnike da prihvate Pravila o privatnosti "
+"(preusmjeravanje)"
+
+#: includes/controller/controller-policy.php:73
+msgid "Require not logged in users/guests to accept Privacy Policy (redirect)"
+msgstr ""
+"Zahtijevajte da neprijavljeni korisnici / gosti prihvate Pravila o "
+"privatnosti (preusmjeravanje)"
+
+#: includes/controller/controller-policy.php:81
+msgid "WordPress Privacy Policy page"
+msgstr "WordPress pravila o privatnosti"
+
+#: includes/controller/controller-policy.php:89
+msgid "Page with existing Privacy Policy"
+msgstr "Stranica s postojećom stranicom o pravilima privatnosti"
+
+#: includes/controller/controller-policy.php:97
+msgid "Privacy Policy Custom URL"
+msgstr "Pravila o privatnosti s prilagođenim URL"
+
+#: includes/controller/controller-policy.php:105
+msgid "Page to redirect to after Privacy Policy accepted"
+msgstr ""
+"Stranica za preusmjeravanje nakon što su Pravila o privatnosti prihvaćena"
+
+#: includes/controller/controller-policy.php:113
+#: includes/controller/controller-terms.php:431
+msgid "Shortcode Button Styling"
+msgstr "Oblikovanje gumba kratkog koda"
+
+#: includes/controller/controller-policy.php:121
+#: includes/controller/controller-terms.php:439
+#: includes/controller/controller-cookie.php:1295
+msgid "Set consent expire time [s]"
+msgstr "Postavi vrijeme isteka suglasnosti [s]"
+
+#: includes/controller/controller-policy.php:129
+msgid ""
+"Privacy Policy version, eg. 1.0 (if you change it, user has to give consent "
+"again)"
+msgstr ""
+"Pravila o privatnosti verzija, npr. 1.0 (ako ih promjenite, korisnik mora "
+"pristati na njih ponovno)"
+
+#: includes/controller/controller-policy.php:137
+msgid ""
+"Redirect to Privacy Policy first (if Terms and Conditions also redirect)"
+msgstr ""
+"Preusmjeri na Pravila o privatnosti prvo (ako su na stranici Uvjeti i "
+"odredbe također ih preusmjeri)"
+
+#: includes/controller/controller-policy.php:145
+msgid ""
+"Convert the following text to Privacy Policy link in all services templates, "
+"eg. 'Privacy Policy'"
+msgstr ""
+"Pretvorite sljedeći tekst u vezu Pravila o privatnosti u svim predlošcima "
+"usluga, npr. \"Pravila o privatnosti\""
+
+#: includes/controller/controller-policy.php:153
+#: includes/controller/controller-terms.php:463
+msgid ""
+"Do not block user agents (eg. bots) containing the following texts (comma "
+"separated)"
+msgstr ""
+"Nemojte blokirati korisničke agente (npr. Robota) koji sadrže sljedeće "
+"tekstove (odvojen zarezima)"
+
+#: includes/controller/controller-policy.php:201
+#, php-format
+msgid ""
+"1. Place %s shortcode on your existing Privacy Policy page to add an accept "
+"button.%s2. Select Privacy Policy page below, so users can be redirected "
+"there to give their consent."
+msgstr ""
+"1. Stavite %s kratkog koda na postojeću stranicu Pravila o privatnosti da "
+"biste dodali gumb za prihvaćanje. %s2. Odaberite donju stranicu Pravila o "
+"privatnosti kako bi korisnici mogli biti preusmjereni tamo da daju svoj "
+"pristanak."
+
+#: includes/controller/controller-policy.php:280
+#: includes/controller/controller-terms.php:146
+#, php-format
+msgid ""
+"user id: %d \n"
+"consent version: %s \n"
+"consent given: %s \n"
+"consent expires: %s \n"
+"\n"
+msgstr ""
+"korisnika ID: %d\n"
+"verzija suglasnosti: %s\n"
+"pristanak suglasnosti: %s\n"
+"pristanak istječe: %s\n"
+
+#: includes/controller/controller-policy.php:637
+msgid "WordPress Privacy page"
+msgstr "WordPress stranica o privatnosti"
+
+#: includes/controller/controller-policy.php:693
+#: includes/controller/controller-terms.php:661
+msgid "Last visited page"
+msgstr "Posljednja posjećena stranica"
+
+#: includes/controller/controller-policy.php:694
+#: includes/controller/controller-terms.php:662
+msgid "Don't redirect"
+msgstr "Ne preusmjeravaj"
+
+#: includes/controller/controller-policy.php:720
+#: includes/controller/controller-terms.php:584
+msgid "Theme Default"
+msgstr "Tema je zadano"
+
+#: includes/controller/controller-policy.php:721
+#: includes/controller/controller-terms.php:585
+msgid "Cookie box buttons"
+msgstr "Gumbi kolačića"
+
+#: includes/controller/controller-services.php:72
+#: includes/controller/controller-services.php:73
+#: includes/controller/controller-services.php:253
+#: includes/controller/controller-services.php:269
+msgid "Services"
+msgstr "Usluge"
+
+#: includes/controller/controller-services.php:89
+#: includes/controller/controller-services.php:96
+#: includes/controller/controller-services.php:103
+msgid "Services options"
+msgstr "Opcije usluga"
+
+#: includes/controller/controller-services.php:114
+msgid "Recaptcha key (for myaccount shortcode submissions)"
+msgstr "Recaptcha ključ (za podneske s kratkim uputama myaccount)"
+
+#: includes/controller/controller-services.php:122
+msgid "Recaptcha secret key (for myaccount shortcode submissions)"
+msgstr "Recaptcha tajni ključ (za podneske za myaccount kratice)"
+
+#: includes/controller/controller-services.php:251
+msgctxt "Post Type General Name"
+msgid "Services"
+msgstr "Usluge"
+
+#: includes/controller/controller-services.php:252
+msgctxt "Post Type Singular Name"
+msgid "Services"
+msgstr "Usluge"
+
+#: includes/controller/controller-services.php:254
+msgid "Parent Services"
+msgstr "Roditeljska usluga"
+
+#: includes/controller/controller-services.php:255
+msgid "All Services"
+msgstr "Sve usluge"
+
+#: includes/controller/controller-services.php:256
+msgid "View Service"
+msgstr "Pogledaj uslugu"
+
+#: includes/controller/controller-services.php:257
+msgid "Add New Service"
+msgstr "Dodaj novu uslugu"
+
+#: includes/controller/controller-services.php:258
+msgid "Add New"
+msgstr "Dodaj novo"
+
+#: includes/controller/controller-services.php:259
+msgid "Edit Service"
+msgstr "Uredi uslugu"
+
+#: includes/controller/controller-services.php:260
+msgid "Update Service"
+msgstr "Unaprijedi uslugu"
+
+#: includes/controller/controller-services.php:261
+msgid "Search Services"
+msgstr "Potraži uslugu"
+
+#: includes/controller/controller-services.php:262
+msgid "Not Found"
+msgstr "Nije pronađeno"
+
+#: includes/controller/controller-services.php:263
+msgid "Not found in Trash"
+msgstr "Nije pronađeno u košu za smeće"
+
+#: includes/controller/controller-services.php:268
+msgid "services"
+msgstr "usluge"
+
+#. Plugin Name of the plugin/theme
+#: includes/controller/controller-admin.php:193
+#: includes/controller/controller-admin.php:194
+#: includes/views/admin/admin-forgotten.php:30
+#: includes/views/admin/admin-cookie.php:21
+#: includes/views/admin/admin-pseudonymization.php:30
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:21
+#: includes/views/admin/admin-breach.php:21
+#: includes/views/admin/admin-policy.php:21
+#: includes/views/admin/admin-services.php:21
+#: includes/views/admin/admin-data-access.php:32
+#: includes/views/admin/admin-terms.php:22
+#: includes/views/admin/admin-rectification.php:32
+#: includes/views/admin/admin-plugins.php:21
+msgid "Ultimate GDPR"
+msgstr "Ultimate GDPR"
+
+#: includes/controller/controller-rectification.php:132
+#, php-format
+msgid "[Ultimate GDPR] New Data Rectification request from %s"
+msgstr "[Ultimate GDPR] Novi Podaci Ratificirani po zahtjevima u %s"
+
+#: includes/controller/controller-rectification.php:140
+#, php-format
+msgid ""
+"There is a new Data Rectification request from email %s. See details at %s"
+msgstr ""
+"Tu su novi Podaci ratificirani po zahtjevima iz mailova u %s. Vidi detalje u "
+"%s"
+
+#: includes/controller/controller-rectification.php:202
+#, php-format
+msgid "[Ultimate GDPR] Please confirm your data rectification request from %s"
+msgstr ""
+"[Ultimate GDPR] Molim vas da potvrdite vaše podatke ratificirane po "
+"zahtjevima u %s"
+
+#: includes/controller/controller-rectification.php:311
+#: includes/controller/controller-data-access.php:300
+#, php-format
+msgid "Data was sent to email: %s"
+msgstr "Podaci su poslani na email: %s"
+
+#: includes/controller/controller-rectification.php:350
+#: includes/controller/controller-data-access.php:339
+#, php-format
+msgid "The following emails were removed from the list: %s"
+msgstr "Sljedeći mailovi su izbrisani sa liste: %s"
+
+#: includes/controller/controller-rectification.php:479
+#: includes/controller/controller-rectification.php:480
+#: includes/views/admin/admin-forgotten.php:46
+#: includes/views/admin/admin-breach.php:39
+#: includes/views/admin/admin-data-access.php:50
+#: includes/views/admin/admin-rectification.php:50
+msgid "Data Rectification"
+msgstr "Potvrđivanje podataka"
+
+#: includes/controller/controller-rectification.php:515
+msgid "Data Rectification settings"
+msgstr "Postavke potvrđivanja podataka"
+
+#: includes/controller/controller-rectification.php:525
+msgid "Email to send admin notifications to"
+msgstr "E-pošta za slanje obavijesti administratora"
+
+#: includes/controller/controller-rectification.php:533
+msgid "User mail title"
+msgstr "Korisnički mail naziv"
+
+#: includes/controller/controller-rectification.php:541
+msgid "User mail content"
+msgstr "Korisnički mail sadržaj"
+
+#: includes/controller/controller-rectification.php:635
+#, php-format
+msgid "[Ultimate GDPR] Data rectification notice from %s"
+msgstr "[Ultimate GDPR] Obavijest o ratifikaciji podataka %s"
+
+#: includes/controller/controller-rectification.php:636
+msgid "Your data has been rectified"
+msgstr "Vaši podaci su potvrđeni"
+
+#: includes/controller/controller-data-access.php:160
+msgid "Wrong email!"
+msgstr "Krivi email!"
+
+#: includes/controller/controller-data-access.php:179
+msgid "[Ultimate GDPR] New Data Access request"
+msgstr "[Ultimate GDPR] Novi zahtjev za pristup podacima"
+
+#: includes/controller/controller-data-access.php:181
+#, php-format
+msgid "There is a new data access request from email %s. See details at %s"
+msgstr ""
+"Postoji novi zahtjev za pristup podacima iz mailova %s. Vidi detalje u %s"
+
+#: includes/controller/controller-data-access.php:422
+#: includes/views/admin/admin-forgotten.php:132
+#: includes/views/admin/admin-data-access.php:97
+#: includes/views/admin/admin-rectification.php:95
+msgid "Not sent"
+msgstr "Nije poslano"
+
+#: includes/controller/controller-data-access.php:460
+#: includes/controller/controller-data-access.php:461
+#: includes/views/admin/admin-forgotten.php:40
+#: includes/views/admin/admin-breach.php:33
+#: includes/views/admin/admin-data-access.php:44
+#: includes/views/admin/admin-rectification.php:44
+msgid "Data Access"
+msgstr "Pristup podacima"
+
+#: includes/controller/controller-data-access.php:501
+msgid "Data access settings"
+msgstr "Postavke pristupa podacima"
+
+#: includes/controller/controller-data-access.php:511
+msgid "Email to send new request notifications to"
+msgstr "E-mail da biste poslali nove obavijesti o zahtjevu"
+
+#: includes/controller/controller-data-access.php:519
+#: includes/controller/controller-breach.php:125
+msgid "Mail title"
+msgstr "Naziv e-pošte"
+
+#: includes/controller/controller-data-access.php:527
+#: includes/controller/controller-breach.php:133
+msgid "Mail content"
+msgstr "Sadržaj e-pošte"
+
+#: includes/controller/controller-data-access.php:601
+#, php-format
+msgid "[Ultimate GDPR] Data request results from %s"
+msgstr "[Ultimate GDPR] Rezultati traženih podataka %s"
+
+#: includes/controller/controller-data-access.php:602
+msgid "Please find data attached"
+msgstr "Molim vas pronađite priložene podatke"
+
+#: includes/controller/controller-terms.php:167
+#: includes/controller/controller-terms.php:168
+msgid "Terms And Conditions"
+msgstr "Uvjeti i odredbe"
+
+#: includes/controller/controller-terms.php:379
+#: includes/controller/controller-terms.php:722
+#: includes/views/admin/admin-policy.php:29
+#: includes/views/admin/admin-terms.php:30
+msgid "Terms and Conditions"
+msgstr "Uvjeti i odredbe"
+
+#: includes/controller/controller-terms.php:399
+msgid "Require logged in users to accept Terms and Conditions (redirect)"
+msgstr ""
+"Zatraži ulogirane korisnike da prihvate Uvjete i odredbe (preusmjeravanje)"
+
+#: includes/controller/controller-terms.php:407
+msgid ""
+"Require not logged in users/guests to accept Terms and Conditions (redirect)"
+msgstr ""
+"Zahtijevajte da ne prijavljeni korisnici / gosti prihvate Uvjete i odredbe "
+"(preusmjeravanje)"
+
+#: includes/controller/controller-terms.php:415
+msgid "Page with existing Terms and Conditions"
+msgstr "Stranica sa postojećim Uvjetima i odredbama"
+
+#: includes/controller/controller-terms.php:423
+msgid "Page to redirect to after Terms accepted"
+msgstr "Stranica za preusmjeravanje nakon što su Uvjeti prihvaćeni"
+
+#: includes/controller/controller-terms.php:447
+msgid ""
+"Terms version, eg. 1.0 (if you change it, user has to give consent again)"
+msgstr ""
+"Verzija Uvjeti, npr. 1.0 (ako ih promjenite, korisnik mora na njih pristati "
+"ponovno)"
+
+#: includes/controller/controller-terms.php:455
+msgid ""
+"Convert the following text to Terms and Conditions link in all services "
+"templates, eg. 'Terms and Conditions'"
+msgstr ""
+"Pretvorite sljedeći tekst u vezu Uvjeti i odrebe u svim predlošcima usluga, "
+"npr. \"Uvjeti i odredbe\""
+
+#: includes/controller/controller-terms.php:476
+#, php-format
+msgid ""
+"1. Place %s shortcode on your existing Terms and Conditions page to add an "
+"accept button.%s2. Select Terms and Conditions page below, so users can be "
+"redirected there to give their consent."
+msgstr ""
+"Stavite %s kratkog koda na postojeću stranicu Uvjeti i odredbe da biste "
+"dodali gumb za prihvaćanje. %s2. Odaberite donju stranicu Uvjeti i odredbe "
+"kako bi korisnici mogli biti preusmjereni tamo da daju svoj pristanak."
+
+#: includes/controller/controller-cookie.php:958
+#: includes/controller/controller-cookie.php:4490
+#, php-format
+msgid ""
+"<h3>Please navigate to <a href='%s'>Service Manager</a> tab to see all "
+"detected cookies.</h3>"
+msgstr ""
+"<h3>Molim vas krenite prema <a href='%s'>Voditelj usluge </a> kako biste "
+"vidjeli sve detektirane kolačiće </h3>"
+
+#: includes/controller/controller-cookie.php:1023
+#, php-format
+msgid ""
+"user id: %d \n"
+"consent level: %s \n"
+"consent given: %s \n"
+"consent expires: %s \n"
+"\n"
+msgstr ""
+"korisnika ID: %d\n"
+"razina pristanka: %s\n"
+"pristanak suglasnosti: %s\n"
+"pristanak istječe: %s\n"
+
+#: includes/controller/controller-cookie.php:1043
+#: includes/controller/controller-cookie.php:1044
+msgid "Cookie Consent"
+msgstr "Pristanak na kolačiće"
+
+#: includes/controller/controller-cookie.php:1052
+#: includes/controller/controller-cookie.php:1053
+msgid "Services Manager"
+msgstr "Voditelj usluge"
+
+#: includes/controller/controller-cookie.php:1075
+#: includes/controller/controller-cookie.php:1205
+msgid "Cookie popup content"
+msgstr "Pristanak za iskočni kolačić"
+
+#: includes/controller/controller-cookie.php:1082
+msgid "Buttons labels"
+msgstr "Buttons oznake"
+
+#: includes/controller/controller-cookie.php:1089
+msgid "Options"
+msgstr "Opcije"
+
+#: includes/controller/controller-cookie.php:1096
+msgid "Google Analytics Tracking ID"
+msgstr "ID praćenja usluge Google Analytics"
+
+#: includes/controller/controller-cookie.php:1106
+msgid "Cookie check"
+msgstr "Provjera kolačića"
+
+#: includes/controller/controller-cookie.php:1113
+msgid "Buttons styles"
+msgstr "Tipke stilova"
+
+#: includes/controller/controller-cookie.php:1127
+#: includes/controller/controller-cookie.php:1343
+msgid "Position"
+msgstr "Pozicija"
+
+#: includes/controller/controller-cookie.php:1134
+msgid "Box styles"
+msgstr "Kutija stilova"
+
+#: includes/controller/controller-cookie.php:1141
+#: includes/controller/controller-cookie.php:1431
+msgid "Custom style CSS"
+msgstr "Prilagođeni stil CSS"
+
+#: includes/controller/controller-cookie.php:1151
+msgid "Advanced Cookies Settings"
+msgstr "Napredne postavke kolačića"
+
+#: includes/controller/controller-cookie.php:1159
+msgid "Trigger cookie"
+msgstr "Pokrenite kolačić"
+
+#: includes/controller/controller-cookie.php:1166
+msgid "Lists of features"
+msgstr "Popis značajki"
+
+#: includes/controller/controller-cookie.php:1173
+msgid "Modal styles"
+msgstr "Modalni stilovi"
+
+#: includes/controller/controller-cookie.php:1180
+msgid "Labels"
+msgstr "Oznake"
+
+#: includes/controller/controller-cookie.php:1187
+msgid "Additional settings"
+msgstr "Dodatne postavke"
+
+#: includes/controller/controller-cookie.php:1197
+msgid ""
+"Fill in with default content for selected language (remember to save changes)"
+msgstr ""
+"Ispunite zadani sadržaj za odabrani jezik (ne zaboravite spremiti promjene)"
+
+#: includes/controller/controller-cookie.php:1213
+msgid "Cookie popup 'accept' button label (leave empty for default)"
+msgstr "Oznaka gumba \"prihvati\" skočne kolačiće (ostavite prazno za zadano)"
+
+#: includes/controller/controller-cookie.php:1221
+msgid "Cookie popup 'read more' button label (leave empty for default)"
+msgstr ""
+"Oznaka gumba \"pročitaj više o \" skočnim kolačićima (ostavite prazno za "
+"zadano)"
+
+#: includes/controller/controller-cookie.php:1229
+msgid "Cookie popup 'change settings' button label (leave empty for default)"
+msgstr ""
+"Oznaka gumba \"promjeni postavke\" skočnih kolačića (ostavite prazno za "
+"zadano)"
+
+#: includes/controller/controller-cookie.php:1237
+msgid "Display cookie popup on all pages"
+msgstr "Prikaz obavijesti o kolačićima na svim stranicama"
+
+#: includes/controller/controller-cookie.php:1245
+msgid "Check if user is from European Union"
+msgstr "Provjerite je li korisnik iz Europske unije"
+
+#: includes/controller/controller-cookie.php:1253
+msgid "Select pages where to display the cookie popup"
+msgstr "Odaberite stranice za prikaz popup kolačića"
+
+#: includes/controller/controller-cookie.php:1263
+msgid "Choose how often cookie check should be performed"
+msgstr "Odaberite koliko često treba provesti provjeru kolačića"
+
+#: includes/controller/controller-cookie.php:1271
+msgid "Choose default level of new cookies"
+msgstr "Odaberite zadanu razinu novih kolačića"
+
+#: includes/controller/controller-cookie.php:1279
+msgid "Cookies whitelist (never block these cookies, comma separated)"
+msgstr ""
+"Popis dopuštenih kolačića (nikada ne blokirajte ove kolačiće, odvojite "
+"zarezima)"
+
+#: includes/controller/controller-cookie.php:1287
+msgid "Block selected/all cookies until user consents"
+msgstr "Blokiraj sve kolačiće dok korisnik ne pristane na njih"
+
+#: includes/controller/controller-cookie.php:1303
+#: includes/controller/controller-cookie.php:1391
+msgid "Button shape"
+msgstr "Oblik gumba"
+
+#: includes/controller/controller-cookie.php:1311
+msgid "Button color"
+msgstr "Boja gumba"
+
+#: includes/controller/controller-cookie.php:1319
+#: includes/controller/controller-cookie.php:1423
+msgid "Button size"
+msgstr "Veličina gumba"
+
+#: includes/controller/controller-cookie.php:1327
+msgid "Read more page"
+msgstr "Pročitaj više stranica"
+
+#: includes/controller/controller-cookie.php:1335
+msgid "Read More Custom URL"
+msgstr "Pročitaj više prilagođenih URL"
+
+#: includes/controller/controller-cookie.php:1351
+msgid "Distance from border [px]"
+msgstr "Udaljenost od granice [px]"
+
+#: includes/controller/controller-cookie.php:1359
+msgid "Box style"
+msgstr "Stil kutije"
+
+#: includes/controller/controller-cookie.php:1367
+msgid "Box shape"
+msgstr "Oblik kutije"
+
+#: includes/controller/controller-cookie.php:1375
+msgid "Background color"
+msgstr "Boja pozadine"
+
+#: includes/controller/controller-cookie.php:1383
+msgid "Text color"
+msgstr "Boja teksta"
+
+#: includes/controller/controller-cookie.php:1399
+msgid "Button background color"
+msgstr "Boja pozadine gumba"
+
+#: includes/controller/controller-cookie.php:1407
+msgid "Button border color"
+msgstr "Boja rubova gumba"
+
+#: includes/controller/controller-cookie.php:1415
+msgid "Button text color"
+msgstr "Boja teksta gumba"
+
+#: includes/controller/controller-cookie.php:1443
+msgid "Trigger cookie settings by"
+msgstr "Postavke okidač kolačića za"
+
+#: includes/controller/controller-cookie.php:1451
+msgid "Trigger cookie settings icon"
+msgstr "Postavke okidač kolačića ikone"
+
+#: includes/controller/controller-cookie.php:1459
+msgid "Trigger cookie settings text"
+msgstr "Postavke okidač kolačića teksta"
+
+#: includes/controller/controller-cookie.php:1467
+msgid "Trigger cookie settings background color"
+msgstr "Postavke okidač kolačića pozadinske boje"
+
+#: includes/controller/controller-cookie.php:1475
+msgid "Trigger cookie settings shape"
+msgstr "Postavke okidač kolačića oblika"
+
+#: includes/controller/controller-cookie.php:1483
+msgid "Trigger cookie settings position"
+msgstr "Postavke okidač kolačića pozicije"
+
+#: includes/controller/controller-cookie.php:1491
+msgid "Trigger cookie settings color"
+msgstr "Postavke okidač kolačića boje"
+
+#: includes/controller/controller-cookie.php:1502
+msgid "Show advanced cookie popup always, even when the consent is given"
+msgstr "Pokaži uvijek napredni iskočni kolačić, događaj kada se dade pristanak"
+
+#: includes/controller/controller-cookie.php:1510
+msgid "Use advanced cookie groups popup"
+msgstr "Koristite napredne popup grupe naprednih kolačića"
+
+#: includes/controller/controller-cookie.php:1518
+msgid "Advanced cookie groups popup header content"
+msgstr "Napredni kolačići grupiraju sadržaj skočnih zaglavlja"
+
+#: includes/controller/controller-cookie.php:1528
+msgid "Cookie modal header color"
+msgstr "Boja zaglavlja modelnog kolačića"
+
+#: includes/controller/controller-cookie.php:1536
+msgid "Cookie modal text color"
+msgstr "Boja teksta modelnog kolačića"
+
+#: includes/controller/controller-cookie.php:1546
+msgid "<i>This website will</i> label"
+msgstr "<i> Ova web stranica će </ i> biti označena"
+
+#: includes/controller/controller-cookie.php:1554
+msgid "<i>This website won't</i> label"
+msgstr "<i> Ova web stranica neće </ i> biti označena"
+
+#: includes/controller/controller-cookie.php:1562
+msgid "<i>Block all</i> label"
+msgstr "<i> Blokiraj sve </ i> oznaka"
+
+#: includes/controller/controller-cookie.php:1570
+msgid "<i>Essentials</i> label"
+msgstr "<i> Osnove </ i> oznaka"
+
+#: includes/controller/controller-cookie.php:1578
+msgid "<i>Functionality</i> label"
+msgstr "<i> Funkcionalnost </ i> oznaka"
+
+#: includes/controller/controller-cookie.php:1586
+msgid "<i>Analytics</i> label"
+msgstr "<i> Analize</ i> oznaka"
+
+#: includes/controller/controller-cookie.php:1594
+msgid "<i>Advertising</i> label"
+msgstr "<i> Reklamacija</ i> oznaka"
+
+#: includes/controller/controller-cookie.php:1605
+msgid "List of features available for Essential level (semicolon separated)"
+msgstr ""
+"Popis značajki koje su dostupne za razinu važnosti (odvojene točka sa "
+"zarezom)"
+
+#: includes/controller/controller-cookie.php:1613
+msgid ""
+"List of features not available for Essential level (semicolon separated)"
+msgstr ""
+"Popis značajki koje nisu dostupne za razinu važnosti (odvojene točka sa "
+"zarezom)"
+
+#: includes/controller/controller-cookie.php:1621
+msgid ""
+"List of features available for Functionality level (semicolon separated)"
+msgstr ""
+"Popis značajki koje su dostupne za razinu funkcionalnosti (odvojene točka sa "
+"zarezom)"
+
+#: includes/controller/controller-cookie.php:1629
+msgid ""
+"List of features not available for Functionality level (semicolon separated)"
+msgstr ""
+"Popis značajki koje nisu dostupne za razinu funkcionalnosti (odvojene točka "
+"sa zarezom)"
+
+#: includes/controller/controller-cookie.php:1637
+msgid "List of features available for Analytics level (semicolon separated)"
+msgstr ""
+"Popis značajki koje su dostupne za razinu analize (odvojene točka sa zarezom)"
+
+#: includes/controller/controller-cookie.php:1645
+msgid ""
+"List of features not available for Analytics level (semicolon separated)"
+msgstr ""
+"Popis značajki koje nisu dostupne za razinu analize (odvojene točka sa "
+"zarezom)"
+
+#: includes/controller/controller-cookie.php:1653
+msgid "List of features available for Advertising level (semicolon separated)"
+msgstr ""
+"Popis značajki koje su dostupne za razinu oglašavanja (odvojene točka sa "
+"zarezom)"
+
+#: includes/controller/controller-cookie.php:1661
+msgid ""
+"List of features not available for Advertising level (semicolon separated)"
+msgstr ""
+"Popis značajki koje nisu dostupne za razinu oglašavanja (odvojene točka sa "
+"zarezom)"
+
+#: includes/controller/controller-cookie.php:1671
+msgid ""
+"Advanced cookie popup 'save & close' button label (leave empty for default)"
+msgstr ""
+"Napredni kolačić \"gumb za spremanje i zatvaranje\" s pop-upom (ostavite "
+"prazno za zadano)"
+
+#: includes/controller/controller-cookie.php:1679
+msgid "Select default privacy group"
+msgstr "Odaberite zadanu grupu o zaštiti privatnosti"
+
+#: includes/controller/controller-cookie.php:1687
+msgid "Select privacy group after user accepts cookies in the popup"
+msgstr ""
+"Odaberite grupu privatnosti nakon što korisnik prihvati kolačiće u skočnom "
+"prozoru"
+
+#: includes/controller/controller-cookie.php:1695
+msgid "Reload page when user saves changes"
+msgstr "Ponovno učitajte stranicu kada korisnik sprema promjene"
+
+#: includes/controller/controller-cookie.php:1776
+msgid "Never"
+msgstr "Nikad"
+
+#: includes/controller/controller-cookie.php:1777
+msgid "Weekly"
+msgstr "Tjedno"
+
+#: includes/controller/controller-cookie.php:1778
+msgid "Monthly"
+msgstr "Mjesečno"
+
+#: includes/controller/controller-cookie.php:1779
+msgid "Quarterly"
+msgstr "Tromjesečni"
+
+#: includes/controller/controller-cookie.php:1834
+msgid "Load"
+msgstr "Opterećenje"
+
+#: includes/controller/controller-cookie.php:2053
+msgid "Classic"
+msgstr "Klasično"
+
+#: includes/controller/controller-cookie.php:2054
+msgid "Modern"
+msgstr "Moderno"
+
+#: includes/controller/controller-cookie.php:2083
+#: includes/controller/controller-cookie.php:2113
+#: includes/controller/controller-cookie.php:2986
+msgid "Rounded"
+msgstr "Okruglo"
+
+#: includes/controller/controller-cookie.php:2084
+#: includes/controller/controller-cookie.php:2114
+#: includes/controller/controller-cookie.php:2987
+msgid "Squared"
+msgstr "Kockasto"
+
+#: includes/controller/controller-cookie.php:2210
+msgid "Normal"
+msgstr "Normalno"
+
+#: includes/controller/controller-cookie.php:2211
+msgid "Large"
+msgstr "Veliko"
+
+#: includes/controller/controller-cookie.php:2752
+msgid "Front page"
+msgstr "Početna stranica"
+
+#: includes/controller/controller-cookie.php:2755
+msgid "Posts page"
+msgstr "Stranica postova"
+
+#: includes/controller/controller-cookie.php:2780
+msgid "Bottom left"
+msgstr "Dolje lijevo"
+
+#: includes/controller/controller-cookie.php:2781
+msgid "Bottom right"
+msgstr "Dolje desno"
+
+#: includes/controller/controller-cookie.php:2782
+msgid "Bottom panel"
+msgstr "Donja ploča"
+
+#: includes/controller/controller-cookie.php:2783
+msgid "Top left"
+msgstr "Gore lijevo"
+
+#: includes/controller/controller-cookie.php:2784
+msgid "Top right"
+msgstr "Gore desne"
+
+#: includes/controller/controller-cookie.php:2785
+msgid "Top panel"
+msgstr "Gornja ploča"
+
+#: includes/controller/controller-cookie.php:2831
+msgid "Text Only"
+msgstr "Samo tekst"
+
+#: includes/controller/controller-cookie.php:2832
+msgid "Icon Only"
+msgstr "Samo ikonu"
+
+#: includes/controller/controller-cookie.php:2833
+msgid "Icon and Text"
+msgstr "Ikona i tekst"
+
+#: includes/controller/controller-cookie.php:2913
+msgid "Top Left"
+msgstr "Gore lijevo"
+
+#: includes/controller/controller-cookie.php:2914
+msgid "Top center"
+msgstr "Gore sredina"
+
+#: includes/controller/controller-cookie.php:2915
+msgid "Top Right"
+msgstr "Gore desno"
+
+#: includes/controller/controller-cookie.php:2916
+msgid "Center Left"
+msgstr "U sredini lijevo"
+
+#: includes/controller/controller-cookie.php:2917
+msgid "Center Right"
+msgstr "U sredini desno"
+
+#: includes/controller/controller-cookie.php:2918
+msgid "Bottom Left"
+msgstr "Dolje lijevo"
+
+#: includes/controller/controller-cookie.php:2919
+msgid "Bottom Center"
+msgstr "Dolje sredina"
+
+#: includes/controller/controller-cookie.php:2920
+msgid "Bottom Right"
+msgstr "Dolje desno"
+
+#: includes/controller/controller-cookie.php:2985
+msgid "Round"
+msgstr "Krug"
+
+#: includes/controller/controller-cookie.php:3093
+#: includes/model/model-group.php:73 includes/model/model-group.php:91
+msgid "Block all"
+msgstr "Blokiraj sve"
+
+#: includes/controller/controller-cookie.php:3094
+msgid "Essentials"
+msgstr "Osnove"
+
+#: includes/controller/controller-cookie.php:3095
+#: includes/model/model-group.php:55 includes/model/model-group.php:88
+msgid "Functionality"
+msgstr "Funkcionalnost"
+
+#: includes/controller/controller-cookie.php:3096
+#: includes/model/model-group.php:61 includes/model/model-group.php:89
+msgid "Analytics"
+msgstr "Analiza"
+
+#: includes/controller/controller-cookie.php:3097
+#: includes/model/model-group.php:67 includes/model/model-group.php:90
+msgid "Advertising"
+msgstr "Oglašivanje"
+
+#: includes/controller/controller-cookie.php:4398
+msgid "Every week"
+msgstr "Svaki tjedan"
+
+#: includes/controller/controller-cookie.php:4402
+msgid "Every month"
+msgstr "Svaki mjesec"
+
+#: includes/controller/controller-cookie.php:4406
+msgid "Every quarter"
+msgstr "Svako tromjesečje"
+
+#: includes/controller/controller-cookie.php:4477
+#, php-format
+msgid "Cookies detected: %s, Cookies saved: %s"
+msgstr "Otkriveni kolačići: %s, Spremljeni kolačići: %s"
+
+#: includes/controller/controller-cookie.php:4549
+msgid ""
+"There was a problem with connecting to the cookie scanner. Please try again "
+"later."
+msgstr ""
+"Došlo je do problema prilikom povezivanja s skenerom kolačića. Molimo "
+"pokušajte ponovo kasnije."
+
+#: includes/controller/controller-breach.php:87
+#: includes/controller/controller-breach.php:88
+#: includes/controller/controller-breach.php:116
+#: includes/views/admin/admin-forgotten.php:43
+#: includes/views/admin/admin-breach.php:36
+#: includes/views/admin/admin-data-access.php:47
+#: includes/views/admin/admin-rectification.php:47
+msgid "Data Breach"
+msgstr "Kršenje podataka"
+
+#: includes/controller/controller-breach.php:141
+msgid "Collect user emails from services"
+msgstr "Prikupljanje korisničkih mailova iz usluge"
+
+#: includes/controller/controller-breach.php:212
+#, php-format
+msgid "[Ultimate GDPR] Data breach information from %s"
+msgstr "[Ultimate GDPR] Podaci o kršenju podataka u %s"
+
+#: includes/controller/controller-breach.php:215
+msgid "There was a data breach on our page..."
+msgstr "Došlo je do prekršaja podataka na našoj stranici..."
+
+#: includes/controller/controller-pseudonymization.php:110
+#: includes/controller/controller-pseudonymization.php:111
+#: includes/controller/controller-pseudonymization.php:134
+msgid "Pseudonymization"
+msgstr "Obrada osobnih podataka"
+
+#: includes/controller/controller-pseudonymization.php:125
+#: includes/controller/controller-pseudonymization.php:264
+msgid "Encryption is not possible. Please check your openssl library."
+msgstr "Šifriranje nije moguće. Molim vas provjerite vašu OpenSSL knjižnicu."
+
+#: includes/controller/controller-pseudonymization.php:143
+msgid "Warning"
+msgstr "Upozorenje"
+
+#: includes/controller/controller-pseudonymization.php:165
+msgid "Automatically encrypt new data"
+msgstr "Automatski šifriraj nove podatke"
+
+#: includes/controller/controller-pseudonymization.php:173
+msgid ""
+"Automatically decrypt all data on the fly (if you have anything encrypted, "
+"this is recommended)"
+msgstr ""
+"Automatski dešifriraj sve podatke u letu (ako imate  neke podatke koji su "
+"šifrirani to se preporučuje napraviti)"
+
+#: includes/controller/controller-pseudonymization.php:181
+msgid "Select data to encrypt"
+msgstr "Odaberi podatke za šifriranje"
+
+#: includes/controller/controller-pseudonymization.php:229
+msgid ""
+"This feature is experimental and may lead to irreversible data lost! After "
+"encryption, it may be impossible for anyone to decrypt your data. "
+msgstr ""
+"Ta je značajka eksperimentalna i može dovesti do gubitka nepovratnih "
+"podataka! Nakon enkripcije, bilo bi nemoguće da bilo tko dešifrira vaše "
+"podatke. "
+
+#: includes/controller/controller-pseudonymization.php:241
+msgid ""
+"Pseudonymization feature allows you to encrypt some of the data stored in "
+"the database. That way, if anyone got access to your database, the user's "
+"data would be pseudonymized. Database contents are permanently encrypted and "
+"can be decrypted on the fly when accessed by users. You can also permanently "
+"decrypt all your contents."
+msgstr ""
+"Značajka pseudonimizacije omogućuje šifriranje nekih podataka pohranjenih u "
+"bazi podataka. Na taj način, ako bilo tko ima pristup vašoj bazi podataka, "
+"korisnici će biti pseudonimizirani. Sadržaj baze podataka trajno je šifriran "
+"i može se dešifrirati prilikom pristupa korisnicima. Također možete trajno "
+"dešifrirati sve svoje sadržaje."
+
+#: includes/controller/controller-pseudonymization.php:244
+msgid "How to use:"
+msgstr "Kako koristiti:"
+
+#: includes/controller/controller-pseudonymization.php:246
+msgid "1. Make a backup"
+msgstr "1. Napravi rezervu"
+
+#: includes/controller/controller-pseudonymization.php:248
+msgid "2. Select which data to encrypt"
+msgstr "2. Odaberi koje podatke šifrirati"
+
+#: includes/controller/controller-pseudonymization.php:250
+msgid ""
+"3. (Optionally) Select 'automatically encrypt new data' for continuous "
+"encryption of all incoming data"
+msgstr ""
+"3. (Izborno) Odaberi \"automatsko šifriranje novih podataka\" za "
+"kontinuirano šifriranje svih nadolazećih podataka"
+
+#: includes/controller/controller-pseudonymization.php:252
+msgid "4. Click 'Save changes'"
+msgstr "4. Pritisni \"Spremi promjene\""
+
+#: includes/controller/controller-pseudonymization.php:254
+msgid ""
+"5. (Optionally) Click 'Encrypt selected' to encrypt all current data which "
+"has not been yet encrypted"
+msgstr ""
+"5. (Izborno) Klikni na \"Šifriranje odabrano\" kako biste šifrirali sve "
+"trenutačne podatke koji još nisu bili šifrirani"
+
+#: includes/controller/controller-pseudonymization.php:278
+msgid "Data encrypted successfully"
+msgstr "Podaci šifrirani uspješno"
+
+#: includes/controller/controller-pseudonymization.php:288
+msgid "Decryption is not possible. Please check your openssl library."
+msgstr ""
+"Dešifriranje nije moguće. Molimo vas da provjerite svoju OpenSSL knjižnicu."
+
+#: includes/controller/controller-pseudonymization.php:302
+msgid "Data decrypted successfully"
+msgstr "Podaci dešifrirani uspješno"
+
+#: includes/shortcode/shortcode-privacy-policy.php:23
+msgid "First or Third party"
+msgstr "Prva ili Treća strana"
+
+#: includes/shortcode/shortcode-privacy-policy.php:26
+msgid "Can be blocked"
+msgstr "Može biti blokirano"
+
+#: includes/shortcode/shortcode-privacy-policy.php:29
+msgid "Session or Persistent"
+msgstr "Sjednica ili upornost"
+
+#: includes/service/service-quform.php:87
+#: includes/service/service-mailster.php:122
+#, php-format
+msgid "There were problems forgetting data for user: %s"
+msgstr "Došlo je do problema sa zaboravljanjem podataka korisnika:% s"
+
+#: includes/service/service-quform.php:115
+#: includes/service/service-bbpress.php:162
+#: includes/service/service-eform.php:128
+#: includes/service/service-formidable-forms.php:135
+#: includes/service/service-contact-form-7.php:74
+#: includes/service/service-buddypress.php:334
+#: includes/service/service-mailster.php:150
+#, php-format
+msgid "[%s] Description"
+msgstr "[%s] Opis"
+
+#: includes/service/service-quform.php:124
+#: includes/service/service-bbpress.php:170
+#: includes/service/service-eform.php:137
+#: includes/service/service-gravity-forms.php:105
+#: includes/service/service-arforms.php:138
+#: includes/service/service-events-manager.php:111
+#: includes/service/service-formidable-forms.php:144
+#: includes/service/service-contact-form-7.php:83
+#: includes/service/service-buddypress.php:342
+#, php-format
+msgid "[%s] Inject consent checkbox to all forms"
+msgstr "[%s] Dodaj potvrdni okvir za ubacivanje pristanka na sve obrasce"
+
+#: includes/service/service-quform.php:135
+#: includes/service/service-mailster.php:170
+#, php-format
+msgid "[%s] Inject consent checkbox as the first field instead of the last"
+msgstr ""
+"[%s] Upišite potvrdni okvir za suglasnost kako biste pretplatili obrasce"
+
+#: includes/service/service-quform.php:308
+msgid "Quform gathers data entered by users in forms"
+msgstr "Quform prikuplja podatke unesene od strane korisnika na obrascima"
+
+#: includes/service/service-bbpress.php:186
+#: includes/service/service-buddypress.php:352
+#, php-format
+msgid ""
+"[%s] Enter the existing user's email whom the posts will be reassigned to "
+"(or leave empty to delete them when forgetting)"
+msgstr ""
+"[%s] Unesite postojeću e-poštu korisnika na koju će se postovi "
+"preraspodijeliti (ili ostaviti prazno da biste ih izbrisali kada zaboravite)"
+
+#: includes/service/service-bbpress.php:253
+msgid "bbPress gathers users activity in forums"
+msgstr "bbPress okuplja aktivnosti korisnika na forumima"
+
+#: includes/service/service-bbpress.php:284
+msgid "<strong>ERROR</strong>: Please consent to storage fo your data"
+msgstr "<strong> ERROR </ strong>: pristajte na pohranu podataka"
+
+#: includes/service/service-wp-job-manager.php:50
+#, php-format
+msgid "Could not delete posts for user: %s"
+msgstr "Nije moguće izbrisati postove za korisnika: %s"
+
+#: includes/service/service-wp-job-manager.php:78
+msgid "[WP Job Manager] Description"
+msgstr "[WP Job Manager] Opis"
+
+#: includes/service/service-wp-user.php:35
+#: includes/service/service-wp-user.php:79
+msgid "WP User Data"
+msgstr "WP Korisnički podaci"
+
+#: includes/service/service-wp-user.php:61
+#: includes/service/service-buddypress.php:111
+#, php-format
+msgid "Could not delete user data for user: %s"
+msgstr "Nije moguće izbrisati korisničke podatke za korisnika: %s"
+
+#: includes/service/service-wp-user.php:95
+msgid "[WP User Data] Description"
+msgstr "[WP User Data] Opis"
+
+#: includes/service/service-wp-user.php:103
+msgid "[WP User Data] Pseudonymize first and last name"
+msgstr "[WP User Data] Pseudonimizirano prvo i zadnje ime"
+
+#: includes/service/service-wp-user.php:119
+msgid "[WP User] Inject consent checkbox to User network signup form fields"
+msgstr ""
+"[WP User] Ubacite potvrdni okvir za pristanak na polje za korisničku mrežu"
+
+#: includes/service/service-wp-user.php:127
+msgid "[WP User] Inject consent checkbox to User register form fields"
+msgstr ""
+"[WP User] Ubacite potvrdni okvir za pristanak na polje za korisničku "
+"registraciju"
+
+#: includes/service/service-wp-user.php:135
+msgid "[WP User] Inject consent checkbox to lost password form fields"
+msgstr ""
+"[WP User] Ubacite potvrdni okvir za pristanak na polje za izgubljenu lozinku"
+
+#: includes/service/service-wp-user.php:295
+#: includes/service/service-wp-user.php:315
+#: includes/service/service-wp-user.php:335
+#: includes/service/service-woocommerce.php:403
+msgid "Consent is required"
+msgstr "Pristanak je potreban"
+
+#: includes/service/service-wp-user.php:388
+msgid "WordPress user data stored as user meta data in database"
+msgstr ""
+"WordPress korisnički podaci pohranjeni kao meta korisnički podaci u bazi "
+"podataka"
+
+#: includes/service/service-wordfence.php:70
+#, php-format
+msgid ""
+"[%s] Block Wordfence cookies when a user doesn't accept Functionality cookies"
+msgstr ""
+"[%s] Blokiraj kolačiće Wordfence kada korisnik ne prihvaća kolačiće "
+"funkcionalnosti"
+
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:159
+msgid "[WP Simple Paypal Shopping Cart] Pseudonymize user order data"
+msgstr ""
+"[WP Simple Paypal Košarica] Pseudonimizirajte podatke o narudžbi korisnika"
+
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:242
+msgid "WP Simple Paypal Shopping Cart gathers consumer orders data"
+msgstr "WP Simple Paypal Košarica prikuplja podatke potrošačkih narudžbi"
+
+#: includes/service/service-youtube.php:100
+msgid "[Youtube] Remove youtube iframes until Necessary cookies accepted"
+msgstr ""
+"[Youtube] Uklonite iframeove na usluzi YouTube sve dok Neophodni kolačići ne "
+"budu prihvaćeni"
+
+#: includes/service/service-youtube.php:135
+msgid "Youtube creates cookies"
+msgstr "Youtube stvara kolačiće"
+
+#: includes/service/service-facebook-pixel.php:101
+#, php-format
+msgid ""
+"[%s] Block Facebook Pixel cookies when a user doesn't accept Advertising "
+"cookies"
+msgstr ""
+"[% s] Blokiraj Facebook piksel kolačiće kada korisnik ne prihvaća kolačiće "
+"za oglašavanje"
+
+#: includes/service/service-wp-posts.php:29
+msgid "WordPress Posts"
+msgstr "WordPress postovi"
+
+#: includes/service/service-wp-posts.php:82
+#, php-format
+msgid "Could not update post data for posts: %s"
+msgstr "Nije mogao ažurirati postove:%s"
+
+#: includes/service/service-wp-posts.php:100
+msgid "[WP Posts] Delete posts instead of reassigning to a different user?"
+msgstr ""
+"[WP Posts] Želite li izbrisati objave umjesto prepisivanja drugom korisniku?"
+
+#: includes/service/service-wp-posts.php:116
+msgid "[WordPress Posts] Description"
+msgstr "[WordPress Posts] Opis"
+
+#: includes/service/service-wp-posts.php:124
+msgid ""
+"[WP Posts] Enter the user email whom the posts will be reassigned to "
+"(default is admin)"
+msgstr ""
+"[WP Posts] Unesi korisnički mail kojem će postovi biti dodijeljeni (zadani "
+"je admin)"
+
+#: includes/service/service-wp-posts.php:182
+msgid "WordPress posts author data"
+msgstr "WordPress objavljuje korisničke podatke"
+
+#: includes/service/service-eform.php:233
+msgid "eForm gathers data entered by users in forms"
+msgstr "eForm prikuplja podatke koje korisnici unose u obrascima"
+
+#: includes/service/service-mailchimp.php:76
+msgid "[Mailchimp] Description"
+msgstr "[Mailchimp] Opis"
+
+#: includes/service/service-mailchimp.php:84
+msgid "[Mailchimp] Inject consent checkbox to order fields"
+msgstr ""
+"[Mailchimp] Dodaj potvrdni okvir za ubacivanje pristanka na sve obrasce"
+
+#: includes/service/service-mailchimp.php:92
+msgid ""
+"[Mailchimp] Inject consent checkbox as the first field instead of the last"
+msgstr "[Mailchimp] Dodaj potvrdni okvir kao prvo polje umjesto zadnjeg"
+
+#: includes/service/service-mailchimp.php:177
+msgid "Consent is mandatory to proceed"
+msgstr "Prihvaćanje je od ključne važnosti za nastavak"
+
+#: includes/service/service-mailchimp.php:187
+msgid "Mailchimp gathers data entered by users in forms"
+msgstr "Mailchimp prikuplja podatke o ulascima korisnika u obrascima"
+
+#: includes/service/service-gravity-forms.php:96
+msgid "[Gravity Forms] Description"
+msgstr "[Gravity Forms] Opis"
+
+#: includes/service/service-gravity-forms.php:115
+msgid ""
+"[Gravity Forms] Inject consent checkbox as the first field instead of the "
+"last"
+msgstr "[Gravity Forms] Dodaj potvdni okvir kao prvo polje umjesto zadnjeg"
+
+#: includes/service/service-gravity-forms.php:123
+msgid "Gravity Forms"
+msgstr "Gravitacijski oblici"
+
+#: includes/service/service-gravity-forms.php:253
+#: includes/service/service-gravity-forms.php:254
+#: includes/views/admin/admin-plugins.php:94
+#: includes/views/admin/admin-plugins.php:112
+msgid "Yes"
+msgstr "Da"
+
+#: includes/service/service-gravity-forms.php:308
+msgid "Gravity forms gathers data entered by users in forms"
+msgstr ""
+"Gravitacijski oblici prikupljaju podatke o ulascima korisnika u obrascima"
+
+#: includes/service/service-arforms.php:129
+msgid "[ARForms] Description"
+msgstr "[ARForms] Opis"
+
+#: includes/service/service-arforms.php:148
+msgid "ARForms"
+msgstr "ARForms"
+
+#: includes/service/service-arforms.php:260
+msgid "ARForms gathers data entered by users in forms"
+msgstr "ARForms prikuplja podatke koje korisnici unose u obrascima"
+
+#: includes/service/service-woocommerce.php:74
+#: includes/service/service-woocommerce.php:149
+#: includes/service/service-woocommerce.php:181
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/service/service-woocommerce.php:157
+msgid "[WooCommerce] Description"
+msgstr "[WooCommerce] Opis"
+
+#: includes/service/service-woocommerce.php:165
+msgid "[WooCommerce] Inject consent checkbox to order fields"
+msgstr "[WooCommerce] Dodaj potvrdni okvir u ostala polja"
+
+#: includes/service/service-woocommerce.php:173
+msgid "[WooCommerce] Inject consent checkbox to account forms"
+msgstr "[WooCommerce] Umetnite potvrdni okvir za pristanak na obrasce računa"
+
+#: includes/service/service-woocommerce.php:189
+msgid "[WooCommerce] Pseudonymize first and last name"
+msgstr "[WooCommerce] Pseudonimiziranje prvog i posljednjeg imena"
+
+#: includes/service/service-woocommerce.php:197
+msgid "[WooCommerce] Pseudonymize address information"
+msgstr "[WooCommerce] Pseudonimiziranje adrese"
+
+#: includes/service/service-woocommerce.php:205
+msgid "[WooCommerce] Pseudonymize billing email"
+msgstr "[WooCommerce] Pseudonimiziranje e-pošte za naplatu"
+
+#: includes/service/service-woocommerce.php:386
+#: includes/service/service-events-manager.php:171
+#: includes/service/service-formidable-forms.php:246
+msgid "Consent"
+msgstr "Prihvaćanje"
+
+#: includes/service/service-woocommerce.php:488
+msgid "WooCommerce gathers data entered by users in shop orders"
+msgstr "WooCommerce prikuplja podatke koje su unijeli korisnici u narudžbe"
+
+#: includes/service/service-events-manager.php:102
+msgid "[Events Manager] Description"
+msgstr "[Events Manager] Opis"
+
+#: includes/service/service-events-manager.php:170
+#, php-format
+msgid "%s is required."
+msgstr "%s je potrebno."
+
+#: includes/service/service-events-manager.php:185
+msgid "Events Manager gathers data entered by users in booking order forms"
+msgstr "Voditelj događaja prikuplja podatke o korisnicima unesenim u obrascima"
+
+#: includes/service/service-formidable-forms.php:154
+msgid ""
+"[Formidable Forms] Inject consent checkbox as the first field instead of the "
+"last"
+msgstr ""
+"[Formidable Forms] Dodaj potvrdni okvir kao prvo polje umjesto kao zadnje"
+
+#: includes/service/service-formidable-forms.php:222
+#: includes/service/service-formidable-forms.php:265
+msgid "This field is required"
+msgstr "Ovo polje je zahtjevano"
+
+#: includes/service/service-formidable-forms.php:311
+msgid "Formidable Forms gathers data entered by users in forms"
+msgstr ""
+"Zastrašujući oblici prikupljaju podatke o ulascima korisnika u obrascima"
+
+#: includes/service/service-addthis.php:93
+#, php-format
+msgid ""
+"[%s] Block Addthis cookies when a user doesn't accept Functionality cookies"
+msgstr ""
+"[% s] Blokiraj kolačiće Addthisa kada korisnik ne prihvaća kolačiće "
+"funkcionalnosti"
+
+#: includes/service/service-contact-form-7.php:93
+msgid ""
+"[Contact Form 7] Inject consent checkbox as the first field instead of the "
+"last"
+msgstr ""
+"[Contact Form 7] Umetnite potvrdni okvir za pristanak kao prvo polje umjesto "
+"zadnjeg"
+
+#: includes/service/service-contact-form-7.php:169
+msgid "Contact Form 7 gathers data entered by users in forms"
+msgstr "Contact Form 7 prikuplja podatke o ulascima korisnika u obrascima"
+
+#: includes/service/service-buddypress.php:147
+#: includes/service/service-buddypress.php:159
+#: includes/service/service-buddypress.php:171
+#: includes/service/service-buddypress.php:183
+#: includes/service/service-buddypress.php:195
+#: includes/service/service-buddypress.php:218
+#: includes/service/service-buddypress.php:229
+#: includes/service/service-buddypress.php:240
+#: includes/service/service-buddypress.php:251
+#: includes/service/service-buddypress.php:262
+#, php-format
+msgid "Could not reassign user data for user: %s"
+msgstr "Nije moguće ponovno dodijeliti  korisničke podatke za korisnika: %s"
+
+#: includes/service/service-buddypress.php:420
+msgid "BuddyPress gathers users activity in profile pages and groups"
+msgstr ""
+"BuddyPress prikuplja korisničku aktivnost na profilu stranice i grupama"
+
+#: includes/service/service-mailster.php:159
+#, php-format
+msgid "[%s] Inject consent checkbox to subscribe forms"
+msgstr ""
+"[% s] Upišite potvrdni okvir za suglasnost kako biste pretplatili obrasce"
+
+#: includes/service/service-mailster.php:181
+#, php-format
+msgid "[%s] Inject consent checkbox to unsubscribe forms"
+msgstr ""
+"[%s] Upišite potvrdni okvir za suglasnost kako biste otkazali pretplatu na "
+"obrasce"
+
+#: includes/service/service-mailster.php:192
+msgid "Mailster"
+msgstr "Naziv e-pošte"
+
+#: includes/service/service-mailster.php:389
+msgid "Consent is missing"
+msgstr "Nedostaje pristanak"
+
+#: includes/service/service-mailster.php:400
+msgid "Mailster collects signed in user data"
+msgstr "Mailster prikuplja podatke prijavljenih korisnika"
+
+#: includes/service/service-wp-comments.php:40
+msgid "WP Comments"
+msgstr "WP Komentari"
+
+#: includes/service/service-wp-comments.php:71
+msgid "Anonymous"
+msgstr "Anonimno"
+
+#: includes/service/service-wp-comments.php:83
+#, php-format
+msgid "Could not update comment data for comments: %s"
+msgstr "Nije moguće obnoviti podatke u komentarima za komentare: %s"
+
+#: includes/service/service-wp-comments.php:109
+msgid "[WP Comments] Description"
+msgstr "[WP Comments] Opis"
+
+#: includes/service/service-wp-comments.php:117
+msgid "[WP Comments] Inject consent checkbox to comments fields"
+msgstr "[WP Comments] Dodaj potvrdne okvire u polja komentara"
+
+#: includes/service/service-wp-comments.php:179
+msgid "Please give consent to collect your data"
+msgstr "Molim vas dajte pristanak za skupljanje vaših podataka"
+
+#: includes/service/service-wp-comments.php:188
+msgid "WordPress Comments are data entered by users in comments"
+msgstr "WordPress komentari su podaci koje korisnik upisuje u komentarima"
+
+#: includes/model/model-group.php:48 includes/model/model-group.php:87
+msgid "Essential"
+msgstr "Obvezno"
+
+#: vendor/optimus-prime-plugin-update/class-ct-optimus-prime-plugin-update.php:94
+msgid "Downloading update..."
+msgstr "Preuzimanje ažuriranja..."
+
+#: vendor/optimus-prime-plugin-update/class-ct-optimus-prime-plugin-update.php:134
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2641
+#: includes/views/admin/admin-plugins.php:42
+msgid "Plugin"
+msgstr "Plugin"
+
+#: vendor/optimus-prime-plugin-update/class-ct-optimus-prime-plugin-update.php:230
+msgid "Could not get new version info from OP"
+msgstr "Nije moguće dobiti nove informacije o verziji iz OP-a"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:337
+msgid "Install Required Plugins"
+msgstr "Instaliranje potrebnih dodataka"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:338
+msgid "Install Plugins"
+msgstr "Instaliranje dodatka"
+
+#. translators: %s: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:340
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Instaliranje dodatka: %s"
+
+#. translators: %s: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:342
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr "Ažuriranje dodatka: %s"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:343
+msgid "Something went wrong with the plugin API."
+msgstr "Nešto je pošlo po zlu sa dodatkom API."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:344
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Ova tema zahtijeva sljedeći dodatak: %1$s."
+msgstr[1] "Ova tema zahtijeva sljedeće dodatke: %1$s."
+msgstr[2] "Ova tema zahtijeva sljedeće dodatke: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:350
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Ova tema preporučuje sljedeći dodatak: %1$s."
+msgstr[1] "Ova tema preporučuje sljedeće dodatke: %1$s."
+msgstr[2] "Ova tema preporučuje sljedeće dodatke: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:356
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+"Sljedeći dodatak treba ažurirati na najnoviju verziju kako bi se osigurala "
+"maksimalna kompatibilnost s ovom temom: %1$s."
+msgstr[1] ""
+"Sljedeći se dodatci moraju ažurirati na svoju najnoviju verziju kako bi se "
+"osigurala maksimalna kompatibilnost s ovom temom: %1$s."
+msgstr[2] ""
+"Sljedeći se dodatci moraju ažurirati na svoju najnoviju verziju kako bi se "
+"osigurala maksimalna kompatibilnost s ovom temom: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:362
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "Dostupno je ažuriranje za: %1$s."
+msgstr[1] "Postoje ažuriranja dostupna za sljedeće dodatke: %1$s."
+msgstr[2] "Postoje ažuriranja dostupna za sljedeće dodatke: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:368
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "Sljedeći je potreban dodatak trenutačno neaktivan: %1$s."
+msgstr[1] "Sljedeći potrebni dodatni čvorovi trenutačno su neaktivni: %1$s."
+msgstr[2] "Sljedeći potrebni dodatni čvorovi trenutačno su neaktivni: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:374
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "Sljedeći preporučeni dodatak trenutačno je neaktivan: %1$s."
+msgstr[1] "Sljedeći preporučeni dodaci trenutno su neaktivni: %1$s."
+msgstr[2] "Sljedeći preporučeni dodaci trenutno su neaktivni: %1$s."
+
+#. translators: 1: plugin name(s).
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:380
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Započni instaliranje dodatka"
+msgstr[1] "Započni instaliranje dodatka"
+msgstr[2] "Započni instaliranje dodatka"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:385
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "Započni ažuriranje dodatka"
+msgstr[1] "Započni ažuriranje dodatka"
+msgstr[2] "Započni ažuriranje dodatka"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:390
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Započni aktiviranje dodatka"
+msgstr[1] "Započni aktiviranje dodatka"
+msgstr[2] "Započni aktiviranje dodatka"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:395
+msgid "Return to Required Plugins Installer"
+msgstr "Povratak Potrebnom instaliranju dodataka"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:396
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:919
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3675
+msgid "Return to the Dashboard"
+msgstr "Povratak kontrolnoj ploči"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:397
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3254
+msgid "Plugin activated successfully."
+msgstr "Dodatak je uspješno instaliran."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:398
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3047
+msgid "The following plugin was activated successfully:"
+msgstr "Sljedeći dodatak je uspješno aktiviran:"
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:400
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "Nikakva radnja nije poduzeta. Dodatak %1$s je već aktiviran."
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+"Dodatak nije aktiviran. Viša verzija od %s je potrebna za ovu temu. Molim "
+"vas da ažurirate dodatak."
+
+#. translators: 1: dashboard link.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:404
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Svi dodaci su instalirani i aktivirani uspješno. %1$s"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:405
+msgid "Dismiss this notice"
+msgstr "Odbaci ovu obavijest"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:406
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+"Postoji jedan ili više zahtjevan ili preporučen dodatak za instaliranje, "
+"ažuriranje ili aktiviranje."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:407
+msgid "Please contact the administrator of this site for help."
+msgstr "Molim vas kontaktirajte administratora ove stranice za pomoć."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:610
+#: vendor/optimus-prime-plugin-update/settings.php:80
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+"Ovaj dodatak mora biti ažuriran kako bi bio kompatibilan za vašom temom."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:611
+#: vendor/optimus-prime-plugin-update/settings.php:81
+msgid "Update Required"
+msgstr "Ažuriraj potrebno"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:728
+msgid "Set the parent_slug config variable instead."
+msgstr "Umjest postavite varijablu za konfiguriranje parent_slug."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:922
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1053
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2627
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3678
+msgid "Return to Dashboard"
+msgstr "Povratak kontrolnoj ploči"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1026
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+"Paket daljinskog dodataka ne sadrži mapu s željenom uslugom i preimenovanje "
+"nije uspjelo."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1026
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1029
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+"Kontaktirajte davatelja dodataka i zamolite ih da pakiraju svoj dodatak "
+"prema smjernicama WordPress-a."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1029
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+"Paket upravljačkog dodataka sastoji se od više od jedne datoteke, no "
+"datoteke nisu zapakirane u mapu."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1213
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3043
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "i"
+
+#. translators: %s: version number
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2076
+#, php-format
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2367
+msgid "Required"
+msgstr "Zahtjevano"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2370
+msgid "Recommended"
+msgstr "Preporučeno"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2386
+msgid "WordPress Repository"
+msgstr "WordPress skladište"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2389
+msgid "External Source"
+msgstr "Vanjski izvor"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2392
+msgid "Pre-Packaged"
+msgstr "Prethodno pakirani"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2409
+msgid "Not Installed"
+msgstr "Nije instalirano"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2413
+msgid "Installed But Not Activated"
+msgstr "Instalirano, ali ne i aktivirano"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2415
+msgid "Active"
+msgstr "Aktivno"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2421
+msgid "Required Update not Available"
+msgstr "Obavezna ažuriranje nije dostupno"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2424
+msgid "Requires Update"
+msgstr "Potreban ažuriranje"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2427
+msgid "Update recommended"
+msgstr "Ažuriraj preporučeno"
+
+#. translators: 1: install status, 2: update status
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2436
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2482
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "Sve <span class = \"count\"> (% s) </ span>"
+msgstr[1] "Sve <span class = \"count\"> (% s) </ span>"
+msgstr[2] "Sve <span class = \"count\"> (% s) </ span>"
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2486
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] "Za instaliranje <span class = \"count\"> (% s) </ span>"
+msgstr[1] "Za instaliranje <span class = \"count\"> (% s) </ span>"
+msgstr[2] "Za instaliranje <span class = \"count\"> (% s) </ span>"
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2490
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] "Dostupno za ažuriranje <span class = \"count\"> (% s) </ span>"
+msgstr[1] "Dostupno za ažuriranje <span class = \"count\"> (% s) </ span>"
+msgstr[2] "Dostupno za ažuriranje <span class = \"count\"> (% s) </ span>"
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2494
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] "Za aktiviranje <span class = \"count\"> (% s) </ span>"
+msgstr[1] "Za aktiviranje <span class = \"count\"> (% s) </ span>"
+msgstr[2] "Za aktiviranje <span class = \"count\"> (% s) </ span>"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2576
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "nepoznato"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2584
+msgid "Installed version:"
+msgstr "Instalirana verzija:"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2592
+msgid "Minimum required version:"
+msgstr "Minimalna potrebna verzija:"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2604
+msgid "Available version:"
+msgstr "Dostupna verzija:"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2642
+msgid "Source"
+msgstr "Izvor"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2643
+msgid "Type"
+msgstr "Vrsta"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2647
+msgid "Version"
+msgstr "Verzija"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2648
+msgid "Status"
+msgstr "Status"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2697
+#, php-format
+msgid "Install %2$s"
+msgstr "Instaliraj %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2702
+#, php-format
+msgid "Update %2$s"
+msgstr "Ažuriraj %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2708
+#, php-format
+msgid "Activate %2$s"
+msgstr "Aktiviraj %2$s"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2778
+msgid "Upgrade message from the plugin author:"
+msgstr "Ažuriraj poruku od autora dodataka:"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2811
+msgid "Install"
+msgstr "Instaliraj"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2818
+msgid "Update"
+msgstr "Ažuriraj"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2821
+msgid "Activate"
+msgstr "Aktiviraj"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+"Nijedan dodatak nije odabran za instalaciju. Ne poduzimaj nikakvu radnju."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2854
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+"Nijedan dodatak nije odabran za ažuriranje. Ne poduzimaj nikakvu radnju."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be installed at this time."
+msgstr "Nijedan dodatak nije odabran za instalaciju trenutačno."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2897
+msgid "No plugins are available to be updated at this time."
+msgstr "Nijedan dodatak nije odabran za ažuriranje trenutačno."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3003
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+"Nijedan dodatak nije odabran za aktivaciju. Ne poduzimaj nikakvu radnju."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3029
+msgid "No plugins are available to be activated at this time."
+msgstr "Nijedan dodatak nije odabran za aktivaciju trenutačno."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3253
+msgid "Plugin activation failed."
+msgstr "Aktivacija dodataka je neuspješna."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3593
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Ažuriranje dodatka %1$s (%2$d/%3$d)"
+
+#. translators: 1: plugin name, 2: error message.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3596
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Dogodila se pogreška pri instaliranju %1$s: <strong>%2$s</strong>."
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3598
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "Instalacija %1$s je bila neuspješna."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3602
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"Proces instaliranje i aktiviranja je započeo. Ovaj proces može potrajati "
+"neko vrijeme kod nekih domaćina, stoga molimo za strpljenje."
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3604
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s instaliranje i aktiviranje je uspješno."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3605
+msgid "All installations and activations have been completed."
+msgstr "Sva instaliranja i aktiviranja su završena."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3607
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Instaliranje i aktiviranje dodataka %1$s (%2$d/%3$d)"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3610
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"Proces instaliranja je započeo. Ovaj proces može potrajati malo kod nekih "
+"domaćina, stoga molimo da budete strpljivi."
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3612
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s je uspješno instaliran."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3613
+msgid "All installations have been completed."
+msgstr "Sva instaliranja su izvršena."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3615
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Instaliranje dodatka %1$s (%2$d/%3$d)"
+
+#: includes/views/admin/admin-breach-send.php:17
+msgid "Emails were sent."
+msgstr "E - pošta je poslana."
+
+#: includes/views/admin/admin-breach-send.php:25
+msgid "You will send emails to the following emails:"
+msgstr "Poslat ćeš mailove sljedećim e - poštama:"
+
+#: includes/views/admin/admin-breach-send.php:40
+msgid "Send"
+msgstr "Pošalji"
+
+#: includes/views/admin/admin-forgotten.php:31
+#: includes/views/admin/admin-cookie.php:22
+#: includes/views/admin/admin-pseudonymization.php:31
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:22
+#: includes/views/admin/admin-breach.php:22
+#: includes/views/admin/admin-policy.php:22
+#: includes/views/admin/admin-services.php:22
+#: includes/views/admin/admin-data-access.php:33
+#: includes/views/admin/admin-terms.php:23
+#: includes/views/admin/admin-rectification.php:33
+#: includes/views/admin/admin-plugins.php:22
+msgid "Settings"
+msgstr "Postavke"
+
+#: includes/views/admin/admin-forgotten.php:65
+msgid "Right To Be Forgotten request list"
+msgstr "Pravo da budu zaboravljeni popis zahtjeva"
+
+#: includes/views/admin/admin-forgotten.php:70
+#: includes/views/admin/admin-data-access.php:76
+#: includes/views/admin/admin-rectification.php:74
+msgid "User ID"
+msgstr "Korisnički ID"
+
+#: includes/views/admin/admin-forgotten.php:71
+#: includes/views/admin/admin-data-access.php:77
+#: includes/views/admin/admin-rectification.php:75
+msgid "Email"
+msgstr "Email"
+
+#: includes/views/admin/admin-forgotten.php:72
+msgid "Services to forget (user selected)"
+msgstr "Usuge za zaborav (odabrani korisnici)"
+
+#: includes/views/admin/admin-forgotten.php:73
+#: includes/views/admin/admin-data-access.php:78
+#: includes/views/admin/admin-rectification.php:76
+msgid "Date of request"
+msgstr "Datum zahtjeva"
+
+#: includes/views/admin/admin-forgotten.php:74
+msgid "Date of mail sent"
+msgstr "Datum poslanog maila"
+
+#: includes/views/admin/admin-forgotten.php:75
+msgid "Email user / remove request"
+msgstr "Email korisnik/ odbaci zahtjev"
+
+#: includes/views/admin/admin-forgotten.php:88
+#: includes/views/admin/admin-data-access.php:94
+#: includes/views/admin/admin-rectification.php:92
+msgid "Not registered"
+msgstr "Nije registriran"
+
+#: includes/views/admin/admin-forgotten.php:95
+msgid "Select all"
+msgstr "Odaberi sve"
+
+#: includes/views/admin/admin-forgotten.php:114
+#, php-format
+msgid "Forgotten at %s"
+msgstr "Zaboravljen u %s"
+
+#: includes/views/admin/admin-forgotten.php:151
+msgid "Forget and notify selected users"
+msgstr "Zaboravi i obavijesti odabrane korisnike"
+
+#: includes/views/admin/admin-forgotten.php:153
+#: includes/views/admin/admin-data-access.php:126
+#: includes/views/admin/admin-rectification.php:124
+msgid "Remove selected requests from list"
+msgstr "Ukloni odabrane zahtjeve s popisa"
+
+#: includes/views/admin/admin-forgotten.php:155
+#: includes/views/admin/admin-data-access.php:128
+#: includes/views/admin/admin-rectification.php:126
+msgid "Remove all sent requests from list"
+msgstr "Ukloni sve poslane zahtjeve sa liste"
+
+#: includes/views/admin/admin-cookie.php:57
+msgid "Cookie popup"
+msgstr "Popup kolačića"
+
+#: includes/views/admin/admin-cookie.php:60
+msgid "Preferences"
+msgstr "Postavke"
+
+#: includes/views/admin/admin-cookie.php:63
+msgid "Advanced settings"
+msgstr "Napredne postavke"
+
+#: includes/views/admin/admin-cookie.php:79
+msgid "Press 'Save changes' before downloading logs if you changed any options"
+msgstr ""
+"Pritisnite \"Spremi promjene\" prije preuzimanja dnevnika ako ste izmijenili "
+"neke opcije"
+
+#: includes/views/admin/admin-cookie.php:90
+#: includes/views/admin/admin-policy.php:58
+#: includes/views/admin/admin-terms.php:59
+msgid "Download consents log"
+msgstr "Preuzimanje log pristanaka"
+
+#: includes/views/admin/admin-cookie.php:96
+msgid "Detect cookies"
+msgstr "Detektiraj kolačiće"
+
+#: includes/views/admin/admin-cookie.php:99
+msgid ""
+"Your website should be publicly accessible so that the Cookie Detector can "
+"work properly."
+msgstr ""
+"Vaša web stranica bi trebala biti javno dostupna kako bi detektori kolačića "
+"mogli ispravno raditi."
+
+#: includes/views/admin/admin-cookie.php:107
+msgid "Close"
+msgstr "Zatvoriti"
+
+#: includes/views/admin/admin-cookie.php:109
+msgid "Cookies Scanner"
+msgstr "Skener kolačića"
+
+#: includes/views/admin/admin-cookie.php:111
+msgid "Our busy bees are searching for cookies on:"
+msgstr "Naši zauzet pčele traže kolačiće na:"
+
+#: includes/views/admin/admin-cookie.php:111
+msgid "posts and pages"
+msgstr "stranica postova"
+
+#: includes/views/admin/admin-cookie.php:119
+msgid "It can take up to few minutes. Thanks for your patience!"
+msgstr "Može potrajati i do nekoliko minuta. Hvala na Vašem strpljenju!"
+
+#: includes/views/admin/admin-cookie.php:122
+msgid "We are currently scanning:"
+msgstr "Trenutačno pretražujemo:"
+
+#: includes/views/admin/admin-cookie.php:128
+msgid "Currently scanned URL:"
+msgstr "Trenutno skenirani URL:"
+
+#: includes/views/admin/admin-pseudonymization.php:47
+msgid ""
+"Press 'Save changes' before pressing encryption buttons if you changed any "
+"options"
+msgstr ""
+"Pritisni \"Spremi promjene\" prije pritiskanja tipke za šifriranje ako ste "
+"promjenili neku od opcija"
+
+#: includes/views/admin/admin-pseudonymization.php:58
+msgid "Encrypt selected"
+msgstr "Šifriranje odabrano"
+
+#: includes/views/admin/admin-pseudonymization.php:60
+msgid "Decrypt selected"
+msgstr "Dešifriranje odabrano"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:30
+#: includes/views/admin/admin-plugins.php:30
+msgid "Introduction"
+msgstr "Uvod"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:33
+#: includes/views/admin/admin-plugins.php:33
+msgid "Compatibility"
+msgstr "Kompatibilnost"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:42
+msgid "The GDPR was approved and adopted by the EU Parliament in April 2016."
+msgstr ""
+"GDPR je odobren i prihvaćen od strane Europskog parlamenta u travnju 2016. "
+"godine."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:43
+msgid ""
+" The regulation will take effect after a two-year transition period and, "
+"unlike a Directive it does not require any enabling legislation to be passed "
+"by government; meaning it will be in force May 2018."
+msgstr ""
+" GDPR je odobren i prihvaćen od strane Europskog parlamenta u travnju 2016. "
+"Uredba će stupiti na snagu nakon dvogodišnjeg prijelaznog razdoblja i, za "
+"razliku od Direktive, ne zahtijeva da vlada donese nikakvu zakonodavnu "
+"legislativu; što znači da će biti na snazi u svibnju 2018."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:47
+msgid ""
+"The GDPR not only applies to organisations located within the EU but it will "
+"also apply to organisations located outside of the EU if they offer goods or "
+"services to, or monitor the behaviour of, EU data subjects. It applies to "
+"all companies processing and holding the personal data of data subjects "
+"residing in the European Union, regardless of the company's location."
+msgstr ""
+"GDPR se ne odnosi samo na organizacije koje se nalaze unutar EU, već će se "
+"primjenjivati i na organizacije izvan EU ako nude robu ili usluge ili prate "
+"ponašanje ispitanika iz EU. To se odnosi na sve tvrtke koje obrađuju i drže "
+"osobne podatke poduzetnika koji borave u Europskoj uniji, bez obzira na "
+"lokaciju tvrtke."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:52
+msgid ""
+"This plugin will create a form where users can request access to or deletion "
+"of their personal data, stored on\n"
+"                your website. It is also possible to:"
+msgstr ""
+"Ovaj dodatak izradit će obrazac u kojem korisnici mogu zatražiti pristup ili "
+"brisanje njihovih osobnih podataka koji su pohranjeni na njima\n"
+"                vaše web stranice. Također je moguće:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:57
+msgid ""
+"create a custom cookie notice and block all cookies until cookie consent is "
+"given"
+msgstr ""
+"lzradite prilagođenu obavijest o kolačićima i blokirajte sve kolačiće dok se "
+"ne dade pristanak na njih"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:58
+msgid ""
+"set up redirects for your Terms and Conditions and Privacy Policy pages "
+"until consent is given"
+msgstr ""
+"postavite preusmjeravanje za svoje Uvjete i odredbe i Pravila o privatnosti "
+"sve dok ne dobijete pristanak"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:59
+msgid ""
+"browse user requests for data access/deletion and set custom email "
+"notifications"
+msgstr ""
+"pretraživanje korisničkih zadataka radi pristupa podacima/ brisanje i "
+"postavljanje prilagođenih obavijesti putem e-pošte"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:60
+msgid ""
+"send custom email informing about data breach to all users which left their "
+"email at your site"
+msgstr ""
+"pošaljite prilagođene mailove o kršenju podataka svim korisnicima koji su "
+"ostavili svoju e-poštu na vašoj stranici"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:61
+msgid "automatically add consent boxes for various forms on your website"
+msgstr ""
+"automatski dodaj okvire za pristanak za različite oblike na vašoj web "
+"stranici"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:62
+msgid "pseudonymize some of user data stored in database"
+msgstr ""
+"pseudonimiziranje nekih korisničkih podataka pohranjenih u bazi podataka"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:63
+msgid "check currently activated plugins for GDPR compliance"
+msgstr "provjerite trenutno aktivirane dodatke za usklađenost s GDPR"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:68
+msgid ""
+"To start, browse through settings. Then, create a new page with shortcode:"
+msgstr ""
+"Za početak pregledajte postavke. Zatim izradite novu stranicu s kratkim "
+"kôdom:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:68
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:86
+msgid "[ultimate_gdpr_myaccount]"
+msgstr "[ultimate_gdpr_myaccount]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:75
+msgid "Available Shortcodes"
+msgstr "Dostupni kratki kodovi"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:82
+msgid "User Settings:"
+msgstr "Postavke pristanka na kolačiće:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:94
+msgid "Privacy Policy Button:"
+msgstr "Pravila o privatnosti:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:98
+msgid "[ultimate_gdpr_policy_accept]"
+msgstr "[ultimate_gdpr_policy_accept]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:106
+msgid "Terms and Conditions Button:"
+msgstr "Gumb Uvjeta i uvjeta:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:110
+msgid "[ultimate_gdpr_terms_accept]"
+msgstr "[ultimate_gdpr_terms_accept]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:118
+msgid "Cookie Popup Link:"
+msgstr "Suglasnost o kolačićima:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:122
+msgid "[ultimate_gdpr_cookie_popup]"
+msgstr "[ultimate_gdpr_cookie_popup]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:130
+msgid "Display Cookies List:"
+msgstr "Prikaži popis kolačića:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:134
+msgid "[render_cookies_list]"
+msgstr "[render_cookies_list]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:146
+msgid "System requirements:"
+msgstr "Zahtjevi sustava:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:153
+msgid "PHP Version:"
+msgstr "PHP verzija:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:157
+msgid "7.2+"
+msgstr "7.2+"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:165
+msgid "Memory limit:"
+msgstr "Ograničenje memorije:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:169
+msgid "64 MB"
+msgstr "64 MB"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:177
+msgid "Disk space:"
+msgstr "Prostor na disku:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:181
+msgid "10 MB"
+msgstr "10 MB"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:196
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:199
+msgid "Any questions?"
+msgstr "Ima li pitanja?"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+msgid "Please have a look at the"
+msgstr "Molimo pogledaj"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+msgid "Support forum"
+msgstr "Forum za podršku"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+msgid "or ask your questions via e-mail"
+msgstr "ili postavljati pitanja putem e-maila"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:201
+msgid "Link to our "
+msgstr "Veza na našu "
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:201
+msgid "Documentation"
+msgstr "Dokumentacija"
+
+#: includes/views/admin/admin-breach.php:56
+msgid "Press 'Save changes' before sending emails if you changed any options"
+msgstr ""
+"Klikni \"Spremi promjene\" prije slanja e - pošte ako ste promjenili neku od "
+"opcija"
+
+#: includes/views/admin/admin-breach.php:70
+msgid "Go to send emails screen"
+msgstr "Idi i pošalji zaslon e- pošte"
+
+#: includes/views/admin/admin-policy.php:47
+#: includes/views/admin/admin-terms.php:48
+msgid ""
+"Press \"Save changes\" before downloading logs if you changed any options"
+msgstr ""
+"Pritisnite \"Spremi promjene\" prije preuzimanja dnevnika ako ste izmijenili "
+"neke opcije"
+
+#: includes/views/admin/admin-data-access-user-details.php:16
+#, php-format
+msgid "Collected data for user: %s"
+msgstr "Prikupljeni podaci za korisnika: %s"
+
+#: includes/views/admin/admin-data-access-user-details.php:20
+#: includes/views/admin/admin-data-access-user-details.php:34
+#: includes/views/admin/admin-rectification-user-details.php:34
+msgid "Go back"
+msgstr "Odi natrag"
+
+#: includes/views/admin/admin-data-access-user-details.php:26
+msgid "No data collected for this service"
+msgstr "Nema prikupljenih podataka za ovu uslugu"
+
+#: includes/views/admin/admin-data-access.php:71
+msgid "Data access requests list"
+msgstr "Datum pristupa listi zahtjeva"
+
+#: includes/views/admin/admin-data-access.php:79
+#: includes/views/admin/admin-rectification.php:77
+msgid "Date of data sent"
+msgstr "Datum poslanih podataka"
+
+#: includes/views/admin/admin-data-access.php:80
+#: includes/views/admin/admin-rectification.php:78
+msgid "Select for action"
+msgstr "Odaberi za akciju"
+
+#: includes/views/admin/admin-data-access.php:81
+#: includes/views/admin/admin-rectification.php:79
+msgid "See details"
+msgstr "Vidi detalje"
+
+#: includes/views/admin/admin-data-access.php:105
+msgid "Preview data"
+msgstr "Pregled podataka"
+
+#: includes/views/admin/admin-data-access.php:124
+#: includes/views/admin/admin-rectification.php:122
+msgid "Send data to selected emails"
+msgstr "Pošalji podatke odabranim mailovima"
+
+#: includes/views/admin/admin-rectification-user-details.php:16
+#, php-format
+msgid "Rectified data for user: %s"
+msgstr "Ispravljeni podaci za korisnika: %s"
+
+#: includes/views/admin/admin-rectification-user-details.php:18
+msgid "Current data:"
+msgstr "Trenutačni podaci:"
+
+#: includes/views/admin/admin-rectification-user-details.php:24
+msgid "Rectified data:"
+msgstr "Ispravljeni podaci:"
+
+#: includes/views/admin/admin-rectification.php:69
+msgid "Data rectification requests list"
+msgstr "Popis zahtjeva za ispravljanje podataka"
+
+#: includes/views/admin/admin-rectification.php:103
+msgid "See rectified data"
+msgstr "Vidi ispravljene podatke"
+
+#: includes/views/admin/admin-plugins.php:43
+msgid "Collects user data"
+msgstr "Prikupi korisničke podatke"
+
+#: includes/views/admin/admin-plugins.php:44
+msgid "Compatible with Ultimate GDPR"
+msgstr "Kompatibilno s Ultimate GDPR"
+
+#: includes/views/admin/admin-plugins.php:96
+#: includes/views/admin/admin-plugins.php:116
+msgid "No"
+msgstr "Ne"
+
+#: includes/views/admin/admin-plugins.php:98
+msgid "Probably"
+msgstr "Možda"
+
+#: includes/views/admin/admin-plugins.php:100
+msgid "Unknown"
+msgstr "Nepoznato"
+
+#: includes/views/admin/admin-plugins.php:114
+msgid "Partly"
+msgstr "Polovično"
+
+#: includes/views/shortcode/shortcode-policy-accept.php:35
+msgid "You have already accepted Privacy Policy"
+msgstr "Već ste prihvatili Pravila o privatnosti"
+
+#: includes/views/shortcode/shortcode-policy-accept.php:44
+#: includes/views/shortcode/shortcode-terms-accept.php:44
+msgid "Decline"
+msgstr "Odbiti"
+
+#: includes/views/shortcode/shortcode-myaccount.php:31
+msgid "Personal Data Access"
+msgstr "Pristup osobnim podacima"
+
+#: includes/views/shortcode/shortcode-myaccount.php:32
+msgid "Forget me"
+msgstr "Zaboravi me"
+
+#: includes/views/shortcode/shortcode-myaccount.php:33
+msgid "Data rectification"
+msgstr "Datum ratifikacije"
+
+#: includes/views/shortcode/shortcode-myaccount.php:39
+msgid ""
+"Below, you can request for your personal data that's collected by this "
+"website sent to you in an e-mail."
+msgstr ""
+"U nastavku možete zatražiti svoje osobne podatke koje je ova web-stranica "
+"prikupila putem e-pošte."
+
+#: includes/views/shortcode/shortcode-myaccount.php:48
+msgid ""
+"I consent to have my email collected in order to receive my requested data. "
+"See Privacy Policy page for more information."
+msgstr ""
+"Prihvaćam da se prikupi moja e-poštu kako bih primio tražene podatke. Više "
+"informacija potražite na stranici Pravila o privatnosti."
+
+#: includes/views/shortcode/shortcode-myaccount.php:57
+#: includes/views/shortcode/shortcode-myaccount.php:109
+#: includes/views/shortcode/shortcode-myaccount.php:160
+msgid "Submit"
+msgstr "Potvrdi"
+
+#: includes/views/shortcode/shortcode-myaccount.php:64
+msgid ""
+"Below, you can browse services which collects your personal data on this "
+"website. Check services you wish to be forgotten by. This will send a "
+"request to the website admin. You will be notified by e-mail once this is "
+"done.\""
+msgstr ""
+"U nastavku možete pregledavati usluge koje prikupljaju vaše osobne podatke "
+"na ovoj web stranici. Provjerite usluge koje želite zaboraviti. To će "
+"poslati zahtjev administratoru web stranice. Bit ćete obaviješteni e-poštom "
+"nakon što to učinite. \""
+
+#: includes/views/shortcode/shortcode-myaccount.php:101
+#: includes/views/shortcode/shortcode-myaccount.php:151
+msgid ""
+"I consent to have my email collected in order to process this request. See "
+"Privacy Policy page for more information."
+msgstr ""
+"Prihvaćam da se prikupi moja e-poštu kako bi se obradio taj zahtjev. Više "
+"informacija potražite na stranici Pravila o privatnosti."
+
+#: includes/views/shortcode/shortcode-myaccount.php:119
+msgid ""
+"Below, you can send a request to have your data rectified by  the website "
+"admin. Enter what you would like to be rectified. You will be notified by e-"
+"mail once this is done."
+msgstr ""
+"U nastavku možete poslati zahtjev za ispravljanje podataka od strane "
+"administratora web stranice. Unesite ono što želite ispraviti. Bit ćete "
+"obaviješteni e-poštom nakon što to učinite."
+
+#: includes/views/shortcode/shortcode-myaccount.php:127
+msgid "Current data"
+msgstr "Trenutačni podaci"
+
+#: includes/views/shortcode/shortcode-myaccount.php:136
+msgid "Rectified data"
+msgstr "Ispravljeni podaci"
+
+#: includes/views/shortcode/shortcode-terms-accept.php:35
+msgid "You have already accepted Terms and Conditions"
+msgstr "Već ste prihvatili Uvjete i odredbe"
+
+#: includes/views/service/service-wp-user-consent-field.php:17
+#: includes/views/service/service-eform-consent-field.php:19
+#: includes/views/service/service-formidable-forms-consent-field.php:12
+#: includes/views/service/service-quform-consent-field.php:12
+#: includes/views/service/service-contact-form-7-consent-field.php:20
+#: includes/views/service/service-woocommerce-consent-field.php:16
+#: includes/views/service/service-wp-comments-consent-field.php:16
+#: includes/views/service/service-woocommerce-consent-field-label.php:12
+#: includes/views/service/service-arforms-consent-field.php:17
+#: includes/views/service/service-events-manager-consent-field.php:17
+msgid "I consent to the storage of my data according to the Privacy Policy"
+msgstr ""
+"Pristajem da moji podaci pohrane u skladu s odredbama Pravila o privatnosti"
+
+#: includes/views/service/service-gravity-forms-consent-field-description.php:12
+msgid "Follow this link to access Privacy Policy"
+msgstr "Pratite ovaj link kako biste pristupili Pravilima o privatnosti"
+
+#: includes/views/service/service-gravity-forms-consent-field-error-message.php:12
+msgid "You must accept the Privacy Policy before submitting the form"
+msgstr "Morate prihvatiti Pravila o privatnosti prije slanja obrasca"
+
+#: includes/views/service/service-bbpress-consent-field.php:16
+#: includes/views/service/service-buddypress-consent-field.php:16
+msgid ""
+"I consent to the storage of my data according to the Privacy Policy "
+"(required)"
+msgstr ""
+"Pristajem na to da se moji podaci prikupe s obzirom na Pravilima o "
+"privatnosti (obvezno)"
+
+#: includes/views/service/service-mailster-consent-field.php:16
+#: includes/views/service/service-gravity-forms-consent-field-label.php:12
+msgid "I consent to storage of my data according to Privacy Policy"
+msgstr ""
+"Pristajem na pohranu svojih podataka u skladu s Pravilima o privatnosti"
+
+#: includes/views/service/service-mailchimp-consent-field.php:16
+msgid "I consent to the storage of my data according to the Privacy Policy "
+msgstr ""
+"Pristajem na to da se moji podaci prikupe s obzirom na Pravilima o "
+"privatnosti "
+
+#: includes/views/service/service-quform-consent-field-error-message.php:12
+msgid "This field is mandatory"
+msgstr "Ovo polje je obvezno"
+
+#: includes/views/service/service-arforms-consent-field.php:24
+msgid "This field cannot be blank."
+msgstr "Ovo polje ne može biti prazno."
+
+#: includes/views/service/service-arforms-consent-field.php:26
+msgid "OK"
+msgstr "OK"
+
+#. Description of the plugin/theme
+msgid ""
+"Complete General Data Protection Regulation compliance toolkit plugin for "
+"WordPress."
+msgstr ""
+"Kompletan dodatak za usklađenost s propisima o zaštiti općih podataka za "
+"WordPress."
+
+#. Author of the plugin/theme
+msgid "CreateIT"
+msgstr "CreateIT"
+
+#. Author URI of the plugin/theme
+msgid "https://www.createit.pl"
+msgstr "https://www.createit.pl"
+
+msgid "Enabled"
+msgstr "Omogućeno"
+
+msgid "Enable"
+msgstr "Omogućiti"
+
+msgid "Disabled"
+msgstr "Onemogući"
+
+msgid "Disable"
+msgstr "Onemogući"
+
+msgid "Select page where to display the cookie popup"
+msgstr "Odaberite stranicu na kojoj će se prikazati skočni kolačić"
+
+msgid "Google Analytics Tracking ID (disable tracking for this ID when cookies consent not given), eg. UA-118586768-1"
+msgstr "ID praćenja usluge Google Analytics (onemogućite praćenje ovog ID-a kada kolačići ne daju pristanak), npr. UA-118586768-1"
+
+msgid "Hide \"Block All\" level features"
+msgstr "Sakriti \"Blokiraj sve\" razine značajke"
+
+msgid "Hide \"Essential\" level features"
+msgstr "Sakriti \"Osnovni\" razine značajke"
+
+msgid "Hide \"Functionality\" level features"
+msgstr "Sakriti \"Funkcionalnost\" razine značajke"
+
+msgid "Hide \"Analytics\" level features"
+msgstr "Sakriti \"Analitika\" razine značajke"
+
+msgid "Hide \"Advertising\" level features"
+msgstr "Sakriti \"Oglašavanje\" razine značajke"
+
+msgid "Block All"
+msgstr "Blokiraj sve"
+
+msgid "Click here to create"
+msgstr "Kliknite ovdje za stvaranje"
+

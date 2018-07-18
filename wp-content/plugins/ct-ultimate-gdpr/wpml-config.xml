@@ -1,0 +1,28 @@
+<wpml-config>
+    <admin-texts>
+        <key name="ct-ultimate-gdpr-cookie">
+            <key name="cookie_content"/>
+            <key name="cookie_group_popup_header_content"/>
+            <key name="cookie_popup_label_accept"/>
+            <key name="cookie_popup_label_read_more"/>
+            <key name="cookie_popup_label_settings"/>
+            <key name="cookie_group_popup_label_save"/>
+            <key name="cookie_group_popup_label_will"/>
+            <key name="cookie_group_popup_label_wont"/>
+            <key name="cookie_group_popup_label_block_all"/>
+            <key name="cookie_group_popup_label_essentials"/>
+            <key name="cookie_group_popup_label_functionality"/>
+            <key name="cookie_group_popup_label_analytics"/>
+            <key name="cookie_group_popup_label_advertising"/>
+            <key name="cookie_group_popup_features_available_group_2"/>
+            <key name="cookie_group_popup_features_nonavailable_group_2"/>
+            <key name="cookie_group_popup_features_available_group_3"/>
+            <key name="cookie_group_popup_features_nonavailable_group_3"/>
+            <key name="cookie_group_popup_features_available_group_4"/>
+            <key name="cookie_group_popup_features_nonavailable_group_4"/>
+            <key name="cookie_group_popup_features_available_group_5"/>
+            <key name="cookie_group_popup_features_nonavailable_group_5"/>
+        </key>
+        <key name="simple_string_option"/>
+    </admin-texts>
+</wpml-config>
