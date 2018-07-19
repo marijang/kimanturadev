@@ -29,5 +29,24 @@ $( document ).ready(function() {
     $('.mc4wp-form-fields [name="EMAIL"]').prop('type', 'text');
 
     // Za plaćanje
+    var input = $('#ct-ultimate-gdpr-consent-field');
+    input.attr('required', false);
+    var label = input.parent();
+    var text = label.text();
+    //console.log(text);
+    label.text('');
+    label.append('<span>' + text + '</span>');
+    input.prependTo(label);
+    label.click(function() {
+        var cb = $(this).find('input');
+        if (cb.attr('checked')) {
+            cb.attr('checked', false);
+            //cb.parent().addClass('checkbox__invalid');
+        } else {
+            cb.attr('checked', true);
+            cb.parent().removeClass('checkbox__invalid');
+        }
+    });
+
     
 }); 
