@@ -18,7 +18,16 @@ $( document ).ready(function() {
             cb.parent().removeClass('checkbox__invalid');
         }
     });
-   
 
-   
+    // Za newsletter
+    var check = $('.mc4wp-form-fields [for="ct-ultimate-gdpr-consent-field"]').parent();
+    check.appendTo('.mc4wp-form-fields .newsletter__content');
+    $('[name="mc4wp-subscribe"').removeClass('filled-in');
+    var appto = $('.mc4wp-form-fields [name="EMAIL"]').parent()
+    $('<span class="helper-text errorClass" data-error="wrong"></span>').appendTo(appto);
+    $('.mc4wp-form-fields [name="EMAIL"]').attr('id', 'EMAIL');
+    $('.mc4wp-form-fields [name="EMAIL"]').prop('type', 'text');
+
+    // Za plaćanje
+    
 }); 

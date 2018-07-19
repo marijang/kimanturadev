@@ -350,7 +350,7 @@ class Woo {
     // Third item
     $t  .= '<li id="wc-multistep-payment" data-step="payment" class="cart-checkout-navigation__item '. ( ($step == 2) ? 'is-active' : '').'" >';
     $t  .= '<span class="cart-checkout-navigation__step-number">3</span>';
-    $t  .= '<span class="cart-checkout-navigation__step-title">'.__('Naćin plačanja','b4b').'<span>';
+    $t  .= '<span class="cart-checkout-navigation__step-title">'.__('Način plaćanja','b4b').'<span>';
     $t  .= '</li>';
     // Fourth Item
     $t  .= '<li id="wc-multistep-finish" data-step="finish" class="cart-checkout-navigation__item is-last 

@@ -169,7 +169,5 @@ $("form[name='checkout']").validate({
    });
 
    
-
-
  
 });

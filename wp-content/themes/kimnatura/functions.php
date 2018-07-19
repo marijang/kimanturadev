@@ -344,3 +344,4 @@ function wpo_wcpdf_thank_you_link( $text, $order ) {
 add_filter( 'login_redirect', function( $url, $query, $user ) {
 	return home_url();
 }, 10, 3 );
+
