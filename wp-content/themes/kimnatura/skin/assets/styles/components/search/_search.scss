@@ -146,7 +146,7 @@ $search-grid-row-gap: $base-content-padding*3;
 	@include typi(large);
 	// line-height: 1;
 	line-height: 1.5;
-	display: inline-block;
+	display: block;
 	box-sizing: border-box;
 	width: 100%;
 	padding: 0 0 0.1em 0!important;
@@ -385,8 +385,8 @@ $search-grid-row-gap: $base-content-padding*3;
 }
 
  .search--open .search__inner {
-    //transform: translate3d(0,0,0);
-    //transition: all .6s;
+    transform: translate3d(0,0,0);
+    transition: all .6s;
 }
 
  .search__suggestion {
