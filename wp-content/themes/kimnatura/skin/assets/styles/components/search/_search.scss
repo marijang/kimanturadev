@@ -54,7 +54,8 @@ $search-grid-row-gap: $base-content-padding*3;
         @include media(mobile){
             height: 88px;
             position: fixed;
-            min-height: 88px;
+			min-height: 88px;
+			overflow-y: hidden;
 
             .search__header {
                 grid-template-areas: 
@@ -107,6 +108,7 @@ $search-grid-row-gap: $base-content-padding*3;
 			padding-top: 88px;
 			min-height: calc(100% - 87px);
 			-webkit-overflow-scrolling: touch;
+			overflow-y: auto;
 		}
     }
 }
