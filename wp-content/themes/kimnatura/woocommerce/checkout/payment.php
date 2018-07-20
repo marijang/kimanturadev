@@ -63,6 +63,7 @@ if ( ! is_ajax() ) {
 }?>
 
 <script>
+$('<div class="checkbox__error-label" id="privacy-error">Potrebno je prihvatiti uvjete privatnosti</div>').appendTo('#ct-ultimate-gdpr-consent-field_field')
 $("#place_order").click(function(){
 	var checked = $("#terms:checked").length;
 	if (checked) {
@@ -71,12 +72,25 @@ $("#place_order").click(function(){
 		$('#terms-error').addClass('checkbox__error-label--active');
 		$('#terms').parent().addClass("checkbox__error");
 	}
+	var checked1 = $("#ct-ultimate-gdpr-consent-field:checked").length;
+	if (checked1) {
+		$("form[name='checkout']").submit();
+	} else {
+		$("#privacy-error").addClass('checkbox__error-label--active');
+		$("#ct-ultimate-gdpr-consent-field").parent().addClass("checkbox__error");
+	}
 });
 $('#terms').change(function() {
 	if ($(this).parent().hasClass('checkbox__error')) {
 		$(this).parent().removeClass('checkbox__error');
 		$('#terms-error').removeClass('checkbox__error-label--active');
 	}
-})
+});
+$('#ct-ultimate-gdpr-consent-field').change(function() {
+	if ($(this).parent().hasClass('checkbox__error')) {
+		$(this).parent().removeClass('checkbox__error');
+		$('#privacy-error').removeClass('checkbox__error-label--active');
+	}
+});
 
 </script>
