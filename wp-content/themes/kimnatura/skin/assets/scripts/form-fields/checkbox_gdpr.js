@@ -55,5 +55,16 @@ $( document ).ready(function() {
         }
     });
 
+
+    // Kontakt
+    var input_contact = $('.contact__field--inverted input[type="checkbox"]');
+    var label_contact = input_contact.parent().find('label');
+    var span_contact = $('<span>' + label_contact.text() + '</span>');
+    label_contact.text(' ');
+    span_contact.appendTo(label_contact);
+    input_contact.prependTo(label_contact);
+
+  $('.wpforms-form button').removeClass();
+  $('.wpforms-form button').addClass('form-button'); 
     
 }); 

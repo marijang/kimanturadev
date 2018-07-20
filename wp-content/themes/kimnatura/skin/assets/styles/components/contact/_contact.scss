@@ -4,6 +4,8 @@ $contact-primary-color: $base-primary-color;
 $contact-white: $base-white-color;
 
 
+
+
 @include b('contact'){
     position: relative;
 
@@ -41,8 +43,9 @@ $contact-white: $base-white-color;
         input, textarea {
             color: $contact-primary-color!important;
             background-color: $contact-white;
-            border: 0!important;
-            border-bottom: 1px solid $contact-primary-color;
+            border-top: 0!important;
+            border-left: 0!important;
+            border-right: 0!important;
         }
         
         label {
@@ -55,10 +58,10 @@ $contact-white: $base-white-color;
             input, textarea {
                 color: $contact-white!important;
                 background-color: $contact-primary-color!important;
-                border-bottom: 1px solid $contact-white!important;
+                border-bottom: 1px solid $contact-white;
             }
             label {
-                color: $contact-white!important;
+                color: $contact-white;
             }
         }
     }
@@ -170,4 +173,55 @@ vertical-align: baseline;
     margin-top: 0;
     -webkit-transition: .2s;
     transition: .2s;
+}
+
+.wpforms-field-label-inline {
+    span:before {
+        border-color: $base-white-color!important;
+    }
+}
+
+.wpforms-selected {
+    span:before {
+        border-top-color: transparent!important;
+        border-left-color: transparent!important;
+        border-right-color: $base-white-color!important;
+        border-bottom-color: $base-white-color!important;
+    }
+}
+
+.wpforms-field-container textarea{ 
+    resize: none;
+}
+
+.wpforms-error {
+    color: $error-red!important;
+}
+
+
+.wpforms-error {
+    border-color: $error-red!important;
+}
+
+.wpforms-required-label {
+    color: $base-white-color!important;
+}
+
+.form-button {
+    background-color: $base-white-color!important;
+    color: $contact-primary-color!important;
+    border-color: $base-white-color!important;
+    z-index: 1000;
+    font-size: 14px!important;
+    line-height: 1.5;
+    height: 48px!important;
+
+
+}
+
+
+.form-button:hover {
+    background-color: $contact-primary-color!important;
+    color: $base-white-color!important;
+    border-color: $base-white-color!important;
 }
