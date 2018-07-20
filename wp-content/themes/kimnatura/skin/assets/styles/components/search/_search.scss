@@ -107,8 +107,8 @@ $search-grid-row-gap: $base-content-padding*3;
 			top: 88px;
 			padding-top: 88px;
 			min-height: calc(100% - 87px);
-			-webkit-overflow-scrolling: touch;
-			overflow-y: auto;
+			//-webkit-overflow-scrolling: touch;
+			//overflow-y: auto;
 		}
     }
 }
@@ -309,6 +309,7 @@ $search-grid-row-gap: $base-content-padding*3;
     overflow: hidden;
     position: fixed;
 	height: 100%;
+	-webkit-overflow-scrolling: touch;
 	
 }
 
