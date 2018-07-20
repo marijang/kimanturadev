@@ -27,6 +27,7 @@ $header_logo_info = $blog_name . ' - ' . $blog_description;
 	});
 });
 </script>
+<?php get_template_part( 'template-parts/header/head/loader' ); ?>
 <div class="header__container" id="page-navigation">
   <div class="header__container-inner">
   <div class="header__hamb" id="menu-toggle"><i class="material-icons">menu</i></div>

@@ -39,6 +39,6 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#C3151B">
 <link rel="apple-touch-startup-image" href="<?php echo esc_url( KIM_IMAGE_URL . 'logo-color.svg' ); ?>">
 
-<?php
+<?php 
 get_template_part( 'template-parts/header/head/favicons' );
 get_template_part( 'template-parts/tracking/head' );
