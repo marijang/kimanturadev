@@ -54,7 +54,8 @@ $search-grid-row-gap: $base-content-padding*3;
         @include media(mobile){
             height: 88px;
             position: fixed;
-            min-height: 88px;
+			min-height: 88px;
+			overflow-y: hidden;
 
             .search__header {
                 grid-template-areas: 
@@ -106,6 +107,8 @@ $search-grid-row-gap: $base-content-padding*3;
 			top: 88px;
 			padding-top: 88px;
 			min-height: calc(100% - 87px);
+			-webkit-overflow-scrolling: touch;
+			overflow-y: auto;
 		}
     }
 }
@@ -146,7 +149,7 @@ $search-grid-row-gap: $base-content-padding*3;
 	@include typi(large);
 	// line-height: 1;
 	line-height: 1.5;
-	display: inline-block;
+	display: block;
 	box-sizing: border-box;
 	width: 100%;
 	padding: 0 0 0.1em 0!important;
@@ -305,7 +308,8 @@ $search-grid-row-gap: $base-content-padding*3;
 .search-show{
     overflow: hidden;
     position: fixed;
-    height: 100%;
+	height: 100%;
+	
 }
 
 /************************/
