@@ -27,6 +27,13 @@ $( document ).ready(function() {
     $('<span class="helper-text errorClass" data-error="wrong"></span>').appendTo(appto);
     $('.mc4wp-form-fields [name="EMAIL"]').attr('id', 'EMAIL');
     $('.mc4wp-form-fields [name="EMAIL"]').prop('type', 'text');
+    var mchp_ckeckbox_label = $('[name="mc4wp-subscribe"]').parent().find('span');
+    mchp_ckeckbox_label.text("Prihvaćam da se moji podaci prebace na Mailchimp poslužitelj. ")
+    $('<a href="https://mailchimp.com/legal/terms/">Više informacija</a>').appendTo(mchp_ckeckbox_label); 
+    $('<span> *</span>').appendTo(mchp_ckeckbox_label); 
+    mchp_ckeckbox_label.css('font-family', '"Merriweather", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"');
+
+    $('.mc4wp-form-fields label[for="EMAIL"]').text('Email adresa');
 
     // Za plaćanje
     var input = $('#ct-ultimate-gdpr-consent-field');
