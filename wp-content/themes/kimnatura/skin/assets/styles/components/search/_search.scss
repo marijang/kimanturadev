@@ -98,7 +98,15 @@ $search-grid-row-gap: $base-content-padding*3;
     //transform: translate(0,40%);
 
     &.scrolled {
-        top: 102px;
+		top: 102px;
+		min-height: calc(100% - 102px);
+		padding-top: 102px;
+
+		@include media(mobile){
+			top: 88px;
+			padding-top: 88px;
+			min-height: calc(100% - 87px);
+		}
     }
 }
 
@@ -296,7 +304,7 @@ $search-grid-row-gap: $base-content-padding*3;
 
 .search-show{
     overflow: hidden;
-    position: relative;
+    position: fixed;
     height: 100%;
 }
 

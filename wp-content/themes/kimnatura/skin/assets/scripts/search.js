@@ -37,6 +37,7 @@ $(document).ready( function() {
     }
     
     function searchScroll() {
+        console.log($(search).scrollTop());
         if ($(search).scrollTop() > 0){
             $(searchUp).addClass("scrolled");
             $(searchDown).addClass("scrolled");
