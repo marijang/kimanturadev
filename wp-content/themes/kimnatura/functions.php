@@ -345,3 +345,6 @@ add_filter( 'login_redirect', function( $url, $query, $user ) {
 	return home_url();
 }, 10, 3 );
 
+
+
+remove_filter( 'woocommerce_checkout_fields', 'woocommerce_checkout_fields_filter', 100 );
