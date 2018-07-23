@@ -29,4 +29,7 @@ import './app';
 import './search';
 import './mega-menu';
 
+//import './loader';
+
+import './zoom';
 import './loader';
