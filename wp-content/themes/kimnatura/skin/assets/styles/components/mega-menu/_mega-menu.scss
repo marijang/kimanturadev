@@ -298,6 +298,10 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
         display: grid;
         grid-template-columns: 1fr;
         grid-row-gap: $mega-menu-grid-gap;
+
+        li {
+            font-family: sans-serif;
+        }
     }
 
     a {
@@ -310,6 +314,7 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
 .mega-menu__column-title {
     @extend %heading-reset;
     margin-bottom: $mega-menu-grid-gap;
+    font-family: sans-serif;
 }
 
 .mega-menu__logo-link{

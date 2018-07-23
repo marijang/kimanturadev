@@ -13,8 +13,8 @@ $(function() {
       dots:true,
       arrows:false,
       //cssEase: 'ease-in-out',
-      //autoplay:true,
-      //autoplaySpeed: 3000
+      autoplay:true,
+      autoplaySpeed: 6000,
       fade:true,
       speed: 0,
       useCSS:false,

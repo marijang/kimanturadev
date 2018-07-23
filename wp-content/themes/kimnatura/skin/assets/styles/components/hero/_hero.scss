@@ -41,7 +41,8 @@ $hero-transition-duration-in: .9s;
        position: absolute;
        display: none;
        @include media(desktop large){
-           display: block;
+           //skriveno zbog zahtjeva klijenta
+           display: none;
            bottom: 132px;
            left: 50%;
            transform: translate(-50%);
