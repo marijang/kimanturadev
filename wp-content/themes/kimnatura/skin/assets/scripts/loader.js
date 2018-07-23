@@ -1,19 +1,18 @@
 
 $(function() {
     
-    
     $("body").addClass("loader-open");
     $(".loader__wrap").addClass("view");
+    
   
     $(document).ready(function() {
-        
-            
-        var currentDate = new Date();
-    
-        if (localStorage.getItem("lastRun") === null || (Math.abs(localStorage.getItem("lastRun") - currentDate) / 36e5) > 1) {
+        if (localStorage.getItem("lastRun") === null || (Math.abs(new Date(localStorage.getItem("lastRun")) - new Date()) / 36e5) > 1) {
             $('.loader-hidden').removeClass('loader-hidden');
             localStorage.setItem('lastRun', new Date());
         }
+
+        $(window).on("load", function() {
+        
         
         setTimeout(function() {
                 
@@ -24,9 +23,9 @@ $(function() {
                 },1100)
             }, 1000) //1500
 
-
+      
             
-        
+        });
 
     });
 
