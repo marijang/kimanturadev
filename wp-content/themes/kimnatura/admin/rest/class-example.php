@@ -22,11 +22,29 @@ Class Example extends WP_AJAX
 
     $load  = $this->get('load',12);
     $start = $this->get('start',0); 
-    
+    $categories = explode(',',$_GET['category']);
+    //var_dump($categories);
+
+    $taxonomies = array();
+    if (!empty($_GET['category'])) {
+        $categories = explode(',',$_GET['category']);
+        $taxonomies[] = array (
+            'taxonomy' => 'product_cat',
+            'field' => 'slug',
+            'terms' => $categories
+        );
+    }
+    // https://wordpress.stackexchange.com/questions/25076/how-to-filter-wordpress-search-excluding-post-in-some-custom-taxonomies
+    $taxonomy_query = array('relation' => 'OR', $taxonomies);
+    if (!empty( $taxonomies)) {
+        //$q->set('tax_query', $taxonomy_query);
+    }
+
     $args = array(
         'post_type' => 'product',
         'posts_per_page' => $load, //$_POST['load'],
-        'paged' => $start
+        'paged' => $start,
+        'tax_query' => $taxonomy_query
         //'offset' => (($start + $load) - $load) 
     );
     // Asos primjer load more

@@ -46,7 +46,6 @@ $woo = new Woo;
 						}
 						if ($key != 'shipping_address_2'  ) 
 							$woo->woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
-						var_dump($key);
 					}
 				?>
 			</div>
