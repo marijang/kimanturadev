@@ -7,13 +7,14 @@
 
 use Kimnatura\Theme\Utils as Utils;
 $images = new Utils\Images();
-$image  = $images->get_post_image( 'shop-catalog' );
+$image  = $images->get_post_image( 'grid' );
 ?>
 <article class="article-single">
   <div class="article-single__container">
     <div class="article-single__image">
       <a class="article-single__image-link" href="<?php the_permalink(); ?>">
-           <?php  the_post_thumbnail( 'blog-list'); ?>
+           <img src="<?php  /*the_post_thumbnail( 'blog-list');*/ echo esc_url( $image['image'] );?>">
+            
       </a>
     </div>
     <div>
@@ -25,7 +26,7 @@ $image  = $images->get_post_image( 'shop-catalog' );
       </header>
     </div>
     <div class="article-single__description">
-    lorem ipsum dolor sit omen
+    <?php the_excerpt(); ?>
     </div>
     <div class="article-single__read-more">
 

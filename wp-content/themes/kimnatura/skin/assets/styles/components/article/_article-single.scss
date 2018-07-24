@@ -1,13 +1,23 @@
 $search-results-image-height: 180px;
 $search-results-content-spacing: $base-content-padding;
+$description-columns: 4;
+$description-height: $description-columns*27px;
 
 @include b('article-single'){
     height: $search-results-image-height;
+    @include media(mobile){
+        height: auto;
+    }
     @include e('container'){
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
         grid-gap: 16px;
+
+        @include media(mobile){
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr auto;
+        }
     }
 
     @include e('image'){
@@ -29,6 +39,12 @@ $search-results-content-spacing: $base-content-padding;
     @include e('description'){
         //grid-column: 2/3;
         margin-bottom: $search-results-content-spacing;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: $description-height;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $description-columns;
         //grid-row: 2/3;
     }
 
