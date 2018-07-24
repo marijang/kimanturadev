@@ -1,12 +1,13 @@
 
 $(function() {
     
-    $("body").addClass("loader-open");
-    $(".loader__wrap").addClass("view");
+    
     
   
     $(document).ready(function() {
         if (localStorage.getItem("lastRun") === null || (Math.abs(new Date(localStorage.getItem("lastRun")) - new Date()) / 36e5) > 1) {
+            $("body").addClass("loader-open");
+            $(".loader__wrap").addClass("view");
             $('.loader-hidden').removeClass('loader-hidden');
             localStorage.setItem('lastRun', new Date());
         }
@@ -20,8 +21,8 @@ $(function() {
                 setTimeout(function() {
                     $("body").removeClass("loader-open");
                    
-                },1100)
-            }, 1000) //1500
+                },2000)
+            }, 2500) //1500
 
       
             
