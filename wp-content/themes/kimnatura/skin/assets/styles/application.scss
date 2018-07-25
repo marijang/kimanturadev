@@ -351,3 +351,16 @@
 }
 
 
+.woocommerce-additional-fields__field-wrapper {
+    @include media(mobile){
+        margin-top: -75px;
+    }
+}
+
+.terms {
+    @include media(mobile){
+        margin-top: 50px!important;
+    }
+}
+
+
