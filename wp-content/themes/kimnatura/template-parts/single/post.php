@@ -23,18 +23,18 @@ if (kdmfi_has_featured_image('featured-image-2')){
 
 <!-- Single Content Section -->
 <article class="single section section__spacing-top--default section--padding section--first section__spacing-bottom--medium" id="<?php echo esc_attr( $post->ID ); ?>">
+
+
+ 
+  
+  <?php if (isset($image['image'])){ ?>
+<div class="single__image section__image" style="background-image: url('<?php echo esc_url( $image['image'] ); ?>'); ">
 <header class="section__header">
     <h1 class="section__title">
       <?php the_title(); ?>
     </h1>
     <?php the_subtitle( '<p class="section__description">', '</p>' ); ?>
   </header>
-
- 
-  
-  <?php if (isset($image['image'])){ ?>
-<div class="single__image section__image" style="background-image: url('<?php echo esc_url( $image['image'] ); ?>');">
-     
   </div>
 <?php }?>
 
