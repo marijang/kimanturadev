@@ -28,7 +28,7 @@ if (kdmfi_has_featured_image('featured-image-2')){
  
   
   <?php if (isset($image['image'])){ ?>
-<div class="single__image section__image" style="background-image: url('<?php echo esc_url( $image['image'] ); ?>'); ">
+<div class="single__image section__image" style="background-image: url('<?php echo esc_url( $image['image'] ); ?>'); min-height: 560px; ">
 <header class="section__header">
     <h1 class="section__title">
       <?php the_title(); ?>
