@@ -20,9 +20,9 @@ $woo = new Woo();
 
 get_template_part( 'template-parts/account/woocommerce-account' ); 
 ?>
-
 <!-- Cart Navigation -->
 		<?php
+		
 	
 		while ( have_posts() ) :
 			the_post();

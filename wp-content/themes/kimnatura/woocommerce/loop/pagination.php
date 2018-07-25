@@ -88,3 +88,29 @@ if ( $total <= 1 ) {
 		) ) );
 	?>
 </nav>
+
+<a href="javascript:" id="return-to-top"><i class="material-icons">
+arrow_upward
+</i></a>
+<script>
+var start = 750;
+var scrollTo = 650;
+if ( (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+	start = 500;
+	var scrollTo = 120;
+}
+// ===== Scroll to Top ==== 
+$(window).scroll(function() {
+  if ($(this).scrollTop() >= start) {        // If page is scrolled more than 50px
+      $('#return-to-top').fadeIn(200);    // Fade in the arrow
+  } else {
+      $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+  }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+  $('body,html').animate({
+      scrollTop : scrollTo                     // Scroll to top of body
+  }, 500);
+});
+
+</script>

@@ -5,15 +5,15 @@ $(function() {
     
   
     $(document).ready(function() {
-        if (localStorage.getItem("lastRun") === null || (Math.abs(new Date(localStorage.getItem("lastRun")) - new Date()) / 36e5) > 1) {
-            $("body").addClass("loader-open");
-            $(".loader__wrap").addClass("view");
-            $('.loader-hidden').removeClass('loader-hidden');
-            localStorage.setItem('lastRun', new Date());
-        }
+        
 
         $(window).on("load", function() {
-        
+            if (localStorage.getItem("lastRun") === null || (Math.abs(new Date(localStorage.getItem("lastRun")) - new Date()) / 36e5) > 1) {
+                $("body").addClass("loader-open");
+                $(".loader__wrap").addClass("view");
+                $('.loader-hidden').removeClass('loader-hidden');
+                localStorage.setItem('lastRun', new Date());
+            }
         
         setTimeout(function() {
                 

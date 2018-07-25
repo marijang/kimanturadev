@@ -69,6 +69,8 @@
 
 @import 'components/validation/validation';
 
+@import 'components/scroll-to-top/scroll-to-top';
+
 //Sections
 @import 'components/sections/sections';
 @import 'components/sections/figure';
@@ -345,6 +347,19 @@
     @include media(mobile){
         display: flex;
         align-items: center;
+    }
+}
+
+
+.woocommerce-additional-fields__field-wrapper {
+    @include media(mobile){
+        margin-top: -75px;
+    }
+}
+
+.terms {
+    @include media(mobile){
+        margin-top: 50px!important;
     }
 }
 

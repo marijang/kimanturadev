@@ -27,7 +27,7 @@ $cart_total = WC()->cart->get_displayed_subtotal();
 </script>
 
 
-<?php if (is_user_logged_in() && strpos(home_url( $wp->request ), 'cart') === false && strpos(home_url( $wp->request ), 'checkout') === false) : ?>
+<?php if (is_user_logged_in() && strpos(home_url( $wp->request ), 'cart') === false  && strpos(home_url( $wp->request ), 'checkout') === false) : ?>
 <div class="navigation-user">
         <div class="navigation-user__wrap">
 	    <?php

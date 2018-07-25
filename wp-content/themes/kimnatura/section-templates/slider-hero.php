@@ -31,7 +31,7 @@ foreach($result as $post):
 
   $images = new Utils\Images();
   $image  = $images->get_post_image( 'slider-full-width' );
-  $words  = explode(' ',get_the_title());
+  $words  = preg_split('/\s+/', get_the_title());
   $class = '';
   if ($i==0){
       $class = 'animated1'; 
@@ -45,12 +45,29 @@ foreach($result as $post):
         <div class="hero__content">
             <h2 class="hero__title"><?php //the_title(); ?>  
             <?php 
+               /* function utf8Split($str, $len = 1)
+                {
+                  $arr = array();
+                  $strLen = mb_strlen($str, 'UTF-8');
+                  for ($i = 0; $i < $strLen; $i++)
+                  {
+                    $arr[] = mb_substr($str, $i, $len, 'UTF-8');
+                  }
+                  return $arr;
+                } */
                 $delay = 0.0;
                 foreach($words as $word ){
-                    $letters  = str_split($word, 1);
+                    $word = html_entity_decode($word);
+                    //$letters  = utf8Split($word, 1);
+                    $letters = array();
+                    $strLen = mb_strlen($word, 'UTF-8');
+                    for ($i = 0; $i < $strLen; $i++)
+                    {
+                      $letters[] = mb_substr($word, $i, 1, 'UTF-8');
+                    }
                     echo ' <span class="word">';
                     foreach($letters as $letter ){
-                    echo '<span class="letter" style="transition-delay: '.$delay.'s;">'.$letter.'</span>';
+                    echo '<span class="letter" style="transition-delay: '.$delay.'s;">'. $letter .'</span>';
                     $delay = $delay + 0.03;
                     }
                     echo '</span>';

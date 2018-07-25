@@ -44,7 +44,7 @@ $( document ).ready(function() {
     label.text('');
     label.append('<span>' + text + '</span>');
     input.prependTo(label);
-    label.click(function() {
+   /* label.click(function() {
         var cb = $(this).find('input');
         if (cb.attr('checked')) {
             cb.attr('checked', false);
@@ -53,8 +53,11 @@ $( document ).ready(function() {
             cb.attr('checked', true);
             cb.parent().removeClass('checkbox__invalid');
         }
-    });
-
+    });*/
+      
+   // $('.woocommerce-additional-fields__field-wrapper').appendTo('#payment');
+    //$('#payment .form-row.place-order').appendTo('#payment');
+    
 
     // Kontakt
     var input_contact = $('.contact__field--inverted input[type="checkbox"]');
@@ -67,4 +70,6 @@ $( document ).ready(function() {
   $('.wpforms-form button').removeClass();
   $('.wpforms-form button').addClass('form-button'); 
     
+
+  $('abbr.required').replaceWith('*');
 }); 
