@@ -23,7 +23,7 @@ Class Example extends WP_AJAX
     $load  = $this->get('load',12);
     $start = $this->get('start',0); 
     $categories = explode(',',$_GET['category']);
-    //var_dump($categories);
+   
 
     $taxonomies = array();
     if (!empty($_GET['category'])) {
@@ -33,7 +33,7 @@ Class Example extends WP_AJAX
             'field' => 'slug',
             'terms' => $categories
         );
-    }
+    
     // https://wordpress.stackexchange.com/questions/25076/how-to-filter-wordpress-search-excluding-post-in-some-custom-taxonomies
     $taxonomy_query = array('relation' => 'OR', $taxonomies);
     if (!empty( $taxonomies)) {
@@ -47,6 +47,13 @@ Class Example extends WP_AJAX
         'tax_query' => $taxonomy_query
         //'offset' => (($start + $load) - $load) 
     );
+} else {
+    $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => $load, //$_POST['load'],
+        'paged' => $start
+    );
+}
     // Asos primjer load more
     $loop = new \WP_Query( $args );
     $total = $loop->found_posts; //$loop->post_count;

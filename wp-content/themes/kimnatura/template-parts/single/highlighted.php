@@ -9,7 +9,6 @@
 
 
 ?>
-
 <!-- Single Highlighted Content Section -->
 <article class="article  section--highlighted-color" id="<?php echo esc_attr( $post->ID ); ?>">
   <div class="section section__highlighted section__spacing-top--medium  section__spacing-bottom--medium">
