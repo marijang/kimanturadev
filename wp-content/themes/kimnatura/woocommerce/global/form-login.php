@@ -34,10 +34,12 @@ if ( is_user_logged_in() ) {
 	<p class="form-row form-row-first">
 		<label for="username"><?php esc_html_e( 'Username or email', 'woocommerce' ); ?> <span class="required">*</span></label>
 		<input type="text" class="input-text" name="username" id="username" />
+		<span style="    font-size: 12px;" class="helper-text errorClass" data-error="wrong"></span>
 	</p>
 	<p class="form-row form-row-last">
 		<label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
 		<input class="input-text" type="password" name="password" id="password" />
+		<span style="    font-size: 12px;" class="helper-text errorClass" data-error="wrong"></span>
 	</p>
 	<div class="clear"></div>
 

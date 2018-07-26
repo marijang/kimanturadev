@@ -23,6 +23,7 @@ import './form-fields/selecttoggle';
 import './form-fields/inputnumber';
 import './form-fields/checkbox_gdpr';
 import './form-fields/validation';
+import './components/globalLogin';
 
 import './app';
 
