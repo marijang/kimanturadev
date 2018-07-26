@@ -62,3 +62,12 @@ if ( is_user_logged_in() ) {
 	<?php do_action( 'woocommerce_login_form_end' ); ?>
 
 </form>
+<script >
+$(document).ready(function() {
+	console.log(localStorage.getItem("login_section"));
+if (localStorage.getItem("login_section") == true) {
+            var block = $('.showlogin').parent().parent().find('.login');
+            block.css('display', 'initial');
+		}
+	});
+</script>

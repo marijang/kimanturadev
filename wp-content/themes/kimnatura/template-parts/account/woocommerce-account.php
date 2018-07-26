@@ -27,7 +27,7 @@ $cart_total = WC()->cart->get_displayed_subtotal();
 </script>
 
 
-
+<?php if (is_user_logged_in() || (!is_user_logged_in() && strpos(home_url( $wp->request ), 'my-account') === false)) : ?>
 <div class="navigation-user">
         <div class="navigation-user__wrap">
 	    <?php
@@ -88,6 +88,7 @@ $cart_total = WC()->cart->get_displayed_subtotal();
 		<?php
 		} else {
 		?>
+		
 			<div class="navigation-user__login">
 				
                  <?php do_action('woocommerce_custom_login_form'); ?>
@@ -98,3 +99,4 @@ $cart_total = WC()->cart->get_displayed_subtotal();
 		?>
 		</div>
 		</div>
+	<?php endif ?>
