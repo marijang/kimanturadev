@@ -12,7 +12,6 @@ global $wpdb,$post;
 
 $args = array( 'numberposts' => 2 ,'category' => 'homepage');
 $result = get_posts( $args ) ;
-var_dump($result);
 $current = 'even';
 foreach($result as $post):
   setup_postdata($post);
