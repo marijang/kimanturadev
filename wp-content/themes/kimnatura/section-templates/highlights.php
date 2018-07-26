@@ -10,7 +10,7 @@
 global $wpdb,$post;
 
 
-$args = array( 'numberposts' => 2 ,'category' => 'homepage');
+$args = array( 'numberposts' => 1 ,'category' => 'homepage');
 $result = get_posts( $args ) ;
 $current = 'even';
 foreach($result as $post):
