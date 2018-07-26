@@ -1,6 +1,6 @@
 $search-results-image-height: 180px;
 $search-results-content-spacing: $base-content-padding;
-$description-columns: 4;
+$description-columns: 3;
 $description-height: $description-columns*27px;
 
 @include b('article-single'){
@@ -57,5 +57,12 @@ $description-height: $description-columns*27px;
     @include e('heading'){
         @include typi(largest);
         font-weight: 600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* max-height: 108px; */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    
     }
 }

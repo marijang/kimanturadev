@@ -13,7 +13,8 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
 .mega-menu__show-all{
     text-align: center;
     @include media(mobile){ 
-        padding-bottom: 72px;
+        padding-bottom: 112px;
+        position: static;
     }
 }
 
@@ -72,7 +73,15 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
     background: $primary-color;
     z-index: 1001;
     position: static;
-     
+    
+    @include media(mobile){
+        position: fixed;
+        pointer-events: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100vh;
+    }
     
     &.scrolled {
         height: 102px;
@@ -275,6 +284,9 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
         grid-template-areas: 
                 "log . . btn-close"
                 "mega-menu mega-menu mega-menu mega-menu";
+        position: fixed;
+        background: $primary-color;
+        top: 0;
     }
 }
 
@@ -289,7 +301,10 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
     @include media(mobile){
         grid-template-columns: 1fr;
         grid-gap: $mega-menu-grid-gap*2;
-        margin-top: 0;
+        margin-top: 80px;
+        position: static;
+        padding-top: 0;
+
     }
 }
 
