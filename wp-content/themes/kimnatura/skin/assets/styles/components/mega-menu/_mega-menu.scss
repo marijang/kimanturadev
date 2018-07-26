@@ -19,10 +19,10 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
 }
 
 .mega-menu {
-	position: fixed;
-	z-index: 1000;
-	top: 0;
-	left: 0;
+	// position: fixed;
+	// z-index: 1000;
+	// top: 0;
+	// left: 0;
 	width: 100%;
 	height: 100vh;
 }
@@ -284,7 +284,7 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
         grid-template-areas: 
                 "log . . btn-close"
                 "mega-menu mega-menu mega-menu mega-menu";
-        position: fixed;
+        position: sticky;
         background: $primary-color;
         top: 0;
     }
@@ -301,7 +301,7 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
     @include media(mobile){
         grid-template-columns: 1fr;
         grid-gap: $mega-menu-grid-gap*2;
-        margin-top: 80px;
+        //margin-top: 80px;
         position: static;
         padding-top: 0;
 
@@ -372,9 +372,9 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
 }
 
 .mega-menu-show{
-    overflow: hidden;
-    position: fixed;
-    -webkit-overflow-scrolling: touch;
+    // overflow: hidden;
+    // position: fixed;
+    // -webkit-overflow-scrolling: touch;
 }
 
 /************************/
@@ -386,10 +386,10 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
 	transition-timing-function: cubic-bezier(0.2,1,0.3,1);
 }
 
- .main-wrap--hide {
-	opacity: 0;
-	transform: scale3d(0.8,0.8,1);
-}
+//  .main-wrap--hide {
+// 	opacity: 0;
+// 	transform: scale3d(0.8,0.8,1);
+// }
 
  .mega-menu {
     pointer-events: none;
@@ -398,8 +398,8 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
 
  .mega-menu--open {
     pointer-events: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
+    // overflow-y: auto;
+    // overflow-x: hidden;
 }
 
  .mega-menu::before {

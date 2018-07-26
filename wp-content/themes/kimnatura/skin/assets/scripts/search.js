@@ -60,8 +60,9 @@ $(document).ready( function() {
 	}
 
 	function closeSearch() {
+        mainContainer.classList.remove('main-wrap--hide');
         body.removeClass('search-show');
-		mainContainer.classList.remove('main-wrap--hide');
+		
         searchContainer.classList.remove('search--open');
         search.removeEventListener('scroll', searchScroll);
 		inputSearch.blur();

@@ -323,6 +323,7 @@ $search-grid-row-gap: $base-content-padding*3;
 }
 
  .main-wrap--hide {
+	display:none;
 	opacity: 0;
 	transform: scale3d(0.8,0.8,1);
 }
