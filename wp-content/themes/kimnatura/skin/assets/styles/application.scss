@@ -363,4 +363,15 @@
     }
 }
 
+.woocommerce-error a {
+    color:$base-black-color;
+    font-weight: 700;
+}
+
+#login-section-close {
+    position: relative;
+    left: 100%;
+    cursor: pointer;
+}
+
 
