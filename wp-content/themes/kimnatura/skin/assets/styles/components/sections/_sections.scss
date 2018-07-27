@@ -4,7 +4,7 @@ $section-highlight-padding:             $base-content-padding*4 $base-content-pa
 $section-highlighted-font-weight:       normal;
 $section-description-font-weight:       $base-font-weight-thin;
 $section-description-space-bottom:      $base-content-padding*2;
-$section-header-space-bottom:           $base-content-padding;
+$section-header-space-bottom:           $base-content-padding*2.5;
 $section-header-space-bottom-mobile:    $base-content-padding;
 $section-description-space-bottom-small:$base-content-padding;
 
@@ -41,6 +41,35 @@ $section-description-space-bottom-small:$base-content-padding;
     @include e('link'){
        margin-top: $base-content-padding;
        display: block;
+       //color: $base-dark-color;
+       position: relative;
+
+       &:hover{
+        color:$base-primary-color;
+        &:before{
+            transform: scale(1, 1); 
+        }
+       }
+
+       &:before {
+        content: "";
+        position: absolute;
+        left: -$base-content-padding;
+        top: 11px;
+        top: calc( 50% - 2px);
+        width: 12px;
+        background: currentColor;
+        height: 3px;
+        -webkit-transform-origin: left;
+                transform-origin: left;
+        -webkit-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+        -webkit-transform: scale(0, 1);
+        transform: scale(0, 1); 
+        @include media(mobile){
+            display: none;
+        }
+      }
     }
 
     @include e('share-sticky'){
@@ -114,7 +143,7 @@ $section-description-space-bottom-small:$base-content-padding;
     }
     
     @include element('header'){
-        margin-bottom: $section-header-space-bottom*2; 
+        margin-bottom: $section-header-space-bottom; 
         @include media(mobile){
              margin-bottom: $section-header-space-bottom-mobile;
         }

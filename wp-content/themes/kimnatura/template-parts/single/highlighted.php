@@ -11,7 +11,7 @@
 ?>
 <!-- Single Highlighted Content Section -->
 <article class="article  section--highlighted-color" id="<?php echo esc_attr( $post->ID ); ?>">
-  <div class="section section__highlighted section__spacing-top--medium  section__spacing-bottom--medium">
+  <div class="section section__highlighted section__spacing-top--large  section__spacing-bottom--large">
       <header class="section__header">
           <h2 class="section__title section__title--center">
             <?php the_title(); ?>

@@ -134,12 +134,14 @@ $button-size-map: (
 //Section
 $section-spacing-map: (
   mobile: (
+    large:      24px,
     default:    00px,
     medium:     24px,
     small:      16px,
     no-spacing: 0
   ),
   large:(
+    large:      40px,
     default:    32px,
     medium:     32px,
     small:      16px,
