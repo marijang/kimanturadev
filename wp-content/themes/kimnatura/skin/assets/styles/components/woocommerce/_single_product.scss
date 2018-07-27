@@ -6,6 +6,11 @@
             flex-direction: column;
         }
     }
+
+    @include e("content"){
+        margin-bottom: 32px;
+    }
+
     .images{
         @include media(desktop large){
             margin: 0 32px 0 0;
@@ -96,7 +101,7 @@
       }
     }
     @include element('tab'){
-        //margin-bottom: vr(1);
+        //margin-bottom: 16px;
         //TODO @include typi('small');
     }
     @include element('variations-form'){
