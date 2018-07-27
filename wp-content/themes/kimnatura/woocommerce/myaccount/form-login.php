@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			jQuery('#log-box').removeClass('is-active');
 			jQuery('#reg-box').addClass('is-active');
 			jQuery('.ct-ultimate-gdpr-consent-field').parent().css('display', 'inline-block');
-			jQuery('.woocommerce-privacy-policy-text').css('display', 'block');
+			//jQuery('.woocommerce-privacy-policy-text').css('display', 'block');
 	});
 	jQuery('#log-toggle-mobile').on('click', function(){
 			jQuery('#reg-box').removeClass('is-active');
@@ -49,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			jQuery('#log-box').removeClass('is-active');
 			jQuery('#reg-box').addClass('is-active');
 			jQuery('.ct-ultimate-gdpr-consent-field').parent().css('display', 'inline-block');
-			jQuery('.woocommerce-privacy-policy-text').css('display', 'block');
+			//jQuery('.woocommerce-privacy-policy-text').css('display', 'block');
 	});
 });
 </script>
