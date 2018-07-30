@@ -179,6 +179,6 @@ $("form[name='checkout']").validate({
        }
    });
 
-   $('.map.gmap__map iframe').next().remove();
+   
  
 });

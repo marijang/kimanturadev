@@ -543,10 +543,9 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
      */
     public function catalog_item_description(){
         global $product;
-
         if (  $product->is_type( 'variable' ) ) {
             if ( $product->is_on_sale() ) {
-                $price = '<span class="featured-link__sale-regular-price">'.wc_price($product->get_variation_regular_price( 'min', true )).'</span>';
+                $price =  '<span class="featured-link__sale-regular-price">'.wc_price($product->get_variation_regular_price( 'min', true )).'</span>';
                 $price.=  wc_price($product->get_variation_price( 'min', true ).$product->get_price_suffix()) ;
             }
             else{
@@ -555,8 +554,16 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
         }else{
             $price= $product->get_price_html();
         }
+        $product_cats = wp_get_post_terms( $product->get_id(), 'product_cat' );
+        $categories = "";
+        for ( $i = 0; $i < sizeof($product_cats); $i++ ) {
+            $categories = $categories . $product_cats[$i]->name;
+            if ($i < sizeof($product_cats) - 1) {
+                $categories = $categories . ", ";
+            }
+        }
         ?>
-            <div class="shop-catalog__price"><?php echo $price ?></div>
+          <p class="featured-link__categories"><?php echo $categories ?>  </p><div class="shop-catalog__price"><?php echo $price ?></div>
         <?php 
         
         $string =''; 
