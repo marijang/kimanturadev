@@ -63,6 +63,35 @@ $article-min-height:      500px;
     @include e('link'){
       margin-top: $base-content-padding;
       display: block;
+      //color: $base-dark-color;
+      position: relative;
+
+      &:hover{
+       color:$base-primary-color;
+       &:before{
+           transform: scale(1, 1); 
+       }
+      }
+
+      &:before {
+       content: "";
+       position: absolute;
+       left: -$base-content-padding;
+       top: 11px;
+       top: calc( 50% - 2px);
+       width: 12px;
+       background: currentColor;
+       height: 2px;
+       -webkit-transform-origin: left;
+               transform-origin: left;
+       -webkit-transition: all .2s ease-out;
+       transition: all .2s ease-out;
+       -webkit-transform: scale(0, 1);
+       transform: scale(0, 1); 
+       @include media(mobile){
+           display: none;
+       }
+     }
    }
   
     @include element('image'){
