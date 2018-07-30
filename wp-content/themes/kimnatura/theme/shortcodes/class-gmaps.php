@@ -114,7 +114,9 @@ class Gmap {
     
     
       initMap();
+      
       });
+
         </script>
         <?php
         $output = ob_get_clean();

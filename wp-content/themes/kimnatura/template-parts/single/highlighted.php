@@ -18,7 +18,7 @@
           </h2>
           <?php //the_subtitle( '<p class="section__description section__description--center">', '</p>' ); ?>
       </header>
-      <div class="section__inner">
+      <div class="section__inner " >
       <div class="section__content article__content-style article__content-media-style">
           <?php 
            if( has_excerpt() ){

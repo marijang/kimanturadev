@@ -129,10 +129,14 @@ $("form[name='checkout']").validate({
        // on the right side
        billing_first_name: "required",
        billing_last_name: "required",
-       billing_email: "required",
+       billing_email: {"required" : true, "email" : true },
        billing_address_1: "required",
        billing_city: "required",
        billing_postcode: "required",
+       billing_phone : {
+        required: true,
+        number: true
+      } ,
        shipping_first_name: {
            required : '#ship-to-different-address-checkbox:checked'
        },
@@ -151,12 +155,19 @@ $("form[name='checkout']").validate({
      },
      // Specify validation error messages
      messages: {
-       billing_first_name: "Please enter your firstname",
-       billing_last_name: "Please enter your lastname",
-       billing_email: "Please enter your email address",
-       billing_address_1: "Please enter your address",
-       billing_city: "Please enter your city",
-       billing_postcode: "Please enter your postcode"
+       billing_first_name: "Ime je potrebno polje",
+       billing_last_name: "Prezime je potrebno polje",
+       billing_email: {"required" : "Email adresa je potrebno polje", "email" : "Email nije ispravnog formata" },
+       billing_address_1: "Adresa je potrebno polje",
+       billing_city: "Grad je potrebno polje",
+       billing_postcode: "Poštanski broj je potrebno polje",
+       billing_phone : {"required" : "Telefonski broj je potrebno polje","number" : "Telefonski broj mora biti numeričkog formata"},
+       shipping_first_name : "Ime je potrebno polje",
+       shipping_last_name : "Prezime je potrebno polje",
+       shipping_address_1 : "Adresa je potrebno polje",
+       shipping_city : "Grad je potrebno polje",
+       shipping_postcode : "Poštanski broj je potrebno polje"
+
      },
      errorPlacement: function(error, element) {
          element.addClass('invalid');
@@ -168,6 +179,6 @@ $("form[name='checkout']").validate({
        }
    });
 
-   
+   $('.map.gmap__map iframe').next().remove();
  
 });

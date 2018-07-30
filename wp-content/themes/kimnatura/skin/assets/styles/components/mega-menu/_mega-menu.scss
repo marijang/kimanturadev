@@ -581,3 +581,47 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
     right: 3.25em;
 }
 
+#mega-menu-wrap {
+    .menu-item {
+        a {
+            &:after {
+            content: '';
+            display: block;
+            border-bottom: 1px solid #fff;
+            width: 0;
+            right: 0;
+            position: relative;
+            -webkit-transition: 1s ease;
+            transition: 1s ease;
+            }
+
+            &:hover {
+                &:after {
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+    .mega-menu__column-title {
+        cursor: pointer;
+        &:after {
+            content: '';
+            display: block;
+            border-bottom: 1px solid #fff;
+            width: 0;
+            right: 0;
+            position: relative;
+            -webkit-transition: 1s ease;
+            transition: 1s ease;
+            }
+
+            &:hover {
+                &:after {
+                    width: 95%;
+                }
+            }
+    }
+  
+} 
+

@@ -184,6 +184,7 @@ class Woo {
 
 
   public function woocommerce_related_products() {
+
     global $post,$product;
     if (is_product()){
         // Join all 
@@ -261,6 +262,7 @@ class Woo {
     require( locate_template( 'template-parts/woocommerce/related-products.php' ) );
     wp_reset_query(); 
     wp_reset_postdata();
+
 }
 
   public function multi_step() {

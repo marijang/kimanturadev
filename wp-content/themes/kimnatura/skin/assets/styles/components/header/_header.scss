@@ -4,7 +4,7 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
 
 @include b('header'){
     @include e('container'){
-        
+        z-index: 1000000;
         
     }
     @include e('container-inner'){

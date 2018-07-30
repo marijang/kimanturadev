@@ -150,15 +150,20 @@ $section-description-space-bottom-small:$base-content-padding;
     }
 
     @include element('highlighted'){
-        @include typi('largest');  
+        @include typi('largest'); 
+        @include media(mobile) {
+            @include typi('default'); 
+        } 
         @include p('e:link'){
             font-weight: $section-highlighted-font-weight;
         }
         @include p('e:inner'){
             display: flex;
+            align-items: center;
             @include media(mobile){
                 flex-direction: column-reverse;
                // flex-direction: row-reverse; 
+               align-items: baseline;
             }
         }
         @include p('e:content'){
@@ -173,6 +178,11 @@ $section-description-space-bottom-small:$base-content-padding;
         @include p('e:image'){
             flex:1;
             margin:0;
+            img {
+                @include media(mobile){
+                    max-height: 350px;
+                }
+            }
         }
     }
 
