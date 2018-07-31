@@ -5,8 +5,9 @@ $(function() {
     event.preventDefault();
     $('.hero-slider-slick .slick-active').find('.hero__item').addClass('animated');
 });
-  $('.hero-slider-slick').slick({
-// normal options...
+
+  function sliderConfig() {
+    return {
       infinite: false,
       infinite: false,
       slidesToShow: 1,
@@ -31,8 +32,42 @@ $(function() {
             adaptiveHeight: true
           }
         }
-      ],
-    });
+      ]
+    }
+  }
+
+  $('.hero-slider-slick').slick(sliderConfig());
+  
+//   $('.hero-slider-slick').slick({
+// // normal options...
+//       infinite: false,
+//       infinite: false,
+//       slidesToShow: 1,
+//       dots:true,
+//       arrows:false,
+//       //cssEase: 'ease-in-out',
+//       autoplay:true,
+//       autoplaySpeed: 6000,
+//       fade:true,
+//       speed: 0,
+//       useCSS:false,
+//       useTransform:true,
+//       waitForAnimate: true,
+      
+//       responsive: [
+//         {
+//           breakpoint: 600,
+//           settings: {
+//             arrows:true,
+//             fade:false,
+//             dots: false,
+//             adaptiveHeight: true
+//           }
+//         }
+//       ],
+//     });
+
+
 
 
 
@@ -41,8 +76,8 @@ $(function() {
 $('.hero-slider-slick').on('beforeChange', function(event, slick, currentSlide, nextSlide){
   event.preventDefault();
   var $slide = $(slick.$slides[currentSlide]);
-  console.log($slide.find('.hero_item'));
-  $slide.find('.hero_item').removeClass('animated');
+  //console.log($slide.find('.hero_item'));
+  $slide.find('.hero__item').removeClass('animated');
  // var activeSlide = $('.hero-slider-slick .slick-active').find('.hero__item');
   var otherSlides = $('.hero-slider-slick .slick-slide').find('.hero__item');
   otherSlides.removeClass('animated');
@@ -53,7 +88,7 @@ $('.hero-slider-slick').on('afterChange', function(event, slick, currentSlide){
   $slide.find('.hero__item').addClass('animated');
 });
 
-    $('.sastojci-slider-slick').slick({
+$('.sastojci-slider-slick').slick({
       // normal options...
             infinite: true,
             slidesToShow: 1,

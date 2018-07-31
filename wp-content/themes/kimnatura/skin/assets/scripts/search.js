@@ -51,9 +51,12 @@ $(document).ready( function() {
 
 	function openSearch() {
         body.addClass('search-show');
-		mainContainer.classList.add('main-wrap--hide');
+        mainContainer.classList.add('main-wrap--hide');
         searchContainer.classList.add('search--open');
         search.addEventListener('scroll', searchScroll);
+        if ($('.hero-slider-slick').length) {
+            $('.hero-slider-slick').slick('slickPause');
+        }
 		setTimeout(function() {
 			inputSearch.focus();
 		}, 500);
@@ -62,11 +65,14 @@ $(document).ready( function() {
 	function closeSearch() {
         mainContainer.classList.remove('main-wrap--hide');
         body.removeClass('search-show');
-		
+        if ($('.hero-slider-slick').length) {
+            $('.hero-slider-slick').slick('slickPlay');
+        }
         searchContainer.classList.remove('search--open');
         search.removeEventListener('scroll', searchScroll);
 		inputSearch.blur();
-		inputSearch.value = '';
+        inputSearch.value = '';
+
     }
     
     

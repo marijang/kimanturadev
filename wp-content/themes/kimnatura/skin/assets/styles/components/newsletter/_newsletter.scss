@@ -61,6 +61,8 @@
     @include media(mobile){
         margin: 0;
         min-height: 100px;
+        padding-left: 48px;
+        padding-right: 48px;
     }
     @include element('title'){
         margin-top: $grid-gutter*3;
