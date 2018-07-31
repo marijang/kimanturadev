@@ -507,3 +507,31 @@ $search-grid-row-gap: $base-content-padding*3;
     right: 3.25em;
 }
 
+#search-results .article-single__image-link img {
+	min-height: 180px;
+	height: auto!important;
+	@include media(mobile){
+		max-width: 240px;
+		max-height: 240px;
+	}
+}
+
+#search-results .article-single__image {
+	@include media(mobile){
+		text-align: center;
+	}
+}
+
+
+
+#search-results .article-single__description {
+	@include media(mobile){
+		@include typi(medium);
+	}
+}
+
+#search-results .article-single__heading {
+	@include media(mobile){
+		@include typi(large);
+	}
+}

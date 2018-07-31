@@ -19,4 +19,13 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-the_title( '<h3 class="single-product__title">', '</h3>' );
+global $product;
+$product_cats = wp_get_post_terms( $product->get_id(), 'product_cat' );
+        $categories = "";
+        for ( $i = 0; $i < sizeof($product_cats); $i++ ) {
+            $categories = $categories . $product_cats[$i]->name;
+            if ($i < sizeof($product_cats) - 1) {
+                $categories = $categories . ", ";
+            }
+        }
+the_title( '<h3 class="single-product__title">', '</h3><p class="featured-link__categories">' .  $categories .'  </p>' );

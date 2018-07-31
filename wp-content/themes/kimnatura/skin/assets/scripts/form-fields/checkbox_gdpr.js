@@ -74,4 +74,6 @@ $( document ).ready(function() {
     
 
   $('abbr.required').replaceWith('*');
+
+  $('.newsletter__content input[name="EMAIL"]').parent().css('margin-bottom', "0px");
 }); 
