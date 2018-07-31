@@ -76,4 +76,15 @@ $( document ).ready(function() {
   $('abbr.required').replaceWith('*');
 
   $('.newsletter__content input[name="EMAIL"]').parent().css('margin-bottom', "0px");
+
+
+
+
+
+  //Popravak input fieldova
+  $('input[type="text"], input[type="password"]').each(function() {
+      if ($(this).val()) {
+          $(this).parent().find('label').addClass('active');
+      }
+  });
 }); 

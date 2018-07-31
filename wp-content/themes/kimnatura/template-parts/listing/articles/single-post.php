@@ -25,6 +25,19 @@ $image  = $images->get_post_image( 'grid' );
     </div>
       </header>
     </div>
+    <?php if (get_post_type() == "product") : ?>
+    <p class="featured-link__categories" style="margin-top: -16px;margin-bottom: 12px;"><?php 
+    global $product;
+    $product_cats = wp_get_post_terms( $product->get_id(), 'product_cat' );
+            $categories = "";
+            for ( $i = 0; $i < sizeof($product_cats); $i++ ) {
+                $categories = $categories . $product_cats[$i]->name;
+                if ($i < sizeof($product_cats) - 1) {
+                    $categories = $categories . ", ";
+                }
+            }
+    echo $categories ?>   </p>
+    <?php endif ?>
     <div class="article-single__description">
     <?php the_excerpt(); ?>
     </div>

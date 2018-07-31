@@ -11,7 +11,7 @@ global $wpdb,$post;
 
 
 $args = array( 'numberposts' => 2 ,'category_name' => 'blog');
-echo '<div class="section__bg">';
+echo '<div class="section__bg" id="latest_news">';
 echo '<div class="section section__spacing-top--medium section__spacing-bottom--medium">';
 ?>
 <?php if (is_front_page()) :?>
