@@ -141,7 +141,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
 
-				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row input-field">
+				<p style="margin-bottom: 0px;" class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row input-field">
 					<label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
 					<input type="password" autocomplete="new-password" class="woocommerce-Input woocommerce-Input--text input-text" name="reg_password" id="reg_password" />
 					<span class="helper-text errorClass" data-error="wrong"></span>

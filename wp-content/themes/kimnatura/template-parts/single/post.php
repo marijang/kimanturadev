@@ -25,7 +25,7 @@ if (kdmfi_has_featured_image('featured-image-2')){
 
 
 <article  class="single section section__spacing-top--default section--padding section--first section__spacing-bottom--medium" id="<?php echo esc_attr( $post->ID ); ?>">
-<?php if (!in_category('slider-hero')) : ?>
+<?php if (!in_category('slider-hero') || wp_is_mobile()) : ?>
 <header class="section__header">
     <h1 class="section__title">
       <?php the_title(); ?>
@@ -37,8 +37,8 @@ if (kdmfi_has_featured_image('featured-image-2')){
  
   
   <?php if (isset($image['image'])){ ?>
-<div class="single__image section__image" style="background-image: url('<?php echo esc_url( $image['image'] ); ?>'); min-height: 560px; ">
-<?php if (in_category('slider-hero')) : ?>
+<div class="single__image section__image <?php echo in_category('slider-hero') ? 'single__image--hero' : '' ?>" style="background-image: url('<?php echo esc_url( $image['image'] ); ?>'); ">
+<?php if (in_category('slider-hero') && !wp_is_mobile()) : ?>
 <article  class="single section section__spacing-top--default section--padding section--first section__spacing-bottom--medium" id="<?php echo esc_attr( $post->ID ); ?>">
 <header class="section__header">
     <h1 class="section__title">
