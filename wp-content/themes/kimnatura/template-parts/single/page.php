@@ -14,7 +14,7 @@ $image  = $images->get_post_image( 'full_width' );
 
 <?php if (isset($image['image'])){ ?>
 <div class="single__image section__image" style="background-image: url('<?php echo esc_url( $image['image'] ); ?>');">
-      <?php the_post_thumbnail('full-width'); ?>
+      <?php /*the_post_thumbnail('full-width'); */ ?> 
   </div>
 <?php }?>
   <header class="section__header">

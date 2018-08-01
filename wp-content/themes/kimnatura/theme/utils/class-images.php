@@ -62,16 +62,18 @@ class Images {
       $post_id = $post->ID;
     }
 
+    $attachment_id = null;
+
     if ( has_post_thumbnail( $post_id ) ) {
-      $attachemnt_id = get_post_thumbnail_id( $post_id );
-      $image         = wp_get_attachment_image_src( $attachemnt_id, $size );
+      $attachment_id = get_post_thumbnail_id( $post_id );
+      $image         = wp_get_attachment_image_src( $attachment_id, $size );
 
       $image_array = [
           'image'  => esc_url( $image[0] ),
           'width'  => esc_html( $image[1] ),
           'height' => esc_html( $image[2] ),
           'post_id'=> $post_id,
-          'image_id'=>$attachemnt_id
+          'image_id'=>$attachment_id
       ];
     } else {
       $image_array = [
