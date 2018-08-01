@@ -5,16 +5,16 @@ $( document ).ready(function() {
           // The key name on the left side is the name attribute
           // of an input field. Validation rules are defined
           // on the right side
-          reg_email: {required: true,
+          email: {required: true,
                       email: true},
-          reg_password: "required",
+          password: "required",
           terms: "required",
           'ct-ultimate-gdpr-consent-field': "required"
         },
         // Specify validation error messages
         messages: {
-          reg_email: {required : "Email adresa je potrebno polje", email : "Email nije ispravnog formata"},
-          reg_password: "Lozinka je potrebno polje",
+          email: {required : "Email adresa je potrebno polje", email : "Email nije ispravnog formata"},
+          password: "Lozinka je potrebno polje",
           terms: "Potrebno je prihvatiti uvjete korištenja",
           'ct-ultimate-gdpr-consent-field': "Potrebno je prihvatiti uvjete privatnosti"
         },
