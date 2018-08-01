@@ -82,9 +82,11 @@ $( document ).ready(function() {
 
 
   //Popravak input fieldova
+  $(window).on('load', function() {
   $('input[type="text"], input[type="password"]').each(function() {
       if ($(this).val()) {
           $(this).parent().find('label').addClass('active');
       }
   });
+});
 }); 

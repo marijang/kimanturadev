@@ -378,4 +378,10 @@
     box-shadow: none!important;
 }
 
+.checkout-button {
+    @include media(mobile) {
+      margin-bottom: $base-content-padding*2;
+    }
+  }
+
 
