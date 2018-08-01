@@ -7,7 +7,7 @@
 		if( $this->has_header_logo() ) {
 			$this->header_logo();
 		} else {
-			echo "PONUDA";
+			echo $this->get_title();;
 		}
 		?>
 		</td>
@@ -19,7 +19,7 @@
 </table>
 
 <h1 class="document-type-label">
- PONUDA
+ <?php echo $this->get_title(); ?>
 </h1>
 
 <?php do_action( 'wpo_wcpdf_after_document_label', $this->type, $this->order ); ?>
