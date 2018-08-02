@@ -13,8 +13,7 @@ $image  = $images->get_post_image( 'grid' );
   <div class="article-single__container">
     <div class="article-single__image">
       <a class="article-single__image-link" href="<?php the_permalink(); ?>">
-           <img data-normal="<?php echo esc_url( $image['image'] );?>" src="<?php echo esc_url( $image['image'] );?>" >
-            
+        <img src="<?php  /*the_post_thumbnail( 'blog-list');*/ echo esc_url( $image['image'] );?>">
       </a>
     </div>
     <div>

@@ -24,8 +24,11 @@
 				
 		</div>
 			<div class="search__inner search__inner--down" id='search-down'>
-				<section id="search-results" class="section section__spacing-top--medium section__spacing-bottom--medium">
-                </section>
+                <div class="section section__spacing-top--medium section__spacing-bottom--medium">
+                    <div class="loader-spin"></div>
+				    <section id="search-results" class="">
+                    </section>
+                </div>
             </div>
     <!-- </div> -->
 </div><!-- /search -->

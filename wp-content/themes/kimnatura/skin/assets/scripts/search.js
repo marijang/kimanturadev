@@ -33,9 +33,9 @@ $(document).ready( function() {
                 closeSearch();
                 closeCtrl.click();
 			}
-		});
+        });
     }
-    
+
     function searchScroll() {
         if ($(search).scrollTop() > 0){
             $(searchUp).addClass("scrolled");
@@ -79,7 +79,35 @@ $(document).ready( function() {
 
     init();
     
+    function search( event ) {
+        event.preventDefault();
+        var $this = $(this);
+        var $input = $this.find('input[name="s"]');
+        var search = $this.val();
+        var url = themeLocalization.ajaxurl + '?action=search&search='+search;
+        //$('#search-results').css('display','none');
+        $('.loader-spin').css('display','block');
+        $.ajax({
+            type : "get",
+            //dataType : "json",
+            url : url,
+           // data : {action: action, post_id : post_id, nonce: nonce},
+            success: function(response) {
+               if(response) {
+                    //$('.loader-spin').css('display','none');                    
+                    $("#search-results").html(response);
+                    //$('#search-results').css('display','block');
+               }
+               else {
+                  alert("Your vote could not be added")
+               }
+            }
+         });
+        };
 
+    $( "#search-form" ).submit(search);
+    $( '#search-input' ).keyup(search);
+    $('#btn-search-close').click(search);
 
 });
 
@@ -120,31 +148,43 @@ $(function() {
 
     
 
-    function search( event ) {
-        event.preventDefault();
-        var $this = $(this);
-        var $input = $this.find('input[name="s"]');
-        var search = $this.val();
-        var url = themeLocalization.ajaxurl + '?action=search&search='+search;
-        $.ajax({
-            type : "get",
-            //dataType : "json",
-            url : url,
-           // data : {action: action, post_id : post_id, nonce: nonce},
-            success: function(response) {
-               if(response) {
-                    $("#search-results").html(response);
-               }
-               else {
-                  alert("Your vote could not be added")
-               }
-            }
-         });
-        };
+    // function search( event ) {
+    //     event.preventDefault();
+    //     var $this = $(this);
+    //     var $input = $this.find('input[name="s"]');
+    //     var search = $this.val();
+    //     var url = themeLocalization.ajaxurl + '?action=search&search='+search;
+    //     //$('#search-results').css('display','none');
+    //     $('.loader-spin').css('display','block');
+    //     $.ajax({
+    //         type : "get",
+    //         //dataType : "json",
+    //         url : url,
+    //        // data : {action: action, post_id : post_id, nonce: nonce},
+    //         success: function(response) {
+    //            if(response) {
+    //                 //$('.loader-spin').css('display','none');                    
+    //                 $("#search-results").html(response);
+    //                 //$('#search-results').css('display','block');
+    //            }
+    //            else {
+    //               alert("Your vote could not be added")
+    //            }
+    //         }
+    //      });
+    //     };
 
-    $( "#search-form" ).submit(search);
-    $( '#search-input' ).keyup(search);
-    $('#btn-search-close').click(search);
+    // $( "#search-form" ).submit(search);
+    // var timeout;
+    // $( '#search-input' ).keyup(function(e) {
+    //     if(timeout){
+    //         clearTimeout(timeout);
+    //     }
+    //     timeout = setTimeout(function() {
+    //         search();
+    //     }, 250);
+    // })
+    // $('#btn-search-close').click(search);
 
 	
 });
