@@ -82,12 +82,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row input-field">
 				<label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+				<input autofocus type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
 				<span class="helper-text errorClass" data-error="wrong"></span>
 			</p>
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row input-field">
 				<label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" />
+				<input autofocus class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" />
 				<span class="helper-text errorClass" data-error="wrong"></span>
 			</p>
 
@@ -135,7 +135,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row input-field">
 				<label for="reg_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="reg_email" id="reg_email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
 			    <span class="helper-text errorClass" data-error="wrong"></span>
 			</p>
 
@@ -143,7 +143,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<p style="margin-bottom: 0px;" class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row input-field">
 					<label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
-					<input type="password" autocomplete="new-password" class="woocommerce-Input woocommerce-Input--text input-text" name="reg_password" id="reg_password" />
+					<input type="password" autocomplete="new-password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" />
 					<span class="helper-text errorClass" data-error="wrong"></span>
 				</p>
 
@@ -171,3 +171,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php do_action( 'woocommerce_after_customer_login_form' ); ?>
 
+<script>
+ $(window).on('load', function() {
+  $('input[type="text"], input[type="password"]').click();
+});
+</script>

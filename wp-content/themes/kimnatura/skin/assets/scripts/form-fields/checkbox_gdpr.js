@@ -6,7 +6,29 @@ $( document ).ready(function() {
     //console.log(text);
     label.text('');
     var split = text.split('odredbama');
-    label.append('<span>' + split[0]  + ' odredbama <a href="/pravila-privatnosti"> Pravila o privatnosti</a> *</span>');
+    label.append('<span>' + split[0]  + ' odredbama <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
+    input.prependTo(label);
+    label.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
+    label.click(function() {
+        var cb = $(this).find('input');
+        if (cb.attr('checked')) {
+            cb.attr('checked', false);
+            //cb.parent().addClass('checkbox__invalid');
+        } else {
+            cb.attr('checked', true);
+            cb.parent().removeClass('checkbox__invalid');
+        }
+    });
+
+
+    var input = $('.newsletter .ct-ultimate-gdpr-consent-field');
+    input.attr('required', false);
+    var label = $(".newsletter [for='ct-ultimate-gdpr-consent-field']");
+    var text = label.text();
+    //console.log(text);
+    label.text('');
+    var split = text.split('na');
+    label.append('<span>' + split[0] + split[1]  + ' na <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
     input.prependTo(label);
     label.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
     label.click(function() {
@@ -44,7 +66,7 @@ $( document ).ready(function() {
     //console.log(text);
     label.text('');
     var split1 = text.split('odredbama');
-    label.append('<span>' + split1[0] + ' odredbe <a href="/pravila-privatnosti">Pravila o privatnosti</a> *</span>');
+    label.append('<span>' + split1[0] + ' odredbama <a href="/pravila-privatnosti" target="_blank" >Pravila o privatnosti</a> *</span>');
     input.prependTo(label);
    /* label.click(function() {
         var cb = $(this).find('input');
@@ -81,10 +103,5 @@ $( document ).ready(function() {
 
 
 
-  //Popravak input fieldova
-  $('input[type="text"], input[type="password"]').each(function() {
-      if ($(this).val()) {
-          $(this).parent().find('label').addClass('active');
-      }
-  });
+
 }); 

@@ -311,7 +311,10 @@ function add_terms_and_conditions_to_registration() {
         ?>
         <p id="terms_cond" class="form-row terms wc-terms-and-conditions">
             <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
-                <input type="checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" name="terms" <?php checked( apply_filters( 'woocommerce_terms_is_checked_default', isset( $_POST['terms'] ) ), true ); ?> id="terms" /> <span><?php printf( __( 'Pristajem na <a href="%s"  class="woocommerce-terms-and-conditions-link">uvjete korištenja</a>', 'woocommerce' ), "/uvjeti-koristenja-internetske-stranice" ); ?></span> <span class="required">*</span>
+                <input type="checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" 
+				name="terms" 
+				<?php checked( apply_filters( 'woocommerce_terms_is_checked_default', isset( $_POST['terms'] ) ), true ); ?> id="terms" /> 
+				<span><?php printf( __( 'Pristajem na <a href="%s"  class="woocommerce-terms-and-conditions-link">uvjete korištenja</a>', 'woocommerce' ), "/uvjeti-koristenja-internetske-stranice" ); ?></span> <span class="required">*</span>
             </label>
             <input type="hidden" name="terms-field" value="1" />
         </p>
@@ -348,3 +351,19 @@ add_filter( 'login_redirect', function( $url, $query, $user ) {
 
 
 remove_filter( 'woocommerce_checkout_fields', 'woocommerce_checkout_fields_filter', 100 );
+
+
+add_filter( 'wpo_wcpdf_invoice_title', 'wpo_wcpdf_invoice_title' );
+function wpo_wcpdf_invoice_title () {
+    $invoice_title = 'PONUDA';
+    return $invoice_title;
+}
+
+add_filter( 'wpo_wcpdf_filename', 'wpo_wcpdf_custom_filename', 10, 4 );
+function wpo_wcpdf_custom_filename( $filename, $template_type, $order_ids, $context ) {
+    $invoice_string = _n( 'invoice', 'invoices', count($order_ids), 'woocommerce-pdf-invoices-packing-slips' );
+    $new_prefix = _n( 'ponuda', 'ponuda', count($order_ids), 'woocommerce-pdf-invoices-packing-slips' );
+    $new_filename = str_replace($invoice_string, $new_prefix, $filename);
+ 
+    return $new_filename;
+}
