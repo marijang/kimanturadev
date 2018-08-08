@@ -367,3 +367,19 @@ function wpo_wcpdf_custom_filename( $filename, $template_type, $order_ids, $cont
  
     return $new_filename;
 }
+
+// Brisanje svih vrsta naplate dostave (npr. flat rate:)
+/**
+ * @snippet       Removes shipping method labels @ WooCommerce Cart
+ * @how-to        Watch tutorial @ https://businessbloomer.com/?p=19055
+ * @sourcecode    https://businessbloomer.com/?p=484
+ * @author        Rodolfo Melogli
+ * @testedwith    WooCommerce 2.6.2
+ */
+ 
+add_filter( 'woocommerce_cart_shipping_method_full_label', 'bbloomer_remove_shipping_label', 10, 2 );
+
+function bbloomer_remove_shipping_label($label, $method) {
+$new_label = preg_replace( '/^.+:/', '', $label );
+return $new_label;
+}
