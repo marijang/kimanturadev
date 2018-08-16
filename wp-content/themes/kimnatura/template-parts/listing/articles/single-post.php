@@ -5,15 +5,15 @@
  * @package Kimnatura\Template_Parts\Listing\Articles
  */
 
-use Kimnatura\Theme\Utils as Utils;
-$images = new Utils\Images();
-$image  = $images->get_post_image( 'grid' );
+// use Kimnatura\Theme\Utils as Utils;
+// $images = new Utils\Images();
+// $image  = $images->get_post_image( 'grid' );
 ?>
 <article class="article-single">
   <div class="article-single__container">
     <div class="article-single__image">
       <a class="article-single__image-link" href="<?php the_permalink(); ?>">
-        <?php  /*the_post_thumbnail( 'blog-list');*/ echo the_post_thumbnail('medium')?>
+        <?php  /*the_post_thumbnail( 'blog-list');*/ echo the_post_thumbnail('grid')?>
       </a>
     </div>
     <div>
