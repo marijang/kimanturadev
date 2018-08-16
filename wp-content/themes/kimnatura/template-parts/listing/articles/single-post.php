@@ -13,7 +13,7 @@
   <div class="article-single__container">
     <div class="article-single__image">
       <a class="article-single__image-link" href="<?php the_permalink(); ?>">
-        <?php  /*the_post_thumbnail( 'blog-list');*/ echo the_post_thumbnail('grid')?>
+        <?php  /*the_post_thumbnail( 'blog-list');*/ echo the_post_thumbnail('medium')?>
       </a>
     </div>
     <div>
