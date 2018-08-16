@@ -132,6 +132,7 @@ $(function() {
             type : "get",
             //dataType : "json",
             url : url,
+            async: false,
            // data : {action: action, post_id : post_id, nonce: nonce},
             success: function(response) {
                if(response) {
