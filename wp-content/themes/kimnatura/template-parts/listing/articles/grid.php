@@ -11,7 +11,7 @@ $image  = $images->get_post_image('grid');
 ?>
 <article class="article-grid">
   <div class="article-grid__container">
-  <a class="article-grid__image" href="<?php the_permalink(); ?>" style="background-image:url(<?php echo the_post_thumbnail('small')?>)"></a>
+  <a class="article-grid__image" href="<?php the_permalink(); ?>" style="background-image:url(<?php echo esc_url( $image['image'] ); ?>)"></a>
   <div class="article-grid__content">
     <header>
     <h2 class="article-grid__heading">
