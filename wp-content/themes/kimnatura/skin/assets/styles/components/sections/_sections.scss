@@ -134,7 +134,7 @@ $section-description-space-bottom-small:$base-content-padding;
         }
         margin-top: $base-content-padding*2;
         margin-bottom: $base-content-padding*3;
-        min-height: 400px;
+        min-height: 550px;
         @extend %bg-image;
         @include media(mobile){
             margin: $base-content-padding 0; 

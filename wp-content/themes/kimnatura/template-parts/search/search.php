@@ -25,7 +25,6 @@
 		</div>
 			<div class="search__inner search__inner--down" id='search-down'>
                 <div class="section section__spacing-top--medium section__spacing-bottom--medium">
-                    <div class="loader-spin"></div>
 				    <section id="search-results" class="">
                     </section>
                 </div>
