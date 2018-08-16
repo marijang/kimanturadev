@@ -283,7 +283,7 @@ class Woo {
       $step =  1;
     }
     if (is_wc_endpoint_url( 'order-pay' )) {
-      $t .="order-pay";
+      //$t .="order-pay";
       $step = 4;
     }
   //  if (is_wc_endpoint_url( 'order-received' )) {

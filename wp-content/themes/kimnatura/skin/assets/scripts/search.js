@@ -33,9 +33,9 @@ $(document).ready( function() {
                 closeSearch();
                 closeCtrl.click();
 			}
-		});
+        });
     }
-    
+
     function searchScroll() {
         if ($(search).scrollTop() > 0){
             $(searchUp).addClass("scrolled");
@@ -126,6 +126,8 @@ $(function() {
         var $input = $this.find('input[name="s"]');
         var search = $this.val();
         var url = themeLocalization.ajaxurl + '?action=search&search='+search;
+        //$('#search-results').css('display','none');
+        //$('.loader-spin').css('display','block');
         $.ajax({
             type : "get",
             //dataType : "json",
@@ -133,7 +135,9 @@ $(function() {
            // data : {action: action, post_id : post_id, nonce: nonce},
             success: function(response) {
                if(response) {
+                    //$('.loader-spin').css('display','none');                    
                     $("#search-results").html(response);
+                    //$('#search-results').css('display','block');
                }
                else {
                   alert("Your vote could not be added")
@@ -141,9 +145,24 @@ $(function() {
             }
          });
         };
+    
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
 
     $( "#search-form" ).submit(search);
-    $( '#search-input' ).keyup(search);
+    $( '#search-input' ).keyup(debounce(search, 300));
     $('#btn-search-close').click(search);
 
 	
