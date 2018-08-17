@@ -37,13 +37,16 @@ footer{
        margin-top: $base-content-padding;
     }
     @include e('content'){
-        display: flex;
+        display: grid;
+        grid-template-columns: 2fr 1fr auto auto;
+        grid-row-gap: 24px;
+        grid-column-gap: 32px;
         @include container();
         padding: $footer-content-padding;
-        align-items: center;
+        //align-items: center;
         @include media(mobile){
             text-align: center;
-            flex-direction: column;
+            grid-template-columns: 1fr;
         }  
     }
     @include e('content-media-style'){
@@ -61,13 +64,9 @@ footer{
     }
 
     @include e('links'){
-        flex: 1;
-        @include first{
-            flex:2;
-        }
         min-height: 96px;
         @include media(mobile){
-            padding-top: $base-content-padding;
+            //padding-top: $base-content-padding;
             min-height: inherit;
         }
     }

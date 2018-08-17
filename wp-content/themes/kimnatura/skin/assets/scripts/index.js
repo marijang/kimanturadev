@@ -34,3 +34,5 @@ import './mega-menu';
 
 import './zoom';
 import './loader';
+
+import './wspay';

@@ -5,9 +5,9 @@
  * @package Kimnatura\Template_Parts\Listing\Articles
  */
 
-use Kimnatura\Theme\Utils as Utils;
-$images = new Utils\Images();
-$image  = $images->get_post_image( 'grid' );
+// use Kimnatura\Theme\Utils as Utils;
+// $images = new Utils\Images();
+// $image  = $images->get_post_image( 'grid' );
 ?>
 <article class="article-single">
   <div class="article-single__container">

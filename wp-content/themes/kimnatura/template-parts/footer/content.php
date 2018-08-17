@@ -27,6 +27,11 @@ $helper = new Helper();
       <div class="footer__links footer__links--social">
       <?php get_template_part( 'template-parts/footer/social', '' );  ?>    
       </div>
+      <div class="footer__links">
+        <a href="http://www.wspay.info/" target="_blank" title="WSpay™ - Web Studio payment gateway">
+            <img class="alignnone size-full wp-image-985" src="http://kimnatura.onlyoneif.com/wp-content/uploads/2018/08/wsPayLogo-106x50.png" alt="" width="106" height="50">
+        </a>
+      </div>
   </div>
 
   <div class="footer__info">

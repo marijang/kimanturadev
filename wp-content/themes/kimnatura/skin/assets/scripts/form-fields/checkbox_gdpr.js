@@ -6,7 +6,8 @@ $( document ).ready(function() {
     //console.log(text);
     label.text('');
     var split = text.split('odredbama');
-    label.append('<span>' + split[0]  + ' odredbama <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
+    //label.append('<span>' + split[0]  + ' odredbama <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
+    label.append('<span>Pristajem da se moji podaci pohrane u skladu s odredbama <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
     input.prependTo(label);
     label.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
     label.click(function() {
@@ -28,7 +29,8 @@ $( document ).ready(function() {
     //console.log(text);
     label.text('');
     var split = text.split('na');
-    label.append('<span>' + split[0] + split[1]  + ' na <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
+    //label.append('<span>' + split[0] + split[1]  + ' na <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
+    label.append('<span>Pristajem na to da se moji podaci prikupe s obzirom na <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
     input.prependTo(label);
     label.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
     label.click(function() {
