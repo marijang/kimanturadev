@@ -23,12 +23,12 @@ get_header();
 
         <div class="grid2">
             <figure class="grid2__item fig-item">
-                <img src="" alt="picture" class="fig-item__img">
+                <img src="/wp-content/uploads/2018/08/prod-baska.png" alt="picture" class="fig-item__img">
                 <figcaption class="fig-item__caption grid2__caption">
-                    <h5 class="grid2__title">Kim Natura poslovnica 1</h5>
+                    <h5 class="grid2__title">Minerva obrt za trgovinu</h5>
                     <div class="grid2__icon-row">
                         <i class="material-icons mi grid2__icon">place</i>
-                        <p class="grid2__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
+                        <p class="grid2__icon-text">Baška Voda, Trg dr fra Jure Radića 4, 21320 Baška Voda</p>
                     </div>
                     <div class="grid2__icon-row">
                         <i class="material-icons grid2__icon">phone</i>
@@ -40,7 +40,7 @@ get_header();
                     </div>               
                 </figcaption>
             </figure>
-            <figure class="grid2__item fig-item">
+            <!-- <figure class="grid2__item fig-item">
                 <img src="" alt="picture" class="fig-item__img">
                 <figcaption class="fig-item__caption grid2__caption">
                     <h5 class="grid2__title">Kim Natura poslovnica 1</h5>
@@ -75,7 +75,7 @@ get_header();
                         <p class="grid2__icon-text">kim.natura@gmail.com</p>
                     </div>
                 </figcaption>
-            </figure>
+            </figure> -->
             
 
         </div>
@@ -83,6 +83,27 @@ get_header();
         <h1 class="section__title section__header">Ostala prodajna mjesta</h1>
         <div class="grid3">
             <div class="grid3__item">
+                <h2 class="grid3__item-title" style="font-weight: 500">Patrik obrt za trgovinu</h2>
+                <div class="grid3__icon-row">
+                    <i class="material-icons grid3__icon">place</i>
+                    <p class="grid3__icon-text">Kandlerova 42, 52100 Pula</p>
+                </div>
+            </div>
+            <div class="grid3__item">
+                <h2 class="grid3__item-title" style="font-weight: 500">Valsimot d.o.o</h2>
+                <div class="grid3__icon-row">
+                    <i class="material-icons grid3__icon">place</i>
+                    <p class="grid3__icon-text">Petra Krešimira IV bb, 53291 Novalja</p>
+                </div>
+            </div>
+            <div class="grid3__item">
+                <h2 class="grid3__item-title" style="font-weight: 500">T.O. Omega</h2>
+                <div class="grid3__icon-row">
+                    <i class="material-icons grid3__icon">place</i>
+                    <p class="grid3__icon-text">Eufrazijeva 15, 52440 Poreč</p>
+                </div>
+            </div>
+            <!-- <div class="grid3__item">
                 <h2 class="grid3__item-title" style="font-weight: 500">Suvenirnica jedan</h2>
                 <div class="grid3__icon-row">
                     <i class="material-icons grid3__icon">place</i>
@@ -130,28 +151,7 @@ get_header();
                     <i class="material-icons grid3__icon">place</i>
                     <p class="grid3__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
                 </div>
-            </div>
-            <div class="grid3__item">
-                <h2 class="grid3__item-title" style="font-weight: 500">Suvenirnica jedan</h2>
-                <div class="grid3__icon-row">
-                    <i class="material-icons grid3__icon">place</i>
-                    <p class="grid3__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
-                </div>
-            </div>
-            <div class="grid3__item">
-                <h2 class="grid3__item-title" style="font-weight: 500">Suvenirnica jedan</h2>
-                <div class="grid3__icon-row">
-                    <i class="material-icons grid3__icon">place</i>
-                    <p class="grid3__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
-                </div>
-            </div>
-            <div class="grid3__item">
-                <h2 class="grid3__item-title" style="font-weight: 500">Suvenirnica jedan</h2>
-                <div class="grid3__icon-row">
-                    <i class="material-icons grid3__icon">place</i>
-                    <p class="grid3__icon-text">Lug Samoborski, Kneza Trpimira 15, Samobor</p>
-                </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
