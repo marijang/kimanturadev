@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 wc_print_notices(); ?>
 
-<form method="post" class="woocommerce-ResetPassword lost_reset_password">
+<form style = "min-height: 398px;" method="post" class="woocommerce-ResetPassword lost_reset_password">
 
 	<p><?php echo apply_filters( 'woocommerce_lost_password_message', esc_html__( 'Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.', 'woocommerce' ) ); ?></p><?php // @codingStandardsIgnoreLine ?>
 
@@ -35,7 +35,7 @@ wc_print_notices(); ?>
 
 	<?php do_action( 'woocommerce_lostpassword_form' ); ?>
 
-	<p class="woocommerce-form-row form-row">
+	<p style="margin-top: 16px;" class="woocommerce-form-row form-row">
 		<input type="hidden" name="wc_reset_password" value="true" />
 		<button type="submit" class="woocommerce-Button button btn btn--primary" value="<?php esc_attr_e( 'Reset password', 'woocommerce' ); ?>"><?php esc_html_e( 'Reset password', 'woocommerce' ); ?></button>
 	</p>

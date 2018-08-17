@@ -1,0 +1,102 @@
+$search-results-image-height: 180px;
+$search-results-content-spacing: $base-content-padding;
+$description-columns: 2;
+$description-height: $description-columns*27px;
+
+@include b('article-single'){
+    height: $search-results-image-height;
+    @include media(mobile){
+        height: auto;
+    }
+    @include e('container'){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 16px;
+
+        @include media(mobile){
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr auto;
+        }
+    }
+
+    @include e('image'){
+        grid-column: 1/2;
+        //grid-row: 1/4;
+
+        img {
+            width: 100%;
+            height: $search-results-image-height;
+        }
+    }
+
+    @include e('title'){
+        //grid-column: 2/3;
+        margin-bottom: $search-results-content-spacing;
+        //grid-row: 1/2;
+    }
+
+    @include e('description'){
+        //grid-column: 2/3;
+        margin-bottom: $search-results-content-spacing;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: $description-height;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $description-columns;
+        //grid-row: 2/3;
+    }
+
+    @include e('read-more'){
+        //grid-column: 2/3;
+        //grid-row: 3/4;
+        @include typi(medium);
+    }
+
+    @include e('heading'){
+        @include typi(largest);
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* max-height: 108px; */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    
+    }
+
+    @include e('link'){
+        margin-top: $base-content-padding;
+        display: block;
+        //color: $base-dark-color;
+        position: relative;
+  
+        &:hover{
+         color:$base-primary-color;
+         &:before{
+             transform: scale(1, 1); 
+         }
+        }
+  
+        &:before {
+         content: "";
+         position: absolute;
+         left: -$base-content-padding;
+         top: 11px;
+         top: calc( 50% - 2px);
+         width: 12px;
+         background: currentColor;
+         height: 2px;
+         -webkit-transform-origin: left;
+                 transform-origin: left;
+         -webkit-transition: all .2s ease-out;
+         transition: all .2s ease-out;
+         -webkit-transform: scale(0, 1);
+         transform: scale(0, 1); 
+         @include media(mobile){
+             display: none;
+         }
+       }
+     }
+}

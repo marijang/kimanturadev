@@ -71,6 +71,17 @@ class Widgets {
           'after_title' => '</h4>',
       )
     );
+    register_sidebar(
+      array (
+          'name' => __( 'Mega Menu', 'kimnatura' ),
+          'id' => 'mega-menu',
+          'description' => __( 'Mega Menu', 'kimnatura' ),
+          'before_widget' => '<div class="mega-menu__column">',
+          'after_widget' => "</div>",
+          'before_title' => '<h4 class="mega-menu__column-title">',
+          'after_title' => '</h4>',
+      )
+    );
   }
 
 }

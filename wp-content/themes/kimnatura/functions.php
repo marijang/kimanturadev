@@ -13,6 +13,7 @@
 //namespace Kimnatura;
 
 
+
 /**
  * Disable the default WooCommerce stylesheet.
  *
@@ -22,6 +23,10 @@
  * @link https://docs.woocommerce.com/document/disable-the-default-stylesheet/
  */
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+
+
+u
 
 //exclude_category(1);
 //use Kimnatura\Includes\Loader;
@@ -38,6 +43,9 @@ add_filter('subtitle_view_supported', '__return_false');
 if ( ! defined( 'WPINC' ) ) {
   die;
 }
+
+
+$inf_theme_options['cookies_notification_description'] = 'Za pružanje boljeg korisničkog iskustva, ova stranica koristi cookies. Nastavkom pregleda stranice slažete se s korištenjem kolačića.';
 
 /**
  * Theme version global
@@ -304,13 +312,16 @@ function add_terms_and_conditions_to_registration() {
         ?>
         <p id="terms_cond" class="form-row terms wc-terms-and-conditions">
             <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
-                <input type="checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" name="terms" <?php checked( apply_filters( 'woocommerce_terms_is_checked_default', isset( $_POST['terms'] ) ), true ); ?> id="terms" /> <span><?php printf( __( 'I&rsquo;ve read and accept the <a href="%s" target="_blank" class="woocommerce-terms-and-conditions-link">terms &amp; conditions</a>', 'woocommerce' ), esc_url( wc_get_page_permalink( 'terms' ) ) ); ?></span> <span class="required">*</span>
+                <input type="checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" 
+				name="terms" 
+				<?php checked( apply_filters( 'woocommerce_terms_is_checked_default', isset( $_POST['terms'] ) ), true ); ?> id="terms" /> 
+				<span><?php printf( __( 'Pristajem na <a href="%s"  class="woocommerce-terms-and-conditions-link">uvjete korištenja</a>', 'woocommerce' ), "/uvjeti-koristenja-internetske-stranice" ); ?></span> <span class="required">*</span>
             </label>
             <input type="hidden" name="terms-field" value="1" />
         </p>
     <?php
     }
-}
+} 
 
 // Validate required term and conditions check box
 add_action( 'woocommerce_register_post', 'terms_and_conditions_validation', 20, 3 );
@@ -319,4 +330,57 @@ function terms_and_conditions_validation( $username, $email, $validation_errors 
         $validation_errors->add( 'terms_error', __( 'Terms and condition are not checked!', 'woocommerce' ) );
 
     return $validation_errors;
+}
+
+
+// Link za preuzimanje računa
+add_filter('woocommerce_thankyou_order_received_text', 'wpo_wcpdf_thank_you_link', 10, 2);
+function wpo_wcpdf_thank_you_link( $text, $order ) {
+    if ( is_user_logged_in() ) {
+        $order_id = method_exists($order, 'get_id') ? $order->get_id() : $order->id;
+        $pdf_url = wp_nonce_url( admin_url( 'admin-ajax.php?action=generate_wpo_wcpdf&template_type=invoice&order_ids=' . $order_id . '&my-account'), 'generate_wpo_wcpdf' );
+        $text .= '<div class="thanks__button"><a class="checkout-button button alt wc-forward btn btn--primary-color" href="'.esc_attr($pdf_url).'">Preuzmite PDF</a></div>';
+    }
+    return $text;
+}
+
+
+add_filter( 'login_redirect', function( $url, $query, $user ) {
+	return home_url();
+}, 10, 3 );
+
+
+
+remove_filter( 'woocommerce_checkout_fields', 'woocommerce_checkout_fields_filter', 100 );
+
+
+add_filter( 'wpo_wcpdf_invoice_title', 'wpo_wcpdf_invoice_title' );
+function wpo_wcpdf_invoice_title () {
+    $invoice_title = 'PONUDA';
+    return $invoice_title;
+}
+
+add_filter( 'wpo_wcpdf_filename', 'wpo_wcpdf_custom_filename', 10, 4 );
+function wpo_wcpdf_custom_filename( $filename, $template_type, $order_ids, $context ) {
+    $invoice_string = _n( 'invoice', 'invoices', count($order_ids), 'woocommerce-pdf-invoices-packing-slips' );
+    $new_prefix = _n( 'ponuda', 'ponuda', count($order_ids), 'woocommerce-pdf-invoices-packing-slips' );
+    $new_filename = str_replace($invoice_string, $new_prefix, $filename);
+ 
+    return $new_filename;
+}
+
+// Brisanje svih vrsta naplate dostave (npr. flat rate:)
+/**
+ * @snippet       Removes shipping method labels @ WooCommerce Cart
+ * @how-to        Watch tutorial @ https://businessbloomer.com/?p=19055
+ * @sourcecode    https://businessbloomer.com/?p=484
+ * @author        Rodolfo Melogli
+ * @testedwith    WooCommerce 2.6.2
+ */
+ 
+add_filter( 'woocommerce_cart_shipping_method_full_label', 'bbloomer_remove_shipping_label', 10, 2 );
+
+function bbloomer_remove_shipping_label($label, $method) {
+$new_label = preg_replace( '/^.+:/', '', $label );
+return $new_label;
 }

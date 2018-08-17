@@ -19,7 +19,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
+use Kimnatura\Admin\Woo as Woo;
+$woo = new Woo;
 ?>
 <div class="woocommerce-shipping-fields">
 	<?php if ( true === WC()->cart->needs_shipping_address() ) : ?>
@@ -39,10 +40,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 					$fields = $checkout->get_checkout_fields( 'shipping' );
 
 					foreach ( $fields as $key => $field ) {
+
 						if ( isset( $field['country_field'], $fields[ $field['country_field'] ] ) ) {
 							$field['country'] = $checkout->get_value( $field['country_field'] );
 						}
-						woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+						if ($key != 'shipping_address_2'  ) 
+							$woo->woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
 					}
 				?>
 			</div>
@@ -53,24 +56,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php endif; ?>
 </div>
-<div class="woocommerce-additional-fields">
-	<?php do_action( 'woocommerce_before_order_notes', $checkout ); ?>
 
-	<?php if ( apply_filters( 'woocommerce_enable_order_notes_field', 'yes' === get_option( 'woocommerce_enable_order_comments', 'yes' ) ) ) : ?>
-
-		<?php if ( ! WC()->cart->needs_shipping() || wc_ship_to_billing_address_only() ) : ?>
-
-			<h3><?php _e( 'Additional information', 'woocommerce' ); ?></h3>
-
-		<?php endif; ?>
-
-		<div class="woocommerce-additional-fields__field-wrapper">
-			<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
-				<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
-			<?php endforeach; ?>
-		</div>
-
-	<?php endif; ?>
-
-	<?php do_action( 'woocommerce_after_order_notes', $checkout ); ?>
-</div>

@@ -1,40 +1,67 @@
 .animated{
     &.shop-catalog__item{
-        animation: .3s ease-in-out both fade-in-all;
-        &::before{
+        animation: .2s ease-in-out both fade-in-all;
+    
+       // opacity: 1;
+       // transition: max-height .3s;  
+        max-height: 400px;
+        /*
+        &::before1{
             animation: fade-out 1s 1;
             animation-fill-mode: forwards;
-        }
-    }
-    @for $i from 1 through 100 {
-        &.shop-catalog__item {
-          &:nth-child(#{$i}) {
+            z-index: 0;
             
-            // Delay the animation. Delay increases as items loop.
-            animation-delay: $i * (.09s);
-          }
-          &::before{
-            animation-delay:(.03s) * $i;
-          }
         }
+        */
     }
+ 
+    
 }
 
 
 @include block('shop-catalog'){
     padding: $grid-gutter 0;
     display: flex;
+    @include element('section'){
+        margin-bottom: $base-content-padding*3;
+        @include media('mobile'){
+            margin-bottom: $base-content-padding;
+            .section__image{
+                display: none;
+            }
+        }
+    }
 
     @include element('loader'){
         text-align: center;
         display: none;
         svg{
-            width: 100px;
-            height: 100px;
+            width: 64px;
+            height: 64px;
             display:inline-block;
           }
     }
-
+    @include element('progress'){
+        height: 2px;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        background: $base-grey-color;
+        border: none;
+        color: $base-primary-color;
+        display: block;
+        margin: $base-content-padding/2 auto;
+        width: 40%;
+        &::-webkit-progress-bar{
+            background: $base-grey-color;
+        } 
+        &::-webkit-progress-value {
+            background: $base-primary-color;
+        }
+        &::-moz-progress-bar {
+            background: $base-primary-color;
+        }
+    }
     @include media('mobile'){
         flex-direction: column;
     }
@@ -50,7 +77,8 @@
          display: flex;
          align-items: center;
          border-bottom: 1px solid $base-grey-color;
-         padding-bottom: $base-content-padding;
+         padding-top: $base-content-padding/2;
+         padding-bottom: $base-content-padding/2;
          padding-left:$base-content-padding;
          padding-right:$base-content-padding;
          @include media('mobile'){
@@ -75,6 +103,9 @@
     @include element('items'){
         width: 100%;
         @extend %list-reset;
+        max-height: 2500px;
+        overflow: hidden;
+        transition: all 1.5s cubic-bezier(0.81, 0.15, 0.26, 0.99);
         @include media(desktop large){
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -84,9 +115,12 @@
     }
 
     @include element('item'){
+       transition: all 1.5s cubic-bezier(0.81,0.15,0.26,0.99);
        display: block;
+       overflow: hidden;
        position: relative;
-       &::before{
+       max-height: 0;
+       &::before1{
            content: "";
            display: block;
            position: absolute;
@@ -125,19 +159,37 @@
         margin: 0;
        // @include typi('h6');
         font-weight: normal;
+        font-family: $base-font-family-primary;
     }
     @include element('price'){
         margin: 0;  
         color:$base-primary-color;
+        font-family: $base-font-family-primary;
         //@include typi('h6');
         font-weight: 700;
     } 
     @include element('results'){
         margin: 0;  
         flex:1;
-        //@include typi('h6');
-        font-weight: 700;
+        @include typi('small');
+        font-weight: 400;
     } 
+    @include element('ordering'){
+        margin: 0;  
+
+        @include typi('small');
+        font-weight: 400;
+    } 
+    
+
+    @include element('results-wrap'){
+        display: flex;
+        flex-direction: column;
+        margin: $base-content-padding;
+        text-align: center;
+        justify-content: center;
+    } 
+
     @include element('ordering'){
      
     } 
@@ -163,9 +215,14 @@
     }
     @include element('num-of-items'){
         @include typi('small');
-        margin-bottom: $base-content-padding;
+        margin: $base-content-padding 0;
       
     }
+    @include element('btn-shop-more'){
+        margin: 0 auto;
+    }
+
+    
 
     
     

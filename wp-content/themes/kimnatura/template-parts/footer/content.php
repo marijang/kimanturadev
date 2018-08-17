@@ -18,7 +18,7 @@ $helper = new Helper();
       <div class="footer__links footer__content-media-style">
         <img class="footer__logo-img" src="<?php echo esc_url( KIM_IMAGE_URL . 'logo-white.svg' ); ?>" title="<?php echo esc_attr( $header_logo_info ); ?>" alt="<?php echo esc_attr( $header_logo_info ); ?>" />
         <p><?php echo get_theme_mod('footer_text'); ?>
-        Most web designers end up designing a blog at some point in their career, even if only for their personal sites. 
+         
         </p>
       </div>
       <div class="footer__links">
@@ -26,6 +26,11 @@ $helper = new Helper();
       </div>
       <div class="footer__links footer__links--social">
       <?php get_template_part( 'template-parts/footer/social', '' );  ?>    
+      </div>
+      <div class="footer__links">
+        <a href="http://www.wspay.info/" target="_blank" title="WSpay™ - Web Studio payment gateway">
+            <img class="alignnone size-full wp-image-985" src="http://kimnatura.onlyoneif.com/wp-content/uploads/2018/08/wsPayLogo-106x50.png" alt="" width="106" height="50">
+        </a>
       </div>
   </div>
 

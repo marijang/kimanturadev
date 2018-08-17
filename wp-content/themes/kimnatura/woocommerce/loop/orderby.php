@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<form class="woocommerce-ordering shop__products-ordering" method="get">
+<form class="woocommerce-ordering shop__products-ordering shop-catalog__ordering" method="get">
 	<select name="orderby" class="orderby select__normal browser-default">
 		<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
 			<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>

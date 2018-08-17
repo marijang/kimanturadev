@@ -2,7 +2,7 @@
 /**
  * The Menu specific functionality.
  *
- * http://example.com/wp-admin/admin-ajax.php?action=example
+ * http://kimnatura.test/wp-admin/admin-ajax.php?action=example
  * @since   2.0.0
  * @package Kimnatura\Admin\Menu
  */
@@ -20,23 +20,51 @@ Class Example extends WP_AJAX
        
    // woocommerce_product_loop_start();
 
-    $load  = $this->get('load',6);
+    $load  = $this->get('load',12);
     $start = $this->get('start',0); 
+    $categories = explode(',',$_GET['category']);
+   
+
+    $taxonomies = array();
+    if (!empty($_GET['category'])) {
+        $categories = explode(',',$_GET['category']);
+        $taxonomies[] = array (
+            'taxonomy' => 'product_cat',
+            'field' => 'slug',
+            'terms' => $categories
+        );
     
+    // https://wordpress.stackexchange.com/questions/25076/how-to-filter-wordpress-search-excluding-post-in-some-custom-taxonomies
+    $taxonomy_query = array('relation' => 'OR', $taxonomies);
+    if (!empty( $taxonomies)) {
+        //$q->set('tax_query', $taxonomy_query);
+    }
+
     $args = array(
         'post_type' => 'product',
         'posts_per_page' => $load, //$_POST['load'],
-        'offset' => (($start + $load) - $load) 
-       // 'orderby' => 'date', // we will sort posts by date
-        //'order'	=> $_POST['date'] // ASC или DESC
+        'paged' => $start,
+        'tax_query' => $taxonomy_query
+        //'offset' => (($start + $load) - $load) 
     );
-   // $args = array( 'post_type' => 'product', 'posts_per_page' => $_POST['load'], 'product_cat' => ($subCatList ? $subCatList : $bool->slug), 'orderby' => 'title', 'order' => 'ASC', 'offset' => (($_POST['start'] + $_POST['load']) - $_POST['load']) );
-    //$query = new WP_Query( $args );
+} else {
+    $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => $load, //$_POST['load'],
+        'paged' => $start
+    );
+}
     // Asos primjer load more
     $loop = new \WP_Query( $args );
     $total = $loop->found_posts; //$loop->post_count;
-    $total_left = $total - $loop->post_count;
-    echo '<div class="total-products">Ukupno postova:'.$total.', ostalo jos '.$total_left.', prikazujem '.$load.'</em>';
+    
+    $last  = min( $total, $load * $start );
+    $total_left = $total - $last;
+    $percentage = $last/$total*100;
+    echo '<div class="total shop-catalog__results-wrap" data-products-left="'.$total_left.'">
+    <div class="shop-catalog__results-count">You\'ve viewed '.$last.' of '.$total.' products.</div>
+    <progress max="100" value="'.$percentage.'" class="shop-catalog__progress" aria-hidden="true"></progress>
+    </div>';
    // var_dump($loop);
     woocommerce_product_loop_start();
     while ( $loop->have_posts() ) : $loop->the_post(); global $product;

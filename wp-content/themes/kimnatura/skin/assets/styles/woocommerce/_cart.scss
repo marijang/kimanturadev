@@ -191,6 +191,10 @@ $input-number-width: $base-content-padding*2.5;
         font-weight: 600;
         color: $base-black-color;
         margin-bottom: $base-content-padding;
+        @include media(desktop large){
+            margin-bottom: $base-content-padding*2;
+        }
+        
     }
 
     

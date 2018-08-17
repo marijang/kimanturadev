@@ -22,7 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <div class="woocommerce-order">
-
 	<?php if ( $order ) : ?>
 
 		<?php if ( $order->has_status( 'failed' ) ) : ?>
@@ -37,9 +36,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</p>
 
 		<?php else : ?>
-
-			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
-
+		<div class="thanks__title">
+			<?php _e( 'Thank you. Your order has been received.', 'woocommerce' )?>
+		 <div>Potvrdu o plaćanju možete preuzeti u .pdf formatu </div> </div>
 			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
 
 				<li class="woocommerce-order-overview__order order">
@@ -73,14 +72,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			</ul>
 
-		<?php endif; ?>
+			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', '' , $order ); ?></p>
 
-		<?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
-		<?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
+		<?php endif; ?>
+		
 
 	<?php else : ?>
-
-		<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></p>
+	<h2 ><?php _e( 'Thank you. Your order has been received.', 'woocommerce' )?></h2>
+		<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', '' , null ); ?></p>
 
 	<?php endif; ?>
 

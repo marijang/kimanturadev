@@ -25,7 +25,7 @@ if ( ! $messages ) {
 }
 
 ?>
-<ul class="woocommerce-error" role="alert">
+<ul class="woocommerce-error woocommerce-message woocommerce-message--alert" role="alert">
 	<?php foreach ( $messages as $message ) : ?>
 		<li><?php echo wp_kses_post( $message ); ?></li>
 	<?php endforeach; ?>

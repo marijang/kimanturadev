@@ -4,7 +4,7 @@ $section-highlight-padding:             $base-content-padding*4 $base-content-pa
 $section-highlighted-font-weight:       normal;
 $section-description-font-weight:       $base-font-weight-thin;
 $section-description-space-bottom:      $base-content-padding*2;
-$section-header-space-bottom:           $base-content-padding*2;
+$section-header-space-bottom:           $base-content-padding*2.5;
 $section-header-space-bottom-mobile:    $base-content-padding;
 $section-description-space-bottom-small:$base-content-padding;
 
@@ -12,10 +12,119 @@ $section-description-space-bottom-small:$base-content-padding;
     @include section-spacings('top');
     @include section-spacings('bottom');
 
+    @include e('content'){
+        @include m('has-share'){
+            display: flex;
+            flex: 0 auto;
+            justify-content: space-between;
+            padding-right: 0px;
+            padding-left: 0px;
+
+            @include media(mobile){
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    .addthis_toolbox{
+        
+        .custom_images{
+            display: flex;
+            flex-direction: column;
+
+            @include media(mobile){
+                flex-direction: row;
+            }
+        }
+    }
+
     @include e('link'){
        margin-top: $base-content-padding;
        display: block;
+       //color: $base-dark-color;
+       position: relative;
+
+       &:hover{
+        color:$base-primary-color;
+        &:before{
+            transform: scale(1, 1); 
+        }
+       }
+
+       &:before {
+        content: "";
+        position: absolute;
+        left: -$base-content-padding;
+        top: 11px;
+        top: calc( 50% - 2px);
+        width: 12px;
+        background: currentColor;
+        height: 3px;
+        -webkit-transform-origin: left;
+                transform-origin: left;
+        -webkit-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+        -webkit-transform: scale(0, 1);
+        transform: scale(0, 1); 
+        @include media(mobile){
+            display: none;
+        }
+      }
     }
+
+    @include e('share-sticky'){
+        position: sticky;
+        top: 50vh;
+        transform: translate(0px, -50%);
+        margin-top: 90px;
+        margin-left: 50px;
+        width: 50px;
+        height: 150px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+        border-radius: 10px;
+
+        @include media(mobile){
+            height: auto;
+            position: initial;
+             top: 0px; 
+             transform: none;
+             margin-top: 24px;
+             margin-left: 0px;
+        }
+     }
+
+    @include e('share-add-wrap'){
+        flex: 1;
+        width: 50px;
+      
+        margin-top: 90px;
+        display: flex;
+        margin-top: -10px;
+        z-index: 1;
+       
+     }
+
+    @include e('content-share'){
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 0;
+        flex-direction: column;
+        z-index: 2;
+        .gallery{
+            margin-left: -150px;
+            margin-right: -100px;
+        }
+
+        @include media(mobile){
+            flex-direction: column-reverse;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+     }
+
+
+
    // background: red;
     @include container();
     @include element('image'){
@@ -25,7 +134,7 @@ $section-description-space-bottom-small:$base-content-padding;
         }
         margin-top: $base-content-padding*2;
         margin-bottom: $base-content-padding*3;
-        min-height: 400px;
+        min-height: 550px;
         @extend %bg-image;
         @include media(mobile){
             margin: $base-content-padding 0; 
@@ -38,11 +147,14 @@ $section-description-space-bottom-small:$base-content-padding;
         @include media(mobile){
              margin-bottom: $section-header-space-bottom-mobile;
         }
+        @include media(tablet ipad){
+            margin-bottom: $section-header-space-bottom-mobile;
+        }
     }
 
     @include element('title'){
         @extend %heading-reset;
-        
+       // margin-bottom: $base-content-padding;
 
         @include m('center'){
             text-align: center;
@@ -67,15 +179,20 @@ $section-description-space-bottom-small:$base-content-padding;
     }
 
     @include element('highlighted'){
-        @include typi('largest');  
+        @include typi('largest'); 
+        @include media(mobile) {
+            @include typi('default'); 
+        } 
         @include p('e:link'){
             font-weight: $section-highlighted-font-weight;
         }
         @include p('e:inner'){
             display: flex;
+            align-items: center;
             @include media(mobile){
                 flex-direction: column-reverse;
                // flex-direction: row-reverse; 
+               align-items: baseline;
             }
         }
         @include p('e:content'){
@@ -90,6 +207,11 @@ $section-description-space-bottom-small:$base-content-padding;
         @include p('e:image'){
             flex:1;
             margin:0;
+            img {
+                @include media(mobile){
+                    max-height: 350px;
+                }
+            }
         }
     }
 

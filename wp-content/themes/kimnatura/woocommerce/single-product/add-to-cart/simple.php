@@ -30,7 +30,7 @@ echo wc_get_stock_html( $product );
 if ( $product->is_in_stock() ) : ?>
 
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
-klčkčkčklklčlčkčlk
+
 	<form class="cart single-product__cart" action="<?php echo esc_url( get_permalink() ); ?>" method="post" enctype='multipart/form-data'>
 		<?php
 			/**

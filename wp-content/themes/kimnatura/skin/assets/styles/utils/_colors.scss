@@ -20,6 +20,7 @@ $color-light-grey: #F9F9F9;
 $base-black-color:       #000000;
 $base-white-color:       #FFFFFF;
 
+$error-red: rgb(244, 67, 54);
 $base-rouge-color:       #C3151B;
 $base-dark-color:        #2F2F2F;
 $base-abbey-color:       #424446;
@@ -39,6 +40,9 @@ $base-primary-color:     #3DC19E;
 $base-grey-color:        #FAFAFA; //#FAFAFA;
 $base-light-grey-color:  #F9F9F9;
 
+$base-grey-dark-color: #d2d2d2;
+$base-grey-light-color:#eee;
+
 $global-input-focus-color: rgba($base-black-color, 0.2);
 
 // Defaults
@@ -55,7 +59,7 @@ $base-link-muted-color: $base-chateau-color;
 
 
 // Table
-$base-table-border-color: $base-chateau-color;
+$base-table-border-color:#efefef;
 
 
 // Woocommerce Multistep
@@ -93,6 +97,15 @@ $button-color-map: (
     bg-hover: $base-primary-color,
     text-hover: $base-white-color,
     border-hover: $base-primary-color
+  ),
+
+  grey: (
+    bg: transparent,
+    text: $base-black-color,
+    border: $base-grey-light-color,
+    bg-hover: $base-grey-dark-color,
+    text-hover: $base-black-color,
+    border-hover: $base-grey-dark-color
   ),
 
   primary: (
@@ -138,6 +151,14 @@ $button-color-map: (
     bg-hover: $base-primary-color,
     text-hover: $base-white-color,
     border-hover: $base-primary-color
+  ),
+  white: (
+    bg: $base-primary-color,
+    text: $base-white-color,
+    border: $base-white-color,
+    bg-hover: $base-white-color,
+    text-hover: darken($base-primary-color,10%),
+    border-hover: $base-white-color
   )
 );
 

@@ -6,7 +6,7 @@
 
 html { // stylelint-disable-line selector-no-type
   //@include text-size(default);
-  font-size: 112.5%!important;
+  //font-size: 112.5%!important;
 }
 
 body { /* stylelint-disable-line selector-no-type */
@@ -26,4 +26,10 @@ body { /* stylelint-disable-line selector-no-type */
 figure {
   margin: 0!important;
 }
+
+
+.main-content {
+  min-height: calc(100vh - 393px)
+}
+
 

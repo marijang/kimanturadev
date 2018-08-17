@@ -15,36 +15,31 @@
  * @package 	WooCommerce/Templates
  * @version     2.3.0
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 wc_print_notices();
-
 do_action( 'woocommerce_before_checkout_form', $checkout );
-
 // If checkout registration is disabled and not logged in, the user cannot checkout
 if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_required() && ! is_user_logged_in() ) {
 	echo apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'woocommerce' ) );
 	return;
 }
-
 ?>
 
-<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+<form name="checkout" method="post" class="cart-checkout-navigation__form checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 	<!--ovo je tu prebačeno iz form-billinga -->
 	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
 
 	<h1 class="section__title"><?php _e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h1>
 
 	<?php else : ?>
-	        <header id="wc-multistep-details-title" class="section__header">
+	        <header id="wc-multistep-details-title" class="section__header cart-checkout-navigation__header">
 				<h1 class="section__title"><?php _e( 'Informacije o dostavi', 'woocommerce' ); ?></h1>
 				<p class="section__description checkout__desc"><?php _e( 'Popunite polja za dostavu', 'woocommerce' ); ?></p>
 			</header>
 			
-			<header id="wc-multistep-payment-title" style="display:none;" class="section__header">
+			<header id="wc-multistep-payment-title" style="display:none;" class="section__header cart-checkout-navigation__header">
 				<h1 class="section__title"><?php _e( 'Način plaćanja', 'woocommerce' ); ?></h1>
 				<p class="section__description checkout__desc"><?php _e( 'Odaberite metodu plaćanja', 'woocommerce' ); ?></p>
 			</header>
@@ -59,14 +54,35 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 			<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 			<?php do_action( 'woocommerce_checkout_billing' ); ?>
 			<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-			<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+			
 			<div class="checkout__btn">
-				<a href="#" id="proceed-to-payment" class="btn btn--primary-color"><?php _e( 'Nastavi na plaćanje', 'b4b' ); ?></a>
+				<a id="proceed-to-payment" class="btn btn--primary-color"><?php _e( 'Nastavi na plaćanje', 'b4b' ); ?></a>
 			</div>
 		</div>
 		<?php endif; ?>
 		<div id="payment-details" style="display:none" class="checkout__form">
-		    <?php do_action( 'b4b_woocommerce_checkout_payment' ); ?>
+			<?php do_action( 'b4b_woocommerce_checkout_payment' ); ?>
+			<div class="woocommerce-additional-fields">
+	<?php do_action( 'woocommerce_before_order_notes', $checkout ); ?>
+
+	<?php if ( apply_filters( 'woocommerce_enable_order_notes_field', 'yes' === get_option( 'woocommerce_enable_order_comments', 'yes' ) ) ) : ?>
+
+		<?php if ( ! WC()->cart->needs_shipping() || wc_ship_to_billing_address_only() ) : ?>
+
+			<h3><?php _e( 'Additional information', 'woocommerce' ); ?></h3>
+
+		<?php endif; ?>
+
+		<div class="woocommerce-additional-fields__field-wrapper">
+			<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
+				<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
+			<?php endforeach; ?>
+		</div>
+
+	<?php endif; ?>
+
+	<?php do_action( 'woocommerce_after_order_notes', $checkout ); ?>
+</div>	
 		</div>
 		<div class="checkout__review">
 			<div class="checkout__review-box">
@@ -79,6 +95,21 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		</div>
     </div><!-- End of checkout__Grid -->
 </form>
+<script>
+	 $('#proceed-to-payment').on('click',function(){
+     if (!$("form[name='checkout']").valid()) {
+     }else {
+         $('#payment-details,#wc-multistep-payment-title').show();
+         $('#customer-details,#wc-multistep-details-title').hide();
+         $('#wc-multistep-payment').addClass('is-active');
+         $('#wc-multistep-details').removeClass('is-active');
+         $('#wc-multistep-details').addClass('is-activated');
+	 }
+ });
 
+
+
+
+</script>
 	
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

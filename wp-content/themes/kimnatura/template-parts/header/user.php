@@ -18,7 +18,7 @@ if(!$current_user->firstname ){
 
 <ul id="site-header-cart" class="main-navigation main-navigation--secondary">
     <li class="main-navigation__item desktop-only">
-        <a href="" class="main-navigation__link">EN</a>
+       <!-- <a href="" class="main-navigation__link">EN</a> -->
     </li>
     <li class="main-navigation__item" id="eng">
         <a href="#" id="btn-search" class="main-navigation__link">
@@ -27,12 +27,12 @@ if(!$current_user->firstname ){
     </li>
     <li class="main-navigation__item desktop-only">
     <?php if(is_user_logged_in()):  ?>
-    <a href="/my-account" class="main-navigation__link is-logged-in">
+    <a href="/my-account/edit-account" class="main-navigation__link is-logged-in">
             <i class="material-icons">account_circle</i>
             <span class="main-navigation__user-info"><?php echo $name;  ?></span>
             </a>
     <?php else:  ?>
-    <a href="/my-account" class="main-navigation__link">
+    <a href="/my-account/edit-account" class="main-navigation__link">
     <i class="material-icons">account_circle</i>
     </a>
     <?php endif  ?>

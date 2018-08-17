@@ -11,9 +11,50 @@
 
 @include b('related-products'){
     .section__title{
-        transform: translateY(40vh);
-        opacity: 0;
-        transition: transform 1.5s cubic-bezier(0,0.7,0.1,1),opacity 1.5s cubic-bezier(0.5,0,0.2,1);
-        transition-delay: .5s;
+        @include media(desktop large){
+            transform: translateY(40vh);
+            opacity: 0;
+            transition: transform .2s cubic-bezier(0,0.7,0.1,1),opacity .2s cubic-bezier(0.5,0,0.2,1);
+            transition-delay: .2s;
+        }
+    }
+}
+
+.woocommerce-orders-table__header-order-number {
+    @include media(mobile){ 
+        display: none;
+     }
+}
+
+
+.woocommerce-orders-table__cell-order-number {
+    @include media(mobile){ 
+        display: none;
+     }
+}
+
+.woocommerce-orders-table__header-order-total {
+    @include media(mobile){ 
+        display: none;
+     }
+}
+
+.woocommerce-orders-table__cell-order-total {
+    @include media(mobile){ 
+        display: none;
+     }
+}
+
+.invoice {
+    @include media(mobile){ 
+        display: none;
+    }
+}
+
+
+.mobile-invoice {
+    display: none;
+    @include media(mobile){ 
+        display: initial;
     }
 }

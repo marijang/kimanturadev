@@ -1,3 +1,5 @@
+
+
 (function($){
     $('#payment').hide();
     var navigation = $('.cart-checkout-navigation');
@@ -8,6 +10,7 @@
     var prevstep = activestep.prev();
     var nextstep = activestep.next();
 
+    
     function init(){
         jQuery('input[name="payment_method"]:checked').parent().parent().addClass('is-active');
         var count = jQuery('input[name="payment_method"]').length;
@@ -24,11 +27,10 @@
     }
 
 
-
-
-    // hide payments
-  
-   // $('#customer_details').hide();
+    
+    $('body').on('updated_checkout',function(){
+        
+    });
 
     prevStepButton.on('click',function(e){
         activestep.removeClass('is-active');
@@ -52,35 +54,37 @@
         
     });
 
-    $('#wc-multistep-details').on('click',function(e){
-        $('#payment-details,#wc-multistep-payment-title').hide();
-        $('#customer-details,#wc-multistep-details-title').show();
-        $(this).addClass('is-active');
-        $('#wc-multistep-payment').removeClass('is-active');
 
-        e.preventDefault();
+
+
+
+    $('#wc-multistep-details').on('click',function(e){
+        if ($(this).hasClass('is-disabled')){
+           
+        }else{
+            $('#payment-details,#wc-multistep-payment-title').hide();
+            $('#customer-details,#wc-multistep-details-title').show();
+            $(this).addClass('is-active');
+            $('#wc-multistep-payment').removeClass('is-active');
+            e.preventDefault();
+        }
+        
     });
-    $('#proceed-to-payment').on('click',function(){
-        init();
-        $('#payment-details,#wc-multistep-payment-title').show();
-        $('#customer-details,#wc-multistep-details-title').hide();
-        $('#wc-multistep-payment').addClass('is-active');
-        $('#wc-multistep-details').removeClass('is-active');
-        $('#wc-multistep-details').addClass('is-activated');
-    })
+
+
+   
     
     $('body').on("init_payment_methods",function(o){
-        alert('to je to');
+  
         $('input[type="checkbox"]').addClass("filled-in");
        
     });
-   
- 
-   
-  
 
+ 
+    
 	
 })(jQuery);
+
 
 
 $(function() {
@@ -109,5 +113,72 @@ jQuery('body').on("update_checkout",function(o){
 
 init();
     jQuery('input[name="payment_method"]:checked').parent().addClass('is-active');
-	
+});
+
+
+
+
+
+
+$(document).ready(function(){
+$("form[name='checkout']").validate({
+     // Specify validation rules
+     rules: {
+       // The key name on the left side is the name attribute
+       // of an input field. Validation rules are defined
+       // on the right side
+       billing_first_name: "required",
+       billing_last_name: "required",
+       billing_email: {"required" : true, "email" : true },
+       billing_address_1: "required",
+       billing_city: "required",
+       billing_postcode: "required",
+       billing_phone : {
+        required: true,
+        number: true
+      } ,
+       shipping_first_name: {
+           required : '#ship-to-different-address-checkbox:checked'
+       },
+       shipping_last_name: {
+        required : '#ship-to-different-address-checkbox:checked'
+       },
+       shipping_address_1: {
+        required : '#ship-to-different-address-checkbox:checked'
+       },
+       shipping_city: {
+        required : '#ship-to-different-address-checkbox:checked'
+       },
+       shipping_postcode: {
+        required : '#ship-to-different-address-checkbox:checked'
+       }
+     },
+     // Specify validation error messages
+     messages: {
+       billing_first_name: "Ime je potrebno polje",
+       billing_last_name: "Prezime je potrebno polje",
+       billing_email: {"required" : "Email adresa je potrebno polje", "email" : "Email nije ispravnog formata" },
+       billing_address_1: "Adresa je potrebno polje",
+       billing_city: "Grad je potrebno polje",
+       billing_postcode: "Poštanski broj je potrebno polje",
+       billing_phone : {"required" : "Telefonski broj je potrebno polje","number" : "Telefonski broj mora biti numeričkog formata"},
+       shipping_first_name : "Ime je potrebno polje",
+       shipping_last_name : "Prezime je potrebno polje",
+       shipping_address_1 : "Adresa je potrebno polje",
+       shipping_city : "Grad je potrebno polje",
+       shipping_postcode : "Poštanski broj je potrebno polje"
+
+     },
+     errorPlacement: function(error, element) {
+         element.addClass('invalid');
+         var el = element.parent().find('.errorClass');
+         if (el.length)
+             el.attr('data-error', error.text());
+         else 
+             element.parent().parent().find('.errorClass').attr('data-error', error.text());
+       }
+   });
+
+   
+ 
 });

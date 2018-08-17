@@ -1,0 +1,32 @@
+@include b('woocommerce-message'){
+    @include container();
+    padding: $base-content-padding;
+    margin-bottom: $base-content-padding;
+    //margin-top: $base-content-padding;
+    text-align: center;
+    @include typi(small);
+    @include m('info'){
+        margin-bottom: $base-content-padding;
+    }
+    @include m('alert'){
+        color: #721c24;
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+        margin-bottom: $base-content-padding*2;
+    }
+    @include m('success'){
+        background: $base-primary-color;
+        color: $base-white-color;
+        margin-bottom: $base-content-padding;
+        
+        a{
+            color: $base-white-color;
+            font-weight: $base-font-weight-bold;
+            text-decoration: underline;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+
+}

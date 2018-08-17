@@ -9,33 +9,83 @@ $hero-content-dots-right:  $base-content-padding;
 // Colors
 $hero-content-dots-inactive-color: #3A4542;
 
-.animated{
+$hero-transition-duration: .2s;
+$hero-transition-duration-in: .9s;
+
+
+.hero__item.animated{
     @include media(desktop large){
         .hero__description,
         .hero__link{
-         opacity:1;
-         visibility: visible;
+           opacity:1;
+           visibility: visible;
+           transition-duration: $hero-transition-duration-in;
+        }
+        .hero__bg{
+            opacity: 1;
+        }
+        span.letter{
+            transform: translate3d(0,0,0);
+            opacity: 1;
         }
     }
 }
 
 @include block('hero'){
+     
+   @include e('slider-wrapper'){
+      //  margin-top: $base-content-padding;
+
+   }
+   @include e('slider-indicator'){
+       position: absolute;
+       display: none;
+       @include media(desktop large){
+           //skriveno zbog zahtjeva klijenta
+           display: none;
+           bottom: 132px;
+           left: 50%;
+           transform: translate(-50%);
+        }
+   }
+
+   
+
     @include element('item'){
         position: relative;
+        span.letter{
+            display: inline-block;
+            @include media(desktop large){
+                transform: translate3d(0,100%,0);
+                opacity: 0;
+                transition: all $hero-transition-duration ease-out;
+                position: relative;
+            }
+            
+        }
+        span.word{
+            overflow: hidden;
+            display: inline-block;
+            overflow: hidden;
+        }
        
     }
     @include element('bg'){
-        min-height: 560px;
+        min-height: 340px;
+        opacity: 1;
         @extend %bg-image;
-        @include media(mobile){
-            min-height: 500px;
-        }   
+        @include media(desktop large){
+            opacity: 0;
+            transition: $hero-transition-duration-in ease-in $hero-transition-duration;
+            min-height: 560px;
+        } 
     }
     @include element('slider-wrapper'){
-
+        position: relative;
         div.slick-active{
            .hero__bg{
                // animation: kenburns-bottom 5s ease-out both;
+               
            }
            .hero__content{
                
@@ -49,7 +99,7 @@ $hero-content-dots-inactive-color: #3A4542;
             opacity: 0.2;
             width: 6px;
             height: 6px;
-            border-radius: 3px;
+            border-radius: 0px;
             -webkit-transition: height 0.2s ease-in-out;
             transition: height 0.2s ease-in-out;
         }
@@ -58,6 +108,7 @@ $hero-content-dots-inactive-color: #3A4542;
             justify-content: center;
             min-height: 16px;
             align-items: flex-start;
+            margin: 0;
         }
          .slick-dots li button:hover
         ,.slick-dots.slick-active li button{
@@ -91,41 +142,89 @@ $hero-content-dots-inactive-color: #3A4542;
     @include element('title'){
         margin: 0;
         text-transform: uppercase;
+        @include media(mobile){
+            background-color: transparent;
+         }
     }
     @include element('description'){
         margin: 0;
-       
         margin-bottom: $base-content-padding;
-        transition: 1s ease-in 1.5s;
+        transition: 0 ease-in $hero-transition-duration;
+        padding: 16px;
+        background: $base-primary-color;
+
+        margin: 0 16px;
+        color: #fff;
+        opacity: .9;
         @include media(desktop large){
             opacity: 0;
+            padding: 0px;
+            background: none;
             visibility: hidden;
+            color: #000;
+            margin-bottom: $base-content-padding;
         }
+        @include media(mobile){
+            background-color: transparent;
+            color: $color-black;
+         }
     }
     @include element('link'){
-        transition: 1s ease-in 1.5s;
+        transition: $hero-transition-duration ease-in $hero-transition-duration;
+        text-align: center;
+        margin-top: $base-content-padding;
         @include media(desktop large){
             opacity: 0;
+            margin-top: 0;
+            text-align: left;
             visibility: hidden;
         }
     }
     @include element('content'){
-
-       
         z-index: 1;
         position: absolute;
-        top:$hero-content-top;
-        top: 0;
-        left:$hero-content-left;
-        left:0;
-        bottom:$hero-content-bottom;
-        right:$hero-content-right;
+        width: 100%;
+        top:16px;
+        left:0px;
+        @include media(mobile){
+            color:$color-black;
+            position: initial;
+            background-color: transparent;
+        }
+        
+        @include media(desktop large){
+            top:$hero-content-top;
+            top: $base-content-padding;
+            left:$hero-content-left;
+            left:0;
+            bottom:$hero-content-bottom;
+            right:$hero-content-right;
+            width: 42%;
+        }
 
         h2{
-            @include typi(huge);
+            @include media(mobile){
+                background-color: transparent;
+            }
+            @include typi(large);
             font-weight: 700;
             letter-spacing: 1px;
-            line-height: 1.2;
+            line-height: 1;
+            margin-bottom: 0px;
+            text-align: center;
+            margin: 0 16px;
+            background: $base-primary-color;
+            opacity: .9;
+            padding: 8px 0 0;
+            @include media(desktop large){
+                @include typi(huge);
+                line-height: 1.2;
+                text-align: left;
+                margin: 0;
+                opacity: 1;
+                padding: 0;
+                background: none;
+            }
         }
        // padding: $hero-content-padding;
         //width: 32%;
@@ -134,23 +233,26 @@ $hero-content-dots-inactive-color: #3A4542;
             font-style: italic;
             margin-bottom: $base-content-padding;
             display: block;
+            @include media(desktop large){
+            
+            }
         }
         p,div{
             //transform: translate3d(0,0,0);
-            font-size: 22px;
+            @include typi(small);
+            @include media(desktop large){
+                font-size: 22px;
+                margin: 0 0 20px;
+            }
+            
             line-height: 1.45;
-            margin: 0 0 20px;
+            
             font-weight: normal;
         }
      
-        width: 42%;
+       
         
-        @include media(mobile){
-            width: 50%;
-            top:20px;
-            left:20px;
-            @include typi(small);
-        }
+        
     }
     @include element('image'){
         width: 100%;
@@ -160,3 +262,85 @@ $hero-content-dots-inactive-color: #3A4542;
     
 }
 
+.scroll-indicator {
+	width: 12px;
+	margin: 0 auto;
+	position: relative;
+	opacity: .5;
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&::before {
+		width: 12px;
+		height: 12px;
+		border-radius: 0px;
+		border: 1px solid #000;
+		animation: dot 3s infinite ease-in-out;
+	}
+	&::after {
+		width: 7px;
+		height: 7px;
+		border-right: 1px solid #000;
+		border-bottom: 1px solid #000;
+		transform: rotate(45deg);
+		animation: arrow 3s infinite ease-in-out;
+		animation-delay: .75s;
+		opacity: .25;
+	}
+	& > div {
+		display: block;
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			margin: 5px auto;
+			border-radius: 0px;
+			border: 1px solid #000;
+			animation: dot 3s infinite ease-in-out;
+		}
+		&::before {
+			width: 8px;
+			height: 8px;
+			animation-delay: .25s;
+		}
+		&::after {
+			width: 6px;
+			height: 6px;
+			animation-delay: .5s;
+		}
+	}
+}
+
+@keyframes dot {
+	0% {
+		transform: scale(.75);
+		opacity: .25;
+	}
+	25% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(.75);
+		opacity: .25;
+	}
+}
+
+@keyframes arrow {
+	0% {
+		transform: scale(.75) rotate(45deg);
+		opacity: .25;
+	}
+	25% {
+		transform: scale(1) rotate(45deg);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(.75) rotate(45deg);
+		opacity: .25;
+	}
+}

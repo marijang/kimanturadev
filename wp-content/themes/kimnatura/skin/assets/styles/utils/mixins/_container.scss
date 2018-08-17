@@ -12,4 +12,10 @@
     padding-left: $base-content-padding;
     padding-right: $base-content-padding;
   }
+  @include media(tablet ipad){
+    //  max-width: auto!important;
+      max-width: auto;
+      padding-left: $base-content-padding;
+      padding-right: $base-content-padding;
+    }
 }

@@ -15,8 +15,9 @@ $sastojci-content-padding:    $base-content-padding*3;
 $sastojci-content-bg-color:   $base-primary-color;
 $sastojci-bg-margin:          0 100px 64px 0;
 $sastojci-bg-height:          580px;
+$sastojci-bg-height-small:          380px;
 
-$sastojci-navigation-bottom:  32px;
+$sastojci-navigation-bottom:  48px;
 
 
 $slick-font-path: "./fonts/" !default;
@@ -51,6 +52,7 @@ $slick-opacity-not-active: 0.25 !default;
             background-color:black;
             
         }
+        
     }
     .sastojci__bg{
         opacity: 1;
@@ -78,6 +80,11 @@ $slick-opacity-not-active: 0.25 !default;
         margin: $sastojci-bg-margin;
         position: relative;
         overflow: hidden;
+
+        @include media(ipad){
+            min-height: $sastojci-bg-height-small;
+        }
+
         @include media(mobile){
            margin:0;
            //height: 272px;
@@ -178,7 +185,8 @@ $slick-opacity-not-active: 0.25 !default;
             }
             @include media(mobile){
                 right: 56px;
-                top: auto;
+                //top: auto;
+                bottom: 16px;
                 transform: translateX(0%);
                // margin-right: $base-content-padding;
             }
@@ -266,7 +274,7 @@ $slick-opacity-not-active: 0.25 !default;
             padding: 16px;
             top:0;
             @include typi(small);
-            min-height: 280px;
+            min-height: 232px;
         }
         @include media(desktop large){
             opacity: 0;
@@ -275,6 +283,7 @@ $slick-opacity-not-active: 0.25 !default;
             animation-delay: 0s;
             transition: all 0s;
             transition: opacity .001s;
+            min-height: 320px;
         }
       
     }

@@ -1,4 +1,5 @@
-$cart-navigation-margin: $base-content-padding*3;
+$cart-navigation-margin: $base-content-padding*2;
+$cart-navigation-margin-bottom: $base-content-padding;
 $cart-navigation-margin-mobile: $base-content-padding;
 
 $cart-navigation-items-spacing-mobile: $base-content-padding;
@@ -12,8 +13,22 @@ $cart-navigation-item-mobile-size: $base-content-padding*2.5;
     display: flex;
     align-items: center;
     align-content: stretch; 
-    margin-bottom:$cart-navigation-margin;
+    margin-bottom:$cart-navigation-margin-bottom;
     margin-top: $cart-navigation-margin;
+    font-family: $base-font-family;
+
+    @include element('form'){
+
+        @include media(desktop large){
+         
+        }
+    }
+    @include element('header'){
+       // margin-top: $base-content-padding;
+        @include media(desktop large){
+            //margin-top: $base-content-padding*2;
+        }
+    }
 
     @include media(mobile){
         padding-left: $base-content-padding!important;
@@ -107,7 +122,7 @@ $cart-navigation-item-mobile-size: $base-content-padding*2.5;
            content:'keyboard_arrow_right';
            position: absolute;
            right: -48px;
-           top: 0;
+           top: 8px;
            padding: $base-content-padding;
 
            @include media(mobile){

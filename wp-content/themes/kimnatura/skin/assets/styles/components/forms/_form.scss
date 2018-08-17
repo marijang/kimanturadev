@@ -26,3 +26,14 @@ $label-req-color: $base-primary-color;
 .field {
   padding-bottom: $form-field-spacing;
 }
+
+
+@include b('helper-text') {
+  @include e('hide') {
+    display: none;
+  }
+}
+
+
+
+

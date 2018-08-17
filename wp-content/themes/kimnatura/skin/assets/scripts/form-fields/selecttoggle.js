@@ -1,4 +1,7 @@
 import $ from 'jquery';
+global.$ = global.jQuery = $;
+//import 'expose-loader?$!jquery';
+//import 'expose-loader?jQuery!jquery';
 
 //$(function() {
 $(document).ready(function(){

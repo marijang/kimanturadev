@@ -33,6 +33,7 @@ $woo = new Woo;
 		    $sort = array(
 				array('billing_first_name','billing_last_name'),
 				array('billing_email'),
+				array('billing_phone'),
 				array('billing_address_1','billing_country'),
 			
 				array('billing_city','billing_postcode')
@@ -116,3 +117,4 @@ $woo = new Woo;
 		<?php do_action( 'woocommerce_after_checkout_registration_form', $checkout ); ?>
 	</div>
 <?php endif; ?>
+

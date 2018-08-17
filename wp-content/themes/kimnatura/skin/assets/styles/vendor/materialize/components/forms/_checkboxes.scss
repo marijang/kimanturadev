@@ -17,9 +17,10 @@
     padding-left: 35px;
     cursor: pointer;
     display: inline-block;
-    height: 25px;
-    line-height: 25px;
-    font-size: 1rem;
+   // height: 25px;
+   // line-height: 25px;
+    //font-size: 1rem;
+   
     user-select: none;
   }
 
@@ -33,9 +34,9 @@
     width: 18px;
     height: 18px;
     z-index: 0;
-    border: 2px solid $radio-empty-color;
+    border: 1px solid $radio-empty-color;
     border-radius: 1px;
-    margin-top: 3px;
+    margin-top: 0px; //ex. 3px
     transition: .2s;
   }
 
@@ -65,8 +66,8 @@
     left: -5px;
     width: 12px;
     height: 22px;
-    border-top: 2px solid transparent;
-    border-left: 2px solid transparent;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
     border-right: $radio-border;
     border-bottom: $radio-border;
     transform: rotate(40deg);
@@ -75,8 +76,8 @@
   }
 
   &:disabled + span:before {
-    border-right: 2px solid $input-disabled-color;
-    border-bottom: 2px solid $input-disabled-color;
+    border-right: 1px solid $input-disabled-color;
+    border-bottom: 1px solid $input-disabled-color;
   }
 }
 
@@ -98,7 +99,7 @@
 
   // Disabled indeterminate
   &:disabled + span:not(.lever):before {
-    border-right: 2px solid $input-disabled-color;
+    border-right: 1px solid $input-disabled-color;
     background-color: transparent;
   }
 }
@@ -135,7 +136,7 @@
     height: 20px;
     width: 20px;
     background-color: transparent;
-    border: 2px solid $radio-empty-color;
+    border: 1px solid $radio-empty-color;
     top: 0px;
     z-index: 0;
   }
@@ -147,10 +148,10 @@
       left: 1px;
       width: 8px;
       height: 13px;
-      border-top: 2px solid transparent;
-      border-left: 2px solid transparent;
-      border-right: 2px solid $input-background;
-      border-bottom: 2px solid $input-background;
+      border-top: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-right: 1px solid $input-background;
+      border-bottom: 1px solid $input-background;
       transform: rotateZ(37deg);
       transform-origin: 100% 100%;
     }
@@ -159,7 +160,7 @@
       top: 0;
       width: 20px;
       height: 20px;
-      border: 2px solid $secondary-color;
+      border: 1px solid $secondary-color;
       background-color: $secondary-color;
       z-index: 0;
     }
@@ -198,3 +199,29 @@
     border-color: $input-disabled-solid-color;
   }
 }
+
+.checkbox__error {
+  color: $input-error-color!important;
+}
+
+@include b('checkbox') {
+  @include e('error') {
+    color: $input-error-color!important;
+
+    
+  }
+
+  @include e('error-label') {
+    min-height: 18px;
+    display: block;
+    font-size: 12px;
+    color: $input-error-color!important;
+    margin-left: 35px;
+    display: none;
+
+    @include m('active') {
+      display: block!important;
+    }
+    }
+}
+

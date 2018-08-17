@@ -5,6 +5,9 @@
  * @package Kimnatura\Template_Parts\Account
  */
 
+
+
+$cart_total = WC()->cart->get_displayed_subtotal();
 ?>
 <script>
 	jQuery( document ).ready(function() {
@@ -22,6 +25,9 @@
 		});
 	});
 </script>
+
+
+<?php if (is_user_logged_in() || (!is_user_logged_in() && strpos(home_url( $wp->request ), 'my-account') === false && strpos(home_url( $wp->request ), 'cart') === false)) : ?>
 <div class="navigation-user">
         <div class="navigation-user__wrap">
 	    <?php
@@ -45,20 +51,16 @@
 								$is_current_item = ' is-active"';
 							}*/
 							if (is_wc_endpoint_url( 'view-order' )){
-
 							}
 							if (is_wc_endpoint_url( 'edit-account' )){
-
 							}
 							
 							if (is_wc_endpoint_url( 'edit-address' )){
-
 							}							
 							//$endpoints = array('edit-account', 'edit-address','view-order' )
 						?>
 						<?php foreach ( $endpoints as $endpoint => $label ) : 
 								$is_current_item = '';
-
 								$classes = explode(' ',wc_get_account_menu_item_classes( $endpoint ));
 								//var_dump(wc_get_account_menu_item_classes( $endpoint ));
 								if(array_search('is-active', $classes) != 0)
@@ -86,13 +88,15 @@
 		<?php
 		} else {
 		?>
+		
 			<div class="navigation-user__login">
-        
-            <?php do_action('woocommerce_custom_login_form'); ?>
+				
+                 <?php do_action('woocommerce_custom_login_form'); ?>
             
 			</div>
 		<?php
 		}
 		?>
 		</div>
-        </div>
+		</div>
+	<?php endif ?>

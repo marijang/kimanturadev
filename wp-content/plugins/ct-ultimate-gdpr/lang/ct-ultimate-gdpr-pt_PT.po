@@ -1,0 +1,2919 @@
+# Copyright (C) 2018 Ultimate GDPR
+# This file is distributed under the same license as the Ultimate GDPR package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ultimate GDPR 1.6.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/ct-ultimate-gdpr\n"
+"POT-Creation-Date: 2018-06-27 09:30+0000\n"
+"PO-Revision-Date: 2018-06-27 17:52+0800\n"
+"Last-Translator: createit <j.modelo@createit.pl>\n"
+"Language-Team: Portuguese (Portugal)\n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.5\n"
+
+#: includes/helpers.php:105
+#, php-format
+msgid "To confirm, please follow this link: %s"
+msgstr "Para confirmar, por favor siga este link: %s"
+
+#: vendor/acf-fields.php:28
+msgid "Service name"
+msgstr "Serviços"
+
+#: vendor/acf-fields.php:40
+msgid "Script names"
+msgstr "Nomes de script"
+
+#: vendor/acf-fields.php:43
+msgid "Please input comma separated script names"
+msgstr "Por favor introduza os nomes dos scripts separados por vírgula"
+
+#: vendor/acf-fields.php:53 includes/shortcode/shortcode-privacy-policy.php:17
+msgid "Cookie names"
+msgstr "Consentimento de Cookies"
+
+#: vendor/acf-fields.php:56
+msgid "Please input comma separated cookie names"
+msgstr "Por favor introduza os nomes dos cookies separados por vírgula"
+
+#: vendor/acf-fields.php:66 includes/shortcode/shortcode-privacy-policy.php:20
+msgid "Type of cookie"
+msgstr "Tipo de cookie"
+
+#: vendor/acf-fields.php:76
+msgid "First or Third party?"
+msgstr "Primeiro ou Terceiro?"
+
+#: vendor/acf-fields.php:81 includes/shortcode/shortcode-privacy-policy.php:73
+msgid "First party"
+msgstr "Primeira festa"
+
+#: vendor/acf-fields.php:82 includes/shortcode/shortcode-privacy-policy.php:73
+msgid "Third party"
+msgstr "Terceiro"
+
+#: vendor/acf-fields.php:90
+msgid "Can be blocked?"
+msgstr "Pode ser bloqueado?"
+
+#: vendor/acf-fields.php:98
+msgid "Session or Persistent?"
+msgstr "Sessão ou Persistente?"
+
+#: vendor/acf-fields.php:104 includes/shortcode/shortcode-privacy-policy.php:84
+msgid "Session"
+msgstr "Sessão"
+
+#: vendor/acf-fields.php:105 includes/shortcode/shortcode-privacy-policy.php:84
+msgid "Persistent"
+msgstr "Persistente"
+
+#: vendor/acf-fields.php:113 includes/shortcode/shortcode-privacy-policy.php:32
+msgid "Expiry Time"
+msgstr "Tempo de expiração"
+
+#: vendor/acf-fields.php:126 includes/shortcode/shortcode-privacy-policy.php:35
+msgid "Purpose"
+msgstr "Objetivo"
+
+#: vendor/acf-fields.php:138
+msgid "Is active?"
+msgstr "Está ativo?"
+
+#: includes/views/cookie-popup.php:99 includes/views/cookie-group-popup.php:123
+#: includes/controller/controller-cookie.php:3066
+#: includes/views/shortcode/shortcode-policy-accept.php:55
+#: includes/views/shortcode/shortcode-terms-accept.php:55
+msgid "Accept"
+msgstr "Aceitar"
+
+#: includes/views/cookie-popup.php:107
+#: includes/views/cookie-group-popup.php:131
+#: includes/controller/controller-cookie.php:1120
+#: includes/controller/controller-cookie.php:3067
+msgid "Read more"
+msgstr "Ler mais"
+
+#: includes/views/cookie-group-popup-header-content.php:20
+msgid "Privacy settings"
+msgstr "Configurações de privacidade"
+
+#: includes/views/cookie-group-popup-header-content.php:22
+msgid "Decide which cookies you want to allow."
+msgstr "Decida quais os cookies que deseja permitir."
+
+#: includes/views/cookie-group-popup-header-content.php:23
+msgid ""
+"You can change these settings at any time. However, this can result in some "
+"functions no longer being available. For information on deleting the "
+"cookies, please consult your browser’s help function."
+msgstr ""
+"O utilizador pode alterar estas configurações em qualquer momento. No "
+"entanto, por vezes pode obter visualizações ou resultados indisponíveis. "
+"Para obter informações sobre como excluir os cookies, consulte a função de "
+"ajuda do seu navegador."
+
+#: includes/views/cookie-group-popup-header-content.php:24
+msgid "Learn more about the cookies we use."
+msgstr "SAIBA MAIS SOBRE OS COOKIES QUE USAMOS."
+
+#: includes/views/cookie-group-popup-header-content.php:26
+msgid "With the slider, you can enable or disable different types of cookies:"
+msgstr "Abaixo selecione uma das opções:"
+
+#: includes/views/cookie-group-popup.php:139
+#: includes/controller/controller-cookie.php:3068
+msgid "Change Settings"
+msgstr "Definições"
+
+#: includes/views/cookie-group-popup.php:190
+#: includes/views/cookie-group-popup.php:201
+msgid "Cookie Box Settings"
+msgstr "Configurações da caixa de cookies"
+
+#: includes/views/cookie-group-popup.php:196
+#: includes/controller/controller-cookie.php:3084
+msgid "Trigger"
+msgstr "Desencadear"
+
+#: includes/views/cookie-group-popup.php:306
+#: includes/views/cookie-group-popup.php:351
+#: includes/views/cookie-group-popup.php:371
+#: includes/views/cookie-group-popup.php:395
+#: includes/views/cookie-group-popup.php:439
+msgid "This website will:"
+msgstr "Este site irá:"
+
+#: includes/views/cookie-group-popup.php:326
+#: includes/views/cookie-group-popup.php:415
+#: includes/views/cookie-group-popup.php:460
+msgid "This website wont't:"
+msgstr "Este site não irá:"
+
+#: includes/views/cookie-group-popup.php:484
+msgid "Save & Close"
+msgstr "Guardar & Fechar"
+
+#: includes/controller/controller-forgotten.php:106
+#, php-format
+msgid "[Ultimate GDPR] New Right To Be Forgotten request from %s"
+msgstr "[Ultimate GDPR] Novo direito de ser esquecido pedido de%s"
+
+#: includes/controller/controller-forgotten.php:125
+#: includes/controller/controller-forgotten.php:344
+#, php-format
+msgid ""
+"There is a new Right To Be Forgotten request from email %s. See details at %s"
+msgstr ""
+"Há uma nova solicitação de direito a ser esquecido no email %s. Ver detalhes "
+"em %s"
+
+#: includes/controller/controller-forgotten.php:176
+#: includes/controller/controller-forgotten.php:177
+#: includes/views/admin/admin-forgotten.php:37
+#: includes/views/admin/admin-breach.php:30
+#: includes/views/admin/admin-data-access.php:41
+#: includes/views/admin/admin-rectification.php:41
+msgid "Right To Be Forgotten"
+msgstr "Direito de ser esquecido"
+
+#: includes/controller/controller-forgotten.php:219
+#: includes/controller/controller-rectification.php:181
+#: includes/controller/controller-data-access.php:166
+msgid "Recaptcha error!"
+msgstr "Recaptcha error!"
+
+#: includes/controller/controller-forgotten.php:253
+#, php-format
+msgid "[Ultimate GDPR] Please confirm request to be forgotten from %s"
+msgstr "[Ultimate GDPR] Por favor, confirme o pedido para ser esquecido de%s"
+
+#: includes/controller/controller-forgotten.php:259
+#: includes/controller/controller-rectification.php:208
+#: includes/controller/controller-data-access.php:190
+msgid "Your request was sent!"
+msgstr "Sua solicitação já foi enviada!"
+
+#: includes/controller/controller-forgotten.php:303
+#: includes/controller/controller-rectification.php:96
+msgid "Your request was already confirmed."
+msgstr "Sua solicitação já foi confirmada."
+
+#: includes/controller/controller-forgotten.php:328
+#: includes/controller/controller-rectification.php:121
+msgid "Your request was successfully confirmed."
+msgstr "Sua solicitação foi confirmada com sucesso."
+
+#: includes/controller/controller-forgotten.php:365
+#: includes/controller/controller-rectification.php:161
+msgid "Your request was not confirmed. Please check the link or contact admin."
+msgstr ""
+"Sua solicitação não foi confirmada. Por favor, verifique o link ou entre em "
+"contato com o administrador."
+
+#: includes/controller/controller-forgotten.php:481
+#, php-format
+msgid "[Ultimate GDPR] Emails were sent to the following users: %s"
+msgstr ""
+"[Ultimate GDPR] Os e-mails foram enviados para os seguintes utilizadores:%s"
+
+#: includes/controller/controller-forgotten.php:519
+#, php-format
+msgid "[Ultimate GDPR] The following emails were removed from list: %s"
+msgstr "[Ultimate GDPR] Os seguintes emails foram removidos da lista:%s"
+
+#: includes/controller/controller-forgotten.php:550
+#, php-format
+msgid "Non existing service id: %s"
+msgstr "ID de serviço não existente:%s"
+
+#: includes/controller/controller-forgotten.php:570
+#, php-format
+msgid "There was an error forgetting %s service: %s"
+msgstr "Ocorreu um erro ao esquecer o %s serviço: %s"
+
+#: includes/controller/controller-forgotten.php:595
+msgid "[Ultimate GDPR] Services data were removed"
+msgstr "[Ultimate GDPR] Os dados dos serviços foram removidos"
+
+#: includes/controller/controller-forgotten.php:613
+msgid "Right to be forgotten settings"
+msgstr "Configurações do direito a ser esquecido"
+
+#: includes/controller/controller-forgotten.php:623
+msgid "Admin email to send new request notifications to"
+msgstr "Email admin para enviar notificações de novas solicitações para"
+
+#: includes/controller/controller-forgotten.php:631
+msgid "User notification email subject"
+msgstr "Assunto da notificação de E-mail"
+
+#: includes/controller/controller-forgotten.php:639
+msgid "User notification email message"
+msgstr "Mensagem de e-mail de notificação de utilizador"
+
+#: includes/controller/controller-forgotten.php:647
+#: includes/controller/controller-rectification.php:549
+msgid ""
+"Set custom URL to the page containing Ultimate GDPR shortcode as the e-mail "
+"confirmation target page (or leave empty for autodetect)"
+msgstr ""
+"Defina o URL personalizado para a página que contém o shortcode do Ultimate "
+"GDPR como a página de destino de confirmação de e-mail (ou deixe em branco "
+"para autodetectar)"
+
+#: includes/controller/controller-forgotten.php:731
+#: includes/controller/controller-forgotten.php:732
+msgid "[Ultimate GDPR] Your data has been forgotten"
+msgstr "[Ultimate GDPR] Seus dados foram apagados"
+
+#: includes/controller/controller-plugins.php:135
+#: includes/controller/controller-plugins.php:136
+msgid "Plugins"
+msgstr "Plugins"
+
+#: includes/controller/controller-policy.php:20
+#: includes/controller/controller-policy.php:21
+#: includes/controller/controller-policy.php:45
+#: includes/controller/controller-policy.php:818
+#: includes/views/admin/admin-policy.php:32
+#: includes/views/admin/admin-terms.php:33
+msgid "Privacy Policy"
+msgstr "Política de Privacidade"
+
+#: includes/controller/controller-policy.php:54
+#: includes/controller/controller-terms.php:388
+#: includes/controller/controller-pseudonymization.php:154
+msgid "Instructions"
+msgstr "Instruções"
+
+#: includes/controller/controller-policy.php:65
+msgid "Require logged in users to accept Privacy Policy (redirect)"
+msgstr ""
+"Exigir que os utilizadores logados aceitem a política de privacidade "
+"(redirecionamento)"
+
+#: includes/controller/controller-policy.php:73
+msgid "Require not logged in users/guests to accept Privacy Policy (redirect)"
+msgstr ""
+"Exigir que os utilizadores não logados aceitem a política de privacidade "
+"(redireccionamento)"
+
+#: includes/controller/controller-policy.php:81
+msgid "WordPress Privacy Policy page"
+msgstr "Política de Privacidade"
+
+#: includes/controller/controller-policy.php:89
+msgid "Page with existing Privacy Policy"
+msgstr "Página com a Política de Privacidade existente"
+
+#: includes/controller/controller-policy.php:97
+msgid "Privacy Policy Custom URL"
+msgstr "Política de Privacidade URL"
+
+#: includes/controller/controller-policy.php:105
+msgid "Page to redirect to after Privacy Policy accepted"
+msgstr "Página para redirecionar após a Política de Privacidade aceita"
+
+#: includes/controller/controller-policy.php:113
+#: includes/controller/controller-terms.php:431
+msgid "Shortcode Button Styling"
+msgstr "Estilo do botão de código de acesso"
+
+#: includes/controller/controller-policy.php:121
+#: includes/controller/controller-terms.php:439
+#: includes/controller/controller-cookie.php:1295
+msgid "Set consent expire time [s]"
+msgstr "Tempo de expiração de Consentimento [s]"
+
+#: includes/controller/controller-policy.php:129
+msgid ""
+"Privacy Policy version, eg. 1.0 (if you change it, user has to give consent "
+"again)"
+msgstr ""
+"Versão de política de privacidade, por exemplo. 1.0 (se alterar, o "
+"utilizador terá de autorizar novamente)"
+
+#: includes/controller/controller-policy.php:137
+msgid ""
+"Redirect to Privacy Policy first (if Terms and Conditions also redirect)"
+msgstr ""
+"Redirecionar para a política de privacidade primeiro (se os termos e "
+"condições também redirecionam)"
+
+#: includes/controller/controller-policy.php:145
+msgid ""
+"Convert the following text to Privacy Policy link in all services templates, "
+"eg. 'Privacy Policy'"
+msgstr ""
+"Converta o seguinte texto no link da Política de Privacidade em todos os "
+"modelos de serviços, por exemplo. 'Política de Privacidade'"
+
+#: includes/controller/controller-policy.php:153
+#: includes/controller/controller-terms.php:463
+msgid ""
+"Do not block user agents (eg. bots) containing the following texts (comma "
+"separated)"
+msgstr ""
+"Não bloqueie agentes de usuário (por exemplo, bots) contendo os seguintes "
+"textos (separados por vírgula)"
+
+#: includes/controller/controller-policy.php:201
+#, php-format
+msgid ""
+"1. Place %s shortcode on your existing Privacy Policy page to add an accept "
+"button.%s2. Select Privacy Policy page below, so users can be redirected "
+"there to give their consent."
+msgstr ""
+"1. Coloque o shortcode %s na página de política de privacidade existente "
+"para adicionar um button.%s2. aceitar. Selecione a página política de "
+"privacidade abaixo, para que os utilizadores possam ser redirecionados e dar "
+"o seu consentimento."
+
+#: includes/controller/controller-policy.php:280
+#: includes/controller/controller-terms.php:146
+#, php-format
+msgid ""
+"user id: %d \n"
+"consent version: %s \n"
+"consent given: %s \n"
+"consent expires: %s \n"
+"\n"
+msgstr ""
+"id do usuário: %d\n"
+"versão de consentimento: %s\n"
+"consentimento dado: %s\n"
+"o consentimento expira: %s\n"
+
+#: includes/controller/controller-policy.php:637
+msgid "WordPress Privacy page"
+msgstr "Página de privacidade do WordPress"
+
+#: includes/controller/controller-policy.php:693
+#: includes/controller/controller-terms.php:661
+msgid "Last visited page"
+msgstr "Última página visitada"
+
+#: includes/controller/controller-policy.php:694
+#: includes/controller/controller-terms.php:662
+msgid "Don't redirect"
+msgstr "Não redirecionar"
+
+#: includes/controller/controller-policy.php:720
+#: includes/controller/controller-terms.php:584
+msgid "Theme Default"
+msgstr "Tema padrão"
+
+#: includes/controller/controller-policy.php:721
+#: includes/controller/controller-terms.php:585
+msgid "Cookie box buttons"
+msgstr "Botões de caixa de biscoito"
+
+#: includes/controller/controller-services.php:72
+#: includes/controller/controller-services.php:73
+#: includes/controller/controller-services.php:253
+#: includes/controller/controller-services.php:269
+msgid "Services"
+msgstr "Serviços"
+
+#: includes/controller/controller-services.php:89
+#: includes/controller/controller-services.php:96
+#: includes/controller/controller-services.php:103
+msgid "Services options"
+msgstr "Opções de Serviços"
+
+#: includes/controller/controller-services.php:114
+msgid "Recaptcha key (for myaccount shortcode submissions)"
+msgstr "Chave Recaptcha (para submissões de shortcod de myaccount)"
+
+#: includes/controller/controller-services.php:122
+msgid "Recaptcha secret key (for myaccount shortcode submissions)"
+msgstr "Chave secreta Recaptcha (para submissões de shortcod de myaccount)"
+
+#: includes/controller/controller-services.php:251
+msgctxt "Post Type General Name"
+msgid "Services"
+msgstr "Serviços"
+
+#: includes/controller/controller-services.php:252
+msgctxt "Post Type Singular Name"
+msgid "Services"
+msgstr "Serviços"
+
+#: includes/controller/controller-services.php:254
+msgid "Parent Services"
+msgstr "Serviços para pais"
+
+#: includes/controller/controller-services.php:255
+msgid "All Services"
+msgstr "Todos os serviços"
+
+#: includes/controller/controller-services.php:256
+msgid "View Service"
+msgstr "Ver serviços"
+
+#: includes/controller/controller-services.php:257
+msgid "Add New Service"
+msgstr "Adicionar novo serviço"
+
+#: includes/controller/controller-services.php:258
+msgid "Add New"
+msgstr "Adicionar novo"
+
+#: includes/controller/controller-services.php:259
+msgid "Edit Service"
+msgstr "Editar serviço"
+
+#: includes/controller/controller-services.php:260
+msgid "Update Service"
+msgstr "Atualização Necessária"
+
+#: includes/controller/controller-services.php:261
+msgid "Search Services"
+msgstr "Pesquisar Serviços"
+
+#: includes/controller/controller-services.php:262
+msgid "Not Found"
+msgstr "Não encontrado"
+
+#: includes/controller/controller-services.php:263
+msgid "Not found in Trash"
+msgstr "Não encontrado no lixo"
+
+#: includes/controller/controller-services.php:268
+msgid "services"
+msgstr "serviços"
+
+#. Plugin Name of the plugin/theme
+#: includes/controller/controller-admin.php:193
+#: includes/controller/controller-admin.php:194
+#: includes/views/admin/admin-forgotten.php:30
+#: includes/views/admin/admin-cookie.php:21
+#: includes/views/admin/admin-pseudonymization.php:30
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:21
+#: includes/views/admin/admin-breach.php:21
+#: includes/views/admin/admin-policy.php:21
+#: includes/views/admin/admin-services.php:21
+#: includes/views/admin/admin-data-access.php:32
+#: includes/views/admin/admin-terms.php:22
+#: includes/views/admin/admin-rectification.php:32
+#: includes/views/admin/admin-plugins.php:21
+msgid "Ultimate GDPR"
+msgstr "Ultimate GDPR"
+
+#: includes/controller/controller-rectification.php:132
+#, php-format
+msgid "[Ultimate GDPR] New Data Rectification request from %s"
+msgstr "[Ultimate GDPR] Nova solicitação de retificação de dados de %s"
+
+#: includes/controller/controller-rectification.php:140
+#, php-format
+msgid ""
+"There is a new Data Rectification request from email %s. See details at %s"
+msgstr ""
+"Há uma nova solicitação de retificação de dados de e-mail %s. Ver detalhes "
+"em %s"
+
+#: includes/controller/controller-rectification.php:202
+#, php-format
+msgid "[Ultimate GDPR] Please confirm your data rectification request from %s"
+msgstr ""
+"[Ultimate GDPR] Por favor, confirme seu pedido de retificação de dados de %s"
+
+#: includes/controller/controller-rectification.php:311
+#: includes/controller/controller-data-access.php:300
+#, php-format
+msgid "Data was sent to email: %s"
+msgstr "Os dados foram enviados para os e-mail: %s"
+
+#: includes/controller/controller-rectification.php:350
+#: includes/controller/controller-data-access.php:339
+#, php-format
+msgid "The following emails were removed from the list: %s"
+msgstr "Os seguintes emails foram removidos da lista: %s"
+
+#: includes/controller/controller-rectification.php:479
+#: includes/controller/controller-rectification.php:480
+#: includes/views/admin/admin-forgotten.php:46
+#: includes/views/admin/admin-breach.php:39
+#: includes/views/admin/admin-data-access.php:50
+#: includes/views/admin/admin-rectification.php:50
+msgid "Data Rectification"
+msgstr "Retificação de dados"
+
+#: includes/controller/controller-rectification.php:515
+msgid "Data Rectification settings"
+msgstr "Configurações de retificação de dados"
+
+#: includes/controller/controller-rectification.php:525
+msgid "Email to send admin notifications to"
+msgstr "O endereço de e-mail para enviar notificações de admin"
+
+#: includes/controller/controller-rectification.php:533
+msgid "User mail title"
+msgstr "Título de correio de utilizador"
+
+#: includes/controller/controller-rectification.php:541
+msgid "User mail content"
+msgstr "Conteúdo do E-mail do utilizador"
+
+#: includes/controller/controller-rectification.php:635
+#, php-format
+msgid "[Ultimate GDPR] Data rectification notice from %s"
+msgstr "[Ultimate GDPR] Aviso de retificação de dados de %s"
+
+#: includes/controller/controller-rectification.php:636
+msgid "Your data has been rectified"
+msgstr "Os seus dados foram corrigidos"
+
+#: includes/controller/controller-data-access.php:160
+msgid "Wrong email!"
+msgstr "E-mail errado!"
+
+#: includes/controller/controller-data-access.php:179
+msgid "[Ultimate GDPR] New Data Access request"
+msgstr "[Ultimate GDPR] Nova solicitação de acesso a dados"
+
+#: includes/controller/controller-data-access.php:181
+#, php-format
+msgid "There is a new data access request from email %s. See details at %s"
+msgstr ""
+"Há uma nova solicitação de acesso a dados do e-mail%s. Veja detalhes em%s"
+
+#: includes/controller/controller-data-access.php:422
+#: includes/views/admin/admin-forgotten.php:132
+#: includes/views/admin/admin-data-access.php:97
+#: includes/views/admin/admin-rectification.php:95
+msgid "Not sent"
+msgstr "Não Enviada"
+
+#: includes/controller/controller-data-access.php:460
+#: includes/controller/controller-data-access.php:461
+#: includes/views/admin/admin-forgotten.php:40
+#: includes/views/admin/admin-breach.php:33
+#: includes/views/admin/admin-data-access.php:44
+#: includes/views/admin/admin-rectification.php:44
+msgid "Data Access"
+msgstr "Dados de acesso"
+
+#: includes/controller/controller-data-access.php:501
+msgid "Data access settings"
+msgstr "Configurações de Acesso"
+
+#: includes/controller/controller-data-access.php:511
+msgid "Email to send new request notifications to"
+msgstr "E-mail para enviar novas notificações de solicitações para"
+
+#: includes/controller/controller-data-access.php:519
+#: includes/controller/controller-breach.php:125
+msgid "Mail title"
+msgstr "Título do Email"
+
+#: includes/controller/controller-data-access.php:527
+#: includes/controller/controller-breach.php:133
+msgid "Mail content"
+msgstr "Conteúdo do e-mail"
+
+#: includes/controller/controller-data-access.php:601
+#, php-format
+msgid "[Ultimate GDPR] Data request results from %s"
+msgstr "[Ultimate GDPR] Os resultados da solicitação de dados de%s"
+
+#: includes/controller/controller-data-access.php:602
+msgid "Please find data attached"
+msgstr "Por favor, dados em anexo"
+
+#: includes/controller/controller-terms.php:167
+#: includes/controller/controller-terms.php:168
+msgid "Terms And Conditions"
+msgstr "Termos e Condições"
+
+#: includes/controller/controller-terms.php:379
+#: includes/controller/controller-terms.php:722
+#: includes/views/admin/admin-policy.php:29
+#: includes/views/admin/admin-terms.php:30
+msgid "Terms and Conditions"
+msgstr "Termos e Condições"
+
+#: includes/controller/controller-terms.php:399
+msgid "Require logged in users to accept Terms and Conditions (redirect)"
+msgstr ""
+"Exigir que os utilizadores logados aceitem os termos e condições "
+"(redirecionamento)"
+
+#: includes/controller/controller-terms.php:407
+msgid ""
+"Require not logged in users/guests to accept Terms and Conditions (redirect)"
+msgstr ""
+"Requerer que o utilizador sem sessão iniciada aceite os Termos e Condições "
+"(redirecionamento)"
+
+#: includes/controller/controller-terms.php:415
+msgid "Page with existing Terms and Conditions"
+msgstr "Página com os termos e condições existentes"
+
+#: includes/controller/controller-terms.php:423
+msgid "Page to redirect to after Terms accepted"
+msgstr "Página para redirecionar depois dos termos aceites"
+
+#: includes/controller/controller-terms.php:447
+msgid ""
+"Terms version, eg. 1.0 (if you change it, user has to give consent again)"
+msgstr ""
+"Termos versão, por exemplo. 1.0 (se mudar, o utilizador tem que dar o "
+"consentimento novamente)"
+
+#: includes/controller/controller-terms.php:455
+msgid ""
+"Convert the following text to Terms and Conditions link in all services "
+"templates, eg. 'Terms and Conditions'"
+msgstr ""
+"Converta o seguinte texto no link Termos e Condições em todos os modelos de "
+"serviços, por exemplo. 'Termos e Condições'"
+
+#: includes/controller/controller-terms.php:476
+#, php-format
+msgid ""
+"1. Place %s shortcode on your existing Terms and Conditions page to add an "
+"accept button.%s2. Select Terms and Conditions page below, so users can be "
+"redirected there to give their consent."
+msgstr ""
+"1. Coloque o shortcode %s na página de termos e condições existente para "
+"adicionar um botão.%s2 aceitar. Selecione a página termos e condições "
+"abaixo, assim os utilizadores podem ser redirecionados para dar o seu "
+"consentimento."
+
+#: includes/controller/controller-cookie.php:958
+#: includes/controller/controller-cookie.php:4490
+#, php-format
+msgid ""
+"<h3>Please navigate to <a href='%s'>Service Manager</a> tab to see all "
+"detected cookies.</h3>"
+msgstr ""
+"<h3>Por favor navegue para o <a href='%s'>Gestor de serviços</a> para ver "
+"todos os cookies detetados.</h3>"
+
+#: includes/controller/controller-cookie.php:1023
+#, php-format
+msgid ""
+"user id: %d \n"
+"consent level: %s \n"
+"consent given: %s \n"
+"consent expires: %s \n"
+"\n"
+msgstr ""
+"id do usuário: %d\n"
+"nível de consentimento: %s\n"
+"consentimento dado: %s\n"
+"o consentimento expira: %s\n"
+
+#: includes/controller/controller-cookie.php:1043
+#: includes/controller/controller-cookie.php:1044
+msgid "Cookie Consent"
+msgstr "Consentimento de Cookies"
+
+#: includes/controller/controller-cookie.php:1052
+#: includes/controller/controller-cookie.php:1053
+msgid "Services Manager"
+msgstr "Gestão de Serviços"
+
+#: includes/controller/controller-cookie.php:1075
+#: includes/controller/controller-cookie.php:1205
+msgid "Cookie popup content"
+msgstr "Conteúdo do aviso de cookie"
+
+#: includes/controller/controller-cookie.php:1082
+msgid "Buttons labels"
+msgstr "Etiquetas de botões"
+
+#: includes/controller/controller-cookie.php:1089
+msgid "Options"
+msgstr "Opções"
+
+#: includes/controller/controller-cookie.php:1096
+msgid "Google Analytics Tracking ID"
+msgstr "ID de acompanhamento do Google Analytics"
+
+#: includes/controller/controller-cookie.php:1106
+msgid "Cookie check"
+msgstr "Verificação de cookie"
+
+#: includes/controller/controller-cookie.php:1113
+msgid "Buttons styles"
+msgstr "Estilos de botões"
+
+#: includes/controller/controller-cookie.php:1127
+#: includes/controller/controller-cookie.php:1343
+msgid "Position"
+msgstr "Posição"
+
+#: includes/controller/controller-cookie.php:1134
+msgid "Box styles"
+msgstr "Estilos de caixa"
+
+#: includes/controller/controller-cookie.php:1141
+#: includes/controller/controller-cookie.php:1431
+msgid "Custom style CSS"
+msgstr "Código de estilo CSS personalizado"
+
+#: includes/controller/controller-cookie.php:1151
+msgid "Advanced Cookies Settings"
+msgstr "Configurações avançadas de cookies"
+
+#: includes/controller/controller-cookie.php:1159
+msgid "Trigger cookie"
+msgstr "Cookie de gatilho"
+
+#: includes/controller/controller-cookie.php:1166
+msgid "Lists of features"
+msgstr "Listas de recursos"
+
+#: includes/controller/controller-cookie.php:1173
+msgid "Modal styles"
+msgstr "Estilos modais"
+
+#: includes/controller/controller-cookie.php:1180
+msgid "Labels"
+msgstr "Rótulos"
+
+#: includes/controller/controller-cookie.php:1187
+msgid "Additional settings"
+msgstr "Configurações adicionais"
+
+#: includes/controller/controller-cookie.php:1197
+msgid ""
+"Fill in with default content for selected language (remember to save changes)"
+msgstr ""
+"Preencha com o conteúdo padrão para o idioma selecionado (lembre-se de "
+"guardas as alterações)"
+
+#: includes/controller/controller-cookie.php:1213
+msgid "Cookie popup 'accept' button label (leave empty for default)"
+msgstr "Aceitar o botão popup de Cookie (deixe em branco por padrão)"
+
+#: includes/controller/controller-cookie.php:1221
+msgid "Cookie popup 'read more' button label (leave empty for default)"
+msgstr "Cookie popup botão 'ler mais ' (deixe vazio por padrão)"
+
+#: includes/controller/controller-cookie.php:1229
+msgid "Cookie popup 'change settings' button label (leave empty for default)"
+msgstr ""
+"Botão de Cookie Pop-up de 'alterar configurações' (deixe vazio por padrão)"
+
+#: includes/controller/controller-cookie.php:1237
+msgid "Display cookie popup on all pages"
+msgstr "Exibir aviso de cookie em todas as páginas"
+
+#: includes/controller/controller-cookie.php:1245
+msgid "Check if user is from European Union"
+msgstr "Verificar se o utilizador é da União Europeia"
+
+#: includes/controller/controller-cookie.php:1253
+msgid "Select pages where to display the cookie popup"
+msgstr "Selecione as páginas onde exibir o pop-up do cookie"
+
+#: includes/controller/controller-cookie.php:1263
+msgid "Choose how often cookie check should be performed"
+msgstr "Escolha com que frequência a verificação de cookie deve ser executada"
+
+#: includes/controller/controller-cookie.php:1271
+msgid "Choose default level of new cookies"
+msgstr "Escolha o nível padrão de novos cookies"
+
+#: includes/controller/controller-cookie.php:1279
+msgid "Cookies whitelist (never block these cookies, comma separated)"
+msgstr ""
+"Lista de permissões de cookies (nunca bloqueie esses cookies, separados por "
+"vírgulas)"
+
+#: includes/controller/controller-cookie.php:1287
+msgid "Block selected/all cookies until user consents"
+msgstr "Bloquear todos os cookies, até o utilizador consentir"
+
+#: includes/controller/controller-cookie.php:1303
+#: includes/controller/controller-cookie.php:1391
+msgid "Button shape"
+msgstr "Forma do botão"
+
+#: includes/controller/controller-cookie.php:1311
+msgid "Button color"
+msgstr "Cor do botao"
+
+#: includes/controller/controller-cookie.php:1319
+#: includes/controller/controller-cookie.php:1423
+msgid "Button size"
+msgstr "Tamanho do botão"
+
+#: includes/controller/controller-cookie.php:1327
+msgid "Read more page"
+msgstr "Pagina de Ler mais"
+
+#: includes/controller/controller-cookie.php:1335
+msgid "Read More Custom URL"
+msgstr "Leia mais URL personalizado"
+
+#: includes/controller/controller-cookie.php:1351
+msgid "Distance from border [px]"
+msgstr "Distância da margem [px]"
+
+#: includes/controller/controller-cookie.php:1359
+msgid "Box style"
+msgstr "Estilo Caixa"
+
+#: includes/controller/controller-cookie.php:1367
+msgid "Box shape"
+msgstr "Forma da caixa"
+
+#: includes/controller/controller-cookie.php:1375
+msgid "Background color"
+msgstr "Cor de fundo"
+
+#: includes/controller/controller-cookie.php:1383
+msgid "Text color"
+msgstr "Cor básica do texto"
+
+#: includes/controller/controller-cookie.php:1399
+msgid "Button background color"
+msgstr "Cor de fundo do botão"
+
+#: includes/controller/controller-cookie.php:1407
+msgid "Button border color"
+msgstr "Cor da borda do botão"
+
+#: includes/controller/controller-cookie.php:1415
+msgid "Button text color"
+msgstr "Cor do texto do botão"
+
+#: includes/controller/controller-cookie.php:1443
+msgid "Trigger cookie settings by"
+msgstr "Acionar configurações de cookies por"
+
+#: includes/controller/controller-cookie.php:1451
+msgid "Trigger cookie settings icon"
+msgstr "Acionar o ícone de configurações de cookies"
+
+#: includes/controller/controller-cookie.php:1459
+msgid "Trigger cookie settings text"
+msgstr "Acionar o texto das configurações de cookies"
+
+#: includes/controller/controller-cookie.php:1467
+msgid "Trigger cookie settings background color"
+msgstr "Acionar a cor de fundo das configurações de cookies"
+
+#: includes/controller/controller-cookie.php:1475
+msgid "Trigger cookie settings shape"
+msgstr "Acionar a forma das configurações do cookie"
+
+#: includes/controller/controller-cookie.php:1483
+msgid "Trigger cookie settings position"
+msgstr "Acionar a posição das configurações de cookies"
+
+#: includes/controller/controller-cookie.php:1491
+msgid "Trigger cookie settings color"
+msgstr "Acionar a cor das configurações do cookie"
+
+#: includes/controller/controller-cookie.php:1502
+msgid "Show advanced cookie popup always, even when the consent is given"
+msgstr ""
+"Mostrar pop-up de cookie avançado sempre, evento quando o consentimento é "
+"dado"
+
+#: includes/controller/controller-cookie.php:1510
+msgid "Use advanced cookie groups popup"
+msgstr "Use pop-ups de grupos de cookie avançados"
+
+#: includes/controller/controller-cookie.php:1518
+msgid "Advanced cookie groups popup header content"
+msgstr "Use pop-ups de grupos de cookies avançados"
+
+#: includes/controller/controller-cookie.php:1528
+msgid "Cookie modal header color"
+msgstr "Cor do cabeçalho modal do cookie"
+
+#: includes/controller/controller-cookie.php:1536
+msgid "Cookie modal text color"
+msgstr "Cor do texto modal do cookie"
+
+#: includes/controller/controller-cookie.php:1546
+msgid "<i>This website will</i> label"
+msgstr "<i>Este site irá</i> Etiqueta"
+
+#: includes/controller/controller-cookie.php:1554
+msgid "<i>This website won't</i> label"
+msgstr "<i>Este site não será</i> etiqueta"
+
+#: includes/controller/controller-cookie.php:1562
+msgid "<i>Block all</i> label"
+msgstr "<i>Bloquear tudo</i>etiqueta"
+
+#: includes/controller/controller-cookie.php:1570
+msgid "<i>Essentials</i> label"
+msgstr "<i>Essentials</i> etiqueta"
+
+#: includes/controller/controller-cookie.php:1578
+msgid "<i>Functionality</i> label"
+msgstr "<i>Funcionalidade</i> etiqueta"
+
+#: includes/controller/controller-cookie.php:1586
+msgid "<i>Analytics</i> label"
+msgstr "<i>Analytics</i> etiqueta"
+
+#: includes/controller/controller-cookie.php:1594
+msgid "<i>Advertising</i> label"
+msgstr "<i>Publicidade</i> etiqueta"
+
+#: includes/controller/controller-cookie.php:1605
+msgid "List of features available for Essential level (semicolon separated)"
+msgstr ""
+"Lista de recursos disponíveis para o nível Essencial (separados por ponto-e-"
+"vírgula)"
+
+#: includes/controller/controller-cookie.php:1613
+msgid ""
+"List of features not available for Essential level (semicolon separated)"
+msgstr ""
+"Lista de recursos não disponíveis para o nível Essencial (separados por "
+"ponto-e-vírgula)"
+
+#: includes/controller/controller-cookie.php:1621
+msgid ""
+"List of features available for Functionality level (semicolon separated)"
+msgstr ""
+"Lista de recursos não disponíveis para o nível Essencial (separados por "
+"ponto-e-vírgula)..."
+
+#: includes/controller/controller-cookie.php:1629
+msgid ""
+"List of features not available for Functionality level (semicolon separated)"
+msgstr ""
+"Lista de recursos indisponíveis para o nível de funcionalidade (separada por "
+"ponto e vírgula)"
+
+#: includes/controller/controller-cookie.php:1637
+msgid "List of features available for Analytics level (semicolon separated)"
+msgstr ""
+"Lista de recursos disponíveis para o nível de estatística (separada por "
+"ponto e vírgula)"
+
+#: includes/controller/controller-cookie.php:1645
+msgid ""
+"List of features not available for Analytics level (semicolon separated)"
+msgstr ""
+"Lista de recursos indisponíveis para o nível de estatística (separada por "
+"ponto e vírgula)"
+
+#: includes/controller/controller-cookie.php:1653
+msgid "List of features available for Advertising level (semicolon separated)"
+msgstr ""
+"Lista de recursos disponíveis para o nível de publicidade (separada por "
+"ponto e vírgula)"
+
+#: includes/controller/controller-cookie.php:1661
+msgid ""
+"List of features not available for Advertising level (semicolon separated)"
+msgstr ""
+"Lista de recursos indisponíveis para o nível de publicidade (separada por "
+"ponto e vírgula)"
+
+#: includes/controller/controller-cookie.php:1671
+msgid ""
+"Advanced cookie popup 'save & close' button label (leave empty for default)"
+msgstr ""
+"Botão de Cookie Pop-up de 'Guardar e fechar' (deixe em branco por padrão)"
+
+#: includes/controller/controller-cookie.php:1679
+msgid "Select default privacy group"
+msgstr "Selecione o grupo de privacidade padrão"
+
+#: includes/controller/controller-cookie.php:1687
+msgid "Select privacy group after user accepts cookies in the popup"
+msgstr ""
+"Selecione o grupo de privacidade depois que o usuário aceitar cookies no pop-"
+"up"
+
+#: includes/controller/controller-cookie.php:1695
+msgid "Reload page when user saves changes"
+msgstr "Recarregar a página quando o usuário salva as alterações"
+
+#: includes/controller/controller-cookie.php:1776
+msgid "Never"
+msgstr "Nunca"
+
+#: includes/controller/controller-cookie.php:1777
+msgid "Weekly"
+msgstr "Semanalmente"
+
+#: includes/controller/controller-cookie.php:1778
+msgid "Monthly"
+msgstr "Mensalmente"
+
+#: includes/controller/controller-cookie.php:1779
+msgid "Quarterly"
+msgstr "Trimestral"
+
+#: includes/controller/controller-cookie.php:1834
+msgid "Load"
+msgstr "Carregar"
+
+#: includes/controller/controller-cookie.php:2053
+msgid "Classic"
+msgstr "Clássico"
+
+#: includes/controller/controller-cookie.php:2054
+msgid "Modern"
+msgstr "Moderno"
+
+#: includes/controller/controller-cookie.php:2083
+#: includes/controller/controller-cookie.php:2113
+#: includes/controller/controller-cookie.php:2986
+msgid "Rounded"
+msgstr "Arredondado"
+
+#: includes/controller/controller-cookie.php:2084
+#: includes/controller/controller-cookie.php:2114
+#: includes/controller/controller-cookie.php:2987
+msgid "Squared"
+msgstr "Quadrado"
+
+#: includes/controller/controller-cookie.php:2210
+msgid "Normal"
+msgstr "Normal"
+
+#: includes/controller/controller-cookie.php:2211
+msgid "Large"
+msgstr "Grande"
+
+#: includes/controller/controller-cookie.php:2752
+msgid "Front page"
+msgstr "Front page"
+
+#: includes/controller/controller-cookie.php:2755
+msgid "Posts page"
+msgstr "Página de artigos"
+
+#: includes/controller/controller-cookie.php:2780
+msgid "Bottom left"
+msgstr "Inferior Esquerdo"
+
+#: includes/controller/controller-cookie.php:2781
+msgid "Bottom right"
+msgstr "Inferior - direita"
+
+#: includes/controller/controller-cookie.php:2782
+msgid "Bottom panel"
+msgstr "Painel inferior"
+
+#: includes/controller/controller-cookie.php:2783
+msgid "Top left"
+msgstr "Superior esquerda"
+
+#: includes/controller/controller-cookie.php:2784
+msgid "Top right"
+msgstr "Superior direito"
+
+#: includes/controller/controller-cookie.php:2785
+msgid "Top panel"
+msgstr "Painel Topo"
+
+#: includes/controller/controller-cookie.php:2831
+msgid "Text Only"
+msgstr "Apenas texto"
+
+#: includes/controller/controller-cookie.php:2832
+msgid "Icon Only"
+msgstr "Apenas ícone"
+
+#: includes/controller/controller-cookie.php:2833
+msgid "Icon and Text"
+msgstr "Ícone e texto"
+
+#: includes/controller/controller-cookie.php:2913
+msgid "Top Left"
+msgstr "Superior esquerda"
+
+#: includes/controller/controller-cookie.php:2914
+msgid "Top center"
+msgstr "Superior esquerda"
+
+#: includes/controller/controller-cookie.php:2915
+msgid "Top Right"
+msgstr "Superior direito"
+
+#: includes/controller/controller-cookie.php:2916
+msgid "Center Left"
+msgstr "Centro Esquerda"
+
+#: includes/controller/controller-cookie.php:2917
+msgid "Center Right"
+msgstr "Centro Direito"
+
+#: includes/controller/controller-cookie.php:2918
+msgid "Bottom Left"
+msgstr "Inferior Esquerdo"
+
+#: includes/controller/controller-cookie.php:2919
+msgid "Bottom Center"
+msgstr "Inferior Esquerdo"
+
+#: includes/controller/controller-cookie.php:2920
+msgid "Bottom Right"
+msgstr "Inferior - direita"
+
+#: includes/controller/controller-cookie.php:2985
+msgid "Round"
+msgstr "Curvo"
+
+#: includes/controller/controller-cookie.php:3093
+#: includes/model/model-group.php:73 includes/model/model-group.php:91
+msgid "Block all"
+msgstr "Bloquear todos"
+
+#: includes/controller/controller-cookie.php:3094
+msgid "Essentials"
+msgstr "Essentials"
+
+#: includes/controller/controller-cookie.php:3095
+#: includes/model/model-group.php:55 includes/model/model-group.php:88
+msgid "Functionality"
+msgstr "Funcionalidade"
+
+#: includes/controller/controller-cookie.php:3096
+#: includes/model/model-group.php:61 includes/model/model-group.php:89
+msgid "Analytics"
+msgstr "Analytics"
+
+#: includes/controller/controller-cookie.php:3097
+#: includes/model/model-group.php:67 includes/model/model-group.php:90
+msgid "Advertising"
+msgstr "Publicidade"
+
+#: includes/controller/controller-cookie.php:4398
+msgid "Every week"
+msgstr "Semanalmente"
+
+#: includes/controller/controller-cookie.php:4402
+msgid "Every month"
+msgstr "Mensalmente"
+
+#: includes/controller/controller-cookie.php:4406
+msgid "Every quarter"
+msgstr "Todos os trimestres"
+
+#: includes/controller/controller-cookie.php:4477
+#, php-format
+msgid "Cookies detected: %s, Cookies saved: %s"
+msgstr "Cookies detectados: %s, Cookies salvos: %s"
+
+#: includes/controller/controller-cookie.php:4549
+msgid ""
+"There was a problem with connecting to the cookie scanner. Please try again "
+"later."
+msgstr ""
+"Houve um problema com a conexão ao scanner de cookies. Por favor, tente "
+"novamente mais tarde."
+
+#: includes/controller/controller-breach.php:87
+#: includes/controller/controller-breach.php:88
+#: includes/controller/controller-breach.php:116
+#: includes/views/admin/admin-forgotten.php:43
+#: includes/views/admin/admin-breach.php:36
+#: includes/views/admin/admin-data-access.php:47
+#: includes/views/admin/admin-rectification.php:47
+msgid "Data Breach"
+msgstr "Violação de dados"
+
+#: includes/controller/controller-breach.php:141
+msgid "Collect user emails from services"
+msgstr "Recolher e-mails do utilizador de serviços"
+
+#: includes/controller/controller-breach.php:212
+#, php-format
+msgid "[Ultimate GDPR] Data breach information from %s"
+msgstr "[Ultimate GDPR] Informações de violação de dados de %s"
+
+#: includes/controller/controller-breach.php:215
+msgid "There was a data breach on our page..."
+msgstr "Houve uma violação de dados em nossa página..."
+
+#: includes/controller/controller-pseudonymization.php:110
+#: includes/controller/controller-pseudonymization.php:111
+#: includes/controller/controller-pseudonymization.php:134
+msgid "Pseudonymization"
+msgstr "Encriptação"
+
+#: includes/controller/controller-pseudonymization.php:125
+#: includes/controller/controller-pseudonymization.php:264
+msgid "Encryption is not possible. Please check your openssl library."
+msgstr ""
+"Criptografia não é possível. Por favor, verifique a biblioteca openssl."
+
+#: includes/controller/controller-pseudonymization.php:143
+msgid "Warning"
+msgstr "Aviso"
+
+#: includes/controller/controller-pseudonymization.php:165
+msgid "Automatically encrypt new data"
+msgstr "Automaticamente criptografar novos dados"
+
+#: includes/controller/controller-pseudonymization.php:173
+msgid ""
+"Automatically decrypt all data on the fly (if you have anything encrypted, "
+"this is recommended)"
+msgstr ""
+"Descriptografar automaticamente todos os dados em tempo real (se tiver algo "
+"criptografado, isso é recomendado)"
+
+#: includes/controller/controller-pseudonymization.php:181
+msgid "Select data to encrypt"
+msgstr "Selecione os dados para criptografar"
+
+#: includes/controller/controller-pseudonymization.php:229
+msgid ""
+"This feature is experimental and may lead to irreversible data lost! After "
+"encryption, it may be impossible for anyone to decrypt your data. "
+msgstr ""
+"Este recurso é experimental e pode levar a irreversíveis dados perdidos! "
+"Após a criptografia, pode ser impossível para qualquer um descriptografar os "
+"dados. "
+
+#: includes/controller/controller-pseudonymization.php:241
+msgid ""
+"Pseudonymization feature allows you to encrypt some of the data stored in "
+"the database. That way, if anyone got access to your database, the user's "
+"data would be pseudonymized. Database contents are permanently encrypted and "
+"can be decrypted on the fly when accessed by users. You can also permanently "
+"decrypt all your contents."
+msgstr ""
+"O recurso de pseudonimização permite criptografar alguns dados armazenados "
+"na base de dados. Dessa forma, se alguém tiver acesso à base de dados, os "
+"dados do utilizadores serão pseudonimizados. O conteúdo da base de dados é "
+"permanentemente criptografado e pode ser descriptografado em tempo real "
+"quando acedido pelos Utilizadores. Pode também descriptografar "
+"permanentemente todo oconteúdo."
+
+#: includes/controller/controller-pseudonymization.php:244
+msgid "How to use:"
+msgstr "Como usar:"
+
+#: includes/controller/controller-pseudonymization.php:246
+msgid "1. Make a backup"
+msgstr "1. Faça um backup"
+
+#: includes/controller/controller-pseudonymization.php:248
+msgid "2. Select which data to encrypt"
+msgstr "2. Selecione quais dados para criptografar"
+
+#: includes/controller/controller-pseudonymization.php:250
+msgid ""
+"3. (Optionally) Select 'automatically encrypt new data' for continuous "
+"encryption of all incoming data"
+msgstr ""
+"3. (opcionalmente), selecione 'automaticamente criptografar dados novos' "
+"para criptografia contínua de todos os dados de entrada"
+
+#: includes/controller/controller-pseudonymization.php:252
+msgid "4. Click 'Save changes'"
+msgstr "4. clique em 'guardar alterações'"
+
+#: includes/controller/controller-pseudonymization.php:254
+msgid ""
+"5. (Optionally) Click 'Encrypt selected' to encrypt all current data which "
+"has not been yet encrypted"
+msgstr ""
+"5. (opcional), clique em 'Encriptação' para criptografar todos os dados "
+"atuais que não foi ainda criptografados"
+
+#: includes/controller/controller-pseudonymization.php:278
+msgid "Data encrypted successfully"
+msgstr "Dados criptografados com sucesso"
+
+#: includes/controller/controller-pseudonymization.php:288
+msgid "Decryption is not possible. Please check your openssl library."
+msgstr "A descriptografia não é possível. Por favor, verifique o seu openssl."
+
+#: includes/controller/controller-pseudonymization.php:302
+msgid "Data decrypted successfully"
+msgstr "Dados descriptografados com sucesso"
+
+#: includes/shortcode/shortcode-privacy-policy.php:23
+msgid "First or Third party"
+msgstr "Primeiro ou Terceiro"
+
+#: includes/shortcode/shortcode-privacy-policy.php:26
+msgid "Can be blocked"
+msgstr "Pode ser bloqueado"
+
+#: includes/shortcode/shortcode-privacy-policy.php:29
+msgid "Session or Persistent"
+msgstr "Sessão ou Persistente"
+
+#: includes/service/service-quform.php:87
+#: includes/service/service-mailster.php:122
+#, php-format
+msgid "There were problems forgetting data for user: %s"
+msgstr "Ocorreram problemas ao esquecer os dados do usuário:% s"
+
+#: includes/service/service-quform.php:115
+#: includes/service/service-bbpress.php:162
+#: includes/service/service-eform.php:128
+#: includes/service/service-formidable-forms.php:135
+#: includes/service/service-contact-form-7.php:74
+#: includes/service/service-buddypress.php:334
+#: includes/service/service-mailster.php:150
+#, php-format
+msgid "[%s] Description"
+msgstr "[%s] Descrição"
+
+#: includes/service/service-quform.php:124
+#: includes/service/service-bbpress.php:170
+#: includes/service/service-eform.php:137
+#: includes/service/service-gravity-forms.php:105
+#: includes/service/service-arforms.php:138
+#: includes/service/service-events-manager.php:111
+#: includes/service/service-formidable-forms.php:144
+#: includes/service/service-contact-form-7.php:83
+#: includes/service/service-buddypress.php:342
+#, php-format
+msgid "[%s] Inject consent checkbox to all forms"
+msgstr "[%s] inserir checkbox de consentimento para todos os formulários"
+
+#: includes/service/service-quform.php:135
+#: includes/service/service-mailster.php:170
+#, php-format
+msgid "[%s] Inject consent checkbox as the first field instead of the last"
+msgstr ""
+"[%s] Injetar caixa de seleção de consentimento como o primeiro campo em vez "
+"do último"
+
+#: includes/service/service-quform.php:308
+msgid "Quform gathers data entered by users in forms"
+msgstr "Quform reúne dados inseridos por utilizadores em formulários"
+
+#: includes/service/service-bbpress.php:186
+#: includes/service/service-buddypress.php:352
+#, php-format
+msgid ""
+"[%s] Enter the existing user's email whom the posts will be reassigned to "
+"(or leave empty to delete them when forgetting)"
+msgstr ""
+"[%s] Digite o e-mail do utilizador, a quem os artigos vão ser atribuídos (ou "
+"deixe em branco para excluí-los quando fizer apagamento)"
+
+#: includes/service/service-bbpress.php:253
+msgid "bbPress gathers users activity in forums"
+msgstr "bbPress reúne atividade de usuários em fóruns"
+
+#: includes/service/service-bbpress.php:284
+msgid "<strong>ERROR</strong>: Please consent to storage fo your data"
+msgstr ""
+"<strong> ERRO </ strong>: Por favor, consintar o armazenamento dos seus dados"
+
+#: includes/service/service-wp-job-manager.php:50
+#, php-format
+msgid "Could not delete posts for user: %s"
+msgstr "Não foi possível excluir as postagens do usuário:  %s"
+
+#: includes/service/service-wp-job-manager.php:78
+msgid "[WP Job Manager] Description"
+msgstr "[WP Job Manager] Descrição"
+
+#: includes/service/service-wp-user.php:35
+#: includes/service/service-wp-user.php:79
+msgid "WP User Data"
+msgstr "Dados de Utilizador"
+
+#: includes/service/service-wp-user.php:61
+#: includes/service/service-buddypress.php:111
+#, php-format
+msgid "Could not delete user data for user: %s"
+msgstr "Não foi possível excluir dados do utilizador: %s"
+
+#: includes/service/service-wp-user.php:95
+msgid "[WP User Data] Description"
+msgstr "[WP User Data] Descrição"
+
+#: includes/service/service-wp-user.php:103
+msgid "[WP User Data] Pseudonymize first and last name"
+msgstr "[WP User Data] Pseudônimo nome e sobrenome"
+
+#: includes/service/service-wp-user.php:119
+msgid "[WP User] Inject consent checkbox to User network signup form fields"
+msgstr "[WP User] Inserir checkbox de consentimento para campos de comentários"
+
+#: includes/service/service-wp-user.php:127
+msgid "[WP User] Inject consent checkbox to User register form fields"
+msgstr "[WP User] inserir checkbox de consentimento para pedidos de encomendas"
+
+#: includes/service/service-wp-user.php:135
+msgid "[WP User] Inject consent checkbox to lost password form fields"
+msgstr "[WP User] inserir checkbox de consentimento para pedidos de encomendas"
+
+#: includes/service/service-wp-user.php:295
+#: includes/service/service-wp-user.php:315
+#: includes/service/service-wp-user.php:335
+#: includes/service/service-woocommerce.php:403
+msgid "Consent is required"
+msgstr "O consentimento é obrigatório"
+
+#: includes/service/service-wp-user.php:388
+msgid "WordPress user data stored as user meta data in database"
+msgstr ""
+"Dados de utilizador armazenados como metadados do utilizador na base de dados"
+
+#: includes/service/service-wordfence.php:70
+#, php-format
+msgid ""
+"[%s] Block Wordfence cookies when a user doesn't accept Functionality cookies"
+msgstr ""
+"[%s] Bloquear cookies do Wordfence quando o usuário não aceita cookies de "
+"funcionalidade"
+
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:159
+msgid "[WP Simple Paypal Shopping Cart] Pseudonymize user order data"
+msgstr ""
+"[WP Simple Paypal Shopping Cart] Pseudonimiza os dados do pedido do usuário"
+
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:242
+msgid "WP Simple Paypal Shopping Cart gathers consumer orders data"
+msgstr "WP Simple Paypal Shopping Cart reúne dados de pedidos do consumidor"
+
+#: includes/service/service-youtube.php:100
+msgid "[Youtube] Remove youtube iframes until Necessary cookies accepted"
+msgstr ""
+"[Youtube] Remover o youtube iframes até os cookies necessários sejam aceites"
+
+#: includes/service/service-youtube.php:135
+msgid "Youtube creates cookies"
+msgstr "Youtube cria cookies"
+
+#: includes/service/service-facebook-pixel.php:101
+#, php-format
+msgid ""
+"[%s] Block Facebook Pixel cookies when a user doesn't accept Advertising "
+"cookies"
+msgstr ""
+"[%s] Bloquear cookies de pixel do Facebook quando o utilizador não aceita "
+"cookies de publicidade"
+
+#: includes/service/service-wp-posts.php:29
+msgid "WordPress Posts"
+msgstr "Postagens do WordPress"
+
+#: includes/service/service-wp-posts.php:82
+#, php-format
+msgid "Could not update post data for posts: %s"
+msgstr "Não foi possível atualizar dados de artigos: %s"
+
+#: includes/service/service-wp-posts.php:100
+msgid "[WP Posts] Delete posts instead of reassigning to a different user?"
+msgstr ""
+"[WP Posts] Excluir mensagens em vez de reatribuir a utilizador diferente?"
+
+#: includes/service/service-wp-posts.php:116
+msgid "[WordPress Posts] Description"
+msgstr "[WordPress Posts] Descrição"
+
+#: includes/service/service-wp-posts.php:124
+msgid ""
+"[WP Posts] Enter the user email whom the posts will be reassigned to "
+"(default is admin)"
+msgstr ""
+"[WP Posts] Digite o e-mail do utilizador a quem as publicações serão "
+"reatribuídas (o padrão é admin)"
+
+#: includes/service/service-wp-posts.php:182
+msgid "WordPress posts author data"
+msgstr "Envia de dados por parte do autor"
+
+#: includes/service/service-eform.php:233
+msgid "eForm gathers data entered by users in forms"
+msgstr "eForm reúne dados inseridos por usuários em formulários"
+
+#: includes/service/service-mailchimp.php:76
+msgid "[Mailchimp] Description"
+msgstr "[Mailchimp] Descrição"
+
+#: includes/service/service-mailchimp.php:84
+msgid "[Mailchimp] Inject consent checkbox to order fields"
+msgstr "[Mailchimp] Inserir checkbox de consentimento para solicitar campos"
+
+#: includes/service/service-mailchimp.php:92
+msgid ""
+"[Mailchimp] Inject consent checkbox as the first field instead of the last"
+msgstr ""
+"[Mailchimp] inserir checkbox de consentimento no primeiro campo em vez do "
+"último"
+
+#: includes/service/service-mailchimp.php:177
+msgid "Consent is mandatory to proceed"
+msgstr "O consentimento é obrigatório para prosseguir"
+
+#: includes/service/service-mailchimp.php:187
+msgid "Mailchimp gathers data entered by users in forms"
+msgstr "Mailchimp reúne dados inseridos pelos utilizadores em formulários"
+
+#: includes/service/service-gravity-forms.php:96
+msgid "[Gravity Forms] Description"
+msgstr "[Gravity Forms] Descrição"
+
+#: includes/service/service-gravity-forms.php:115
+msgid ""
+"[Gravity Forms] Inject consent checkbox as the first field instead of the "
+"last"
+msgstr ""
+"[Gravity Forms] inserir checkbox de consentimento no primeiro campo em vez "
+"do último"
+
+#: includes/service/service-gravity-forms.php:123
+msgid "Gravity Forms"
+msgstr "Gravity Forms"
+
+#: includes/service/service-gravity-forms.php:253
+#: includes/service/service-gravity-forms.php:254
+#: includes/views/admin/admin-plugins.php:94
+#: includes/views/admin/admin-plugins.php:112
+msgid "Yes"
+msgstr "Sim"
+
+#: includes/service/service-gravity-forms.php:308
+msgid "Gravity forms gathers data entered by users in forms"
+msgstr ""
+"Gravity forms reúne os dados inseridos pelos utilizadores em formulários"
+
+#: includes/service/service-arforms.php:129
+msgid "[ARForms] Description"
+msgstr "[ARForms] Descrição"
+
+#: includes/service/service-arforms.php:148
+msgid "ARForms"
+msgstr "ARForms"
+
+#: includes/service/service-arforms.php:260
+msgid "ARForms gathers data entered by users in forms"
+msgstr "ARForms reúne dados inseridos por usuários em formulários"
+
+#: includes/service/service-woocommerce.php:74
+#: includes/service/service-woocommerce.php:149
+#: includes/service/service-woocommerce.php:181
+msgid "WooCommerce"
+msgstr "WooCommerce - Finalizar Pedido"
+
+#: includes/service/service-woocommerce.php:157
+msgid "[WooCommerce] Description"
+msgstr "[WooCommerce] Descrição"
+
+#: includes/service/service-woocommerce.php:165
+msgid "[WooCommerce] Inject consent checkbox to order fields"
+msgstr ""
+"[WooCommerce] inserir checkbox de consentimento para pedidos de encomendas"
+
+#: includes/service/service-woocommerce.php:173
+msgid "[WooCommerce] Inject consent checkbox to account forms"
+msgstr ""
+"[WooCommerce] inserir checkbox de consentimento para pedidos de encomendas"
+
+#: includes/service/service-woocommerce.php:189
+msgid "[WooCommerce] Pseudonymize first and last name"
+msgstr "[WooCommerce] Pseudônimo nome e apelido"
+
+#: includes/service/service-woocommerce.php:197
+msgid "[WooCommerce] Pseudonymize address information"
+msgstr "[WooCommerce] Pseudonimiza informações de endereço"
+
+#: includes/service/service-woocommerce.php:205
+msgid "[WooCommerce] Pseudonymize billing email"
+msgstr "[WooCommerce] Pseudônimo de email de facturação"
+
+#: includes/service/service-woocommerce.php:386
+#: includes/service/service-events-manager.php:171
+#: includes/service/service-formidable-forms.php:246
+msgid "Consent"
+msgstr "Consentimento"
+
+#: includes/service/service-woocommerce.php:488
+msgid "WooCommerce gathers data entered by users in shop orders"
+msgstr ""
+"WooCommerce reúne dados inseridos pelos utilizadores em encomendas da loja"
+
+#: includes/service/service-events-manager.php:102
+msgid "[Events Manager] Description"
+msgstr "[Events Manager] Descrição"
+
+#: includes/service/service-events-manager.php:170
+#, php-format
+msgid "%s is required."
+msgstr "%s é obrigatório."
+
+#: includes/service/service-events-manager.php:185
+msgid "Events Manager gathers data entered by users in booking order forms"
+msgstr ""
+"Events Manager reúne os dados inseridos pelos utilizadores nos formulários "
+"de pedidos de reserva"
+
+#: includes/service/service-formidable-forms.php:154
+msgid ""
+"[Formidable Forms] Inject consent checkbox as the first field instead of the "
+"last"
+msgstr ""
+"[Formidable Forms] inserir checkbox de consentimento no primeiro campo em "
+"vez do último"
+
+#: includes/service/service-formidable-forms.php:222
+#: includes/service/service-formidable-forms.php:265
+msgid "This field is required"
+msgstr "Este campo é obrigatório"
+
+#: includes/service/service-formidable-forms.php:311
+msgid "Formidable Forms gathers data entered by users in forms"
+msgstr ""
+"Formidable Forms reúne os dados inseridos pelos utilizadores em formulários"
+
+#: includes/service/service-addthis.php:93
+#, php-format
+msgid ""
+"[%s] Block Addthis cookies when a user doesn't accept Functionality cookies"
+msgstr ""
+"[%s] Block Addthis cookies quando o utilizador não aceita cookies "
+"Funcionalidade"
+
+#: includes/service/service-contact-form-7.php:93
+msgid ""
+"[Contact Form 7] Inject consent checkbox as the first field instead of the "
+"last"
+msgstr ""
+"[Contact Form 7] inserir checkbox de consentimento no primeiro campo em vez "
+"do último"
+
+#: includes/service/service-contact-form-7.php:169
+msgid "Contact Form 7 gathers data entered by users in forms"
+msgstr "Contact Form 7 reúne dados inseridos por utilizadores em formulários"
+
+#: includes/service/service-buddypress.php:147
+#: includes/service/service-buddypress.php:159
+#: includes/service/service-buddypress.php:171
+#: includes/service/service-buddypress.php:183
+#: includes/service/service-buddypress.php:195
+#: includes/service/service-buddypress.php:218
+#: includes/service/service-buddypress.php:229
+#: includes/service/service-buddypress.php:240
+#: includes/service/service-buddypress.php:251
+#: includes/service/service-buddypress.php:262
+#, php-format
+msgid "Could not reassign user data for user: %s"
+msgstr "Não foi possível transferir os dados entre utilizadores: %s"
+
+#: includes/service/service-buddypress.php:420
+msgid "BuddyPress gathers users activity in profile pages and groups"
+msgstr ""
+"BuddyPress reúne a atividade dos utilizadores em pagina de grupo e perfil"
+
+#: includes/service/service-mailster.php:159
+#, php-format
+msgid "[%s] Inject consent checkbox to subscribe forms"
+msgstr "[%s] Injetar checkbox de consentimento para assinar formulários"
+
+#: includes/service/service-mailster.php:181
+#, php-format
+msgid "[%s] Inject consent checkbox to unsubscribe forms"
+msgstr ""
+"[%s] Informe a caixa de seleção de consentimento para cancelar a inscrição "
+"de formulários"
+
+#: includes/service/service-mailster.php:192
+msgid "Mailster"
+msgstr "Mailster"
+
+#: includes/service/service-mailster.php:389
+msgid "Consent is missing"
+msgstr "Consentimento está faltando"
+
+#: includes/service/service-mailster.php:400
+msgid "Mailster collects signed in user data"
+msgstr "Recolha de dados do utilizador"
+
+#: includes/service/service-wp-comments.php:40
+msgid "WP Comments"
+msgstr "Comentários do WP"
+
+#: includes/service/service-wp-comments.php:71
+msgid "Anonymous"
+msgstr "Anónimo"
+
+#: includes/service/service-wp-comments.php:83
+#, php-format
+msgid "Could not update comment data for comments: %s"
+msgstr "Não foi possível atualizar dados de comentários: %s"
+
+#: includes/service/service-wp-comments.php:109
+msgid "[WP Comments] Description"
+msgstr "[WP Comments] Descrição"
+
+#: includes/service/service-wp-comments.php:117
+msgid "[WP Comments] Inject consent checkbox to comments fields"
+msgstr ""
+"[WP Comments] Inserir checkbox de consentimento para campos de comentários"
+
+#: includes/service/service-wp-comments.php:179
+msgid "Please give consent to collect your data"
+msgstr "Por favor, dê o consentimento para a recolha de dados"
+
+#: includes/service/service-wp-comments.php:188
+msgid "WordPress Comments are data entered by users in comments"
+msgstr "Comentários são dados inseridos pelos utilizadores nos comentários"
+
+#: includes/model/model-group.php:48 includes/model/model-group.php:87
+msgid "Essential"
+msgstr "Base"
+
+#: vendor/optimus-prime-plugin-update/class-ct-optimus-prime-plugin-update.php:94
+msgid "Downloading update..."
+msgstr "Baixando atualização…"
+
+#: vendor/optimus-prime-plugin-update/class-ct-optimus-prime-plugin-update.php:134
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2641
+#: includes/views/admin/admin-plugins.php:42
+msgid "Plugin"
+msgstr "Plugin"
+
+#: vendor/optimus-prime-plugin-update/class-ct-optimus-prime-plugin-update.php:230
+msgid "Could not get new version info from OP"
+msgstr "Não foi possível obter informações da nova versão do OP"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:337
+msgid "Install Required Plugins"
+msgstr "Instalar Plugins Necessários"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:338
+msgid "Install Plugins"
+msgstr "Instalar Plugins"
+
+#. translators: %s: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:340
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Instalando Plugin: %s"
+
+#. translators: %s: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:342
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr "Atualizando Plugin %s"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:343
+msgid "Something went wrong with the plugin API."
+msgstr "Algo correu mal com o plugin API."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:344
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Este tema requer o seguinte plugin: %1$s."
+msgstr[1] "Este tema requer os seguintes plugins: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:350
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Este tema recomenda o seguinte plugin: %1$s."
+msgstr[1] "Este tema recomenda os seguintes plugins: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:356
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+"O plug-in a seguir precisa ser atualizado para sua versão mais recente para "
+"garantir compatibilidade máxima com este tema: %1$s."
+msgstr[1] ""
+"O plug-in a seguir precisa ser atualizado para sua versão mais recente para "
+"garantir compatibilidade máxima com este tema: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:362
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "Existe uma atualização disponível para: %1$s."
+msgstr[1] "Há atualizações disponíveis para os seguintes plug-ins: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:368
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "O plug-in requerido a seguir está inativo no momento: %1$s."
+msgstr[1] "Os seguintes plugins necessários estão inativos no momento: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:374
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "O seguinte plugin recomendado está inativo no momento: %1$s."
+msgstr[1] "Os seguintes plugins recomendados estão inativos no momento: %1$s."
+
+#. translators: 1: plugin name(s).
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:380
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Comece a instalar o plugin"
+msgstr[1] "Comece a instalar plugins"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:385
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "Comece a atualizar o plugin"
+msgstr[1] "Comece a atualizar os plugins"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:390
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Comece a ativar o plugin"
+msgstr[1] "Comece a ativar o plugin"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:395
+msgid "Return to Required Plugins Installer"
+msgstr "Regressar ao Instalador de Plugins Necessários"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:396
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:919
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3675
+msgid "Return to the Dashboard"
+msgstr "Regressar ao Painel"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:397
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3254
+msgid "Plugin activated successfully."
+msgstr "Plugin ativado com sucesso."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:398
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3047
+msgid "The following plugin was activated successfully:"
+msgstr "O plugin seguinte foi ativado com sucesso:"
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:400
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "Nenhuma ação tomada. O plugin %1$s já estava ativo."
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+"Plugin não ativado. Uma versão superior de %1$s é necessária para este tema. "
+"Por favor atualize o plugin."
+
+#. translators: 1: dashboard link.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:404
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Todos os plugins estão instalados e ativados com sucesso. %1$s"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:405
+msgid "Dismiss this notice"
+msgstr "Ignorar o aviso"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:406
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+"Existe um ou mais plugins requeridos ou recomendados para instalar, "
+"atualizar ou ativar."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:407
+msgid "Please contact the administrator of this site for help."
+msgstr "Por favor contate o administrador deste site para ser ajudado."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:610
+#: vendor/optimus-prime-plugin-update/settings.php:80
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+"O plugin necessita de ser atualizado para ser compatível com o seu tema."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:611
+#: vendor/optimus-prime-plugin-update/settings.php:81
+msgid "Update Required"
+msgstr "Atualização Necessária"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:728
+msgid "Set the parent_slug config variable instead."
+msgstr "Defina a variável de configuração parent_slug em vez disso."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:922
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1053
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2627
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3678
+msgid "Return to Dashboard"
+msgstr "Regressar ao Painel"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1026
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+"O pacote de plugin remoto não contém uma pasta com o slug necessário e a "
+"renomeação não funcione."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1026
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1029
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+"Por favor contate o fornecedor do plugin e pergunte-lhes para fazer um "
+"pacote com os seus plugins para estar de acordo com as diretrizes do "
+"WordPress."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1029
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+"O pacote de plugin remoto consiste em mais de um ficheiro, mas os ficheiros "
+"não estão organizados num ficheiro."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1213
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3043
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "e"
+
+#. translators: %s: version number
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2076
+#, php-format
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2367
+msgid "Required"
+msgstr "Requerido"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2370
+msgid "Recommended"
+msgstr "Recomendado"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2386
+msgid "WordPress Repository"
+msgstr "Repositário WordPess"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2389
+msgid "External Source"
+msgstr "Fonte Externa"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2392
+msgid "Pre-Packaged"
+msgstr "Pré-Embalado"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2409
+msgid "Not Installed"
+msgstr "Não Instalado"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2413
+msgid "Installed But Not Activated"
+msgstr "Instalado Mas Não Ativado"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2415
+msgid "Active"
+msgstr "Ativo"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2421
+msgid "Required Update not Available"
+msgstr "Atualização Requerida não Disponível"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2424
+msgid "Requires Update"
+msgstr "Necessita de Atualização"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2427
+msgid "Update recommended"
+msgstr "Atualização recomendada"
+
+#. translators: 1: install status, 2: update status
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2436
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2482
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "Todo <span class=\"count\">(%s)</span>"
+msgstr[1] "Todo <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2486
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] "Para Instalar <span class=\"count\">(%s)</span>"
+msgstr[1] "Para Instalar <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2490
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] "Atualização disponível <span class=\"count\">(%s)</span>"
+msgstr[1] "Atualização disponível  <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2494
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] "Para Ativar <span class=\"count\">(%s)</span>"
+msgstr[1] "Para Ativar <span class=\"count\">(%s)</span>"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2576
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "desconhecido"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2584
+msgid "Installed version:"
+msgstr "Versão Instalada:"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2592
+msgid "Minimum required version:"
+msgstr "Versão mínima necessária:"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2604
+msgid "Available version:"
+msgstr "Versão disponível:"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2642
+msgid "Source"
+msgstr "Fonte"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2643
+msgid "Type"
+msgstr "Tipo"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2647
+msgid "Version"
+msgstr "Versão"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2648
+msgid "Status"
+msgstr "Estado"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2697
+#, php-format
+msgid "Install %2$s"
+msgstr "Instalar %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2702
+#, php-format
+msgid "Update %2$s"
+msgstr "Atualizar %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2708
+#, php-format
+msgid "Activate %2$s"
+msgstr "Ativar %2$s"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2778
+msgid "Upgrade message from the plugin author:"
+msgstr "Atualizar mensagem do autor do plugin:"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2811
+msgid "Install"
+msgstr "Instalar"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2818
+msgid "Update"
+msgstr "Atualizar"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2821
+msgid "Activate"
+msgstr "Ativar"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "Nenhum plugin foi selecionado para ser instalado. Nenhuma ação tomada."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2854
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+"Nenhum pligon foi selecionado para ser atualizado. Nenhuma ação tomada."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be installed at this time."
+msgstr "Não existem plugins para serem instalados de momento."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2897
+msgid "No plugins are available to be updated at this time."
+msgstr "Nenhum plugin está disponível para ser atualizado de momento."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3003
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "Nenhum plugin foi selecionado para ser ativado. Nenhuma ação tomada."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3029
+msgid "No plugins are available to be activated at this time."
+msgstr "Nenhum plugin está disponível para ser ativado de momento."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3253
+msgid "Plugin activation failed."
+msgstr "Ativação do plugin falhada."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3593
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Atualizando Plugin %1$s (%2$d/%3$d)"
+
+#. translators: 1: plugin name, 2: error message.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3596
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Um erro ocorreu quando instalava %1$s: <strong>%2$s</strong>."
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3598
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "A instalação de %1$s falhou."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3602
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"A instalação e o processo de ativação estão a começar. Este processo pode "
+"demorar um pouco em alguns servidores, por isso seja paciente."
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3604
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s instalado e ativado com sucesso."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3605
+msgid "All installations and activations have been completed."
+msgstr "Todas as instalações e ativações foram completadas."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3607
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalando e Ativando o Plugin %1$s (%2$d/%3$d)"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3610
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"O processo de instalação está a começar. Este processo pode demorar um pouco "
+"em alguns servidores, como tal seja por favor paciente."
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3612
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s instalado com sucesso."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3613
+msgid "All installations have been completed."
+msgstr "Todas as instalações foram completadas."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3615
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalando Plugin %1$s (%2$d/%3$d)"
+
+#: includes/views/admin/admin-breach-send.php:17
+msgid "Emails were sent."
+msgstr "E-mails foram enviados."
+
+#: includes/views/admin/admin-breach-send.php:25
+msgid "You will send emails to the following emails:"
+msgstr "Você vai enviar e-mails para os seguintes e-mails:"
+
+#: includes/views/admin/admin-breach-send.php:40
+msgid "Send"
+msgstr "Enviar"
+
+#: includes/views/admin/admin-forgotten.php:31
+#: includes/views/admin/admin-cookie.php:22
+#: includes/views/admin/admin-pseudonymization.php:31
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:22
+#: includes/views/admin/admin-breach.php:22
+#: includes/views/admin/admin-policy.php:22
+#: includes/views/admin/admin-services.php:22
+#: includes/views/admin/admin-data-access.php:33
+#: includes/views/admin/admin-terms.php:23
+#: includes/views/admin/admin-rectification.php:33
+#: includes/views/admin/admin-plugins.php:22
+msgid "Settings"
+msgstr "Configurações"
+
+#: includes/views/admin/admin-forgotten.php:65
+msgid "Right To Be Forgotten request list"
+msgstr "Lista de pedidos para eliminação"
+
+#: includes/views/admin/admin-forgotten.php:70
+#: includes/views/admin/admin-data-access.php:76
+#: includes/views/admin/admin-rectification.php:74
+msgid "User ID"
+msgstr "ID do utilizador"
+
+#: includes/views/admin/admin-forgotten.php:71
+#: includes/views/admin/admin-data-access.php:77
+#: includes/views/admin/admin-rectification.php:75
+msgid "Email"
+msgstr "Email"
+
+#: includes/views/admin/admin-forgotten.php:72
+msgid "Services to forget (user selected)"
+msgstr "Serviços para esquecer (utilizador selecionado)"
+
+#: includes/views/admin/admin-forgotten.php:73
+#: includes/views/admin/admin-data-access.php:78
+#: includes/views/admin/admin-rectification.php:76
+msgid "Date of request"
+msgstr "Data da solicitação"
+
+#: includes/views/admin/admin-forgotten.php:74
+msgid "Date of mail sent"
+msgstr "Data do email enviado"
+
+#: includes/views/admin/admin-forgotten.php:75
+msgid "Email user / remove request"
+msgstr "Utilizador de e-mail / remover solicitação"
+
+#: includes/views/admin/admin-forgotten.php:88
+#: includes/views/admin/admin-data-access.php:94
+#: includes/views/admin/admin-rectification.php:92
+msgid "Not registered"
+msgstr "Não registado"
+
+#: includes/views/admin/admin-forgotten.php:95
+msgid "Select all"
+msgstr "Selecionar todos"
+
+#: includes/views/admin/admin-forgotten.php:114
+#, php-format
+msgid "Forgotten at %s"
+msgstr "Esquecido em %s"
+
+#: includes/views/admin/admin-forgotten.php:151
+msgid "Forget and notify selected users"
+msgstr "Esqueça e notifique os utilizadores selecionados"
+
+#: includes/views/admin/admin-forgotten.php:153
+#: includes/views/admin/admin-data-access.php:126
+#: includes/views/admin/admin-rectification.php:124
+msgid "Remove selected requests from list"
+msgstr "Remover utilizadores da lista de solicitações"
+
+#: includes/views/admin/admin-forgotten.php:155
+#: includes/views/admin/admin-data-access.php:128
+#: includes/views/admin/admin-rectification.php:126
+msgid "Remove all sent requests from list"
+msgstr "Remover lista de solicitações de apagamento"
+
+#: includes/views/admin/admin-cookie.php:57
+msgid "Cookie popup"
+msgstr "Cookie popup"
+
+#: includes/views/admin/admin-cookie.php:60
+msgid "Preferences"
+msgstr "Preferências"
+
+#: includes/views/admin/admin-cookie.php:63
+msgid "Advanced settings"
+msgstr "Configurações avançadas"
+
+#: includes/views/admin/admin-cookie.php:79
+msgid "Press 'Save changes' before downloading logs if you changed any options"
+msgstr ""
+"Pressione 'Salvar alterações' antes de baixar os registros, caso tenha "
+"alterado alguma opção"
+
+#: includes/views/admin/admin-cookie.php:90
+#: includes/views/admin/admin-policy.php:58
+#: includes/views/admin/admin-terms.php:59
+msgid "Download consents log"
+msgstr "Log de consentimentos"
+
+#: includes/views/admin/admin-cookie.php:96
+msgid "Detect cookies"
+msgstr "Detectar Cookies"
+
+#: includes/views/admin/admin-cookie.php:99
+msgid ""
+"Your website should be publicly accessible so that the Cookie Detector can "
+"work properly."
+msgstr ""
+"O seu site deve estar acessível á publicidade para que o detetor de cookies "
+"possa funcionar."
+
+#: includes/views/admin/admin-cookie.php:107
+msgid "Close"
+msgstr "Fechar"
+
+#: includes/views/admin/admin-cookie.php:109
+msgid "Cookies Scanner"
+msgstr "Scanner de Cookies"
+
+#: includes/views/admin/admin-cookie.php:111
+msgid "Our busy bees are searching for cookies on:"
+msgstr "Nossas abelhas ocupadas estão procurando cookies em:"
+
+#: includes/views/admin/admin-cookie.php:111
+msgid "posts and pages"
+msgstr "posts e páginas"
+
+#: includes/views/admin/admin-cookie.php:119
+msgid "It can take up to few minutes. Thanks for your patience!"
+msgstr "Pode levar alguns minutos. Obrigado pela sua paciência!"
+
+#: includes/views/admin/admin-cookie.php:122
+msgid "We are currently scanning:"
+msgstr "No momento, estamos digitalizando:"
+
+#: includes/views/admin/admin-cookie.php:128
+msgid "Currently scanned URL:"
+msgstr "URL atualmente verificado:"
+
+#: includes/views/admin/admin-pseudonymization.php:47
+msgid ""
+"Press 'Save changes' before pressing encryption buttons if you changed any "
+"options"
+msgstr ""
+"Pressione 'guardar alterações' antes de pressionar botões de criptografia "
+"verifique se alterou algumas opções"
+
+#: includes/views/admin/admin-pseudonymization.php:58
+msgid "Encrypt selected"
+msgstr "Encriptar selecionado"
+
+#: includes/views/admin/admin-pseudonymization.php:60
+msgid "Decrypt selected"
+msgstr "Descriptografar selecionado"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:30
+#: includes/views/admin/admin-plugins.php:30
+msgid "Introduction"
+msgstr "Introdução"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:33
+#: includes/views/admin/admin-plugins.php:33
+msgid "Compatibility"
+msgstr "Compatibilidade"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:42
+msgid "The GDPR was approved and adopted by the EU Parliament in April 2016."
+msgstr "O GDPR foi aprovado e adotado pelo Parlamento da UE em abril de 2016."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:43
+msgid ""
+" The regulation will take effect after a two-year transition period and, "
+"unlike a Directive it does not require any enabling legislation to be passed "
+"by government; meaning it will be in force May 2018."
+msgstr ""
+" O regulamento entrará em vigor após um período de transição de dois anos e, "
+"ao contrário de uma diretiva, não exige que qualquer legislação de "
+"habilitação seja aprovada pelo governo; o que significa que estará em vigor "
+"em maio de 2018."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:47
+msgid ""
+"The GDPR not only applies to organisations located within the EU but it will "
+"also apply to organisations located outside of the EU if they offer goods or "
+"services to, or monitor the behaviour of, EU data subjects. It applies to "
+"all companies processing and holding the personal data of data subjects "
+"residing in the European Union, regardless of the company's location."
+msgstr ""
+"O GDPR aplica-se não só às organizações localizadas no seio da UE, mas "
+"também se aplicará às organizações localizadas fora da UE se oferecem "
+"mercadorias ou serviços, ou monitorar o comportamento, EU dos titulares dos "
+"dados. Ele se aplica a todas as empresas de processamento e mantendo os "
+"dados pessoais dos titulares dos dados que residem na União Europeia, "
+"independentemente da localização da empresa."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:52
+msgid ""
+"This plugin will create a form where users can request access to or deletion "
+"of their personal data, stored on\n"
+"                your website. It is also possible to:"
+msgstr ""
+"Este plugin irá criar um formulário onde os usuários podem solicitar acesso "
+"ou exclusão de seus dados pessoais, armazenados em\n"
+"                seu site. Também é possível:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:57
+msgid ""
+"create a custom cookie notice and block all cookies until cookie consent is "
+"given"
+msgstr ""
+"criar um aviso de cookie personalizado e bloquear todos os cookies, até que "
+"seja dado consentimento"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:58
+msgid ""
+"set up redirects for your Terms and Conditions and Privacy Policy pages "
+"until consent is given"
+msgstr ""
+"configurar redirecionamentos para seus termos e condições e política de "
+"privacidade de páginas até que o consentimento seja dado"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:59
+msgid ""
+"browse user requests for data access/deletion and set custom email "
+"notifications"
+msgstr ""
+"procure as solicitações do utilizador para acesso/exclusão de dados e "
+"definir notificações de e-mail personalizado"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:60
+msgid ""
+"send custom email informing about data breach to all users which left their "
+"email at your site"
+msgstr ""
+"enviar e-mail personalizado informando sobre a violação de dados para todos "
+"os utilizadores de e-mail registados no seu site"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:61
+msgid "automatically add consent boxes for various forms on your website"
+msgstr ""
+"adicione automaticamente caixas de consentimento para vários formulários no "
+"seu site"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:62
+msgid "pseudonymize some of user data stored in database"
+msgstr ""
+"alguns dos dados do utilizador armazenados na base de dados foram encriptados"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:63
+msgid "check currently activated plugins for GDPR compliance"
+msgstr "verifique os plugins atualmente ativados para conformidade com o GDPR"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:68
+msgid ""
+"To start, browse through settings. Then, create a new page with shortcode:"
+msgstr ""
+"Para começar, navegue pelas configurações. Em seguida, crie uma nova página "
+"com shortcode:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:68
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:86
+msgid "[ultimate_gdpr_myaccount]"
+msgstr "[ultimate_gdpr_myaccount]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:75
+msgid "Available Shortcodes"
+msgstr "Códigos de acesso disponíveis"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:82
+msgid "User Settings:"
+msgstr "Configurações do usuário:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:94
+msgid "Privacy Policy Button:"
+msgstr "Botão da Política de Privacidade:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:98
+msgid "[ultimate_gdpr_policy_accept]"
+msgstr "[ultimate_gdpr_policy_accept]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:106
+msgid "Terms and Conditions Button:"
+msgstr "Botão Termos e Condições:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:110
+msgid "[ultimate_gdpr_terms_accept]"
+msgstr "[ultimate_gdpr_terms_accept]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:118
+msgid "Cookie Popup Link:"
+msgstr "Link pop-up de cookie:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:122
+msgid "[ultimate_gdpr_cookie_popup]"
+msgstr "[ultimate_gdpr_cookie_popup]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:130
+msgid "Display Cookies List:"
+msgstr "Exibir lista de cookies:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:134
+msgid "[render_cookies_list]"
+msgstr "[render_cookies_list]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:146
+msgid "System requirements:"
+msgstr "Requisitos de sistema:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:153
+msgid "PHP Version:"
+msgstr "Versão do PHP:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:157
+msgid "7.2+"
+msgstr "7.2+"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:165
+msgid "Memory limit:"
+msgstr "Limite de memória:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:169
+msgid "64 MB"
+msgstr "64 MB"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:177
+msgid "Disk space:"
+msgstr "Espaço em disco:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:181
+msgid "10 MB"
+msgstr "10 MB"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:196
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:199
+msgid "Any questions?"
+msgstr "Alguma pergunta?"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+msgid "Please have a look at the"
+msgstr "Por favor, dê uma olhada no"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+msgid "Support forum"
+msgstr "Fórum de suporte"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+msgid "or ask your questions via e-mail"
+msgstr "ou faça suas perguntas por e-mail"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:201
+msgid "Link to our "
+msgstr "Link para o nosso "
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:201
+msgid "Documentation"
+msgstr "Documentação"
+
+#: includes/views/admin/admin-breach.php:56
+msgid "Press 'Save changes' before sending emails if you changed any options"
+msgstr ""
+"Pressione 'guardar alterações' antes de enviar e-mails verifique se alterou "
+"algumas opções"
+
+#: includes/views/admin/admin-breach.php:70
+msgid "Go to send emails screen"
+msgstr "Ir para ecran de envio de e-mails"
+
+#: includes/views/admin/admin-policy.php:47
+#: includes/views/admin/admin-terms.php:48
+msgid ""
+"Press \"Save changes\" before downloading logs if you changed any options"
+msgstr ""
+"Pressione \"Salvar alterações\" antes de baixar os registros se você alterou "
+"alguma opção"
+
+#: includes/views/admin/admin-data-access-user-details.php:16
+#, php-format
+msgid "Collected data for user: %s"
+msgstr "Dados recolhidos para o utilizador: %s"
+
+#: includes/views/admin/admin-data-access-user-details.php:20
+#: includes/views/admin/admin-data-access-user-details.php:34
+#: includes/views/admin/admin-rectification-user-details.php:34
+msgid "Go back"
+msgstr "Volte"
+
+#: includes/views/admin/admin-data-access-user-details.php:26
+msgid "No data collected for this service"
+msgstr "Nenhum dado foi recolhido para este serviço"
+
+#: includes/views/admin/admin-data-access.php:71
+msgid "Data access requests list"
+msgstr "Lista de solicitações de acesso a dados"
+
+#: includes/views/admin/admin-data-access.php:79
+#: includes/views/admin/admin-rectification.php:77
+msgid "Date of data sent"
+msgstr "Dados enviados"
+
+#: includes/views/admin/admin-data-access.php:80
+#: includes/views/admin/admin-rectification.php:78
+msgid "Select for action"
+msgstr "Selecione para ação"
+
+#: includes/views/admin/admin-data-access.php:81
+#: includes/views/admin/admin-rectification.php:79
+msgid "See details"
+msgstr "Ver detalhes"
+
+#: includes/views/admin/admin-data-access.php:105
+msgid "Preview data"
+msgstr "Pré-visualização"
+
+#: includes/views/admin/admin-data-access.php:124
+#: includes/views/admin/admin-rectification.php:122
+msgid "Send data to selected emails"
+msgstr "Enviar dados para e-mails selecionados"
+
+#: includes/views/admin/admin-rectification-user-details.php:16
+#, php-format
+msgid "Rectified data for user: %s"
+msgstr "Dados retificados para o utilizador:% s"
+
+#: includes/views/admin/admin-rectification-user-details.php:18
+msgid "Current data:"
+msgstr "Dados atuais:"
+
+#: includes/views/admin/admin-rectification-user-details.php:24
+msgid "Rectified data:"
+msgstr "Dados retificados:"
+
+#: includes/views/admin/admin-rectification.php:69
+msgid "Data rectification requests list"
+msgstr "Lista de solicitações de retificação de dados"
+
+#: includes/views/admin/admin-rectification.php:103
+msgid "See rectified data"
+msgstr "Ver dados retificados"
+
+#: includes/views/admin/admin-plugins.php:43
+msgid "Collects user data"
+msgstr "Recolha de dados do utilizador"
+
+#: includes/views/admin/admin-plugins.php:44
+msgid "Compatible with Ultimate GDPR"
+msgstr "Compatível com o Ultimate GDPR"
+
+#: includes/views/admin/admin-plugins.php:96
+#: includes/views/admin/admin-plugins.php:116
+msgid "No"
+msgstr "Não"
+
+#: includes/views/admin/admin-plugins.php:98
+msgid "Probably"
+msgstr "Provavelmente"
+
+#: includes/views/admin/admin-plugins.php:100
+msgid "Unknown"
+msgstr "Desconhecido"
+
+#: includes/views/admin/admin-plugins.php:114
+msgid "Partly"
+msgstr "Realizáveis"
+
+#: includes/views/shortcode/shortcode-policy-accept.php:35
+msgid "You have already accepted Privacy Policy"
+msgstr "Já aceitou as Políticas de Privacidade"
+
+#: includes/views/shortcode/shortcode-policy-accept.php:44
+#: includes/views/shortcode/shortcode-terms-accept.php:44
+msgid "Decline"
+msgstr "Rejeitar"
+
+#: includes/views/shortcode/shortcode-myaccount.php:31
+msgid "Personal Data Access"
+msgstr "Acesso aos dados pessoais"
+
+#: includes/views/shortcode/shortcode-myaccount.php:32
+msgid "Forget me"
+msgstr "Direito ao Esquecimento"
+
+#: includes/views/shortcode/shortcode-myaccount.php:33
+msgid "Data rectification"
+msgstr "Retificação"
+
+#: includes/views/shortcode/shortcode-myaccount.php:39
+msgid ""
+"Below, you can request for your personal data that's collected by this "
+"website sent to you in an e-mail."
+msgstr ""
+"Nesta janela pode solicitar que os seus dados pessoais registados pelo "
+"Website, sejam enviados por e-mail."
+
+#: includes/views/shortcode/shortcode-myaccount.php:48
+msgid ""
+"I consent to have my email collected in order to receive my requested data. "
+"See Privacy Policy page for more information."
+msgstr ""
+"Eu concordo que o meu e-mail seja registado para receber os meus dados. "
+"Confira a página de Políticas de Privacidade para mais informações."
+
+#: includes/views/shortcode/shortcode-myaccount.php:57
+#: includes/views/shortcode/shortcode-myaccount.php:109
+#: includes/views/shortcode/shortcode-myaccount.php:160
+msgid "Submit"
+msgstr "Solicitar"
+
+#: includes/views/shortcode/shortcode-myaccount.php:64
+msgid ""
+"Below, you can browse services which collects your personal data on this "
+"website. Check services you wish to be forgotten by. This will send a "
+"request to the website admin. You will be notified by e-mail once this is "
+"done.\""
+msgstr ""
+"Pode procurar serviços que registam os seus dados pessoais neste Website. "
+"Verifique os serviços pelos quais deseja ser esquecido. Isso enviará uma "
+"solicitação ao administrador do site. Será notificado por e-mail assim que a "
+"operação estiver terminado.\""
+
+#: includes/views/shortcode/shortcode-myaccount.php:101
+#: includes/views/shortcode/shortcode-myaccount.php:151
+msgid ""
+"I consent to have my email collected in order to process this request. See "
+"Privacy Policy page for more information."
+msgstr ""
+"Concordo que o meu e-mail seja registado para processar essa solicitação. "
+"Verifique a página Políticas de Privacidade para mais informações."
+
+#: includes/views/shortcode/shortcode-myaccount.php:119
+msgid ""
+"Below, you can send a request to have your data rectified by  the website "
+"admin. Enter what you would like to be rectified. You will be notified by e-"
+"mail once this is done."
+msgstr ""
+"Pode enviar uma solicitação para o administrador do Website para corrigir os "
+"seus dados. Digite o que gostaria de corrigir. Será notificado por e-mail "
+"assim a operação estiver terminado."
+
+#: includes/views/shortcode/shortcode-myaccount.php:127
+msgid "Current data"
+msgstr "Dados atuais"
+
+#: includes/views/shortcode/shortcode-myaccount.php:136
+msgid "Rectified data"
+msgstr "Dados Retificados"
+
+#: includes/views/shortcode/shortcode-terms-accept.php:35
+msgid "You have already accepted Terms and Conditions"
+msgstr "Já aceitou os Termos e Condições"
+
+#: includes/views/service/service-wp-user-consent-field.php:17
+#: includes/views/service/service-eform-consent-field.php:19
+#: includes/views/service/service-formidable-forms-consent-field.php:12
+#: includes/views/service/service-quform-consent-field.php:12
+#: includes/views/service/service-contact-form-7-consent-field.php:20
+#: includes/views/service/service-woocommerce-consent-field.php:16
+#: includes/views/service/service-wp-comments-consent-field.php:16
+#: includes/views/service/service-woocommerce-consent-field-label.php:12
+#: includes/views/service/service-arforms-consent-field.php:17
+#: includes/views/service/service-events-manager-consent-field.php:17
+msgid "I consent to the storage of my data according to the Privacy Policy"
+msgstr ""
+"Eu concordo com o armazenamento dos meus dados de acordo com as Políticas de "
+"Privacidade"
+
+#: includes/views/service/service-gravity-forms-consent-field-description.php:12
+msgid "Follow this link to access Privacy Policy"
+msgstr "Siga este link para aceder a Política de Privacidade"
+
+#: includes/views/service/service-gravity-forms-consent-field-error-message.php:12
+msgid "You must accept the Privacy Policy before submitting the form"
+msgstr "Deve aceitar as Políticas de Privacidade antes de enviar o formulário"
+
+#: includes/views/service/service-bbpress-consent-field.php:16
+#: includes/views/service/service-buddypress-consent-field.php:16
+msgid ""
+"I consent to the storage of my data according to the Privacy Policy "
+"(required)"
+msgstr ""
+"Eu concordo com o armazenamento dos meus dados de acordo com as Políticas de "
+"Privacidade (obrigatório)"
+
+#: includes/views/service/service-mailster-consent-field.php:16
+#: includes/views/service/service-gravity-forms-consent-field-label.php:12
+msgid "I consent to storage of my data according to Privacy Policy"
+msgstr ""
+"Eu concordo com o armazenamento dos meus dados de acordo com as Políticas de "
+"Privacidade"
+
+#: includes/views/service/service-mailchimp-consent-field.php:16
+msgid "I consent to the storage of my data according to the Privacy Policy "
+msgstr ""
+"Eu concordo com o armazenamento dos meus dados de acordo com as Políticas de "
+"Privacidade "
+
+#: includes/views/service/service-quform-consent-field-error-message.php:12
+msgid "This field is mandatory"
+msgstr "Este campo é obrigatório"
+
+#: includes/views/service/service-arforms-consent-field.php:24
+msgid "This field cannot be blank."
+msgstr "Este campo não pode estar vazio."
+
+#: includes/views/service/service-arforms-consent-field.php:26
+msgid "OK"
+msgstr "OK"
+
+#. Description of the plugin/theme
+msgid ""
+"Complete General Data Protection Regulation compliance toolkit plugin for "
+"WordPress."
+msgstr ""
+"Plugin de conjunto de ferramentas de conformidade de regulamento de proteção "
+"de dados completo para WordPress."
+
+#. Author of the plugin/theme
+msgid "CreateIT"
+msgstr "CreateIT"
+
+#. Author URI of the plugin/theme
+msgid "https://www.createit.pl"
+msgstr "https://www.createit.pl"
+
+msgid "Enabled"
+msgstr "Ativado"
+
+msgid "Enable"
+msgstr "Abilitar"
+
+msgid "Disabled"
+msgstr "Desativado"
+
+msgid "Disable"
+msgstr "Desabilitar"
+
+msgid "Select page where to display the cookie popup"
+msgstr "Selecione a página onde exibir o pop-up do cookie"
+
+msgid "Google Analytics Tracking ID (disable tracking for this ID when cookies consent not given), eg. UA-118586768-1"
+msgstr "ID de acompanhamento do Google Analytics (desative o rastreamento para esse ID quando o consentimento dos cookies năo for fornecido), por exemplo. UA-118586768-1"
+
+msgid "Hide \"Block All\" level features"
+msgstr "Ocultar \"Bloqueie todos\" recursos de nível"
+
+msgid "Hide \"Essential\" level features"
+msgstr "Ocultar \"Essentials\" recursos de nível"
+
+msgid "Hide \"Functionality\" level features"
+msgstr "Ocultar \"Funcionalidade\" recursos de nível"
+
+msgid "Hide \"Analytics\" level features"
+msgstr "Ocultar \"Analytics\" recursos de nível"
+
+msgid "Hide \"Advertising\" level features"
+msgstr "Ocultar \"Propaganda\" recursos de nível"
+
+msgid "Block All"
+msgstr "Bloqueie todos"
+
+msgid "Click here to create"
+msgstr "Clique aqui para criar"

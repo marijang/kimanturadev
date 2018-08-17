@@ -1,6 +1,7 @@
 //import {scrollMonitor} from 'scrollMonitor';
 //var scrollMonitor = require("scrollmonitor");
 $(function() {
+if ( !(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
     var elem = document.getElementById('page-navigation');
     //console.log(scrollMonitor);
     var scrollMonitor = require("scrollmonitor");
@@ -14,6 +15,32 @@ $(function() {
         });
     });
    
+
+    $('.gallery1').each(function(index, section) {
+        var elementWatcher = scrollMonitor.create( section );
+        elementWatcher.enterViewport(function() {
+           // $('.addthis_toolbox').fadeOut();
+        });
+        elementWatcher.exitViewport(function() {
+            $('.addthis_toolbox').fadeIn();
+         });
+         elementWatcher.lock();
+
+         elementWatcher.stateChange(function() {
+            $offset = $(section).offset().top- $(window).scrollTop() - $('.addthis_toolbox').height() ;
+            console.log($(section).offset().top- $(window).scrollTop());
+            console.log(elementWatcher.bottom);
+            console.log(elementWatcher.height);
+            if ( $offset < 0){
+                if(!this.isAboveViewport){
+                    $('.addthis_toolbox').fadeOut();
+                }
+                
+            }
+            $(section).toggleClass('fixed', this.isAboveViewport)
+         });
+    });
+
     $('.article-list').each(function(index, section) {
         var elementWatcher = scrollMonitor.create( section );
         elementWatcher.enterViewport(function() {
@@ -61,5 +88,5 @@ $(function() {
         });
 
     });
-
+}
 });

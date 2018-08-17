@@ -18,13 +18,7 @@ class b4bProductCategories_widget extends WP_Widget {
             'description' => 'Custom B4b Woocommerce Category Widget' 
             );
         parent::__construct( 'b4bProductCategories_widget', 'B4B Product Categories Widget', $widget_options );
-        wp_enqueue_script(
-            'b4bProductCategories',
-            get_template_directory_uri(). '/skin/public/scripts/widgets/b4bProductCategories.js',
-            array(),
-            false,
-            true
-        );
+        
         $this->scripts['b4bProductCategories_widget'] = false;
         add_action( 'wp_print_footer_scripts', array( &$this, 'remove_scripts' ) );
     }
@@ -34,7 +28,13 @@ class b4bProductCategories_widget extends WP_Widget {
         $title = apply_filters( 'widget_title', $instance[ 'title' ] );
 
         $this->scripts['b4bProductCategories_widget'] = true;
-    
+        wp_enqueue_script(
+            'b4bProductCategories',
+            get_template_directory_uri(). '/skin/public/scripts/widgets/b4bProductCategories.js',
+            array(),
+            false,
+            true
+        );
         // before and after widget arguments are defined by themes
         //$blog_title = get_bloginfo( 'name' );
         //$tagline = get_bloginfo( 'description' );
@@ -87,7 +87,7 @@ class b4bProductCategories_widget extends WP_Widget {
             echo '
             <li class="shop-categories__item' . $active_cat . ' shop-categories__item--parent" >' .
                 '<label class="shop-categories__label">'.
-                '<input name="product_cat[]" type="checkbox" value="'.$cat->slug.'" '.$checked.'>'.
+                '<input name="product_cat[]" type="checkbox" class="filled-in-not" value="'.$cat->slug.'" '.$checked.'>'.
                 '<span class="shop-categories__title">' . esc_html( $cat->name ) . '</span>';
                 if(!empty($terms) ) {
                 echo '<i class="material-icons shop-categories__icon">keyboard_arrow_up</i>';
@@ -115,7 +115,7 @@ class b4bProductCategories_widget extends WP_Widget {
                         $checked = in_array($sub_category->slug,$categories) ? 'checked':'';
                         echo '<li class="shop-categories__item shop-categories__item--child">
                         <label class="shop-categories__label' . $active_cat_S . '" >' .
-                        '<input name="product_cat[]" type="checkbox"  value="'.$sub_category->slug.'" '.$checked.'>'.
+                        '<input name="product_cat[]"  class="filled-in-not" type="checkbox"  value="'.$sub_category->slug.'" '.$checked.'>'.
                             '<span href1="' . esc_url( get_term_link( $sub_category ) ) . '">' .
                            
                             '<span class="shop-categories__title">' . esc_html( $sub_category->name ) . '</span>' .

@@ -19,7 +19,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
+use Kimnatura\Admin\Woo as Woo;
+$woo = new Woo;
 $page_title = ( 'billing' === $load_address ) ? __( 'Billing address', 'woocommerce' ) : __( 'Shipping address', 'woocommerce' );
 
 do_action( 'woocommerce_before_edit_account_address_form' ); ?>
@@ -41,7 +42,8 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 					if ( isset( $field['country_field'], $address[ $field['country_field'] ] ) ) {
 						$field['country'] = wc_get_post_data_by_key( $field['country_field'], $address[ $field['country_field'] ]['value'] );
 					}
-					woocommerce_form_field( $key, $field, wc_get_post_data_by_key( $key, $field['value'] ) );
+					if ($key != 'shipping_address_2' && $key != 'billing_address_2') 
+					$woo->woocommerce_form_field(  $key, $field, wc_get_post_data_by_key( $key, $field['value'] ) );
 				}
 				?>
 			</div>
@@ -61,3 +63,4 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 <?php endif; ?>
 
 <?php do_action( 'woocommerce_after_edit_account_address_form' ); ?>
+ 

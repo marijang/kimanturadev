@@ -1,0 +1,2930 @@
+# Copyright (C) 2018 Ultimate GDPR
+# This file is distributed under the same license as the Ultimate GDPR package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ultimate GDPR 1.6.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/ct-ultimate-gdpr\n"
+"POT-Creation-Date: 2018-06-27 08:08+0000\n"
+"PO-Revision-Date: 2018-06-27 16:25+0800\n"
+"Last-Translator: createit <j.modelo@createit.pl>\n"
+"Language-Team: Romanian\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1));\n"
+"X-Generator: Poedit 2.0.5\n"
+
+#: includes/helpers.php:105
+#, php-format
+msgid "To confirm, please follow this link: %s"
+msgstr "Pentru confirmare urmați link-ul: %s"
+
+#: vendor/acf-fields.php:28
+msgid "Service name"
+msgstr "Denumire servicii"
+
+#: vendor/acf-fields.php:40
+msgid "Script names"
+msgstr "Numele scripturilor"
+
+#: vendor/acf-fields.php:43
+msgid "Please input comma separated script names"
+msgstr "Introduceți denumirea script-urilor separate prin virgulă"
+
+#: vendor/acf-fields.php:53 includes/shortcode/shortcode-privacy-policy.php:17
+msgid "Cookie names"
+msgstr "Denumire cookie"
+
+#: vendor/acf-fields.php:56
+msgid "Please input comma separated cookie names"
+msgstr "Introduceți denumirea cookie-urilor separate prin virgulă"
+
+#: vendor/acf-fields.php:66 includes/shortcode/shortcode-privacy-policy.php:20
+msgid "Type of cookie"
+msgstr "Tip cookie"
+
+#: vendor/acf-fields.php:76
+msgid "First or Third party?"
+msgstr "Prima sau terță parte?"
+
+#: vendor/acf-fields.php:81 includes/shortcode/shortcode-privacy-policy.php:73
+msgid "First party"
+msgstr "Prima parte"
+
+#: vendor/acf-fields.php:82 includes/shortcode/shortcode-privacy-policy.php:73
+msgid "Third party"
+msgstr "Terța parte"
+
+#: vendor/acf-fields.php:90
+msgid "Can be blocked?"
+msgstr "Poate fi blocat?"
+
+#: vendor/acf-fields.php:98
+msgid "Session or Persistent?"
+msgstr "Sesiune sau persistentă?"
+
+#: vendor/acf-fields.php:104 includes/shortcode/shortcode-privacy-policy.php:84
+msgid "Session"
+msgstr "Sesiune"
+
+#: vendor/acf-fields.php:105 includes/shortcode/shortcode-privacy-policy.php:84
+msgid "Persistent"
+msgstr "Persistentă"
+
+#: vendor/acf-fields.php:113 includes/shortcode/shortcode-privacy-policy.php:32
+msgid "Expiry Time"
+msgstr "Timpul de expirare"
+
+#: vendor/acf-fields.php:126 includes/shortcode/shortcode-privacy-policy.php:35
+msgid "Purpose"
+msgstr "Scop"
+
+#: vendor/acf-fields.php:138
+msgid "Is active?"
+msgstr "E activ?"
+
+#: includes/views/cookie-popup.php:99 includes/views/cookie-group-popup.php:123
+#: includes/controller/controller-cookie.php:3066
+#: includes/views/shortcode/shortcode-policy-accept.php:55
+#: includes/views/shortcode/shortcode-terms-accept.php:55
+msgid "Accept"
+msgstr "Acceptă"
+
+#: includes/views/cookie-popup.php:107
+#: includes/views/cookie-group-popup.php:131
+#: includes/controller/controller-cookie.php:1120
+#: includes/controller/controller-cookie.php:3067
+msgid "Read more"
+msgstr "Citește mai mult"
+
+#: includes/views/cookie-group-popup-header-content.php:20
+msgid "Privacy settings"
+msgstr "Setări de confidențialitate"
+
+#: includes/views/cookie-group-popup-header-content.php:22
+msgid "Decide which cookies you want to allow."
+msgstr "Alegeți ce cookie-uri să fie autorizate."
+
+#: includes/views/cookie-group-popup-header-content.php:23
+msgid ""
+"You can change these settings at any time. However, this can result in some "
+"functions no longer being available. For information on deleting the "
+"cookies, please consult your browser’s help function."
+msgstr ""
+"Puteți schimba aceste setări oricând. Deși aceasta poate rezulta în "
+"devenirea unor funcții indisponibile. Pentru informații legate de ștergerea "
+"cookie-urile vă rugăm să consultați funcția de Ajutor al browser-ului dvs."
+
+#: includes/views/cookie-group-popup-header-content.php:24
+msgid "Learn more about the cookies we use."
+msgstr "CITIȚI MAI MULT DESPRE COOKIE-URILE UTILIZATE DE NOI."
+
+#: includes/views/cookie-group-popup-header-content.php:26
+msgid "With the slider, you can enable or disable different types of cookies:"
+msgstr ""
+"Cu ajutorul cursorului puteți activa sau dezactiva diferite tipuri de cookie:"
+
+#: includes/views/cookie-group-popup.php:139
+#: includes/controller/controller-cookie.php:3068
+msgid "Change Settings"
+msgstr "Schimbă setările"
+
+#: includes/views/cookie-group-popup.php:190
+#: includes/views/cookie-group-popup.php:201
+msgid "Cookie Box Settings"
+msgstr "Setări cookie box"
+
+#: includes/views/cookie-group-popup.php:196
+#: includes/controller/controller-cookie.php:3084
+msgid "Trigger"
+msgstr "Trăgaci"
+
+#: includes/views/cookie-group-popup.php:306
+#: includes/views/cookie-group-popup.php:351
+#: includes/views/cookie-group-popup.php:371
+#: includes/views/cookie-group-popup.php:395
+#: includes/views/cookie-group-popup.php:439
+msgid "This website will:"
+msgstr "Acest site va:"
+
+#: includes/views/cookie-group-popup.php:326
+#: includes/views/cookie-group-popup.php:415
+#: includes/views/cookie-group-popup.php:460
+msgid "This website wont't:"
+msgstr "Acest site nu va:"
+
+#: includes/views/cookie-group-popup.php:484
+msgid "Save & Close"
+msgstr "Salvează & închide"
+
+#: includes/controller/controller-forgotten.php:106
+#, php-format
+msgid "[Ultimate GDPR] New Right To Be Forgotten request from %s"
+msgstr "[Ultimate GDPR] Solicitarea nouă de Dreptul la uitare de la %s"
+
+#: includes/controller/controller-forgotten.php:125
+#: includes/controller/controller-forgotten.php:344
+#, php-format
+msgid ""
+"There is a new Right To Be Forgotten request from email %s. See details at %s"
+msgstr ""
+"Există o solicitare nouă de Dreptul la uitare de la adresa de e-mail %s. "
+"Pentru mai multe detalii %s"
+
+#: includes/controller/controller-forgotten.php:176
+#: includes/controller/controller-forgotten.php:177
+#: includes/views/admin/admin-forgotten.php:37
+#: includes/views/admin/admin-breach.php:30
+#: includes/views/admin/admin-data-access.php:41
+#: includes/views/admin/admin-rectification.php:41
+msgid "Right To Be Forgotten"
+msgstr "Dreptul la uitare"
+
+#: includes/controller/controller-forgotten.php:219
+#: includes/controller/controller-rectification.php:181
+#: includes/controller/controller-data-access.php:166
+msgid "Recaptcha error!"
+msgstr "Eroare Recaptcha!"
+
+#: includes/controller/controller-forgotten.php:253
+#, php-format
+msgid "[Ultimate GDPR] Please confirm request to be forgotten from %s"
+msgstr "[Ultimate GDPR] Confirmați uitarea solicitărilor de la %s"
+
+#: includes/controller/controller-forgotten.php:259
+#: includes/controller/controller-rectification.php:208
+#: includes/controller/controller-data-access.php:190
+msgid "Your request was sent!"
+msgstr "Solicitarea dvs. a fost trimisă!"
+
+#: includes/controller/controller-forgotten.php:303
+#: includes/controller/controller-rectification.php:96
+msgid "Your request was already confirmed."
+msgstr "Solicitarea dvs. a fost deja confirmată."
+
+#: includes/controller/controller-forgotten.php:328
+#: includes/controller/controller-rectification.php:121
+msgid "Your request was successfully confirmed."
+msgstr "Solicitarea dvs. a fost confirmată cu succes."
+
+#: includes/controller/controller-forgotten.php:365
+#: includes/controller/controller-rectification.php:161
+msgid "Your request was not confirmed. Please check the link or contact admin."
+msgstr ""
+"Solicitarea dvs. nu a fost confirmată. Vă rugăm verificați link-ul sau "
+"contactați un admin."
+
+#: includes/controller/controller-forgotten.php:481
+#, php-format
+msgid "[Ultimate GDPR] Emails were sent to the following users: %s"
+msgstr ""
+"[Ultimate GDPR] E-mailurile au fost trimise pentru următorii utilizatori: %s"
+
+#: includes/controller/controller-forgotten.php:519
+#, php-format
+msgid "[Ultimate GDPR] The following emails were removed from list: %s"
+msgstr ""
+"[Ultimate GDPR] Următoarele e-mailuri au fost eliminate de pe listă: %s"
+
+#: includes/controller/controller-forgotten.php:550
+#, php-format
+msgid "Non existing service id: %s"
+msgstr "Service id inexistent: %s"
+
+#: includes/controller/controller-forgotten.php:570
+#, php-format
+msgid "There was an error forgetting %s service: %s"
+msgstr "A intervenit o eroare în uitarea %s serviciului: %s"
+
+#: includes/controller/controller-forgotten.php:595
+msgid "[Ultimate GDPR] Services data were removed"
+msgstr "[Ultimate GDPR] Date service eliminate"
+
+#: includes/controller/controller-forgotten.php:613
+msgid "Right to be forgotten settings"
+msgstr "Setări Dreptul la uitare"
+
+#: includes/controller/controller-forgotten.php:623
+msgid "Admin email to send new request notifications to"
+msgstr "Adresă de e-mail admin pentru notificări de cereri noi"
+
+#: includes/controller/controller-forgotten.php:631
+msgid "User notification email subject"
+msgstr "Subiect de e-mail pentru notificarea utilizatorului"
+
+#: includes/controller/controller-forgotten.php:639
+msgid "User notification email message"
+msgstr "Mesaj de e-mail pentru notificarea utilizatorului"
+
+#: includes/controller/controller-forgotten.php:647
+#: includes/controller/controller-rectification.php:549
+msgid ""
+"Set custom URL to the page containing Ultimate GDPR shortcode as the e-mail "
+"confirmation target page (or leave empty for autodetect)"
+msgstr ""
+"Setează URL personalizat pentru pagina de conținut Ultimate GDPR shortcode "
+"ca și pagina de destinație pentru confirmare e-mail (sau lăsați liber pentru "
+"autodetectare)"
+
+#: includes/controller/controller-forgotten.php:731
+#: includes/controller/controller-forgotten.php:732
+msgid "[Ultimate GDPR] Your data has been forgotten"
+msgstr "[Ultimate GDPR] Data dvs. a fost uitată"
+
+#: includes/controller/controller-plugins.php:135
+#: includes/controller/controller-plugins.php:136
+msgid "Plugins"
+msgstr "Plugins"
+
+#: includes/controller/controller-policy.php:20
+#: includes/controller/controller-policy.php:21
+#: includes/controller/controller-policy.php:45
+#: includes/controller/controller-policy.php:818
+#: includes/views/admin/admin-policy.php:32
+#: includes/views/admin/admin-terms.php:33
+msgid "Privacy Policy"
+msgstr "Politica de confidențialitate"
+
+#: includes/controller/controller-policy.php:54
+#: includes/controller/controller-terms.php:388
+#: includes/controller/controller-pseudonymization.php:154
+msgid "Instructions"
+msgstr "Instrucțiuni"
+
+#: includes/controller/controller-policy.php:65
+msgid "Require logged in users to accept Privacy Policy (redirect)"
+msgstr ""
+"Autentificare necesară pentru acceptarea Politicii de confidențialitate "
+"(redirecționare)"
+
+#: includes/controller/controller-policy.php:73
+msgid "Require not logged in users/guests to accept Privacy Policy (redirect)"
+msgstr ""
+"Solicitați utilizatorilor/oaspeților neconectați acceptarea Politicii de "
+"confidențialitate (redirecționează)"
+
+#: includes/controller/controller-policy.php:81
+msgid "WordPress Privacy Policy page"
+msgstr "Pagină Politică de confidențialitate WordPress"
+
+#: includes/controller/controller-policy.php:89
+msgid "Page with existing Privacy Policy"
+msgstr "Pagină cu Politică de confidențialitate existentă"
+
+#: includes/controller/controller-policy.php:97
+msgid "Privacy Policy Custom URL"
+msgstr "Adresă URL personalizată Politică de confidențialitate"
+
+#: includes/controller/controller-policy.php:105
+msgid "Page to redirect to after Privacy Policy accepted"
+msgstr "Pagină de redirecționare după Politică de confidențialitate acceptată"
+
+#: includes/controller/controller-policy.php:113
+#: includes/controller/controller-terms.php:431
+msgid "Shortcode Button Styling"
+msgstr "Codul butonului cu coduri scurte"
+
+#: includes/controller/controller-policy.php:121
+#: includes/controller/controller-terms.php:439
+#: includes/controller/controller-cookie.php:1295
+msgid "Set consent expire time [s]"
+msgstr "Setarea perioadei de expirare a aprobării [s]"
+
+#: includes/controller/controller-policy.php:129
+msgid ""
+"Privacy Policy version, eg. 1.0 (if you change it, user has to give consent "
+"again)"
+msgstr ""
+"Politică de confidențialitate, versiunea 1.0 (dacă schimbați, utilizatorul "
+"trebuie să aprobe din nou)"
+
+#: includes/controller/controller-policy.php:137
+msgid ""
+"Redirect to Privacy Policy first (if Terms and Conditions also redirect)"
+msgstr ""
+"Redirecționare către Politică de confidențialitate prima dată (dacă Termeni "
+"și Condiții redirecționează la fel)"
+
+#: includes/controller/controller-policy.php:145
+msgid ""
+"Convert the following text to Privacy Policy link in all services templates, "
+"eg. 'Privacy Policy'"
+msgstr ""
+"Transformarea următorului text în link Politică de confidențialitate în "
+"toate template-urile de service, de ex. 'Politică de confidențialitate'"
+
+#. ID
+#: includes/controller/controller-policy.php:153
+#: includes/controller/controller-terms.php:463
+msgid ""
+"Do not block user agents (eg. bots) containing the following texts (comma "
+"separated)"
+msgstr ""
+"Nu blocați agenții utilizator (de ex. Botți) care conțin următoarele texte "
+"(separate prin virgulă)"
+
+#: includes/controller/controller-policy.php:201
+#, php-format
+msgid ""
+"1. Place %s shortcode on your existing Privacy Policy page to add an accept "
+"button.%s2. Select Privacy Policy page below, so users can be redirected "
+"there to give their consent."
+msgstr ""
+"1. Plasează shortcode %s pe pagina de Politică de confidențialitate "
+"existentă pentru a adăuga buton de acceptare. %s2. Selectați pagina de "
+"Politică de confidențialitate de mai jos ca utilizatorii să fie "
+"redirecționați și să poată dea aprobarea."
+
+#: includes/controller/controller-policy.php:280
+#: includes/controller/controller-terms.php:146
+#, php-format
+msgid ""
+"user id: %d \n"
+"consent version: %s \n"
+"consent given: %s \n"
+"consent expires: %s \n"
+"\n"
+msgstr ""
+"utilizator ID: %d\n"
+"consimțământ versiune: %s\n"
+"consimțământul dat: %s\n"
+"consimțământul expiră: %s\n"
+"\n"
+
+#: includes/controller/controller-policy.php:637
+msgid "WordPress Privacy page"
+msgstr "Pagină de confidențialitate WordPress"
+
+#: includes/controller/controller-policy.php:693
+#: includes/controller/controller-terms.php:661
+msgid "Last visited page"
+msgstr "Ultima pagină vizitată"
+
+#: includes/controller/controller-policy.php:694
+#: includes/controller/controller-terms.php:662
+msgid "Don't redirect"
+msgstr "Nu redirecționa"
+
+#: includes/controller/controller-policy.php:720
+#: includes/controller/controller-terms.php:584
+msgid "Theme Default"
+msgstr "Tema Implicit"
+
+#: includes/controller/controller-policy.php:721
+#: includes/controller/controller-terms.php:585
+msgid "Cookie box buttons"
+msgstr "Butoanele butoanelor cookie"
+
+#: includes/controller/controller-services.php:72
+#: includes/controller/controller-services.php:73
+#: includes/controller/controller-services.php:253
+#: includes/controller/controller-services.php:269
+msgid "Services"
+msgstr "Servicii"
+
+#: includes/controller/controller-services.php:89
+#: includes/controller/controller-services.php:96
+#: includes/controller/controller-services.php:103
+msgid "Services options"
+msgstr "Opțiuni servicii"
+
+#: includes/controller/controller-services.php:114
+msgid "Recaptcha key (for myaccount shortcode submissions)"
+msgstr "Tasta Recaptcha (pentru înregistrările mele cu coduri scurte)"
+
+#: includes/controller/controller-services.php:122
+msgid "Recaptcha secret key (for myaccount shortcode submissions)"
+msgstr "Recunoașteți cheia secretă (pentru depunerea codurilor mele scurte)"
+
+#: includes/controller/controller-services.php:251
+msgctxt "Post Type General Name"
+msgid "Services"
+msgstr "Servicii"
+
+#: includes/controller/controller-services.php:252
+msgctxt "Post Type Singular Name"
+msgid "Services"
+msgstr "Servicii"
+
+#: includes/controller/controller-services.php:254
+msgid "Parent Services"
+msgstr "Servicii sursă"
+
+#: includes/controller/controller-services.php:255
+msgid "All Services"
+msgstr "Toate serviciile"
+
+#: includes/controller/controller-services.php:256
+msgid "View Service"
+msgstr "Vizualizează servicii"
+
+#: includes/controller/controller-services.php:257
+msgid "Add New Service"
+msgstr "Adaugă servicii noi"
+
+#: includes/controller/controller-services.php:258
+msgid "Add New"
+msgstr "Adaugă nou"
+
+#: includes/controller/controller-services.php:259
+msgid "Edit Service"
+msgstr "Editare servicii"
+
+#: includes/controller/controller-services.php:260
+msgid "Update Service"
+msgstr "Actualizare servicii"
+
+#: includes/controller/controller-services.php:261
+msgid "Search Services"
+msgstr "Caută servicii"
+
+#: includes/controller/controller-services.php:262
+msgid "Not Found"
+msgstr "Nu a fost găsit"
+
+#: includes/controller/controller-services.php:263
+msgid "Not found in Trash"
+msgstr "Nu se găsește în coșul de gunoi"
+
+#: includes/controller/controller-services.php:268
+msgid "services"
+msgstr "servicii"
+
+#. Plugin Name of the plugin/theme
+#: includes/controller/controller-admin.php:193
+#: includes/controller/controller-admin.php:194
+#: includes/views/admin/admin-forgotten.php:30
+#: includes/views/admin/admin-cookie.php:21
+#: includes/views/admin/admin-pseudonymization.php:30
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:21
+#: includes/views/admin/admin-breach.php:21
+#: includes/views/admin/admin-policy.php:21
+#: includes/views/admin/admin-services.php:21
+#: includes/views/admin/admin-data-access.php:32
+#: includes/views/admin/admin-terms.php:22
+#: includes/views/admin/admin-rectification.php:32
+#: includes/views/admin/admin-plugins.php:21
+msgid "Ultimate GDPR"
+msgstr "Ultimate GDPR"
+
+#: includes/controller/controller-rectification.php:132
+#, php-format
+msgid "[Ultimate GDPR] New Data Rectification request from %s"
+msgstr "[Ultimate GDPR] Solicitarea nouă de Rectificare a datelor de la %s"
+
+#: includes/controller/controller-rectification.php:140
+#, php-format
+msgid ""
+"There is a new Data Rectification request from email %s. See details at %s"
+msgstr ""
+"Există o solicitare nouă de Rectificare a datelor de pe adresa de e-mail %s. "
+"Pentru mai multe detalii %s"
+
+#: includes/controller/controller-rectification.php:202
+#, php-format
+msgid "[Ultimate GDPR] Please confirm your data rectification request from %s"
+msgstr ""
+"[Ultimate GDPR] Vă rugăm confirmați solicitarea dvs. de rectificare a "
+"datelor de la %s"
+
+#: includes/controller/controller-rectification.php:311
+#: includes/controller/controller-data-access.php:300
+#, php-format
+msgid "Data was sent to email: %s"
+msgstr "Datele au fost trimise la adresa de e-mail: %s"
+
+#: includes/controller/controller-rectification.php:350
+#: includes/controller/controller-data-access.php:339
+#, php-format
+msgid "The following emails were removed from the list: %s"
+msgstr "Următoarele adrese de e-mail au fost eliminate din listă: %s"
+
+#: includes/controller/controller-rectification.php:479
+#: includes/controller/controller-rectification.php:480
+#: includes/views/admin/admin-forgotten.php:46
+#: includes/views/admin/admin-breach.php:39
+#: includes/views/admin/admin-data-access.php:50
+#: includes/views/admin/admin-rectification.php:50
+msgid "Data Rectification"
+msgstr "Rectificarea datelor"
+
+#: includes/controller/controller-rectification.php:515
+msgid "Data Rectification settings"
+msgstr "Setările rectificării datelor"
+
+#: includes/controller/controller-rectification.php:525
+msgid "Email to send admin notifications to"
+msgstr "E-mail pentru trimiterea notificărilor de admin"
+
+#: includes/controller/controller-rectification.php:533
+msgid "User mail title"
+msgstr "Titlu Mail Utilizator"
+
+#: includes/controller/controller-rectification.php:541
+msgid "User mail content"
+msgstr "Conținut Mail Utilizator"
+
+#: includes/controller/controller-rectification.php:635
+#, php-format
+msgid "[Ultimate GDPR] Data rectification notice from %s"
+msgstr "[Ultimate GDPR] Notificare de rectificare de date de la %s"
+
+#: includes/controller/controller-rectification.php:636
+msgid "Your data has been rectified"
+msgstr "Datele dvs. au fost rectificate"
+
+#: includes/controller/controller-data-access.php:160
+msgid "Wrong email!"
+msgstr "Adresa de e-mail incorectă!"
+
+#: includes/controller/controller-data-access.php:179
+msgid "[Ultimate GDPR] New Data Access request"
+msgstr "[Ultimate GDPR] Solicitare acces date noi"
+
+#: includes/controller/controller-data-access.php:181
+#, php-format
+msgid "There is a new data access request from email %s. See details at %s"
+msgstr ""
+"Există o solicitare de acces la date noi de pe adresa de e-mail %s. Pentru "
+"mai multe detalii %s"
+
+#: includes/controller/controller-data-access.php:422
+#: includes/views/admin/admin-forgotten.php:132
+#: includes/views/admin/admin-data-access.php:97
+#: includes/views/admin/admin-rectification.php:95
+msgid "Not sent"
+msgstr "Nu a fost trimis"
+
+#: includes/controller/controller-data-access.php:460
+#: includes/controller/controller-data-access.php:461
+#: includes/views/admin/admin-forgotten.php:40
+#: includes/views/admin/admin-breach.php:33
+#: includes/views/admin/admin-data-access.php:44
+#: includes/views/admin/admin-rectification.php:44
+msgid "Data Access"
+msgstr "Acces date"
+
+#: includes/controller/controller-data-access.php:501
+msgid "Data access settings"
+msgstr "Setări acces date"
+
+#: includes/controller/controller-data-access.php:511
+msgid "Email to send new request notifications to"
+msgstr "Adresă de e-mail pentru a trimite notificări de cereri noi"
+
+#: includes/controller/controller-data-access.php:519
+#: includes/controller/controller-breach.php:125
+msgid "Mail title"
+msgstr "Titlu Mail"
+
+#: includes/controller/controller-data-access.php:527
+#: includes/controller/controller-breach.php:133
+msgid "Mail content"
+msgstr "Conținut Mail"
+
+#: includes/controller/controller-data-access.php:601
+#, php-format
+msgid "[Ultimate GDPR] Data request results from %s"
+msgstr "[Ultimate GDPR] Rezultate solicitări date de la %s"
+
+#: includes/controller/controller-data-access.php:602
+msgid "Please find data attached"
+msgstr "Găsiți atașat datele"
+
+#: includes/controller/controller-terms.php:167
+#: includes/controller/controller-terms.php:168
+msgid "Terms And Conditions"
+msgstr "Termeni și Condiții"
+
+#: includes/controller/controller-terms.php:379
+#: includes/controller/controller-terms.php:722
+#: includes/views/admin/admin-policy.php:29
+#: includes/views/admin/admin-terms.php:30
+msgid "Terms and Conditions"
+msgstr "Termeni și Condiții"
+
+#: includes/controller/controller-terms.php:399
+msgid "Require logged in users to accept Terms and Conditions (redirect)"
+msgstr ""
+"Autentificare necesară pentru acceptarea Termeni și Condiții (redirecționare)"
+
+#: includes/controller/controller-terms.php:407
+msgid ""
+"Require not logged in users/guests to accept Terms and Conditions (redirect)"
+msgstr ""
+"Solicitați utilizatorilor/oaspeților neconectați acceptarea Termenilor și "
+"condițiilor (redirecționează)"
+
+#: includes/controller/controller-terms.php:415
+msgid "Page with existing Terms and Conditions"
+msgstr "Pagină cu Termeni și Condiții existentă"
+
+#: includes/controller/controller-terms.php:423
+msgid "Page to redirect to after Terms accepted"
+msgstr "Pagină pentru redirecționare după acceptarea Termenilor"
+
+#: includes/controller/controller-terms.php:447
+msgid ""
+"Terms version, eg. 1.0 (if you change it, user has to give consent again)"
+msgstr ""
+"Versiune Termeni, 1.0 (dacă schimbați, utilizatorul va trebui să accepte din "
+"nou)"
+
+#: includes/controller/controller-terms.php:455
+msgid ""
+"Convert the following text to Terms and Conditions link in all services "
+"templates, eg. 'Terms and Conditions'"
+msgstr ""
+"Transformarea următorului text în link Termeni și Condiții în toate template-"
+"urile de service, de ex. 'Termeni și Condiții'"
+
+#: includes/controller/controller-terms.php:476
+#, php-format
+msgid ""
+"1. Place %s shortcode on your existing Terms and Conditions page to add an "
+"accept button.%s2. Select Terms and Conditions page below, so users can be "
+"redirected there to give their consent."
+msgstr ""
+"1. Plasează shortcode %s pe pagina de Termeni și Condiții existentă pentru a "
+"adăuga buton de acceptare. %s2. Selectați pagina de Termeni și Condiții de "
+"mai jos ca utilizatorii să fie redirecționați și să poată dea aprobarea."
+
+#: includes/controller/controller-cookie.php:958
+#: includes/controller/controller-cookie.php:4490
+#, php-format
+msgid ""
+"<h3>Please navigate to <a href='%s'>Service Manager</a> tab to see all "
+"detected cookies.</h3>"
+msgstr ""
+"<h3>Vă rugăm navigați către <a href='%s'> tab-ul Manager de Servicii</a> "
+"pentru a vedea toate cookie-urile detectate.</h3>"
+
+#: includes/controller/controller-cookie.php:1023
+#, php-format
+msgid ""
+"user id: %d \n"
+"consent level: %s \n"
+"consent given: %s \n"
+"consent expires: %s \n"
+"\n"
+msgstr ""
+"utilizator ID: %d\n"
+"nivel de consimțământ: %s\n"
+"consimțământul dat: %s\n"
+"consimțământul expiră: %s\n"
+"\n"
+
+#: includes/controller/controller-cookie.php:1043
+#: includes/controller/controller-cookie.php:1044
+msgid "Cookie Consent"
+msgstr "Aprobarea cookie-urilor"
+
+#: includes/controller/controller-cookie.php:1052
+#: includes/controller/controller-cookie.php:1053
+msgid "Services Manager"
+msgstr "Manager de Servicii"
+
+#: includes/controller/controller-cookie.php:1075
+#: includes/controller/controller-cookie.php:1205
+msgid "Cookie popup content"
+msgstr "Cookie popup conținut"
+
+#: includes/controller/controller-cookie.php:1082
+msgid "Buttons labels"
+msgstr "Butoane etichete"
+
+#: includes/controller/controller-cookie.php:1089
+msgid "Options"
+msgstr "Opțiuni"
+
+#. ID
+#: includes/controller/controller-cookie.php:1096
+msgid "Google Analytics Tracking ID"
+msgstr "ID de urmărire Google Analytics"
+
+#: includes/controller/controller-cookie.php:1106
+msgid "Cookie check"
+msgstr "Verificarea cookie-urilor"
+
+#: includes/controller/controller-cookie.php:1113
+msgid "Buttons styles"
+msgstr "Butoane stiluri"
+
+#: includes/controller/controller-cookie.php:1127
+#: includes/controller/controller-cookie.php:1343
+msgid "Position"
+msgstr "Poziție"
+
+#: includes/controller/controller-cookie.php:1134
+msgid "Box styles"
+msgstr "Cutii de stil"
+
+#: includes/controller/controller-cookie.php:1141
+#: includes/controller/controller-cookie.php:1431
+msgid "Custom style CSS"
+msgstr "Personalizare CSS"
+
+#. ID
+#: includes/controller/controller-cookie.php:1151
+msgid "Advanced Cookies Settings"
+msgstr "Setări cookie avansate"
+
+#: includes/controller/controller-cookie.php:1159
+msgid "Trigger cookie"
+msgstr "Trigger cookie"
+
+#: includes/controller/controller-cookie.php:1166
+msgid "Lists of features"
+msgstr "Liste de caracteristici"
+
+#: includes/controller/controller-cookie.php:1173
+msgid "Modal styles"
+msgstr "Modele stiluri"
+
+#: includes/controller/controller-cookie.php:1180
+msgid "Labels"
+msgstr "Etichete"
+
+#: includes/controller/controller-cookie.php:1187
+msgid "Additional settings"
+msgstr "Setari aditionale"
+
+#: includes/controller/controller-cookie.php:1197
+msgid ""
+"Fill in with default content for selected language (remember to save changes)"
+msgstr ""
+"Completați conținutul implicit pentru limba selectată (nu uitați să salvați "
+"modificările)"
+
+#: includes/controller/controller-cookie.php:1213
+msgid "Cookie popup 'accept' button label (leave empty for default)"
+msgstr ""
+"Popup cookie etichetă buton 'accept' (lăsați liber pentru modul implicit)"
+
+#: includes/controller/controller-cookie.php:1221
+msgid "Cookie popup 'read more' button label (leave empty for default)"
+msgstr ""
+"Popup cookie etichetă buton 'citește mai mult' (lăsați liber pentru modul "
+"implicit)"
+
+#: includes/controller/controller-cookie.php:1229
+msgid "Cookie popup 'change settings' button label (leave empty for default)"
+msgstr ""
+"Popup cookie etichetă buton 'schimbă setările' (lăsați liber pentru modul "
+"implicit)"
+
+#: includes/controller/controller-cookie.php:1237
+msgid "Display cookie popup on all pages"
+msgstr "Afișează notificarea cookie-urilor pe fiecare pagină"
+
+#: includes/controller/controller-cookie.php:1245
+msgid "Check if user is from European Union"
+msgstr "Verificați dacă utilizatorul este din Uniunea Europeană"
+
+#: includes/controller/controller-cookie.php:1253
+msgid "Select pages where to display the cookie popup"
+msgstr ""
+"Selectați paginile în care să afișați ferestrele pop-up pentru cookie-uri"
+
+#: includes/controller/controller-cookie.php:1263
+msgid "Choose how often cookie check should be performed"
+msgstr "Selectați cât de des să fie efectuată verificarea cookie-urilor"
+
+#: includes/controller/controller-cookie.php:1271
+msgid "Choose default level of new cookies"
+msgstr "Selectați nivelul implicit al cookie-urilor noi"
+
+#: includes/controller/controller-cookie.php:1279
+msgid "Cookies whitelist (never block these cookies, comma separated)"
+msgstr ""
+"Lista albă a cookie-urilor (nu blochează niciodată aceste cookie-uri "
+"separate prin virgulă)"
+
+#: includes/controller/controller-cookie.php:1287
+msgid "Block selected/all cookies until user consents"
+msgstr "Blochează toate cookie-urile până la aprobarea utilizatorului"
+
+#: includes/controller/controller-cookie.php:1303
+#: includes/controller/controller-cookie.php:1391
+msgid "Button shape"
+msgstr "Formă buton"
+
+#: includes/controller/controller-cookie.php:1311
+msgid "Button color"
+msgstr "Culoare buton"
+
+#: includes/controller/controller-cookie.php:1319
+#: includes/controller/controller-cookie.php:1423
+msgid "Button size"
+msgstr "Mărime buton"
+
+#: includes/controller/controller-cookie.php:1327
+msgid "Read more page"
+msgstr "Citește mai mult"
+
+#: includes/controller/controller-cookie.php:1335
+msgid "Read More Custom URL"
+msgstr "Citiți mai mult despre adrese URL personalizate"
+
+#: includes/controller/controller-cookie.php:1351
+msgid "Distance from border [px]"
+msgstr "Distanță de la margine [px]"
+
+#: includes/controller/controller-cookie.php:1359
+msgid "Box style"
+msgstr "Stil pătrat"
+
+#: includes/controller/controller-cookie.php:1367
+msgid "Box shape"
+msgstr "Formă pătrat"
+
+#: includes/controller/controller-cookie.php:1375
+msgid "Background color"
+msgstr "Culoare fundal"
+
+#: includes/controller/controller-cookie.php:1383
+msgid "Text color"
+msgstr "Culoare text"
+
+#: includes/controller/controller-cookie.php:1399
+msgid "Button background color"
+msgstr "Culoarea fundalului butonului"
+
+#: includes/controller/controller-cookie.php:1407
+msgid "Button border color"
+msgstr "Culoarea frontierei butonului"
+
+#: includes/controller/controller-cookie.php:1415
+msgid "Button text color"
+msgstr "Culoarea textului butonului"
+
+#: includes/controller/controller-cookie.php:1443
+msgid "Trigger cookie settings by"
+msgstr "Activați setările de cookie prin"
+
+#: includes/controller/controller-cookie.php:1451
+msgid "Trigger cookie settings icon"
+msgstr "Activați setările de cookie pictogramă"
+
+#: includes/controller/controller-cookie.php:1459
+msgid "Trigger cookie settings text"
+msgstr "Activați setările de cookie text"
+
+#: includes/controller/controller-cookie.php:1467
+msgid "Trigger cookie settings background color"
+msgstr "Activați setările de cookie culoare fundal"
+
+#: includes/controller/controller-cookie.php:1475
+msgid "Trigger cookie settings shape"
+msgstr "Activați setările de cookie formă"
+
+#: includes/controller/controller-cookie.php:1483
+msgid "Trigger cookie settings position"
+msgstr "Activați setările de cookie poziție"
+
+#: includes/controller/controller-cookie.php:1491
+msgid "Trigger cookie settings color"
+msgstr "Activați setările de cookie culoare"
+
+#: includes/controller/controller-cookie.php:1502
+msgid "Show advanced cookie popup always, even when the consent is given"
+msgstr ""
+"Arată întotdeauna cookie popup avansat, chiar dacă consimțământul este "
+"acordat"
+
+#: includes/controller/controller-cookie.php:1510
+msgid "Use advanced cookie groups popup"
+msgstr "Utilizați popup-ul grupurilor cookie avansate"
+
+#: includes/controller/controller-cookie.php:1518
+msgid "Advanced cookie groups popup header content"
+msgstr "Conținut antet popup al grupurilor de cookie avansate"
+
+#: includes/controller/controller-cookie.php:1528
+msgid "Cookie modal header color"
+msgstr "Culoare antet cookie modal"
+
+#: includes/controller/controller-cookie.php:1536
+msgid "Cookie modal text color"
+msgstr "Culoar text cookie modal"
+
+#: includes/controller/controller-cookie.php:1546
+msgid "<i>This website will</i> label"
+msgstr "<i>Acest site val</i> label"
+
+#: includes/controller/controller-cookie.php:1554
+msgid "<i>This website won't</i> label"
+msgstr "<i>Acest site nu va</i> label"
+
+#: includes/controller/controller-cookie.php:1562
+msgid "<i>Block all</i> label"
+msgstr "<i>Blochează toate</i> label"
+
+#: includes/controller/controller-cookie.php:1570
+msgid "<i>Essentials</i> label"
+msgstr "<i>Fundamental</i> label"
+
+#: includes/controller/controller-cookie.php:1578
+msgid "<i>Functionality</i> label"
+msgstr "<i>Funcționalitate</i> label"
+
+#: includes/controller/controller-cookie.php:1586
+msgid "<i>Analytics</i> label"
+msgstr "<i>Analiză</i> label"
+
+#: includes/controller/controller-cookie.php:1594
+msgid "<i>Advertising</i> label"
+msgstr "<i>Reclamă</i> label"
+
+#: includes/controller/controller-cookie.php:1605
+msgid "List of features available for Essential level (semicolon separated)"
+msgstr ""
+"Lista caracteristicilor disponibile pentru nivelul Fundamental (punct și "
+"virgulă separat)"
+
+#: includes/controller/controller-cookie.php:1613
+msgid ""
+"List of features not available for Essential level (semicolon separated)"
+msgstr ""
+"Lista caracteristicilor care nu sunt disponibile pentru nivelul Fundamental "
+"(punct și virgulă separat)"
+
+#: includes/controller/controller-cookie.php:1621
+msgid ""
+"List of features available for Functionality level (semicolon separated)"
+msgstr ""
+"Lista caracteristicilor disponibile pentru nivelul Funcționalitate (punct și "
+"virgulă separat)"
+
+#: includes/controller/controller-cookie.php:1629
+msgid ""
+"List of features not available for Functionality level (semicolon separated)"
+msgstr ""
+"Lista caracteristicilor care nu sunt disponibile pentru nivelul "
+"Funcționalitate (punct și virgulă separat)"
+
+#: includes/controller/controller-cookie.php:1637
+msgid "List of features available for Analytics level (semicolon separated)"
+msgstr ""
+"Lista caracteristicilor disponibile pentru nivelul Analiză (punct și virgulă "
+"separat)"
+
+#: includes/controller/controller-cookie.php:1645
+msgid ""
+"List of features not available for Analytics level (semicolon separated)"
+msgstr ""
+"Lista caracteristicilor care nu sunt disponibile pentru nivelul Analiză "
+"(punct și virgulă separat)"
+
+#: includes/controller/controller-cookie.php:1653
+msgid "List of features available for Advertising level (semicolon separated)"
+msgstr ""
+"Lista caracteristicilor disponibile pentru nivelul Reclamă (punct și virgulă "
+"separat)"
+
+#: includes/controller/controller-cookie.php:1661
+msgid ""
+"List of features not available for Advertising level (semicolon separated)"
+msgstr ""
+"Lista caracteristicilor care nu sunt disponibile pentru nivelul Reclamă "
+"(punct și virgulă separat)"
+
+#: includes/controller/controller-cookie.php:1671
+msgid ""
+"Advanced cookie popup 'save & close' button label (leave empty for default)"
+msgstr ""
+"Popup cookie avansat etichetă buton 'salvează & închide (lăsați liber pentru "
+"modul implicit)"
+
+#: includes/controller/controller-cookie.php:1679
+msgid "Select default privacy group"
+msgstr "Selectați grupul de confidențialitate implicit"
+
+#: includes/controller/controller-cookie.php:1687
+msgid "Select privacy group after user accepts cookies in the popup"
+msgstr ""
+"Selectați grupul de confidențialitate după ce utilizatorul acceptă cookie-"
+"urile în fereastra pop-up"
+
+#: includes/controller/controller-cookie.php:1695
+msgid "Reload page when user saves changes"
+msgstr "Reîncărcați pagina când utilizatorul salvează modificările"
+
+#: includes/controller/controller-cookie.php:1776
+msgid "Never"
+msgstr "Niciodată"
+
+#: includes/controller/controller-cookie.php:1777
+msgid "Weekly"
+msgstr "Săptămânal"
+
+#: includes/controller/controller-cookie.php:1778
+msgid "Monthly"
+msgstr "Lunar"
+
+#: includes/controller/controller-cookie.php:1779
+msgid "Quarterly"
+msgstr "Trimestrial"
+
+#: includes/controller/controller-cookie.php:1834
+msgid "Load"
+msgstr "Încarcă"
+
+#: includes/controller/controller-cookie.php:2053
+msgid "Classic"
+msgstr "Clasic"
+
+#: includes/controller/controller-cookie.php:2054
+msgid "Modern"
+msgstr "Modern"
+
+#: includes/controller/controller-cookie.php:2083
+#: includes/controller/controller-cookie.php:2113
+#: includes/controller/controller-cookie.php:2986
+msgid "Rounded"
+msgstr "Rotund"
+
+#: includes/controller/controller-cookie.php:2084
+#: includes/controller/controller-cookie.php:2114
+#: includes/controller/controller-cookie.php:2987
+msgid "Squared"
+msgstr "Pătrat"
+
+#: includes/controller/controller-cookie.php:2210
+msgid "Normal"
+msgstr "Normal"
+
+#: includes/controller/controller-cookie.php:2211
+msgid "Large"
+msgstr "Mare"
+
+#: includes/controller/controller-cookie.php:2752
+msgid "Front page"
+msgstr "Prima pagină"
+
+#: includes/controller/controller-cookie.php:2755
+msgid "Posts page"
+msgstr "Pagină de comentarii"
+
+#: includes/controller/controller-cookie.php:2780
+msgid "Bottom left"
+msgstr "Stânga jos"
+
+#: includes/controller/controller-cookie.php:2781
+msgid "Bottom right"
+msgstr "Dreapta jos"
+
+#: includes/controller/controller-cookie.php:2782
+msgid "Bottom panel"
+msgstr "Panoul inferior"
+
+#: includes/controller/controller-cookie.php:2783
+msgid "Top left"
+msgstr "Stânga sus"
+
+#: includes/controller/controller-cookie.php:2784
+msgid "Top right"
+msgstr "Dreapta sus"
+
+#: includes/controller/controller-cookie.php:2785
+msgid "Top panel"
+msgstr "Panoul superior"
+
+#: includes/controller/controller-cookie.php:2831
+msgid "Text Only"
+msgstr "Doar text"
+
+#: includes/controller/controller-cookie.php:2832
+msgid "Icon Only"
+msgstr "Numai Icon"
+
+#: includes/controller/controller-cookie.php:2833
+msgid "Icon and Text"
+msgstr "Pictogramă și text"
+
+#: includes/controller/controller-cookie.php:2913
+msgid "Top Left"
+msgstr "Stânga sus"
+
+#: includes/controller/controller-cookie.php:2914
+msgid "Top center"
+msgstr "Centru sus"
+
+#: includes/controller/controller-cookie.php:2915
+msgid "Top Right"
+msgstr "Dreapta sus"
+
+#: includes/controller/controller-cookie.php:2916
+msgid "Center Left"
+msgstr "Centru stânga"
+
+#: includes/controller/controller-cookie.php:2917
+msgid "Center Right"
+msgstr "Centru dreapta"
+
+#: includes/controller/controller-cookie.php:2918
+msgid "Bottom Left"
+msgstr "Stânga jos"
+
+#: includes/controller/controller-cookie.php:2919
+msgid "Bottom Center"
+msgstr "Centru jos"
+
+#: includes/controller/controller-cookie.php:2920
+msgid "Bottom Right"
+msgstr "Dreapta jos"
+
+#: includes/controller/controller-cookie.php:2985
+msgid "Round"
+msgstr "Rundă"
+
+#: includes/controller/controller-cookie.php:3093
+#: includes/model/model-group.php:73 includes/model/model-group.php:91
+msgid "Block all"
+msgstr "Blochează toate"
+
+#: includes/controller/controller-cookie.php:3094
+msgid "Essentials"
+msgstr "Fundamental"
+
+#: includes/controller/controller-cookie.php:3095
+#: includes/model/model-group.php:55 includes/model/model-group.php:88
+msgid "Functionality"
+msgstr "Funcționalitate"
+
+#: includes/controller/controller-cookie.php:3096
+#: includes/model/model-group.php:61 includes/model/model-group.php:89
+msgid "Analytics"
+msgstr "Analiză"
+
+#: includes/controller/controller-cookie.php:3097
+#: includes/model/model-group.php:67 includes/model/model-group.php:90
+msgid "Advertising"
+msgstr "Reclamă"
+
+#: includes/controller/controller-cookie.php:4398
+msgid "Every week"
+msgstr "În fiecare săptămână"
+
+#: includes/controller/controller-cookie.php:4402
+msgid "Every month"
+msgstr "În fiecare lună"
+
+#: includes/controller/controller-cookie.php:4406
+msgid "Every quarter"
+msgstr "În fiecare trimestru"
+
+#: includes/controller/controller-cookie.php:4477
+#, php-format
+msgid "Cookies detected: %s, Cookies saved: %s"
+msgstr "Au detectat cookie-urile:% s, Cookie-urile salvate:% s"
+
+#: includes/controller/controller-cookie.php:4549
+msgid ""
+"There was a problem with connecting to the cookie scanner. Please try again "
+"later."
+msgstr ""
+"A apărut o problemă la conectarea la scanerul cookie. Vă rugăm să încercați "
+"din nou mai târziu."
+
+#: includes/controller/controller-breach.php:87
+#: includes/controller/controller-breach.php:88
+#: includes/controller/controller-breach.php:116
+#: includes/views/admin/admin-forgotten.php:43
+#: includes/views/admin/admin-breach.php:36
+#: includes/views/admin/admin-data-access.php:47
+#: includes/views/admin/admin-rectification.php:47
+msgid "Data Breach"
+msgstr "Încălcarea datelor"
+
+#: includes/controller/controller-breach.php:141
+msgid "Collect user emails from services"
+msgstr "Colecționează de la servicii adresele e-mail ale utilizatorilor"
+
+#: includes/controller/controller-breach.php:212
+#, php-format
+msgid "[Ultimate GDPR] Data breach information from %s"
+msgstr "[Ultimate GDPR] Informație de încălcare a datelor de la %s"
+
+#: includes/controller/controller-breach.php:215
+msgid "There was a data breach on our page..."
+msgstr "A avut loc o încălcare a datelor pe pagina noastră…"
+
+#: includes/controller/controller-pseudonymization.php:110
+#: includes/controller/controller-pseudonymization.php:111
+#: includes/controller/controller-pseudonymization.php:134
+msgid "Pseudonymization"
+msgstr "Pseudonimizare"
+
+#: includes/controller/controller-pseudonymization.php:125
+#: includes/controller/controller-pseudonymization.php:264
+msgid "Encryption is not possible. Please check your openssl library."
+msgstr "Criptarea nu este posibilă. Vă rugăm verificați open ssl library."
+
+#: includes/controller/controller-pseudonymization.php:143
+msgid "Warning"
+msgstr "Avertizare"
+
+#: includes/controller/controller-pseudonymization.php:165
+msgid "Automatically encrypt new data"
+msgstr "Date noi criptate automat"
+
+#: includes/controller/controller-pseudonymization.php:173
+msgid ""
+"Automatically decrypt all data on the fly (if you have anything encrypted, "
+"this is recommended)"
+msgstr ""
+"Decriptarea automată a tuturor datelor de pe fly (dacă aveți orice criptată, "
+"această opțiune este recomandată)"
+
+#: includes/controller/controller-pseudonymization.php:181
+msgid "Select data to encrypt"
+msgstr "Selectează data pentru criptare"
+
+#: includes/controller/controller-pseudonymization.php:229
+msgid ""
+"This feature is experimental and may lead to irreversible data lost! After "
+"encryption, it may be impossible for anyone to decrypt your data. "
+msgstr ""
+"Această opțiune este experimentală și poate duce la pierderea ireversibilă a "
+"datelor! După criptare, poate fi imposibilă decriptarea datelor dvs. "
+
+#: includes/controller/controller-pseudonymization.php:241
+msgid ""
+"Pseudonymization feature allows you to encrypt some of the data stored in "
+"the database. That way, if anyone got access to your database, the user's "
+"data would be pseudonymized. Database contents are permanently encrypted and "
+"can be decrypted on the fly when accessed by users. You can also permanently "
+"decrypt all your contents."
+msgstr ""
+"Funcția de pseudonimizare vă permite să criptați unele dintre datele stocate "
+"în baza de date. În acest fel, dacă cineva accesează baza dvs. de date, "
+"datele utilizatorilor vor fi pseudonimizate. Conținutul bazei de date este "
+"criptat permanent și poate fi decriptat în timp ce este accesat de către "
+"utilizatori. Puteți, de asemenea, să vă decriptați definitiv întregul "
+"conținut."
+
+#: includes/controller/controller-pseudonymization.php:244
+msgid "How to use:"
+msgstr "Cum se utilizează:"
+
+#: includes/controller/controller-pseudonymization.php:246
+msgid "1. Make a backup"
+msgstr "1. Faceți un backup"
+
+#: includes/controller/controller-pseudonymization.php:248
+msgid "2. Select which data to encrypt"
+msgstr "2. Selectați datele pentru criptare"
+
+#: includes/controller/controller-pseudonymization.php:250
+msgid ""
+"3. (Optionally) Select 'automatically encrypt new data' for continuous "
+"encryption of all incoming data"
+msgstr ""
+"3. (Opțional) Selectați 'criptarea automată a datelor noi' pentru criptarea "
+"continuă a datelor care noi intrate"
+
+#: includes/controller/controller-pseudonymization.php:252
+msgid "4. Click 'Save changes'"
+msgstr "4. Faceți click pe 'Salvarea modificărilor'"
+
+#: includes/controller/controller-pseudonymization.php:254
+msgid ""
+"5. (Optionally) Click 'Encrypt selected' to encrypt all current data which "
+"has not been yet encrypted"
+msgstr ""
+"5. (Opțional) Faceți click pe 'Criptare' pentru a cripta toate datele "
+"existente care nu au fost criptate"
+
+#: includes/controller/controller-pseudonymization.php:278
+msgid "Data encrypted successfully"
+msgstr "Criptarea datelor efectuată cu succes"
+
+#: includes/controller/controller-pseudonymization.php:288
+msgid "Decryption is not possible. Please check your openssl library."
+msgstr "Decriptarea nu este posibilă. Vă rugăm verificați openssl library."
+
+#: includes/controller/controller-pseudonymization.php:302
+msgid "Data decrypted successfully"
+msgstr "Decriptarea datelor efectuată cu succes"
+
+#: includes/shortcode/shortcode-privacy-policy.php:23
+msgid "First or Third party"
+msgstr "Prima sau Terța parte"
+
+#: includes/shortcode/shortcode-privacy-policy.php:26
+msgid "Can be blocked"
+msgstr "Poate fi blocat"
+
+#: includes/shortcode/shortcode-privacy-policy.php:29
+msgid "Session or Persistent"
+msgstr "Sesiune sau Persistentă"
+
+#: includes/service/service-quform.php:87
+#: includes/service/service-mailster.php:122
+#, php-format
+msgid "There were problems forgetting data for user: %s"
+msgstr "A fost problemă în uitarea datelor utilizatorului: %s"
+
+#: includes/service/service-quform.php:115
+#: includes/service/service-bbpress.php:162
+#: includes/service/service-eform.php:128
+#: includes/service/service-formidable-forms.php:135
+#: includes/service/service-contact-form-7.php:74
+#: includes/service/service-buddypress.php:334
+#: includes/service/service-mailster.php:150
+#, php-format
+msgid "[%s] Description"
+msgstr "[%s] Descriere"
+
+#: includes/service/service-quform.php:124
+#: includes/service/service-bbpress.php:170
+#: includes/service/service-eform.php:137
+#: includes/service/service-gravity-forms.php:105
+#: includes/service/service-arforms.php:138
+#: includes/service/service-events-manager.php:111
+#: includes/service/service-formidable-forms.php:144
+#: includes/service/service-contact-form-7.php:83
+#: includes/service/service-buddypress.php:342
+#, php-format
+msgid "[%s] Inject consent checkbox to all forms"
+msgstr "[%s] Inserare casetă de bifat pentru toate formulare"
+
+#: includes/service/service-quform.php:135
+#: includes/service/service-mailster.php:170
+#, php-format
+msgid "[%s] Inject consent checkbox as the first field instead of the last"
+msgstr ""
+"[%s] Se injectează caseta de consimțământ ca primul câmp în loc de ultimul"
+
+#: includes/service/service-quform.php:308
+msgid "Quform gathers data entered by users in forms"
+msgstr "Quform colectează datele introduse de utilizatori în formulare"
+
+#: includes/service/service-bbpress.php:186
+#: includes/service/service-buddypress.php:352
+#, php-format
+msgid ""
+"[%s] Enter the existing user's email whom the posts will be reassigned to "
+"(or leave empty to delete them when forgetting)"
+msgstr ""
+"[%s] Introduceți adresa de e-mail al unui utilizator existent al cărui "
+"postări vor fi realocate (sau lăsați gol pentru a le șterge când se uită)"
+
+#: includes/service/service-bbpress.php:253
+msgid "bbPress gathers users activity in forums"
+msgstr ""
+"buddyPress colectează activitățile utilizatorilor în pagini de profil și "
+"grupuri"
+
+#: includes/service/service-bbpress.php:284
+msgid "<strong>ERROR</strong>: Please consent to storage fo your data"
+msgstr "<strong> EROARE </strong>: vă rugăm să consimțiți să stocați datele"
+
+#: includes/service/service-wp-job-manager.php:50
+#, php-format
+msgid "Could not delete posts for user: %s"
+msgstr "Nu s-au putut șterge postările pentru utilizator: %s"
+
+#: includes/service/service-wp-job-manager.php:78
+msgid "[WP Job Manager] Description"
+msgstr "[WP Job Manager] Descriere"
+
+#: includes/service/service-wp-user.php:35
+#: includes/service/service-wp-user.php:79
+msgid "WP User Data"
+msgstr "Date utilizator WP"
+
+#: includes/service/service-wp-user.php:61
+#: includes/service/service-buddypress.php:111
+#, php-format
+msgid "Could not delete user data for user: %s"
+msgstr "Nu se pot șterge datele pentru utilizatorul: %s"
+
+#: includes/service/service-wp-user.php:95
+msgid "[WP User Data] Description"
+msgstr "[WP User Data] Descriere"
+
+#: includes/service/service-wp-user.php:103
+msgid "[WP User Data] Pseudonymize first and last name"
+msgstr "[WP User Data] Pseudonimizează numele și prenumele"
+
+#: includes/service/service-wp-user.php:119
+msgid "[WP User] Inject consent checkbox to User network signup form fields"
+msgstr ""
+"[Utilizator WP] Inserare casetă de bifat consimțământ pentru câmpurile "
+"formularului de înscriere a rețelei de utilizator"
+
+#: includes/service/service-wp-user.php:127
+msgid "[WP User] Inject consent checkbox to User register form fields"
+msgstr ""
+"[Utilizator WP] Inserare casetă de bifat consimțământ pentru câmpurile "
+"formularului de înregistrare a utilizatorilor"
+
+#: includes/service/service-wp-user.php:135
+msgid "[WP User] Inject consent checkbox to lost password form fields"
+msgstr ""
+"[Utilizator WP] Inserare casetă de bifat consimțământ pentru câmpurile "
+"formularului pentru parola pierdută"
+
+#: includes/service/service-wp-user.php:295
+#: includes/service/service-wp-user.php:315
+#: includes/service/service-wp-user.php:335
+#: includes/service/service-woocommerce.php:403
+msgid "Consent is required"
+msgstr "Consimțământul necesar"
+
+#: includes/service/service-wp-user.php:388
+msgid "WordPress user data stored as user meta data in database"
+msgstr "Datele de utilizator WordPress stocate ca date meta în baza de date"
+
+#: includes/service/service-wordfence.php:70
+#, php-format
+msgid ""
+"[%s] Block Wordfence cookies when a user doesn't accept Functionality cookies"
+msgstr ""
+"[%s] Blochează cookie-urile Wordfence când utilizatorul nu acceptă cookie-"
+"uri funcționale"
+
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:159
+msgid "[WP Simple Paypal Shopping Cart] Pseudonymize user order data"
+msgstr ""
+"[WP Simple Paypal Shopping Cart] Pseudonimizează datele de comandă ale "
+"utilizatorilor"
+
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:242
+msgid "WP Simple Paypal Shopping Cart gathers consumer orders data"
+msgstr ""
+"Coșul de cumpărături WP Simplu Paypal colectează datele despre comenzile "
+"consumatorilor"
+
+#: includes/service/service-youtube.php:100
+msgid "[Youtube] Remove youtube iframes until Necessary cookies accepted"
+msgstr ""
+"[Youtube] Eliminarea iframe-urilor youtube până la acceptarea cookie-urilor "
+"strict necesare"
+
+#: includes/service/service-youtube.php:135
+msgid "Youtube creates cookies"
+msgstr "Youtube creează cookie-uri"
+
+#: includes/service/service-facebook-pixel.php:101
+#, php-format
+msgid ""
+"[%s] Block Facebook Pixel cookies when a user doesn't accept Advertising "
+"cookies"
+msgstr ""
+"[%s] Blochează cookie-urile Facebook Pixel când utilizatorul nu acceptă "
+"cookie-urile de Reclamă"
+
+#: includes/service/service-wp-posts.php:29
+msgid "WordPress Posts"
+msgstr "WordPress Posts"
+
+#: includes/service/service-wp-posts.php:82
+#, php-format
+msgid "Could not update post data for posts: %s"
+msgstr "Nu se pot actualiza datele postărilor: %s"
+
+#: includes/service/service-wp-posts.php:100
+msgid "[WP Posts] Delete posts instead of reassigning to a different user?"
+msgstr ""
+"[WP Posts] Ștergeți postările în loc să le realocați pentru un alt "
+"utilizator?"
+
+#: includes/service/service-wp-posts.php:116
+msgid "[WordPress Posts] Description"
+msgstr "[WordPress Posts] Descriere"
+
+#: includes/service/service-wp-posts.php:124
+msgid ""
+"[WP Posts] Enter the user email whom the posts will be reassigned to "
+"(default is admin)"
+msgstr ""
+"[WP Posts] Introduceți adresa de e-mail al utilizatorului al cărui postări "
+"vor fi realocate (implicit e adminul)"
+
+#: includes/service/service-wp-posts.php:182
+msgid "WordPress posts author data"
+msgstr "Date de autori postări WordPress"
+
+#: includes/service/service-eform.php:233
+msgid "eForm gathers data entered by users in forms"
+msgstr "eForm adună datele introduse de utilizatori în formulare"
+
+#: includes/service/service-mailchimp.php:76
+msgid "[Mailchimp] Description"
+msgstr "[Mailchimp] Descriere"
+
+#: includes/service/service-mailchimp.php:84
+msgid "[Mailchimp] Inject consent checkbox to order fields"
+msgstr ""
+"[Mailchimp] Inserare casetă de bifat de aprobare pentru câmpurile de comandă"
+
+#: includes/service/service-mailchimp.php:92
+msgid ""
+"[Mailchimp] Inject consent checkbox as the first field instead of the last"
+msgstr ""
+"[Mailchimp] Inserare casetă de bifat de aprobare în primul câmp în loc de "
+"ultimul"
+
+#: includes/service/service-mailchimp.php:177
+msgid "Consent is mandatory to proceed"
+msgstr "Aprobarea este obligatorie pentru a continua"
+
+#: includes/service/service-mailchimp.php:187
+msgid "Mailchimp gathers data entered by users in forms"
+msgstr "Mailchimp strânge datele introduse de utilizatori în formulare"
+
+#: includes/service/service-gravity-forms.php:96
+msgid "[Gravity Forms] Description"
+msgstr "[Gravity Forms] Descriere"
+
+#: includes/service/service-gravity-forms.php:115
+msgid ""
+"[Gravity Forms] Inject consent checkbox as the first field instead of the "
+"last"
+msgstr ""
+"[Gravity Forms] Inserare casetă de bifat de aprobare în primul câmp în loc "
+"de ultimul"
+
+#: includes/service/service-gravity-forms.php:123
+msgid "Gravity Forms"
+msgstr "Gravity Forms"
+
+#: includes/service/service-gravity-forms.php:253
+#: includes/service/service-gravity-forms.php:254
+#: includes/views/admin/admin-plugins.php:94
+#: includes/views/admin/admin-plugins.php:112
+msgid "Yes"
+msgstr "Da"
+
+#: includes/service/service-gravity-forms.php:308
+msgid "Gravity forms gathers data entered by users in forms"
+msgstr "Gravity Forms strânge datele introduse de utilizatori în formulare"
+
+#: includes/service/service-arforms.php:129
+msgid "[ARForms] Description"
+msgstr "[ARForms] Descriere"
+
+#: includes/service/service-arforms.php:148
+msgid "ARForms"
+msgstr "ARForms"
+
+#: includes/service/service-arforms.php:260
+msgid "ARForms gathers data entered by users in forms"
+msgstr "ARForms colectează datele introduse de utilizatori în formulare"
+
+#: includes/service/service-woocommerce.php:74
+#: includes/service/service-woocommerce.php:149
+#: includes/service/service-woocommerce.php:181
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/service/service-woocommerce.php:157
+msgid "[WooCommerce] Description"
+msgstr "[WooCommerce] Descriere"
+
+#: includes/service/service-woocommerce.php:165
+msgid "[WooCommerce] Inject consent checkbox to order fields"
+msgstr ""
+"[WooCommerce] Inserare casetă de bifat de aprobare pentru câmpurile de "
+"comandă"
+
+#: includes/service/service-woocommerce.php:173
+msgid "[WooCommerce] Inject consent checkbox to account forms"
+msgstr "[WooCommerce] Inserare casetă de aprobare pentru formularele de cont"
+
+#: includes/service/service-woocommerce.php:189
+msgid "[WooCommerce] Pseudonymize first and last name"
+msgstr "[WooCommerce] Pseudonimizează numele și prenumele"
+
+#: includes/service/service-woocommerce.php:197
+msgid "[WooCommerce] Pseudonymize address information"
+msgstr "[WooCommerce] Pseudonimizează informațiile legate de adresă"
+
+#: includes/service/service-woocommerce.php:205
+msgid "[WooCommerce] Pseudonymize billing email"
+msgstr "[WooCommerce] Pseudonimizează adresa de e-mail pentru facturare"
+
+#: includes/service/service-woocommerce.php:386
+#: includes/service/service-events-manager.php:171
+#: includes/service/service-formidable-forms.php:246
+msgid "Consent"
+msgstr "Aprobare"
+
+#: includes/service/service-woocommerce.php:488
+msgid "WooCommerce gathers data entered by users in shop orders"
+msgstr "WooCommerce strânge datele introduse de utilizatori în comenzi"
+
+#: includes/service/service-events-manager.php:102
+msgid "[Events Manager] Description"
+msgstr "[Events Manager] Descriere"
+
+#: includes/service/service-events-manager.php:170
+#, php-format
+msgid "%s is required."
+msgstr "%s este necesar."
+
+#: includes/service/service-events-manager.php:185
+msgid "Events Manager gathers data entered by users in booking order forms"
+msgstr ""
+"Events Manager strânge datele introduse de utilizatori în formularele de "
+"rezervare"
+
+#: includes/service/service-formidable-forms.php:154
+msgid ""
+"[Formidable Forms] Inject consent checkbox as the first field instead of the "
+"last"
+msgstr ""
+"[Formidable Forms] Inserare casetă de bifat de aprobare în primul câmp în "
+"loc de ultimul"
+
+#: includes/service/service-formidable-forms.php:222
+#: includes/service/service-formidable-forms.php:265
+msgid "This field is required"
+msgstr "Acest câmp este obligatoriu"
+
+#: includes/service/service-formidable-forms.php:311
+msgid "Formidable Forms gathers data entered by users in forms"
+msgstr "Formidable Forms strânge datele introduse de utilizatori în formulare"
+
+#: includes/service/service-addthis.php:93
+#, php-format
+msgid ""
+"[%s] Block Addthis cookies when a user doesn't accept Functionality cookies"
+msgstr ""
+"[%s] Blochează cookie-urile Addthis când utilizatorul nu acceptă cookie-"
+"urile de Funcționalitate"
+
+#: includes/service/service-contact-form-7.php:93
+msgid ""
+"[Contact Form 7] Inject consent checkbox as the first field instead of the "
+"last"
+msgstr ""
+"[Contact Form 7] Inserare casetă de bifat de aprobare în primul câmp în loc "
+"de ultimul"
+
+#: includes/service/service-contact-form-7.php:169
+msgid "Contact Form 7 gathers data entered by users in forms"
+msgstr "Contact Form 7 strânge datele introduse de utilizatori în formulare"
+
+#: includes/service/service-buddypress.php:147
+#: includes/service/service-buddypress.php:159
+#: includes/service/service-buddypress.php:171
+#: includes/service/service-buddypress.php:183
+#: includes/service/service-buddypress.php:195
+#: includes/service/service-buddypress.php:218
+#: includes/service/service-buddypress.php:229
+#: includes/service/service-buddypress.php:240
+#: includes/service/service-buddypress.php:251
+#: includes/service/service-buddypress.php:262
+#, php-format
+msgid "Could not reassign user data for user: %s"
+msgstr "Nu pot fi realocate datele pentru utilizatorul: %s"
+
+#: includes/service/service-buddypress.php:420
+msgid "BuddyPress gathers users activity in profile pages and groups"
+msgstr ""
+"BuddyPress colectează activitățile utilizatorilor în pagini de profil și "
+"grupuri"
+
+#: includes/service/service-mailster.php:159
+#, php-format
+msgid "[%s] Inject consent checkbox to subscribe forms"
+msgstr "[%s] Bifați caseta de consimțământ pentru a vă abona la formulare"
+
+#: includes/service/service-mailster.php:181
+#, php-format
+msgid "[%s] Inject consent checkbox to unsubscribe forms"
+msgstr "[%s] Bifați caseta de aprobare pentru a dezabona formularele"
+
+#: includes/service/service-mailster.php:192
+msgid "Mailster"
+msgstr "Titlu Mail"
+
+#: includes/service/service-mailster.php:389
+msgid "Consent is missing"
+msgstr "Conținutul lipsește"
+
+#: includes/service/service-mailster.php:400
+msgid "Mailster collects signed in user data"
+msgstr "Mailster colectează datele utilizatorilor autentificați"
+
+#: includes/service/service-wp-comments.php:40
+msgid "WP Comments"
+msgstr "WP Comments"
+
+#: includes/service/service-wp-comments.php:71
+msgid "Anonymous"
+msgstr "Anonim"
+
+#: includes/service/service-wp-comments.php:83
+#, php-format
+msgid "Could not update comment data for comments: %s"
+msgstr ""
+"Nu se pot actualiza datele de comentarii pentru următoarele comentarii: %s"
+
+#: includes/service/service-wp-comments.php:109
+msgid "[WP Comments] Description"
+msgstr "[WP Comments] Descriere"
+
+#: includes/service/service-wp-comments.php:117
+msgid "[WP Comments] Inject consent checkbox to comments fields"
+msgstr ""
+"[WP Comments] Inserare casetă de bifat de aprobare pentru câmpurile de "
+"comentarii"
+
+#: includes/service/service-wp-comments.php:179
+msgid "Please give consent to collect your data"
+msgstr "Vă rugăm să dați acordul pentru colectarea datelor dvs"
+
+#: includes/service/service-wp-comments.php:188
+msgid "WordPress Comments are data entered by users in comments"
+msgstr "WordPress Comments sunt date introduse de utilizatori în comentarii"
+
+#: includes/model/model-group.php:48 includes/model/model-group.php:87
+msgid "Essential"
+msgstr "Fundamental"
+
+#: vendor/optimus-prime-plugin-update/class-ct-optimus-prime-plugin-update.php:94
+msgid "Downloading update..."
+msgstr "Descărcarea actualizării..."
+
+#: vendor/optimus-prime-plugin-update/class-ct-optimus-prime-plugin-update.php:134
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2641
+#: includes/views/admin/admin-plugins.php:42
+msgid "Plugin"
+msgstr "Plugin"
+
+#: vendor/optimus-prime-plugin-update/class-ct-optimus-prime-plugin-update.php:230
+msgid "Could not get new version info from OP"
+msgstr "Nu se pot obține informații despre noua versiune de la OP"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:337
+msgid "Install Required Plugins"
+msgstr "Instalarea plugin-urilor obligatorii"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:338
+msgid "Install Plugins"
+msgstr "Instalare plugin"
+
+#. translators: %s: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:340
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Instalare plugin: %s"
+
+#. translators: %s: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:342
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr "Actualizare plugin: %s"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:343
+msgid "Something went wrong with the plugin API."
+msgstr "Ceva n-a mers bine în plugin-ul API."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:344
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Această temă necesită următorul plugin: %1$s."
+msgstr[1] "Această temă necesită următoarele pluginuri: %1$s."
+msgstr[2] "Această temă necesită următoarele pluginuri: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:350
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Această temă recomandă următorul plugin: %1$s."
+msgstr[1] "Această temă recomandă următoarele pluginuri: %1$s."
+msgstr[2] "Această temă recomandă următoarele pluginuri: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:356
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+"Următorul plugin trebuie actualizat la cea mai recentă versiune pentru a "
+"asigura compatibilitatea maximă cu această temă: %1$s."
+msgstr[1] ""
+"Următoarele pluginuri trebuie actualizate la cea mai recentă versiune pentru "
+"a asigura compatibilitatea maximă cu această temă: %1$s."
+msgstr[2] ""
+"Următoarele pluginuri trebuie actualizate la cea mai recentă versiune pentru "
+"a asigura compatibilitatea maximă cu această temă: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:362
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "Există o actualizare disponibilă pentru: %1$s."
+msgstr[1] "Există actualizări disponibile pentru următoarele pluginuri: %1$s."
+msgstr[2] "Există actualizări disponibile pentru următoarele pluginuri: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:368
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "Următorul plugin necesar este momentan inactiv: %1$s."
+msgstr[1] "Următoarele pluginuri necesare sunt în prezent inactive: %1$s."
+msgstr[2] "Următoarele pluginuri necesare sunt în prezent inactive: %1$s."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:374
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "Următorul plugin recomandat este momentan inactiv: %1$s."
+msgstr[1] "Următoarele pluginuri recomandate sunt în prezent inactive: %1$s."
+msgstr[2] "Următoarele pluginuri recomandate sunt în prezent inactive: %1$s."
+
+#. translators: 1: plugin name(s).
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:380
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Începeți instalarea plugin-ului"
+msgstr[1] "Începeți instalarea plugin-ului"
+msgstr[2] "Începeți instalarea plugin-ului"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:385
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "Începeți actualizarea plugin-ului"
+msgstr[1] "Începeți actualizarea plugin-ului"
+msgstr[2] "Începeți actualizarea plugin-ului"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:390
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Începeți activarea plugin-ului"
+msgstr[1] "Începeți activarea plugin-ului"
+msgstr[2] "Începeți activarea plugin-ului"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:395
+msgid "Return to Required Plugins Installer"
+msgstr "Înapoi la Instalarea Plugin-urilor solicitate"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:396
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:919
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3675
+msgid "Return to the Dashboard"
+msgstr "Înapoi la Dashboard"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:397
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3254
+msgid "Plugin activated successfully."
+msgstr "Plugin activat cu succes."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:398
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3047
+msgid "The following plugin was activated successfully:"
+msgstr "Următorul plugin a fost activat cu succes:"
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:400
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "Nici o acțiune efectuată. Plugin-ul %1$s a fost deja activat."
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+"Plugin-ul nu a fost activat. O versiune mai nouă de %s este necesară pentru "
+"această temă. Vă rugăm actualizați plugin-ul."
+
+#. translators: 1: dashboard link.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:404
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Toate plugin-urile instalate și activate cu succes. %1$s"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:405
+msgid "Dismiss this notice"
+msgstr "Respingeți această notificare"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:406
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+"Sunt disponibile unul sau mai multe plugin-uri obligatorii sau recomandate "
+"pentru a fi instalate, actualizate sau activate."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:407
+msgid "Please contact the administrator of this site for help."
+msgstr "Pentru ajutor vă rugăm contactați administratorul site-ului."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:610
+#: vendor/optimus-prime-plugin-update/settings.php:80
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "Acest plugin trebuie actualizat pentru a fi compatibil cu tema dvs."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:611
+#: vendor/optimus-prime-plugin-update/settings.php:81
+msgid "Update Required"
+msgstr "Actualizare necesară"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:728
+msgid "Set the parent_slug config variable instead."
+msgstr "Setați parent_slug config variable."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:922
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1053
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2627
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3678
+msgid "Return to Dashboard"
+msgstr "Înapoi la Dashboard"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1026
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+"Pachetul de remote plugin nu conține o mapă cu slug-ul dorit și redenumirea "
+"nu a funcționat."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1026
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1029
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+"Vă rugăm să luați legătura cu furnizorul plugin-ului ș rugați-l să "
+"împacheteze plugin-ul conform instrucțiunilor WordPress."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1029
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+"Pachetul de remote plugin conține mai mult decât un document, dar aceste "
+"documente nu sunt comprimate într-un fișier."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1213
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3043
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "și"
+
+#. translators: %s: version number
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2076
+#, php-format
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2367
+msgid "Required"
+msgstr "Necesar"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2370
+msgid "Recommended"
+msgstr "Recomandat"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2386
+msgid "WordPress Repository"
+msgstr "Repertoriu WordPress"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2389
+msgid "External Source"
+msgstr "Sursă externă"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2392
+msgid "Pre-Packaged"
+msgstr "Pre-împachetat"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2409
+msgid "Not Installed"
+msgstr "Nu este instalat"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2413
+msgid "Installed But Not Activated"
+msgstr "Instalat dar nu este activat"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2415
+msgid "Active"
+msgstr "Activ"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2421
+msgid "Required Update not Available"
+msgstr "Actualizarea necesară nu este disponibilă"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2424
+msgid "Requires Update"
+msgstr "Necesită actualizare"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2427
+msgid "Update recommended"
+msgstr "Actualizare recomandată"
+
+#. translators: 1: install status, 2: update status
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2436
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2482
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "Toate <span class=\"count\">(%s)</span>"
+msgstr[1] "Toate <span class=\"count\">(%s)</span>"
+msgstr[2] "Toate <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2486
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] "Pentru instalare <span class=\"count\">(%s)</span>"
+msgstr[1] "Pentru instalare <span class=\"count\">(%s)</span>"
+msgstr[2] "Pentru instalare <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2490
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] "Actualizare disponibilă <span class=\"count\">(%s)</span>"
+msgstr[1] "Actualizare disponibilă <span class=\"count\">(%s)</span>"
+msgstr[2] "Actualizare disponibilă <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2494
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] "Pentru activare <span class=\"count\">(%s)</span>"
+msgstr[1] "Pentru activare <span class=\"count\">(%s)</span>"
+msgstr[2] "Pentru activare <span class=\"count\">(%s)</span>"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2576
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "necunoscut"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2584
+msgid "Installed version:"
+msgstr "Versiune instalată:"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2592
+msgid "Minimum required version:"
+msgstr "Versiune minimă necesară:"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2604
+msgid "Available version:"
+msgstr "Versiune disponibilă:"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2642
+msgid "Source"
+msgstr "Sursă"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2643
+msgid "Type"
+msgstr "Tip"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2647
+msgid "Version"
+msgstr "Versiune"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2648
+msgid "Status"
+msgstr "Status"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2697
+#, php-format
+msgid "Install %2$s"
+msgstr "Instalare %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2702
+#, php-format
+msgid "Update %2$s"
+msgstr "Actualizare %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2708
+#, php-format
+msgid "Activate %2$s"
+msgstr "Activare %2$s"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2778
+msgid "Upgrade message from the plugin author:"
+msgstr "Actualizare mesaj de la autorul plugin-ului:"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2811
+msgid "Install"
+msgstr "Instalare"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2818
+msgid "Update"
+msgstr "Actualizați"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2821
+msgid "Activate"
+msgstr "Activare"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+"Nu au fost selectate plugin-uri pentru instalare. Nu s-a luat nici o acțiune."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2854
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+"Nu au fost selectate plugin-uri pentru actualizare. Nu s-a luat nici o "
+"acțiune."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be installed at this time."
+msgstr "Momentan nu sunt plugin-uri disponibile pentru instalare."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2897
+msgid "No plugins are available to be updated at this time."
+msgstr "Momentan nu sunt plugin-uri disponibile pentru actualizare."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3003
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+"Nu au fost selectate plugin-uri pentru activare. Nu s-a luat nici o acțiune."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3029
+msgid "No plugins are available to be activated at this time."
+msgstr "Nu sunt plugin-uri disponibile pentru activare."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3253
+msgid "Plugin activation failed."
+msgstr "Activarea plugin-ului eșuată."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3593
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Actualizarea Plugin-ului %1$s (%2$d/%3$d)"
+
+#. translators: 1: plugin name, 2: error message.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3596
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "A intervenit o eroare în instalarea %1$s: <strong>%2$s</strong>."
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3598
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "Instalarea %1$s eșuată."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3602
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"Procesul de instalare și activare a început. Acest proces poate dura un timp "
+"mai îndelungat pe unele host-uri, vă rugăm să aveți răbdare."
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3604
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s instalat și activat cu succes."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3605
+msgid "All installations and activations have been completed."
+msgstr "Toate instalările și activările au fost finalizate."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3607
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalarea și Activarea Plugin-ului %1$s (%2$d/%3$d)"
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3610
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"Procesul de instalare a început. Acest proces poate dura un timp mai "
+"îndelungat pe unele host-uri, vă rugăm să aveți răbdare."
+
+#. translators: 1: plugin name.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3612
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s instalat cu succes."
+
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3613
+msgid "All installations have been completed."
+msgstr "Toate instalările au fost finalizate."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3615
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalare Plugin %1$s (%2$d/%3$d)"
+
+#: includes/views/admin/admin-breach-send.php:17
+msgid "Emails were sent."
+msgstr "E-mailuri trimise."
+
+#: includes/views/admin/admin-breach-send.php:25
+msgid "You will send emails to the following emails:"
+msgstr "Urmează să trimiteți e-mailuri către următoarele adrese:"
+
+#: includes/views/admin/admin-breach-send.php:40
+msgid "Send"
+msgstr "Trimite"
+
+#: includes/views/admin/admin-forgotten.php:31
+#: includes/views/admin/admin-cookie.php:22
+#: includes/views/admin/admin-pseudonymization.php:31
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:22
+#: includes/views/admin/admin-breach.php:22
+#: includes/views/admin/admin-policy.php:22
+#: includes/views/admin/admin-services.php:22
+#: includes/views/admin/admin-data-access.php:33
+#: includes/views/admin/admin-terms.php:23
+#: includes/views/admin/admin-rectification.php:33
+#: includes/views/admin/admin-plugins.php:22
+msgid "Settings"
+msgstr "Setări"
+
+#: includes/views/admin/admin-forgotten.php:65
+msgid "Right To Be Forgotten request list"
+msgstr "Listă Dreptul de a fi Uitat"
+
+#: includes/views/admin/admin-forgotten.php:70
+#: includes/views/admin/admin-data-access.php:76
+#: includes/views/admin/admin-rectification.php:74
+msgid "User ID"
+msgstr "ID Utilizator"
+
+#: includes/views/admin/admin-forgotten.php:71
+#: includes/views/admin/admin-data-access.php:77
+#: includes/views/admin/admin-rectification.php:75
+msgid "Email"
+msgstr "E-mail"
+
+#: includes/views/admin/admin-forgotten.php:72
+msgid "Services to forget (user selected)"
+msgstr "Servicii pentru uitare (utilizator selectat)"
+
+#: includes/views/admin/admin-forgotten.php:73
+#: includes/views/admin/admin-data-access.php:78
+#: includes/views/admin/admin-rectification.php:76
+msgid "Date of request"
+msgstr "Data solicitării"
+
+#: includes/views/admin/admin-forgotten.php:74
+msgid "Date of mail sent"
+msgstr "Data e-mailului trimis"
+
+#: includes/views/admin/admin-forgotten.php:75
+msgid "Email user / remove request"
+msgstr "E-mail utilizator / eliminare solicitare"
+
+#: includes/views/admin/admin-forgotten.php:88
+#: includes/views/admin/admin-data-access.php:94
+#: includes/views/admin/admin-rectification.php:92
+msgid "Not registered"
+msgstr "Neînregistrat"
+
+#: includes/views/admin/admin-forgotten.php:95
+msgid "Select all"
+msgstr "Selectare tot"
+
+#: includes/views/admin/admin-forgotten.php:114
+#, php-format
+msgid "Forgotten at %s"
+msgstr "Uitat %s"
+
+#: includes/views/admin/admin-forgotten.php:151
+msgid "Forget and notify selected users"
+msgstr "A uita și notifica utilizatorii selectați"
+
+#: includes/views/admin/admin-forgotten.php:153
+#: includes/views/admin/admin-data-access.php:126
+#: includes/views/admin/admin-rectification.php:124
+msgid "Remove selected requests from list"
+msgstr "Eliminarea de pe listă a solicitărilor selectate"
+
+#: includes/views/admin/admin-forgotten.php:155
+#: includes/views/admin/admin-data-access.php:128
+#: includes/views/admin/admin-rectification.php:126
+msgid "Remove all sent requests from list"
+msgstr "Eliminarea de pe listă a solicitărilor trimise"
+
+#: includes/views/admin/admin-cookie.php:57
+msgid "Cookie popup"
+msgstr "Adresă cookie"
+
+#: includes/views/admin/admin-cookie.php:60
+msgid "Preferences"
+msgstr "Preferințe"
+
+#: includes/views/admin/admin-cookie.php:63
+msgid "Advanced settings"
+msgstr "Setari avansate"
+
+#: includes/views/admin/admin-cookie.php:79
+msgid "Press 'Save changes' before downloading logs if you changed any options"
+msgstr ""
+"Apăsați pe \"Salvați modificările\" înainte de a descărca jurnalele dacă ați "
+"modificat opțiunile"
+
+#: includes/views/admin/admin-cookie.php:90
+#: includes/views/admin/admin-policy.php:58
+#: includes/views/admin/admin-terms.php:59
+msgid "Download consents log"
+msgstr "Descarcă registru de consimțământ"
+
+#: includes/views/admin/admin-cookie.php:96
+msgid "Detect cookies"
+msgstr "Detectare cookie"
+
+#: includes/views/admin/admin-cookie.php:99
+msgid ""
+"Your website should be publicly accessible so that the Cookie Detector can "
+"work properly."
+msgstr ""
+"Pentru funcționarea adecvată a Cookie Detector pagina dvs. de web trebuie să "
+"fie accesibilă publicului."
+
+#: includes/views/admin/admin-cookie.php:107
+msgid "Close"
+msgstr "Închide"
+
+#: includes/views/admin/admin-cookie.php:109
+msgid "Cookies Scanner"
+msgstr "Cookie-uri de scanare"
+
+#: includes/views/admin/admin-cookie.php:111
+msgid "Our busy bees are searching for cookies on:"
+msgstr "Albinele noastre ocupate caută cookie-uri pe:"
+
+#: includes/views/admin/admin-cookie.php:111
+msgid "posts and pages"
+msgstr "pagină de comentarii"
+
+#: includes/views/admin/admin-cookie.php:119
+msgid "It can take up to few minutes. Thanks for your patience!"
+msgstr "Poate dura până la câteva minute. Mulțumesc pentru răbdarea dvs!"
+
+#: includes/views/admin/admin-cookie.php:122
+msgid "We are currently scanning:"
+msgstr "În prezent, scanăm:"
+
+#: includes/views/admin/admin-cookie.php:128
+msgid "Currently scanned URL:"
+msgstr "URL-ul scanat în prezent:"
+
+#: includes/views/admin/admin-pseudonymization.php:47
+msgid ""
+"Press 'Save changes' before pressing encryption buttons if you changed any "
+"options"
+msgstr ""
+"Dacă ați făcut modificări dați click pe 'Salvează modificările' înainte de a "
+"apăsa butoanele de criptare"
+
+#: includes/views/admin/admin-pseudonymization.php:58
+msgid "Encrypt selected"
+msgstr "Criptare selectată"
+
+#: includes/views/admin/admin-pseudonymization.php:60
+msgid "Decrypt selected"
+msgstr "Decriptare selectată"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:30
+#: includes/views/admin/admin-plugins.php:30
+msgid "Introduction"
+msgstr "Introducere"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:33
+#: includes/views/admin/admin-plugins.php:33
+msgid "Compatibility"
+msgstr "Compatibilitate"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:42
+msgid "The GDPR was approved and adopted by the EU Parliament in April 2016."
+msgstr ""
+"GDPR a fost aprobat și adoptat de Parlamentul European în aprilie 2016."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:43
+msgid ""
+" The regulation will take effect after a two-year transition period and, "
+"unlike a Directive it does not require any enabling legislation to be passed "
+"by government; meaning it will be in force May 2018."
+msgstr ""
+" GDPR a fost aprobat și adoptat de Parlamentul EU în 2016 aprilie. "
+"Regulamentul o să aibă efect abia după 2 ani de perioadă de tranziție și, "
+"spre deosebire de o Directivă acesta nu necesită niciun fel de permis "
+"legislativ ca să fie trecut de guvern; asta înseamnă că va întra în aplicare "
+"din 2018 mai."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:47
+msgid ""
+"The GDPR not only applies to organisations located within the EU but it will "
+"also apply to organisations located outside of the EU if they offer goods or "
+"services to, or monitor the behaviour of, EU data subjects. It applies to "
+"all companies processing and holding the personal data of data subjects "
+"residing in the European Union, regardless of the company's location."
+msgstr ""
+"GDPR nu se aplică doar organizațiilor aflate în cadrul UE ci și celor din "
+"afara UE, dacă aceștia oferă bunuri sau servicii, ori monitorizează "
+"comportamentele persoanelor UE vizate. Se aplică tuturor companiilor care "
+"procesează și dețin date personale despre persoanele vizate care au "
+"reședința în UE, indiferent de locația companiei."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:52
+msgid ""
+"This plugin will create a form where users can request access to or deletion "
+"of their personal data, stored on\n"
+"                your website. It is also possible to:"
+msgstr ""
+"Acest plugin va crea un formular în care utilizatorii pot solicita accesul "
+"sau ștergerea datelor lor personale, stocate pe acestea\n"
+"                site-ul tau. De asemenea, este posibil să:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:57
+msgid ""
+"create a custom cookie notice and block all cookies until cookie consent is "
+"given"
+msgstr ""
+"crearea unei notificări de cookie personalizate și blocarea tuturor cookie-"
+"urile înainte de aprobare"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:58
+msgid ""
+"set up redirects for your Terms and Conditions and Privacy Policy pages "
+"until consent is given"
+msgstr ""
+"această setare redirecționează către Termeni și Condiții și Politică de "
+"confidențialitate până când aprobarea este furnizată"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:59
+msgid ""
+"browse user requests for data access/deletion and set custom email "
+"notifications"
+msgstr ""
+"caută solicitările utilizatorilor pentru accesul/ștergerea datelor și "
+"definiți un e-mail de notificare personalizat"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:60
+msgid ""
+"send custom email informing about data breach to all users which left their "
+"email at your site"
+msgstr ""
+"trimite e-mail de informare personalizat despre încălcarea datelor tuturor "
+"utilizatorilor care au furnizat adresele lor de e-mail"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:61
+msgid "automatically add consent boxes for various forms on your website"
+msgstr ""
+"adaugă automat casete de bifat de aprobare pentru diferite formulare aflate "
+"pe site-ul dvs"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:62
+msgid "pseudonymize some of user data stored in database"
+msgstr "pseudonimizarea unor date stocate în baza de date"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:63
+msgid "check currently activated plugins for GDPR compliance"
+msgstr "verifică plugin-uri activate curent pentru conformitate GDPR"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:68
+msgid ""
+"To start, browse through settings. Then, create a new page with shortcode:"
+msgstr ""
+"Pentru a începe, parcurgeți setările. Apoi, creați o pagină nouă cu cod "
+"scurt:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:68
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:86
+msgid "[ultimate_gdpr_myaccount]"
+msgstr "[ultimate_gdpr_myaccount]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:75
+msgid "Available Shortcodes"
+msgstr "Coduri scurte disponibile"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:82
+msgid "User Settings:"
+msgstr "Setările aprobării cookie-urilor:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:94
+msgid "Privacy Policy Button:"
+msgstr "Politica de confidențialitate:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:98
+msgid "[ultimate_gdpr_policy_accept]"
+msgstr "[ultimate_gdpr_policy_accept]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:106
+msgid "Terms and Conditions Button:"
+msgstr "Termeni și Condiții:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:110
+msgid "[ultimate_gdpr_terms_accept]"
+msgstr "[ultimate_gdpr_terms_accept]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:118
+msgid "Cookie Popup Link:"
+msgstr "Conținutul notificărilor cookie:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:122
+msgid "[ultimate_gdpr_cookie_popup]"
+msgstr "[render_cookies_list]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:130
+msgid "Display Cookies List:"
+msgstr "Afișare listă cookie-uri:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:134
+msgid "[render_cookies_list]"
+msgstr "[render_cookies_list]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:146
+msgid "System requirements:"
+msgstr "Cerințe de sistem:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:153
+msgid "PHP Version:"
+msgstr "Versiune PHP:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:157
+msgid "7.2+"
+msgstr "7.2+"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:165
+msgid "Memory limit:"
+msgstr "Limita de memorie:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:169
+msgid "64 MB"
+msgstr "64 MB"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:177
+msgid "Disk space:"
+msgstr "Spatiu pe disc:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:181
+msgid "10 MB"
+msgstr "10 MB"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:196
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:199
+msgid "Any questions?"
+msgstr "Alte intrebari?"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+msgid "Please have a look at the"
+msgstr "Vă rugăm să aruncați o privire la"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+msgid "Support forum"
+msgstr "Forum de suport"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+msgid "or ask your questions via e-mail"
+msgstr "sau întrebați-vă prin e-mail"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:201
+msgid "Link to our "
+msgstr "Conectați-vă la serviciul nostrum "
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:201
+msgid "Documentation"
+msgstr "Documentație"
+
+#: includes/views/admin/admin-breach.php:56
+msgid "Press 'Save changes' before sending emails if you changed any options"
+msgstr ""
+"Dacă ați schimbat vreo opțiune faceți click pe 'Salvează modificările' "
+"înainte de a le trimite"
+
+#: includes/views/admin/admin-breach.php:70
+msgid "Go to send emails screen"
+msgstr "Trimite e-mail screen"
+
+#: includes/views/admin/admin-policy.php:47
+#: includes/views/admin/admin-terms.php:48
+msgid ""
+"Press \"Save changes\" before downloading logs if you changed any options"
+msgstr ""
+"Apăsați pe \"Salvați modificările\" înainte de a descărca jurnalele dacă ați "
+"modificat opțiunile"
+
+#: includes/views/admin/admin-data-access-user-details.php:16
+#, php-format
+msgid "Collected data for user: %s"
+msgstr "Date colectate pentru utilizator: %s"
+
+#: includes/views/admin/admin-data-access-user-details.php:20
+#: includes/views/admin/admin-data-access-user-details.php:34
+#: includes/views/admin/admin-rectification-user-details.php:34
+msgid "Go back"
+msgstr "Înapoi"
+
+#: includes/views/admin/admin-data-access-user-details.php:26
+msgid "No data collected for this service"
+msgstr "Nu sunt date colectate pentru acest serviciu"
+
+#: includes/views/admin/admin-data-access.php:71
+msgid "Data access requests list"
+msgstr "Listă solicitări acces date"
+
+#: includes/views/admin/admin-data-access.php:79
+#: includes/views/admin/admin-rectification.php:77
+msgid "Date of data sent"
+msgstr "Data trimiterii datelor"
+
+#: includes/views/admin/admin-data-access.php:80
+#: includes/views/admin/admin-rectification.php:78
+msgid "Select for action"
+msgstr "Selectare pentru acțiune"
+
+#: includes/views/admin/admin-data-access.php:81
+#: includes/views/admin/admin-rectification.php:79
+msgid "See details"
+msgstr "Vizualizare detalii"
+
+#: includes/views/admin/admin-data-access.php:105
+msgid "Preview data"
+msgstr "Previzualizare date"
+
+#: includes/views/admin/admin-data-access.php:124
+#: includes/views/admin/admin-rectification.php:122
+msgid "Send data to selected emails"
+msgstr "Trimite date la adresele selectate"
+
+#: includes/views/admin/admin-rectification-user-details.php:16
+#, php-format
+msgid "Rectified data for user: %s"
+msgstr "Date recitifcate pentru utilizatorul: %s"
+
+#: includes/views/admin/admin-rectification-user-details.php:18
+msgid "Current data:"
+msgstr "Date curente:"
+
+#: includes/views/admin/admin-rectification-user-details.php:24
+msgid "Rectified data:"
+msgstr "Date rectificate:"
+
+#: includes/views/admin/admin-rectification.php:69
+msgid "Data rectification requests list"
+msgstr "Listă solicitări date rectificate"
+
+#: includes/views/admin/admin-rectification.php:103
+msgid "See rectified data"
+msgstr "Vizualizează datele rectificate"
+
+#: includes/views/admin/admin-plugins.php:43
+msgid "Collects user data"
+msgstr "Colectare date utilizator"
+
+#: includes/views/admin/admin-plugins.php:44
+msgid "Compatible with Ultimate GDPR"
+msgstr "Compatibil cu Ultimate GDPR"
+
+#: includes/views/admin/admin-plugins.php:96
+#: includes/views/admin/admin-plugins.php:116
+msgid "No"
+msgstr "Nu"
+
+#: includes/views/admin/admin-plugins.php:98
+msgid "Probably"
+msgstr "Probabil"
+
+#: includes/views/admin/admin-plugins.php:100
+msgid "Unknown"
+msgstr "Necunoscut"
+
+#: includes/views/admin/admin-plugins.php:114
+msgid "Partly"
+msgstr "Parțial"
+
+#: includes/views/shortcode/shortcode-policy-accept.php:35
+msgid "You have already accepted Privacy Policy"
+msgstr "Ați acceptat deja Politica de confidențialitate"
+
+#: includes/views/shortcode/shortcode-policy-accept.php:44
+#: includes/views/shortcode/shortcode-terms-accept.php:44
+msgid "Decline"
+msgstr "Refuz"
+
+#: includes/views/shortcode/shortcode-myaccount.php:31
+msgid "Personal Data Access"
+msgstr "Acces date personale"
+
+#: includes/views/shortcode/shortcode-myaccount.php:32
+msgid "Forget me"
+msgstr "Uită-mă"
+
+#: includes/views/shortcode/shortcode-myaccount.php:33
+msgid "Data rectification"
+msgstr "Rectificare date"
+
+#: includes/views/shortcode/shortcode-myaccount.php:39
+msgid ""
+"Below, you can request for your personal data that's collected by this "
+"website sent to you in an e-mail."
+msgstr ""
+"Mai jos, puteți solicita trimiterea în e-mail a datelor dvs. colectate de "
+"acest site."
+
+#: includes/views/shortcode/shortcode-myaccount.php:48
+msgid ""
+"I consent to have my email collected in order to receive my requested data. "
+"See Privacy Policy page for more information."
+msgstr ""
+"Sunt de acord cu reținerea adresei mele de e-mail pentru a primi datele "
+"solicitate. Pentru mai multe informații consultați Politica de "
+"Confidențialitate."
+
+#: includes/views/shortcode/shortcode-myaccount.php:57
+#: includes/views/shortcode/shortcode-myaccount.php:109
+#: includes/views/shortcode/shortcode-myaccount.php:160
+msgid "Submit"
+msgstr "Trimite"
+
+#: includes/views/shortcode/shortcode-myaccount.php:64
+msgid ""
+"Below, you can browse services which collects your personal data on this "
+"website. Check services you wish to be forgotten by. This will send a "
+"request to the website admin. You will be notified by e-mail once this is "
+"done.\""
+msgstr ""
+"Mai jos, puteți consulta serviciile care colectează datele dvs. personale pe "
+"acest site. Verificați serviciile de către care doriți să fiți uitați. "
+"Astfel, se va trimite o cerere către admin-ul site-ului. Veți fi notificat "
+"prin e-mail odată ce procedura s-a încheiat.”"
+
+#: includes/views/shortcode/shortcode-myaccount.php:101
+#: includes/views/shortcode/shortcode-myaccount.php:151
+msgid ""
+"I consent to have my email collected in order to process this request. See "
+"Privacy Policy page for more information."
+msgstr ""
+"Sunt de acord cu reținerea adresei mele de e-mail pentru a procesa această "
+"solicitare. Pentru mai multe informații consultați Politica de "
+"Confidențialitate."
+
+#: includes/views/shortcode/shortcode-myaccount.php:119
+msgid ""
+"Below, you can send a request to have your data rectified by  the website "
+"admin. Enter what you would like to be rectified. You will be notified by e-"
+"mail once this is done."
+msgstr ""
+"Mai jos, puteți trimite o solicitare către admin în vederea rectificării "
+"datelor dvs. Introduceți datele care doriți să fie rectificate. Veți fi "
+"notificat prin e-mail odată ce procedura s-a încheiat."
+
+#: includes/views/shortcode/shortcode-myaccount.php:127
+msgid "Current data"
+msgstr "Date curente"
+
+#: includes/views/shortcode/shortcode-myaccount.php:136
+msgid "Rectified data"
+msgstr "Date rectificate"
+
+#: includes/views/shortcode/shortcode-terms-accept.php:35
+msgid "You have already accepted Terms and Conditions"
+msgstr "Ați acceptat deja Termeni și condiții"
+
+#: includes/views/service/service-wp-user-consent-field.php:17
+#: includes/views/service/service-eform-consent-field.php:19
+#: includes/views/service/service-formidable-forms-consent-field.php:12
+#: includes/views/service/service-quform-consent-field.php:12
+#: includes/views/service/service-contact-form-7-consent-field.php:20
+#: includes/views/service/service-woocommerce-consent-field.php:16
+#: includes/views/service/service-wp-comments-consent-field.php:16
+#: includes/views/service/service-woocommerce-consent-field-label.php:12
+#: includes/views/service/service-arforms-consent-field.php:17
+#: includes/views/service/service-events-manager-consent-field.php:17
+msgid "I consent to the storage of my data according to the Privacy Policy"
+msgstr "Aprob stocarea datelor mele conform Politicii de confidențialitate"
+
+#: includes/views/service/service-gravity-forms-consent-field-description.php:12
+msgid "Follow this link to access Privacy Policy"
+msgstr "Accesați acest link pentru vizualizarea Politicii de Confidențialitate"
+
+#: includes/views/service/service-gravity-forms-consent-field-error-message.php:12
+msgid "You must accept the Privacy Policy before submitting the form"
+msgstr ""
+"Trebuie să acceptați Politica de Confidențialitate înainte să trimiteți "
+"formularul"
+
+#: includes/views/service/service-bbpress-consent-field.php:16
+#: includes/views/service/service-buddypress-consent-field.php:16
+msgid ""
+"I consent to the storage of my data according to the Privacy Policy "
+"(required)"
+msgstr ""
+"Sunt de acord cu stocarea datelor mele conform Politicii de "
+"confidențialitate (necesar)"
+
+#: includes/views/service/service-mailster-consent-field.php:16
+#: includes/views/service/service-gravity-forms-consent-field-label.php:12
+msgid "I consent to storage of my data according to Privacy Policy"
+msgstr ""
+"Îmi dau acordul pentru stocarea datelor mele conform Politicii de "
+"Confidențialitate"
+
+#: includes/views/service/service-mailchimp-consent-field.php:16
+msgid "I consent to the storage of my data according to the Privacy Policy "
+msgstr ""
+"Sunt de acord cu stocarea datelor mele conform Politicii de "
+"confidențialitate "
+
+#: includes/views/service/service-quform-consent-field-error-message.php:12
+msgid "This field is mandatory"
+msgstr "Acest câmp este obligatoriu"
+
+#: includes/views/service/service-arforms-consent-field.php:24
+msgid "This field cannot be blank."
+msgstr "Acest câmp nu poate fi necompletat."
+
+#: includes/views/service/service-arforms-consent-field.php:26
+msgid "OK"
+msgstr "OK"
+
+#. Description of the plugin/theme
+msgid ""
+"Complete General Data Protection Regulation compliance toolkit plugin for "
+"WordPress."
+msgstr ""
+"Regulamentul General Complet privind Protecția Datelor Personale compliance "
+"toolkit plugin pentru WordPress."
+
+#. Author of the plugin/theme
+msgid "CreateIT"
+msgstr "CreateIT"
+
+#. Author URI of the plugin/theme
+msgid "https://www.createit.pl"
+msgstr "https://www.createit.pl"
+
+msgid "Enabled"
+msgstr "Activat"
+
+msgid "Enable"
+msgstr "Permite"
+
+msgid "Disabled"
+msgstr "Dezactivat"
+
+msgid "Disable"
+msgstr "Dezactivați"

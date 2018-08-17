@@ -69,7 +69,6 @@ class Woo {
     add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
-    
   }
 
   /**
@@ -162,6 +161,17 @@ class Woo {
         //var_dump($fields);
         return $fields;
   }
+
+   /**
+   * Cart Empty message
+   *
+   * @since 2.0.0
+   */
+  function woocommerce_cart_is_empty_message() {
+    echo '<h3 class="cart-empty">';
+    _e( 'Your cart is currently empty.', 'woocommerce' );
+    echo '</h3>';
+  }
   
   /**
    * Create new image sizes
@@ -174,6 +184,7 @@ class Woo {
 
 
   public function woocommerce_related_products() {
+
     global $post,$product;
     if (is_product()){
         // Join all 
@@ -213,8 +224,13 @@ class Woo {
         }
         $productIDs = array_unique (array_merge ($upsell , $cross,$related,$category));
     }else{
+       // echo $post->ID();
+       $productIDs ='';
+       if (isset($post)){
         $productIDs = get_post_meta($post->ID,'custom_productIds',true);
-        $title =  __('Vezani proizvodi','b4b');
+       }
+       
+        $title =  __('Vezani proizvodi','kimnatura');
     }
     
     if ($productIDs == ''){
@@ -246,12 +262,19 @@ class Woo {
     require( locate_template( 'template-parts/woocommerce/related-products.php' ) );
     wp_reset_query(); 
     wp_reset_postdata();
+
 }
 
   public function multi_step() {
 
-    $this->enqueue_scripts_filter();
+    $cart_total = WC()->cart->get_displayed_subtotal();
     $t = '';
+  //  if ($cart_total > 0) {
+
+  
+
+    $this->enqueue_scripts_filter();
+   
     //$t.='C Step='.$step;
     if (is_cart()) {
       $step =  0;
@@ -260,12 +283,12 @@ class Woo {
       $step =  1;
     }
     if (is_wc_endpoint_url( 'order-pay' )) {
-      $t .="order-pay";
+      //$t .="order-pay";
       $step = 4;
     }
-    if (is_wc_endpoint_url( 'order-received' )) {
-      $t .="order-received";
-    }
+  //  if (is_wc_endpoint_url( 'order-received' )) {
+  //    $t .="";
+  //  }
   
   
     if (is_account_page()) {
@@ -298,14 +321,15 @@ class Woo {
     $t  .= '</header>';
     */
       //$t.='Step='.$step;
-    $t  .= '<ul class="cart-checkout-navigation">';
+    $t  .= '<ul class="cart-checkout-navigation browser-default">';
     // First item
-    $t  .= '<li id="wc-multistep-cart" data-step="cart" class="cart-checkout-navigation__item '. ( ($step == 0 ) ? 'is-active' : '').' '. ( ($step > 0 ) ? 'is-activated' : '').'" >';
+    $t  .= '<li id="wc-multistep-cart" data-step="cart" class="cart-checkout-navigation__item '. ( ($step == 0 && !is_wc_endpoint_url( 'order-received' )) ? 'is-active' : '').' '. ( ($step > 0 && !is_wc_endpoint_url( 'order-received' ) ) ? 'is-activated' : '').'" >';
     //$t  .= __('Košarica','b4b');
+    if (!is_wc_endpoint_url( 'order-received' )) {
     if ($step>0){
       $t .= '<a href="'.get_permalink( wc_get_page_id( 'cart' )).'">
               <span class="cart-checkout-navigation__step-number">1</span>
-              <span class="cart-checkout-navigation__step-title">'.__('Košarica','b4b').'<span>
+              <span class="cart-checkout-navigation__step-title">'.__('Košarica ','b4b').'<span>
             </a>';
     }else{
       $t .= '<a href="'.get_permalink( wc_get_page_id( 'cart' )).'">
@@ -313,16 +337,22 @@ class Woo {
         <span class="cart-checkout-navigation__step-title">'.__('Košarica','b4b').'<span>
       </a>';
     }
+} else {
+    $t .= '
+    <span class="cart-checkout-navigation__step-number">1</span>
+    <span class="cart-checkout-navigation__step-title">'.__('Košarica','b4b').'<span>
+  ';
+}
     $t  .= '</li>';
     // Second item
-    $t  .= '<li id="wc-multistep-details" data-step="customer-details" class="cart-checkout-navigation__item '. ( ($step == 1) ? 'is-active' : '').'" >';
-    $t  .= '<span class="cart-checkout-navigation__step-number">2</span>';
-    $t  .= '<span class="cart-checkout-navigation__step-title">'.__('Dostava','b4b').'<span>';
-    $t  .= '</li>';
+     $t  .= '<li id="wc-multistep-details" data-step="customer-details" class="cart-checkout-navigation__item '. ( ($step == 1 && !is_wc_endpoint_url( 'order-received' ) ) ? 'is-active' : '').' '. ( ($step == 0 || is_wc_endpoint_url( 'order-received' ) ) ? 'is-disabled' : '').'" >';
+    if (!is_wc_endpoint_url( 'order-received' ) && $step > 0) {  $t  .= '<a href="'.get_permalink( wc_get_page_id( 'checkout' )).'">'; }
+    $t  .= '<span class="cart-checkout-navigation__step-number">2</span><span class="cart-checkout-navigation__step-title">'.__('Dostava','b4b').'<span>';
+    $t  .= ' </a></li>';
     // Third item
     $t  .= '<li id="wc-multistep-payment" data-step="payment" class="cart-checkout-navigation__item '. ( ($step == 2) ? 'is-active' : '').'" >';
     $t  .= '<span class="cart-checkout-navigation__step-number">3</span>';
-    $t  .= '<span class="cart-checkout-navigation__step-title">'.__('Naćin plačanja','b4b').'<span>';
+    $t  .= '<span class="cart-checkout-navigation__step-title">'.__('Način plaćanja','b4b').'<span>';
     $t  .= '</li>';
     // Fourth Item
     $t  .= '<li id="wc-multistep-finish" data-step="finish" class="cart-checkout-navigation__item is-last 
@@ -333,6 +363,7 @@ class Woo {
   
   
     $t  .=  "</ul>";
+    //}
     //$t  .= '<div class="page__content">';  
     //$t  .= 'Show:'.($step == 0) ? 'is-active' : 'prazno';
     return $t;
@@ -377,10 +408,11 @@ public function shipping_method_notice() {
 		$min_amount = $method->get_option( 'min_amount' );
 		if ( $method->id == 'free_shipping' && ! empty( $min_amount ) && $cart_total < $min_amount ) {
 			$remaining = $min_amount - $cart_total;
-			$message =  sprintf( 'Add %s more to get free shipping!', wc_price( $remaining ) );
+			$message =  sprintf( 'Dodajte proizvoda za još %s kako biste ostvarili besplatnu dostavu!', wc_price( $remaining ) );
 		}
 	}
-	// Show info if price is not calculated just for info
+    // Show info if price is not calculated just for info
+    if($cart_total >0){
 	if (!isset($remaining)){
 		$delivery_zones = \WC_Shipping_Zones::get_zones();
 		foreach ((array) $delivery_zones as $key => $the_zone ) {
@@ -393,7 +425,7 @@ public function shipping_method_notice() {
 						// Cart total less then min_amount
 						if (! empty( $min_amount ) && $cart_total < $min_amount ) {
 							$remaining = $min_amount - $cart_total;
-							$message=  sprintf( 'If you add %s more to get free shipping!', wc_price( $remaining ) );
+							$message=  sprintf( 'Ako dodate još %s ostvariti ćete besplatnu dostavu!', wc_price( $remaining ) );
 						}
 					}
 				}
@@ -402,9 +434,9 @@ public function shipping_method_notice() {
 				// var_dump($value);
 			}
         }
-    
+    }
 	}
-    if ( is_cart() ){
+    if ( is_cart()&&$cart_total >0 ){
         if ($message!=''){
             echo '<div class="cart__banner">'.$message.'</div>';
         }
@@ -433,7 +465,7 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
 			$tersma[] = $term->slug;
 		}
 	}
-	$attribute =  $product->get_attribute('pakovanje');
+	$attribute =  $product->get_attribute('pa_pakovanje');
 	return 
 		 '<div class="cart__item-name">'
 		. $product->get_title()
@@ -511,10 +543,9 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
      */
     public function catalog_item_description(){
         global $product;
-
         if (  $product->is_type( 'variable' ) ) {
             if ( $product->is_on_sale() ) {
-                $price = '<span class="featured-link__sale-regular-price">'.wc_price($product->get_variation_regular_price( 'min', true )).'</span>';
+                $price =  '<span class="featured-link__sale-regular-price">'.wc_price($product->get_variation_regular_price( 'min', true )).'</span>';
                 $price.=  wc_price($product->get_variation_price( 'min', true ).$product->get_price_suffix()) ;
             }
             else{
@@ -523,8 +554,16 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
         }else{
             $price= $product->get_price_html();
         }
+        $product_cats = wp_get_post_terms( $product->get_id(), 'product_cat' );
+        $categories = "";
+        for ( $i = 0; $i < sizeof($product_cats); $i++ ) {
+            $categories = $categories . $product_cats[$i]->name;
+            if ($i < sizeof($product_cats) - 1) {
+                $categories = $categories . ", ";
+            }
+        }
         ?>
-            <div class="shop-catalog__price"><?php echo $price ?></div>
+          <p class="featured-link__categories"><?php echo $categories ?>  </p><div class="shop-catalog__price"><?php echo $price ?></div>
         <?php 
         
         $string =''; 
@@ -607,42 +646,7 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
             $this->get_variation_single_price($variable_product,$variation_id  );
 
         }
-        /*
-        foreach ( $attributes as $attribute_name => $attribute ) :
-            $s = sanitize_title( $attribute_name );
-            echo '<h5>'.wc_attribute_label( $attribute_name ).'</h5>';  
-            foreach ( $available_variations as $options) {
-                $variation_id = $options['variation_id'];
-                $optionattr = $options['attributes'];
-                $variable_product = new WC_Product_Variation( $variation_id );
-                echo '<div>'; 
-
-                echo '<span class="featured-link__option-name">'.$optionattr['attribute_'.sanitize_title($attribute_name)].'</span>'; 
-                // from get_price_html
-                if ( $variable_product->is_on_sale() ) {
-                    $price = wc_format_sale_price( 
-                                  wc_get_price_to_display( $variable_product, 
-                                                           array( 'price' => $variable_product->get_regular_price() ) ),
-                                                           wc_get_price_to_display( $variable_product ) 
-                             ) . $variable_product->get_price_suffix();
-                    $price = 
-                             '<span class="featured-link__sale-price">'
-                             .wc_price(wc_get_price_to_display( $variable_product ))
-                             .$variable_product->get_price_suffix()
-                             .'</span>'
-                             .'<span class="featured-link__regular-price">'
-                             .wc_price($variable_product->get_regular_price()).$variable_product->get_price_suffix()
-                             .'</span>';
-                } else {
-                    $price = wc_price( wc_get_price_to_display( $variable_product ) ) . $variable_product->get_price_suffix();
-                }
-                echo '<span class="featured-link__option-price">'.$price.'</span>';
-                echo '</div>';
-
-             }      
-
-        endforeach;
-        */
+ 
     }
 
     function get_variation_single_price($variable_product,$variation_id){
@@ -780,8 +784,8 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
 
         if ( $args['required'] ) {
             $args['class'][] = 'validate-required';
-            $required = '';
-           // $required        = ' <abbr class="required" title="' . esc_attr__( 'required', 'woocommerce' ) . '">*</abbr>';
+            $required = ' *';
+           //$required        = ' <abbr class="required" title="' . esc_attr__( 'required', 'woocommerce' ) . '">*</abbr>';
         } else {
             $required = '';
         }
@@ -837,11 +841,11 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
 
                     $field .= '<strong>' . current( array_values( $countries ) ) . '</strong>';
 
-                    $field .= '<input type="hidden" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" value="' . current( array_keys( $countries ) ) . '" ' . implode( ' ', $custom_attributes ) . ' class="country_to_state" readonly="readonly" />';
+                    $field .= '<input class="validate" type="hidden" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" value="' . current( array_keys( $countries ) ) . '" ' . implode( ' ', $custom_attributes ) . ' class="country_to_state" readonly="readonly" />';
 
                 } else {
 
-                    $field = '<select name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="country_to_state country_select ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" ' . implode( ' ', $custom_attributes ) . '><option value="">' . esc_html__( 'Select a country&hellip;', 'woocommerce' ) . '</option>';
+                    $field = '<select class="validate" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="country_to_state country_select ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" ' . implode( ' ', $custom_attributes );
 
                     foreach ( $countries as $ckey => $cvalue ) {
                         $field .= '<option value="' . esc_attr( $ckey ) . '" ' . selected( $value, $ckey, false ) . '>' . $cvalue . '</option>';
@@ -863,11 +867,11 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
 
                     $field_container = '<div class="billing-fields__item input-field %1$s" id="%2$s" style="display: none"><div class="input-field">%3$s</div></div>';
 
-                    $field .= '<input type="hidden" class="hidden" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" value="" ' . implode( ' ', $custom_attributes ) . ' placeholder1="' . esc_attr( $args['placeholder'] ) . '" readonly="readonly" />';
+                    $field .= '<input class="validate" type="hidden" class="hidden" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" value="" ' . implode( ' ', $custom_attributes )  . '" readonly="readonly" />';
 
                 } elseif ( ! is_null( $for_country ) && is_array( $states ) ) {
 
-                    $field .= '<select name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="state_select ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" ' . implode( ' ', $custom_attributes ) . ' data-placeholder="' . esc_attr( $args['placeholder'] ) . '">
+                    $field .= '<select class="validate" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="state_select ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" ' . implode( ' ', $custom_attributes ) . ' data-placeholder="' . esc_attr( $args['placeholder'] ) . '">
                         <option value="">' . esc_html__( 'Select a state&hellip;', 'woocommerce' ) . '</option>';
 
                     foreach ( $states as $ckey => $cvalue ) {
@@ -878,18 +882,18 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
 
                 } else {
 
-                    $field .= '<input type="text" class="input-text ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" value="' . esc_attr( $value ) . '"  placeholder1="' . esc_attr( $args['placeholder'] ) . '" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" ' . implode( ' ', $custom_attributes ) . ' />';
+                    $field .= '<input class="validate" type="text" class="input-text ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" value="' . esc_attr( $value ) . '" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" ' . implode( ' ', $custom_attributes ) . ' />';
 
                 }
 
                 break;
             case 'textarea':
-                $field .= '<textarea name="' . esc_attr( $key ) . '" class="input-text1 ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" id="' . esc_attr( $args['id'] ) . '" placeholder1="' . esc_attr( $args['placeholder'] ) . '" ' . ( empty( $args['custom_attributes']['rows'] ) ? ' rows="2"' : '' ) . ( empty( $args['custom_attributes']['cols'] ) ? ' cols="5"' : '' ) . implode( ' ', $custom_attributes ) . '>' . esc_textarea( $value ) . '</textarea>';
+                $field .= '<textarea class="validate" name="' . esc_attr( $key ) . '" class="input-text1 ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" id="' . esc_attr( $args['id'] )  . '" ' . ( empty( $args['custom_attributes']['rows'] ) ? ' rows="2"' : '' ) . ( empty( $args['custom_attributes']['cols'] ) ? ' cols="5"' : '' ) . implode( ' ', $custom_attributes ) . '>' . esc_textarea( $value ) . '</textarea>';
 
                 break;
             case 'checkbox':
-                $field = '<label class="checkbox ' . implode( ' ', $args['label_class'] ) . '" ' . implode( ' ', $custom_attributes ) . '>
-                        <input type="' . esc_attr( $args['type'] ) . '" class="input-checkbox ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" value="1" ' . checked( $value, 1, false ) . ' /> ' . $args['label'] .  '</label>';
+                $field = '<label class="checkbox validate' . implode( ' ', $args['label_class'] ) . '" ' . implode( ' ', $custom_attributes ) . '>
+                        <input type="' . esc_attr( $args['type'] ) . '" class="input-checkbox ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] )  . checked( $value, 1, false ) . ' /> ' . $args['label'] .  '</label>';
 
                 break;
             case 'password':
@@ -898,7 +902,7 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
             case 'tel':
             case 'number':
                 $field .= '
-                <input type="' . esc_attr( $args['type'] ) . '"  name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '"   value="' . esc_attr( $value ) . '"  />';
+                <input class="validate" type="' . esc_attr( $args['type'] ) . '"  name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '"   value="' . esc_attr( $value ) . '"  />';
                // $field .= '<input type="' . esc_attr( $args['type'] ) . '" class=" ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" placeholder1="' . esc_attr( $args['placeholder'] ) . '"  value="' . esc_attr( $value ) . '" ' . implode( ' ', $custom_attributes ) . ' />';
 
                 break;
@@ -918,7 +922,7 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
                         $options .= '<option value="' . esc_attr( $option_key ) . '" ' . selected( $value, $option_key, false ) . '>' . esc_attr( $option_text ) . '</option>';
                     }
 
-                    $field .= '<select name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="select ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" ' . implode( ' ', $custom_attributes ) . ' data-placeholder1="' . esc_attr( $args['placeholder'] ) . '">
+                    $field .= '<select value="" class="validate" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="select ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" ' . implode( ' ', $custom_attributes ) . ' data-placeholder1="' . esc_attr( $args['placeholder'] ) . '">
                             ' . $options . '
                         </select>';
                 }
@@ -930,7 +934,7 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
                 if ( ! empty( $args['options'] ) ) {
                     foreach ( $args['options'] as $option_key => $option_text ) {
                         $field .= '<input type="radio" class="input-radio ' . esc_attr( implode( ' ', $args['input_class'] ) ) . '" value="' . esc_attr( $option_key ) . '" name="' . esc_attr( $key ) . '" ' . implode( ' ', $custom_attributes ) . ' id="' . esc_attr( $args['id'] ) . '_' . esc_attr( $option_key ) . '"' . checked( $value, $option_key, false ) . ' />';
-                        $field .= '<label for="' . esc_attr( $args['id'] ) . '_' . esc_attr( $option_key ) . '" class="radio ' . implode( ' ', $args['label_class'] ) . '">' . $option_text . '</label>';
+                        $field .= '<label for="' . esc_attr( $args['id'] ) . '_' . esc_attr( $option_key ) . '" class="radio ' . implode( ' ', $args['label_class'] ) . '">' . $option_text . " ". $required . '</label>';
                     }
                 }
 
@@ -940,26 +944,31 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
         if ( ! empty( $field ) ) {
             $field_html = '';
 
-            if ( $args['label'] && 'checkbox' !== $args['type'] ) {
+            if ( $args['label'] && 'checkbox' !== $args['type'] && 'select1' != $args['type'] && 'country' != $args['type']  ) {
                 //$field_html .=  '<label for="' . esc_attr( $label_id ) . '1">labela'.$args['label'].'</label>';
-                $field_html .= '<label for="' . esc_attr( $label_id ) . '" class="' . esc_attr( implode( ' ', $args['label_class'] ) ) . '">' . $args['label'] . '</label>';
+                $field_html .= '<label for="' . esc_attr( $label_id ) . '" class="' . esc_attr( implode( ' ', $args['label_class'] ) ) . '"><span>' . $args['label'] . $required . '</span></label>';
             }
 
             $field_html .= $field;
+//var_dump($args['type']);
+            if ( 'country' == $args['type']) {
+                 $field_html .= '<label for="' . esc_attr( $label_id ) . '" class="select-label-fix ' . esc_attr( implode( ' ', $args['label_class'] ) ) . '">' . $args['label'] . $required . '</label>';
+            }
 
             if ( $args['description'] ) {
                 $field_html .= '<span class="description">' . esc_html( $args['description'] ) . '</span>';
             }
 
+            $field_html .= '<span class="helper-text errorClass" data-error="wrong" data-success=""></span>';
             $container_class = esc_attr( implode( ' ', $args['class'] ) );
             $container_id    = esc_attr( $args['id'] ) . '_field';
             $field           = sprintf( $field_container, $container_class, $container_id, $field_html );
         }
 
-        $field = apply_filters( 'woocommerce_form_field_' . $args['type'], $field, $key, $args, $value );
+        $field =  apply_filters( 'woocommerce_form_field_' . $args['type'], $field, $key, $args, $value );
 
         if ( $args['return'] ) {
-            return $field;
+            return  $field;
         } else {
             echo $field; // WPCS: XSS ok.
         }

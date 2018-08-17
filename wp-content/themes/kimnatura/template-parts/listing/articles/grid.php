@@ -7,7 +7,7 @@
 
 use Kimnatura\Theme\Utils as Utils;
 $images = new Utils\Images();
-$image  = $images->get_post_image( 'full_width' );
+$image  = $images->get_post_image('grid');
 ?>
 <article class="article-grid">
   <div class="article-grid__container">

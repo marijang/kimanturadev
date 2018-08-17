@@ -47,7 +47,7 @@ foreach($result as $post):
                     the_content(); 
                 }
             ?>
-            <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class="sastojci__link btn btn--ghost"><?php echo __('Saznaj više','kimnatura');?></a>
+         
         </div>
        
          <?php //the_post_thumbnail( 'full-width',array('class' => 'kenburns-bottom hero__image'));  ?>

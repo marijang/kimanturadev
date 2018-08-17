@@ -9,17 +9,16 @@
 
 
 ?>
-
 <!-- Single Highlighted Content Section -->
 <article class="article  section--highlighted-color" id="<?php echo esc_attr( $post->ID ); ?>">
-  <div class="section section__highlighted section__spacing-top--medium  section__spacing-bottom--medium">
+  <div class="section section__highlighted section__spacing-top--large  section__spacing-bottom--large">
       <header class="section__header">
           <h2 class="section__title section__title--center">
             <?php the_title(); ?>
           </h2>
           <?php //the_subtitle( '<p class="section__description section__description--center">', '</p>' ); ?>
       </header>
-      <div class="section__inner">
+      <div class="section__inner " >
       <div class="section__content article__content-style article__content-media-style">
           <?php 
            if( has_excerpt() ){

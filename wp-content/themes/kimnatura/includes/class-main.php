@@ -14,11 +14,14 @@ namespace Kimnatura\Includes;
 use Kimnatura\Admin as Admin;
 use Kimnatura\Admin\Menu as Menu;
 use Kimnatura\Plugins\Acf as Acf;
+use Kimnatura\Plugins\MultipleFeaturedImages as Mfi;
 use Kimnatura\Theme as Theme;
 use Kimnatura\Theme\Utils as Utils;
 use Kimnatura\Admin\Woo as Woo;
 
 use Kimnatura\Admin\Rest\Example as Example;
+use Kimnatura\Admin\Rest\Search as Search;
+use Kimnatura\Admin\MailChimp as MailChimp;
 /**
  * The main start class.
  *
@@ -90,6 +93,7 @@ class Main {
   public function define_rest(){
     //var_dump(new Example);
     Example::listen();
+    Search::listen();
   }
 
   /**
@@ -129,7 +133,13 @@ class Main {
     $widgets     = new Admin\Widgets( $this->get_theme_info() );
     $menu        = new Menu\Menu( $this->get_theme_info() );
     $media       = new Admin\Media( $this->get_theme_info() );
-  
+    $mailchimp   = new Admin\MailChimp;
+    $mfi         = new Mfi($this->get_theme_info());
+    // Mailchimp
+    $this->loader->add_action('mc4wp_form_response_position', $mailchimp,'mc4wp_form_response_position');
+
+    // Plugins
+    $this->loader->add_filter('kdmfi_featured_images',$mfi,'kdmfi_featured_images');
 
     // Admin.
     $this->loader->add_action( 'login_enqueue_scripts', $admin, 'enqueue_styles' );
@@ -236,10 +246,10 @@ class Main {
   private function define_blog_hooks() {
     $woo          = new Woo( $this->get_theme_info() );
     $blog         = new Admin\Blog( $this->get_theme_info() );
-
     $this->loader->add_action('pre_get_posts', $blog,'inf_exclude_category');
     $this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
-    $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
+      $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
+    
     $this->loader->add_action('b4b_before_home_page',$woo,'woocommerce_related_products',10);
     $this->loader->add_action('b4b_after_home_page',$blog,'last_news',20);
     
@@ -256,6 +266,8 @@ class Main {
     $this->loader->add_action( 'after_setup_theme', $woo, 'add_theme_support' );
     $this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_styles' );
     $this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_scripts' );
+    $this->loader->remove_action( 'woocommerce_cart_is_empty', 'wc_empty_cart_message',10);
+    $this->loader->add_action( 'woocommerce_cart_is_empty', $woo, 'woocommerce_cart_is_empty_message',10,1);
     // Enque styles and scripts.
     //$this->loader->add_action( 'wp_enqueue_scripts', $theme, 'enqueue_styles' );
     //$this->loader->add_action( 'wp_enqueue_scripts', $theme, 'enqueue_scripts' );

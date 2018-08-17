@@ -8,7 +8,7 @@
 }
 @include b('featured-link'){
         position: relative;
-        transition: transform 5s;
+        transition: transform .3s;
         transition: 300ms ease-in;
         transform-style: preserve-3d;
         display: block;
@@ -25,8 +25,8 @@
             height: 452px;
             transform: translateY(40vh);
             opacity: 0;
-            transition: transform 1.5s ease-in .5s,
-                        opacity 1.5s cubic-bezier(0.5,0,0.2,1) .5s;
+            transition: transform .5s ease-in .5s,
+                        opacity .5s cubic-bezier(0.5,0,0.2,1) .5s;
                         
                     
            // transition-delay: .5s;
@@ -105,7 +105,7 @@
          @include element('categories'){
            @extend %paragraph-reset;
            color: $base-text-muted-color;
-           font-size:12px;
+           @include typi(small);
  
          }
         @include element('movable'){
@@ -118,7 +118,7 @@
     
             @include media(desktop large){
                 padding: $base-content-padding*2;
-                transform: translateY(52px);
+                transform: translateY(64px);
             }
         }
 
@@ -132,7 +132,8 @@
             @include typi(larger);
             padding-top: $base-content-padding/2;
             @include media(desktop large){
-                padding-top: $base-content-padding;
+                padding-top: $base-content-padding/2;
+             
             }
         }
 

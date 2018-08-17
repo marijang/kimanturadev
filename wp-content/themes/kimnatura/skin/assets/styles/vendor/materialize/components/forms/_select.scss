@@ -71,7 +71,7 @@ select {
     width: 100%;
     font-size: $input-font-size;
     margin: $input-margin;
-    padding: 0;
+    padding-bottom: 2px;
     display: block;
     user-select:none;
     z-index: 1;
@@ -87,11 +87,17 @@ select {
     fill: rgba(0,0,0,.87);
   }
 
-  & + label {
+  & + label, .select-label-fix {
     position: absolute;
     top: -26px;
     font-size: $label-font-size;
   }
+}
+
+.select-label-fix {
+  position: absolute!important;;
+  top: -26px!important;
+  font-size: $label-font-size!important;;
 }
 
 // Disabled styles

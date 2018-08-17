@@ -24,22 +24,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <script>
 	jQuery( document ).ready(function() {
+		jQuery('.ct-ultimate-gdpr-consent-field').parent().css('display', 'none');
+		jQuery('.woocommerce-privacy-policy-text').css('display', 'none');
+		jQuery('#username').focus();
 		jQuery('#log-toggle').on('click', function(){
 			jQuery('#reg-box').removeClass('is-active');
 			jQuery('#log-box').addClass('is-active');
+			jQuery('.ct-ultimate-gdpr-consent-field').parent().css('display', 'none');
+			jQuery('.woocommerce-privacy-policy-text').css('display', 'none');
 	});
 	jQuery('#reg-toggle').on('click', function(){
 			jQuery('#log-box').removeClass('is-active');
 			jQuery('#reg-box').addClass('is-active');
+			jQuery('.ct-ultimate-gdpr-consent-field').parent().css('display', 'inline-block');
+			//jQuery('.woocommerce-privacy-policy-text').css('display', 'block');
 	});
 	jQuery('#log-toggle-mobile').on('click', function(){
 			jQuery('#reg-box').removeClass('is-active');
 			jQuery('#log-box').addClass('is-active');
+			jQuery('.ct-ultimate-gdpr-consent-field').parent().css('display', 'none');
+			jQuery('.woocommerce-privacy-policy-text').css('display', 'none');
 	});
 	jQuery('#reg-toggle-mobile').on('click', function(){
-		console.log('click');
 			jQuery('#log-box').removeClass('is-active');
 			jQuery('#reg-box').addClass('is-active');
+			jQuery('.ct-ultimate-gdpr-consent-field').parent().css('display', 'inline-block');
+			//jQuery('.woocommerce-privacy-policy-text').css('display', 'block');
 	});
 });
 </script>
@@ -64,19 +74,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php endif; ?>
 
 		<div class="login__box-title"><?php esc_html_e( 'Login', 'woocommerce' ); ?></div>
-		<p class="login__box-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat rhoncus dolor a accumsan.</p>
+		<p class="login__box-description">Unesite korisničke podatke za prijavu.</p>
 
 		<form class="woocommerce-form1111 woocommerce-form-login login" method="post">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 
-			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row">
+			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row input-field">
 				<label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+				<input autofocus type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+				<span class="helper-text errorClass" data-error="wrong"></span>
 			</p>
-			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row">
+			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row input-field">
 				<label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" />
+				<input autofocus class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" />
+				<span class="helper-text errorClass" data-error="wrong"></span>
 			</p>
 
 			<?php do_action( 'woocommerce_login_form' ); ?>
@@ -90,7 +102,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</label> -->
 			</p>
 			<p class="form-row login__btn-row" id="toggle-btn">
-				<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
+				<?php// wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
 				<a class="btn btn--ghost-inverted-color btn--small" name="login-toggle" id='log-toggle'><?php esc_html_e( 'Login', 'woocommerce' ); ?></a>
 			</p>
 			
@@ -106,7 +118,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div id="reg-box" class="u-column2 col-2 login__box login__box--reg">
 
 		<div class="login__box-title"><?php esc_html_e( 'Register', 'woocommerce' ); ?></div>
-		<p class="login__box-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat rhoncus dolor a accumsan.</p>
+		<p class="login__box-description">Otvarite račun na našim stranicama kako bi brže kupovali i imali pregled povijesti kupnje.</p>
 
 		<form method="post" class="register" autocomplete="off">
 
@@ -121,16 +133,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php endif; ?>
 
-			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row">
+			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row input-field">
 				<label for="reg_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
-				<input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+			    <span class="helper-text errorClass" data-error="wrong"></span>
 			</p>
 
 			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
 
-				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row">
+				<p style="margin-bottom: 0px;" class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row input-field">
 					<label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
 					<input type="password" autocomplete="new-password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" />
+					<span class="helper-text errorClass" data-error="wrong"></span>
 				</p>
 
 			<?php endif; ?>
@@ -156,3 +170,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php endif; ?>
 
 <?php do_action( 'woocommerce_after_customer_login_form' ); ?>
+
+<script>
+ $(window).on('load', function() {
+  $('input[type="text"], input[type="password"]').click();
+});
+</script>

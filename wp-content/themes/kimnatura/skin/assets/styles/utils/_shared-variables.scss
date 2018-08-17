@@ -11,7 +11,7 @@ $base-font-secondary-letter-spacing:  0.5px;
 $base-font-weight-thin: 300;
 $base-font-weight-bold: 700;
 $base-font-weight-medium:600;
-
+$base-navigation-font: $font-family-heading-sans-serif;
 
 $base-icons-font-family:  'Material Icons';
 $paragraph-font-family:   $font-family-sans-serif;
@@ -51,6 +51,7 @@ $media-breakpoints: (
   mobile: 0 767,
   tablet: 768 991,
   desktop: 992 1199,
+  ipad: 1024 1366,
   large: 1200
 );
 
@@ -66,7 +67,7 @@ $typi: (
   base: (
     null: (18px, 1.5),
     small: (16px,1.5),
-    large: (20px,1.5)
+    large: (18px,1.5)
   ),
   tiny: (
     null: (11px)
@@ -102,7 +103,9 @@ $typi: (
     null: (30px)
   ),
   huge: (
-    null: (40px)
+    null: (40px),
+    small: (36px),
+    large: (40px)
   ),
   giant: (
     null: (50px)
@@ -133,12 +136,14 @@ $button-size-map: (
 //Section
 $section-spacing-map: (
   mobile: (
+    large:      24px,
     default:    00px,
     medium:     24px,
     small:      16px,
     no-spacing: 0
   ),
   large:(
+    large:      40px,
     default:    32px,
     medium:     32px,
     small:      16px,

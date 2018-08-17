@@ -89,8 +89,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php wc_get_template( 'checkout/terms.php' ); ?>
 
 			<?php do_action( 'woocommerce_pay_order_before_submit' ); ?>
-
-			<?php echo apply_filters( 'woocommerce_pay_order_button_html', '<button type="submit" class="button alt" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</button>' ); // @codingStandardsIgnoreLine ?>
+			
+			<?php echo apply_filters( 'woocommerce_pay_order_button_html', '<a  class="button alt" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html( $order_button_text ) . '</a>' ); // @codingStandardsIgnoreLine ?>
 
 			<?php do_action( 'woocommerce_pay_order_after_submit' ); ?>
 

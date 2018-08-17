@@ -16,6 +16,7 @@
 get_header();
 
 ?>
+
         <?php
         get_template_part( 'template-parts/account/woocommerce-account' ); 
 	    do_action('b4b_account_before'); 

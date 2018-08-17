@@ -20,6 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+
+
 do_action( 'woocommerce_before_edit_account_form' ); ?>
 <div class="account__content">
 <form class="woocommerce-EditAccountForm edit-account" action="" method="post">
@@ -40,6 +42,13 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 		<label for="account_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
 		<input type="email" class="woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" value="<?php echo esc_attr( $user->user_email ); ?>" />
 	</p>
+
+
+	<p class="input-field woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+		<label for="account_display_name"><?php esc_html_e( 'Display name', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_display_name" id="account_display_name" value="<?php echo esc_attr( $user->display_name ); ?>" /> 
+	</p>
+	<?php do_action( 'woocommerce_edit_account_form' ); ?>
 
 	<p class="login__button-row">
 		<?php wp_nonce_field( 'save_account_details' ); ?>
@@ -76,3 +85,4 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 </div>
 
 <?php do_action( 'woocommerce_after_edit_account_form' ); ?>
+

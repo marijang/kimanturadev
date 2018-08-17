@@ -23,7 +23,7 @@ get_header();
 
         <div class="grid2">
             <figure class="grid2__item fig-item">
-                <img src="http://vccw.test/wp-content/uploads/2018/04/b47b899d85a93ee12dbb4fa51af9a966.png" alt="picture" class="fig-item__img">
+                <img src="" alt="picture" class="fig-item__img">
                 <figcaption class="fig-item__caption grid2__caption">
                     <h5 class="grid2__title">Kim Natura poslovnica 1</h5>
                     <div class="grid2__icon-row">
@@ -41,7 +41,7 @@ get_header();
                 </figcaption>
             </figure>
             <figure class="grid2__item fig-item">
-                <img src="http://vccw.test/wp-content/uploads/2018/04/okrugli_stalak-e1522856883324.jpg" alt="picture" class="fig-item__img">
+                <img src="" alt="picture" class="fig-item__img">
                 <figcaption class="fig-item__caption grid2__caption">
                     <h5 class="grid2__title">Kim Natura poslovnica 1</h5>
                     <div class="grid2__icon-row">
@@ -59,7 +59,7 @@ get_header();
                 </figcaption>
             </figure>
             <figure class="grid2__item fig-item">
-                <img src="http://vccw.test/wp-content/uploads/2018/04/b47b899d85a93ee12dbb4fa51af9a966.png" alt="picture" class="fig-item__img">
+                <img src="" alt="picture" class="fig-item__img">
                 <figcaption class="fig-item__caption grid2__caption">
                     <h5 class="grid2__title">Kim Natura poslovnica 1</h5>
                     <div class="grid2__icon-row">
