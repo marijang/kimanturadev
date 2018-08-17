@@ -13,8 +13,6 @@
 //namespace Kimnatura;
 
 
-update_option( 'siteurl', 'https://kimnatura.bit4bytes.hr' );
-update_option( 'home', 'https://kimnatura.bit4bytes.hr' );
 
 /**
  * Disable the default WooCommerce stylesheet.

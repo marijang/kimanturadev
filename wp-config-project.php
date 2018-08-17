@@ -10,8 +10,6 @@
  * @since 1.0.0
  */
 
-define('WP_HOME','https://kimnatura.bit4bytes.hr');
-define('WP_SITEURL','https://kimnatura.bit4bytes.hr');
 
 
 if ( ! defined( 'KIM_ENV' ) ) {
