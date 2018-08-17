@@ -355,14 +355,14 @@ remove_filter( 'woocommerce_checkout_fields', 'woocommerce_checkout_fields_filte
 
 add_filter( 'wpo_wcpdf_invoice_title', 'wpo_wcpdf_invoice_title' );
 function wpo_wcpdf_invoice_title () {
-    $invoice_title = 'PONUDA';
+    $invoice_title = 'NARUDŽBA';
     return $invoice_title;
 }
 
 add_filter( 'wpo_wcpdf_filename', 'wpo_wcpdf_custom_filename', 10, 4 );
 function wpo_wcpdf_custom_filename( $filename, $template_type, $order_ids, $context ) {
     $invoice_string = _n( 'invoice', 'invoices', count($order_ids), 'woocommerce-pdf-invoices-packing-slips' );
-    $new_prefix = _n( 'ponuda', 'ponuda', count($order_ids), 'woocommerce-pdf-invoices-packing-slips' );
+    $new_prefix = _n( 'narudzba', 'narudzba', count($order_ids), 'woocommerce-pdf-invoices-packing-slips' );
     $new_filename = str_replace($invoice_string, $new_prefix, $filename);
  
     return $new_filename;
