@@ -13,6 +13,9 @@
 //namespace Kimnatura;
 
 
+update_option( 'siteurl', 'https://kimnatura.bit4bytes.hr' );
+update_option( 'home', 'https://kimnatura.bit4bytes.hr' );
+
 /**
  * Disable the default WooCommerce stylesheet.
  *
@@ -25,7 +28,7 @@ add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 
 
-
+u
 
 //exclude_category(1);
 //use Kimnatura\Includes\Loader;
