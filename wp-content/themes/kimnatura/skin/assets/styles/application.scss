@@ -406,3 +406,8 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+  .wpforms-container [type=checkbox]:checked+span:not(.lever):before {
+      border-top: none!important;
+      border-left: none!important;
+  }

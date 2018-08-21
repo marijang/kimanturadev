@@ -24,23 +24,32 @@ $( document ).ready(function() {
 
     var input = $('.newsletter .ct-ultimate-gdpr-consent-field');
     input.attr('required', false);
-    var label = $(".newsletter [for='ct-ultimate-gdpr-consent-field']");
-    var text = label.text();
-    //console.log(text);
-    label.text('');
-    var split = text.split('na');
+    var label1 = $(".newsletter [for='ct-ultimate-gdpr-consent-field']");
+    var text1 = label1.text();
+    //console.log(text1);
+    label1.text('');
+    var split = text1.split('na');
     //label.append('<span>' + split[0] + split[1]  + ' na <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
-    label.append('<span>Pristajem na to da se moji podaci prikupe s obzirom na <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
-    input.prependTo(label);
-    label.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
-    label.click(function() {
+    label1.append('<span>Pristajem na to da se moji podaci prikupe s obzirom na <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
+    input.prependTo(label1);
+    label1.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
+    label1.click(function() {
+        //console.log('click');
+        // var cb = $(this).find('input');
+        // if (cb.prop('checked')) {
+        //     cb.attr('checked', false);
+        //     //cb.parent().addClass('checkbox__invalid');
+        // } else {
+        //     cb.attr('checked', true);
+        //     cb.parent().removeClass('checkbox__invalid');
+        // }
         var cb = $(this).find('input');
-        if (cb.attr('checked')) {
-            cb.attr('checked', false);
+        if (cb.checked) {
+            cb.checked==false;
             //cb.parent().addClass('checkbox__invalid');
         } else {
-            cb.attr('checked', true);
-            cb.parent().removeClass('checkbox__invalid');
+            cb.checked==true;
+            $(this).find('input').parent().removeClass('checkbox__invalid');
         }
     });
 
