@@ -40,7 +40,7 @@ if ( $total <= 1 ) {
 <div class="shop-catalog__pagination">
 	<div class="shop-catalog__num-of-items">
 		<div class="total shop-catalog__results-wrap" data-products-left="<?php echo $total_left ?>">
-    	<div class="shop-catalog__results-count">You 've viewed <?php echo $last; ?> of <?php echo $total_all ?>' products.</div>
+    	<div class="shop-catalog__results-count">Pregledali ste <?php echo $last; ?> od <?php echo $total_all ?> proizvoda.</div>
     	<progress max="100" value="'.$percentage.'" class="shop-catalog__progress" aria-hidden="true"></progress>
     </div>
 	</div>

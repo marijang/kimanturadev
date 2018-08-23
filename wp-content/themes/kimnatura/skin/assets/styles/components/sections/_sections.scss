@@ -179,7 +179,7 @@ $section-description-space-bottom-small:$base-content-padding;
     }
 
     @include element('highlighted'){
-        @include typi('largest'); 
+        @include typi('large'); 
         @include media(mobile) {
             @include typi('default'); 
         } 

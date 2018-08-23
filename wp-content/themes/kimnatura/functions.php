@@ -380,3 +380,13 @@ function bbloomer_remove_shipping_label($label, $method) {
 $new_label = preg_replace( '/^.+:/', '', $label );
 return $new_label;
 }
+
+
+/**
+ * Remove password strength check.
+ */
+function iconic_remove_password_strength() {
+    wp_dequeue_script( 'wc-password-strength-meter' );
+}
+add_action( 'wp_print_scripts', 'iconic_remove_password_strength', 10 );
+

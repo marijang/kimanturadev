@@ -95,8 +95,8 @@ table.head {
 }
 
 td.header img {
-	max-height: 3cm;
-	width: auto;
+	height: 88px;
+	width: 88px;
 }
 
 td.header {
@@ -109,6 +109,7 @@ td.shop-info {
 }
 .document-type-label {
 	text-transform: uppercase;
+	color: #3DC19E;
 }
 
 /* Recipient addressses & order data */
@@ -164,8 +165,8 @@ table.order-details {
 
 .order-details thead th {
 	color: white;
-	background-color: black;
-	border-color: black;
+	background-color: #3DC19E;
+	border-color: #3DC19E;
 }
 
 /* product bundles compatibility */
@@ -236,8 +237,8 @@ table.totals td.price {
 
 table.totals tr.order_total td,
 table.totals tr.order_total th {
-	border-top: 2px solid #000;
-	border-bottom: 2px solid #000;
+	border-top: 2px solid #3DC19E;
+	border-bottom: 2px solid #3DC19E;
 	font-weight: bold;
 }
 

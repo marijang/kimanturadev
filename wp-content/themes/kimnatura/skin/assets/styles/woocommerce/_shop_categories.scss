@@ -1,6 +1,8 @@
 @include block('shop-categories'){
    
     @include element('list'){
+
+        padding-top: 108px!important;
        @include typi('small');
        @extend  %accordion;
        position: sticky;
@@ -9,6 +11,10 @@
         @include typi('small');
         line-height: 1.8;
         font-family: $base-font-family-primary;
+
+        @include media(mobile) {
+            padding-top: 0px!important;
+        }
        }
     }
     @include element('item'){
