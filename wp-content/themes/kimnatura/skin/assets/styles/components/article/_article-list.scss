@@ -114,7 +114,7 @@ $article-min-height:      500px;
   }
 
 
-  .slick-next {
+  .sastojci__slider .slick-next {
     @include media(mobile) {
       bottom: 16px!important;
     }
