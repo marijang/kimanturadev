@@ -107,8 +107,15 @@ $article-min-height:      500px;
         margin-bottom:0;
         min-height: auto;
         img{
-          height: 212px;
+          height: 250px;
         }
       }  
+    }
+  }
+
+
+  .slick-next {
+    @include media(mobile) {
+      bottom: 16px!important;
     }
   }

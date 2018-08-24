@@ -111,7 +111,7 @@ $( document ).ready(function() {
   $('.newsletter__content input[name="EMAIL"]').parent().css('margin-bottom', "0px");
 
 
-
+    $('input').focus();
 
 
 

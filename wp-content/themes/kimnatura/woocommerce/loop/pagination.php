@@ -93,10 +93,10 @@ if ( $total <= 1 ) {
 arrow_upward
 </i></a>
 <script>
-var start = 750;
-var scrollTo = 650;
+var start = 730;
+var scrollTo = 490;
 if ( (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
-	start = 500;
+	start = 400;
 	var scrollTo = 120;
 }
 // ===== Scroll to Top ==== 

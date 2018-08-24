@@ -75,9 +75,10 @@ $hero-transition-duration-in: .9s;
        
     }
     @include element('bg'){
-        min-height: 340px;
+        min-height: 200px;
         opacity: 1;
         @extend %bg-image;
+        background-size: contain!important;
         @include media(desktop large){
             opacity: 0;
             transition: $hero-transition-duration-in ease-in $hero-transition-duration;
@@ -86,6 +87,8 @@ $hero-transition-duration-in: .9s;
     }
     @include element('slider-wrapper'){
         position: relative;
+
+
         div.slick-active{
            .hero__bg{
                // animation: kenburns-bottom 5s ease-out both;

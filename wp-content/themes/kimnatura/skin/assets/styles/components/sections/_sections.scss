@@ -209,7 +209,7 @@ $section-description-space-bottom-small:$base-content-padding;
             margin:0;
             img {
                 @include media(mobile){
-                    max-height: 350px;
+                    max-height: 300px;
                 }
             }
         }
@@ -231,4 +231,8 @@ $section-description-space-bottom-small:$base-content-padding;
             transition-delay: 1.8s;
         }
     }
+}
+
+.shop-catalog__section .section__image {
+    min-height: auto;
 }
