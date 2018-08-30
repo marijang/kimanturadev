@@ -15,7 +15,7 @@ $(function() {
       arrows:false,
       //cssEase: 'ease-in-out',
       autoplay:true,
-      autoplaySpeed: 6000,
+      autoplaySpeed: 10000,
       fade:true,
       speed: 0,
       useCSS:false,

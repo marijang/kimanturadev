@@ -81,7 +81,7 @@
 
 <?php do_action( 'wpo_wcpdf_before_order_details', $this->type, $this->order ); ?>
 
-<table class="order-details">
+<table class="order-details" >
 	<thead>
 		<tr>
 			<th class="product"><?php _e('Product', 'woocommerce-pdf-invoices-packing-slips' ); ?></th>

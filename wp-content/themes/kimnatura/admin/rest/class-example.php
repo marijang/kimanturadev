@@ -62,7 +62,7 @@ Class Example extends WP_AJAX
     $total_left = $total - $last;
     $percentage = $last/$total*100;
     echo '<div class="total shop-catalog__results-wrap" data-products-left="'.$total_left.'">
-    <div class="shop-catalog__results-count">You\'ve viewed '.$last.' of '.$total.' products.</div>
+    <div class="shop-catalog__results-count">Pregledali ste '.$last.' od '.$total.' proizvoda.</div>
     <progress max="100" value="'.$percentage.'" class="shop-catalog__progress" aria-hidden="true"></progress>
     </div>';
    // var_dump($loop);

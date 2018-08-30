@@ -35,7 +35,11 @@ $hero-transition-duration-in: .9s;
      
    @include e('slider-wrapper'){
       //  margin-top: $base-content-padding;
+      min-height: 80vh;
 
+      @include media(mobile) {
+          min-height: 0px;
+      }
    }
    @include e('slider-indicator'){
        position: absolute;
@@ -71,9 +75,10 @@ $hero-transition-duration-in: .9s;
        
     }
     @include element('bg'){
-        min-height: 340px;
+        min-height: 200px;
         opacity: 1;
         @extend %bg-image;
+        background-size: contain!important;
         @include media(desktop large){
             opacity: 0;
             transition: $hero-transition-duration-in ease-in $hero-transition-duration;
@@ -82,6 +87,8 @@ $hero-transition-duration-in: .9s;
     }
     @include element('slider-wrapper'){
         position: relative;
+
+
         div.slick-active{
            .hero__bg{
                // animation: kenburns-bottom 5s ease-out both;
@@ -241,7 +248,7 @@ $hero-transition-duration-in: .9s;
             //transform: translate3d(0,0,0);
             @include typi(small);
             @include media(desktop large){
-                font-size: 22px;
+                font-size: 20px;
                 margin: 0 0 20px;
             }
             

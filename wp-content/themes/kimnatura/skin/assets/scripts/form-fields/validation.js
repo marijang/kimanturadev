@@ -7,14 +7,15 @@ $( document ).ready(function() {
           // on the right side
           email: {required: true,
                       email: true},
-          password: "required",
+          password: {required: true,
+                     minlength: 4},
           terms: "required",
           'ct-ultimate-gdpr-consent-field': "required"
         },
         // Specify validation error messages
         messages: {
           email: {required : "Email adresa je potrebno polje", email : "Email nije ispravnog formata"},
-          password: "Lozinka je potrebno polje",
+          password: { required: "Lozinka je potrebno polje", minlength: "Lozinka mora imati barem 4 znaka" }, 
           terms: "Potrebno je prihvatiti uvjete korištenja",
           'ct-ultimate-gdpr-consent-field': "Potrebno je prihvatiti uvjete privatnosti"
         },
