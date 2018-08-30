@@ -54,7 +54,7 @@ class General {
     add_image_size( 'highlighted', 564,493, true ); // Try to not use
     add_image_size( 'shop-catalog', 375,250, true );
     add_image_size( 'shop-catalog-small', 342,228, true );
-    add_image_size( 'sastojci', 1200,400, true );
+    add_image_size( 'sastojci', 1136,600, true );
     add_image_size( 'product', 585, 390,true);
     add_image_size( 'blog-list', 567, 493,true);
     add_image_size('gallery-large',668,437,true);

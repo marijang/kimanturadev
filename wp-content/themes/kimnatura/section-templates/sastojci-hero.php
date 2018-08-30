@@ -25,7 +25,7 @@ foreach($result as $post):
   setup_postdata($post);
 
   $images = new Utils\Images();
-  $image  = $images->get_post_image( 'slider-full-width' );
+  $image  = $images->get_post_image( 'sastojci' );
   $words    = explode(' ',get_the_title());
   $letters  = str_split(get_the_title(), 1);
 //   $thumb_id = get_post_thumbnail_id();
