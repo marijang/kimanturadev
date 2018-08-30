@@ -25,9 +25,12 @@ foreach($result as $post):
   setup_postdata($post);
 
   $images = new Utils\Images();
-  $image  = $images->get_post_image( 'full-width' );
+  $image  = $images->get_post_image( 'slider-full-width' );
   $words    = explode(' ',get_the_title());
   $letters  = str_split(get_the_title(), 1);
+//   $thumb_id = get_post_thumbnail_id();
+//   $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'slider-full-width', true);
+//   $thumb_url = $thumb_url_array[0];
 ?>
 
     <div class="sastojci__item" >
