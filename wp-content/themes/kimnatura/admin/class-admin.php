@@ -78,7 +78,7 @@ class Admin {
   public function enqueue_scripts() {
 
     $main_script = '/skin/public/scripts/applicationAdmin.js';
-    wp_register_script( $this->theme_name . '-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ) );
+    wp_register_script( $this->theme_name . '-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ), true );
     wp_enqueue_script( $this->theme_name . '-scripts' );
 
   }

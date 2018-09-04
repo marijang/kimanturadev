@@ -91,30 +91,30 @@ class Theme {
     // jQuery.
     wp_deregister_script( 'jquery-migrate' );
     wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', get_template_directory_uri() . '/skin/public/scripts/vendors/jquery.3.3.1.min.js', array(), '3.3.1' );
+    wp_register_script( 'jquery', get_template_directory_uri() . '/skin/public/scripts/vendors/jquery.3.3.1.min.js', array(), '3.3.1', true);
     wp_enqueue_script( 'jquery' );
 
     // JS.
     if ( ! is_page_template( 'page-templates/page-old-browser.php' ) ) {
-      wp_register_script( $this->theme_name . '-webfont', get_template_directory_uri() . '/skin/public/scripts/vendors/webfont.1.6.26.min.js', array(), '1.6.26' );
+      wp_register_script( $this->theme_name . '-webfont', get_template_directory_uri() . '/skin/public/scripts/vendors/webfont.1.6.26.min.js', array(), '1.6.26', true );
       wp_enqueue_script( $this->theme_name . '-webfont' ); // Fonts loaded via JS fonts.js.
 
       $main_script_vandors = '/skin/public/scripts/vendors.js';
-      wp_register_script( $this->theme_name . '-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ) );
+      wp_register_script( $this->theme_name . '-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ), true );
       wp_enqueue_script( $this->theme_name . '-scripts-vendors' );
 
       $main_script_vandors = '/skin/public/scripts/vendors/anime.min.js';
-      wp_register_script( $this->theme_name . 'anime-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ) );
+      wp_register_script( $this->theme_name . 'anime-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ), true );
       wp_enqueue_script( $this->theme_name . 'anime-scripts-vendors' );
 
       $main_script_vandors = '/skin/public/scripts/vendors/materialize.min.js';
-      wp_register_script( $this->theme_name . 'materialize-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ) );
-      wp_enqueue_script( $this->theme_name . 'materialize-scripts-vendors' );
+      wp_register_script( $this->theme_name . 'materialize-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ), true );
+      wp_enqueue_script( $this->theme_name . 'materialize-scripts-vendors');
     
 
       $main_script = '/skin/public/scripts/application.js';
-      wp_register_script( $this->theme_name . '-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ) );
-      wp_enqueue_script( $this->theme_name . '-scripts' );
+      wp_register_script( $this->theme_name . '-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ), true );
+      wp_enqueue_script( $this->theme_name . '-scripts');
 
 
       //wp_register_script( $this->theme_name . '-old-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ) );

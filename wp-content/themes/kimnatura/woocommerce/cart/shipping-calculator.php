@@ -24,7 +24,7 @@ if ( 'no' === get_option( 'woocommerce_enable_shipping_calc' ) || ! WC()->cart->
 	return;
 }
 
-wp_enqueue_script( 'wc-country-select' );
+wp_enqueue_script( 'wc-country-select');
 
 do_action( 'woocommerce_before_shipping_calculator' ); ?>
 
