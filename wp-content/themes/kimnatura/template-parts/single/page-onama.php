@@ -7,7 +7,7 @@
 
 use Kimnatura\Theme\Utils as Utils;
 $images = new Utils\Images();
-$image  = $images->get_post_image( 'full_width' );
+$image  = $images->get_post_image( 'post_full_width' );
 ?>
 <!-- Single Content Section -->
 <article class="single section section__spacing-top--default section--padding section--first" id="<?php echo esc_attr( $post->ID ); ?>">

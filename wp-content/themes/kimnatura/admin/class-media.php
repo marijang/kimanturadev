@@ -76,6 +76,7 @@ class Media {
     add_image_size( 'full_width', 9999, 9999, false );
     add_image_size( 'listing', 570, 320, true );
     add_image_size( 'grid', 270, 180, true);
+    add_image_size( 'post_full_width', 1200, 550, true );
   }
 
   /**
