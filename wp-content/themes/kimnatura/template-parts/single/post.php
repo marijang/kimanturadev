@@ -8,13 +8,13 @@
 
 use Kimnatura\Theme\Utils as Utils;
 $images = new Utils\Images();
-$image  = $images->get_post_image( 'post_full_width' );
+$image  = $images->get_post_image( 'full_width' );
 
 
 // Check if set featured image 2
-// if (kdmfi_has_featured_image('featured-image-2')){
-//     $image['image'] = kdmfi_get_featured_image_src( 'featured-image-2', 'full_width' );
-// }
+if (kdmfi_has_featured_image('featured-image-2')){
+    $image['image'] = kdmfi_get_featured_image_src( 'featured-image-2', 'full_width' );
+}
 
 
 
@@ -37,7 +37,7 @@ $image  = $images->get_post_image( 'post_full_width' );
  
   
   <?php if (isset($image['image'])){ ?>
-<div class="single__image section__image <?php echo in_category('slider-hero') ? 'single__image--hero' : '' ?>" style="background-image: url('<?php echo get_post_thumbnail('post_full_width'); ?>'); ">
+<div class="single__image section__image <?php echo in_category('slider-hero') ? 'single__image--hero' : '' ?>" style="background-image: url('<?php echo esc_url( $image['image'] ); ?>'); ">
 <?php if (in_category('slider-hero') && !wp_is_mobile()) : ?>
 <article  class="single section section__spacing-top--default section--padding section--first section__spacing-bottom--medium" id="<?php echo esc_attr( $post->ID ); ?>">
 <header class="section__header">
