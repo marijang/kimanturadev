@@ -34,7 +34,7 @@ $article-min-height:      500px;
         }
         
         @include m('odd'){
-          @include media(mobile){
+          @include media(mobile tablet){
             flex-direction: column-reverse;
           }
         }
@@ -111,7 +111,7 @@ $article-min-height:      500px;
           vertical-align: middle;
           
       }
-      @include media(mobile){
+      @include media(mobile tablet){
         margin-bottom:0;
         min-height: auto;
         img{
