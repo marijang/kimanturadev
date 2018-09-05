@@ -4,7 +4,7 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
 
 
 html.mobile-menu-is-open{
- 
+    margin-top: 0px!important;
     .main-wrap,body{
         overflow:hidden!important;
         -webkit-overflow-scrolling: touch;
