@@ -8,6 +8,12 @@ html.mobile-menu-is-open{
     .main-wrap,body{
         overflow:hidden!important;
         -webkit-overflow-scrolling: touch;
+        position: fixed;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+
+        -webkit-touch-callout: none;
+         user-select: none;
     }
 }
 
