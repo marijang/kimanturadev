@@ -23,7 +23,7 @@
     padding: $grid-gutter 0;
     display: flex;
     @include element('section'){
-        margin-bottom: $base-content-padding*3;
+       // margin-bottom: $base-content-padding*3;
         @include media('mobile'){
             margin-bottom: $base-content-padding;
             .section__image{
