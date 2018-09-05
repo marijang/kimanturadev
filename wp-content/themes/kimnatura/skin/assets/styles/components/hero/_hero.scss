@@ -195,6 +195,8 @@ $hero-transition-duration-in: .9s;
             background-color: transparent;
             color: $color-black;
             text-align: left;
+            margin: 0px;
+            padding: 0px;
          }
     }
     @include element('link'){
@@ -209,7 +211,7 @@ $hero-transition-duration-in: .9s;
         }
         @include media(tablet){
             text-align: left;
-            margin-left: 16px;
+            margin-left: 0px;
             
         }
     }
@@ -279,6 +281,7 @@ $hero-transition-duration-in: .9s;
             @include media(tablet){
                 @include typi(huge);
                 text-align: left;
+                margin: 0;
             }
         }
        // padding: $hero-content-padding;
