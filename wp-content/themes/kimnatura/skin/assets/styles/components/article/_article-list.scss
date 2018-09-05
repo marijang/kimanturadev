@@ -106,6 +106,7 @@ $article-min-height:      500px;
       margin-bottom: $article-content-padding;
       flex: 1;
       min-height: $article-min-height;
+      z-index: 3;
       
       &:hover {
         img {
