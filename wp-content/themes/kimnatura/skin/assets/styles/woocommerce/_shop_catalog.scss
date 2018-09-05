@@ -32,6 +32,9 @@
             }
         }
     }
+    @include media(desktop large){
+        padding-bottom: 64px;
+    }
 
     @include element('loader'){
         text-align: center;

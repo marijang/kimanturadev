@@ -2,13 +2,22 @@
    
     @include element('list'){
         
+
        @include typi('small');
        @extend  %accordion;
        position: sticky;
+       transition: all 0.35s ease-in-out;
        top: 0vh;
       // padding-top: 108px;
        @include media(mobile tablet){
            margin:0;
+       }
+
+       @include m('headup'){
+           @include media(desktop large){
+              padding-top:152px;
+              top: 152px;
+           }
        }
            
        @include media(mobile) {
