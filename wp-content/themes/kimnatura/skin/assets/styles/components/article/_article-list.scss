@@ -105,10 +105,17 @@ $article-min-height:      500px;
     @include element('image'){
       margin-bottom: $article-content-padding;
       flex: 1;
-      min-height: $article-min-height;   
+      min-height: $article-min-height;
+      
+      &:hover {
+        img {
+            transform: scale(1.02);
+        }
+    }   
       img{
           width: 100%;
           vertical-align: middle;
+          transition: transform .6s;
           
       }
       @include media(mobile ){
