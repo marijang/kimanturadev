@@ -85,7 +85,7 @@ $hero-transition-duration-in: .9s;
         background-size: contain!important;
         @include media(tablet){
         
-            min-height: 300px;
+            min-height: 350px;
             margin-right: -80px; // Usrane slike
         }
         @include media(desktop large){
@@ -226,13 +226,12 @@ $hero-transition-duration-in: .9s;
             background-color: transparent;
           //  margin-top: 16px;
 
-            top:$hero-content-top;
-            top: $base-content-padding;
+            top:0;
             left:$hero-content-left;
             left:0;
             bottom:$hero-content-bottom;
             right:$hero-content-right;
-            width: 42%;
+            width: 48%;
         }
         
         @include media(desktop large){
@@ -274,6 +273,7 @@ $hero-transition-duration-in: .9s;
             }
             @include media(tablet){
                 @include typi(huge);
+                text-align: left;
             }
         }
        // padding: $hero-content-padding;
