@@ -1,6 +1,7 @@
 $gallery-gap: $base-content-padding*2;
 $gallery-image-height: 450px;
-$gallery-image-height-mobile: 300px;
+$gallery-image-height-mobile: 250px;
+$gallery-image-height-tablet: 300px;
 $gallery-spacing-bottom: $base-content-padding*3;
 
 
@@ -15,6 +16,9 @@ $gallery-spacing-bottom: $base-content-padding*3;
     margin-bottom: $gallery-spacing-bottom;
     margin-top: $base-content-padding*3;
 
+    @include media(tablet){
+        grid-auto-rows: $gallery-image-height-tablet;
+    }
 
     @include media(mobile){
         grid-template-columns: 1fr;
