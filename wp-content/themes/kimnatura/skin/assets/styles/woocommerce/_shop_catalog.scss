@@ -88,6 +88,9 @@
 
     @include element('container'){
         flex:4;
+        @include media(tablet){
+            flex:2;
+        }
         
     }
     @include e('onsale'){
