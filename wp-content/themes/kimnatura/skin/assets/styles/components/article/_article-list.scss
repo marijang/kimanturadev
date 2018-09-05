@@ -117,7 +117,13 @@ $article-min-height:      500px;
         img{
           height: 250px;
         }
-      }  
+      } 
+      
+      @include media(mobile, landscape){
+        img{
+          height: 320px;
+        }
+      } 
 
       @include media( tablet){
         margin-bottom:0;

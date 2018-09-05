@@ -139,6 +139,7 @@ $section-description-space-bottom-small:$base-content-padding;
         @include media(mobile){
             margin: $base-content-padding 0; 
             min-height: 178px;
+            width: 100%;
         }
     }
     
