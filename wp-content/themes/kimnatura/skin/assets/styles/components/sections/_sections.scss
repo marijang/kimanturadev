@@ -18,6 +18,12 @@ $section-description-space-bottom-small:$base-content-padding;
         }
        
     }
+    @include m('title-center'){
+        @include media(mobile tablet){
+            text-align: center;
+        }
+       
+    }
 
     @include e('content'){
         @include m('has-share'){
@@ -121,9 +127,13 @@ $section-description-space-bottom-small:$base-content-padding;
         .gallery{
             margin-left: -150px;
             margin-right: -100px;
+            @include media(mobile tablet){
+                margin-left: 0px;
+                margin-right: 0px;
+            }
         }
 
-        @include media(mobile){
+        @include media(mobile tablet){
             flex-direction: column-reverse;
             margin-left: 0px;
             margin-right: 0px;

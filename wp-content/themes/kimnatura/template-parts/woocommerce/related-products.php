@@ -25,7 +25,7 @@ $woo  = new Woo();
     </header>
     <?php else :?>
     <header class="section__header">
-    <h3 class="section__title "><?php echo  $title;?></h3>
+    <h3 class="section__title section--title-center "><?php echo  $title;?></h3>
     </header>
     <?php endif;?>
     <div class="products__most-selling">

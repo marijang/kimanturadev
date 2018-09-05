@@ -94,6 +94,9 @@
     } 
     @include element('quantity'){
         margin-right: $base-content-padding;
+        @include media(mobile tablet){
+            margin-bottom: $base-content-padding/2;
+        }
     }
     @include element('description'){
         //margin-bottom: vr(1);

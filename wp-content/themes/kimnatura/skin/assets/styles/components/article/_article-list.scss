@@ -12,7 +12,8 @@ $article-min-height:      500px;
       padding-top:0; 
     }
     @include media(mobile tablet){
-        margin-top: $base-content-padding*2;
+        margin-top:$base-content-padding;
+        //margin-top: $base-content-padding*2;
         margin-bottom: 0;
         padding: 0;
     }

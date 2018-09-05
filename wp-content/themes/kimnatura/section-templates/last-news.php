@@ -20,7 +20,7 @@ echo '<div class="section section__spacing-top--medium section__spacing-bottom--
 </header>
 <?php else :?>
 <header class="section__header">
-<h3 class="section__title"><?php echo __('Zadnje novosti','b4b');?></h3>
+<h3 class="section__title section--title-center"><?php echo __('Zadnje novosti','b4b');?></h3>
 </header>
 <?php endif;?>
 <?php

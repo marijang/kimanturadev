@@ -32,18 +32,15 @@ figure {
   min-height: calc(100vh - 393px);
   // Isto kao i za header logo 
   @include media(desktop large){
-    padding-top: 70px;
-  }
-  @include media(mobile){
-    
+    padding-top: 102px;
   }
 
   @include media(tablet){
-      padding-top: 56px;
+      padding-top: 78px;
   }
 
   @include media(mobile ){
-    padding-top: 46px;
+    padding-top: 78px;
   }
 }
 

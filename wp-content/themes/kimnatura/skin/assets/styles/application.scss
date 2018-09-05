@@ -381,9 +381,7 @@ input:-webkit-autofill:active {
     cursor: pointer;
 }
 
-.headroom--top {
-    box-shadow: none!important;
-}
+
 
 .checkout-button {
     @include media(mobile) {
