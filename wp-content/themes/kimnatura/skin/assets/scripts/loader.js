@@ -1,52 +1,38 @@
-
+import $ from 'jquery';
+global.$ = global.jQuery = $;
 $(function() {
     
     
-    function showLoader(){
-        if (localStorage.getItem("lastRun") === null /*|| (Math.abs(new Date(localStorage.getItem("lastRun")) - new Date()) / 36e5) > 1*/) {
-            $("body").addClass("loader-open");
-            $(".loader__wrap").addClass("view");
-            $('.loader-hidden').removeClass('loader-hidden');
-            localStorage.setItem('lastRun', new Date());
-        }else{
-            $('.loader').addClass('loader-hidden');
-        }
-    
-    setTimeout(function() {
-            
-            $(".view").addClass("loader-hidden");
-            setTimeout(function() {
-                $("body").removeClass("loader-open");
-               
-            },2000)
-        }, 2500) //1500
-    }   
-  
-    $(document).ready(function() {
-        showLoader();
+ 
 
-        // $(window).on("load", function() {
-        //     if (localStorage.getItem("lastRun") === null /*|| (Math.abs(new Date(localStorage.getItem("lastRun")) - new Date()) / 36e5) > 1*/) {
-        //         $("body").addClass("loader-open");
-        //         $(".loader__wrap").addClass("view");
-        //         $('.loader-hidden').removeClass('loader-hidden');
-        //         localStorage.setItem('lastRun', new Date());
-        //     }
-        
-        // setTimeout(function() {
+        $(window).on("load", function() {
+            if (localStorage.getItem("lastRun") === null /*|| (Math.abs(new Date(localStorage.getItem("lastRun")) - new Date()) / 36e5) > 1*/) {
+                $("body").addClass("loader-open");
+             
+                $(".loader__wrap").addClass("view");
+                $('.loader-hidden').removeClass('loader-hidden');
+                localStorage.setItem('lastRun', new Date());
+                setTimeout(function() {
                 
-        //         $(".view").addClass("loader-hidden");
-        //         setTimeout(function() {
-        //             $("body").removeClass("loader-open");
-                   
-        //         },2000)
-        //     }, 2500) //1500
+                    $(".view").addClass("loader-hidden");
+                    setTimeout(function() {
+                        $("body").removeClass("loader-open");
+                       
+                    },2000)
+                 }, 2500); //1500
+           }
+           else{
+           // $('.loader__wrap').addClass('loader-hidden');
+            $('.loader__wrap').remove();
+           }
+        
+     
 
       
             
         });
 
-    });
+
 
 
    
@@ -55,4 +41,4 @@ $(function() {
         //$(".view").removeClass("loader-hidden");
     //})
 
-//});
+});
