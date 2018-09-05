@@ -239,6 +239,7 @@ $hero-transition-duration-in: .9s;
             bottom:$hero-content-bottom;
             right:$hero-content-right;
             width: 48%;
+            margin-top: 16px;
         }
         
         @include media(desktop large){
