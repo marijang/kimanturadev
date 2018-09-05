@@ -139,6 +139,7 @@ $section-description-space-bottom-small:$base-content-padding;
         @include media(mobile){
             margin: $base-content-padding 0; 
             min-height: 178px;
+            width: 100%;
         }
     }
     
@@ -179,10 +180,14 @@ $section-description-space-bottom-small:$base-content-padding;
     }
 
     @include element('highlighted'){
-        @include typi('large'); 
+        @include typi('large');
+        @include media(desktop) {
+            @include typi('large'); 
+        } 
         @include media(mobile) {
             @include typi('default'); 
         } 
+         
         @include p('e:link'){
             font-weight: $section-highlighted-font-weight;
         }
@@ -201,15 +206,24 @@ $section-description-space-bottom-small:$base-content-padding;
             padding:$section-highlight-padding;
             @include media(mobile){
                 padding:0;
+                padding-top: 16px;
             }
         }
         
         @include p('e:image'){
             flex:1;
             margin:0;
+            @include media(tablet){
+                min-height: auto;
+                width: 100%;
+            }
             img {
                 @include media(mobile){
                     max-height: 300px;
+                }
+              
+                @include media(tablet){
+                    height: 100%;
                 }
             }
         }

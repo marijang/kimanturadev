@@ -163,6 +163,14 @@ $(".products__slider").slick({
       }
 
     }, {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: false
+      
+      }
+    },{
 
       breakpoint: 300,
       settings: "unslick" // destroys slick
