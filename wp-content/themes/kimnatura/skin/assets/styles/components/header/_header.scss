@@ -3,9 +3,9 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
 
 
 
-body.mobile-menu-is-open{
+html.mobile-menu-is-open{
     overflow:hidden!important;
-    .main-wrap{
+    .main-wrap,body{
         overflow:hidden!important;
     }
 }
