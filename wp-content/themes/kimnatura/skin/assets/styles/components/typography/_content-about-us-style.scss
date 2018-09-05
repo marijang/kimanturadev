@@ -19,6 +19,10 @@ $content-about-us-padding: 0 100px;
     .gallery{
         margin-bottom: 0px;
         margin-top: 0px;
+        
+        @include media(mobile tablet){
+            grid-gap: 16px;
+        }
     }
     h2{
         padding: 0;
