@@ -2,6 +2,7 @@ $border-grey-color: $base-border-color-dark;
 $main-menu-mobile-bottom-spacing: $base-content-padding*2;
 
 
+
 body.mobile-menu-is-open{
     overflow:hidden;
 }
@@ -89,10 +90,12 @@ body.mobile-menu-is-open{
             li {
                 padding: 8px 0;
                 @include typi(bigger);
+                font-weight: 700;
             }
             &.is-open{
                 display: flex;
             }
+            overflow: hidden;
         }
 
         .mobile-only{
