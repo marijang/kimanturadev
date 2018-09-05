@@ -340,7 +340,7 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
     margin-bottom: $mega-menu-grid-gap;
     font-family: sans-serif;
     @include media(tablet){
-        @include typi(medium);
+        @include typi(largest);
     }
 }
 

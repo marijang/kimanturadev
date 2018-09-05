@@ -141,6 +141,13 @@ $section-description-space-bottom-small:$base-content-padding;
             min-height: 178px;
             width: 100%;
         }
+
+        @include media(tablet){
+            margin-top: $base-content-padding;
+            margin-bottom: $base-content-padding*2;  
+            min-height: 450px;
+            width: 100%;
+        }
     }
     
     @include element('header'){
