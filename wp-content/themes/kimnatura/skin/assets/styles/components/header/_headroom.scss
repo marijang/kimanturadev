@@ -42,3 +42,7 @@ $transition-headroom: all 0.35s ease-in-out;
   transition: $transition-headroom;
   
 }
+.headroom--top{
+  position: fixed;
+  box-shadow: none!important;
+}
