@@ -3,8 +3,18 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
 
 
 
-body.mobile-menu-is-open{
-    overflow:hidden;
+html.mobile-menu-is-open{
+    margin-top: 0px!important;
+    .main-wrap,body{
+        overflow:hidden!important;
+        -webkit-overflow-scrolling: touch;
+        position: fixed;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+
+        -webkit-touch-callout: none;
+         user-select: none;
+    }
 }
 
 @include b('header'){
@@ -84,9 +94,10 @@ body.mobile-menu-is-open{
             background: white;
             width: 100%;
             min-height: 100vh;
-            background: rgba(255,255,255,0.92);
+            background: rgba(255,255,255,0.97);
             padding-left:0px;
             padding-right:0px;
+            position: fixed;
             li {
                 padding: 8px 0;
                 @include typi(bigger);
@@ -94,6 +105,7 @@ body.mobile-menu-is-open{
             }
             &.is-open{
                 display: flex;
+                
             }
             overflow: hidden;
         }
