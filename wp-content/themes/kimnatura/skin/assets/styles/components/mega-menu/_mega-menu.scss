@@ -307,7 +307,7 @@ $mega-menu-grid-row-gap: $base-content-padding*3;
 
     }
     @include media(mobile){
-        grid-template-columns: 3fr;
+        grid-template-columns: repeat(3,auto);
         grid-gap: $mega-menu-grid-gap*2;
     }
 }
