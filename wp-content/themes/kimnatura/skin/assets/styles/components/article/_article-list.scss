@@ -21,12 +21,20 @@ $article-min-height:      500px;
         display: flex;
         position: relative;
         min-height:480px;
+      
         @include media(mobile){
           flex-direction: column;
           min-height: auto;
         }
+        @include media(tablet){
+          flex-direction: column;
+        }
+        @include media(tablet, landscape){
+          flex-direction: row;
+        }
+        
         @include m('odd'){
-          @include media(mobile){
+          @include media(mobile tablet){
             flex-direction: column-reverse;
           }
         }
@@ -53,7 +61,7 @@ $article-min-height:      500px;
       box-shadow: 0 0 48px 2px rgba(0, 0, 0, 0.08);
       min-height: $article-min-height;  
      
-      @include media(mobile){
+      @include media(mobile tablet){
         margin-top: 0;
         padding: $base-content-padding;
         min-height: auto;
@@ -97,19 +105,41 @@ $article-min-height:      500px;
     @include element('image'){
       margin-bottom: $article-content-padding;
       flex: 1;
-      min-height: $article-min-height;   
+      min-height: $article-min-height;
+      z-index: 3;
+      
+      &:hover {
+        img {
+            transform: scale(1.02);
+        }
+    }   
       img{
           width: 100%;
           vertical-align: middle;
+          transition: transform .6s;
           
       }
-      @include media(mobile){
+      @include media(mobile ){
         margin-bottom:0;
         min-height: auto;
         img{
           height: 250px;
         }
-      }  
+      } 
+      
+      @include media(mobile, landscape){
+        img{
+          height: 320px;
+        }
+      } 
+
+      @include media( tablet){
+        margin-bottom:0;
+        min-height: auto;
+        img{
+          height: 400px;
+        }
+      }
     }
   }
 

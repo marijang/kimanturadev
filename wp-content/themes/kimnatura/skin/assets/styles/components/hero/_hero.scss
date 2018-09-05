@@ -40,6 +40,10 @@ $hero-transition-duration-in: .9s;
       @include media(mobile) {
           min-height: 0px;
       }
+
+      @include media(tablet) {
+        min-height: 0px;
+     }
    }
    @include e('slider-indicator'){
        position: absolute;
@@ -151,13 +155,18 @@ $hero-transition-duration-in: .9s;
         text-transform: uppercase;
         @include media(mobile){
             background-color: transparent;
-         }
+            margin-top:16px;
+        }
+        @include media(tablet){
+            background-color: transparent;
+            margin-top:16px;
+        }
     }
     @include element('description'){
         margin: 0;
         margin-bottom: $base-content-padding;
         transition: 0 ease-in $hero-transition-duration;
-        padding: 16px;
+        padding: 16px 0;
         background: $base-primary-color;
 
         margin: 0 16px;
@@ -170,10 +179,17 @@ $hero-transition-duration-in: .9s;
             visibility: hidden;
             color: #000;
             margin-bottom: $base-content-padding;
+            padding: 16px 0;
         }
         @include media(mobile){
             background-color: transparent;
             color: $color-black;
+            text-align: center;
+         }
+         @include media(tablet){
+            background-color: transparent;
+            color: $color-black;
+            text-align: center;
          }
     }
     @include element('link'){
@@ -198,6 +214,13 @@ $hero-transition-duration-in: .9s;
             position: initial;
             background-color: transparent;
         }
+
+        @include media(tablet){
+            color:$color-black;
+            position: initial;
+            background-color: transparent;
+            margin-top: 16px;
+        }
         
         @include media(desktop large){
             top:$hero-content-top;
@@ -213,7 +236,11 @@ $hero-transition-duration-in: .9s;
             @include media(mobile){
                 background-color: transparent;
             }
-            @include typi(large);
+            @include media(tablet){
+            
+                background-color: transparent;
+            }
+           // @include typi(large);
             font-weight: 700;
             letter-spacing: 1px;
             line-height: 1;
@@ -246,14 +273,14 @@ $hero-transition-duration-in: .9s;
         }
         p,div{
             //transform: translate3d(0,0,0);
-            @include typi(small);
+            
             @include media(desktop large){
+                @include typi(small);
                 font-size: 20px;
                 margin: 0 0 20px;
             }
             
             line-height: 1.45;
-            
             font-weight: normal;
         }
      
