@@ -105,7 +105,7 @@
          @include element('categories'){
            @extend %paragraph-reset;
            color: $base-text-muted-color;
-           @include typi(small);
+           @include typi(medium);
  
          }
         @include element('movable'){
