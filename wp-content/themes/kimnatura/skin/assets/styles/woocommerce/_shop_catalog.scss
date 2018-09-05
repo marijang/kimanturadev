@@ -91,6 +91,9 @@
         @include media(tablet){
             flex:2;
         }
+        @include media(tablet,landscape){
+            flex:3;
+        }
         
     }
     @include e('onsale'){
