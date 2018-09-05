@@ -69,7 +69,10 @@ $article-min-height:      500px;
         margin-top: 0;
         padding: $base-content-padding;
         min-height: auto;
-        
+        h2{
+          margin-top: 0px;
+          margin-bottom: 8px;
+        }
       }  
     }
     @include e('link'){
