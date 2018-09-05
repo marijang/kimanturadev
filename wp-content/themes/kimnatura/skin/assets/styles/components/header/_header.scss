@@ -132,8 +132,12 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
     @include e('logo-img'){
         height: 70px;
         width: 128px;
+        @include media(tablet){
+            height: 56px;
+            width: auto;
+        }
 
-        @include media(mobile){
+        @include media(mobile ){
             height: 46px;
             width: 78px;
         }

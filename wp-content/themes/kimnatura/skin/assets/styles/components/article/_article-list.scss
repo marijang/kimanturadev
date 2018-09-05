@@ -111,13 +111,21 @@ $article-min-height:      500px;
           vertical-align: middle;
           
       }
-      @include media(mobile tablet){
+      @include media(mobile ){
         margin-bottom:0;
         min-height: auto;
         img{
           height: 250px;
         }
       }  
+
+      @include media( tablet){
+        margin-bottom:0;
+        min-height: auto;
+        img{
+          height: 400px;
+        }
+      }
     }
   }
 
