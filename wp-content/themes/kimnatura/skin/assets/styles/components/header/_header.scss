@@ -61,6 +61,7 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
             @include media(mobile){
                 margin-bottom: $main-menu-mobile-bottom-spacing;
                 width: 100%;
+              
             }
             flex-direction: inherit;
             align-items: inherit;
@@ -77,9 +78,13 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
             z-index: 1050;
             background: white;
             width: 100%;
-
+            min-height: 100vh;
+            background: rgba(255,255,255,0.92);
+            padding-left:0px;
+            padding-right:0px;
             li {
                 padding: 8px 0;
+                @include typi(huge);
             }
             &.is-open{
                 display: flex;
