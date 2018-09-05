@@ -15,7 +15,7 @@
 
        @include m('headup'){
            @include media(desktop large){
-              padding-top:152px;
+             // padding-top:152px;
               top: 152px;
            }
        }
