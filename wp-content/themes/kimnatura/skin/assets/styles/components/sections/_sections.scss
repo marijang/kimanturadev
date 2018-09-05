@@ -179,10 +179,14 @@ $section-description-space-bottom-small:$base-content-padding;
     }
 
     @include element('highlighted'){
-        @include typi('large'); 
+        @include typi('large');
+        @include media(desktop) {
+            @include typi('large'); 
+        } 
         @include media(mobile) {
             @include typi('default'); 
         } 
+         
         @include p('e:link'){
             font-weight: $section-highlighted-font-weight;
         }
