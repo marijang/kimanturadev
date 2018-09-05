@@ -157,6 +157,7 @@ $section-description-space-bottom-small:$base-content-padding;
         }
         @include media(tablet ipad){
             margin-bottom: $section-header-space-bottom-mobile;
+            margin-bottom: 0;
         }
     }
 
