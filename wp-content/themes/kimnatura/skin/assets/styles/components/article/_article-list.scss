@@ -106,9 +106,10 @@ $article-min-height:      500px;
       margin-bottom: $article-content-padding;
       flex: 1;
       min-height: $article-min-height;
+      transition: transform .6s;
       &:hover {
         img {
-            transform: scaleY(1.03);
+            transform: scale(1.02);
         }
     }   
       img{
