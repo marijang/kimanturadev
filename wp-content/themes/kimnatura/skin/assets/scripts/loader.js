@@ -1,11 +1,8 @@
 import $ from 'jquery';
 global.$ = global.jQuery = $;
 $(function() {
-    
-    
- 
-
         $(window).on("load", function() {
+            console.log('ulaz');
             if (localStorage.getItem("lastRun") === null /*|| (Math.abs(new Date(localStorage.getItem("lastRun")) - new Date()) / 36e5) > 1*/) {
                 $("body").addClass("loader-open");
              
@@ -14,7 +11,7 @@ $(function() {
                 localStorage.setItem('lastRun', new Date());
                 setTimeout(function() {
                 
-                    $(".view").addClass("loader-hidden");
+                    $(".loader__wrap").addClass("loader-hidden");
                     setTimeout(function() {
                         $("body").removeClass("loader-open");
                        
@@ -23,6 +20,7 @@ $(function() {
            }
            else{
            // $('.loader__wrap').addClass('loader-hidden');
+           console.log('remove');
             $('.loader__wrap').remove();
            }
         
