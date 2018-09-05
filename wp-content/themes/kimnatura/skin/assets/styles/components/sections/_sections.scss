@@ -12,6 +12,13 @@ $section-description-space-bottom-small:$base-content-padding;
     @include section-spacings('top');
     @include section-spacings('bottom');
 
+    @include m('slider'){
+        .section__header{
+            margin-bottom: 16px;
+        }
+       
+    }
+
     @include e('content'){
         @include m('has-share'){
             display: flex;
@@ -151,7 +158,8 @@ $section-description-space-bottom-small:$base-content-padding;
     }
     
     @include element('header'){
-        margin-bottom: $section-header-space-bottom; 
+        //margin-bottom: $section-header-space-bottom;
+        margin-bottom: 32px; 
         @include media(mobile){
              margin-bottom: $section-header-space-bottom-mobile;
         }
