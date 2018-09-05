@@ -77,6 +77,10 @@ $article-min-height:      500px;
       display: block;
       //color: $base-dark-color;
       position: relative;
+      @include media(mobile tablet){
+        margin-bottom: $base-content-padding/2;
+        
+      } 
 
       &:hover{
        color:$base-primary-color;

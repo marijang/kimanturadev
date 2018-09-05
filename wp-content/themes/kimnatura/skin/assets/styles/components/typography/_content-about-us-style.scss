@@ -12,6 +12,13 @@ $content-about-us-padding: 0 100px;
         @include media('mobile'){
             padding: 0;
         }
+        @include media(tablet){
+            padding: 0 32px;
+        }
+    }
+    .gallery{
+        margin-bottom: 0px;
+        margin-top: 0px;
     }
     h2{
         padding: 0;
