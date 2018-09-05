@@ -4,7 +4,10 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
 
 
 body.mobile-menu-is-open{
-    overflow:hidden;
+    overflow:hidden!important;
+    .main-wrap{
+        overflow:hidden!important;
+    }
 }
 
 @include b('header'){
@@ -94,6 +97,7 @@ body.mobile-menu-is-open{
             }
             &.is-open{
                 display: flex;
+                position: fixed;
             }
             overflow: hidden;
         }
