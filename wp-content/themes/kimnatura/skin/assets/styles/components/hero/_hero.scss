@@ -84,7 +84,9 @@ $hero-transition-duration-in: .9s;
         @extend %bg-image;
         background-size: contain!important;
         @include media(tablet){
-            min-height: 350px;
+        
+            min-height: 300px;
+            margin-right: -80px; // Usrane slike
         }
         @include media(desktop large){
             opacity: 0;
@@ -192,7 +194,7 @@ $hero-transition-duration-in: .9s;
          @include media(tablet){
             background-color: transparent;
             color: $color-black;
-            text-align: center;
+            text-align: left;
          }
     }
     @include element('link'){
@@ -220,7 +222,7 @@ $hero-transition-duration-in: .9s;
 
         @include media(tablet){
             color:$color-black;
-            position: initial;
+           // position: initial;
             background-color: transparent;
           //  margin-top: 16px;
 
