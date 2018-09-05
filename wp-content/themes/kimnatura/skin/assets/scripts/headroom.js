@@ -41,7 +41,7 @@ var headroom  = new Headroom(myElement,{
 
 headroom.init({
     tolerance: 5,
-    offset : 205,
+    offset : 250,
     onPin : function() {
         console.log('OK');
     },
