@@ -2,6 +2,10 @@ $border-grey-color: $base-border-color-dark;
 $main-menu-mobile-bottom-spacing: $base-content-padding*2;
 
 
+body.mobile-menu-is-open{
+    overflow:hidden;
+}
+
 @include b('header'){
     @include e('container'){
         z-index: 1200;
@@ -84,7 +88,7 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
             padding-right:0px;
             li {
                 padding: 8px 0;
-                @include typi(huge);
+                @include typi(bigger);
             }
             &.is-open{
                 display: flex;

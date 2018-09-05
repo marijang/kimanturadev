@@ -58,6 +58,7 @@ $search-grid-row-gap: $base-content-padding*3;
 			min-height: 88px;
 			overflow-y: hidden;
 
+
             .search__header {
                 grid-template-areas: 
                             "search search search btn-close";
@@ -135,6 +136,7 @@ $search-grid-row-gap: $base-content-padding*3;
     transform: translate(0,35%);
 	transition: transform .6s;
 	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
 }
 
 .search__form-wrapper {
