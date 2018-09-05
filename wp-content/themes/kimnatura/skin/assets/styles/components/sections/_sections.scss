@@ -179,10 +179,14 @@ $section-description-space-bottom-small:$base-content-padding;
     }
 
     @include element('highlighted'){
-        @include typi('large'); 
+        @include typi('large');
+        @include media(desktop) {
+            @include typi('large'); 
+        } 
         @include media(mobile) {
             @include typi('default'); 
         } 
+         
         @include p('e:link'){
             font-weight: $section-highlighted-font-weight;
         }
@@ -201,6 +205,7 @@ $section-description-space-bottom-small:$base-content-padding;
             padding:$section-highlight-padding;
             @include media(mobile){
                 padding:0;
+                padding-top: 16px;
             }
         }
         
@@ -209,11 +214,13 @@ $section-description-space-bottom-small:$base-content-padding;
             margin:0;
             @include media(tablet){
                 min-height: auto;
+                width: 100%;
             }
             img {
                 @include media(mobile){
                     max-height: 300px;
                 }
+              
                 @include media(tablet){
                     height: 100%;
                 }
