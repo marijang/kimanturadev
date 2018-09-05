@@ -163,7 +163,7 @@ $(".products__slider").slick({
       }
 
     }, {
-      breakpoint: 760,
+      breakpoint: 800,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
