@@ -146,6 +146,8 @@ $search-grid-row-gap: $base-content-padding*3;
 .search__input {
 	font-family: inherit;
 	font-size: 1.11111rem!important;
+	-webkit-appearance: none;
+	border-radius: 0;
 	@include typi(large);
 	// line-height: 1;
 	line-height: 1.5;
