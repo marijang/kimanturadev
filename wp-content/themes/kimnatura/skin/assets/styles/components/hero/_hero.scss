@@ -207,6 +207,11 @@ $hero-transition-duration-in: .9s;
             text-align: left;
             visibility: hidden;
         }
+        @include media(tablet){
+            text-align: left;
+            margin-left: 16px;
+            
+        }
     }
     @include element('content'){
         z-index: 1;
