@@ -207,9 +207,15 @@ $section-description-space-bottom-small:$base-content-padding;
         @include p('e:image'){
             flex:1;
             margin:0;
+            @include media(tablet){
+                min-height: auto;
+            }
             img {
                 @include media(mobile){
                     max-height: 300px;
+                }
+                @include media(tablet){
+                    height: 100%;
                 }
             }
         }

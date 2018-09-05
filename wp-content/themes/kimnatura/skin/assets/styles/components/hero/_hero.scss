@@ -40,6 +40,10 @@ $hero-transition-duration-in: .9s;
       @include media(mobile) {
           min-height: 0px;
       }
+
+      @include media(tablet) {
+        min-height: 0px;
+     }
    }
    @include e('slider-indicator'){
        position: absolute;
