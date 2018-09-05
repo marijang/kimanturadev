@@ -16,9 +16,9 @@ var headroom  = new Headroom(myElement,{
         console.log('OK');
     },
     // callback when unpinned, `this` is headroom object
-    onUnpin : function() {console.log('Vidi me kako radim');},
+    onUnpin : function() {console.log('HEADROOM:Vidi me MZ kako radim:)');},
     // callback when above offset, `this` is headroom object
-    onTop : function() {console.log('Vidi me opet');},
+    onTop : function() {console.log('HEADROOM:Vidi me MZ opet radim:) ');},
     // callback when below offset, `this` is headroom object
     onNotTop : function() {},
     // callback at bottom of page, `this` is headroom object

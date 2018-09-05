@@ -48,6 +48,10 @@ footer{
             text-align: center;
             grid-template-columns: 1fr;
         }  
+        @include media(tablet){
+            grid-row-gap: 8px;
+        grid-column-gap: 8px;
+        }  
     }
     @include e('content-media-style'){
         color: $footer-content-media-style-color;
@@ -84,6 +88,9 @@ footer{
         small{
             @include container();
             display: block;
+        }
+        @include media(mobile tablet){
+            text-align: center;
         }
         
    }
