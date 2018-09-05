@@ -40,6 +40,10 @@ $hero-transition-duration-in: .9s;
       @include media(mobile) {
           min-height: 0px;
       }
+
+      @include media(tablet) {
+        min-height: 0px;
+     }
    }
    @include e('slider-indicator'){
        position: absolute;
@@ -210,6 +214,13 @@ $hero-transition-duration-in: .9s;
             position: initial;
             background-color: transparent;
         }
+
+        @include media(tablet){
+            color:$color-black;
+            position: initial;
+            background-color: transparent;
+            margin-top: 16px;
+        }
         
         @include media(desktop large){
             top:$hero-content-top;
@@ -225,7 +236,11 @@ $hero-transition-duration-in: .9s;
             @include media(mobile){
                 background-color: transparent;
             }
-            @include typi(large);
+            @include media(tablet){
+            
+                background-color: transparent;
+            }
+           // @include typi(large);
             font-weight: 700;
             letter-spacing: 1px;
             line-height: 1;
