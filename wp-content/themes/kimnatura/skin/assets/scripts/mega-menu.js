@@ -8,18 +8,21 @@
  * Copyright 2016, Codrops
  * http://www.codrops.com
  */
+import $ from 'jquery';
+global.$ = global.jQuery = $;
 $(document).ready( function() {
 
     var mainContainer = document.querySelector('.main-wrap'),
     openCtrl = $('#menu>ul>li>a').first()[0],
     closeCtrl = document.getElementById('btn-mega-menu-close'),
-    megamenuContainer = document.querySelector('.mega-menu'),
+    megamenuContainer = document.querySelector('.mega-menu');
     // inputmegamenu = mega-menuContainer.querySelector('.mega-menu__input'),
     //megamenu = document.getElementById('mega-menu-wrap'),
     // megamenuUp = document.getElementById('mega-menu-up'),
     // megamenuDown = document.getElementById('mega-menu-down'),
-    body = $('body');
-    html = $('html');
+
+    var body = $('body');
+    var html = $('html');
 
 function init() {
     initEvents();	
