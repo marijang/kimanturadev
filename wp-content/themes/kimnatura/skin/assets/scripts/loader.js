@@ -8,6 +8,8 @@ $(function() {
             $(".loader__wrap").addClass("view");
             $('.loader-hidden').removeClass('loader-hidden');
             localStorage.setItem('lastRun', new Date());
+        }else{
+            $('.loader').addClass('loader-hidden');
         }
     
     setTimeout(function() {
