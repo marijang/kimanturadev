@@ -7,7 +7,7 @@ $checkout-margin-top:  $base-content-padding*3;
         display: flex;
         justify-content: flex-end;
         margin-top: $checkout-btn-margin-top;
-
+        margin-top: 0;
         @include media(mobile){
             margin-top: $checkout-btn-margin-top-mobile;
             .btn{
@@ -27,7 +27,9 @@ $checkout-margin-top:  $base-content-padding*3;
     @include e('form'){
         flex: 2;
         padding-right: $base-content-padding;
-
+        #ship-to-different-address{
+            margin: 0;
+        }
         @include media(mobile){
             .btn{
                 width: 100%;
