@@ -18,6 +18,13 @@ $section-description-space-bottom-small:$base-content-padding;
         }
        
     }
+    @include m('image-effect'){
+        //animation: kenburns-top 5s ease-out both;
+        animation: kenburns-top 5s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
+       
+    }
+
+    
     @include m('title-center'){
         @include media(mobile tablet){
             text-align: center;
@@ -145,6 +152,7 @@ $section-description-space-bottom-small:$base-content-padding;
    // background: red;
     @include container();
     @include element('image'){
+        overflow: hidden;
         img{
             width: $section-img-width;
            

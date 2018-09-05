@@ -21,6 +21,7 @@
 
 @include block('shop-catalog'){
     padding: $grid-gutter 0;
+    padding-top: 0;
     display: flex;
     @include element('section'){
        // margin-bottom: $base-content-padding*3;
@@ -81,8 +82,10 @@
          padding-bottom: $base-content-padding/2;
          padding-left:$base-content-padding;
          padding-right:$base-content-padding;
-         @include media('mobile'){
+         @include media(mobile){
             flex-direction: column;
+            padding: 16px 0;
+            width: 100%;
         }
     }
 
@@ -185,12 +188,19 @@
         flex:1;
         @include typi('small');
         font-weight: 400;
+        @include media('mobile'){
+            margin-bottom: 8px;
+        }
     } 
     @include element('ordering'){
         margin: 0;  
 
         @include typi('small');
         font-weight: 400;
+        @include media('mobile'){
+            margin-bottom: 8px;
+            width: 100%;
+        }
     } 
     
 
