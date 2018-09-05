@@ -83,6 +83,9 @@ $hero-transition-duration-in: .9s;
         opacity: 1;
         @extend %bg-image;
         background-size: contain!important;
+        @include media(tablet){
+            min-height: 350px;
+        }
         @include media(desktop large){
             opacity: 0;
             transition: $hero-transition-duration-in ease-in $hero-transition-duration;
@@ -219,7 +222,15 @@ $hero-transition-duration-in: .9s;
             color:$color-black;
             position: initial;
             background-color: transparent;
-            margin-top: 16px;
+          //  margin-top: 16px;
+
+            top:$hero-content-top;
+            top: $base-content-padding;
+            left:$hero-content-left;
+            left:0;
+            bottom:$hero-content-bottom;
+            right:$hero-content-right;
+            width: 42%;
         }
         
         @include media(desktop large){
@@ -258,6 +269,9 @@ $hero-transition-duration-in: .9s;
                 opacity: 1;
                 padding: 0;
                 background: none;
+            }
+            @include media(tablet){
+                @include typi(huge);
             }
         }
        // padding: $hero-content-padding;
