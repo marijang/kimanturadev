@@ -44,6 +44,10 @@ $article-min-height:      500px;
        &:hover{
             color: $base-primary-color;
        }
+       @include media(mobile){
+          margin-top: 0px;
+          margin-bottom: 8px; 
+       }
     }
     @include element('title'){
       a{
