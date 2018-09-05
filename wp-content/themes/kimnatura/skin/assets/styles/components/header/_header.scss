@@ -7,6 +7,7 @@ html.mobile-menu-is-open{
     overflow:hidden!important;
     .main-wrap,body{
         overflow:hidden!important;
+        -webkit-overflow-scrolling: touch;
     }
 }
 
@@ -90,6 +91,7 @@ html.mobile-menu-is-open{
             background: rgba(255,255,255,0.92);
             padding-left:0px;
             padding-right:0px;
+            position: fixed;
             li {
                 padding: 8px 0;
                 @include typi(bigger);
@@ -97,7 +99,7 @@ html.mobile-menu-is-open{
             }
             &.is-open{
                 display: flex;
-                position: fixed;
+                
             }
             overflow: hidden;
         }
