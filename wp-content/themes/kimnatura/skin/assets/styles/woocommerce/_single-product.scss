@@ -9,6 +9,11 @@
         @include media(mobile){
             flex-direction: column;
         }
+        @include media(tablet){
+           .images{
+               flex:1;
+           }
+        }
     }
     @include element('summary'){
         flex: 1;

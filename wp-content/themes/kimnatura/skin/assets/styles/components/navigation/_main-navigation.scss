@@ -82,10 +82,11 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
         display: inline-block;
         padding-left: 8px;
 
-        @include media(mobile){
+        @include media(mobile tablet){
             max-width: 100%;
             font-size: inherit;
             line-height: inherit;
+            display: none;
         }
     }
 
