@@ -100,8 +100,8 @@ class Woo {
   public function enqueue_scripts_filter() {
 
     $main_script = '/skin/public/scripts/widgets/wc-multistep.js';
-    wp_register_script( $this->theme_name . '-multistep-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ) );
-    wp_enqueue_script( $this->theme_name . '-multistep-scripts' );
+    wp_register_script( $this->theme_name . '-multistep-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ), true );
+    wp_enqueue_script( $this->theme_name . '-multistep-scripts');
 
   }
 /**
@@ -112,7 +112,7 @@ class Woo {
   public function enqueue_scripts_singlepage() {
 
     $main_script = '/skin/public/scripts/vendors/woocommerce/singlepage.js';
-    wp_register_script( $this->theme_name . '-multistep-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ) );
+    wp_register_script( $this->theme_name . '-multistep-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ), true );
     wp_enqueue_script( $this->theme_name . '-multistep-scripts' );
 
   }
