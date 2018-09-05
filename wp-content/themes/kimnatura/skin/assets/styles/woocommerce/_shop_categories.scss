@@ -16,7 +16,7 @@
        @include m('headup'){
            @include media(desktop large){
              // padding-top:152px;
-              top: 152px;
+              top: 116px;
            }
        }
            
@@ -27,7 +27,7 @@
        }
        input[type="checkbox"] + span:not(.lever) {
         @include typi('small');
-        line-height: 1.8;
+        //line-height: 1.8;
         font-family: $base-font-family-primary;
 
     
