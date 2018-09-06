@@ -1,17 +1,18 @@
 $( document ).ready(function() {
+var i = 0;
   $('.woocommerce-MyAccount-content .ct-ultimate-gdpr-consent-field').each(function() {
     $(this).attr('required', false);
+    $(this).attr('id', $(this).attr('id') + i);
+    i++;
     var label =  $(this).next();
-    var text = label.text();
-    //console.log(text);
     label.text('');
-    var split = text.split('odredbama');
-    //label.append('<span>' + split[0]  + ' odredbama <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
     label.append('<span>Pristajem da se moji podaci pohrane u skladu s odredbama <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
     $(this).prependTo(label);
     label.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
-    label.click(function() {
-        console.log($(this));
+});
+
+$('.woocommerce-MyAccount-content [for="ct-ultimate-gdpr-consent-field-woocommerce"]').each(function() {
+    $(this).click(function() {
         var cb = $(this).find('input');
         if (cb.attr('checked')) {
             cb.attr('checked', false);
