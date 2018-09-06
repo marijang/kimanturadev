@@ -49,10 +49,11 @@ footer{
         @include media(mobile){
             text-align: center;
             grid-template-columns: 1fr;
+            grid-gap: 32px;
         }  
         @include media(tablet){
             grid-row-gap: 8px;
-        grid-column-gap: 8px;
+            grid-column-gap: 8px;
         }  
     }
     @include e('content-media-style'){
