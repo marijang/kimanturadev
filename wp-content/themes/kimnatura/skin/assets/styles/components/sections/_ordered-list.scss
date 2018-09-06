@@ -57,6 +57,7 @@ $ordered-list-gap:              $base-content-padding*2.5;
            padding:$ordered-list-paragraph-padding;
            @include media(mobile tablet){
                 padding: 0px;
+                padding-top: 16px;
            }
         }
     }
