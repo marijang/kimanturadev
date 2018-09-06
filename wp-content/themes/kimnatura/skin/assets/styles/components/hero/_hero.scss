@@ -195,6 +195,8 @@ $hero-transition-duration-in: .9s;
             background-color: transparent;
             color: $color-black;
             text-align: center;
+            padding: 0px;
+            margin: 0px;
          }
          @include media(tablet){
             background-color: transparent;
@@ -289,6 +291,9 @@ $hero-transition-duration-in: .9s;
                 @include typi(huge);
                 text-align: left;
                 margin: 0;
+            }
+            @include media(mobile){
+                @include typi(huge);
             }
         }
        // padding: $hero-content-padding;
