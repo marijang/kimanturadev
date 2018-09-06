@@ -54,7 +54,7 @@ if (kdmfi_has_featured_image('featured-image-2')){
     <div class="section__share-add-wrap">
         <?php require locate_template( 'template-parts/parts/addthis.php' ); ?>
     </div>
-    <div class="section__content-share">
+    <div class="section__content-share content-style">
         <?php the_content(); ?>
     </div>
   </div>
