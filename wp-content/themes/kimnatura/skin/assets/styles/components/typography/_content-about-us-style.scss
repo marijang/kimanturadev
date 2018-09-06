@@ -44,7 +44,8 @@ $content-about-us-padding: 0 100px;
         
         @include media(mobile tablet){
             grid-gap: 16px;
-            margin-bottom: 16px;
+            margin-bottom: 32px;
+            margin-top: 32px;
         }
     }
     h2{
