@@ -40,6 +40,9 @@ $gallery-spacing-bottom: $base-content-padding*3;
     }
     img{
         width: 100%;
+        @include media(mobile tablet){
+            height: 100%;
+        }
     }
 
     @include media(mobile){

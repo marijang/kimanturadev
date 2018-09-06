@@ -156,6 +156,11 @@ $section-description-space-bottom-small:$base-content-padding;
         strong{
             font-weight: 800;
         }
+        h4{
+            @include media(mobile tablet){
+                @include typi(default);
+            }
+        }
      }
 
 
