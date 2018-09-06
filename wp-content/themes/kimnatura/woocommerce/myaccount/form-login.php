@@ -42,6 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			jQuery('.register').children().css('display', 'block');
 			jQuery('#reg-toggle').parent().css('display', 'none');
 			jQuery('.woocommerce-terms-and-conditions').css('display', 'none');
+			jQuery('.woocommerce-privacy-policy-text').css('display', 'none');
 			// jQuery('.ct-ultimate-gdpr-consent-field').css('display', 'inline-block');
 			// jQuery('.ct-ultimate-gdpr-consent-field-woocommerce').css('display', 'inline-block');
 			//jQuery('.woocommerce-privacy-policy-text').css('display', 'block');
@@ -58,6 +59,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			jQuery('.register').children().css('display', 'block');
 			jQuery('#reg-toggle').parent().css('display', 'none');
 			jQuery('.woocommerce-terms-and-conditions').css('display', 'none');
+			jQuery('.woocommerce-privacy-policy-text').css('display', 'none');
 			//jQuery('.woocommerce-privacy-policy-text').css('display', 'block');
 	});
 
