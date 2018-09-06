@@ -104,6 +104,10 @@ $section-description-space-bottom-small:$base-content-padding;
         padding-left: 0px;
         border-radius: 10px;
 
+        @include media(tablet){
+            margin-left: 0;
+        }
+
         @include media(mobile){
             height: auto;
             position: initial;
