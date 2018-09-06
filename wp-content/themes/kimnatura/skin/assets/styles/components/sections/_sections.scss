@@ -222,6 +222,9 @@ $section-description-space-bottom-small:$base-content-padding;
         @include m('spacing-bottom-s'){
             margin-bottom: $section-description-space-bottom-small;
         }
+        @include media(mobile tablet){
+            @include typi('default');
+        }
     }
 
     @include element('highlighted'){

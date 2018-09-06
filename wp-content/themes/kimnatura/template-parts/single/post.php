@@ -24,7 +24,7 @@ if (kdmfi_has_featured_image('featured-image-2')){
 <!-- Single Content Section -->
 
 
-<article  class="single section section__spacing-top--default section--padding section--first section__spacing-bottom--medium" id="<?php echo esc_attr( $post->ID ); ?>">
+<article  class="single section section__spacing-top--default1 section--padding section--first section__spacing-bottom--medium" id="<?php echo esc_attr( $post->ID ); ?>">
 <?php if (!in_category('slider-hero') || wp_is_mobile()) : ?>
 <header class="section__header">
     <h1 class="section__title">
