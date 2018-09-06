@@ -470,8 +470,10 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
 
 	$attribute =  $product->get_attribute('pa_pakiranje');
 	return 
-		 '<div class="cart__item-name">'
-		. $product->get_title()
+         '<div class="cart__item-name">'
+        . '<a href="'.get_permalink( $product->ID ).'" class="cart__item-link">'
+        . $product->get_title()
+        . '</a>'
 		. '</div>'
 		. '<p class="cart__item-desc">'
 		. $excerpt
