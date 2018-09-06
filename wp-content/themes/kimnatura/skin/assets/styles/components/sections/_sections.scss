@@ -12,6 +12,26 @@ $section-description-space-bottom-small:$base-content-padding;
     @include section-spacings('top');
     @include section-spacings('bottom');
 
+    @include m('slider'){
+        .section__header{
+            margin-bottom: 16px;
+        }
+       
+    }
+    @include m('image-effect'){
+        //animation: kenburns-top 5s ease-out both;
+        animation: kenburns-top 5s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
+       
+    }
+
+    
+    @include m('title-center'){
+        @include media(mobile tablet){
+            text-align: center;
+        }
+       
+    }
+
     @include e('content'){
         @include m('has-share'){
             display: flex;
@@ -114,9 +134,13 @@ $section-description-space-bottom-small:$base-content-padding;
         .gallery{
             margin-left: -150px;
             margin-right: -100px;
+            @include media(mobile tablet){
+                margin-left: 0px;
+                margin-right: 0px;
+            }
         }
 
-        @include media(mobile){
+        @include media(mobile tablet){
             flex-direction: column-reverse;
             margin-left: 0px;
             margin-right: 0px;
@@ -128,6 +152,7 @@ $section-description-space-bottom-small:$base-content-padding;
    // background: red;
     @include container();
     @include element('image'){
+        overflow: hidden;
         img{
             width: $section-img-width;
            
@@ -151,12 +176,14 @@ $section-description-space-bottom-small:$base-content-padding;
     }
     
     @include element('header'){
-        margin-bottom: $section-header-space-bottom; 
+        //margin-bottom: $section-header-space-bottom;
+        margin-bottom: 32px; 
         @include media(mobile){
              margin-bottom: $section-header-space-bottom-mobile;
         }
         @include media(tablet ipad){
             margin-bottom: $section-header-space-bottom-mobile;
+            //margin-bottom: 0;
         }
     }
 

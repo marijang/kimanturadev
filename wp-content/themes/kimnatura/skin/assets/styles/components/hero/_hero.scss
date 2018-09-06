@@ -83,6 +83,11 @@ $hero-transition-duration-in: .9s;
         opacity: 1;
         @extend %bg-image;
         background-size: contain!important;
+        @include media(tablet){
+        
+            min-height: 350px;
+            margin-right: -80px; // Usrane slike
+        }
         @include media(desktop large){
             opacity: 0;
             transition: $hero-transition-duration-in ease-in $hero-transition-duration;
@@ -189,7 +194,9 @@ $hero-transition-duration-in: .9s;
          @include media(tablet){
             background-color: transparent;
             color: $color-black;
-            text-align: center;
+            text-align: left;
+            margin: 0px;
+            padding: 0px;
          }
     }
     @include element('link'){
@@ -201,6 +208,11 @@ $hero-transition-duration-in: .9s;
             margin-top: 0;
             text-align: left;
             visibility: hidden;
+        }
+        @include media(tablet){
+            text-align: left;
+            margin-left: 0px;
+            
         }
     }
     @include element('content'){
@@ -217,8 +229,16 @@ $hero-transition-duration-in: .9s;
 
         @include media(tablet){
             color:$color-black;
-            position: initial;
+           // position: initial;
             background-color: transparent;
+          //  margin-top: 16px;
+
+            top:0;
+            left:$hero-content-left;
+            left:0;
+            bottom:$hero-content-bottom;
+            right:$hero-content-right;
+            width: 48%;
             margin-top: 16px;
         }
         
@@ -258,6 +278,11 @@ $hero-transition-duration-in: .9s;
                 opacity: 1;
                 padding: 0;
                 background: none;
+            }
+            @include media(tablet){
+                @include typi(huge);
+                text-align: left;
+                margin: 0;
             }
         }
        // padding: $hero-content-padding;

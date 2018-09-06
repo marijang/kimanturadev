@@ -6,6 +6,12 @@ $content-about-us-padding: 0 100px;
         @include typi(larger);
         font-weight: 300;
         font-style: normal;
+        display: block;
+        @include media(mobile tablet){
+            @include typi(default);
+            
+            margin-bottom: 8px;
+        }
     }
     h3,h4,p,ol,h1,ul{
         padding:$content-about-us-padding;
@@ -16,12 +22,25 @@ $content-about-us-padding: 0 100px;
             padding: 0 32px;
         }
     }
+    ol{
+        
+        margin: 32px;
+        @include media(mobile tablet){
+        margin: 16px;
+        }
+    }
+    ol.ordered-list{
+        margin-top: 32px;
+    }
     .gallery{
         margin-bottom: 0px;
         margin-top: 0px;
+        grid-gap: 16px;
+            margin-bottom: 32px;
         
         @include media(mobile tablet){
             grid-gap: 16px;
+            margin-bottom: 16px;
         }
     }
     h2{

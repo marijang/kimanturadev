@@ -13,14 +13,24 @@ var myElement = document.querySelector("#page-navigation");
 var headroom  = new Headroom(myElement,{
     // callback when pinned, `this` is headroom object
     onPin : function() {
-        console.log('OK');
+        $('.shop-categories__list').addClass('shop-categories__list--headup');
+        //$('.shop-catalog__filter').addClass('shop-categories__list--headup');
     },
     // callback when unpinned, `this` is headroom object
-    onUnpin : function() {console.log('Vidi me kako radim');},
+    onUnpin : function() {console.log('HEADROOM:Vidi me MZ kako radim:)');
+      $('.shop-catalog__filter').removeClass('shop-categories__list--headup');
+    },
     // callback when above offset, `this` is headroom object
-    onTop : function() {console.log('Vidi me opet');},
+    onTop : function() {
+        console.log('HEADROOM:Vidi me MZ opet radim:) ');
+        $('.shop-catalog__filter').addClass('shop-categories__list--headup');
+        $('.shop-catalog__filter').removeClass('shop-categories__list--headup');
+    },
     // callback when below offset, `this` is headroom object
-    onNotTop : function() {},
+    onNotTop : function() {
+       
+        $('.shop-catalog__filter').addClass('shop-categories__list--headup');
+    },
     // callback at bottom of page, `this` is headroom object
     onBottom : function() {},
     // callback when moving away from bottom of page, `this` is headroom object
@@ -31,7 +41,20 @@ var headroom  = new Headroom(myElement,{
 
 headroom.init({
     tolerance: 5,
-    offset : 205,
+    offset : 250,
+    onPin : function() {
+        console.log('OK');
+    },
+    // callback when unpinned, `this` is headroom object
+    onUnpin : function() {console.log('HEADROOM:Vidi me MZ kako radim1111:)');},
+    // callback when above offset, `this` is headroom object
+    onTop : function() {console.log('HEADROOM:Vidi me MZ opet radim111:) ');},
+    // callback when below offset, `this` is headroom object
+    onNotTop : function() {},
+    // callback at bottom of page, `this` is headroom object
+    onBottom : function() {},
+    // callback when moving away from bottom of page, `this` is headroom object
+    onNotBottom : function() {}
 });
 
 });

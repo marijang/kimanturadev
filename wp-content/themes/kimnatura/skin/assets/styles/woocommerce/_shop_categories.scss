@@ -2,12 +2,23 @@
    
     @include element('list'){
         
+
        @include typi('small');
        @extend  %accordion;
        position: sticky;
+       transition: all 0.35s ease-in-out;
        top: 0vh;
       // padding-top: 108px;
+       @include media(mobile tablet){
+           margin:0;
+       }
 
+       @include m('headup'){
+           @include media(desktop large){
+             // padding-top:152px;
+              top: 116px;
+           }
+       }
            
        @include media(mobile) {
         padding-top: 0px!important;
@@ -16,7 +27,7 @@
        }
        input[type="checkbox"] + span:not(.lever) {
         @include typi('small');
-        line-height: 1.8;
+        //line-height: 1.8;
         font-family: $base-font-family-primary;
 
     

@@ -53,6 +53,11 @@
     align-content: center;
     justify-content: center;
 
+    @include media(tablet){
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
 
    // box-shadow: 0 41px 43.56px .44px rgba(0,0,0,0.32);
    // transform: scale(1) translate(0,0);

@@ -15,14 +15,17 @@ $woo  = new Woo();
 
 
 ?>
-<section class="section related-products section__spacing-top--medium section__spacing-bottom--medium">
+  <?php if (!is_front_page()) :?>
+  <div class="section--highlighted-color">
+  <?php endif?>
+<section class="section related-products section__spacing-top--medium section__spacing-bottom--medium section--slider">
     <?php if (is_front_page()) :?>
     <header class="section__header">
     <h3 class="section__title section__title--center"><?php echo  $title;?></h3>
     </header>
     <?php else :?>
     <header class="section__header">
-    <h3 class="section__title"><?php echo  $title;?></h3>
+    <h3 class="section__title section--title-center "><?php echo  $title;?></h3>
     </header>
     <?php endif;?>
     <div class="products__most-selling">
@@ -163,3 +166,6 @@ $woo  = new Woo();
 		</div>
 	</div>
 </section>
+<?php if (!is_front_page()) :?>
+</div>
+  <?php endif?>

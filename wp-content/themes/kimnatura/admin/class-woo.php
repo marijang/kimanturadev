@@ -494,9 +494,9 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
             $image = wp_get_attachment_url( $thumbnail_id );
         }
         if(!empty($thumbnail_id)){
-            echo '<div class="section__image">'.wp_get_attachment_image( $thumbnail_id , 'full-width' ) . '</div>';
+            echo '<div class="section__image "><div class="section--image-effect">'.wp_get_attachment_image( $thumbnail_id , 'full-width' ) . '</div></div>';
         }else{
-            echo '<div class="section__image">'.get_the_post_thumbnail(get_option( 'woocommerce_shop_page_id'),'full-width' ). '</div>';
+            echo '<div class="section__image "><div class="section--image-effect">'.get_the_post_thumbnail(get_option( 'woocommerce_shop_page_id'),'full-width' ). '</div></div>';
         }
     }
 

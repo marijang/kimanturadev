@@ -15,6 +15,11 @@
         @include media(desktop large){
             margin: 0 32px 0 0;
         }
+        
+            @include media(tablet){
+               flex:1;
+            }
+        
     }
     @include e('title'){
         margin-bottom:0px; 
@@ -89,6 +94,9 @@
     } 
     @include element('quantity'){
         margin-right: $base-content-padding;
+        @include media(mobile tablet){
+            margin-bottom: $base-content-padding/2;
+        }
     }
     @include element('description'){
         //margin-bottom: vr(1);
