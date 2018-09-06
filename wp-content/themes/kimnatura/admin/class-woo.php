@@ -451,6 +451,9 @@ public function shipping_method_notice() {
  * Show Product title
  * 
  */
+
+
+
 function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item_key=""){
 	$product_id = $cart_item['product_id'];
 	// WC_Product
@@ -467,15 +470,19 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
     }
     //$res = get_post_meta($product->id);
     //print_r(unserialize($res['_product_attributes'][0]));
+    $class = 'cart__item-desc--three-rows';
+    if ($attribute){
+        $class = 'cart__item-desc--tworows';
+    }
 
 	$attribute =  $product->get_attribute('pa_pakiranje');
 	return 
          '<div class="cart__item-name">'
-        . '<a href="'.get_permalink( $product->ID ).'" class="cart__item-link">'
+        . '<a href="'.get_permalink( $cart_item['data']->get_id() ).'" class="cart__item-link">'
         . $product->get_title()
         . '</a>'
 		. '</div>'
-		. '<p class="cart__item-desc">'
+		. '<p class="cart__item-desc '.$class.'">'
 		. $excerpt
 		. '</p>'
 		. '<div class="cart__item-attribute">'

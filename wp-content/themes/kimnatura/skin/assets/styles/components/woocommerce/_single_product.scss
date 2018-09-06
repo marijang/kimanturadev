@@ -149,6 +149,11 @@
         display: flex;
         margin-top: $base-content-padding;
     }
+    @include element('variations-butto-container'){
+        @include media(desktop large){
+            margin-top: $base-content-padding;
+        } 
+    }
     @include element('variation-description'){
         display: block;
     }
