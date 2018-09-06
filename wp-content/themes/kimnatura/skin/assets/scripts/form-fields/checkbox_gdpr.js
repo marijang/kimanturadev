@@ -21,7 +21,29 @@ $( document ).ready(function() {
             cb.parent().removeClass('checkbox__invalid');
         }
     });
-});
+    });
+
+    var inputWoo = $('#ct-ultimate-gdpr-consent-field-woocommerce');
+    inputWoo.attr('required', false);
+    var labelWoo = $("[for='ct-ultimate-gdpr-consent-field-woocommerce']");
+    var textWoo = labelWoo.text();
+    //console.log(text);
+    labelWoo.text('');
+    var splitWoo = textWoo.split('odredbama');
+    //label.append('<span>' + split[0]  + ' odredbama <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
+    labelWoo.append('<span>Pristajem da se moji podaci pohrane u skladu s odredbama <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
+    inputWoo.prependTo(labelWoo);
+    labelWoo.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
+    labelWoo.click(function() {
+        var cbWoo = $(this).find('input');
+        if (cbWoo.attr('checked')) {
+            cbWoo.attr('checked', false);
+            //cb.parent().addClass('checkbox__invalid');
+        } else {
+            cbWoo.attr('checked', true);
+            cbWoo.parent().removeClass('checkbox__invalid');
+        }
+    });
 
     var input = $('#ct-ultimate-gdpr-consent-field-mailchimp');
     input.attr('required', false);
