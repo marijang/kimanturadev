@@ -145,6 +145,14 @@ $section-description-space-bottom-small:$base-content-padding;
             margin-left: 0px;
             margin-right: 0px;
         }
+
+        // style single post
+        p{
+            padding-bottom: 24px;
+            @include media(mobile tablet){
+                padding-bottom: 16px;
+            }
+        }
      }
 
 

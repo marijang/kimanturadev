@@ -471,7 +471,7 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
     //$res = get_post_meta($product->id);
     //print_r(unserialize($res['_product_attributes'][0]));
     $class = 'cart__item-desc--three-rows';
-    if ($attribute){
+    if (isset($attribute)){
         $class = 'cart__item-desc--tworows';
     }
 
