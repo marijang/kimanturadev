@@ -316,7 +316,7 @@ $hero-transition-duration-in: .9s;
                 margin: 0 0 20px;
             }
             @include media(mobile tablet){
-                padding-bottom: 0px;
+                //padding-bottom: 0px;
             }
             
             line-height: 1.45;
