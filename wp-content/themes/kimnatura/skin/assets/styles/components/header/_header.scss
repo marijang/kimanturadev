@@ -133,7 +133,7 @@ html.mobile-menu-is-open{
             z-index: 1050;
             background: white;
             width: 100%;
-            min-height: calc(100vh - 88px);
+            min-height: calc(100vh - 70px);
             background: rgba(255,255,255,0.97);
             padding-left:0px;
             padding-right:0px;
@@ -186,7 +186,8 @@ html.mobile-menu-is-open{
         align-items: inherit;
         @include media(mobile){
             flex:1;
-            justify-content: flex-end;
+            justify-content: space-evenly;
+          
             display: flex;
             flex-direction: column;
         }
@@ -223,6 +224,10 @@ html.mobile-menu-is-open{
         @include typi(large);
         @include media(mobile){
             //flex:1;
+            margin-bottom: 90px;
+            border-top: 4px solid #000;
+            padding-top: 16px;
+            width: 100%;
         }
       
     }
@@ -231,9 +236,10 @@ html.mobile-menu-is-open{
         margin-bottom: 8px;
     }
     @include e('mobile-contact-mail'){
-        @include typi(large);
+        @include typi(larger);
         font-weight: 700;
         margin-bottom: 8px;
+        
     }
     @include e('mobile-contact-social'){
         color:#000;
@@ -254,6 +260,7 @@ html.mobile-menu-is-open{
     @include e('mobile-contact-copyright'){
         color:#000;
         font-weight: 300;
+        @include typi(small);
 
     }
     
