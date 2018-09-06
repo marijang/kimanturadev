@@ -188,7 +188,7 @@
     } 
     @include element('results'){
         margin: 0;  
-        flex:1;
+        flex:4;
         @include typi('small');
         font-weight: 400;
         @include media('mobile'){
@@ -197,7 +197,7 @@
     } 
     @include element('ordering'){
         margin: 0;  
-
+        flex:2;
         @include typi('small');
         font-weight: 400;
         @include media('mobile'){

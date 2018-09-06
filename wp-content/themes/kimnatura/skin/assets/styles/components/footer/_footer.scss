@@ -32,9 +32,11 @@ footer{
 
 @include block('footer'){
 
-    margin-top: $base-content-padding*2;
+   // margin-top: $base-content-padding*2;
+    margin-top: 0px;
     @include media(mobile){
        margin-top: $base-content-padding;
+       margin-top: 0px;
     }
     @include e('content'){
         display: grid;
