@@ -474,8 +474,8 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
 
     $attribute =  $product->get_attribute('pa_pakiranje');
     $class = 'cart__item-desc--three-rows';
-    if ($attribute){
-        $class = 'cart__item-desc--two-rows';
+    if (isset($attribute)){
+        $class = 'cart__item-desc--tworows';
     }
 	return 
          '<div class="cart__item-name">'
