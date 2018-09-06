@@ -224,6 +224,9 @@ html.mobile-menu-is-open{
         @include media(mobile){
             //flex:1;
             margin-bottom: 90px;
+            border-top: 8px solid #000;
+            padding-top: 16px;
+            width: 100%;
         }
       
     }
