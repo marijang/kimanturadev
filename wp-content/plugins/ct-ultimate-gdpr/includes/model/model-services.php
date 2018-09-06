@@ -90,6 +90,8 @@ class CT_Ultimate_GDPR_Model_Services {
 	 */
 	private function load_services( $options ) {
 
+		$logger = new CT_Ultimate_GDPR_Model_Logger();
+
 		/**
 		 * Instantiated services will auto register.
 		 */
@@ -102,27 +104,41 @@ class CT_Ultimate_GDPR_Model_Services {
 				'CT_Ultimate_GDPR_Service_Eform',
 				'CT_Ultimate_GDPR_Service_Events_Manager',
 				'CT_Ultimate_GDPR_Service_Facebook_Pixel',
+				'CT_Ultimate_GDPR_Service_Flamingo',
+				'CT_Ultimate_GDPR_Service_Formcraft',
 				'CT_Ultimate_GDPR_Service_Formidable_Forms',
 				'CT_Ultimate_GDPR_Service_GA_Google_Analytics',
+				'CT_Ultimate_GDPR_Service_Google_Adsense',
 				'CT_Ultimate_GDPR_Service_Google_Analytics',
 				'CT_Ultimate_GDPR_Service_Google_Analytics_Dashboard_For_WP',
 				'CT_Ultimate_GDPR_Service_Google_Analytics_For_Wordpress',
 				'CT_Ultimate_GDPR_Service_Gravity_Forms',
+				'CT_Ultimate_GDPR_Service_Klaviyo',
 				'CT_Ultimate_GDPR_Service_Mailchimp',
+				'CT_Ultimate_GDPR_Service_Mailpoet',
 				'CT_Ultimate_GDPR_Service_Mailster',
+				'CT_Ultimate_GDPR_Service_Metorik_Helper',
+				'CT_Ultimate_GDPR_Service_Newsletter',
+				'CT_Ultimate_GDPR_Service_Ninja_Forms',
+				'CT_Ultimate_GDPR_Service_Order_Delivery_Date_For_Woocommerce',
+				'CT_Ultimate_GDPR_Service_Polylang',
 				'CT_Ultimate_GDPR_Service_Quform',
+				'CT_Ultimate_GDPR_Service_Ultimate_Member',
 				'CT_Ultimate_GDPR_Service_Woocommerce',
 				'CT_Ultimate_GDPR_Service_Wordfence',
 				'CT_Ultimate_GDPR_Service_WP_Comments',
+				'CT_Ultimate_GDPR_Service_WP_Foro',
+				'CT_Ultimate_GDPR_Service_Wp_Job_Manager',
+				'CT_Ultimate_GDPR_Service_WP_Mail_Bank',
 				'CT_Ultimate_GDPR_Service_WP_Posts',
 				'CT_Ultimate_GDPR_Service_WP_User',
-				'CT_Ultimate_GDPR_Service_Wp_Job_Manager',
 				'CT_Ultimate_GDPR_Service_WP_Simple_Paypal_Shopping_Cart',
+				'CT_Ultimate_GDPR_Service_Youtube',
 			)
 		);
 
 		foreach ( $default_services_classes as $default_service ) {
-			new $default_service;
+			new $default_service( $logger );
 		}
 
 		$all_services = apply_filters( 'ct_ultimate_gdpr_load_services', array(), $options, $this->services );

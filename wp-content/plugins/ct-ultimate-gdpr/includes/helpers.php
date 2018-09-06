@@ -216,11 +216,13 @@ function ct_ultimate_gdpr_wpml_translate_id( $object_id, $type = 'page' ) {
  *
  * @param array $args get_posts args
  *
+ * @param bool $with_translated_title Whether to return only posts which can be translated to current language? Then return posts with title translated.
+ *
  * @return array
  */
-function ct_ultimate_gdpr_wpml_get_original_posts( $args ) {
+function ct_ultimate_gdpr_wpml_get_original_posts( $args, $with_translated_title = true ) {
 
-	/** @var SitePress */
+	/** @var SitePress $sitepress */
 	global $sitepress;
 
 	// set default language
@@ -247,6 +249,30 @@ function ct_ultimate_gdpr_wpml_get_original_posts( $args ) {
 		! empty( $current_language )
 	) {
 		$sitepress->switch_lang( $current_language ); //restore previous language
+
+		if ( $with_translated_title ) {
+
+			$translated_posts = array();
+
+			foreach ( $posts as $key => $post ) {
+
+				$translated_id = ct_ultimate_gdpr_wpml_translate_id( $post->ID );
+
+				if ( $translated_id && $translated_id != $post->ID ) {
+
+					$translated_post    = get_post( $translated_id );
+					$post->post_title   = $translated_post->post_title;
+
+				}
+
+				$translated_posts[] = $post;
+
+			}
+
+			$posts = $translated_posts;
+
+		}
+
 	}
 
 	return $posts;
@@ -1028,7 +1054,7 @@ function ct_ultimate_gdpr_do_settings_sections( $page ) {
 
 	global $wp_settings_sections, $wp_settings_fields;
 
-	$last_tab = '';
+	$last_tab        = '';
 	$accordion_count = 0;
 
 	if ( ! isset( $wp_settings_sections[ $page ] ) ) {
@@ -1066,7 +1092,7 @@ function ct_ultimate_gdpr_do_settings_sections( $page ) {
 
 			if ( current( $attribute_parts ) == 'accordion' ) {
 				$id_accordion = end( $attribute_parts );
-				$accordion_count++;
+				$accordion_count ++;
 			}
 
 		}
@@ -1116,7 +1142,6 @@ function ct_ultimate_gdpr_do_settings_sections( $page ) {
 
 		foreach ( (array) $wp_settings_fields[ $page ][ $section['id'] ] as $field ) {
 
-//			var_dump($field);
 			$class = '';
 
 			if ( ! empty( $field['args']['class'] ) ) {
@@ -1125,11 +1150,16 @@ function ct_ultimate_gdpr_do_settings_sections( $page ) {
 
 			echo "<tr{$class}>";
 			if ( ! empty( $field['args']['label_for'] ) ) {
-				echo '<th scope="row"><label for="' . esc_attr( $field['args']['label_for'] ) . '">' . $field['title'] . '</label></th>';
+				echo '<th scope="row"><label for="' . esc_attr( $field['args']['label_for'] ) . '">' . $field['title'] . '</label>';
 			} else {
-				echo '<th scope="row">' . $field['title'] . '</th>';
+				echo '<th scope="row">' . $field['title'];
 			}
 
+			if ( ! empty( $field['args']['hint'] ) ) {
+				echo'<span class="ct-ultimate-gdpr-hint" title="'.  $field['args']['hint'] .'"> <i class="fa fa-question-circle"></i></span>';
+			}
+
+			echo '</th>';
 			echo '<td>';
 			call_user_func( $field['callback'], $field['args'] );
 			echo '</td>';
@@ -1165,4 +1195,49 @@ function ct_ultimate_gdpr_get_plugin_version() {
 	$plugin_version_array = get_file_data( dirname( __DIR__ ) . '/ct-ultimate-gdpr.php', array( 'Version' ), 'plugin' );
 
 	return ct_ultimate_gdpr_get_value( 0, $plugin_version_array, '' );
+}
+
+/**
+ * @return bool
+ */
+function ct_ultimate_gdpr_is_doing_cli() {
+	return ( php_sapi_name() === 'cli' || defined( 'STDIN' ) );
+}
+
+/**
+ * Get user IP if settings allow that
+ *
+ * @return string
+ */
+function ct_ultimate_gdpr_get_permitted_user_ip() {
+
+	$permitted = ! ! CT_Ultimate_GDPR::instance()
+	                                 ->get_admin_controller()
+	                                 ->get_option_value( 'services_logger_pseudonymized_ip', false, CT_Ultimate_GDPR_Controller_Services::ID );
+
+	$permitted |= CT_Ultimate_GDPR::instance()
+	                              ->get_controller_by_id( CT_Ultimate_GDPR_Controller_Policy::ID )
+	                              ->is_consent_valid();
+
+	return $permitted ? ct_ultimate_gdpr_get_user_ip() : '';
+
+}
+
+/**
+ * Get user agent if settings allow that
+ *
+ * @return string
+ */
+function ct_ultimate_gdpr_get_permitted_user_agent() {
+
+	$permitted = ! ! CT_Ultimate_GDPR::instance()
+	                                 ->get_admin_controller()
+	                                 ->get_option_value( 'services_logger_pseudonymized_user_agent', false, CT_Ultimate_GDPR_Controller_Services::ID );
+
+	$permitted |= CT_Ultimate_GDPR::instance()
+	                              ->get_controller_by_id( CT_Ultimate_GDPR_Controller_Policy::ID )
+	                              ->is_consent_valid();
+
+	return $permitted ? $_SERVER['HTTP_USER_AGENT'] : '';
+
 }

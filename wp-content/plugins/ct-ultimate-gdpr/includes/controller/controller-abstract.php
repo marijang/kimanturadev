@@ -33,6 +33,11 @@ abstract class CT_Ultimate_GDPR_Controller_Abstract implements CT_Ultimate_GDPR_
 	protected $id;
 
 	/**
+	 * @var CT_Ultimate_GDPR_Model_Logger
+	 */
+	protected $logger;
+
+	/**
 	 * Get unique controller id (page name, option id)
 	 */
 	abstract public function get_id();
@@ -76,9 +81,11 @@ abstract class CT_Ultimate_GDPR_Controller_Abstract implements CT_Ultimate_GDPR_
 	/**
 	 * CT_Ultimate_GDPR_Data_Access constructor.
 	 *
+	 * @param CT_Ultimate_GDPR_Model_Logger $logger
 	 */
-	final public function __construct() {
-		
+	final public function __construct( $logger ) {
+
+		$this->logger = $logger;
 		add_action( 'admin_menu', array( $this, 'add_menu_page' ), 20 );
 		add_action( 'current_screen', array( $this, 'add_option_fields' ) );
 		add_action( 'current_screen', array( $this, 'current_screen_action' ), 20 );
@@ -224,4 +231,25 @@ abstract class CT_Ultimate_GDPR_Controller_Abstract implements CT_Ultimate_GDPR_
 		return apply_filters( 'ct_ultimate_gdpr_controller_request_array', $_REQUEST );
 	}
 
+	/**
+	 * @return array
+	 */
+	public function get_options_to_export() {
+
+		$options = $this->options;
+		$excluded = $this->get_excluded_keys_options_to_export();
+
+		foreach ( $excluded as $key ) {
+			unset( $options[ $key ] );
+		}
+
+		return apply_filters( 'ct_ultimate_gdpr_controller_' . $this->get_id() . '_options_to_export', $options, $excluded );
+	}
+
+	/**
+	 * @return array
+	 */
+	private function get_excluded_keys_options_to_export() {
+		return array();
+	}
 }

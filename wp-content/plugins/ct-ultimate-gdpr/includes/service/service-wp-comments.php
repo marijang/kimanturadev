@@ -37,7 +37,7 @@ class CT_Ultimate_GDPR_Service_WP_Comments extends CT_Ultimate_GDPR_Service_Abst
 	 * @return mixed|string
 	 */
 	public function get_name() {
-		return esc_html__( "WP Comments", 'ct-ultimate-gdpr' );
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", "WP Comments" );
 	}
 
 	/**
@@ -95,15 +95,22 @@ class CT_Ultimate_GDPR_Service_WP_Comments extends CT_Ultimate_GDPR_Service_Abst
 			null, // callback
 			CT_Ultimate_GDPR_Controller_Services::ID // Page
 		);
-
+/*
 		add_settings_field(
 			"services_{$this->get_id()}_header", // ID
 			$this->get_name(), // Title
 			'__return_empty_string', // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-wpcomments_accordion-17' // Section
-		);
+		);*/
 
+        add_settings_field(
+            "services_{$this->get_id()}_service_name", // ID
+            sprintf( esc_html__( "[%s] Name", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
+            array( $this, "render_name_field" ), // Callback
+            CT_Ultimate_GDPR_Controller_Services::ID, // Page
+            'ct-ultimate-gdpr-services-wpcomments_accordion-17' // Section
+        );
 		add_settings_field(
 			"services_{$this->get_id()}_description", // ID
 			esc_html__( "[WP Comments] Description", 'ct-ultimate-gdpr' ), // Title
@@ -177,6 +184,8 @@ class CT_Ultimate_GDPR_Service_WP_Comments extends CT_Ultimate_GDPR_Service_Abst
 
 		if( $inject && ! ct_ultimate_gdpr_get_value( 'ct-ultimate-gdpr-consent-field', $_POST ) ) {
 			die ( __( 'Please give consent to collect your data', 'ct-ultimate-gdpr' ) );
+		} elseif ( $inject ) {
+			$this->log_user_consent();
 		}
 
 	}

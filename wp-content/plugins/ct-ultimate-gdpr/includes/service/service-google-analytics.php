@@ -19,7 +19,7 @@ class CT_Ultimate_GDPR_Service_Google_Analytics extends CT_Ultimate_GDPR_Service
 	 * @return mixed
 	 */
 	public function get_name() {
-		return 'Google Analytics';
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", 'Google Analytics' );
 	}
 
 	/**
@@ -59,6 +59,23 @@ class CT_Ultimate_GDPR_Service_Google_Analytics extends CT_Ultimate_GDPR_Service
 			'ct-ultimate-gdpr-cookie_tab-1_section-4' // Section
 		);
 
+		add_settings_field(
+			"cookie_services_{$this->get_id()}_enable_anonymous_tracking", // ID
+			sprintf(
+				wp_kses_post( __( "Enable Google Analytics anonymized IP tracking (<a href='%s' target='_blank'>read more</a>)", 'ct-ultimate-gdpr' ) ),
+				'https://support.google.com/analytics/answer/2763052?hl=en'
+			),
+			array( $this, "render_field_cookie_services_{$this->get_id()}_enable_anonymous_tracking" ), // Callback
+			CT_Ultimate_GDPR_Controller_Cookie::ID, // Page
+			'ct-ultimate-gdpr-cookie_tab-1_section-4',
+			array(
+				'hint' => sprintf(
+					wp_kses_post( __( 'Please note that even when enabled, Ultimate GDPR will still block Google Analytics without user consent. If you would like to track anonymously users without accepting cookies, please <a href=\'%s\' target=\'_blank\'>read more here</a>.', 'ct-ultimate-gdpr' ) ),
+					'https://gdpr-plugin.readthedocs.io/en/latest/faq/FAQ.html#google-analytics-stats'
+				),
+			)
+		);
+
 	}
 
 	/**
@@ -86,6 +103,22 @@ class CT_Ultimate_GDPR_Service_Google_Analytics extends CT_Ultimate_GDPR_Service
 	/**
 	 *
 	 */
+	public function render_field_cookie_services_google_analytics_enable_anonymous_tracking() {
+
+		$admin = CT_Ultimate_GDPR::instance()->get_admin_controller();
+		$field_name = $admin->get_field_name( __FUNCTION__ );
+		printf(
+			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s' %s />",
+			$admin->get_field_name( __FUNCTION__ ),
+			$admin->get_field_name_prefixed( $field_name ),
+			$admin->get_option_value_escaped( $field_name ) ? 'checked' : ''
+		);
+
+	}
+
+	/**
+	 *
+	 */
 	public function render_field_cookie_services_google_analytics_tracking_id() {
 
 		$admin = CT_Ultimate_GDPR::instance()->get_admin_controller();
@@ -107,6 +140,43 @@ class CT_Ultimate_GDPR_Service_Google_Analytics extends CT_Ultimate_GDPR_Service
 
 		// script for disabling GA tracking
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_static' ), 1 );
+		add_filter( 'ct_ultimate_gdpr_controller_cookie_fix_content', array( $this, 'cookie_fix_content_filter' ) );
+
+	}
+
+	/**
+	 * @param $content
+	 *
+	 * @return mixed
+	 */
+	public function cookie_fix_content_filter( $content ) {
+
+		$enable_anonymous_tracking = CT_Ultimate_GDPR::instance()
+		                                             ->get_admin_controller()
+		                                             ->get_option_value( 'cookie_services_google_analytics_enable_anonymous_tracking', '', CT_Ultimate_GDPR_Controller_Cookie::ID );
+
+		if ( $enable_anonymous_tracking ) {
+
+			$replaced = preg_replace_callback( '#[\s]{1}ga\([\'"]\s*send[\'"]\w{0,1},\s*[\'"].*?\);#', array(
+				$this,
+				'add_anonymize_content'
+			), $content );
+
+		}
+
+		return ! empty( $replaced ) ? $replaced : $content;
+	}
+
+	/**
+	 * Inject anonymizeIP param into google scripts
+	 *
+	 * @param $matches
+	 *
+	 * @return string
+	 */
+	public function add_anonymize_content( $matches ) {
+
+		return "ga('set', 'anonymizeIp', true); " . $matches[0];
 
 	}
 

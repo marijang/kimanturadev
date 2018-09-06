@@ -32,10 +32,32 @@ class CT_Ultimate_GDPR_Controller_Services extends CT_Ultimate_GDPR_Controller_A
 	}
 
 	/**
+	 * @return bool|mixed
+	 */
+	private function is_request_consents_log() {
+		return ct_ultimate_gdpr_get_value( 'ct-ultimate-gdpr-log', $this->get_request_array() );
+	}
+
+	/**
+	 * Download logs of all user consents
+	 */
+	private function download_consents_log() {
+
+		$rendered = $this->logger->render_logs( $this->logger->get_logs() );
+
+		// download
+		header( "Content-Type: application/octet-stream" );
+		header( "Content-Disposition: attachment; filename='{$this->get_id()}-logs.txt'" );
+		echo $rendered;
+		exit;
+
+	}
+
+	/**
 	 * Do actions on frontend
 	 */
 	public function front_action() {
-		$services = CT_Ultimate_GDPR_Model_Services::instance()->get_services();
+		$services = CT_Ultimate_GDPR_Model_Services::instance()->get_services( array(),'active' );
 
 		/** @var CT_Ultimate_GDPR_Service_Abstract $service */
 		foreach ( $services as $service ) {
@@ -53,6 +75,11 @@ class CT_Ultimate_GDPR_Controller_Services extends CT_Ultimate_GDPR_Controller_A
 	 * Do actions on current admin page
 	 */
 	protected function admin_page_action() {
+
+		if ( $this->is_request_consents_log() ) {
+			$this->download_consents_log();
+		}
+
 	}
 
 	/**
@@ -125,6 +152,22 @@ class CT_Ultimate_GDPR_Controller_Services extends CT_Ultimate_GDPR_Controller_A
 			'ct-ultimate-gdpr-services' // Section
 		);
 
+		add_settings_field(
+			'services_logger_pseudonymized_ip', // ID
+			esc_html__( "When logging consents of users who did not accept Privacy Policy, log their IP", 'ct-ultimate-gdpr' ), // Title
+			array( $this, 'render_field_services_logger_pseudonymized_ip' ), // Callback
+			$this->get_id(), // Page
+			'ct-ultimate-gdpr-services' // Section
+		);
+
+		add_settings_field(
+			'services_logger_pseudonymized_user_agent', // ID
+			esc_html__( "When logging consents of users who did not accept Privacy Policy, log their User Agent", 'ct-ultimate-gdpr' ), // Title
+			array( $this, 'render_field_services_logger_pseudonymized_user_agent' ), // Callback
+			$this->get_id(), // Page
+			'ct-ultimate-gdpr-services' // Section
+		);
+
 	}
 
 	/**
@@ -161,6 +204,37 @@ class CT_Ultimate_GDPR_Controller_Services extends CT_Ultimate_GDPR_Controller_A
 
 	}
 
+	/**
+	 *
+	 */
+	public function render_field_services_logger_pseudonymized_ip() {
+
+		$admin      = CT_Ultimate_GDPR::instance()->get_admin_controller();
+		$field_name = $admin->get_field_name( __FUNCTION__ );
+		printf(
+			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s' %s />",
+			$admin->get_field_name( __FUNCTION__ ),
+			$admin->get_field_name_prefixed( $field_name ),
+			$admin->get_option_value_escaped( $field_name ) ? 'checked' : ''
+		);
+
+	}
+
+	/**
+	 *
+	 */
+	public function render_field_services_logger_pseudonymized_user_agent() {
+
+		$admin      = CT_Ultimate_GDPR::instance()->get_admin_controller();
+		$field_name = $admin->get_field_name( __FUNCTION__ );
+		printf(
+			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s' %s />",
+			$admin->get_field_name( __FUNCTION__ ),
+			$admin->get_field_name_prefixed( $field_name ),
+			$admin->get_option_value_escaped( $field_name ) ? 'checked' : ''
+		);
+
+	}
 
 	/**
 	 * @return array

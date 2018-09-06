@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Ultimate GDPR
  * Description: Complete General Data Protection Regulation compliance toolkit plugin for WordPress.
- * Version: 1.6.0
+ * Version: 1.6.5
  * Author URI: https://www.createit.pl
  * Author: CreateIT
  */
@@ -38,9 +38,9 @@ class CT_Ultimate_GDPR {
 	private $controllers;
 
 	/**
-	 * @var string
+	 * @var CT_Ultimate_GDPR_Model_Logger
 	 */
-	private $version = '';
+	private $logger;
 
 	/**
 	 * Singleton
@@ -66,6 +66,7 @@ class CT_Ultimate_GDPR {
 		$this->include_helpers();
 		$this->include_integration();
 		$this->include_acf();
+		$this->logger = new CT_Ultimate_GDPR_Model_Logger();
 
 		add_action( 'init', array( $this, 'init' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'wp_enqueue_scripts_action' ) );
@@ -80,6 +81,7 @@ class CT_Ultimate_GDPR {
 	 */
 	public function init() {
 
+		$this->include_acf_fields();
 		$this->register_controllers();
 		$this->register_shortcodes();
 		$this->register_services();
@@ -98,6 +100,12 @@ class CT_Ultimate_GDPR {
 	 */
 	private function include_acf() {
 		include_once plugin_dir_path(__FILE__) . 'vendor/acf/acf-filters.php';
+	}
+
+	/**
+	 *
+	 */
+	private function include_acf_fields() {
 		include plugin_dir_path(__FILE__) . 'vendor/acf-fields.php';
 	}
 
@@ -169,16 +177,17 @@ class CT_Ultimate_GDPR {
 
 		foreach (
 			array(
-				new CT_Ultimate_GDPR_Controller_Cookie(),
-				new CT_Ultimate_GDPR_Controller_Terms(),
-				new CT_Ultimate_GDPR_Controller_Policy(),
-				new CT_Ultimate_GDPR_Controller_Forgotten(),
-				new CT_Ultimate_GDPR_Controller_Data_Access(),
-				new CT_Ultimate_GDPR_Controller_Breach(),
-				new CT_Ultimate_GDPR_Controller_Rectification(),
-				new CT_Ultimate_GDPR_Controller_Services(),
-				new CT_Ultimate_GDPR_Controller_Pseudonymization(),
-				new CT_Ultimate_GDPR_Controller_Plugins(),
+				new CT_Ultimate_GDPR_Controller_Cookie( $this->logger ),
+				new CT_Ultimate_GDPR_Controller_Terms( $this->logger ),
+				new CT_Ultimate_GDPR_Controller_Policy( $this->logger ),
+				new CT_Ultimate_GDPR_Controller_Forgotten( $this->logger ),
+				new CT_Ultimate_GDPR_Controller_Data_Access( $this->logger ),
+				new CT_Ultimate_GDPR_Controller_Breach( $this->logger ),
+				new CT_Ultimate_GDPR_Controller_Rectification( $this->logger ),
+				new CT_Ultimate_GDPR_Controller_Unsubscribe( $this->logger ),
+				new CT_Ultimate_GDPR_Controller_Services( $this->logger ),
+				new CT_Ultimate_GDPR_Controller_Pseudonymization( $this->logger ),
+				new CT_Ultimate_GDPR_Controller_Plugins( $this->logger ),
 			) as $controller
 		) {
 
@@ -210,7 +219,9 @@ class CT_Ultimate_GDPR {
 		new CT_Ultimate_GDPR_Shortcode_Myaccount();
 		new CT_Ultimate_GDPR_Shortcode_Terms_Accept();
 		new CT_Ultimate_GDPR_Shortcode_Policy_Accept();
+		new CT_Ultimate_GDPR_Shortcode_Privacy_Center();
 		new CT_Ultimate_GDPR_Shortcode_Privacy_Policy();
+		new CT_Ultimate_GDPR_Shortcode_Protection();
 	}
 
 	/**
@@ -281,10 +292,16 @@ class CT_Ultimate_GDPR {
 	 */
 	private function include_integration() {
 
+		$path = __DIR__ . '/includes/integration/compatibility.php' ;
+		include_once $path;
+
 		$path = __DIR__ . '/includes/integration/deep.php' ;
 		include_once $path;
 
 		$path = __DIR__ . '/includes/integration/wp-rocket.php' ;
+		include_once $path;
+
+		$path = __DIR__ . '/includes/integration/polylang.php' ;
 		include_once $path;
 
 		if ( file_exists( __DIR__ . "/vendor/optimus-prime-plugin-update/load.php" ) ) {
@@ -292,6 +309,14 @@ class CT_Ultimate_GDPR {
 		}
 
 	}
+
+	/**
+	 * @return array
+	 */
+	public function get_controllers(  ) {
+		return $this->controllers;
+	}
+
 
 }
 

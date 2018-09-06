@@ -22,9 +22,11 @@ class CT_Ultimate_GDPR_Shortcode_Myaccount {
 	 *
 	 */
 	public function wp_enqueue_scripts_action() {
+
 		if ( get_post() && false !== strpos( get_post()->post_content, "[$this->tag]" ) ) {
 			wp_enqueue_script( 'jquery-ui-tabs' );
 			wp_enqueue_script( 'ct-ultimate-gdpr-tabs', ct_ultimate_gdpr_url( 'assets/js/shortcode-myaccount.js' ), array( 'jquery-ui-tabs' ), ct_ultimate_gdpr_get_plugin_version() );
+//            wp_enqueue_script( 'ct-ultimate-gdpr-jquery-ui-effects', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js' );
 			wp_enqueue_style( 'ct-ultimate-gdpr-jquery-ui', ct_ultimate_gdpr_url( 'assets/css/jquery-ui.min.css' ), ct_ultimate_gdpr_get_plugin_version() );
 
 			if ( CT_Ultimate_GDPR::instance()->get_admin_controller()->get_option_value( 'services_recaptcha_secret', '', CT_Ultimate_GDPR_Controller_Services::ID ) ) {
@@ -43,9 +45,10 @@ class CT_Ultimate_GDPR_Shortcode_Myaccount {
 	 */
 	public function process( $atts ) {
 
-		$services = CT_Ultimate_GDPR_Model_Services::instance()->get_services( array(), 'forgettable' );
+		$services = CT_Ultimate_GDPR_Model_Services::instance()->get_services( array() );
 		CT_Ultimate_GDPR_Model_Front_View::instance()->set( 'services', $services );
 		CT_Ultimate_GDPR_Model_Front_View::instance()->set( 'recaptcha_key', CT_Ultimate_GDPR::instance()->get_admin_controller()->get_option_value( 'services_recaptcha_key', '', CT_Ultimate_GDPR_Controller_Services::ID ) );
+		CT_Ultimate_GDPR_Model_Front_View::instance()->set( 'form_shape', CT_Ultimate_GDPR::instance()->get_admin_controller()->get_option_value( 'forgotten_skin_shape', 'ct-ultimate-gdpr-simple-form', CT_Ultimate_GDPR_Controller_Forgotten::ID ) );
 
 		return $this->render();
 

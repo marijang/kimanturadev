@@ -34,6 +34,13 @@ interface CT_Ultimate_GDPR_Service_Interface {
 	public function is_forgettable();
 
 	/**
+	 * Can user be subscribe to a newsletter by this service?
+	 *
+	 * @return bool
+	 */
+	public function is_subscribeable();
+
+	/**
 	 * Set target user
 	 *
 	 * @param CT_Ultimate_GDPR_Model_User $user
@@ -79,5 +86,12 @@ interface CT_Ultimate_GDPR_Service_Interface {
 	 * @return string
 	 */
 	public function get_description();
+
+    /**
+     * Get service name used in front form shortcode
+     *
+     * @return string
+     */
+    public function get_service_name();
 
 }

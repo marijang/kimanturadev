@@ -546,7 +546,7 @@ class CT_Ultimate_GDPR_Controller_Rectification extends CT_Ultimate_GDPR_Control
 
 			add_settings_field(
 				'rectification_target_page', // ID
-				esc_html__( "Set custom URL to the page containing Ultimate GDPR shortcode as the e-mail confirmation target page (or leave empty for autodetect)", 'ct-ultimate-gdpr' ), // Title
+				esc_html__( "Set custom URL to the page containing Ultimate GDPR shortcode as the email confirmation target page (or leave empty for autodetect)", 'ct-ultimate-gdpr' ), // Title
 				array( $this, 'render_field_rectification_target_page' ), // Callback
 				$this->get_id(), // Page
 				$this->get_id() // Section

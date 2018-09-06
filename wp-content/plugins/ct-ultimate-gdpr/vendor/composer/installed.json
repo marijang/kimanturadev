@@ -172,9 +172,9 @@
         "source": {
             "type": "git",
             "url": "git@gitlab.createit.pl:themeforest-common/build.git",
-            "reference": "736f6b00df62a108141668a109d600e109193faf"
+            "reference": "4f3a3e0699f9722ab8784c5218f92f2c75d83d62"
         },
-        "time": "2018-04-06T11:09:28+00:00",
+        "time": "2018-07-19T10:40:15+00:00",
         "type": "createit-build",
         "installation-source": "source",
         "description": "Basic tools for building projects"

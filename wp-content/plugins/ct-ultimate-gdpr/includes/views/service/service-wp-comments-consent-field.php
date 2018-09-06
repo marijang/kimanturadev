@@ -11,7 +11,7 @@
 
 ?>
 
-<input class="ct-ultimate-gdpr-consent-field" type="checkbox" name="ct-ultimate-gdpr-consent-field" required />
-<label for="ct-ultimate-gdpr-consent-field">
+<input class="ct-ultimate-gdpr-consent-field" type="checkbox" name="ct-ultimate-gdpr-consent-field" required id="ct-ultimate-gdpr-consent-field-wp-comments"/>
+<label for="ct-ultimate-gdpr-consent-field-wp-comments">
 	<?php echo esc_html__( 'I consent to the storage of my data according to the Privacy Policy', 'ct-ultimate-gdpr' ); ?>
 </label>

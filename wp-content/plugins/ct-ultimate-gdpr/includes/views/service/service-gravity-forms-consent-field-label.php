@@ -9,4 +9,4 @@
  *
  */
 
-echo esc_html__( 'I consent to storage of my data according to Privacy Policy', 'ct-ultimate-gdpr' );
+echo esc_html__( 'I consent to my data being stored according to the Privacy Policy', 'ct-ultimate-gdpr' );
