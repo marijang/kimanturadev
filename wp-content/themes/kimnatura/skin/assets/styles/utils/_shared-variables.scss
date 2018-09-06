@@ -76,7 +76,9 @@ $typi: (
     null: (12px)
   ),
   small: (
-    null: (14px)
+    null: (14px),
+    small: (16px),
+    large: (14px)
   ),
   medium: (
     null: (16px),
@@ -84,7 +86,9 @@ $typi: (
     large: (16px)
   ),
   default: (
-    null: (18px)
+    null: (18px),
+    small: (18px),
+    large: (18px)
   ),
   large: (
     null: (20px),

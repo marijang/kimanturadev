@@ -470,12 +470,13 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
     }
     //$res = get_post_meta($product->id);
     //print_r(unserialize($res['_product_attributes'][0]));
+    
+
+    $attribute =  $product->get_attribute('pa_pakiranje');
     $class = 'cart__item-desc--three-rows';
     if ($attribute){
-        $class = 'cart__item-desc--tworows';
+        $class = 'cart__item-desc--two-rows';
     }
-
-	$attribute =  $product->get_attribute('pa_pakiranje');
 	return 
          '<div class="cart__item-name">'
         . '<a href="'.get_permalink( $cart_item['data']->get_id() ).'" class="cart__item-link">'
