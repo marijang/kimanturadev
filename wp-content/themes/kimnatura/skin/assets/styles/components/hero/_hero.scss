@@ -82,7 +82,12 @@ $hero-transition-duration-in: .9s;
         min-height: 200px;
         opacity: 1;
         @extend %bg-image;
-        background-size: contain!important;
+        background-size: contain;
+        @include media(mobile tablet){
+            background-size: cover;
+            background-position: 100%;
+        }
+
         @include media(tablet){
         
             min-height: 350px;
@@ -225,6 +230,7 @@ $hero-transition-duration-in: .9s;
             color:$color-black;
             position: initial;
             background-color: transparent;
+            margin-top: 16px;
         }
 
         @include media(tablet){
