@@ -18,9 +18,13 @@ $ordered-list-gap:              $base-content-padding*2.5;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: $ordered-list-gap;
     margin:$ordered-list-margin;
-
+    
     @include media(mobile){
         grid-template-columns: 1fr;
+        margin:0;
+        margin-bottom: 16px;
+
+
     }
     @include media(tablet){
         grid-template-columns: 1fr 1fr;
@@ -41,6 +45,11 @@ $ordered-list-gap:              $base-content-padding*2.5;
             margin-right: -$ordered-list-left/2;
         }
         //margin:$ordered-list-item-margin;
+        h2{
+            @include media(mobile tablet){
+                margin: 8px 0;
+            }
+        }
         p{
            padding:$ordered-list-paragraph-padding;
            @include media(mobile tablet){

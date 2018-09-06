@@ -1,7 +1,10 @@
 $content-about-us-padding: 0 100px;
 
 @include b('content-about-us-style'){
-
+    margin-bottom: 48px;
+    @include media(mobile tablet){
+        margin-bottom: 32px;
+    }
     em{
         @include typi(larger);
         font-weight: 300;
@@ -26,17 +29,18 @@ $content-about-us-padding: 0 100px;
         
         margin: 32px;
         @include media(mobile tablet){
-        margin: 16px;
+            margin: 16px;
         }
+
     }
     ol.ordered-list{
-        margin-top: 32px;
+        margin:16px 0px;
     }
     .gallery{
         margin-bottom: 0px;
         margin-top: 0px;
         grid-gap: 16px;
-            margin-bottom: 32px;
+        margin-bottom: 32px;
         
         @include media(mobile tablet){
             grid-gap: 16px;

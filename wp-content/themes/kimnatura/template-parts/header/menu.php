@@ -43,7 +43,7 @@ $array = array(
 <?php
     echo esc_html( $menu->bem_menu( 'header_main_nav', ' main-navigation--primary main-navigation' ) );
   ?>
-    <div class="header__mobile-user-login">   
+    <div class="header__mobile-user-login  mobile-only">   
   <?php if(is_user_logged_in()):  ?>
     <a href="/my-account/edit-account" class="main-navigation__link is-logged-in">
             <i class="material-icons">account_circle</i>
