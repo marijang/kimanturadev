@@ -311,7 +311,7 @@ $hero-transition-duration-in: .9s;
             //transform: translate3d(0,0,0);
             
             @include media(desktop large){
-                @include typi(small);
+                //@include typi(small);
                 font-size: 20px;
                 margin: 0 0 20px;
             }
