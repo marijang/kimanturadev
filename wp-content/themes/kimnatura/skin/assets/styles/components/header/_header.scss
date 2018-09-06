@@ -221,22 +221,22 @@ html.mobile-menu-is-open{
     }
 
     @include e('mobile-contact'){
-        @include typi(large);
+        @include typi(default);
         @include media(mobile){
             //flex:1;
-            margin-bottom: 90px;
-            border-top: 4px solid #000;
+            margin-bottom: 60px;
+            border-top: 2px solid #f1f1f1;
             padding-top: 16px;
             width: 100%;
         }
       
     }
     @include e('mobile-contact-phone'){
-        @include typi(large);
+        @include typi(default);
         margin-bottom: 8px;
     }
     @include e('mobile-contact-mail'){
-        @include typi(larger);
+        @include typi(default);
         font-weight: 700;
         margin-bottom: 8px;
         

@@ -34,9 +34,12 @@ $gallery-spacing-bottom: $base-content-padding*3;
     margin: 0;
     width: 100%;
     height: 100%;
-    dt,a,img{
+    dt,a{
         width: 100%;
         height: 100%;
+    }
+    img{
+        width: 100%;
     }
 
     @include media(mobile){
