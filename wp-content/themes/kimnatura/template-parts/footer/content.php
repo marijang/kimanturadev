@@ -17,9 +17,9 @@ $helper = new Helper();
   <div class="footer__content">
       <div class="footer__links footer__content-media-style">
         <img class="footer__logo-img" src="<?php echo esc_url( KIM_IMAGE_URL . 'logo-white.svg' ); ?>" title="<?php echo esc_attr( $header_logo_info ); ?>" alt="<?php echo esc_attr( $header_logo_info ); ?>" />
-        <!-- <p><?php echo get_theme_mod('footer_text'); ?>
-         
-        </p> -->
+         <p>
+           <?php echo get_theme_mod('footer_text'); ?>
+        </p>
       </div>
       <div class="footer__links">
         <?php echo esc_html( $menu->bem_menu( 'footer_main_nav', 'footer-nav' ) );?>
