@@ -156,6 +156,11 @@ $section-description-space-bottom-small:$base-content-padding;
         strong{
             font-weight: 800;
         }
+        h4{
+            @include media(mobile tablet){
+                @include typi(default);
+            }
+        }
      }
 
 
@@ -221,6 +226,9 @@ $section-description-space-bottom-small:$base-content-padding;
         }
         @include m('spacing-bottom-s'){
             margin-bottom: $section-description-space-bottom-small;
+        }
+        @include media(mobile tablet){
+            @include typi('default');
         }
     }
 
