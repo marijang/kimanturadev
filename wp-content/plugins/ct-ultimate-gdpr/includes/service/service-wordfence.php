@@ -21,7 +21,7 @@ class CT_Ultimate_GDPR_Service_Wordfence extends CT_Ultimate_GDPR_Service_Abstra
 	 * @return mixed
 	 */
 	public function get_name() {
-		return 'Wordfence';
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", 'Wordfence' );
 	}
 
 	/**

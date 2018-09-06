@@ -65,7 +65,7 @@
     </h2>
 
 
-    <form method="post" action="options.php">
+    <form method="post" action="options.php" enctype="multipart/form-data">
 
 		<?php
 

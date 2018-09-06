@@ -1,6 +1,6 @@
 <?php
 
-if ( class_exists( 'ACF' ) || class_exists( 'acf_pro' ) ) {
+if ( class_exists( 'ACF' ) || class_exists( 'acf_pro' ) || apply_filters( 'ct_ultimate_gdpr_disable_acf_filters', false ) ) {
 	return;
 }
 

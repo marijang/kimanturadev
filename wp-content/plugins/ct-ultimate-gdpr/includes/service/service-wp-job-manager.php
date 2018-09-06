@@ -21,7 +21,7 @@ class CT_Ultimate_GDPR_Service_Wp_Job_Manager extends CT_Ultimate_GDPR_Service_A
 	 * @return mixed
 	 */
 	public function get_name() {
-		return 'WP Job Manager';
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", 'WP Job Manager' );
 	}
 
 	/**
@@ -65,13 +65,21 @@ class CT_Ultimate_GDPR_Service_Wp_Job_Manager extends CT_Ultimate_GDPR_Service_A
 		);
 
 
-		add_settings_field(
+		/*add_settings_field(
 			"services_{$this->get_id()}_header", // ID
 			$this->get_name(), // Title
 			'__return_empty_string', // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-wpjobmanager_accordion-18' // Section
-		);
+		);*/
+
+        add_settings_field(
+            "services_{$this->get_id()}_service_name", // ID
+            sprintf( esc_html__( "[%s] Name", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
+            array( $this, "render_name_field" ), // Callback
+            CT_Ultimate_GDPR_Controller_Services::ID, // Page
+            'ct-ultimate-gdpr-services-wpjobmanager_accordion-18' // Section
+        );
 
 		add_settings_field(
 			"services_{$this->get_id()}_description", // ID
@@ -118,7 +126,7 @@ class CT_Ultimate_GDPR_Service_Wp_Job_Manager extends CT_Ultimate_GDPR_Service_A
 	 * @return string
 	 */
 	protected function get_default_description() {
-		return '';
+		return esc_html__( 'WP Job Manager gathers data entered by users in forms', 'ct-ultimate-gdpr' );
 	}
 
 	/**

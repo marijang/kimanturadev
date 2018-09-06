@@ -9,6 +9,14 @@ class CT_Ultimate_GDPR_Service_Facebook_Pixel extends CT_Ultimate_GDPR_Service_A
 	 * @return void
 	 */
 	public function init() {
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_compatible_pixelyoursite/facebook-pixel-master.php', '__return_true' );
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_collects_data_pixelyoursite/facebook-pixel-master.php', '__return_true' );
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_compatible_pixelyoursite/pixelyoursite.php', '__return_true' );
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_collects_data_pixelyoursite/pixelyoursite.php', '__return_true' );
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_compatible_pixelyoursite-pro/pixelyoursite-pro.php', '__return_true' );
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_collects_data_pixelyoursite-pro/pixelyoursite-pro.php', '__return_true' );
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_compatible_pixelyoursitepro/pixelyoursite-pro.php', '__return_true' );
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_collects_data_pixelyoursitepro/pixelyoursite-pro.php', '__return_true' );
 	}
 
 	/**
@@ -19,7 +27,7 @@ class CT_Ultimate_GDPR_Service_Facebook_Pixel extends CT_Ultimate_GDPR_Service_A
 	 * @return mixed
 	 */
 	public function get_name() {
-		return 'Facebook Pixel';
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", 'Facebook Pixel' );
 	}
 
 	/**
@@ -60,7 +68,8 @@ class CT_Ultimate_GDPR_Service_Facebook_Pixel extends CT_Ultimate_GDPR_Service_A
 				"pixel-cat.",
 				"fbq('init'",
 				"www.facebook.com/tr?id",
-				"/pixelyoursite/"
+				"/pixelyoursite/",
+				"/pixelyoursitepro/",
 			);
 
 		}

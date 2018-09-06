@@ -5,6 +5,12 @@
  */
 abstract class CT_Ultimate_GDPR_Service_Abstract implements CT_Ultimate_GDPR_Service_Interface {
 
+
+	/**
+	 * @var CT_Ultimate_GDPR_Model_Logger $logger
+	 */
+	protected $logger;
+
 	/**
 	 * Collected data array
 	 *
@@ -83,6 +89,24 @@ abstract class CT_Ultimate_GDPR_Service_Abstract implements CT_Ultimate_GDPR_Ser
 	abstract public function front_action();
 
 	/**
+	 * Can user be subscribe to a newsletter by this service?
+	 *
+	 * @return bool
+	 */
+	public function is_subscribeable(  ) {
+		return false;
+	}
+
+	/**
+	 * Unsubscribe user from all newsletters
+	 *
+	 * @throws Exception
+	 * @return void
+	 */
+	public function unsubscribe(  ) {
+	}
+
+	/**
 	 * Get group levels of this service
 	 *
 	 * @return array
@@ -101,8 +125,12 @@ abstract class CT_Ultimate_GDPR_Service_Abstract implements CT_Ultimate_GDPR_Ser
 
 	/**
 	 * CT_Ultimate_GDPR_Service_Abstract constructor.
+	 *
+	 * @param $logger
 	 */
-	public function __construct() {
+	public function __construct( $logger ) {
+
+		$this->logger = $logger;
 
 		add_action( 'current_screen', array( $this, 'add_option_fields' ), 20 );
 
@@ -114,9 +142,9 @@ abstract class CT_Ultimate_GDPR_Service_Abstract implements CT_Ultimate_GDPR_Ser
 				"breach_recipients_filter"
 			) );
 			$this->set_group();
+			$this->init();
 		}
 
-		$this->init();
 	}
 
 	/** Dequeue scripts with specified content (external cookies)
@@ -154,11 +182,27 @@ abstract class CT_Ultimate_GDPR_Service_Abstract implements CT_Ultimate_GDPR_Ser
 			"<textarea class='ct-ultimate-gdpr-field' id='%s' name='%s' rows='10' cols='100'>%s</textarea>",
 			$admin->get_field_name( __FUNCTION__ ),
 			$admin->get_field_name_prefixed( $field_name ),
-			$admin->get_option_value_escaped( $field_name, $this->get_description() )
+			$admin->get_option_value_escaped( $field_name, $this->get_description() ),
+            $admin->get_option_value_escaped( $field_name, $this->get_service_name() )
 		);
 
 	}
+    /**
+     * Render field for setting custom service description
+     */
+    public function render_name_field() {
 
+        $admin      = CT_Ultimate_GDPR::instance()->get_admin_controller();
+        $field_name = "services_{$this->get_id()}_service_name";
+
+        printf(
+            "<textarea class='ct-ultimate-gdpr-field-name' id='%s' name='%s' rows='1' cols='100'>%s</textarea>",
+            $admin->get_field_name( __FUNCTION__ ),
+            $admin->get_field_name_prefixed( $field_name ),
+            $admin->get_option_value_escaped( $field_name, $this->get_service_name() )
+        );
+
+    }
 	/**
 	 * Simple render of collected user data
 	 *
@@ -187,6 +231,11 @@ abstract class CT_Ultimate_GDPR_Service_Abstract implements CT_Ultimate_GDPR_Ser
 		return apply_filters( 'ct_ultimate_gdpr_service_render_collected', $return, $this->collected, $human_readable, $this->get_id() );
 	}
 
+	/**
+	 * @param $data
+	 *
+	 * @return string
+	 */
 	protected function render_human_data( $data ) {
 
 		$return = '';
@@ -197,7 +246,7 @@ abstract class CT_Ultimate_GDPR_Service_Abstract implements CT_Ultimate_GDPR_Ser
 
 				if ( is_array( $item ) || is_object( $item ) ) {
 
-					if ( is_array( $item ) && isset( $item[0] ) && ! is_array( $item[0] ) ) {
+					if ( is_array( $item ) && isset( $item[0] ) && ! is_array( $item[0] ) && ! is_object( $item[0] ) ) {
 
 						$return .= "$item_key: $item[0]" . PHP_EOL;
 
@@ -221,7 +270,7 @@ abstract class CT_Ultimate_GDPR_Service_Abstract implements CT_Ultimate_GDPR_Ser
 
 		}
 
-		return $return ;
+		return $return;
 
 	}
 
@@ -233,9 +282,25 @@ abstract class CT_Ultimate_GDPR_Service_Abstract implements CT_Ultimate_GDPR_Ser
 	public function get_description() {
 
 		$user_description = CT_Ultimate_GDPR::instance()->get_admin_controller()->get_option_value( "services_{$this->get_id()}_description", '', CT_Ultimate_GDPR_Controller_Services::ID );
+		$return           = $user_description ? $user_description : $this->get_default_description();
+		$return           = apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_description", $return );
 
-		return $user_description ? $user_description : $this->get_default_description();
+		return $return;
 	}
+
+    /**
+     * Get service name
+     *
+     * @return string
+     */
+    public function get_service_name() {
+
+        $user_description = CT_Ultimate_GDPR::instance()->get_admin_controller()->get_option_value( "services_{$this->get_id()}_service_name", '', CT_Ultimate_GDPR_Controller_Services::ID );
+        $return           = $user_description ? $user_description : $this->get_name();
+        $return           = apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_service_name", $return );
+
+        return $return;
+    }
 
 	/**
 	 * Get service id (based on class name)
@@ -308,5 +373,35 @@ abstract class CT_Ultimate_GDPR_Service_Abstract implements CT_Ultimate_GDPR_Ser
 	 */
 	public function breach_recipients_filter( $recipients ) {
 		return $recipients;
+	}
+
+	/**
+	 * Log user accepted the consent checkbox
+	 */
+	protected function log_user_consent() {
+
+		$this->logger->consent( array(
+			'type'       => $this->get_id(),
+			'time'       => time(),
+			'user_id'    => wp_get_current_user()->ID,
+			'user_ip'    => ct_ultimate_gdpr_get_permitted_user_ip(),
+			'user_agent' => ct_ultimate_gdpr_get_permitted_user_agent()
+		) );
+
+	}
+
+	/**
+	 * Is breach filter option enabled for this service?
+	 * @return bool
+	 */
+	protected function is_breach_enabled() {
+
+		$enabled_array = CT_Ultimate_GDPR::instance()->get_admin_controller()->get_option_value( 'breach_services' );
+		if ( ! is_array( $enabled_array ) || ! in_array( $this->get_id(), $enabled_array ) ) {
+			return false;
+		}
+
+		return true;
+
 	}
 }

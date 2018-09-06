@@ -189,6 +189,12 @@ class CT_Ultimate_GDPR_Controller_Data_Access extends CT_Ultimate_GDPR_Controlle
 
 		CT_Ultimate_GDPR_Model_Front_View::instance()->add( 'notices', esc_html__( "Your request was sent!", 'ct-ultimate-gdpr' ) );
 
+		if ( $this->get_option( 'dataaccess_automated_dataaccess' ) ) {
+
+			$this->users_send_email( array( $email ) );
+
+		}
+
 		return true;
 
 	}
@@ -196,8 +202,7 @@ class CT_Ultimate_GDPR_Controller_Data_Access extends CT_Ultimate_GDPR_Controlle
 	/**
 	 *
 	 */
-	private
-	function is_user_request_for_user_data() {
+	private	function is_user_request_for_user_data() {
 
 		$email   = ct_ultimate_gdpr_get_value( 'ct-ultimate-gdpr-email', $this->get_request_array() );
 		$consent = ct_ultimate_gdpr_get_value( 'ct-ultimate-gdpr-consent-data-access', $this->get_request_array() );
@@ -263,12 +268,11 @@ class CT_Ultimate_GDPR_Controller_Data_Access extends CT_Ultimate_GDPR_Controlle
 	}
 
 	/**
-	 *
+	 * @param array $emails
 	 */
-	private
-	function users_send_email() {
+	private function users_send_email( $emails = array() ) {
 
-		$emails   = ct_ultimate_gdpr_get_value( 'emails', $this->get_request_array() );
+		$emails   = $emails ? $emails : ct_ultimate_gdpr_get_value( 'emails', $this->get_request_array() );
 		$requests = get_option( $this->get_requests_option_key(), array() );
 
 		foreach ( $emails as $email ) {
@@ -489,8 +493,7 @@ class CT_Ultimate_GDPR_Controller_Data_Access extends CT_Ultimate_GDPR_Controlle
 	/**
 	 * @return mixed
 	 */
-	public
-	function add_option_fields() {
+	public function add_option_fields() {
 
 		$admin = CT_Ultimate_GDPR::instance()->get_admin_controller();
 
@@ -506,6 +509,15 @@ class CT_Ultimate_GDPR_Controller_Data_Access extends CT_Ultimate_GDPR_Controlle
 		/* Data accesss section fields */
 
 		{
+
+			add_settings_field(
+				'dataaccess_automated_dataaccess', // ID
+				esc_html__( "Automatically send data to all users on their request", 'ct-ultimate-gdpr' ), // Title
+				array( $this, 'render_field_dataaccess_automated_dataaccess' ), // Callback
+				$this->get_id(), // Page
+				$this->get_id() // Section
+			);
+
 			add_settings_field(
 				'dataaccess_notify_email', // ID
 				esc_html__( "Email to send new request notifications to", 'ct-ultimate-gdpr' ), // Title
@@ -531,6 +543,19 @@ class CT_Ultimate_GDPR_Controller_Data_Access extends CT_Ultimate_GDPR_Controlle
 			);
 
 		}
+
+	}
+
+	public function render_field_dataaccess_automated_dataaccess() {
+
+		$admin      = CT_Ultimate_GDPR::instance()->get_admin_controller();
+		$field_name = $admin->get_field_name( __FUNCTION__ );
+		printf(
+			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s' %s />",
+			$admin->get_field_name( __FUNCTION__ ),
+			$admin->get_field_name_prefixed( $field_name ),
+			$admin->get_option_value_escaped( $field_name ) ? 'checked' : ''
+		);
 
 	}
 

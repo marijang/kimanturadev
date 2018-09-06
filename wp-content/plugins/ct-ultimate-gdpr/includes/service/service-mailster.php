@@ -31,7 +31,7 @@ class CT_Ultimate_GDPR_Service_Mailster extends CT_Ultimate_GDPR_Service_Abstrac
 			$wpdb->prepare( "
 				SELECT s.*
 				FROM {$wpdb->prefix}mailster_subscribers as s
-				WHERE s.email = %s OR s.ID = %d		
+				WHERE s.email = %s OR s.wp_id = %d		
 				",
 				$this->user->get_email(),
 				$this->user->get_id()
@@ -75,10 +75,43 @@ class CT_Ultimate_GDPR_Service_Mailster extends CT_Ultimate_GDPR_Service_Abstrac
 	}
 
 	/**
+	 * @return bool
+	 */
+	public function is_subscribeable() {
+		return true;
+	}
+
+	/**
+	 *
+	 */
+	public function unsubscribe(  ) {
+
+		global $mailster;
+		global $wpdb;
+
+		$results = $wpdb->get_results(
+			$wpdb->prepare( "
+				SELECT s.ID
+				FROM {$wpdb->prefix}mailster_subscribers as s
+				WHERE s.email = %s OR s.wp_id = %d		
+				",
+				$this->user->get_email(),
+				$this->user->get_id()
+			),
+			ARRAY_A
+		);
+
+		foreach ( $results as $result ) {
+			$mailster && $mailster->subscribers()->remove( ct_ultimate_gdpr_get_value( 'ID', $result ) );
+		}
+
+	}
+
+	/**
 	 * @return mixed
 	 */
 	public function get_name() {
-		return 'Mailster';
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", 'Mailster' );
 	}
 
 	/**
@@ -137,13 +170,21 @@ class CT_Ultimate_GDPR_Service_Mailster extends CT_Ultimate_GDPR_Service_Abstrac
 		);
 
 
-		add_settings_field(
+		/*add_settings_field(
 			"services_{$this->get_id()}_header", // ID
 			$this->get_name(), // Title
 			'__return_empty_string', // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-mailster_accordion-14' // Section
-		);
+		);*/
+
+        add_settings_field(
+            "services_{$this->get_id()}_service_name", // ID
+            sprintf( esc_html__( "[%s] Name", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
+            array( $this, "render_name_field" ), // Callback
+            CT_Ultimate_GDPR_Controller_Services::ID, // Page
+            'ct-ultimate-gdpr-services-mailster_accordion-14'// Section
+        );
 
 		add_settings_field(
 			"services_{$this->get_id()}_description", // ID
@@ -233,6 +274,9 @@ class CT_Ultimate_GDPR_Service_Mailster extends CT_Ultimate_GDPR_Service_Abstrac
 
 	}
 
+	/**
+	 *
+	 */
 	public function render_field_services_mailster_consent_field_unsubscribe() {
 
 		$admin = CT_Ultimate_GDPR::instance()->get_admin_controller();
@@ -351,6 +395,11 @@ class CT_Ultimate_GDPR_Service_Mailster extends CT_Ultimate_GDPR_Service_Abstrac
 	 * @return array
 	 */
 	public function breach_recipients_filter( $recipients ) {
+
+		if ( ! $this->is_breach_enabled() ) {
+			return $recipients;
+		}
+
 		return array_merge( $recipients, $this->get_all_users_emails() );
 	}
 
@@ -397,6 +446,8 @@ class CT_Ultimate_GDPR_Service_Mailster extends CT_Ultimate_GDPR_Service_Abstrac
 
 			$form_data['errors']['ct_consent'] = esc_html__( 'Consent is missing', 'ct-ultimate-gdpr' );
 
+		} elseif ( $inject ) {
+			$this->log_user_consent();
 		}
 
 		return $form_data;
