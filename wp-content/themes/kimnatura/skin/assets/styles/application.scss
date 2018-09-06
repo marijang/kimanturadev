@@ -436,3 +436,21 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
     -webkit-box-shadow: none; 
     box-shadow: none;
 }
+
+
+.ct-ultimate-gdpr-cookie-bottomPanel {
+    background-color: #f1f1f1!important;
+    opacity: 1!important;
+}
+
+.ct-ultimate-gdpr-cookie-popup-modern .ct-container {
+    width: 1170px;
+
+    @include media(mobile) {
+        width: 100%;
+    }
+}
+
+#ct-ultimate-gdpr-cookie-read-more {
+    display: none!important;
+}
