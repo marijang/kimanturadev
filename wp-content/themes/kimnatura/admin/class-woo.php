@@ -386,6 +386,27 @@ class Woo {
             the_subtitle( '<h2 class="section__description">', '</h2>' );
         }
     }
+
+      /**
+     * Hide shipping rates when free shipping is available.
+     * Updated to support WooCommerce 2.6 Shipping Zones.
+     *
+     * @param array $rates Array of rates found for the package.
+     * @return array
+     */
+    function my_hide_shipping_when_free_is_available( $rates ) {
+        $free = array();
+        foreach ( $rates as $rate_id => $rate ) {
+            if ( 'free_shipping' === $rate->method_id ) {
+                $free[ $rate_id ] = $rate;
+                break;
+            }
+        }
+        return ! empty( $free ) ? $free : $rates;
+    }
+
+
+
 /**
  * Show a message at the cart/checkout displaying
  * how much to go for free shipping.
@@ -986,4 +1007,6 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
             echo $field; // WPCS: XSS ok.
         }
     }
+
+      
 }

@@ -348,6 +348,9 @@ class Main {
     
     $this->loader->add_action('woocommerce_product_query',$woo, 'filter_product_query' );
     $this->loader->add_action('woocommerce_after_main_content',$blog,'last_news');
+
+    // Free shipping
+    $this->loader->add_filter( 'woocommerce_package_rates', 'my_hide_shipping_when_free_is_available', 100 );
     
   }
  
