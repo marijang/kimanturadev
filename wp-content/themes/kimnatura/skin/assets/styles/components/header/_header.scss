@@ -225,7 +225,7 @@ html.mobile-menu-is-open{
         @include media(mobile){
             //flex:1;
             margin-bottom: 90px;
-            border-top: 8px solid #000;
+            border-top: 4px solid #000;
             padding-top: 16px;
             width: 100%;
         }
@@ -236,9 +236,10 @@ html.mobile-menu-is-open{
         margin-bottom: 8px;
     }
     @include e('mobile-contact-mail'){
-        @include typi(large);
+        @include typi(larger);
         font-weight: 700;
         margin-bottom: 8px;
+        
     }
     @include e('mobile-contact-social'){
         color:#000;
@@ -259,6 +260,7 @@ html.mobile-menu-is-open{
     @include e('mobile-contact-copyright'){
         color:#000;
         font-weight: 300;
+        @include typi(small);
 
     }
     
