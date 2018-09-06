@@ -464,8 +464,11 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
 		foreach ( $terms as $term ) {
 			$tersma[] = $term->slug;
 		}
-	}
-	$attribute =  $product->get_attribute('pa_pakovanje');
+    }
+    //$res = get_post_meta($product->id);
+    //print_r(unserialize($res['_product_attributes'][0]));
+
+	$attribute =  $product->get_attribute('pa_pakiranje');
 	return 
 		 '<div class="cart__item-name">'
 		. $product->get_title()
