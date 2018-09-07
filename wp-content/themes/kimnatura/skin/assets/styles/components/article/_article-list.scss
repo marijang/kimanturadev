@@ -17,6 +17,15 @@ $article-min-height:      500px;
         margin-bottom: 0;
         padding: 0;
     }
+
+    @include e('excerpt'){
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 10;
+    }
+
     @include element('container'){
        // @include container();
         display: flex;
