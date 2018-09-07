@@ -4,7 +4,7 @@ Tags: loader, load, preloader, page preloader, prelader spinner, preloader with 
 Donate link: 
 Requires at least: 4.3
 Tested up to: 4.9
-Stable tag: 2.1.3
+Stable tag: 2.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,14 +53,15 @@ LoftLoader Pro is available. [Upgrade to pro version](https://codecanyon.net/ite
 * Option to display the preloader once per visitor session.
 * Support gradient background color, full background image, and repeating background pattern.
 * More ending animations.
-* Loader - 18 types of animations to choose. 6 of them support custom images. 
-* Looping - Animation can be set to looping forever, or just once (ends after page has loaded).
+* Loader - 19 types of animations to choose. 6 of them support custom images. 
+* Looping - Animation can be set to loop forever, and some animations can be set to run just once (ends after page has loaded).
 * Progress - Progress bar, counting percentage, or both. Any color. Position, size & font control.
 * Message - Enter your custom welcome or loading message to display. Control color, position & font.
 * Load Time - Set a minimum load time to prevent the pre-loader from disappearing too fast.
 * Device Control - Choose to show the loading screen on all devices, or hide on mobile, or show on mobile only.
 * Option to enable smooth page transition effect. [Check the example](http://demo.loftocean.com/loftloader-transition/).
 * Choose to save customize styles as inline styles in &lt;head&gt; or as an external .css file.
+* Option to disable page scrolling while loading.
 * Purchase once, free lifetime update with new features.
 
 Check some [examples](http://www.loftocean.com/loftloader/example-13/) created by pro version. 
@@ -91,6 +92,13 @@ Check some [examples](http://www.loftocean.com/loftloader/example-13/) created b
 8. Pro version: Load Time, Device Control & Smooth Page Transition
 
 == Changelog ==
+= 2.1.5 =
+* Fixed: Description for Close Button doesn’t work for Any Page Extension
+* Fixed: Minor CSS issues
+
+= 2.1.4 =
+* Fixed: Added CSS for screen reader text in this plugin (the text “close” of the close button is only for screen readers and should not be visible on screens)
+
 = 2.1.3 =
 * New: Add close button and related settings
 

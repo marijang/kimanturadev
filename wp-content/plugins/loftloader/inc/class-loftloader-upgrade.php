@@ -1,7 +1,7 @@
 <?php
 if(!class_exists('LoftLoader_Upgrade')){
 	class LoftLoader_Upgrade{
-		private $version ='2.1.3';
+		private $version ='2.1.5';
 		function __construct(){
 			$old_version = get_option('loftloader_lite_version', '1.0');
 			if(version_compare($old_version, $this->version, '<')){

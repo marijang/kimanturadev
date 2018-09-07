@@ -37,8 +37,9 @@ final class WOOF_EXT_BY_FEATURED extends WOOF_EXT {
         add_filter('woof_add_items_keys', array($this, 'woof_add_items_keys'));
         add_action('woof_print_html_type_options_' . $this->html_type, array($this, 'woof_print_html_type_options'), 10, 1);
         add_action('woof_print_html_type_' . $this->html_type, array($this, 'print_html_type'), 10, 1);
-        add_action('parse_query', array($this, "parse_query"), 9999);
-        //add_action('woof_get_tax_query', array($this, "woof_get_tax_query"), 9999);
+        //add_action('parse_query', array($this, "parse_query"), 9999);
+        add_action( 'woocommerce_product_query',array($this,'parse_query'));
+        add_action('woof_get_tax_query', array($this, "woof_get_tax_query"), 9999);
         add_action('wp_head', array($this, 'wp_head'), 999);
 
         self::$includes['js']['woof_' . $this->html_type . '_html_items'] = $this->get_ext_link() . 'js/' . $this->html_type . '.js';
@@ -71,16 +72,20 @@ final class WOOF_EXT_BY_FEATURED extends WOOF_EXT {
     }
 
     public function parse_query($wp_query){
-       
-        if (!empty($wp_query->tax_query) AND isset($wp_query->tax_query->queries)) {
-          global $WOOF;
-          $request = $WOOF->get_request_data();
-          if(isset($request["product_visibility"]) AND $request["product_visibility"]=='featured'){
-            $tax_query = $wp_query->tax_query->queries;
-            $tax_query=$this->add_to_tax_query($tax_query);
-            $wp_query->set('tax_query', $tax_query);
-          }   
-        }  
+            if(!isset($wp_query->query['post_type']) OR $wp_query->query['post_type']!='product'){
+                //return $wp_query;
+            }
+
+            if (!empty($wp_query->tax_query) AND isset($wp_query->tax_query->queries)) {
+              global $WOOF;
+              $request = $WOOF->get_request_data();
+              if(isset($request["product_visibility"]) AND $request["product_visibility"]=='featured'){
+                $tax_query = $wp_query->tax_query->queries;
+                $tax_query=$this->add_to_tax_query($tax_query);
+                $wp_query->set('tax_query', $tax_query);
+              }   
+            }  
+        
     }
     public function add_to_tax_query($tax_query){
         $tax_query[]=array(

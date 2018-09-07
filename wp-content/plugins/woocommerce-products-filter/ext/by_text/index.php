@@ -161,7 +161,9 @@ final class WOOF_EXT_BY_TEXT extends WOOF_EXT {
 		$woof_text = str_replace(' ', '?(.*)', $woof_text);
                 //$woof_text = str_replace(' ', '?(.*)', $woof_text);
                 $woof_text = str_replace("\&#039;", "\'", $woof_text);
-               
+                $woof_text =str_replace("\&quot;","\"", $woof_text);
+                $woof_text =str_replace("\(","\\\(", $woof_text);
+                $woof_text =str_replace("\)","\\\)", $woof_text);
 		//http://dev.mysql.com/doc/refman/5.7/en/regexp.html
 		$search_by_full_word = false;
 
@@ -323,7 +325,8 @@ final class WOOF_EXT_BY_TEXT extends WOOF_EXT {
 	    include_once WOOF_PATH . 'lib' . DIRECTORY_SEPARATOR . 'aq_resizer.php';
 	    foreach ($query->posts as $p) {
 		    $data = array(
-			"name" => $p->post_title . ' (#' . $p->ID . ')',
+			//"name" => $p->post_title . ' (#' . $p->ID . ')',
+                        "name" => $p->post_title,
 			"type" => "product"
 		    );
 		    if (has_post_thumbnail($p->ID)) {

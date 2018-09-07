@@ -98,5 +98,24 @@ if ($preset_min > $min_price)
 {
     $min = $preset_min;
 }
+$tax=1.0;
+if(isset($this->settings['by_price']['price_tax']) AND $this->settings['by_price']['price_tax']!=0){
+   $tax= $tax+floatval($this->settings['by_price']['price_tax'])/100.00;
+   $min_tax=floor($min*$tax);
+   $max_tax=ceil($max*$tax);
+   
+   if($min!=$min_price){
+      $min_price=($min_price*$tax);
+   }else{
+      $min_price=$min_tax; 
+   }
+   if($max!=$max_price){
+      $max_price=($max_price*$tax);
+   }else{
+      $max_price=$max_tax;
+   }
+   $min=$min_tax;
+   $max=$max_tax;
+}
 ?>
-<input class="woof_range_slider" id="<?php echo $uniqid ?>" data-min="<?php echo $min ?>" data-max="<?php echo $max ?>" data-min-now="<?php echo $min_price ?>" data-max-now="<?php echo $max_price ?>" data-step="<?php echo $slider_step ?>" data-slider-prefix="<?php echo $slider_prefix ?>" data-slider-postfix="<?php echo $slider_postfix ?>" value="" />
+<input class="woof_range_slider" id="<?php echo $uniqid ?>" data-taxes="<?php echo $tax ?>" data-min="<?php echo $min ?>" data-max="<?php echo $max ?>" data-min-now="<?php echo $min_price ?>" data-max-now="<?php echo $max_price ?>" data-step="<?php echo $slider_step ?>" data-slider-prefix="<?php echo $slider_prefix ?>" data-slider-postfix="<?php echo $slider_postfix ?>" value="" />

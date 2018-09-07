@@ -31,7 +31,7 @@
 	if (isset($role) AND ! empty($role)) {
 	    $args['role'] = $role;
 	}
-
+        $authors_title=array();
 	$authors = get_users($args);
 	$request = $WOOF->get_request_data();
 	$woof_author = '';
@@ -71,7 +71,12 @@
 			    <?php foreach ($authors as $user): ?>
 	    		    <li>
 	    			<input type="checkbox" class="woof_checkbox_author" id="woof_checkbox_author_<?php echo $user->data->ID ?>" name="woof_author[]" value="<?php echo $user->data->ID ?>" <?php if (in_array($user->data->ID, $woof_author)) echo "checked"; ?> />&nbsp;&nbsp;<label for="woof_checkbox_author_<?php echo $user->data->ID ?>"><?php echo $user->data->display_name ?></label>
-	    		    </li>
+	    		        <?php
+                                if (in_array($user->data->ID, $woof_author)){
+                                    $authors_title[]=$user;
+                                }
+                                ?>
+                            </li>
 			    <?php endforeach; ?>
 			</ul>
 		    </div>
@@ -85,12 +90,24 @@
 		    <?php if (!empty($authors)): ?>
 			<?php foreach ($authors as $user): ?>
 			    <option <?php echo selected($woof_author, $user->data->ID); ?> value="<?php echo $user->data->ID ?>"><?php echo $user->data->display_name ?></option>
-			<?php endforeach; ?>
+                            <?php
+                            if ($user->data->ID == $woof_author){
+                                $authors_title[]=$user;
+                            }
+                            ?>
+                        <?php endforeach; ?>
 		    <?php endif; ?>
 		</select>
 		<?php
 		break;
 	}
-	?>
+        if(!empty($authors_title)){
+           foreach($authors_title as $user){
+            ?>
+            <input type="hidden" value="<?php echo __('Author:', 'woocommerce-products-filter'), $user->data->display_name;?>" data-anchor="woof_n_<?php echo "woof_author" ?>_<?php echo $user->data->ID ?>" />
+            <?php  
+           }
+        }
+	?>               
     </div>
 </div>

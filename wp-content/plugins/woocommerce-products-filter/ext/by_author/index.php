@@ -42,7 +42,7 @@ final class WOOF_EXT_BY_AUTHOR extends WOOF_EXT
         add_filter('woof_add_items_keys', array($this, 'woof_add_items_keys'));
         add_action('woof_print_html_type_options_' . $this->html_type, array($this, 'woof_print_html_type_options'), 10, 1);
         add_action('woof_print_html_type_' . $this->html_type, array($this, 'print_html_type'), 10, 1);
-        add_action('wp_head', array($this, 'wp_head'), 999);
+       // add_action('wp_head', array($this, 'wp_head'), 999);
 
         self::$includes['js']['woof_' . $this->html_type . '_html_items'] = $this->get_ext_link() . 'js/' . $this->html_type . '.js';
         self::$includes['css']['woof_' . $this->html_type . '_html_items'] = $this->get_ext_link() . 'css/' . $this->html_type . '.css';

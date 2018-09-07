@@ -59,6 +59,10 @@ a.woof_remove_subscr{
     padding: 0;
     vertical-align: middle;
 }
+
+a.woof_remove_subscr img{
+    display: inline-block;
+}
 .woof_cron_link{
     color: red;
 
