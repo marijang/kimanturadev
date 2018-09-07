@@ -28,7 +28,7 @@ $article-min-height:      500px;
           min-height: auto;
         }
         @include media(tablet){
-          flex-direction: column;
+          flex-direction: row;
         }
         @include media(tablet, landscape){
           flex-direction: row;
