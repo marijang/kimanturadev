@@ -33,6 +33,10 @@ $article-min-height:      500px;
         @include media(tablet, landscape){
           flex-direction: row;
         }
+
+        @include media(ipad){
+          flex-direction: row;
+        }
         
         @include m('odd'){
           @include media(mobile tablet){
