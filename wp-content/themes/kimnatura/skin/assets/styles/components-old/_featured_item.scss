@@ -8,6 +8,7 @@
     text-align: center;
     padding: $grid-gutter*2;
     color:$title-link-color;
+
     &:hover{
         text-decoration: none;
         color:$title-link-color;
@@ -74,7 +75,7 @@
         -webkit-transition: opacity 200ms;
         transition: opacity 200ms;
         opacity: 0;
-        border: 1px solid #E9E9E9;
+        //border: 1px solid #E9E9E9;
         border-color: 200ms;
         box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
        

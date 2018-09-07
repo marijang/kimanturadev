@@ -15,9 +15,7 @@ $woo  = new Woo();
 
 
 ?>
-  <?php if (!is_front_page()) :?>
-  <div class="section--highlighted-color">
-  <?php endif?>
+ 
 <section class="section related-products section__spacing-top--medium section__spacing-bottom--medium section--slider">
     <?php if (is_front_page()) :?>
     <header class="section__header">
@@ -166,6 +164,3 @@ $woo  = new Woo();
 		</div>
 	</div>
 </section>
-<?php if (!is_front_page()) :?>
-</div>
-  <?php endif?>
