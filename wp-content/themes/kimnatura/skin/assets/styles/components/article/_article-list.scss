@@ -77,7 +77,8 @@ $article-min-height:      500px;
       margin-top: 100px;
       box-shadow: 0 4px 18.9px 2.1px rgba(205,193,193,0.15);
       box-shadow: 0 0 48px 2px rgba(0, 0, 0, 0.08);
-      min-height: $article-min-height;  
+      // min-height: $article-min-height;  
+      height: auto;
      
       @include media(mobile tablet){
         margin-top: 0;
