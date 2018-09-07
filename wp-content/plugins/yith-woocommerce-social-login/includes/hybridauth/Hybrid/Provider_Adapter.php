@@ -165,13 +165,21 @@ class Hybrid_Provider_Adapter {
 
 		# workaround to solve windows live authentication since microsoft disallowed redirect urls to contain any parameters
 		# http://mywebsite.com/path_to_hybridauth/?hauth.done=Live will not work
-		if ($this->id=="Live") {
-			$this->params["login_done"] = $HYBRID_AUTH_URL_BASE."live.php";
+		if ($this->id=="Live") { 
+			$this->params["login_done"] = $HYBRID_AUTH_URL_BASE."live.php"; 
+		}
+
+		if ($this->id=="Vkontakte") {
+			$this->params["login_done"] = $HYBRID_AUTH_URL_BASE."vkontakte.php";
+		}		
+		
+		if ($this->id=="Facebook"  && ! ywsl_check_wpengine()) {
+			$this->params["login_done"] = $HYBRID_AUTH_URL_BASE."facebook.php";
 		}
 
 		# Workaround to fix broken callback urls for the Facebook OAuth client
 		if ($this->adapter->useSafeUrls) {
-			$this->params['login_done'] = str_replace('hauth.done', 'hauth_done', $this->params['login_done']);
+				$this->params['login_done'] = str_replace('hauth.done', 'hauth_done', $this->params['login_done']);
 		}
 
 		if (isset($this->params["hauth_return_to"])) {
@@ -190,7 +198,7 @@ class Hybrid_Provider_Adapter {
 
 		// redirect
 		if (empty($this->params["redirect_mode"])) {
-			Hybrid_Auth::redirect($this->params["login_start"]);
+			Hybrid_Auth::redirect($this->params["login_start"]);	
 		} else {
 			Hybrid_Auth::redirect($this->params["login_start"],$this->params["redirect_mode"]);
 		}
@@ -239,7 +247,7 @@ class Hybrid_Provider_Adapter {
 			throw new Exception("Call to undefined function Hybrid_Providers_{$this->id}::$name().");
 		}
 
-		return call_user_func_array(array($this->adapter, $name), $arguments);
+    return call_user_func_array(array($this->adapter, $name), $arguments);
 	}
 
 	/**

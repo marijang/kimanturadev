@@ -80,19 +80,33 @@ if( ! class_exists( 'YITH_WC_Social_Login_Frontend' ) ){
 	     * @since  1.0.0
 	     * @author Emanuela Castorina
 	     */
-        public function social_buttons( $template_part = '', $is_shortcode = false ) {
-            $enabled_social = YITH_WC_Social_Login()->enabled_social;
-            $template_part  = empty( $template_part ) ? 'social-buttons' : $template_part;
-            if ( $is_shortcode ) {
-                ob_start();
-            }
-            if ( !is_user_logged_in() && !empty( $enabled_social ) ) {
-                yit_plugin_get_template( YITH_YWSL_DIR, $template_part . '.php', array( 'label' => get_option( 'ywsl_social_label' ), 'socials' => $enabled_social, 'label_checkout' => get_option( 'ywsl_social_label_checkout' ) ) );
-            }
-            if ( $is_shortcode ) {
-                return ob_get_clean();
-            }
-        }
+	    public function social_buttons( $template_part = '', $is_shortcode = false, $atts = array() ) {
+
+		    $enabled_social = YITH_WC_Social_Login()->enabled_social;
+		    $template_part  = empty( $template_part ) ? 'social-buttons' : $template_part;
+
+
+		    if ( $is_shortcode ) {
+			    ob_start();
+		    }
+
+		    $args = array(
+			    'label'          => get_option( 'ywsl_social_label' ),
+			    'socials'        => $enabled_social,
+			    'label_checkout' => get_option( 'ywsl_social_label_checkout' ),
+			    'redirect_to'    => YITH_WC_Social_Login()->get_redirect_to()
+		    );
+
+		    $args = wp_parse_args( $atts, $args );
+
+		    if ( !is_user_logged_in() && !empty( $enabled_social ) ) {
+			    wc_get_template( $template_part . '.php', $args,  '', YITH_YWSL_TEMPLATE_PATH.'/');
+		    }
+
+		    if ( $is_shortcode ) {
+			    return ob_get_clean();
+		    }
+	    }
 
 	    /**
 	     * Show social buttons in checkout page

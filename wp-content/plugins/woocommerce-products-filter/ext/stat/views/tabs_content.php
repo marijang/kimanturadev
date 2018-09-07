@@ -25,8 +25,20 @@ if (!defined('ABSPATH'))
 
         <div class="content-wrap">
             <section id="woof-stat-1">
+                <?php if(!$updated_table):?>
+                <div class="woof-control-section">
 
+                    <h4 style="color: orange;"><?php _e('Notice:', 'woocommerce-products-filter') ?></h4>
 
+                    <div class="woof-control-container">
+
+                        <p class="description">
+                            <?php _e('Please update database: ', 'woocommerce-products-filter') ?>
+                            <button id="woof_update_db"><?php _e('Update', 'woocommerce-products-filter') ?></button>
+                        </p>
+                    </div>
+                </div><!--/ .woof-control-section-->
+                <?php endif; ?>
 
                 <div class="woof-control-section">
 
@@ -84,7 +96,24 @@ if (!defined('ABSPATH'))
                                     $all_items[urldecode($slug)] = $t->labels->name;
                                 }
                             }
-
+                            if(class_exists('WOOF_META_FILTER') AND $updated_table){
+                                  $all_meta_items = array();
+                                  //***
+                                  global $WOOF;
+                                  $meta_fields=$WOOF->settings['meta_filter'];
+                                  if (!empty($meta_fields))
+                                  {
+                                      foreach ($meta_fields as $key => $meta)
+                                      {
+                                          if($meta['meta_key']=="__META_KEY__" OR $meta["search_view"]=='textinput'){
+                                              continue;
+                                          } 
+                                          $slug= $meta["search_view"]."_".$meta['meta_key'];
+                                          $all_meta_items[urldecode($slug)] = $meta['title'];
+                                      }
+                                     $all_items= array_merge($all_items,$all_meta_items); 
+                                  }
+                              }
                             asort($all_items);
                             //***
 
@@ -170,27 +199,6 @@ if (!defined('ABSPATH'))
 
                 <div class="woof-control-section">
 
-                    <h4 style="color: orange;"><?php _e('Notice:', 'woocommerce-products-filter') ?></h4>
-
-                    <div class="woof-control-container">
-
-                        <p class="description">
-                            <?php _e('This extension is experimental but with finished arhitecture of collection and keeping the data! If you have an idea about how to improve representation of the statistic data in your shop, I mean how do you want to see processed data on the graphs, types of graphs, etc. - create topic <a href="https://wordpress.org/support/plugin/woocommerce-products-filter" target="_blank">here</a> to discuss it! Be sure that your PHP version is not lower than 5.4.', 'woocommerce-products-filter') ?>
-                        </p>
-
-                        <p class="description" style="border: dashed 1px #ddd; padding: 4px;">
-                            In the free version of the plugin this extension works only 5 monthes after first activation and all features are enabled. After 5 monthes - statistic collection functionality will stop to work. I thought to remove this extension at all from the free version but decided to leave it for testing and trying. So let everybody decide for self if they need this functionality or not.<br />
-                            <?php if ($isa): ?>
-                                <span style="color: orange;"><b>Time left</b>: <?php echo $display_time ?></span>
-                            <?php else: ?>
-                                <span style="color: red;">Collection of data is disabled. You can only view already assembled data.</span>
-                            <?php endif; ?>
-                        </p>
-                    </div>
-                </div><!--/ .woof-control-section-->
-
-                <div class="woof-control-section">
-
                     <h4><?php _e('Statistics collection:', 'woocommerce-products-filter') ?></h4>
 
                     <div class="woof-control-container">
@@ -208,7 +216,7 @@ if (!defined('ABSPATH'))
                                 $woof_settings['woof_stat']['is_enabled'] = 0;
                             }
                             $is_enabled = $woof_settings['woof_stat']['is_enabled'];
-                            if (!$is_enabled)
+                            if (!$is_enabled) 
                             {
                                 echo '<div class="error"><p class="description">' . sprintf(__('Statistic extension is activated but statistics collection is not enabled. Enable it on: tab Statistic -> tab Options -> "Statistics collection enabled"', 'woocommerce-products-filter')) . '</p></div>';
                             }
@@ -248,7 +256,7 @@ if (!defined('ABSPATH'))
 
                     $server_options = $woof_settings['woof_stat']['server_options'];
 
-                    if (empty($server_options['host']) OR empty($server_options['host_user']) OR empty($server_options['host_db_name']) OR empty($server_options['host_pass']))
+                    if ((empty($server_options['host']) OR empty($server_options['host_user']) OR empty($server_options['host_db_name']) OR empty($server_options['host_pass'])) AND $woof_settings['woof_stat']['is_enabled'])
                     {
                         echo '<div class="error"><p class="description">' . sprintf(__('Statistic -> tab Options -> "Stat server options" inputs should be filled in by right data, another way not possible to collect statistical data!', 'woocommerce-products-filter')) . '</p></div>';
                     }
@@ -266,15 +274,17 @@ if (!defined('ABSPATH'))
                             <br />
                             <label style="margin-bottom: 5px; display: inline-block;"><?php _e('Password', 'woocommerce-products-filter') ?></label>:
                             <input type="text" name="woof_settings[woof_stat][server_options][host_pass]" value="<?php echo $server_options['host_pass'] ?>" /><br />
-                            <span id="woof_stat_connection"  class="button"><?php _e('Check DB connection', 'woocommerce-products-filter') ?></span>
+                             <span id="woof_stat_connection"  class="button"><?php _e('Check DB connection', 'woocommerce-products-filter') ?></span>
 
                         </div>
                         <div class="woof-description">
                             <p class="description">
                                 <?php _e('This data is very important for assembling statistics data, so please fill fields very responsibly. To collect statistical data uses a separate MySQL table.', 'woocommerce-products-filter') ?><br />
                                 <br />
-                                <a href="http://www.woocommerce-filter.com/extencion/statistic/" target="_blank" class="button"><?php _e('Read about the Statistic extension here', 'woocommerce-products-filter') ?></a>
+                                <a href="https://www.woocommerce-filter.com/extencion/statistic/" target="_blank" class="button"><?php _e('Read about the Statistic extension here', 'woocommerce-products-filter') ?></a>
                             </p>
+                            
+                            
                         </div>
                     </div>
 
@@ -304,7 +314,24 @@ if (!defined('ABSPATH'))
                                     $all_items[urldecode($slug)] = $t->labels->name;
                                 }
                             }
-
+                            if(class_exists('WOOF_META_FILTER') AND $updated_table){
+                                $all_meta_items = array();
+                                //***
+                                global $WOOF;
+                                $meta_fields=$WOOF->settings['meta_filter'];
+                                if (!empty($meta_fields))
+                                {
+                                    foreach ($meta_fields as $key => $meta)
+                                    {
+                                        if($meta['meta_key']=="__META_KEY__" OR $meta["search_view"]=='textinput'){
+                                            continue;
+                                        } 
+                                        $slug= $meta["search_view"]."_".$meta['meta_key'];
+                                        $all_meta_items[urldecode($slug)] = $meta['title'];
+                                    }
+                                   $all_items= array_merge($all_items,$all_meta_items); 
+                                }
+                            }
                             asort($all_items);
                             //***
 
@@ -327,10 +354,11 @@ if (!defined('ABSPATH'))
                         </div>
                         <div class="woof-description">
                             <p class="description">
-                                <?php _e('Select taxonomies which you want to track', 'woocommerce-products-filter') ?>
+                                <?php _e('Select taxonomies and meta keys which you want to track', 'woocommerce-products-filter') ?>
                             </p>
                         </div>
                     </div>
+                    
                 </div><!--/ .woof-control-section-->
 
 
@@ -465,7 +493,7 @@ if (!defined('ABSPATH'))
                         </div>
                         <div class="woof-description">
                             <p class="description">
-                                <?php _e('Use WordPress Cron if your site has a lot of traffic, and external cron of the site traffic is not big. External cron is more predictable with time of execution, but additional knowledge how to set it correctly is required (<i style="color: orange;">External cron will be ready in the next version of the extension</i>)', 'woocommerce-products-filter') ?>
+                                <?php _e('Use WordPress Cron if your site has a lot of traffic, and external cron if the site traffic is not big. External cron is more predictable with time of execution, but additional knowledge how to set it correctly is required (<i style="color: orange;">External cron will be ready in the next version of the extension</i>)', 'woocommerce-products-filter') ?>
                             </p>
                         </div>
                     </div>
@@ -509,7 +537,7 @@ if (!defined('ABSPATH'))
                                 'daily' => __('daily', 'woocommerce-products-filter'),
                                 'week' => __('weekly', 'woocommerce-products-filter'),
                                 'month' => __('monthly', 'woocommerce-products-filter'),
-                                    //'min1' => __('min1', 'woocommerce-products-filter')
+                                 'min1' => __('min1', 'woocommerce-products-filter')
                             );
 
                             if (!isset($woof_settings['woof_stat']['wp_cron_period']))
@@ -590,11 +618,12 @@ if (!defined('ABSPATH'))
                         `user_ip` text COLLATE utf8_unicode_ci NOT NULL,
                         `taxonomy` text COLLATE utf8_unicode_ci NOT NULL,
                         `value` int(11) NOT NULL,
+                        `meta_value` text COLLATE utf8_unicode_ci NOT NULL,
                         `page` text COLLATE utf8_unicode_ci NOT NULL,
                         `tax_page_term_id` int(11) NOT NULL DEFAULT '0',
                         `time` int(11) NOT NULL,
                         PRIMARY KEY (`id`)
-                      ) ENGINE=MyISAM {$charset_collate};";
+                      )  {$charset_collate};";
 
                 if ($wpdb->query($sql) === false)
                 {
@@ -617,7 +646,7 @@ if (!defined('ABSPATH'))
                         `time` int(11) NOT NULL,
                         `is_collected` int(1) NOT NULL DEFAULT '0',
                         PRIMARY KEY (`id`)
-                      ) ENGINE=MyISAM  {$charset_collate};";
+                      )  {$charset_collate};";
 
                 if ($wpdb->query($sql) === false)
                 {
@@ -703,7 +732,6 @@ if (!defined('ABSPATH'))
 
 </style>
 
-
 <script type="text/javascript">
     jQuery(function ($) {
         //reset cache of "Statistical parameters" drop-down
@@ -731,7 +759,6 @@ if (!defined('ABSPATH'))
     });
 
     //+++
-    //+++
     jQuery('#woof_stat_connection').click(function () {
         var data = {
             action: "woof_stat_check_connection",
@@ -745,6 +772,15 @@ if (!defined('ABSPATH'))
             alert(content);
         });
     });
+        jQuery('#woof_update_db').click(function () {
+        var data = {
+            action: "woof_stat_update_db",
+        };
+        jQuery.post(ajaxurl, data, function (content) {
+            alert(content);
+        });
+    });
+
     function woof_stat_draw_graphs() {
         woof_stat_process_monitor('<?php _e('drawing graphs ...', 'woocommerce-products-filter') ?>');
 
@@ -897,5 +933,4 @@ if (!defined('ABSPATH'))
 
     }
 </script>
-
 

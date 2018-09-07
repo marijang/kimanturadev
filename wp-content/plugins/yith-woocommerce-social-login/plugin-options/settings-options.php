@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
 
-
+$callback_url = YITH_YWSL_URL . 'includes/hybridauth/facebook.php';
 return array(
 
 	'settings' => array(
@@ -69,6 +69,7 @@ of YITH WooCommerce Social Login to benefit from all features!', 'yith-woocommer
 
         'section_facebook_settings'     => array(
             'name' => __( 'Facebook settings', 'yith-woocommerce-social-login' ),
+            'desc'    =>  __( '<strong>Callback URL</strong>: '. $callback_url , 'yith-woocommerce-social-login' ),
             'type' => 'title',
             'id'   => 'ywsl_section_facebook'
         ),

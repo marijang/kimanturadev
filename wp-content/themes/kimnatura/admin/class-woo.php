@@ -394,7 +394,7 @@ class Woo {
      * @param array $rates Array of rates found for the package.
      * @return array
      */
-    function my_hide_shipping_when_free_is_available( $rates ) {
+  /*  function my_hide_shipping_when_free_is_available( $rates ) {
         $free = array();
         foreach ( $rates as $rate_id => $rate ) {
             if ( 'free_shipping' === $rate->method_id ) {
@@ -403,7 +403,7 @@ class Woo {
             }
         }
         return ! empty( $free ) ? $free : $rates;
-    }
+    } */
 
 
 

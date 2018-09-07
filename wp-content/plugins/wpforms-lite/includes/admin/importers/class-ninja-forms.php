@@ -470,9 +470,8 @@ class WPForms_Ninja_Forms extends WPForms_Importer {
 		} else {
 			$label = sprintf(
 				/* translators: %1$s - field type; %2$s - field name if available. */
-				esc_html__( '%1$s Field %2$s', 'wpforms' ),
-				ucfirst( $field['type'] ),
-				! empty( $name ) ? "($name)" : ''
+				esc_html__( '%1$s Field', 'wpforms' ),
+				ucfirst( $field['type'] )
 			);
 		}
 

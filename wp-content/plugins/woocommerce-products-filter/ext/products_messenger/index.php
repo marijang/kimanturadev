@@ -403,23 +403,37 @@ final class WOOF_EXT_PRODS_MESSENGER extends WOOF_EXT {
 	    }
 	    $html .= "<span class='woof_author_name'>" . $auths . "</span><br />";
 	}
-
+ 
 	foreach ($args as $key => $val) {
             
 	    if (in_array($key, $not_show)) {
 		continue;
 	    }
-	    $name = get_taxonomy($key)->labels->name;
-	    if (!empty($name)) {
-		$name .= ": ";
-	    }
-	    $name .= $val;
-	    $html .= "<span class='woof_terms'>" . $name . "</span><br />";
+            
+            if(class_exists('WOOF_META_FILTER')){
+                $meta_title=WOOF_META_FILTER::get_meta_title_messenger($val, $key);
+                //var_dump($meta_title);
+                if(!empty($meta_title) AND $meta_title){
+                    $html .= $meta_title; 
+                    
+                    continue;
+                }
+            }
+            $tax=get_taxonomy($key);
+            if(is_object($tax)){
+                $name = $tax->labels->name;
+                if (!empty($name)) {
+                    $name .= ": ";
+                }
+                $name .= $val;
+                $html .= "<span class='woof_terms'>" . $name . "</span><br />";                
+            }
+
 	}
-        $html;
 	if (empty($html)) {
 	   $html = __('None', 'woocommerce-products-filter');
 	}
+        //var_dump($html);
 	return $html;
     }
 
@@ -453,7 +467,6 @@ final class WOOF_EXT_PRODS_MESSENGER extends WOOF_EXT {
             $result=stripos($sql,$operator);
             if($result!==false){
                 return false;
-                
                 break;
             }
         }

@@ -3,9 +3,9 @@ Contributors: RealMag777
 Donate link: https://codecanyon.net/item/woof-woocommerce-products-filter/11498469?ref=realmag777
 Tags: filter, products filter, woocommerce, products, ajax filter, woof, category filter, woocommerce products filter, woocommerce price filter, attributes filter, advanced product filters
 Requires at least: 4.1.0
-Tested up to: 4.9.4
+Tested up to: 4.9.6
 Requires PHP: 5.4
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 
 WooCommerce Products Filter – flexible, easy and robust professional filter for products in the WooCommerce store
 
@@ -20,6 +20,8 @@ Also its possible to [create any connectors for layout plugins](https://www.wooc
 
 Latest PHP 7.2.x - COMPATIBLE!
 
+Demo site: [http://www.demo.woocommerce-filter.com](http://www.demo.woocommerce-filter.com/)
+
 
 ### The Plugin Features:
 
@@ -30,25 +32,26 @@ Latest PHP 7.2.x - COMPATIBLE!
 * Dynamic products recount
 * You can show taxonomies/attributes in the search form as: radio, checkbox, drop-down, multi-drop-down, radio buttons in drop-down. Color,label,hierarchy drop-down, checkbox buttons in drop-down - in the premium version
 * Different skins for radio and checkboxes in the plugin settings
-* Simple options AND rich options
+* Simple AND rich options
+* [Filter by Meta Data](https://www.woocommerce-filter.com/extencion/woocommerce-filter-by-meta-fields/)
 * [Statistic](https://www.woocommerce-filter.com/extencion/statistic/)
 * [Products Messenger](https://www.woocommerce-filter.com/extencion/products-messenger/)
 * [Quick Search](https://www.woocommerce-filter.com/extencion/quick-search/)
 * [Infinite Scrolling](https://www.woocommerce-filter.com/make-infinite-scroll-for-filtered-products-also/)
-* Compatible with WooCommerce Currency Switcher - [https://wordpress.org/plugins/woocommerce-currency-switcher/](https://wordpress.org/plugins/woocommerce-currency-switcher/)
-* Compatible with WooCommerce Brands - [https://codecanyon.net/item/woocommerce-brands/8039481?ref=realmag777](https://codecanyon.net/item/woocommerce-brands/8039481?ref=realmag777)
-* Compatible with WooCommerce Products Per Page - [https://wordpress.org/plugins/woocommerce-products-per-page/](https://wordpress.org/plugins/woocommerce-products-per-page/)
+* Compatible with [WooCommerce Currency Switcher](https://wordpress.org/plugins/woocommerce-currency-switcher/)
+* Compatible with [WooCommerce Brands](https://codecanyon.net/item/woocommerce-brands/8039481?ref=realmag777)
+* Compatible with [WooCommerce Products Per Page](https://wordpress.org/plugins/woocommerce-products-per-page/)
 * [WPML compatibility](https://wpml.org/extensions/woof-woocommerce-products-filter/?aid=180271&affiliate_key=ykFQUy0inySN)
 * PHP 5.4.x - 7.2.x full compatibility
 * Possibility to create any extensions for the plugin (for developers only) 
-* Demo site is: [http://demo.woocommerce-filter.com](http://demo.woocommerce-filter.com)
-* Documentation: [https://www.woocommerce-filter.com/documentation/](https://www.woocommerce-filter.com/documentation/) and [https://www.woocommerce-filter.com/codex/](https://www.woocommerce-filter.com/codex/)
-* The premium version: [https://www.woocommerce-filter.com/a/buy](https://www.woocommerce-filter.com/a/buy)
+* [Demo site is](http://demo.woocommerce-filter.com)
+* [Documentation](https://www.woocommerce-filter.com/documentation/) and [CODEX](https://www.woocommerce-filter.com/codex/)
+* The premium version: [CODECANYON](https://www.woocommerce-filter.com/a/buy)
 
 
 https://www.youtube.com/watch?v=jZPtdWgAxKk
 
-You can get premium version of the plugin here: [https://www.woocommerce-filter.com/a/buy](https://www.woocommerce-filter.com/a/buy)
+You can get premium version of the plugin here: [CODECANYON](https://www.woocommerce-filter.com/a/buy)
 
 
 == Installation ==
@@ -86,8 +89,12 @@ R: [https://www.woocommerce-filter.com/documentation/](https://www.woocommerce-f
 3. The plugin settings
 4. The plugin settings
 5. The plugin settings
+6. The plugin settings
 
 == Changelog ==
+
+= 1.2.1 =
+* https://www.woocommerce-filter.com/update-woocommerce-products-filter-v-2-2-1/
 
 = 1.2.0 =
 * https://www.woocommerce-filter.com/update-woocommerce-products-filter-v-2-2-0/
@@ -263,3 +270,4 @@ Old v.1.1.5.1: https://www.woocommerce-filter.com/wp-content/uploads/2016/11/woo
 Old v.1.1.6.1: https://www.woocommerce-filter.com/wp-content/uploads/2017/04/woocommerce-products-filter-v.1.1.6.1.zip
 Old v.1.1.7: https://www.woocommerce-filter.com/wp-content/uploads/2017/12/woocommerce-products-filter-1.1.7.zip
 Old v.1.1.8: https://www.woocommerce-filter.com/wp-content/uploads/2018/02/woocommerce-products-filter-1.1.8.zip
+Old v.1.2.0: https://www.woocommerce-filter.com/wp-content/uploads/2018/02/woocommerce-products-filter-120.zip

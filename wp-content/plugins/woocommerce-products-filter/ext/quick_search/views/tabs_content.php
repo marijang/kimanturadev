@@ -14,9 +14,9 @@ global $WOOF;
 
             <section>
 
-                <a href="https://www.woocommerce-filter.com/extencion/quick-search/" target="_blank" class="button-primary"><?php echo __('About extension','woocommerce-products-filter') ?></a><br />
+                <a href="https://www.woocommerce-filter.com/extencion/quick-search/" target="_blank" class="button-primary"><?php echo __('About extension', 'woocommerce-products-filter') ?></a><br />
                 <br />
-                
+
                 <div class="woof-control-section" style="display:none;"  >
 
                     <h4><?php _e('How often assemble data file', 'woocommerce-products-filter') ?></h4>
@@ -134,7 +134,7 @@ global $WOOF;
 
                 <div class="woof-control-section woof_file_data_option" >
 
-                    <h4><?php _e('Filter data options', 'woocommerce-products-filter') ?></h4>
+                    <h4><?php _e('Additional Quick-search Filter options', 'woocommerce-products-filter') ?></h4>
                     <?php
                     if (!isset($woof_settings['woof_quick_search']['quick_search_tax_conditionals']) OR empty($woof_settings['woof_quick_search']['cron_secret_key'])) {
                         $woof_settings['woof_quick_search']['quick_search_tax_conditionals'] = '';
@@ -167,7 +167,7 @@ global $WOOF;
                             $items_for_stat = (array) $woof_settings['woof_quick_search']['items_for_text_search'];
                             ?>
                             <br />
-                            <h5><?php _e(' Additional search data', 'woocommerce-products-filter') ?></h5>
+                            <h5><?php _e(' Additional search data for text search', 'woocommerce-products-filter') ?></h5>
                             <div class="select-wrap">
 
                                 <select multiple="" name="woof_settings[woof_quick_search][items_for_text_search][]" class="chosen_select">
@@ -176,14 +176,10 @@ global $WOOF;
                                     <?php endforeach; ?>
                                 </select><br />
 
-                                <?php if ($WOOF->is_free_ver): ?>
-                                    <span style="color: red;"><?php echo __('Attention: in FREE version there is possible to use only one taxonomy in shortcode [woof_quick_search]!', 'woocommerce-products-filter') ?></span>
-                                <?php endif; ?>
-
                             </div>
                         </div>
                         <div class="woof-description">
-                            <p class="description"><?php _e('Additional search data: which taxonomies data should be included into search data file.', 'woocommerce-products-filter') ?></p>
+                            <p class="description"><?php _e('Additional search data: which taxonomies terms titles should be included into TEXT search data file. So, your customers will be able to find with TEXT search input also products using your taxonomies terms titles! After selecting new taxonomies here do not forget press Save and then Reassemble data file!', 'woocommerce-products-filter') ?></p>
                         </div>
                     </div>
 

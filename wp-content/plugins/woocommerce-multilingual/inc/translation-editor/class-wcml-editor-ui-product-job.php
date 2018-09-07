@@ -126,9 +126,7 @@ class WCML_Editor_UI_Product_Job extends WPML_Editor_UI_Job {
          * Images
          */
         $product_images = $this->woocommerce_wpml->media->product_images_ids( $this->product_id );
-        // Exclude not-duplicated attachments and featured
-        $product_images = $this->woocommerce_wpml->media->exclude_not_duplicated_attachments( $product_images, $this->product_id );
-        
+
 	    if ( count( $product_images ) ) {
 
             $images_section = new WPML_Editor_UI_Field_Section( __( 'Images', 'woocommerce-multilingual' ) );
@@ -146,7 +144,7 @@ class WCML_Editor_UI_Product_Job extends WPML_Editor_UI_Job {
                 $group = new WPML_Editor_UI_Field_Group( '', true );
                 $attribute_field = new WPML_Editor_UI_Single_Line_Field( $attr_key . '_name', __( 'Name', 'woocommerce-multilingual' ), $this->data, false );
                 $group->add_field( $attribute_field );
-                $attribute_field = new WPML_Editor_UI_Single_Line_Field( $attr_key , __( 'Value(s)', 'woocommerce-multilingual' ), $this->data, false );
+                $attribute_field = new WPML_Editor_UI_TextArea_Field( $attr_key , __( 'Value(s)', 'woocommerce-multilingual' ), $this->data, false );
                 $group->add_field( $attribute_field );
                 $attributes_section->add_field( $group );
             }
@@ -169,11 +167,15 @@ class WCML_Editor_UI_Product_Job extends WPML_Editor_UI_Job {
 
                     $cf_settings = new WPML_Post_Custom_Field_Setting( $this->tm_instance, $custom_field );
 
-                    switch( $cf_settings->get_editor_style() ){
+	                $field_style = (string) apply_filters( 'wpml_tm_editor_string_style', $cf_settings->get_editor_style(), 'field-'.$custom_field.'-0', get_post( $this->product_id ) );
+
+                    switch( $field_style ){
                         case 'visual':
+	                    case '2':
                             $cf_field = new WPML_Editor_UI_WYSIWYG_Field( $custom_field, $this->get_product_custom_field_label( $custom_field ), $this->data, true );
                             break;
                         case 'textarea':
+	                    case '1':
                             $cf_field = new WPML_Editor_UI_TextArea_Field( $custom_field, $this->get_product_custom_field_label( $custom_field ), $this->data, true );
                             break;
                         default: //line
@@ -713,37 +715,38 @@ class WCML_Editor_UI_Product_Job extends WPML_Editor_UI_Job {
 
         $this->woocommerce_wpml->attributes->sync_default_product_attr( $this->product_id, $tr_product_id, $this->get_target_language() );
 
-        //sync media
-        if ( $this->woocommerce_wpml->media->settings[ 'duplicate_featured' ] ) {
-            //sync feature image
-            $this->woocommerce_wpml->media->sync_thumbnail_id( $this->product_id, $tr_product_id, $this->get_target_language() );
-        }
-
-        if ( $this->woocommerce_wpml->media->settings[ 'duplicate_media' ] ) {
-            //sync product gallery
-            $this->woocommerce_wpml->media->sync_product_gallery( $this->product_id );
-        }
-
         // synchronize post variations
         $this->woocommerce_wpml->sync_variations_data->sync_product_variations( $this->product_id, $tr_product_id, $this->get_target_language(), $translations, true );
 
-        $this->woocommerce_wpml->sync_product_data->sync_linked_products( $this->product_id, $tr_product_id, $this->get_target_language() );
-        //save images texts
-        $product_images = $this->woocommerce_wpml->media->product_images_ids( $this->product_id );
+	    $this->woocommerce_wpml->sync_product_data->sync_linked_products( $this->product_id, $tr_product_id, $this->get_target_language() );
+
+	    //sync feature image
+	    $this->woocommerce_wpml->media->sync_thumbnail_id( $this->product_id, $tr_product_id, $this->get_target_language() );
+	    //sync product gallery
+	    $this->woocommerce_wpml->media->sync_product_gallery( $this->product_id );
+
+	    //save images texts
+	    $product_images = $this->woocommerce_wpml->media->product_images_ids( $this->product_id );
 
         if ( $product_images ) {
             foreach ( $product_images as $image_id ) {
                 $trnsl_prod_image = apply_filters( 'translate_object_id', $image_id, 'attachment', false, $this->get_target_language() );
-                //update image texts
-                $this->wpdb->update(
-                    $this->wpdb->posts,
-                    array(
-                        'post_title' => $translations[ md5( 'image-id-' . $image_id . '-title' ) ],
-                        'post_content' => $translations[ md5( 'image-id-' . $image_id . '-description' ) ],
-                        'post_excerpt' => $translations[ md5( 'image-id-' . $image_id . '-caption' ) ]
-                    ),
-                    array( 'id' => $trnsl_prod_image )
-                );
+
+                if ( ! $trnsl_prod_image ) {
+	                $trnsl_prod_image = $this->woocommerce_wpml->media->create_base_media_translation( $image_id, $this->product_id, $this->get_target_language() );
+                }
+
+	            //update image texts
+	            $this->wpdb->update(
+	            	$this->wpdb->posts,
+		            array(
+			            'post_title'   => $translations[ md5( 'image-id-' . $image_id . '-title' ) ],
+			            'post_content' => $translations[ md5( 'image-id-' . $image_id . '-description' ) ],
+			            'post_excerpt' => $translations[ md5( 'image-id-' . $image_id . '-caption' ) ]
+		            ),
+		            array( 'id' => $trnsl_prod_image )
+	            );
+
 				if ( isset( $translations[ md5( 'image-id-' . $image_id . '-alt-text' ) ] ) ) {
 					update_post_meta( $trnsl_prod_image, '_wp_attachment_image_alt', $translations[ md5( 'image-id-' . $image_id . '-alt-text' ) ] );
 				}
@@ -905,8 +908,6 @@ class WCML_Editor_UI_Product_Job extends WPML_Editor_UI_Job {
             return apply_filters( 'wcml_check_is_single', true, $product_id, $meta_key );
         }
     }
-
-
 
 	public function requires_translation_complete_for_each_field() {
 		return false;

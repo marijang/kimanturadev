@@ -24,9 +24,9 @@ $('.woocommerce-MyAccount-content [for="ct-ultimate-gdpr-consent-field-woocommer
     });
     });
 
-    var inputWoo = $('#ct-ultimate-gdpr-consent-field-woocommerce');
+    var inputWoo = $('.register #ct-ultimate-gdpr-consent-field-woocommerce');
     inputWoo.attr('required', false);
-    var labelWoo = $("[for='ct-ultimate-gdpr-consent-field-woocommerce']");
+    var labelWoo = $(".register [for='ct-ultimate-gdpr-consent-field-woocommerce']");
     var textWoo = labelWoo.text();
     //console.log(text);
     labelWoo.text('');

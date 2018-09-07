@@ -4,8 +4,8 @@ Donate link: http://wpml.org/documentation/related-projects/woocommerce-multilin
 Tags: CMS, woocommerce, commerce, ecommerce, e-commerce, products, WPML, multilingual, e-shop, shop
 License: GPLv2
 Requires at least: 3.9
-Tested up to: 4.9.5
-Stable tag: 4.2.10
+Tested up to: 4.9.8
+Stable tag: 4.3.5
 
 Allows running fully multilingual e-commerce sites using WooCommerce and WPML.
 
@@ -57,7 +57,6 @@ WooCommerce Multilingual checks that the following versions of WPML and their co
 * WPML Multilingual CMS       - 3.4
 * WPML String Translation     - 2.0
 * WPML Translation Management - 2.2
-* WPML Media                  - 2.1
 
 Without having all these running, WooCommerce Multilingual will not be able to run.
 
@@ -73,7 +72,6 @@ Without having all these running, WooCommerce Multilingual will not be able to r
 * WPML Multilingual CMS 3.4 or later
 * WPML String Translation 2.0 or later
 * WPML Translation Management 2.2 or later
-* WPML Media 2.1 or later
 
 = WordPress automatic installation =
 In your WordPress dashboard, go to the Plugins section and click 'Add new'.
@@ -141,6 +139,86 @@ WooCommerce Multilingual is compatible with all major WooCommerce extensions. We
 6. Shop URLs translation screen
 
 == Changelog ==
+
+= 4.3.5 =
+* Fix rest translation in products creation
+* Fixed incorrect translation matched for Table Rate Shipping title
+* Price is not saved correctly via "Quick Edit" if secondary currency is selected on front
+* Fixed a performance issue when a product has a lot of variations.
+* Fixed variation image synchronization
+* Lower priority of 'woocommerce_cart_item_name' hook for "WooCommerce Product Subtitle" and others to work
+* Fixed performance issues on product listing page with big amount of attributes
+* Fixed fatal error with WPML older than 3.9
+* Fix redirection to wcml dashboard in a specific case if you skip wizard
+* Fixed stock status when purchasing the last product in the second language which does not update status for original
+* WooCommerce Product Bundle synchronizations problems when re-creating bundle product translation
+* Fixed Woo Variations Table Compatibility issue with overwritten product title in specific scenario
+* Fix cosmetic issue with mutli-currency message in product post screen
+* Fixed infinite loop with large product numbers and languages
+
+= 4.3.4 =
+* Fixed error: Cannot redeclare woocommerce_wp_text_input
+* Fixed error when creating booking from admin without creating order
+* Fixed Woocommerce Dynamic Price issue with Advanced category price in second language
+* Fixed attachments duplication when synchronizing gallery
+* Fix situation with filtering WC attributes calling by sku
+* Fix a problem that you cannot delete booking from trash
+* Fix prevent letters in multicurrency popup for number of decimals
+* Fix accept only symbols in decimal separator for multi currency
+* Resolved fatal error when a galler shortcode has a leading, trailing or extra comma
+* Fix issue in show comments in all languages functionality
+* Fixed displaying WYSIWYG fields from additional plugins as single line text
+* Fix small issue with order of breadcrumbs in second language
+* Fix default term value in product variation when using display as translated feature
+* Allow users to comment on product that they have bought, but in other languages
+* Fixed WooCommerce Dynamic Pricing compatibility -> filtering by role not applied for secondary currency
+* Added support for translating WooCommerce terms and conditions
+* Fixed totals in order if the product has custom price in second currency
+* Fix displaying email subject when you have 3rd party email  notification plugin
+* Fixed product view price when secondary currency have different range of dates for sale price
+* Fix small issue with creations of WooCommerce Booking in backend
+
+= 4.3.3 =
+* Fixed small issue in WC Bookings where block cost in other currencies is not saved correctly
+* Fix compatibility issue with WC Product Addons and not displayed label in secondary language
+* Return back duplication logic for product image and gallery
+* Fix warning in secondary language if you don't have any wc pages
+* Fix wrong language for attribute in Product creation page
+* Fixed bug in Product Search Widget when wpml language set as a parameter
+* Fixed fatal error occurring in some cases when updating from older versions
+* Fixed cosmetic issue when hovering over currencies
+
+= 4.3.2.1 =
+* wcmlc argument always being added when switching currency
+* Missing images on the translated product page
+
+= 4.3.2 =
+* Fixed an error when adding a product to cart in specific situations
+* Error while adding product to cart wit WC < 3.4.0
+* Fixed issue with product images not showing in translations
+* SW Product bundles error while activating
+
+= 4.3.1 =
+* Error in WCML_Currency_Switcher_Templates while activating
+* Fix an issue where New order admin email subject and heading were overwrites with wrong data
+* Fixed the missing duplicated images when translating a product.
+
+= 4.3.0 =
+* Added ability to filtering comments by language
+* Use display-as-translated for product images and product galleries
+* Fixed issue when deleting a currency in Safari
+* Fixed issue causing fatal error when activating WCML and WPML String Translation
+* Changes in the Fixer.io API
+* Added a fix where in some situation the product slug URL is not translated correctly
+* Variable product removed from cart when switching language on the cart page
+* Multicurrency in defaults not calculated correctly when creating manual order
+* Product Bundles - search products returned wrong values
+* Translating custom product category base leads to products returning error 404 when both bases contains the same string
+* Table Rate Shipping - products with different classes produce no shipping method on cart page
+* New order admin email subject and heading were overwrites with wrong data
+* Fix small issue in product stock sync
+* Refund and restock - not working properly when refunding the variation in second language
+* WooCommerce Product Bundles -> original overwrites translation (visible when using title/description override)
 
 = 4.2.10 =
 * Fix compatibility issues with PHP 7.1

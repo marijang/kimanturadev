@@ -1,5 +1,7 @@
 /* Normalize */
-
+#override_no_products{
+    width: 100%;
+}
 .woof-section{
     font-family: 'Open Sans', sans-serif;
 }
@@ -108,6 +110,7 @@ nav ul {  display: block; }
 }
 
 .woof-section input[type="text"]:not(.wp-color-picker),
+.woof-section input[type="number"],
 .woof-section textarea,
 .woof-section select
 {
@@ -920,3 +923,47 @@ input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s eas
 }
 
 
+#woof_meta_list > li {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#woof_meta_list .woof_options_item{
+    display: inline-block;
+    height: 35px;
+    vertical-align: middle;
+}
+#woof_meta_list .woof_options_item .woof_meta_delete{
+    height: 100%;
+} 
+
+#woof_meta_list .woof_options_item .woof_meta_delete span{
+    vertical-align: middle;
+}
+#woof_meta_list .woof_drag_and_drope img {
+    height: 20px;
+    vertical-align: middle;
+}
+#woof_meta_list .woof_options_item_options{
+    display:inline-block;
+    vertical-align: top;
+}
+#woof_meta_list .woof_options_item_options .textarea-wrap textarea{
+    width: 300px;
+    height: 70px;
+}
+.woof-meta-description{
+    width: 300px;
+}
+.woof-meta-description p{
+    margin: 0px;
+    font-size: 10px;
+}
