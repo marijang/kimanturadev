@@ -139,6 +139,8 @@ $article-min-height:      500px;
         }
     }   
       img{
+          height: auto;
+          max-height: 550px;
           width: 100%;
           vertical-align: middle;
           transition: transform .6s;
@@ -148,13 +150,13 @@ $article-min-height:      500px;
         margin-bottom:0;
         min-height: auto;
         img{
-          height: 250px;
+          max-height: 250px;
         }
       } 
       
       @include media(mobile, landscape){
         img{
-          height: 320px;
+          max-height: 320px;
         }
       } 
 
@@ -162,7 +164,7 @@ $article-min-height:      500px;
         margin-bottom:0;
         min-height: auto;
         img{
-          height: auto;
+          max-height: 450px;
         }
       }
     }

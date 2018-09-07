@@ -175,11 +175,12 @@ $section-description-space-bottom-small:$base-content-padding;
         overflow: hidden;
         img{
             width: $section-img-width;
+            height: auto;
            
         }
         margin-top: $base-content-padding*2;
         margin-bottom: $base-content-padding*3;
-        min-height: 550px;
+        min-height: 450px;
         @extend %bg-image;
         @include media(mobile){
             margin: $base-content-padding 0; 
@@ -190,7 +191,7 @@ $section-description-space-bottom-small:$base-content-padding;
         @include media(tablet){
             margin-top: $base-content-padding;
             margin-bottom: $base-content-padding*2;  
-            min-height: 450px;
+            min-height: 350px;
             width: 100%;
         }
     }
