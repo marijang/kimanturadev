@@ -30,7 +30,7 @@ $article-min-height:      500px;
        // @include container();
         display: flex;
         position: relative;
-        min-height:480px;
+        min-height:auto;
       
         @include media(mobile){
           flex-direction: column;
@@ -129,8 +129,9 @@ $article-min-height:      500px;
    }
   
     @include element('image'){
-      height: fit-content;
+      margin-bottom: $article-content-padding;
       flex: 1;
+      min-height: $article-min-height;
       z-index: 3;
       
       &:hover {
