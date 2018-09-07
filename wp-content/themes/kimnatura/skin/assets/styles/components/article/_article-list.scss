@@ -39,7 +39,7 @@ $article-min-height:      500px;
         }
         
         @include m('odd'){
-          @include media(mobile tablet){
+          @include media(mobile){
             flex-direction: column-reverse;
           }
         }
@@ -153,7 +153,7 @@ $article-min-height:      500px;
         margin-bottom:0;
         min-height: auto;
         img{
-          //height: 400px;
+          height: auto;
         }
       }
     }
