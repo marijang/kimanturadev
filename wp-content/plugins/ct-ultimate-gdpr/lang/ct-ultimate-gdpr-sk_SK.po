@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate GDPR 1.6.0\n"
+"Project-Id-Version: Ultimate GDPR 1.6.4\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/ct-ultimate-gdpr\n"
-"POT-Creation-Date: 2018-06-27 07:35+0000\n"
-"PO-Revision-Date: 2018-06-27 07:36+0000\n"
-"Last-Translator: createit <j.modelo@createit.pl>\n"
+"POT-Creation-Date: 2018-08-15 06:56+0000\n"
+"PO-Revision-Date: 2018-08-15 20:47+0800\n"
+"Last-Translator: j.modelo@createit.pl\n"
 "Language-Team: Slovak\n"
 "Language: sk_SK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Loco https://localise.biz/"
+"X-Generator: Poedit 2.0.5\n"
 
 #: includes/helpers.php:105
 #, php-format
@@ -27,8 +27,9 @@ msgid "Script names"
 msgstr "Názvy skriptov"
 
 #: vendor/acf-fields.php:43
-msgid "Please input comma separated script names"
-msgstr "Zadajte názvy skriptov oddelené čiarkou"
+msgid "Please input comma separated names of cookie creating scripts"
+msgstr ""
+"Zadajte skripty na vytváranie súborov cookie, ktoré sú oddelené čiarkami"
 
 #: vendor/acf-fields.php:53 includes/shortcode/shortcode-privacy-policy.php:17
 msgid "Cookie names"
@@ -46,11 +47,11 @@ msgstr "Typ cookie"
 msgid "First or Third party?"
 msgstr "Prvá alebo tretia strana?"
 
-#: vendor/acf-fields.php:81 includes/shortcode/shortcode-privacy-policy.php:73
+#: vendor/acf-fields.php:81 includes/shortcode/shortcode-privacy-policy.php:91
 msgid "First party"
 msgstr "Prvá párty"
 
-#: vendor/acf-fields.php:82 includes/shortcode/shortcode-privacy-policy.php:73
+#: vendor/acf-fields.php:82 includes/shortcode/shortcode-privacy-policy.php:91
 msgid "Third party"
 msgstr "Tretia strana"
 
@@ -62,11 +63,13 @@ msgstr "Môže byť blokovaná?"
 msgid "Session or Persistent?"
 msgstr "Relácia alebo stála?"
 
-#: vendor/acf-fields.php:104 includes/shortcode/shortcode-privacy-policy.php:84
+#: vendor/acf-fields.php:104
+#: includes/shortcode/shortcode-privacy-policy.php:102
 msgid "Session"
 msgstr "Relácia"
 
-#: vendor/acf-fields.php:105 includes/shortcode/shortcode-privacy-policy.php:84
+#: vendor/acf-fields.php:105
+#: includes/shortcode/shortcode-privacy-policy.php:102
 msgid "Persistent"
 msgstr "Stále"
 
@@ -74,84 +77,110 @@ msgstr "Stále"
 msgid "Expiry Time"
 msgstr "Čas vypršania"
 
-#: vendor/acf-fields.php:126 includes/shortcode/shortcode-privacy-policy.php:35
+#: vendor/acf-fields.php:124 includes/shortcode/shortcode-privacy-policy.php:35
 msgid "Purpose"
 msgstr "Účel"
 
-#: vendor/acf-fields.php:138
-msgid "Is active?"
-msgstr "Je aktívny?"
+#: vendor/acf-fields.php:136
+msgid "Do you want to activate this service?"
+msgstr "Chcete túto službu aktivovať?"
 
-#: includes/views/cookie-popup.php:99 includes/views/cookie-group-popup.php:123
-#: includes/controller/controller-cookie.php:3066
-#: includes/views/shortcode/shortcode-policy-accept.php:55
-#: includes/views/shortcode/shortcode-terms-accept.php:55
+#: includes/views/cookie-popup.php:109
+#: includes/views/cookie-group-popup.php:208
+#: includes/views/cookie-group-popup.php:210
+#: includes/controller/controller-cookie.php:3462
+#: includes/views/shortcode/shortcode-policy-accept.php:54
+#: includes/views/shortcode/shortcode-terms-accept.php:54
 msgid "Accept"
 msgstr "Súhlasím"
 
-#: includes/views/cookie-popup.php:107
-#: includes/views/cookie-group-popup.php:131
-#: includes/controller/controller-cookie.php:1120
-#: includes/controller/controller-cookie.php:3067
+#: includes/views/cookie-popup.php:124
+#: includes/views/cookie-group-popup.php:231
+#: includes/views/cookie-group-popup.php:234
+#: includes/controller/controller-cookie.php:1206
+#: includes/controller/controller-cookie.php:3463
+#: includes/views/shortcode/shortcode-privacy-center.php:47
+#: includes/views/shortcode/shortcode-privacy-center.php:73
+#: includes/views/shortcode/shortcode-privacy-center.php:99
+#: includes/views/shortcode/shortcode-privacy-center.php:123
+#: includes/views/shortcode/shortcode-privacy-center.php:131
+#: includes/views/shortcode/shortcode-privacy-center.php:140
+#: includes/views/shortcode/shortcode-privacy-center.php:153
+#: includes/views/shortcode/shortcode-privacy-center.php:163
 msgid "Read more"
 msgstr "Prečítať viac"
 
-#: includes/views/cookie-group-popup-header-content.php:20
+#: includes/views/cookie-group-popup-header-content.php:23
 msgid "Privacy settings"
 msgstr "Nastavenie súkromia"
 
-#: includes/views/cookie-group-popup-header-content.php:22
+#: includes/views/cookie-group-popup-header-content.php:25
 msgid "Decide which cookies you want to allow."
 msgstr "Rozhodnite sa, ktoré cookies chcete povoliť."
 
-#: includes/views/cookie-group-popup-header-content.php:23
+#: includes/views/cookie-group-popup-header-content.php:26
 msgid ""
 "You can change these settings at any time. However, this can result in some "
-"functions no longer being available. For information on deleting the cookies,"
-" please consult your browser’s help function."
+"functions no longer being available. For information on deleting the "
+"cookies, please consult your browser’s help function."
 msgstr ""
 "Toto nastavenie môžete kedykoľvek zmeniť. Môže sa ale stať, že niektoré "
 "funkcie už nebudú dostupné. Pre informácie o zmazanie cookies, sa obráťte na "
 "nápovedu vášho prehliadača."
 
-#: includes/views/cookie-group-popup-header-content.php:24
+#: includes/views/cookie-group-popup-header-content.php:27
 msgid "Learn more about the cookies we use."
 msgstr "ZISTIŤ VIAC O COOKIES, KTORÉ POUŽÍVAME."
 
-#: includes/views/cookie-group-popup-header-content.php:26
+#: includes/views/cookie-group-popup-header-content.php:29
 msgid "With the slider, you can enable or disable different types of cookies:"
 msgstr "Pomocou posuvníka môžete povoliť alebo zakázať rôzne typy cookies:"
 
-#: includes/views/cookie-group-popup.php:139
-#: includes/controller/controller-cookie.php:3068
+#: includes/views/cookie-group-popup.php:253
+#: includes/views/cookie-group-popup.php:255
+#: includes/controller/controller-cookie.php:3464
 msgid "Change Settings"
 msgstr "Zmeniť nastavenia"
 
-#: includes/views/cookie-group-popup.php:190
-#: includes/views/cookie-group-popup.php:201
+#: includes/views/cookie-group-popup.php:308
+#: includes/views/cookie-group-popup.php:319
+#: includes/views/cookie-group-popup.php:352
+#: includes/views/cookie-group-popup.php:363
 msgid "Cookie Box Settings"
 msgstr "Okno s nastavením cookie"
 
-#: includes/views/cookie-group-popup.php:196
-#: includes/controller/controller-cookie.php:3084
+#: includes/views/cookie-group-popup.php:314
+#: includes/views/cookie-group-popup.php:358
+#: includes/controller/controller-cookie.php:3481
 msgid "Trigger"
 msgstr "Spúšť"
 
-#: includes/views/cookie-group-popup.php:306
-#: includes/views/cookie-group-popup.php:351
-#: includes/views/cookie-group-popup.php:371
-#: includes/views/cookie-group-popup.php:395
-#: includes/views/cookie-group-popup.php:439
+#: includes/views/cookie-group-popup.php:512
+msgid "Hide details"
+msgstr "Skryť detaily"
+
+#: includes/views/cookie-group-popup.php:531
+#: includes/views/service/service-arforms-consent-field.php:26
+msgid "OK"
+msgstr "OK"
+
+#: includes/views/cookie-group-popup.php:559
+#: includes/views/cookie-group-popup.php:604
+#: includes/views/cookie-group-popup.php:624
+#: includes/views/cookie-group-popup.php:648
+#: includes/views/cookie-group-popup.php:691
+#: includes/controller/controller-cookie.php:3486
 msgid "This website will:"
 msgstr "Táto stránka bude:"
 
-#: includes/views/cookie-group-popup.php:326
-#: includes/views/cookie-group-popup.php:415
-#: includes/views/cookie-group-popup.php:460
+#: includes/views/cookie-group-popup.php:579
+#: includes/views/cookie-group-popup.php:668
+#: includes/views/cookie-group-popup.php:711
 msgid "This website wont't:"
 msgstr "Táto stránka nebude:"
 
-#: includes/views/cookie-group-popup.php:484
+#: includes/views/cookie-group-popup.php:735
+#: includes/controller/controller-cookie.php:3488
 msgid "Save & Close"
 msgstr "Uložiť a zavrieť"
 
@@ -178,6 +207,7 @@ msgid "Right To Be Forgotten"
 msgstr "Požiadavka na zmazanie"
 
 #: includes/controller/controller-forgotten.php:219
+#: includes/controller/controller-unsubscribe.php:184
 #: includes/controller/controller-rectification.php:181
 #: includes/controller/controller-data-access.php:166
 msgid "Recaptcha error!"
@@ -189,80 +219,131 @@ msgid "[Ultimate GDPR] Please confirm request to be forgotten from %s"
 msgstr "[Ultimate GDPR] Potvrďte žiadosť Požiadavky na zmazanie z %s"
 
 #: includes/controller/controller-forgotten.php:259
+#: includes/controller/controller-unsubscribe.php:224
 #: includes/controller/controller-rectification.php:208
 #: includes/controller/controller-data-access.php:190
 msgid "Your request was sent!"
 msgstr "Vaša požiadavka bola odoslaná!"
 
 #: includes/controller/controller-forgotten.php:303
+#: includes/controller/controller-unsubscribe.php:92
 #: includes/controller/controller-rectification.php:96
 msgid "Your request was already confirmed."
 msgstr "Vaša žiadosť bola už potvrdená."
 
 #: includes/controller/controller-forgotten.php:328
+#: includes/controller/controller-unsubscribe.php:117
 #: includes/controller/controller-rectification.php:121
 msgid "Your request was successfully confirmed."
 msgstr "Vaša žiadosť bola úspešne potvrdená."
 
-#: includes/controller/controller-forgotten.php:365
+#: includes/controller/controller-forgotten.php:386
+#: includes/controller/controller-unsubscribe.php:165
 #: includes/controller/controller-rectification.php:161
 msgid "Your request was not confirmed. Please check the link or contact admin."
 msgstr ""
 "Vaša žiadosť nebola potvrdená. Skontrolujte odkaz v emaile alebo kontaktujte "
 "administrátora."
 
-#: includes/controller/controller-forgotten.php:481
+#: includes/controller/controller-forgotten.php:504
 #, php-format
 msgid "[Ultimate GDPR] Emails were sent to the following users: %s"
 msgstr "[Ultimate GDPR] Emaily boli odoslané nasledujúcim užívateľom: %s"
 
-#: includes/controller/controller-forgotten.php:519
+#: includes/controller/controller-forgotten.php:542
 #, php-format
 msgid "[Ultimate GDPR] The following emails were removed from list: %s"
 msgstr "[Ultimate GDPR] Nasledujúce emaily boli zo zoznamu odstránené: %s"
 
-#: includes/controller/controller-forgotten.php:550
+#: includes/controller/controller-forgotten.php:575
+#: includes/controller/controller-unsubscribe.php:473
 #, php-format
 msgid "Non existing service id: %s"
 msgstr "Neexistujúce ID služby: %s"
 
-#: includes/controller/controller-forgotten.php:570
+#: includes/controller/controller-forgotten.php:595
 #, php-format
 msgid "There was an error forgetting %s service: %s"
 msgstr "Pri požiadavke na zabudnutie služby %s došlo k chybe: %s"
 
-#: includes/controller/controller-forgotten.php:595
+#: includes/controller/controller-forgotten.php:620
 msgid "[Ultimate GDPR] Services data were removed"
 msgstr "[Ultimate GDPR] Údaje o službách boli odstránené"
 
-#: includes/controller/controller-forgotten.php:613
+#. ID
+#: includes/controller/controller-forgotten.php:636
+msgid "Forms skin"
+msgstr "Formuje pokožku"
+
+#: includes/controller/controller-forgotten.php:643
 msgid "Right to be forgotten settings"
 msgstr "Požiadavka na zmazanie"
 
-#: includes/controller/controller-forgotten.php:623
+#: includes/controller/controller-forgotten.php:654
+msgid "Skin"
+msgstr "Koža"
+
+#. ID
+#: includes/controller/controller-forgotten.php:662
+msgid "Automatically forget users who confirmed their mail"
+msgstr "Automaticky zabúdajú na používateľov, ktorí potvrdili svoju poštu"
+
+#. ID
+#: includes/controller/controller-forgotten.php:670
+msgid ""
+"Automatically send email about data removal to users who confirmed their "
+"email"
+msgstr ""
+"Automaticky posielať správy o odstránení údajov používateľom, ktorí "
+"potvrdili svoj e-mail"
+
+#. ID
+#: includes/controller/controller-forgotten.php:678
+msgid "Permit users of selected roles only to be forgotten automatically"
+msgstr "Umožniť používateľom vybratých rolí iba zabudnúť"
+
+#: includes/controller/controller-forgotten.php:686
 msgid "Admin email to send new request notifications to"
 msgstr "Admin e-mail pre odoslanie upozornenia novej požiadavky na"
 
-#: includes/controller/controller-forgotten.php:631
+#: includes/controller/controller-forgotten.php:694
 msgid "User notification email subject"
 msgstr "Predmet e-mailu upozornenie užívateľa"
 
-#: includes/controller/controller-forgotten.php:639
+#: includes/controller/controller-forgotten.php:702
 msgid "User notification email message"
 msgstr "Správa e-mailu upozornenie užívateľa"
 
-#: includes/controller/controller-forgotten.php:647
+#. ID
+#: includes/controller/controller-forgotten.php:710
+#: includes/controller/controller-unsubscribe.php:631
 #: includes/controller/controller-rectification.php:549
 msgid ""
-"Set custom URL to the page containing Ultimate GDPR shortcode as the e-mail "
+"Set custom URL to the page containing Ultimate GDPR shortcode as the email "
 "confirmation target page (or leave empty for autodetect)"
 msgstr ""
-"Nastavte vlastnú adresu URL na stránku s shortcode Ultimate GDPR ako cieľovú "
-"stránku pre potvrdenie emailu (alebo nechajte prázdne pre automatické "
-"rozpoznanie)"
+"Set custom URL to the page containing Ultimate GDPR shortcode as the email "
+"confirmation target page (or leave empty for autodetect)"
 
-#: includes/controller/controller-forgotten.php:731
-#: includes/controller/controller-forgotten.php:732
+#: includes/controller/controller-forgotten.php:800
+#: includes/controller/controller-cookie.php:3411
+msgid "Default"
+msgstr "štandardné"
+
+#: includes/controller/controller-forgotten.php:801
+msgid "Simple form"
+msgstr "Jednoduchá forma"
+
+#: includes/controller/controller-forgotten.php:802
+msgid "Rounded form"
+msgstr "Zaoblená forma"
+
+#: includes/controller/controller-forgotten.php:803
+msgid "Tabbed form"
+msgstr "Formát na záložkách"
+
+#: includes/controller/controller-forgotten.php:902
+#: includes/controller/controller-forgotten.php:903
 msgid "[Ultimate GDPR] Your data has been forgotten"
 msgstr "[Ultimate GDPR] Vaše údaje boli zmazané"
 
@@ -274,14 +355,14 @@ msgstr "Vaše pluginy"
 #: includes/controller/controller-policy.php:20
 #: includes/controller/controller-policy.php:21
 #: includes/controller/controller-policy.php:45
-#: includes/controller/controller-policy.php:818
+#: includes/controller/controller-policy.php:827
 #: includes/views/admin/admin-policy.php:32
 #: includes/views/admin/admin-terms.php:33
 msgid "Privacy Policy"
 msgstr "Zásady ochrany osobných údajov"
 
 #: includes/controller/controller-policy.php:54
-#: includes/controller/controller-terms.php:388
+#: includes/controller/controller-terms.php:399
 #: includes/controller/controller-pseudonymization.php:154
 msgid "Instructions"
 msgstr "Inštrukcie"
@@ -315,13 +396,13 @@ msgid "Page to redirect to after Privacy Policy accepted"
 msgstr "Kam presmerovať po odsúhlasení Zásady ochrany osobných údajov"
 
 #: includes/controller/controller-policy.php:113
-#: includes/controller/controller-terms.php:431
+#: includes/controller/controller-terms.php:442
 msgid "Shortcode Button Styling"
 msgstr "Styling tlačidla krátkych kódov"
 
 #: includes/controller/controller-policy.php:121
-#: includes/controller/controller-terms.php:439
-#: includes/controller/controller-cookie.php:1295
+#: includes/controller/controller-terms.php:450
+#: includes/controller/controller-cookie.php:1394
 msgid "Set consent expire time [s]"
 msgstr "Dĺžka expirácie súhlasu [s]"
 
@@ -350,13 +431,17 @@ msgstr ""
 "všetkých službách, napr. 'Zásady ochrany osobných údajov'"
 
 #: includes/controller/controller-policy.php:153
-#: includes/controller/controller-terms.php:463
+#: includes/controller/controller-terms.php:474
 msgid ""
 "Do not block user agents (eg. bots) containing the following texts (comma "
 "separated)"
 msgstr ""
 "Nezakrývajte používateľské agenty (napríklad roboty), ktoré obsahujú "
 "nasledujúce texty (oddelené čiarkou)"
+
+#: includes/controller/controller-policy.php:190
+msgid "Click here to create"
+msgstr "Kliknite tu pre vytvorenie"
 
 #: includes/controller/controller-policy.php:201
 #, php-format
@@ -370,123 +455,262 @@ msgstr ""
 "nižšie stránku Zásady ochrany osobných údajov, aby na ňu boli užívatelia "
 "presmerovaní a poskytli svoj súhlas."
 
-#: includes/controller/controller-policy.php:280
-#: includes/controller/controller-terms.php:146
-#, php-format
-msgid ""
-"user id: %d \n"
-"consent version: %s \n"
-"consent given: %s \n"
-"consent expires: %s \n"
-"\n"
-msgstr ""
-"id užívateľa: %d\n"
-"verzia súhlasu: %s\n"
-"daný súhlas: %s\n"
-"uplynutie platnosti súhlasu: %s\n"
-
-#: includes/controller/controller-policy.php:637
+#: includes/controller/controller-policy.php:646
 msgid "WordPress Privacy page"
 msgstr "WordPress stránka ochrany súkromia"
 
-#: includes/controller/controller-policy.php:693
-#: includes/controller/controller-terms.php:661
+#: includes/controller/controller-policy.php:702
+#: includes/controller/controller-terms.php:672
 msgid "Last visited page"
 msgstr "Naposledy zobrazené"
 
-#: includes/controller/controller-policy.php:694
-#: includes/controller/controller-terms.php:662
+#: includes/controller/controller-policy.php:703
+#: includes/controller/controller-terms.php:673
 msgid "Don't redirect"
 msgstr "Nepresmerovávať"
 
-#: includes/controller/controller-policy.php:720
-#: includes/controller/controller-terms.php:584
+#: includes/controller/controller-policy.php:729
+#: includes/controller/controller-terms.php:595
 msgid "Theme Default"
 msgstr "Predvolená téma"
 
-#: includes/controller/controller-policy.php:721
-#: includes/controller/controller-terms.php:585
+#: includes/controller/controller-policy.php:730
+#: includes/controller/controller-terms.php:596
 msgid "Cookie box buttons"
 msgstr "Tlačidlá cookie boxu"
 
-#: includes/controller/controller-services.php:72
-#: includes/controller/controller-services.php:73
-#: includes/controller/controller-services.php:253
-#: includes/controller/controller-services.php:269
+#: includes/controller/controller-services.php:99
+#: includes/controller/controller-services.php:100
+#: includes/controller/controller-services.php:327
+#: includes/controller/controller-services.php:343
 msgid "Services"
 msgstr "Služby"
 
-#: includes/controller/controller-services.php:89
-#: includes/controller/controller-services.php:96
-#: includes/controller/controller-services.php:103
+#: includes/controller/controller-services.php:116
+#: includes/controller/controller-services.php:123
+#: includes/controller/controller-services.php:130
 msgid "Services options"
 msgstr "Nastavenie Servis"
 
-#: includes/controller/controller-services.php:114
+#: includes/controller/controller-services.php:141
 msgid "Recaptcha key (for myaccount shortcode submissions)"
 msgstr "Kľúč Recaptcha (pre podanie krátkeho kódu myaccount)"
 
-#: includes/controller/controller-services.php:122
+#: includes/controller/controller-services.php:149
 msgid "Recaptcha secret key (for myaccount shortcode submissions)"
 msgstr "Recaptcha tajný kľúč (pre myaccount krátky kód)"
 
-#: includes/controller/controller-services.php:251
+#. ID
+#: includes/controller/controller-services.php:157
+msgid ""
+"When logging consents of users who did not accept Privacy Policy, log their "
+"IP"
+msgstr ""
+"Pri registrácii súhlasov používateľov, ktorí neprijali zásady ochrany "
+"osobných údajov, sa prihláste ich IP"
+
+#. ID
+#: includes/controller/controller-services.php:165
+msgid ""
+"When logging consents of users who did not accept Privacy Policy, log their "
+"User Agent"
+msgstr ""
+"Pri registrácii súhlasov používateľov, ktorí neprijali zásady ochrany "
+"osobných údajov, sa prihláste ich používateľský agent"
+
+#: includes/controller/controller-services.php:325
 msgctxt "Post Type General Name"
 msgid "Services"
 msgstr "Služby"
 
-#: includes/controller/controller-services.php:252
+#: includes/controller/controller-services.php:326
 msgctxt "Post Type Singular Name"
 msgid "Services"
 msgstr "Služby"
 
-#: includes/controller/controller-services.php:254
+#: includes/controller/controller-services.php:328
 msgid "Parent Services"
 msgstr "Nadradené služby"
 
-#: includes/controller/controller-services.php:255
+#: includes/controller/controller-services.php:329
 msgid "All Services"
 msgstr "Všetky služby"
 
-#: includes/controller/controller-services.php:256
+#: includes/controller/controller-services.php:330
 msgid "View Service"
 msgstr "Zobraziť službu"
 
-#: includes/controller/controller-services.php:257
+#: includes/controller/controller-services.php:331
 msgid "Add New Service"
 msgstr "Pridať novú službu"
 
-#: includes/controller/controller-services.php:258
+#: includes/controller/controller-services.php:332
 msgid "Add New"
 msgstr "Pridať nový"
 
-#: includes/controller/controller-services.php:259
+#: includes/controller/controller-services.php:333
 msgid "Edit Service"
 msgstr "Upraviť službu"
 
-#: includes/controller/controller-services.php:260
+#: includes/controller/controller-services.php:334
 msgid "Update Service"
 msgstr "Aktualizovať službu"
 
-#: includes/controller/controller-services.php:261
+#: includes/controller/controller-services.php:335
 msgid "Search Services"
 msgstr "Hľadať služby"
 
-#: includes/controller/controller-services.php:262
+#: includes/controller/controller-services.php:336
 msgid "Not Found"
 msgstr "Nenájdené"
 
-#: includes/controller/controller-services.php:263
+#: includes/controller/controller-services.php:337
 msgid "Not found in Trash"
 msgstr "V koši nenájdené"
 
-#: includes/controller/controller-services.php:268
+#: includes/controller/controller-services.php:342
 msgid "services"
 msgstr "služby"
 
+#: includes/controller/controller-unsubscribe.php:133
+#, php-format
+msgid "There is a new Unsubscribe request from email %s. See details at %s"
+msgstr ""
+"Existuje nová žiadosť o odhlásenie od e-mailu %s. Pozrite si podrobnosti na "
+"%s"
+
+#: includes/controller/controller-unsubscribe.php:218
+#, php-format
+msgid ""
+"[Ultimate GDPR] Please confirm request to be unsubscribed from %s newsletters"
+msgstr "[Ultimate GDPR] Potvrďte žiadosť o odhlásenie od bulletinov %s"
+
+#: includes/controller/controller-unsubscribe.php:378
+#: includes/controller/controller-rectification.php:311
+#: includes/controller/controller-data-access.php:304
+#, php-format
+msgid "Data was sent to email: %s"
+msgstr "Dáta odoslaná na e-mail: %s"
+
+#: includes/controller/controller-unsubscribe.php:418
+#: includes/controller/controller-rectification.php:350
+#: includes/controller/controller-data-access.php:343
+#, php-format
+msgid "The following emails were removed from the list: %s"
+msgstr "Nasledujúce e-maily boli odstránené zo zoznamu: %s"
+
+#: includes/controller/controller-unsubscribe.php:493
+#, php-format
+msgid "There was an error unsubscribing %s from %s service: %s"
+msgstr "Pri odstraňovaní %s z %s služby sa vyskytla chyba: %s"
+
+#: includes/controller/controller-unsubscribe.php:519
+msgid "[Ultimate GDPR] Unsubscription finished!"
+msgstr "[Ultimate GDPR] Odhlásenie bolo dokončené!"
+
+#: includes/controller/controller-unsubscribe.php:549
+#: includes/controller/controller-unsubscribe.php:550
+#: includes/views/shortcode/shortcode-privacy-center.php:113
+#: includes/views/shortcode/shortcode-myaccount.php:52
+msgid "Unsubscribe"
+msgstr "Odhlásiť"
+
+#. ID
+#: includes/controller/controller-unsubscribe.php:581
+msgid "Unsubscribe settings"
+msgstr "Zrušte nastavenie odberu"
+
+#. ID
+#: includes/controller/controller-unsubscribe.php:591
+msgid "Automatically unsubscribe users who confirmed their mail"
+msgstr "Automaticky odhláste používateľov, ktorí potvrdili svoju poštu"
+
+#. ID
+#: includes/controller/controller-unsubscribe.php:599
+msgid ""
+"Automatically send email about unsubscription to users who confirmed their "
+"email"
+msgstr ""
+"Automaticky posielať správy o odhlásení používateľom, ktorí potvrdili svoj e-"
+"mail"
+
+#: includes/controller/controller-unsubscribe.php:607
+#: includes/controller/controller-rectification.php:525
+msgid "Email to send admin notifications to"
+msgstr "Email administrátora"
+
+#: includes/controller/controller-unsubscribe.php:615
+#: includes/controller/controller-rectification.php:533
+msgid "User mail title"
+msgstr "Predmet emailu"
+
+#: includes/controller/controller-unsubscribe.php:623
+#: includes/controller/controller-rectification.php:541
+msgid "User mail content"
+msgstr "Text emailu"
+
+#: includes/controller/controller-unsubscribe.php:749
+#, php-format
+msgid "[Ultimate GDPR] Unsubscribe notice from %s"
+msgstr "[Ultimate GDPR] Zrušenie upozornenia od %s"
+
+#: includes/controller/controller-unsubscribe.php:750
+msgid "Your have been unsubscribed"
+msgstr "Váš príspevok bol zrušený"
+
+#: includes/controller/controller-admin.php:189
+#: includes/controller/controller-admin.php:232
+msgid "Please upload a file to import"
+msgstr "Nahrajte súbor, ktorý chcete importovať"
+
+#: includes/controller/controller-admin.php:198
+#: includes/controller/controller-admin.php:241
+msgid "No options were imported"
+msgstr "Neimportovali žiadne možnosti"
+
+#: includes/controller/controller-admin.php:219
+msgid "Settings imported successfully"
+msgstr "Nastavenia boli úspešne importované"
+
+#: includes/controller/controller-admin.php:220
+msgid "Settings were not imported. Please check the import file."
+msgstr "Nastavenia neboli importované. Skontrolujte súbor importu."
+
+#: includes/controller/controller-admin.php:252
+msgid "Wrong file format for services."
+msgstr "Nesprávny formát súboru pre služby."
+
+#: includes/controller/controller-admin.php:282
+msgid "Services imported successfully"
+msgstr "Služby boli úspešne importované"
+
+#: includes/controller/controller-admin.php:283
+msgid "No service was imported"
+msgstr "Neimportovala žiadna služba"
+
+#: includes/controller/controller-admin.php:446
+#: includes/controller/controller-cookie.php:182
+msgid "Enabled"
+msgstr "Povolené"
+
+#: includes/controller/controller-admin.php:447
+#: includes/controller/controller-cookie.php:183
+msgid "Enable"
+msgstr "Umožniť"
+
+#: includes/controller/controller-admin.php:448
+#: includes/controller/controller-cookie.php:184
+msgid "Disabled"
+msgstr "Invalidný"
+
+#: includes/controller/controller-admin.php:449
+#: includes/controller/controller-cookie.php:185
+msgid "Disable"
+msgstr "Zakázať"
+
 #. Plugin Name of the plugin/theme
-#: includes/controller/controller-admin.php:193
-#: includes/controller/controller-admin.php:194
+#: includes/controller/controller-admin.php:467
+#: includes/controller/controller-admin.php:468
 #: includes/views/admin/admin-forgotten.php:30
 #: includes/views/admin/admin-cookie.php:21
 #: includes/views/admin/admin-pseudonymization.php:30
@@ -496,6 +720,7 @@ msgstr "služby"
 #: includes/views/admin/admin-services.php:21
 #: includes/views/admin/admin-data-access.php:32
 #: includes/views/admin/admin-terms.php:22
+#: includes/views/admin/admin-unsubscribe.php:30
 #: includes/views/admin/admin-rectification.php:32
 #: includes/views/admin/admin-plugins.php:21
 msgid "Ultimate GDPR"
@@ -518,18 +743,6 @@ msgstr ""
 msgid "[Ultimate GDPR] Please confirm your data rectification request from %s"
 msgstr "[Ultimate GDPR] Potvrďte prosím požiadavku na opravu dát z %s"
 
-#: includes/controller/controller-rectification.php:311
-#: includes/controller/controller-data-access.php:300
-#, php-format
-msgid "Data was sent to email: %s"
-msgstr "Dáta odoslaná na e-mail: %s"
-
-#: includes/controller/controller-rectification.php:350
-#: includes/controller/controller-data-access.php:339
-#, php-format
-msgid "The following emails were removed from the list: %s"
-msgstr "Nasledujúce e-maily boli odstránené zo zoznamu: %s"
-
 #: includes/controller/controller-rectification.php:479
 #: includes/controller/controller-rectification.php:480
 #: includes/views/admin/admin-forgotten.php:46
@@ -542,18 +755,6 @@ msgstr "Oprava dát"
 #: includes/controller/controller-rectification.php:515
 msgid "Data Rectification settings"
 msgstr "Nastavenie Oprava dát"
-
-#: includes/controller/controller-rectification.php:525
-msgid "Email to send admin notifications to"
-msgstr "Email administrátora"
-
-#: includes/controller/controller-rectification.php:533
-msgid "User mail title"
-msgstr "Predmet emailu"
-
-#: includes/controller/controller-rectification.php:541
-msgid "User mail content"
-msgstr "Text emailu"
 
 #: includes/controller/controller-rectification.php:635
 #, php-format
@@ -579,15 +780,16 @@ msgstr ""
 "K dispozícii je nová žiadosť o prístup k dátam z emailu %s. Podrobnosti viď "
 "%s"
 
-#: includes/controller/controller-data-access.php:422
+#: includes/controller/controller-data-access.php:426
 #: includes/views/admin/admin-forgotten.php:132
 #: includes/views/admin/admin-data-access.php:97
+#: includes/views/admin/admin-unsubscribe.php:116
 #: includes/views/admin/admin-rectification.php:95
 msgid "Not sent"
 msgstr "Neodoslané"
 
-#: includes/controller/controller-data-access.php:460
-#: includes/controller/controller-data-access.php:461
+#: includes/controller/controller-data-access.php:464
+#: includes/controller/controller-data-access.php:465
 #: includes/views/admin/admin-forgotten.php:40
 #: includes/views/admin/admin-breach.php:33
 #: includes/views/admin/admin-data-access.php:44
@@ -595,82 +797,89 @@ msgstr "Neodoslané"
 msgid "Data Access"
 msgstr "Prístup k dátam"
 
-#: includes/controller/controller-data-access.php:501
+#: includes/controller/controller-data-access.php:504
 msgid "Data access settings"
 msgstr "Nastavenie prístupu k dátam"
 
-#: includes/controller/controller-data-access.php:511
+#. ID
+#: includes/controller/controller-data-access.php:515
+msgid "Automatically send data to all users on their request"
+msgstr "Automaticky posielať dáta všetkým používateľom na ich požiadanie"
+
+#: includes/controller/controller-data-access.php:523
 msgid "Email to send new request notifications to"
 msgstr "E-mail pre odoslanie upozornenia novej požiadavky na"
 
-#: includes/controller/controller-data-access.php:519
-#: includes/controller/controller-breach.php:125
+#: includes/controller/controller-data-access.php:531
+#: includes/controller/controller-breach.php:136
 msgid "Mail title"
 msgstr "Predmet emailu"
 
-#: includes/controller/controller-data-access.php:527
-#: includes/controller/controller-breach.php:133
+#: includes/controller/controller-data-access.php:539
+#: includes/controller/controller-breach.php:144
 msgid "Mail content"
 msgstr "Text emailu"
 
-#: includes/controller/controller-data-access.php:601
+#: includes/controller/controller-data-access.php:626
 #, php-format
 msgid "[Ultimate GDPR] Data request results from %s"
 msgstr "[Ultimate GDPR] Výsledok požiadavky na dáta od %s"
 
-#: includes/controller/controller-data-access.php:602
+#: includes/controller/controller-data-access.php:627
 msgid "Please find data attached"
 msgstr "Dáta nájdete v prílohe emailu"
 
-#: includes/controller/controller-terms.php:167
-#: includes/controller/controller-terms.php:168
+#: includes/controller/controller-terms.php:169
+#: includes/controller/controller-terms.php:170
 msgid "Terms And Conditions"
 msgstr "Zmluvné podmienky"
 
-#: includes/controller/controller-terms.php:379
-#: includes/controller/controller-terms.php:722
+#: includes/controller/controller-terms.php:390
+#: includes/controller/controller-terms.php:733
 #: includes/views/admin/admin-policy.php:29
 #: includes/views/admin/admin-terms.php:30
 msgid "Terms and Conditions"
 msgstr "Zmluvné podmienky"
 
-#: includes/controller/controller-terms.php:399
+#: includes/controller/controller-terms.php:410
 msgid "Require logged in users to accept Terms and Conditions (redirect)"
 msgstr ""
 "Prinútiť prihlásených užívateľov udeliť súhlas s novou verziou  Zmluvných "
 "podmienok (presmerovanie)"
 
-#: includes/controller/controller-terms.php:407
-msgid ""
-"Require not logged in users/guests to accept Terms and Conditions (redirect)"
+#. ID
+#: includes/controller/controller-terms.php:418
+msgid "Require guest users to accept Terms and Conditions (redirect)"
 msgstr ""
-"Vyžadovať u neprihlásených užívateľov/návštevníkov prijať všeobecné zmluvné "
-"podmienky (presmerovanie)"
+"Požiadať hosťujúcich používateľov, aby akceptovali zmluvné podmienky "
+"(presmerovanie)"
 
-#: includes/controller/controller-terms.php:415
-msgid "Page with existing Terms and Conditions"
-msgstr "Vaša stránka Zmluvné podmienky"
+#. ID
+#: includes/controller/controller-terms.php:426
+msgid "The page with existing Terms and Conditions"
+msgstr "Stránka s existujúcimi zmluvnými podmienkami"
 
-#: includes/controller/controller-terms.php:423
-msgid "Page to redirect to after Terms accepted"
-msgstr "Kam presmerovať po odsúhlasení Zmluvných podmienok"
+#. ID
+#: includes/controller/controller-terms.php:434
+msgid "The page to redirect to after Terms accepted"
+msgstr "Stránka, na ktorú chcete presmerovať po prijatých podmienkach"
 
-#: includes/controller/controller-terms.php:447
+#: includes/controller/controller-terms.php:458
 msgid ""
 "Terms version, eg. 1.0 (if you change it, user has to give consent again)"
 msgstr ""
 "Verzia zmluvných podmienok, napr. 1.0 (ak vydáte novú verziu Zmluvných "
 "podmienok, bude musieť užívateľ opäť udeliť súhlas)"
 
-#: includes/controller/controller-terms.php:455
+#: includes/controller/controller-terms.php:466
 msgid ""
 "Convert the following text to Terms and Conditions link in all services "
 "templates, eg. 'Terms and Conditions'"
 msgstr ""
-"Preveďte nasledujúci text na odkaz na Zmluvné podmienky vo všetkých službách,"
-" napr. 'Zmluvné podmienky'"
+"Preveďte nasledujúci text na odkaz na Zmluvné podmienky vo všetkých "
+"službách, napr. 'Zmluvné podmienky'"
 
-#: includes/controller/controller-terms.php:476
+#: includes/controller/controller-terms.php:487
 #, php-format
 msgid ""
 "1. Place %s shortcode on your existing Terms and Conditions page to add an "
@@ -682,534 +891,771 @@ msgstr ""
 "nižšie stránku Zásady ochrany osobných údajov, aby na ňu boli užívatelia "
 "presmerovaní a poskytli svoj súhlas."
 
-#: includes/controller/controller-cookie.php:958
-#: includes/controller/controller-cookie.php:4490
+#: includes/controller/controller-cookie.php:1042
+#: includes/controller/controller-cookie.php:4971
 #, php-format
 msgid ""
 "<h3>Please navigate to <a href='%s'>Service Manager</a> tab to see all "
 "detected cookies.</h3>"
 msgstr ""
-"<h3>Všetky rozpoznané cookies nájdete v záložke <a href='%s'>Správca "
-"služby</a>.</h3>"
+"<h3> Ak chcete zobraziť všetky zistené súbory cookie, prejdite na kartu <a "
+"href='%s'> Správca služieb </a>. </h3>"
 
-#: includes/controller/controller-cookie.php:1023
-#, php-format
-msgid ""
-"user id: %d \n"
-"consent level: %s \n"
-"consent given: %s \n"
-"consent expires: %s \n"
-"\n"
-msgstr ""
-"id užívateľa: %d\n"
-"úroveň súhlasu: %s\n"
-"daný súhlas: %s\n"
-"uplynutie platnosti súhlasu: %s\n"
-
-#: includes/controller/controller-cookie.php:1043
-#: includes/controller/controller-cookie.php:1044
+#: includes/controller/controller-cookie.php:1129
+#: includes/controller/controller-cookie.php:1130
 msgid "Cookie Consent"
-msgstr "Cookie"
+msgstr "Cookie súhlas"
 
-#: includes/controller/controller-cookie.php:1052
-#: includes/controller/controller-cookie.php:1053
+#: includes/controller/controller-cookie.php:1138
+#: includes/controller/controller-cookie.php:1139
 msgid "Services Manager"
 msgstr "Správca služieb"
 
-#: includes/controller/controller-cookie.php:1075
-#: includes/controller/controller-cookie.php:1205
+#. ID
+#: includes/controller/controller-cookie.php:1161
+#: includes/controller/controller-cookie.php:1301
 msgid "Cookie popup content"
-msgstr "Obsah vyskakovacieho okna pre cookie"
+msgstr "Obsah vyskakovacieho súboru cookie"
 
-#: includes/controller/controller-cookie.php:1082
+#. ID
+#: includes/controller/controller-cookie.php:1168
 msgid "Buttons labels"
 msgstr "Štítky tlačidiel"
 
-#: includes/controller/controller-cookie.php:1089
+#. ID
+#: includes/controller/controller-cookie.php:1175
 msgid "Options"
 msgstr "Možnosti"
 
-#: includes/controller/controller-cookie.php:1096
+#. ID
+#: includes/controller/controller-cookie.php:1182
 msgid "Google Analytics Tracking ID"
 msgstr "ID sledovania služby Google Analytics"
 
-#: includes/controller/controller-cookie.php:1106
+#. ID
+#: includes/controller/controller-cookie.php:1192
 msgid "Cookie check"
 msgstr "Kontrola súborov cookie"
 
-#: includes/controller/controller-cookie.php:1113
+#. ID
+#: includes/controller/controller-cookie.php:1199
 msgid "Buttons styles"
 msgstr "Štýly tlačidiel"
 
-#: includes/controller/controller-cookie.php:1127
-#: includes/controller/controller-cookie.php:1343
-msgid "Position"
-msgstr "Pozícia"
+#. ID
+#: includes/controller/controller-cookie.php:1213
+msgid "Position of the cookie notice box"
+msgstr "Umiestnenie upozornenia na súbor cookie"
 
-#: includes/controller/controller-cookie.php:1134
-msgid "Box styles"
-msgstr "Box štýly"
+#. ID
+#: includes/controller/controller-cookie.php:1220
+msgid "Cookie notice box"
+msgstr "Obrazovka cookie"
 
-#: includes/controller/controller-cookie.php:1141
-#: includes/controller/controller-cookie.php:1431
+#. ID
+#: includes/controller/controller-cookie.php:1227
+msgid "Protection shortcode"
+msgstr "Ochranný kód"
+
+#. ID
+#: includes/controller/controller-cookie.php:1234
+#: includes/controller/controller-cookie.php:1564
 msgid "Custom style CSS"
-msgstr "Vlastné CSS"
+msgstr "Vlastný štýl CSS"
 
-#: includes/controller/controller-cookie.php:1151
+#. ID
+#: includes/controller/controller-cookie.php:1243
 msgid "Advanced Cookies Settings"
 msgstr "Rozšírené nastavenia súborov cookie"
 
-#: includes/controller/controller-cookie.php:1159
+#. ID
+#: includes/controller/controller-cookie.php:1251
 msgid "Trigger cookie"
 msgstr "Spúšťací súbor cookie"
 
-#: includes/controller/controller-cookie.php:1166
-msgid "Lists of features"
-msgstr "Zoznam funkcií"
-
-#: includes/controller/controller-cookie.php:1173
+#. ID
+#: includes/controller/controller-cookie.php:1258
 msgid "Modal styles"
 msgstr "Modálne štýly"
 
-#: includes/controller/controller-cookie.php:1180
+#. ID
+#: includes/controller/controller-cookie.php:1265
+msgid "Lists of features"
+msgstr "Zoznam funkcií"
+
+#. ID
+#: includes/controller/controller-cookie.php:1273
 msgid "Labels"
 msgstr "Etikety"
 
-#: includes/controller/controller-cookie.php:1187
+#. ID
+#: includes/controller/controller-cookie.php:1280
 msgid "Additional settings"
 msgstr "Ďalšie nastavenia"
 
-#: includes/controller/controller-cookie.php:1197
+#. ID
+#: includes/controller/controller-cookie.php:1293
 msgid ""
-"Fill in with default content for selected language (remember to save changes)"
-msgstr ""
-"Vyplniť predvoleným obsahom pre vybraný jazyk (nezabudnite zmeny uložiť)"
+"Provide default content for the selected language (remember to save changes)"
+msgstr "Zadajte predvolený obsah pre vybratý jazyk (nezabudnite uložiť zmeny)"
 
-#: includes/controller/controller-cookie.php:1213
+#. ID
+#: includes/controller/controller-cookie.php:1310
 msgid "Cookie popup 'accept' button label (leave empty for default)"
 msgstr ""
-"Cookie vyskakovacie označenie tlačidla „prijať“ (pre predvolené nechajte "
-"prázdne)"
+"Rozbaľovacie okno \"prijať\" tlačidlo cookie (na predvolené nastavenie "
+"nechajte prázdne)"
 
-#: includes/controller/controller-cookie.php:1221
+#. ID
+#: includes/controller/controller-cookie.php:1318
 msgid "Cookie popup 'read more' button label (leave empty for default)"
 msgstr ""
-"Cookie vyskakovacie označenie tlačidla „prečítať viac“ (pre predvolené "
-"nechajte prázdne)"
+"Rozbaľovací okienka cookie \"čítať viac\" tlačidlo štítku (nechajte prázdne "
+"pre predvolené)"
 
-#: includes/controller/controller-cookie.php:1229
+#. ID
+#: includes/controller/controller-cookie.php:1326
 msgid "Cookie popup 'change settings' button label (leave empty for default)"
 msgstr ""
-"Cookie vyskakovacie označenie tlačidla „zmeniť nastavenie“ (pre predvolené "
-"nechajte prázdne)"
+"Obľúbené tlačidlo \"zmeniť nastavenia\" pre nastavenie súborov cookie "
+"(predvolené je prázdne)"
 
-#: includes/controller/controller-cookie.php:1237
+#: includes/controller/controller-cookie.php:1335
 msgid "Display cookie popup on all pages"
-msgstr "Zobraziť na všetkých stránkach"
+msgstr "Zobrazenie vyskakovacieho okna cookie na všetkých stránkach"
 
-#: includes/controller/controller-cookie.php:1245
+#: includes/controller/controller-cookie.php:1343
 msgid "Check if user is from European Union"
 msgstr "Skontrolujte, či používateľ pochádza z Európskej únie"
 
-#: includes/controller/controller-cookie.php:1253
-msgid "Select pages where to display the cookie popup"
-msgstr "Vyberte stránky, kde sa má zobraziť vyskakovacie okno súborov cookie"
+#: includes/controller/controller-cookie.php:1351
+msgid "Select page where to display the cookie popup"
+msgstr ""
+"Vyberte stránku, na ktorej sa má zobraziť vyskakovacie okno súborov cookie"
 
-#: includes/controller/controller-cookie.php:1263
+#: includes/controller/controller-cookie.php:1362
 msgid "Choose how often cookie check should be performed"
-msgstr "Vyberte, ako často by mala prebiehať kontrola cookie"
+msgstr "Zvoľte, ako často sa má vykonať kontrola súborov cookie"
 
-#: includes/controller/controller-cookie.php:1271
+#: includes/controller/controller-cookie.php:1370
 msgid "Choose default level of new cookies"
-msgstr "Pre nové cookies vyberte predvolenú úroveň"
+msgstr "Vyberte predvolenú úroveň nových súborov cookie"
 
-#: includes/controller/controller-cookie.php:1279
+#: includes/controller/controller-cookie.php:1378
 msgid "Cookies whitelist (never block these cookies, comma separated)"
 msgstr ""
 "Biela listina súborov cookie (tieto súbory cookie nikdy nezakrývajte, "
 "oddelené čiarou)"
 
-#: includes/controller/controller-cookie.php:1287
+#: includes/controller/controller-cookie.php:1386
 msgid "Block selected/all cookies until user consents"
-msgstr "Blokovať všetky súbory cookie, pokiaľ ich užívateľ neodsúhlasí"
+msgstr "Blokovať vybrané/všetky súbory cookie, kým používateľ neuznáva súhlas"
 
-#: includes/controller/controller-cookie.php:1303
-#: includes/controller/controller-cookie.php:1391
+#: includes/controller/controller-cookie.php:1405
+msgid "Button settings by"
+msgstr "Nastavenie tlačidiel pomocou"
+
+#: includes/controller/controller-cookie.php:1414
 msgid "Button shape"
 msgstr "Tvar tlačidla"
 
-#: includes/controller/controller-cookie.php:1311
-msgid "Button color"
-msgstr "Farba tlačidiel"
-
-#: includes/controller/controller-cookie.php:1319
 #: includes/controller/controller-cookie.php:1423
 msgid "Button size"
-msgstr "Veľkosť tlačidlá"
+msgstr "Veľkosť tlačidla"
 
-#: includes/controller/controller-cookie.php:1327
-msgid "Read more page"
-msgstr "Stránka, na ktorú bude odkazovať tlačidlo Chcem vedieť viac"
-
-#: includes/controller/controller-cookie.php:1335
-msgid "Read More Custom URL"
-msgstr "Prečítajte si viac Vlastná adresa URL"
-
-#: includes/controller/controller-cookie.php:1351
-msgid "Distance from border [px]"
-msgstr "Vzdialenosť od okrajov [px]"
-
-#: includes/controller/controller-cookie.php:1359
-msgid "Box style"
-msgstr "Štýl boxu"
-
-#: includes/controller/controller-cookie.php:1367
-msgid "Box shape"
-msgstr "Tvar boxu"
-
-#: includes/controller/controller-cookie.php:1375
-msgid "Background color"
-msgstr "Farba pozadia"
-
-#: includes/controller/controller-cookie.php:1383
-msgid "Text color"
-msgstr "Farba textu"
-
-#: includes/controller/controller-cookie.php:1399
-msgid "Button background color"
-msgstr "Farba pozadia tlačidla"
-
-#: includes/controller/controller-cookie.php:1407
-msgid "Button border color"
-msgstr "Farba ohraničenia tlačidla"
-
-#: includes/controller/controller-cookie.php:1415
+#: includes/controller/controller-cookie.php:1432
 msgid "Button text color"
 msgstr "Farba textu tlačidla"
 
-#: includes/controller/controller-cookie.php:1443
-msgid "Trigger cookie settings by"
-msgstr "Nastavenia cookies spustíte"
+#: includes/controller/controller-cookie.php:1442
+msgid "Button background color"
+msgstr "Farba pozadia tlačidla"
 
 #: includes/controller/controller-cookie.php:1451
-msgid "Trigger cookie settings icon"
-msgstr "Nastavenia cookies ikona"
+msgid "Button border color"
+msgstr "Farba ohraničenia tlačidla"
 
-#: includes/controller/controller-cookie.php:1459
-msgid "Trigger cookie settings text"
-msgstr "Nastavenia cookies text"
+#: includes/controller/controller-cookie.php:1462
+msgid "Read more page"
+msgstr "Prečítajte si viac informácií"
 
-#: includes/controller/controller-cookie.php:1467
-msgid "Trigger cookie settings background color"
-msgstr "Nastavenia cookies farba pozadia"
+#: includes/controller/controller-cookie.php:1470
+msgid "Read More Custom URL"
+msgstr "Prečítajte si viac Vlastná adresa URL"
 
-#: includes/controller/controller-cookie.php:1475
-msgid "Trigger cookie settings shape"
-msgstr "Nastavenia cookies tvar"
+#: includes/controller/controller-cookie.php:1479
+msgid "Active Tab"
+msgstr "Aktívna Karta"
 
-#: includes/controller/controller-cookie.php:1483
-msgid "Trigger cookie settings position"
-msgstr "Nastavenia cookies pozícia"
+#: includes/controller/controller-cookie.php:1493
+msgid "Position"
+msgstr "Pozície"
 
-#: includes/controller/controller-cookie.php:1491
-msgid "Trigger cookie settings color"
-msgstr "Nastavenia cookies farba"
+#: includes/controller/controller-cookie.php:1501
+msgid "Distance from border [px]"
+msgstr "Vzdialenosť od okraja [px]"
 
-#: includes/controller/controller-cookie.php:1502
+#: includes/controller/controller-cookie.php:1512
+msgid "Box style"
+msgstr "Box štýl"
+
+#: includes/controller/controller-cookie.php:1520
+msgid "Box shape"
+msgstr "Tvar krabice"
+
+#: includes/controller/controller-cookie.php:1528
+msgid "Background color"
+msgstr "Farba pozadia"
+
+#: includes/controller/controller-cookie.php:1536
+msgid "Background image"
+msgstr "Obrázok pozadia"
+
+#: includes/controller/controller-cookie.php:1544
+msgid "Text color"
+msgstr "Farba textu"
+
+#: includes/controller/controller-cookie.php:1554
+msgid "Protection shortcode label"
+msgstr "Ochranný štítok s ochranou"
+
+#: includes/controller/controller-cookie.php:1577
 msgid "Show advanced cookie popup always, even when the consent is given"
-msgstr ""
-"Vždy zobraziť pokročilé vyskakovacie cookie okno, aj keď je daný súhlas"
+msgstr "Ukážku rozšíreného zobrazovania cookie vždy, aj keď je daný súhlas"
 
-#: includes/controller/controller-cookie.php:1510
+#: includes/controller/controller-cookie.php:1585
 msgid "Use advanced cookie groups popup"
 msgstr "Použite rozšírené rozšírené skupiny cookie"
 
-#: includes/controller/controller-cookie.php:1518
+#: includes/controller/controller-cookie.php:1593
+#: includes/controller/controller-cookie.php:1601
 msgid "Advanced cookie groups popup header content"
-msgstr "Obsah hlavičky pokročilé cookie skupinového vyskakovacieho okna"
+msgstr "Pokročilé skupiny cookie zobrazujú obsah hlavičky"
 
-#: includes/controller/controller-cookie.php:1528
-msgid "Cookie modal header color"
-msgstr "Farba modálne hlavičky cookie"
+#: includes/controller/controller-cookie.php:1612
+msgid "Trigger cookie settings by"
+msgstr "Nastavenie súborov cookie spustenia podľa"
 
-#: includes/controller/controller-cookie.php:1536
-msgid "Cookie modal text color"
-msgstr "Farba modálne textové cookie"
+#: includes/controller/controller-cookie.php:1620
+msgid "Trigger cookie settings icon"
+msgstr "Spustenie ikony nastavení súborov cookie"
 
-#: includes/controller/controller-cookie.php:1546
-msgid "<i>This website will</i> label"
-msgstr "<i>Táto stránka bude</i> štítok"
+#: includes/controller/controller-cookie.php:1628
+msgid "Trigger cookie settings text"
+msgstr "Spustiť text nastavenia súborov cookie"
 
-#: includes/controller/controller-cookie.php:1554
-msgid "<i>This website won't</i> label"
-msgstr "<i>Táto stránka nebude</i> štítok"
+#: includes/controller/controller-cookie.php:1636
+msgid "Trigger cookie settings background color"
+msgstr "Farba pozadia nastavenia súboru cookie"
 
-#: includes/controller/controller-cookie.php:1562
-msgid "<i>Block all</i> label"
-msgstr "<i>Blokovať všetko</i> štítok"
+#: includes/controller/controller-cookie.php:1644
+msgid "Trigger cookie settings shape"
+msgstr "Spôsob vytvorenia nastavenia súboru cookie"
 
-#: includes/controller/controller-cookie.php:1570
-msgid "<i>Essentials</i> label"
-msgstr "<i>Základné</i> štítok"
+#: includes/controller/controller-cookie.php:1652
+msgid "Trigger cookie settings position"
+msgstr "Nastavenie pozície nastavení súborov cookie"
 
-#: includes/controller/controller-cookie.php:1578
-msgid "<i>Functionality</i> label"
-msgstr "<i>Funkcionality</i> štítok"
+#: includes/controller/controller-cookie.php:1660
+msgid "Trigger cookie settings color"
+msgstr "Farba nastavení spúšťania súborov cookie"
 
-#: includes/controller/controller-cookie.php:1586
-msgid "<i>Analytics</i> label"
-msgstr "<i>Analytics</i> štítok"
-
-#: includes/controller/controller-cookie.php:1594
-msgid "<i>Advertising</i> label"
-msgstr "<i>Reklamné</i> štítok"
-
-#: includes/controller/controller-cookie.php:1605
+#: includes/controller/controller-cookie.php:1670
 msgid "List of features available for Essential level (semicolon separated)"
-msgstr "Zoznam funkcií dostupných pre základnú úroveň (bodkočiarka oddelená)"
+msgstr "Zoznam funkcií dostupných pre základnú úroveň (oddelené bodkočiarkou)"
 
-#: includes/controller/controller-cookie.php:1613
+#: includes/controller/controller-cookie.php:1678
 msgid ""
 "List of features not available for Essential level (semicolon separated)"
 msgstr ""
-"Zoznam funkcií, ktoré nie sú dostupné pre základnú úroveň (bodkočiarka "
-"oddelená)"
+"Zoznam funkcií, ktoré nie sú k dispozícii pre základnú úroveň (oddelené "
+"bodkočiarkou)"
 
-#: includes/controller/controller-cookie.php:1621
+#: includes/controller/controller-cookie.php:1686
 msgid ""
 "List of features available for Functionality level (semicolon separated)"
-msgstr ""
-"Zoznam funkcií dostupných pre úroveň funkcionality (bodkočiarka oddelená)"
+msgstr "Zoznam funkcií dostupných pre funkčnosť (oddelené bodkočiarkou)"
 
-#: includes/controller/controller-cookie.php:1629
+#: includes/controller/controller-cookie.php:1694
 msgid ""
 "List of features not available for Functionality level (semicolon separated)"
 msgstr ""
-"Zoznam funkcií, ktoré nie sú dostupné pre úroveň funkcionality (bodkočiarka "
-"oddelená)"
+"Zoznam funkcií, ktoré nie sú k dispozícii pre funkčnú úroveň (oddelené "
+"bodkočiarkou)"
 
-#: includes/controller/controller-cookie.php:1637
+#: includes/controller/controller-cookie.php:1702
 msgid "List of features available for Analytics level (semicolon separated)"
-msgstr "Zoznam funkcií dostupných pre Analytics úroveň (bodkočiarka oddelená)"
+msgstr ""
+"Zoznam funkcií, ktoré sú k dispozícii na úrovni nástroja Analytics (oddelené "
+"bodkočiarkou)"
 
-#: includes/controller/controller-cookie.php:1645
+#: includes/controller/controller-cookie.php:1710
 msgid ""
 "List of features not available for Analytics level (semicolon separated)"
 msgstr ""
-"Zoznam funkcií, ktoré nie sú dostupné pre Analytics úroveň (bodkočiarka "
-"oddelená)"
+"Zoznam funkcií, ktoré nie sú k dispozícii na úrovni nástroja Analytics "
+"(oddelené bodkočiarkou)"
 
-#: includes/controller/controller-cookie.php:1653
+#: includes/controller/controller-cookie.php:1718
 msgid "List of features available for Advertising level (semicolon separated)"
-msgstr "Zoznam funkcií dostupných pre reklamnou úroveň (bodkočiarka oddelená)"
+msgstr "Zoznam funkcií dostupných pre reklamnú úroveň (oddelené bodkočiarkou)"
 
-#: includes/controller/controller-cookie.php:1661
+#: includes/controller/controller-cookie.php:1726
 msgid ""
 "List of features not available for Advertising level (semicolon separated)"
 msgstr ""
-"Zoznam funkcií, ktoré nie sú dostupné pre reklamnou úroveň (bodkočiarka "
-"oddelená)"
+"Zoznam funkcií, ktoré nie sú k dispozícii pre reklamnú úroveň (oddelené "
+"bodkočiarkou)"
 
-#: includes/controller/controller-cookie.php:1671
+#: includes/controller/controller-cookie.php:1737
+msgid "Cookie modal header color"
+msgstr "Modrá hlavička modulu cookie"
+
+#: includes/controller/controller-cookie.php:1745
+msgid "Cookie modal text color"
+msgstr "Farba modálneho textu cookie"
+
+#: includes/controller/controller-cookie.php:1753
+msgid "Cookie modal skin"
+msgstr "Cookie modálna koža"
+
+#: includes/controller/controller-cookie.php:1764
+msgid "<i>This website will</i> label"
+msgstr "<i> Táto webová stránka </i> štítky"
+
+#: includes/controller/controller-cookie.php:1772
+msgid "<i>This website won't</i> label"
+msgstr "<i> Táto webová stránka nebude </i> štítky"
+
+#: includes/controller/controller-cookie.php:1780
+msgid "Hide \"Block All\" level features"
+msgstr "Skryť funkcie \"Blokovať všetky\" úrovne"
+
+#: includes/controller/controller-cookie.php:1788
+msgid "Hide \"Essential\" level features"
+msgstr "Skryť funkcie \"Základné\" úrovne"
+
+#: includes/controller/controller-cookie.php:1796
+msgid "Hide \"Functionality\" level features"
+msgstr "Skryť funkcie \"Funkčnosť\" úrovne"
+
+#: includes/controller/controller-cookie.php:1804
+msgid "Hide \"Analytics\" level features"
+msgstr "Skryť funkcie \"Analytics\" úrovne"
+
+#: includes/controller/controller-cookie.php:1812
+msgid "Hide \"Advertising\" level features"
+msgstr "Skryť funkcie \"reklamy\" úrovne"
+
+#: includes/controller/controller-cookie.php:1820
+msgid "<i>Block all</i> label"
+msgstr "<i> Blokovať všetky </i> štítky"
+
+#: includes/controller/controller-cookie.php:1828
+msgid "<i>Essentials</i> label"
+msgstr "<i> Essentials </i> štítky"
+
+#: includes/controller/controller-cookie.php:1836
+msgid "<i>Functionality</i> label"
+msgstr "<i> Funkčnosť </i> štítky"
+
+#: includes/controller/controller-cookie.php:1844
+msgid "<i>Analytics</i> label"
+msgstr "<i> Analytics </i> štítky"
+
+#: includes/controller/controller-cookie.php:1852
+msgid "<i>Advertising</i> label"
+msgstr "<i> Reklama </i> štítky"
+
+#. ID
+#: includes/controller/controller-cookie.php:1862
 msgid ""
 "Advanced cookie popup 'save & close' button label (leave empty for default)"
 msgstr ""
-"Štítok tlačidla „uložiť a zatvoriť“ vyskakovacieho okna pokročilé cookie "
-"(pre predvolené nechajte prázdne)"
+"Rozšírené vyskakovacie okno pre súbor cookie \"Uložiť a zatvoriť\" tlačidlo "
+"(nechajte prázdne pre predvolené nastavenie)"
 
-#: includes/controller/controller-cookie.php:1679
+#: includes/controller/controller-cookie.php:1870
 msgid "Select default privacy group"
-msgstr "Vybrať predvolenú skupinu súkromia"
+msgstr "Vyberte predvolenú skupinu ochrany osobných údajov"
 
-#: includes/controller/controller-cookie.php:1687
+#: includes/controller/controller-cookie.php:1878
+msgid "Reload page when user saves changes"
+msgstr "Obnoviť stránku, keď užívateľ uloží zmeny"
+
+#: includes/controller/controller-cookie.php:1887
 msgid "Select privacy group after user accepts cookies in the popup"
 msgstr ""
 "Vyberte skupinu ochrany osobných údajov, keď používateľ prijíma cookies v "
 "popup"
 
-#: includes/controller/controller-cookie.php:1695
-msgid "Reload page when user saves changes"
-msgstr "Obnoviť stránku, keď užívateľ uloží zmeny"
-
-#: includes/controller/controller-cookie.php:1776
+#: includes/controller/controller-cookie.php:1984
 msgid "Never"
 msgstr "Nikdy"
 
-#: includes/controller/controller-cookie.php:1777
+#: includes/controller/controller-cookie.php:1985
 msgid "Weekly"
-msgstr "Týždenne"
+msgstr "Týždenné"
 
-#: includes/controller/controller-cookie.php:1778
+#: includes/controller/controller-cookie.php:1986
 msgid "Monthly"
-msgstr "Mesačne"
+msgstr "Mesačník"
 
-#: includes/controller/controller-cookie.php:1779
+#: includes/controller/controller-cookie.php:1987
 msgid "Quarterly"
-msgstr "Štvrtročně"
+msgstr "štvrťročné"
 
-#: includes/controller/controller-cookie.php:1834
+#: includes/controller/controller-cookie.php:2015
+msgid "Select"
+msgstr "Vybrať"
+
+#: includes/controller/controller-cookie.php:2044
 msgid "Load"
-msgstr "Nahrať"
+msgstr "Zaťaženie"
 
-#: includes/controller/controller-cookie.php:2053
+#: includes/controller/controller-cookie.php:2279
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2818
+msgid "Update"
+msgstr "Aktualizovať"
+
+#: includes/controller/controller-cookie.php:2280
+msgid "Remove"
+msgstr "Odstrániť"
+
+#: includes/controller/controller-cookie.php:2296
 msgid "Classic"
-msgstr "Klasická"
+msgstr "Klasický"
 
-#: includes/controller/controller-cookie.php:2054
+#: includes/controller/controller-cookie.php:2297
+msgid "Classic Blue"
+msgstr "Classic Blue"
+
+#: includes/controller/controller-cookie.php:2298
 msgid "Modern"
-msgstr "Moderná"
+msgstr "Moderný"
 
-#: includes/controller/controller-cookie.php:2083
-#: includes/controller/controller-cookie.php:2113
-#: includes/controller/controller-cookie.php:2986
+#: includes/controller/controller-cookie.php:2327
+#: includes/controller/controller-cookie.php:2387
+#: includes/controller/controller-cookie.php:3352
 msgid "Rounded"
-msgstr "Zaoblené"
+msgstr "Zaoblený"
 
-#: includes/controller/controller-cookie.php:2084
-#: includes/controller/controller-cookie.php:2114
-#: includes/controller/controller-cookie.php:2987
+#: includes/controller/controller-cookie.php:2328
+#: includes/controller/controller-cookie.php:2388
+#: includes/controller/controller-cookie.php:3353
 msgid "Squared"
-msgstr "Štvrťročne"
+msgstr "Hranatý"
 
-#: includes/controller/controller-cookie.php:2210
-msgid "Normal"
-msgstr "Normálne"
-
-#: includes/controller/controller-cookie.php:2211
-msgid "Large"
-msgstr "Veľké"
-
-#: includes/controller/controller-cookie.php:2752
-msgid "Front page"
-msgstr "Úvodná stránka"
-
-#: includes/controller/controller-cookie.php:2755
-msgid "Posts page"
-msgstr "Stránka príspevkov"
-
-#: includes/controller/controller-cookie.php:2780
-msgid "Bottom left"
-msgstr "Dolu vľavo"
-
-#: includes/controller/controller-cookie.php:2781
-msgid "Bottom right"
-msgstr "Dolu vpravo"
-
-#: includes/controller/controller-cookie.php:2782
-msgid "Bottom panel"
-msgstr "Spodný panel"
-
-#: includes/controller/controller-cookie.php:2783
-msgid "Top left"
-msgstr "Vľavo hore"
-
-#: includes/controller/controller-cookie.php:2784
-msgid "Top right"
-msgstr "Hore vpravo"
-
-#: includes/controller/controller-cookie.php:2785
-msgid "Top panel"
-msgstr "Horný panel"
-
-#: includes/controller/controller-cookie.php:2831
+#: includes/controller/controller-cookie.php:2358
+#: includes/controller/controller-cookie.php:3197
 msgid "Text Only"
 msgstr "Iba text"
 
-#: includes/controller/controller-cookie.php:2832
-msgid "Icon Only"
-msgstr "Len ikona"
-
-#: includes/controller/controller-cookie.php:2833
+#: includes/controller/controller-cookie.php:2359
+#: includes/controller/controller-cookie.php:3199
 msgid "Icon and Text"
 msgstr "Ikona a text"
 
-#: includes/controller/controller-cookie.php:2913
+#: includes/controller/controller-cookie.php:2458
+msgid "Normal"
+msgstr "Normálne"
+
+#: includes/controller/controller-cookie.php:2459
+msgid "Large"
+msgstr "Veľký"
+
+#: includes/controller/controller-cookie.php:3118
+msgid "Front page"
+msgstr "Predná strana"
+
+#: includes/controller/controller-cookie.php:3121
+msgid "Posts page"
+msgstr "Stránka príspevkov"
+
+#: includes/controller/controller-cookie.php:3146
+msgid "Bottom left"
+msgstr "Dole vľavo"
+
+#: includes/controller/controller-cookie.php:3147
+msgid "Bottom right"
+msgstr "Vpravo dole"
+
+#: includes/controller/controller-cookie.php:3148
+msgid "Bottom panel"
+msgstr "Spodný panel"
+
+#: includes/controller/controller-cookie.php:3149
+msgid "Top left"
+msgstr "Hore v ľavo"
+
+#: includes/controller/controller-cookie.php:3150
+msgid "Top right"
+msgstr "Hore vpravo"
+
+#: includes/controller/controller-cookie.php:3151
+msgid "Top panel"
+msgstr "Horný panel"
+
+#: includes/controller/controller-cookie.php:3198
+msgid "Icon Only"
+msgstr "Len ikona"
+
+#: includes/controller/controller-cookie.php:3279
 msgid "Top Left"
-msgstr "Vľavo hore"
+msgstr "Hore v ľavo"
 
-#: includes/controller/controller-cookie.php:2914
+#: includes/controller/controller-cookie.php:3280
 msgid "Top center"
-msgstr "Uprostred hore"
+msgstr "Najvyššie centrum"
 
-#: includes/controller/controller-cookie.php:2915
+#: includes/controller/controller-cookie.php:3281
 msgid "Top Right"
-msgstr "Horný pravý"
+msgstr "Hore vpravo"
 
-#: includes/controller/controller-cookie.php:2916
+#: includes/controller/controller-cookie.php:3282
 msgid "Center Left"
-msgstr "Uprostred vľavo"
+msgstr "Center Left"
 
-#: includes/controller/controller-cookie.php:2917
+#: includes/controller/controller-cookie.php:3283
 msgid "Center Right"
-msgstr "Uprostred vpravo"
+msgstr "Center Right"
 
-#: includes/controller/controller-cookie.php:2918
+#: includes/controller/controller-cookie.php:3284
 msgid "Bottom Left"
-msgstr "Dolný ľavý"
+msgstr "Dole vľavo"
 
-#: includes/controller/controller-cookie.php:2919
+#: includes/controller/controller-cookie.php:3285
 msgid "Bottom Center"
-msgstr "Stred dole"
+msgstr "Spodné stred"
 
-#: includes/controller/controller-cookie.php:2920
+#: includes/controller/controller-cookie.php:3286
 msgid "Bottom Right"
-msgstr "Pravý dolný"
+msgstr "Vpravo dole"
 
-#: includes/controller/controller-cookie.php:2985
+#: includes/controller/controller-cookie.php:3351
 msgid "Round"
 msgstr "Kolo"
 
-#: includes/controller/controller-cookie.php:3093
+#: includes/controller/controller-cookie.php:3412
+msgid "Neutral"
+msgstr "Neutrálne"
+
+#: includes/controller/controller-cookie.php:3413
+msgid "Modern Blue"
+msgstr "Moderná modrá"
+
+#: includes/controller/controller-cookie.php:3414
+msgid "Compact Dark Blue"
+msgstr "Kompaktná tmavo modrá"
+
+#: includes/controller/controller-cookie.php:3487
+msgid "This website won't:"
+msgstr "Táto webová stránka nebude:"
+
+#: includes/controller/controller-cookie.php:3489
 #: includes/model/model-group.php:73 includes/model/model-group.php:91
 msgid "Block all"
 msgstr "Zablokovať všetko"
 
-#: includes/controller/controller-cookie.php:3094
+#: includes/controller/controller-cookie.php:3490
 msgid "Essentials"
-msgstr "Základná"
+msgstr "Essentials"
 
-#: includes/controller/controller-cookie.php:3095
+#: includes/controller/controller-cookie.php:3491
 #: includes/model/model-group.php:55 includes/model/model-group.php:88
 msgid "Functionality"
 msgstr "Funkcionality"
 
-#: includes/controller/controller-cookie.php:3096
+#: includes/controller/controller-cookie.php:3492
 #: includes/model/model-group.php:61 includes/model/model-group.php:89
 msgid "Analytics"
 msgstr "Analytics"
 
-#: includes/controller/controller-cookie.php:3097
+#: includes/controller/controller-cookie.php:3493
 #: includes/model/model-group.php:67 includes/model/model-group.php:90
 msgid "Advertising"
 msgstr "Reklamná"
 
-#: includes/controller/controller-cookie.php:4398
+#: includes/controller/controller-cookie.php:3494
+msgid ""
+"Essential: Remember your cookie permission setting; Essential: Allow session "
+"cookies; Essential: Gather information you input into a contact forms, "
+"newsletter and other forms across all pages; Essential: Keep track of what "
+"you input in a shopping cart; Essential: Authenticate that you are logged "
+"into your user account; Essential: Remember language version you selected;"
+msgstr ""
+"Základné: Nezabudnite nastavenie povolenia súboru cookie. Základné: povoliť "
+"súbory cookie relácie; Základné: Zozbierajte informácie, ktoré zadáte do "
+"kontaktných formulárov, bulletinov a iných formulárov na všetkých stránkach. "
+"Základné: Sledujte, čo zadáte v nákupnom vozíku. Základné: overte, či ste "
+"prihlásení do svojho používateľského konta; Základné: Pamätajte si jazykovú "
+"verziu, ktorú ste vybrali."
+
+#: includes/controller/controller-cookie.php:3495
+msgid ""
+"Remember your login details; Functionality: Remember social media settings; "
+"Functionality: Remember selected region and country; Analytics: Keep track "
+"of your visited pages and interaction taken; Analytics: Keep track about "
+"your location and region based on your IP number; Analytics: Keep track of "
+"the time spent on each page; Analytics: Increase the data quality of the "
+"statistics functions; Advertising: Tailor information and advertising to "
+"your interests based on e.g. the content you have visited before. (Currently "
+"we do not use targeting or targeting cookies.; Advertising: Gather "
+"personally identifiable information such as name and location;"
+msgstr ""
+"Zapamätajte si svoje prihlasovacie údaje; Funkčnosť: Pamätajte si nastavenia "
+"sociálnych médií; Funkčnosť: Pamätajte na vybraný región a krajinu; Analýza: "
+"Udržujte prehľad o navštívených stránkach a interakciách; Analytics: "
+"Udržujte prehľad o vašej polohe a regióne podľa vášho čísla IP. Analýza: "
+"Sledujte čas strávený na každej stránke. Analytics: Zvýšenie kvality údajov "
+"štatistických funkcií. Reklama: Upravte informácie a inzerujte svoje záujmy "
+"na základe napr. obsahu, ktorý ste predtým navštívili. (V súčasnosti "
+"nepoužívame cookies na zacielenie alebo zacielenie; Reklama: zozbierajte "
+"osobné identifikovateľné informácie, napríklad meno a miesto;"
+
+#: includes/controller/controller-cookie.php:3496
+msgid ""
+"Essential: Remember your cookie permission setting; Essential: Allow session "
+"cookies; Essential: Gather information you input into a contact forms, "
+"newsletter and other forms across all pages; Essential: Keep track of what "
+"you input in a shopping cart; Essential: Authenticate that you are logged "
+"into your user account; Essential: Remember language version you selected; "
+"Functionality: Remember social media settings; Functionality: Remember "
+"selected region and country;"
+msgstr ""
+"Základné: Nezabudnite nastavenie povolenia súboru cookie. Základné: povoliť "
+"súbory cookie relácie; Základné: Zozbierajte informácie, ktoré zadáte do "
+"kontaktných formulárov, bulletinov a iných formulárov na všetkých stránkach. "
+"Základné: Sledujte, čo zadáte v nákupnom vozíku. Základné: overte, či ste "
+"prihlásení do svojho používateľského konta; Základné: Pamätajte si jazykovú "
+"verziu, ktorú ste vybrali. Funkčnosť: Pamätajte si nastavenia sociálnych "
+"médií; Funkčnosť: Pamätajte na vybraný región a krajinu;"
+
+#: includes/controller/controller-cookie.php:3497
+msgid ""
+"Remember your login details; Analytics: Keep track of your visited pages and "
+"interaction taken; Analytics: Keep track about your location and region "
+"based on your IP number; Analytics: Keep track of the time spent on each "
+"page; Analytics: Increase the data quality of the statistics functions; "
+"Advertising: Tailor information and advertising to your interests based on e."
+"g. the content you have visited before. (Currently we do not use targeting "
+"or targeting cookies.; Advertising: Gather personally identifiable "
+"information such as name and location;"
+msgstr ""
+"Zapamätajte si svoje prihlasovacie údaje; Analýza: Udržujte prehľad o "
+"navštívených stránkach a interakciách; Analytics: Udržujte prehľad o vašej "
+"polohe a regióne podľa vášho čísla IP. Analýza: Sledujte čas strávený na "
+"každej stránke. Analytics: Zvýšenie kvality údajov štatistických funkcií. "
+"Reklama: Upravte informácie a inzerujte svoje záujmy na základe napr. "
+"obsahu, ktorý ste predtým navštívili. (V súčasnosti nepoužívame cookies na "
+"zacielenie alebo zacielenie; Reklama: zozbierajte osobné identifikovateľné "
+"informácie, napríklad meno a miesto;"
+
+#: includes/controller/controller-cookie.php:3498
+msgid ""
+"Essential: Remember your cookie permission setting; Essential: Allow session "
+"cookies; Essential: Gather information you input into a contact forms, "
+"newsletter and other forms across all pages; Essential: Keep track of what "
+"you input in a shopping cart; Essential: Authenticate that you are logged "
+"into your user account; Essential: Remember language version you selected; "
+"Functionality: Remember social media settingsl Functionality: Remember "
+"selected region and country; Analytics: Keep track of your visited pages and "
+"interaction taken; Analytics: Keep track about your location and region "
+"based on your IP number; Analytics: Keep track of the time spent on each "
+"page; Analytics: Increase the data quality of the statistics functions;"
+msgstr ""
+"Základné: Nezabudnite nastavenie povolenia súboru cookie. Základné: povoliť "
+"súbory cookie relácie; Základné: Zozbierajte informácie, ktoré zadáte do "
+"kontaktných formulárov, bulletinov a iných formulárov na všetkých stránkach. "
+"Základné: Sledujte, čo zadáte v nákupnom vozíku. Základné: overte, či ste "
+"prihlásení do svojho používateľského konta; Základné: Pamätajte si jazykovú "
+"verziu, ktorú ste vybrali. Funkčnosť: Zapamätajte si nastavenia sociálnych "
+"médií. Funkčnosť: Pamätajte na vybraný región a krajinu; Analýza: Udržujte "
+"prehľad o navštívených stránkach a interakciách; Analytics: Udržujte prehľad "
+"o vašej polohe a regióne podľa vášho čísla IP. Analýza: Sledujte čas "
+"strávený na každej stránke. Analytics: Zvýšenie kvality údajov štatistických "
+"funkcií."
+
+#: includes/controller/controller-cookie.php:3499
+msgid ""
+"Remember your login details; Advertising: Use information for tailored "
+"advertising with third parties; Advertising: Allow you to connect to social "
+"sites; Advertising: Identify device you are using; Advertising: Gather "
+"personally identifiable information such as name and location"
+msgstr ""
+"Zapamätajte si svoje prihlasovacie údaje; Reklama: používajte informácie na "
+"inzerciu na mieru s tretími stranami; Reklama: Umožňuje pripojiť sa na "
+"sociálne stránky; Reklama: identifikujte zariadenie, ktoré používate; "
+"Reklama: Zozbierajte osobné identifikovateľné informácie, ako napríklad meno "
+"a umiestnenie"
+
+#: includes/controller/controller-cookie.php:3500
+msgid ""
+"Essential: Remember your cookie permission setting; Essential: Allow session "
+"cookies; Essential: Gather information you input into a contact forms, "
+"newsletter and other forms across all pages; Essential: Keep track of what "
+"you input in a shopping cart; Essential: Authenticate that you are logged "
+"into your user account; Essential: Remember language version you selected; "
+"Functionality: Remember social media settingsl Functionality: Remember "
+"selected region and country; Analytics: Keep track of your visited pages and "
+"interaction taken; Analytics: Keep track about your location and region "
+"based on your IP number; Analytics: Keep track of the time spent on each "
+"page; Analytics: Increase the data quality of the statistics functions; "
+"Advertising: Use information for tailored advertising with third parties; "
+"Advertising: Allow you to connect to social sitesl Advertising: Identify "
+"device you are using; Advertising: Gather personally identifiable "
+"information such as name and location"
+msgstr ""
+"Základné: Nezabudnite nastavenie povolenia súboru cookie. Základné: povoliť "
+"súbory cookie relácie; Základné: Zozbierajte informácie, ktoré zadáte do "
+"kontaktných formulárov, bulletinov a iných formulárov na všetkých stránkach. "
+"Základné: Sledujte, čo zadáte v nákupnom vozíku. Základné: overte, či ste "
+"prihlásení do svojho používateľského konta; Základné: Pamätajte si jazykovú "
+"verziu, ktorú ste vybrali. Funkčnosť: Zapamätajte si nastavenia sociálnych "
+"médií. Funkčnosť: Pamätajte na vybraný región a krajinu; Analýza: Udržujte "
+"prehľad o navštívených stránkach a interakciách; Analytics: Udržujte prehľad "
+"o vašej polohe a regióne podľa vášho čísla IP. Analýza: Sledujte čas "
+"strávený na každej stránke. Analytics: Zvýšenie kvality údajov štatistických "
+"funkcií. Reklama: používajte informácie na inzerciu na mieru s tretími "
+"stranami; Reklama: Umožňuje pripojiť sa k sociálnym stránkam. Reklama: "
+"Identifikujte zariadenie, ktoré používate; Reklama: Zozbierajte osobné "
+"identifikovateľné informácie, ako napríklad meno a umiestnenie"
+
+#: includes/controller/controller-cookie.php:3501
+msgid "Remember your login details"
+msgstr "Pamätajte si svoje prihlasovacie údaje"
+
+#: includes/controller/controller-cookie.php:3505
+msgid "This content requires cookies"
+msgstr "Tento obsah vyžaduje cookies"
+
+#: includes/controller/controller-cookie.php:4876
 msgid "Every week"
 msgstr "Každý týždeň"
 
-#: includes/controller/controller-cookie.php:4402
+#: includes/controller/controller-cookie.php:4880
 msgid "Every month"
 msgstr "Každý mesiac"
 
-#: includes/controller/controller-cookie.php:4406
+#: includes/controller/controller-cookie.php:4884
 msgid "Every quarter"
 msgstr "Každý štvrťrok"
 
-#: includes/controller/controller-cookie.php:4477
+#: includes/controller/controller-cookie.php:4958
 #, php-format
 msgid "Cookies detected: %s, Cookies saved: %s"
-msgstr "Zistené súbory cookie:% s, uložené súbory cookie: %s"
+msgstr "Zistené súbory cookie: %s, uložené súbory cookie: %s"
 
-#: includes/controller/controller-cookie.php:4549
+#: includes/controller/controller-cookie.php:5028
 msgid ""
 "There was a problem with connecting to the cookie scanner. Please try again "
 "later."
 msgstr ""
 "Pri pripojení k skeneru cookie sa vyskytol problém. Skúste neskôr prosím."
 
-#: includes/controller/controller-breach.php:87
-#: includes/controller/controller-breach.php:88
-#: includes/controller/controller-breach.php:116
+#: includes/controller/controller-breach.php:98
+#: includes/controller/controller-breach.php:99
+#: includes/controller/controller-breach.php:127
 #: includes/views/admin/admin-forgotten.php:43
 #: includes/views/admin/admin-breach.php:36
 #: includes/views/admin/admin-data-access.php:47
@@ -1217,16 +1663,16 @@ msgstr ""
 msgid "Data Breach"
 msgstr "Únik dát"
 
-#: includes/controller/controller-breach.php:141
+#: includes/controller/controller-breach.php:152
 msgid "Collect user emails from services"
 msgstr "Vyberte služby, ktorých sa únik dát týka"
 
-#: includes/controller/controller-breach.php:212
+#: includes/controller/controller-breach.php:223
 #, php-format
 msgid "[Ultimate GDPR] Data breach information from %s"
 msgstr "[Ultimate GDPR] Informácia o úniku dát z %s"
 
-#: includes/controller/controller-breach.php:215
+#: includes/controller/controller-breach.php:226
 msgid "There was a data breach on our page..."
 msgstr "Na našej stránke došlo k úniku dát..."
 
@@ -1341,47 +1787,86 @@ msgid "Session or Persistent"
 msgstr "Relácia alebo stála"
 
 #: includes/service/service-quform.php:87
-#: includes/service/service-mailster.php:122
+#: includes/service/service-mailster.php:155
 #, php-format
 msgid "There were problems forgetting data for user: %s"
 msgstr "Došlo k problémom pri zabudnutí dát pre užívateľa: %s"
 
 #: includes/service/service-quform.php:115
 #: includes/service/service-bbpress.php:162
-#: includes/service/service-eform.php:128
-#: includes/service/service-formidable-forms.php:135
-#: includes/service/service-contact-form-7.php:74
+#: includes/service/service-wp-job-manager.php:78
+#: includes/service/service-wp-user.php:103
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:139
+#: includes/service/service-formcraft.php:101
+#: includes/service/service-wp-posts.php:116
+#: includes/service/service-eform.php:132
+#: includes/service/service-mailpoet.php:108
+#: includes/service/service-mailchimp.php:85
+#: includes/service/service-ninja-forms.php:62
+#: includes/service/service-gravity-forms.php:96
+#: includes/service/service-arforms.php:129
+#: includes/service/service-woocommerce.php:157
+#: includes/service/service-events-manager.php:110
+#: includes/service/service-formidable-forms.php:136
+#: includes/service/service-newsletter.php:148
+#: includes/service/service-contact-form-7.php:93
 #: includes/service/service-buddypress.php:334
-#: includes/service/service-mailster.php:150
+#: includes/service/service-flamingo.php:98
+#: includes/service/service-wp-foro.php:420
+#: includes/service/service-mailster.php:183
+#: includes/service/service-wp-comments.php:109
+#, php-format
+msgid "[%s] Name"
+msgstr "[%s] Názov"
+
+#: includes/service/service-quform.php:123
+#: includes/service/service-bbpress.php:170
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:147
+#: includes/service/service-formcraft.php:109
+#: includes/service/service-eform.php:140
+#: includes/service/service-ninja-forms.php:70
+#: includes/service/service-formidable-forms.php:144
+#: includes/service/service-newsletter.php:156
+#: includes/service/service-contact-form-7.php:101
+#: includes/service/service-buddypress.php:342
+#: includes/service/service-ultimate-member.php:77
+#: includes/service/service-flamingo.php:106
+#: includes/service/service-wp-foro.php:428
+#: includes/service/service-mailster.php:191
 #, php-format
 msgid "[%s] Description"
 msgstr "[%s] Popis"
 
-#: includes/service/service-quform.php:124
-#: includes/service/service-bbpress.php:170
-#: includes/service/service-eform.php:137
-#: includes/service/service-gravity-forms.php:105
-#: includes/service/service-arforms.php:138
-#: includes/service/service-events-manager.php:111
-#: includes/service/service-formidable-forms.php:144
-#: includes/service/service-contact-form-7.php:83
-#: includes/service/service-buddypress.php:342
+#: includes/service/service-quform.php:132
+#: includes/service/service-bbpress.php:178
+#: includes/service/service-eform.php:149
+#: includes/service/service-ninja-forms.php:79
+#: includes/service/service-gravity-forms.php:113
+#: includes/service/service-arforms.php:146
+#: includes/service/service-events-manager.php:119
+#: includes/service/service-formidable-forms.php:153
+#: includes/service/service-newsletter.php:165
+#: includes/service/service-contact-form-7.php:110
+#: includes/service/service-buddypress.php:350
+#: includes/service/service-wp-foro.php:436
+#: includes/service/service-klaviyo.php:64
 #, php-format
 msgid "[%s] Inject consent checkbox to all forms"
 msgstr "[%s] Vložiť checkbox do všetkých formulárov"
 
-#: includes/service/service-quform.php:135
-#: includes/service/service-mailster.php:170
+#: includes/service/service-quform.php:143
+#: includes/service/service-mailster.php:211
 #, php-format
 msgid "[%s] Inject consent checkbox as the first field instead of the last"
 msgstr "[% s] Začiarknite políčko súhlasu ako prvé pole namiesto posledného"
 
-#: includes/service/service-quform.php:308
+#: includes/service/service-quform.php:318
 msgid "Quform gathers data entered by users in forms"
 msgstr "Quform zbiera dáta, ktorý sú užívateľmi vkladané vo formulároch"
 
-#: includes/service/service-bbpress.php:186
-#: includes/service/service-buddypress.php:352
+#: includes/service/service-bbpress.php:194
+#: includes/service/service-buddypress.php:360
+#: includes/service/service-wp-foro.php:452
 #, php-format
 msgid ""
 "[%s] Enter the existing user's email whom the posts will be reassigned to "
@@ -1390,69 +1875,73 @@ msgstr ""
 "[%s] Zadajte email existujúceho užívateľa, ktorému budú príspevky pridelené "
 "(alebo nechajte prázdne pre ich odstránenie)"
 
-#: includes/service/service-bbpress.php:253
+#: includes/service/service-bbpress.php:266
 msgid "bbPress gathers users activity in forums"
 msgstr ""
 "buddyPress zhromažďuje aktivitu užívateľov na stránke profilov a skupinách"
 
-#: includes/service/service-bbpress.php:284
-msgid "<strong>ERROR</strong>: Please consent to storage fo your data"
-msgstr "<strong> CHYBA </ strong>: Súhlaste s ukladaním údajov"
+#: includes/service/service-bbpress.php:297
+msgid "<strong>ERROR</strong>: Please consent to storage of your data"
+msgstr "<strong> ERROR </ strong>: Súhlaste s ukladaním údajov"
 
 #: includes/service/service-wp-job-manager.php:50
 #, php-format
 msgid "Could not delete posts for user: %s"
 msgstr "Nepodarilo sa odstrániť príspevky pre používateľa: %s"
 
-#: includes/service/service-wp-job-manager.php:78
+#: includes/service/service-wp-job-manager.php:86
 msgid "[WP Job Manager] Description"
 msgstr "[WP Job Manager] Popis"
 
-#: includes/service/service-wp-user.php:35
-#: includes/service/service-wp-user.php:79
-msgid "WP User Data"
-msgstr "WP Užívateľské data"
+#: includes/service/service-wp-job-manager.php:129
+msgid "WP Job Manager gathers data entered by users in forms"
+msgstr "Správca úloh WP zhromažďuje údaje vložené používateľmi do formulárov"
 
-#: includes/service/service-wp-user.php:61
+#: includes/service/service-wp-user.php:69
 #: includes/service/service-buddypress.php:111
 #, php-format
 msgid "Could not delete user data for user: %s"
 msgstr "Nie je možné zmazať užívateľské dáta pre užívateľa: %s"
 
-#: includes/service/service-wp-user.php:95
+#: includes/service/service-wp-user.php:87
+msgid "WP User Data"
+msgstr "WP Užívateľské data"
+
+#: includes/service/service-wp-user.php:111
 msgid "[WP User Data] Description"
 msgstr "[WP User Data]  Popis"
 
-#: includes/service/service-wp-user.php:103
+#: includes/service/service-wp-user.php:119
 msgid "[WP User Data] Pseudonymize first and last name"
 msgstr "[WP User Data] Pseudonymizácia Mena a Priezviska"
 
-#: includes/service/service-wp-user.php:119
+#: includes/service/service-wp-user.php:135
 msgid "[WP User] Inject consent checkbox to User network signup form fields"
 msgstr ""
 "[Užívateľ WP] Vložiť zaškrtávacie pole so súhlasom k užívateľské sieti "
 "registračných polí"
 
-#: includes/service/service-wp-user.php:127
+#: includes/service/service-wp-user.php:143
 msgid "[WP User] Inject consent checkbox to User register form fields"
 msgstr ""
 "[Užívateľ WP] Vložiť zaškrtávacie pole so súhlasom k registračným poliam "
 "užívateľa"
 
-#: includes/service/service-wp-user.php:135
+#: includes/service/service-wp-user.php:151
 msgid "[WP User] Inject consent checkbox to lost password form fields"
 msgstr ""
 "[Užívateľ WP] Vložiť zaškrtávacie pole so súhlasom k poliam sa strateným "
 "heslom"
 
-#: includes/service/service-wp-user.php:295
-#: includes/service/service-wp-user.php:315
-#: includes/service/service-wp-user.php:335
-#: includes/service/service-woocommerce.php:403
+#: includes/service/service-wp-user.php:312
+#: includes/service/service-wp-user.php:332
+#: includes/service/service-wp-user.php:352
+#: includes/service/service-woocommerce.php:478
+#: includes/service/service-ultimate-member.php:126
 msgid "Consent is required"
 msgstr "Vyžadovaný súhlas"
 
-#: includes/service/service-wp-user.php:388
+#: includes/service/service-wp-user.php:405
 msgid "WordPress user data stored as user meta data in database"
 msgstr ""
 "Užívateľské dáta aplikácie WordPress sú uložené ako užívateľské meta dáta v "
@@ -1466,13 +1955,13 @@ msgstr ""
 "[%s] Zablokujte súbory cookie Wordfence, keď používateľ neprijíma funkčné "
 "súbory cookie"
 
-#: includes/service/service-wp-simple-paypal-shopping-cart.php:159
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:167
 msgid "[WP Simple Paypal Shopping Cart] Pseudonymize user order data"
 msgstr ""
 "[WP Simple Paypal Shopping Cart] Pseudonymizovať údaje o objednávke "
 "používateľov"
 
-#: includes/service/service-wp-simple-paypal-shopping-cart.php:242
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:254
 msgid "WP Simple Paypal Shopping Cart gathers consumer orders data"
 msgstr ""
 "Nákupný košík WP Simple Paypal zhromažďuje dáta zákazníckych objednávok"
@@ -1482,11 +1971,11 @@ msgid "[Youtube] Remove youtube iframes until Necessary cookies accepted"
 msgstr ""
 "[Youtube] Odstrániť youtube iframes kým nie sú prijaté potrebné cookies"
 
-#: includes/service/service-youtube.php:135
+#: includes/service/service-youtube.php:151
 msgid "Youtube creates cookies"
 msgstr "Youtube vytvára cookies"
 
-#: includes/service/service-facebook-pixel.php:101
+#: includes/service/service-facebook-pixel.php:110
 #, php-format
 msgid ""
 "[%s] Block Facebook Pixel cookies when a user doesn't accept Advertising "
@@ -1494,9 +1983,10 @@ msgid ""
 msgstr ""
 "[%s] Blokovať Facebook pixel cookies, ak užívateľ neprijal reklamné cookies"
 
-#: includes/service/service-wp-posts.php:29
-msgid "WordPress Posts"
-msgstr "WordPress Publikovanie"
+#: includes/service/service-formcraft.php:127
+#: includes/service/service-formidable-forms.php:320
+msgid "Formidable Forms gathers data entered by users in forms"
+msgstr "Formidable Forms zhromažďuje údaje zadané užívateľom do formulárov"
 
 #: includes/service/service-wp-posts.php:82
 #, php-format
@@ -1507,11 +1997,11 @@ msgstr "Nie je možné aktualizovať dáta k príspevku: %s"
 msgid "[WP Posts] Delete posts instead of reassigning to a different user?"
 msgstr "[WP Posts] Zmazať príspevky miesto ich priradenie inému užívateľovi?"
 
-#: includes/service/service-wp-posts.php:116
+#: includes/service/service-wp-posts.php:124
 msgid "[WordPress Posts] Description"
 msgstr "[WordPress Publikování] Popis"
 
-#: includes/service/service-wp-posts.php:124
+#: includes/service/service-wp-posts.php:132
 msgid ""
 "[WP Posts] Enter the user email whom the posts will be reassigned to "
 "(default is admin)"
@@ -1519,141 +2009,198 @@ msgstr ""
 "[WP Posts] Zadajte email užívateľa, ku ktorému budú príspevky priradené  "
 "(defaultne Admin)"
 
-#: includes/service/service-wp-posts.php:182
+#: includes/service/service-wp-posts.php:190
 msgid "WordPress posts author data"
 msgstr "WordPress zverejňuje dáta autora"
 
-#: includes/service/service-eform.php:233
+#: includes/service/service-eform.php:245
 msgid "eForm gathers data entered by users in forms"
 msgstr "eForm zhromažďuje údaje vložené používateľmi do formulárov"
 
-#: includes/service/service-mailchimp.php:76
+#. ID
+#: includes/service/service-mailpoet.php:116
+msgid "[Mailpoet] Description"
+msgstr "[Mailpoet] popis"
+
+#: includes/service/service-mailpoet.php:124
+msgid "Mailpoet"
+msgstr "Mailpoet"
+
+#: includes/service/service-mailpoet.php:224
+msgid "Mailpoet gathers data entered by users in forms"
+msgstr "Poštová schránka zhromažďuje údaje vložené používateľmi do formulárov"
+
+#: includes/service/service-mailchimp.php:93
 msgid "[Mailchimp] Description"
 msgstr "[Mailchimp] Popis"
 
-#: includes/service/service-mailchimp.php:84
+#: includes/service/service-mailchimp.php:101
 msgid "[Mailchimp] Inject consent checkbox to order fields"
 msgstr "[Mailchimp] Vložiť checkbox  do žiadosti"
 
-#: includes/service/service-mailchimp.php:92
+#: includes/service/service-mailchimp.php:109
 msgid ""
 "[Mailchimp] Inject consent checkbox as the first field instead of the last"
 msgstr "[Mailchimp] Vložiť checkbox ako prvú položku"
 
-#: includes/service/service-mailchimp.php:177
+#: includes/service/service-mailchimp.php:214
 msgid "Consent is mandatory to proceed"
 msgstr "Pre pokračovanie je povinný súhlas"
 
-#: includes/service/service-mailchimp.php:187
+#: includes/service/service-mailchimp.php:228
 msgid "Mailchimp gathers data entered by users in forms"
 msgstr "Mailchimp zhromažďuje údaje zadané užívateľom do formulárov"
 
-#: includes/service/service-gravity-forms.php:96
+#: includes/service/service-ninja-forms.php:137
+msgid "Ninja Forms gathers data entered by users in forms"
+msgstr "Ninja Forms zhromažďujú údaje vložené používateľmi do formulárov"
+
+#: includes/service/service-gravity-forms.php:104
 msgid "[Gravity Forms] Description"
 msgstr "[Gravity Forms] Popis"
 
-#: includes/service/service-gravity-forms.php:115
+#: includes/service/service-gravity-forms.php:123
 msgid ""
 "[Gravity Forms] Inject consent checkbox as the first field instead of the "
 "last"
 msgstr "[Gravity Forms] Vložiť checkbox ako prvú položku"
 
-#: includes/service/service-gravity-forms.php:123
+#: includes/service/service-gravity-forms.php:131
 msgid "Gravity Forms"
 msgstr "Gravity Forms"
 
-#: includes/service/service-gravity-forms.php:253
-#: includes/service/service-gravity-forms.php:254
+#: includes/service/service-gravity-forms.php:265
 #: includes/views/admin/admin-plugins.php:94
 #: includes/views/admin/admin-plugins.php:112
 msgid "Yes"
 msgstr "Áno"
 
-#: includes/service/service-gravity-forms.php:308
+#: includes/service/service-gravity-forms.php:323
 msgid "Gravity forms gathers data entered by users in forms"
 msgstr "Gravity Forms zhromažďujú údaje vložené užívateľom do formulárov"
 
-#: includes/service/service-arforms.php:129
+#: includes/service/service-arforms.php:137
 msgid "[ARForms] Description"
 msgstr "[ARForms] Popis"
 
-#: includes/service/service-arforms.php:148
+#: includes/service/service-arforms.php:156
 msgid "ARForms"
 msgstr "ARForms"
 
-#: includes/service/service-arforms.php:260
+#: includes/service/service-arforms.php:272
 msgid "ARForms gathers data entered by users in forms"
 msgstr "ARForms zhromažďuje údaje vložené používateľmi do formulárov"
 
-#: includes/service/service-woocommerce.php:74
-#: includes/service/service-woocommerce.php:149
-#: includes/service/service-woocommerce.php:181
-msgid "WooCommerce"
-msgstr "WooCommerce"
-
-#: includes/service/service-woocommerce.php:157
+#: includes/service/service-woocommerce.php:165
 msgid "[WooCommerce] Description"
 msgstr "[WooCommerce] Popis"
 
-#: includes/service/service-woocommerce.php:165
+#: includes/service/service-woocommerce.php:173
 msgid "[WooCommerce] Inject consent checkbox to order fields"
 msgstr "[WooCommerce] Vložiť checkbox do objednávkového formulára"
 
-#: includes/service/service-woocommerce.php:173
+#: includes/service/service-woocommerce.php:181
 msgid "[WooCommerce] Inject consent checkbox to account forms"
 msgstr "[WooCommerce] Vložiť zaškrtávacie pole so súhlasom k formulárom účtu"
 
+#. ID
 #: includes/service/service-woocommerce.php:189
+msgid "[WooCommerce] Inject consent checkbox to checkout"
+msgstr "[WooCommerce] Začiarknite políčko súhlasu do pokladne"
+
+#: includes/service/service-woocommerce.php:197
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/service/service-woocommerce.php:205
 msgid "[WooCommerce] Pseudonymize first and last name"
 msgstr "[WooCommerce] Pseudonymizácia Mena a Priezviska"
 
-#: includes/service/service-woocommerce.php:197
+#: includes/service/service-woocommerce.php:213
 msgid "[WooCommerce] Pseudonymize address information"
 msgstr "[WooCommerce] Pseudonymizácia údajov adresy"
 
-#: includes/service/service-woocommerce.php:205
+#: includes/service/service-woocommerce.php:221
 msgid "[WooCommerce] Pseudonymize billing email"
 msgstr "[WooCommerce] Pseudonymizácia fakturačného emailu"
 
-#: includes/service/service-woocommerce.php:386
-#: includes/service/service-events-manager.php:171
-#: includes/service/service-formidable-forms.php:246
+#: includes/service/service-woocommerce.php:461
+#: includes/service/service-events-manager.php:179
+#: includes/service/service-formidable-forms.php:255
 msgid "Consent"
 msgstr "Súhlas"
 
-#: includes/service/service-woocommerce.php:488
+#: includes/service/service-woocommerce.php:591
 msgid "WooCommerce gathers data entered by users in shop orders"
 msgstr "WooCommerce zhromažďuje údaje zadané užívateľom v objednávke obchodu"
 
-#: includes/service/service-events-manager.php:102
-msgid "[Events Manager] Description"
-msgstr "[Events Manager] Popis"
+#: includes/service/service-google-analytics.php:56
+msgid ""
+"Google Analytics Tracking ID (disable tracking for this ID when cookies "
+"consent not given), eg. UA-118586768-1"
+msgstr ""
+"ID sledovania služby Google Analytics (zakázat sledovanie tohto ID, ak "
+"súbory cookie nesúhlasia), napr. UA-118.586.768-1"
 
-#: includes/service/service-events-manager.php:170
+#: includes/service/service-google-analytics.php:65
+#, php-format
+msgid ""
+"Enable Google Analytics anonymized IP tracking (<a href='%s' "
+"target='_blank'>read more</a>)"
+msgstr ""
+"Povoľte anonymizované sledovanie IP služby Google Analytics (<a href='%s' "
+"target='_blank'> prečítajte si viac </a>)"
+
+#: includes/service/service-google-analytics.php:73
+#, php-format
+msgid ""
+"Please note that even when enabled, Ultimate GDPR will still block Google "
+"Analytics without user consent. If you would like to track anonymously users "
+"without accepting cookies, please <a href='%s' target='_blank'>read more "
+"here</a>."
+msgstr ""
+"Upozorňujeme, že dokonca aj vtedy, keď bude povolené, služba Ultimate GDPR "
+"bude naďalej blokovať službu Google Analytics bez súhlasu používateľa. Ak "
+"chcete anonymne sledovať používateľov bez akceptovania súborov cookie, <a "
+"href='%s' target='_blank'> prečítajte si viac informácií tu </a>."
+
+#: includes/service/service-events-manager.php:178
 #, php-format
 msgid "%s is required."
 msgstr "%s je povinné."
 
-#: includes/service/service-events-manager.php:185
+#: includes/service/service-events-manager.php:194
 msgid "Events Manager gathers data entered by users in booking order forms"
 msgstr ""
 "Správca udalostí zhromažďuje údaje zadané užívateľom vo formulároch a "
 "objednávkach"
 
-#: includes/service/service-formidable-forms.php:154
+#: includes/service/service-formidable-forms.php:163
 msgid ""
 "[Formidable Forms] Inject consent checkbox as the first field instead of the "
 "last"
 msgstr "[Formidable Forms] Vložiť checkbox ako prvú položku"
 
-#: includes/service/service-formidable-forms.php:222
-#: includes/service/service-formidable-forms.php:265
+#: includes/service/service-formidable-forms.php:231
+#: includes/service/service-formidable-forms.php:274
 msgid "This field is required"
 msgstr "Toto pole je povinné"
 
-#: includes/service/service-formidable-forms.php:311
-msgid "Formidable Forms gathers data entered by users in forms"
-msgstr "Formidable Forms zhromažďuje údaje zadané užívateľom do formulárov"
+#. ID
+#: includes/service/service-newsletter.php:175
+msgid ""
+"[Newsletter] Inject consent checkbox as the first field instead of the last"
+msgstr ""
+"[Newsletter] Začiarknite políčko súhlasu ako prvé pole namiesto posledného"
+
+#: includes/service/service-newsletter.php:183
+msgid "Newsletter"
+msgstr "Newsletter"
+
+#: includes/service/service-newsletter.php:349
+msgid "Newsletter gathers data entered by users in newsletter forms"
+msgstr ""
+"Newsletter zhromažďuje údaje vložené používateľmi do formulárov bulletinov"
 
 #: includes/service/service-addthis.php:93
 #, php-format
@@ -1662,13 +2209,13 @@ msgid ""
 msgstr ""
 "[%s] Blok Pridať tieto cookies, ak užívateľ neprijal cookies funkcionality"
 
-#: includes/service/service-contact-form-7.php:93
+#: includes/service/service-contact-form-7.php:120
 msgid ""
 "[Contact Form 7] Inject consent checkbox as the first field instead of the "
 "last"
 msgstr "[Contact Form 7] Vložiť checkbox ako prvú položku"
 
-#: includes/service/service-contact-form-7.php:169
+#: includes/service/service-contact-form-7.php:196
 msgid "Contact Form 7 gathers data entered by users in forms"
 msgstr "Contact Form 7 zhromažďuje údaje zadané užívateľom do formulárov"
 
@@ -1686,36 +2233,51 @@ msgstr "Contact Form 7 zhromažďuje údaje zadané užívateľom do formulárov
 msgid "Could not reassign user data for user: %s"
 msgstr "Nedajú sa opätovne priradiť užívateľské údaje pre užívateľa: %s"
 
-#: includes/service/service-buddypress.php:420
+#: includes/service/service-buddypress.php:428
 msgid "BuddyPress gathers users activity in profile pages and groups"
 msgstr ""
 "BuddyPress zhromažďuje aktivitu užívateľov na stránke profilov a skupinách"
 
-#: includes/service/service-mailster.php:159
+#. ID
+#: includes/service/service-ultimate-member.php:85
+msgid "Inject consent checkbox to all forms"
+msgstr "Vložte začiarkavacie políčko do všetkých formulárov"
+
+#: includes/service/service-ultimate-member.php:164
+#, php-format
+msgid "%s gathers data entered by users in forms"
+msgstr "%s zhromažďuje údaje vložené používateľmi do formulárov"
+
+#: includes/service/service-flamingo.php:124
+msgid "Flamingo gathers data entered by users in CF7 forms"
+msgstr "Flamingo zhromažďuje údaje vložené používateľmi do formulárov CF7"
+
+#: includes/service/service-wp-foro.php:518
+msgid "wpForo gathers users activity in forums"
+msgstr "wpForo gathers users activity in forums"
+
+#: includes/service/service-mailster.php:200
+#: includes/service/service-metorik-helper.php:87
 #, php-format
 msgid "[%s] Inject consent checkbox to subscribe forms"
 msgstr "[% s] Začiarknite políčko s povolením na odber formulárov"
 
-#: includes/service/service-mailster.php:181
+#: includes/service/service-mailster.php:222
 #, php-format
 msgid "[%s] Inject consent checkbox to unsubscribe forms"
 msgstr "[% s] Začiarknite políčko s povolením na odhlásenie formulárov"
 
-#: includes/service/service-mailster.php:192
+#: includes/service/service-mailster.php:233
 msgid "Mailster"
 msgstr "Predmet emailu"
 
-#: includes/service/service-mailster.php:389
+#: includes/service/service-mailster.php:447
 msgid "Consent is missing"
 msgstr "Chýba súhlas"
 
-#: includes/service/service-mailster.php:400
+#: includes/service/service-mailster.php:460
 msgid "Mailster collects signed in user data"
 msgstr "Mailster zbiera dáta prihlásených užívateľov"
-
-#: includes/service/service-wp-comments.php:40
-msgid "WP Comments"
-msgstr "WP Komentáre"
 
 #: includes/service/service-wp-comments.php:71
 msgid "Anonymous"
@@ -1726,19 +2288,19 @@ msgstr "Anonym"
 msgid "Could not update comment data for comments: %s"
 msgstr "Nie je možné aktualizovať dáta komentárov: %s"
 
-#: includes/service/service-wp-comments.php:109
+#: includes/service/service-wp-comments.php:116
 msgid "[WP Comments] Description"
 msgstr "[WP Comments] Popis"
 
-#: includes/service/service-wp-comments.php:117
+#: includes/service/service-wp-comments.php:124
 msgid "[WP Comments] Inject consent checkbox to comments fields"
 msgstr "[WP Comments] Vložiť checkbox do poľa komentára"
 
-#: includes/service/service-wp-comments.php:179
+#: includes/service/service-wp-comments.php:186
 msgid "Please give consent to collect your data"
 msgstr "Poskytnite prosím súhlas so zberom vašich dát"
 
-#: includes/service/service-wp-comments.php:188
+#: includes/service/service-wp-comments.php:197
 msgid "WordPress Comments are data entered by users in comments"
 msgstr "WordPress Comments ukladá údaje zadané užívateľom v komentároch"
 
@@ -1762,27 +2324,27 @@ msgstr "Od OP sa nepodarilo získať novú verziu"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:337
 msgid "Install Required Plugins"
-msgstr "Požadované pluginy inštalácie"
+msgstr "Nainštalujte požadované doplnky"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:338
 msgid "Install Plugins"
-msgstr "Nainštalovať pluginy"
+msgstr "Inštalácia doplnkov"
 
-#. translators: %s: plugin name.
+#. %s: plugin name.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:340
 #, php-format
 msgid "Installing Plugin: %s"
-msgstr "Inštalácia pluginu: %s"
+msgstr "Inštalácia doplnku: %s"
 
-#. translators: %s: plugin name.
+#. %s: plugin name.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:342
 #, php-format
 msgid "Updating Plugin: %s"
-msgstr "Aktualizácia pluginu: %s"
+msgstr "Aktualizácia doplnku: %s"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:343
 msgid "Something went wrong with the plugin API."
-msgstr "U API pluginu sa niečo pokazilo."
+msgstr "Niečo sa pokazilo s pluginom API."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:344
 #, php-format
@@ -1812,10 +2374,10 @@ msgstr[0] ""
 "Nasledujúci doplnok musí byť aktualizovaný na jeho najnovšiu verziu, aby "
 "bola zaistená maximálna kompatibilita s touto témou: %1$s."
 msgstr[1] ""
-"Nasledujúci doplnok musí byť aktualizovaný na jeho najnovšiu verziu, aby "
+"Nasledujúce doplnky je potrebné aktualizovať na ich najnovšiu verziu, aby "
 "bola zaistená maximálna kompatibilita s touto témou: %1$s."
 msgstr[2] ""
-"Nasledujúci doplnok musí byť aktualizovaný na jeho najnovšiu verziu, aby "
+"Nasledujúce doplnky je potrebné aktualizovať na ich najnovšiu verziu, aby "
 "bola zaistená maximálna kompatibilita s touto témou: %1$s."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:362
@@ -1839,88 +2401,90 @@ msgstr[2] "Nasledujúce požadované pluginy sú momentálne neaktívne: %1$s."
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] "Nasledujúci odporúčaný plugin je v súčasnosti neaktívny: %1$s."
-msgstr[1] "Nasledujúci odporúčaný plugin je v súčasnosti neaktívny: %1$s."
-msgstr[2] "Nasledujúci odporúčaný plugin je v súčasnosti neaktívny: %1$s."
+msgstr[1] "Nasledujúce odporúčané doplnky sú momentálne neaktívne: %1$s."
+msgstr[2] "Nasledujúce odporúčané doplnky sú momentálne neaktívne: %1$s."
 
-#. translators: 1: plugin name(s).
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:380
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
-msgstr[0] "Začať inštalovať plugin"
-msgstr[1] "Začať inštalovať plugin"
-msgstr[2] "Začať inštalovať plugin"
+msgstr[0] "Začnite inštalovať doplnok"
+msgstr[1] "Začnite inštalovať doplnky"
+msgstr[2] "Začnite inštalovať doplnky"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:385
 msgid "Begin updating plugin"
 msgid_plural "Begin updating plugins"
-msgstr[0] "Začať aktualizovať plugin"
-msgstr[1] "Začať aktualizovať plugin"
-msgstr[2] "Začať aktualizovať plugin"
+msgstr[0] "Začnite aktualizovať doplnok"
+msgstr[1] "Začnite aktualizovať doplnky"
+msgstr[2] "Začnite aktualizovať doplnky"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:390
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
-msgstr[0] "Začať aktivovať plugin"
-msgstr[1] "Začať aktivovať plugin"
-msgstr[2] "Začať aktivovať plugin"
+msgstr[0] "Začnite aktivovať doplnok"
+msgstr[1] "Začnite aktivovať doplnky"
+msgstr[2] "Začnite aktivovať doplnky"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:395
 msgid "Return to Required Plugins Installer"
-msgstr "Vrátiť sa na inštaláciu požadovaných pluginov"
+msgstr "Vráťte sa na Inštalátor požadovaných zásuvných modulov"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:396
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:919
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3675
 msgid "Return to the Dashboard"
-msgstr "Späť na ovládací panel"
+msgstr "Vráťte sa na Dashboard"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:397
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3254
 msgid "Plugin activated successfully."
-msgstr "Doplnok bol úspešne aktivovaný."
+msgstr "Plugin bol úspešne aktivovaný."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:398
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3047
 msgid "The following plugin was activated successfully:"
-msgstr "Nasledujúce plugin bol úspešne aktivovaný:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] "Nasledujúci plugin bol úspešne aktivovaný:"
+msgstr[1] "Nasledujúce pluginy boli úspešne aktivované:"
+msgstr[2] "Nasledujúce pluginy boli úspešne aktivované:"
 
-#. translators: 1: plugin name.
+#. 1: plugin name.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:400
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
-msgstr "Nebola vykonaná žiadna akcia. Plugin %1$s bol už aktívny."
+msgstr "Neboli vykonané žiadne kroky. Plugin %1$s bol už aktívny."
 
-#. translators: 1: plugin name.
+#. 1: plugin name.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:402
 #, php-format
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 msgstr ""
-"Plugin nebol aktivovaný. Pre tento motív je vyžadovaná vyššia verzia %s. "
-"Aktualizujte plugin."
+"Plugin nie je aktivovaný. Pre túto tému je potrebná vyššia verzia %s. "
+"Aktualizujte doplnok."
 
-#. translators: 1: dashboard link.
+#. 1: dashboard link.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:404
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
-msgstr "Všetky pluginy boli úspešne nainštalované a aktivované. %1$s"
+msgstr "Všetky doplnky boli nainštalované a úspešne aktivované. %1$s"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:405
 msgid "Dismiss this notice"
-msgstr "Odstrániť toto upozornenie"
+msgstr "Zamietnuť toto oznámenie"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:406
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
 "activate."
 msgstr ""
-"Dostupné sú ďalšie požadované alebo odporúčané pluginy na inštaláciu, "
-"aktualizáciu alebo aktiváciu."
+"Na inštaláciu, aktualizáciu alebo aktiváciu je potrebný jeden alebo viac "
+"požadovaných alebo odporúčaných doplnkov."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:407
 msgid "Please contact the administrator of this site for help."
-msgstr "Pre pomoc kontaktujte administrátora tejto stránky."
+msgstr "Kontaktujte správcu tejto stránky, kde nájdete pomoc."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:610
 #: vendor/optimus-prime-plugin-update/settings.php:80
@@ -1935,21 +2499,21 @@ msgstr "Vyžadovaná aktualizácia"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:728
 msgid "Set the parent_slug config variable instead."
-msgstr "Nastaviť namiesto toho config parent_slug ako premenný."
+msgstr "Namiesto toho nastavte premennú parent_slug config."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:922
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1053
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2627
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3678
 msgid "Return to Dashboard"
-msgstr "Späť na ovládací panel"
+msgstr "Vráťte sa do informačného panela"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1026
 msgid ""
 "The remote plugin package does not contain a folder with the desired slug "
 "and renaming did not work."
 msgstr ""
-"Vzdialený balíček pluginu neobsahuje zložku s požadovaným slug a "
+"Balík vzdialeného pluginu neobsahuje priečinok s požadovanou veľkosťou a "
 "premenovanie nefunguje."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1026
@@ -1958,16 +2522,16 @@ msgid ""
 "Please contact the plugin provider and ask them to package their plugin "
 "according to the WordPress guidelines."
 msgstr ""
-"Kontaktujte poskytovateľa pluginu a požiadajte ich o zabalenie ich pluginu v "
-"súlade s požiadavkami WordPress."
+"Obráťte sa na poskytovateľa doplnkov a požiadajte ich, aby balík svojich "
+"pluginov použili podľa pokynov WordPress."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1029
 msgid ""
 "The remote plugin package consists of more than one file, but the files are "
 "not packaged in a folder."
 msgstr ""
-"Vzdialený balíček pluginu sa skladá z viac ako jedného súboru, ale súbory "
-"nie sú zabalené v zložke."
+"Balík vzdialeného pluginu obsahuje viac ako jeden súbor, ale súbory nie sú "
+"zabalené v priečinku."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1213
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3043
@@ -1975,7 +2539,7 @@ msgctxt "plugin A *and* plugin B"
 msgid "and"
 msgstr "a"
 
-#. translators: %s: version number
+#. %s: version number
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2076
 #, php-format
 msgid "TGMPA v%s"
@@ -1983,15 +2547,15 @@ msgstr "TGMPA v%s"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2367
 msgid "Required"
-msgstr "Vyžadovaný"
+msgstr "Požadovaný"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2370
 msgid "Recommended"
-msgstr "Odporúča sa"
+msgstr "Odporúča"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2386
 msgid "WordPress Repository"
-msgstr "WordPress depozitár"
+msgstr "Úložisko WordPress"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2389
 msgid "External Source"
@@ -1999,15 +2563,15 @@ msgstr "Externý zdroj"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2392
 msgid "Pre-Packaged"
-msgstr "Predzabalené"
+msgstr "Balené"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2409
 msgid "Not Installed"
-msgstr "Nenainštalované"
+msgstr "Nie je Nainštalované"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2413
 msgid "Installed But Not Activated"
-msgstr "Nainštalovaný, ale neaktívny"
+msgstr "Inštalované ale neaktívne"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2415
 msgid "Active"
@@ -2015,7 +2579,7 @@ msgstr "Aktívny"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2421
 msgid "Required Update not Available"
-msgstr "Vyžadovaná aktualizácia nie je k dispozícii"
+msgstr "Požadovaná aktualizácia nie je k dispozícii"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2424
 msgid "Requires Update"
@@ -2023,60 +2587,60 @@ msgstr "Vyžaduje aktualizáciu"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2427
 msgid "Update recommended"
-msgstr "Odporúčaná aktualizácie"
+msgstr "Aktualizácia odporúčaná"
 
-#. translators: 1: install status, 2: update status
+#. 1: install status, 2: update status
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2436
 #, php-format
 msgctxt "Install/Update Status"
 msgid "%1$s, %2$s"
 msgstr "%1$s, %2$s"
 
-#. translators: 1: number of plugins.
+#. 1: number of plugins.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2482
 #, php-format
 msgctxt "plugins"
 msgid "All <span class=\"count\">(%s)</span>"
 msgid_plural "All <span class=\"count\">(%s)</span>"
-msgstr[0] "Všetko <span class = \"count\"> (%s) </span>"
-msgstr[1] "Všetko <span class = \"count\"> (%s) </span>"
-msgstr[2] "Všetko <span class = \"count\"> (%s) </span>"
+msgstr[0] "Všetko <span class=\"count\">(%s)</span>"
+msgstr[1] "Všetko <span class=\"count\">(%s)</span>"
+msgstr[2] "Všetko <span class=\"count\">(%s)</span>"
 
-#. translators: 1: number of plugins.
+#. 1: number of plugins.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2486
 #, php-format
 msgid "To Install <span class=\"count\">(%s)</span>"
 msgid_plural "To Install <span class=\"count\">(%s)</span>"
-msgstr[0] "K inštalácii <span class=\"count\">(%s)</span>"
-msgstr[1] "K inštalácii <span class=\"count\">(%s)</span>"
-msgstr[2] "K inštalácii <span class=\"count\">(%s)</span>"
+msgstr[0] "Inštalovať <span class=\"count\">(%s)</span>"
+msgstr[1] "Inštalovať <span class=\"count\">(%s)</span>"
+msgstr[2] "Inštalovať <span class=\"count\">(%s)</span>"
 
-#. translators: 1: number of plugins.
+#. 1: number of plugins.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2490
 #, php-format
 msgid "Update Available <span class=\"count\">(%s)</span>"
 msgid_plural "Update Available <span class=\"count\">(%s)</span>"
-msgstr[0] "Dostupná aktualizácia <span class=\"count\">(%s)</span>"
-msgstr[1] "Dostupná aktualizácia <span class=\"count\">(%s)</span>"
-msgstr[2] "Dostupná aktualizácia <span class=\"count\">(%s)</span>"
+msgstr[0] "Aktualizácia je dostupná <span class=\"count\">(%s)</span>"
+msgstr[1] "Aktualizácia je dostupná <span class=\"count\">(%s)</span>"
+msgstr[2] "Aktualizácia je dostupná <span class=\"count\">(%s)</span>"
 
-#. translators: 1: number of plugins.
+#. 1: number of plugins.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2494
 #, php-format
 msgid "To Activate <span class=\"count\">(%s)</span>"
 msgid_plural "To Activate <span class=\"count\">(%s)</span>"
-msgstr[0] "K aktivácii <span class=\"count\">(%s)</span>"
-msgstr[1] "K aktivácii <span class=\"count\">(%s)</span>"
-msgstr[2] "K aktivácii <span class=\"count\">(%s)</span>"
+msgstr[0] "Aktivovať  <span class=\"count\">(%s)</span>"
+msgstr[1] "Aktivovať  <span class=\"count\">(%s)</span>"
+msgstr[2] "Aktivovať  <span class=\"count\">(%s)</span>"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2576
 msgctxt "as in: \"version nr unknown\""
 msgid "unknown"
-msgstr "neznáme"
+msgstr "nevedno"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2584
 msgid "Installed version:"
-msgstr "Nainštalovaná verzia:"
+msgstr "Inštalovaná verzia:"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2592
 msgid "Minimum required version:"
@@ -2100,21 +2664,21 @@ msgstr "Verzia"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2648
 msgid "Status"
-msgstr "Stav"
+msgstr "Postavenie"
 
-#. translators: %2$s: plugin name in screen reader markup
+#. %2$s: plugin name in screen reader markup
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2697
 #, php-format
 msgid "Install %2$s"
-msgstr "Nainštalovať %2$s"
+msgstr "Inštalovať %2$s"
 
-#. translators: %2$s: plugin name in screen reader markup
+#. %2$s: plugin name in screen reader markup
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2702
 #, php-format
 msgid "Update %2$s"
 msgstr "Aktualizovať %2$s"
 
-#. translators: %2$s: plugin name in screen reader markup
+#. %2$s: plugin name in screen reader markup
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2708
 #, php-format
 msgid "Activate %2$s"
@@ -2122,15 +2686,11 @@ msgstr "Aktivovať %2$s"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2778
 msgid "Upgrade message from the plugin author:"
-msgstr "Správa o aktualizácii od autora pluginu:"
+msgstr "Upraviť správu od autora doplnku:"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2811
 msgid "Install"
-msgstr "Nainštalovať"
-
-#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2818
-msgid "Update"
-msgstr "Aktualizovať"
+msgstr "Inštalovať"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2821
 msgid "Activate"
@@ -2139,47 +2699,47 @@ msgstr "Aktivovať"
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2852
 msgid "No plugins were selected to be installed. No action taken."
 msgstr ""
-"Neboli vybrané žiadne pluginy na inštaláciu. Nebola vykonaná žiadna akcia."
+"Neboli vybraté žiadne doplnky na inštaláciu. Neboli vykonané žiadne kroky."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2854
 msgid "No plugins were selected to be updated. No action taken."
 msgstr ""
-"Neboli vybrané žiadne pluginy k aktualizácii. Nebola vykonaná žiadna akcia."
+"Neboli vybraté žiadne doplnky, ktoré by sa aktualizovali. Neboli vykonané "
+"žiadne kroky."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2895
 msgid "No plugins are available to be installed at this time."
-msgstr "Momentálne nie sú dostupné žiadne pluginy na inštaláciu."
+msgstr "Momentálne nie sú k dispozícii žiadne doplnky."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2897
 msgid "No plugins are available to be updated at this time."
-msgstr "Momentálne nie sú dostupné žiadne pluginy k aktualizácii."
+msgstr "Momentálne nie sú k dispozícii žiadne aktualizácie."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3003
 msgid "No plugins were selected to be activated. No action taken."
-msgstr ""
-"Neboli vybrané žiadne pluginy k aktivácii. Nebola vykonaná žiadna akcia."
+msgstr "Neboli aktivované žiadne doplnky. Neboli vykonané žiadne kroky."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3029
 msgid "No plugins are available to be activated at this time."
-msgstr "Momentálne nie sú dostupné žiadne pluginy k aktivácii."
+msgstr "V súčasnosti nie sú k dispozícii žiadne doplnky."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3253
 msgid "Plugin activation failed."
-msgstr "Zlyhanie aktivácie pluginu."
+msgstr "Aktivácia doplnku zlyhala."
 
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#. 1: plugin name, 2: action number 3: total number of actions.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3593
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr "Aktualizácia pluginu %1$s (%2$d/%3$d)"
+msgstr "Aktualizácia doplnku %1$s (%2$d/%3$d)"
 
-#. translators: 1: plugin name, 2: error message.
+#. 1: plugin name, 2: error message.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3596
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr "Počas inštalácie %1$s sa vyskytla chyba: <strong>%2$s</strong>."
+msgstr "Pri inštalácii sa vyskytla chyba %1$s: <strong>%2$s</strong>."
 
-#. translators: 1: plugin name.
+#. 1: plugin name.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3598
 #, php-format
 msgid "The installation of %1$s failed."
@@ -2190,47 +2750,48 @@ msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
-"Proces inštalácie a aktivácie začína. Tento proces môže chvíľu trvať, majte "
-"trpezlivosť."
+"Spustí sa proces inštalácie a aktivácie. Tento proces môže chvíľu trvať na "
+"niektorých hostiteľoch, preto buďte trpezliví."
 
-#. translators: 1: plugin name.
+#. 1: plugin name.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3604
 #, php-format
 msgid "%1$s installed and activated successfully."
-msgstr "%1$s úspešne nainštalovaný a aktivovaný."
+msgstr "%1$s bol nainštalovaný a úspešne aktivovaný."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3605
 msgid "All installations and activations have been completed."
-msgstr "Všetky inštalácie a aktivácie dokončené."
+msgstr "Všetky inštalácie a aktivácie boli dokončené."
 
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#. 1: plugin name, 2: action number 3: total number of actions.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3607
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr "Inštalácia a aktivácia pluginu %1$s (%2$d/%3$d)"
+msgstr "Inštalácia a aktivácia doplnku %1$s (%2$d/%3$d)"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3610
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
-"Proces inštalácie začína. Tento proces môže chvíľu trvať, majte trpezlivosť."
+"Inštalačný proces sa spustí. Tento proces môže chvíľu trvať na niektorých "
+"hostiteľoch, preto buďte trpezliví."
 
-#. translators: 1: plugin name.
+#. 1: plugin name.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3612
 #, php-format
 msgid "%1$s installed successfully."
-msgstr "%1$s úspešne nainštalovaný."
+msgstr "%1$s sa úspešne nainštaloval."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3613
 msgid "All installations have been completed."
-msgstr "Všetky inštalácie dokončené."
+msgstr "Všetky inštalácie boli dokončené."
 
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#. 1: plugin name, 2: action number 3: total number of actions.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3615
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr "Inštalácia pluginu %1$s (%2$d/%3$d)"
+msgstr "Inštalácia doplnku %1$s (%2$d/%3$d)"
 
 #: includes/views/admin/admin-breach-send.php:17
 msgid "Emails were sent."
@@ -2253,6 +2814,7 @@ msgstr "Odoslať"
 #: includes/views/admin/admin-services.php:22
 #: includes/views/admin/admin-data-access.php:33
 #: includes/views/admin/admin-terms.php:23
+#: includes/views/admin/admin-unsubscribe.php:31
 #: includes/views/admin/admin-rectification.php:33
 #: includes/views/admin/admin-plugins.php:22
 msgid "Settings"
@@ -2264,12 +2826,14 @@ msgstr "Zoznam požiadaviek na právo byť zabudnutý"
 
 #: includes/views/admin/admin-forgotten.php:70
 #: includes/views/admin/admin-data-access.php:76
+#: includes/views/admin/admin-unsubscribe.php:54
 #: includes/views/admin/admin-rectification.php:74
 msgid "User ID"
 msgstr "ID uživateľa"
 
 #: includes/views/admin/admin-forgotten.php:71
 #: includes/views/admin/admin-data-access.php:77
+#: includes/views/admin/admin-unsubscribe.php:55
 #: includes/views/admin/admin-rectification.php:75
 msgid "Email"
 msgstr "Email"
@@ -2280,25 +2844,30 @@ msgstr "Služby pre zabudnutie"
 
 #: includes/views/admin/admin-forgotten.php:73
 #: includes/views/admin/admin-data-access.php:78
+#: includes/views/admin/admin-unsubscribe.php:57
 #: includes/views/admin/admin-rectification.php:76
 msgid "Date of request"
 msgstr "Dátum predloženia požiadavky"
 
 #: includes/views/admin/admin-forgotten.php:74
+#: includes/views/admin/admin-unsubscribe.php:58
 msgid "Date of mail sent"
 msgstr "Dátum odoslania užívateľovi"
 
 #: includes/views/admin/admin-forgotten.php:75
+#: includes/views/admin/admin-unsubscribe.php:59
 msgid "Email user / remove request"
 msgstr "Odoslať email používateľovi / Odstrániť požiadavku"
 
 #: includes/views/admin/admin-forgotten.php:88
 #: includes/views/admin/admin-data-access.php:94
+#: includes/views/admin/admin-unsubscribe.php:72
 #: includes/views/admin/admin-rectification.php:92
 msgid "Not registered"
 msgstr "Neregistrovaný"
 
 #: includes/views/admin/admin-forgotten.php:95
+#: includes/views/admin/admin-unsubscribe.php:79
 msgid "Select all"
 msgstr "Vyber všetko"
 
@@ -2313,12 +2882,14 @@ msgstr "Zmazať a upozorniť vybraných užívateľov"
 
 #: includes/views/admin/admin-forgotten.php:153
 #: includes/views/admin/admin-data-access.php:126
+#: includes/views/admin/admin-unsubscribe.php:137
 #: includes/views/admin/admin-rectification.php:124
 msgid "Remove selected requests from list"
 msgstr "Odstrániť žiadosť zo zoznamu"
 
 #: includes/views/admin/admin-forgotten.php:155
 #: includes/views/admin/admin-data-access.php:128
+#: includes/views/admin/admin-unsubscribe.php:139
 #: includes/views/admin/admin-rectification.php:126
 msgid "Remove all sent requests from list"
 msgstr "Odstrániť všetky odoslané žiadosti zo zoznamu"
@@ -2336,6 +2907,7 @@ msgid "Advanced settings"
 msgstr "Pokročilé nastavenia"
 
 #: includes/views/admin/admin-cookie.php:79
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:245
 msgid "Press 'Save changes' before downloading logs if you changed any options"
 msgstr ""
 "Ak ste zmenili služby, ktorých sa únik dát týka, pred odoslaním emailu "
@@ -2375,6 +2947,10 @@ msgstr "Naše aktívne včely hľadajú cookies na:"
 msgid "posts and pages"
 msgstr "stránka príspevkov"
 
+#: includes/views/admin/admin-cookie.php:111
+msgid " of your WordPress site."
+msgstr "vašej stránky WordPress."
+
 #: includes/views/admin/admin-cookie.php:119
 msgid "It can take up to few minutes. Thanks for your patience!"
 msgstr "Môže trvať až niekoľko minút. Vďaka za vašu trpezlivosť!"
@@ -2403,21 +2979,21 @@ msgstr "Šifrovať vybrané"
 msgid "Decrypt selected"
 msgstr "Dešifrovať vybrané"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:30
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:38
 #: includes/views/admin/admin-plugins.php:30
 msgid "Introduction"
 msgstr "Úvod"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:33
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:41
 #: includes/views/admin/admin-plugins.php:33
 msgid "Compatibility"
 msgstr "Kompatibilita"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:42
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:50
 msgid "The GDPR was approved and adopted by the EU Parliament in April 2016."
 msgstr "GDPR bol schválený a prijatý parlamentom EÚ v apríli 2016."
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:43
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:51
 msgid ""
 " The regulation will take effect after a two-year transition period and, "
 "unlike a Directive it does not require any enabling legislation to be passed "
@@ -2428,7 +3004,7 @@ msgstr ""
 "smernice nevyžaduje, aby vláda schválila akúkoľvek legislatívu umožňujúcu "
 "povolenie, čo znamená, že vstúpi do platnosti 25. mája 2018."
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:47
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:55
 msgid ""
 "The GDPR not only applies to organisations located within the EU but it will "
 "also apply to organisations located outside of the EU if they offer goods or "
@@ -2442,159 +3018,221 @@ msgstr ""
 "všetky spoločnosti spracovávajúce a uchovávajúce osobné údaje subjektov s "
 "bydliskom v Európskej únii bez ohľadu na umiestnenie spoločnosti."
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:52
-msgid ""
-"This plugin will create a form where users can request access to or deletion "
-"of their personal data, stored on\n"
-"                your website. It is also possible to:"
-msgstr ""
-"Tento doplnok vytvorí formulár, na ktorom môžu používatelia požiadať o "
-"prístup alebo vymazanie svojich osobných údajov uložených na serveri\n"
-"                Tvoja webová stránka. Je tiež možné:"
-
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:57
-msgid ""
-"create a custom cookie notice and block all cookies until cookie consent is "
-"given"
-msgstr ""
-"vytvoriť vlastné oznámenie o súbore cookie a zablokovať všetky súbory cookie,"
-" ak nebude udelený súhlas cookie"
-
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:58
-msgid ""
-"set up redirects for your Terms and Conditions and Privacy Policy pages "
-"until consent is given"
-msgstr ""
-"nastavenie presmerovania na Vaše Zmluvné podmienky a Zásady ochrany osobných "
-"údajov, pokiaľ nebude vydaný súhlas užívateľa"
-
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:59
-msgid ""
-"browse user requests for data access/deletion and set custom email "
-"notifications"
-msgstr ""
-"prechádzať žiadosť užívateľov o prístup k dátam / o odstránenie dát a "
-"nastaviť vlastné emailové upozornenia"
-
 #: includes/views/admin/admin-ct-ultimate-gdpr.php:60
 msgid ""
-"send custom email informing about data breach to all users which left their "
-"email at your site"
+"This plugin will create a form where users can request access to or deletion "
+"of their personal data, stored on your website. It is also possible to:"
 msgstr ""
-"pošlite vlastný email s informáciou o narušení dát všetkým užívateľom, ktorí "
+"Tento doplnok vytvorí formulár, na ktorom môžu používatelia požiadať o "
+"prístup alebo vymazanie svojich osobných údajov uložených na serveri Tvoja "
+"webová stránka. Je tiež možné:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:64
+msgid ""
+"Create a custom cookie notice and block all cookies until cookie consent is "
+"given."
+msgstr ""
+"Vytvoriť vlastné oznámenie o súbore cookie a zablokovať všetky súbory "
+"cookie, ak nebude udelený súhlas cookie."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:65
+msgid ""
+"Set up redirects for your Terms and Conditions and Privacy Policy pages "
+"until consent is given."
+msgstr ""
+"Nastavenie presmerovania na Vaše Zmluvné podmienky a Zásady ochrany osobných "
+"údajov, pokiaľ nebude vydaný súhlas užívateľa."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:66
+msgid ""
+"Browse user requests for data access/deletion and set custom email "
+"notifications."
+msgstr ""
+"Prechádzať žiadosť užívateľov o prístup k dátam / o odstránenie dát a "
+"nastaviť vlastné emailové upozornenia."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:67
+msgid ""
+"Send custom email informing about data breach to all users which left their "
+"email at your site."
+msgstr ""
+"Pošlite vlastný email s informáciou o narušení dát všetkým užívateľom, ktorí "
 "zanechali svoj email na Vašom webe."
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:61
-msgid "automatically add consent boxes for various forms on your website"
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:68
+msgid "Automatically add consent boxes for various forms on your website."
 msgstr ""
 "automaticky pridávať pole pre súhlas s rôznymi formulármi na Vašom webe"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:62
-msgid "pseudonymize some of user data stored in database"
-msgstr "pseudonymizovať niektoré užívateľské údaje uložené v databáze"
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:69
+msgid "Pseudonymize some of user data stored in database."
+msgstr "Pseudonymizovať niektoré užívateľské údaje uložené v databáze."
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:63
-msgid "check currently activated plugins for GDPR compliance"
-msgstr "majte prehľad o aktívnych pluginoch a ich kompatibilite s GDPR"
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:70
+msgid "Check currently activated plugins for GDPR compliance."
+msgstr "Majte prehľad o aktívnych pluginoch a ich kompatibilite s GDPR."
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:68
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:75
 msgid ""
 "To start, browse through settings. Then, create a new page with shortcode:"
 msgstr ""
 "Ak chcete začať, prehliadajte nastavenia. Potom vytvorte novú stránku s "
 "krátkym kódom:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:68
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:86
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:76
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:94
 msgid "[ultimate_gdpr_myaccount]"
 msgstr "[ultimate_gdpr_myaccount]"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:75
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:83
 msgid "Available Shortcodes"
 msgstr "K dispozícii krátke kódy"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:82
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:90
 msgid "User Settings:"
 msgstr "Nastavenie Cookie:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:94
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:102
 msgid "Privacy Policy Button:"
 msgstr "Zásady ochrany osobných údajov:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:98
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:106
 msgid "[ultimate_gdpr_policy_accept]"
 msgstr "[ultimate_gdpr_policy_accept]"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:106
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:114
 msgid "Terms and Conditions Button:"
 msgstr "Zmluvné podmienky:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:110
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:118
 msgid "[ultimate_gdpr_terms_accept]"
 msgstr "[ultimate_gdpr_terms_accept]"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:118
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:126
 msgid "Cookie Popup Link:"
 msgstr "Obsah upozorňujúci na súbor cookie:"
 
 #: includes/views/admin/admin-ct-ultimate-gdpr.php:130
+msgid "[ultimate_gdpr_cookie_popup]Link [/ultimate_gdpr_cookie_popup]"
+msgstr "[ultimate_gdpr_cookie_popup]Odkaz [/ultimate_gdpr_cookie_popup]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:138
 msgid "Display Cookies List:"
 msgstr "Zobraziť zoznam cookies:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:134
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:142
 msgid "[render_cookies_list]"
 msgstr "[render_cookies_list]"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:146
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:150
+msgid "Protect Content:"
+msgstr "Chrániť obsah:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:157
+msgid "content"
+msgstr "obsah"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:168
+msgid "Privacy Center:"
+msgstr "Centrum ochrany osobných údajov:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:184
 msgid "System requirements:"
 msgstr "Požiadavky na systém:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:153
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:191
 msgid "PHP Version:"
 msgstr "Verzia PHP:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:157
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:195
 msgid "7.2+"
 msgstr "7.2+"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:165
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:203
 msgid "Memory limit:"
 msgstr "Obmedzenie pamäte:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:169
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:207
 msgid "64 MB"
 msgstr "64 MB"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:177
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:215
 msgid "Disk space:"
 msgstr "Miesto na disku:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:181
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:219
 msgid "10 MB"
 msgstr "10 MB"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:196
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:199
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:259
+msgid "Export/import options"
+msgstr "Možnosti exportu / importu"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:261
+msgid ""
+"You can export current plugin settings to a file which can be used to import "
+"the settings on other websites"
+msgstr ""
+"Aktuálne nastavenia doplnku môžete exportovať do súboru, ktorý je možné "
+"použiť na importovanie nastavení na iných webových stránkach"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:265
+msgid "Export plugin settings"
+msgstr "Exportujte nastavenia doplnkov"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:269
+msgid ""
+"Select file to import settings from. Your current settings will be "
+"overwritten."
+msgstr ""
+"Vyberte súbor, z ktorého chcete importovať nastavenia. Aktuálne nastavenia "
+"budú prepísané."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:275
+msgid "Import plugin settings"
+msgstr "Importujte nastavenia doplnku"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:279
+msgid "Export services from Service Manager"
+msgstr "Exportovať služby zo služby"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:283
+msgid "Export services"
+msgstr "Exportné služby"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:287
+msgid ""
+"Select file to add services from. Your current services will not be removed."
+msgstr ""
+"Vyberte súbor, z ktorého chcete služby pridať. Vaše súčasné služby nebudú "
+"odstránené."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:293
+msgid "Import services to Service Manager"
+msgstr "Importovať služby do Správcu služieb"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:303
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:309
 msgid "Any questions?"
 msgstr "Nejaké otázky?"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:305
 msgid "Please have a look at the"
 msgstr "Pozrite sa prosím na"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:307
 msgid "Support forum"
 msgstr "Fórum podpory"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
-msgid "or ask your questions via e-mail"
-msgstr "alebo položte svoje otázky prostredníctvom e-mailu"
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:307
+msgid "or ask your questions via email"
+msgstr "alebo opýtajte sa na vaše otázky prostredníctvom e-mailu"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:201
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:311
 msgid "Link to our "
 msgstr "Odkaz na naše"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:201
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:313
 msgid "Documentation"
 msgstr "Dokumentácia"
 
@@ -2630,6 +3268,10 @@ msgstr "Späť"
 #: includes/views/admin/admin-data-access-user-details.php:26
 msgid "No data collected for this service"
 msgstr "Žiadne údaje nie sú zhromaždené pre túto službu"
+
+#: includes/views/admin/admin-services.php:48
+msgid "Download all consents log"
+msgstr "Stiahnite si všetky súhlasné denníky"
 
 #: includes/views/admin/admin-data-access.php:71
 msgid "Data access requests list"
@@ -2672,6 +3314,23 @@ msgstr "Aktuálne dáta:"
 msgid "Rectified data:"
 msgstr "Opravené údaje:"
 
+#: includes/views/admin/admin-unsubscribe.php:49
+msgid "Unsubscribe request list"
+msgstr "Zrušiť odber zoznamu požiadaviek"
+
+#: includes/views/admin/admin-unsubscribe.php:56
+msgid "Services to unsubscribe from (user selected)"
+msgstr "Služby na zrušenie odberu (používateľom vybrané)"
+
+#: includes/views/admin/admin-unsubscribe.php:98
+#, php-format
+msgid "Unsubscribed at %s"
+msgstr "Odhlásený na %s"
+
+#: includes/views/admin/admin-unsubscribe.php:135
+msgid "Unsubscribe and notify selected users"
+msgstr "Zrušiť odber a informovať vybraných používateľov"
+
 #: includes/views/admin/admin-rectification.php:69
 msgid "Data rectification requests list"
 msgstr "Zoznam požiadaviek"
@@ -2705,36 +3364,68 @@ msgstr "Neznámy"
 msgid "Partly"
 msgstr "Čiastočne"
 
-#: includes/views/shortcode/shortcode-policy-accept.php:35
+#: includes/views/shortcode/shortcode-policy-accept.php:34
 msgid "You have already accepted Privacy Policy"
 msgstr "Už ste prijali zásady ochrany osobných údajov"
 
-#: includes/views/shortcode/shortcode-policy-accept.php:44
-#: includes/views/shortcode/shortcode-terms-accept.php:44
+#: includes/views/shortcode/shortcode-policy-accept.php:43
+#: includes/views/shortcode/shortcode-terms-accept.php:43
 msgid "Decline"
 msgstr "Odmietnuť"
 
-#: includes/views/shortcode/shortcode-myaccount.php:31
-msgid "Personal Data Access"
-msgstr "Moje osobné údaje"
+#: includes/views/shortcode/shortcode-privacy-center.php:36
+msgid "Data access"
+msgstr "Prístup k údajom"
 
-#: includes/views/shortcode/shortcode-myaccount.php:32
-msgid "Forget me"
-msgstr "Zmažte si moje údaje"
+#: includes/views/shortcode/shortcode-privacy-center.php:62
+msgid "Right to be forgotten"
+msgstr "Právo na zabudnutie"
 
-#: includes/views/shortcode/shortcode-myaccount.php:33
+#: includes/views/shortcode/shortcode-privacy-center.php:88
+#: includes/views/shortcode/shortcode-myaccount.php:47
 msgid "Data rectification"
 msgstr "Oprava dát"
 
-#: includes/views/shortcode/shortcode-myaccount.php:39
+#: includes/views/shortcode/shortcode-privacy-center.php:130
+msgid "Cookie settings"
+msgstr "Nastavenia súborov cookie"
+
+#: includes/views/shortcode/shortcode-privacy-center.php:139
+msgid "Privacy policy"
+msgstr "Zásady ochrany osobných údajov"
+
+#: includes/views/shortcode/shortcode-privacy-center.php:152
+msgid "Terms &amp; conditions pages"
+msgstr "Podmienky &amp; stránky s podmienkami"
+
+#: includes/views/shortcode/shortcode-privacy-center.php:162
+msgid "Contact DPO"
+msgstr "Obráťte sa na DPO"
+
+#: includes/views/shortcode/shortcode-myaccount.php:37
+msgid "Personal Data Access"
+msgstr "Moje osobné údaje"
+
+#: includes/views/shortcode/shortcode-myaccount.php:42
+msgid "Forget me"
+msgstr "Zmažte si moje údaje"
+
+#: includes/views/shortcode/shortcode-myaccount.php:60
 msgid ""
 "Below, you can request for your personal data that's collected by this "
-"website sent to you in an e-mail."
+"website sent to you in an email."
 msgstr ""
-"Nižšie nájdete požiadavka pre zaslanie vašich osobných dát, ktoré sú touto "
-"stránkou zbierané, e-mailom."
+"Nižšie môžete požiadať, aby vaše osobné údaje zhromaždené na tejto webovej "
+"stránke boli odoslané prostredníctvom e-mailu."
 
-#: includes/views/shortcode/shortcode-myaccount.php:48
+#: includes/views/shortcode/shortcode-myaccount.php:64
+#: includes/views/shortcode/shortcode-myaccount.php:129
+#: includes/views/shortcode/shortcode-myaccount.php:200
+#: includes/views/shortcode/shortcode-myaccount.php:273
+msgid "Email:"
+msgstr "E-mail:"
+
+#: includes/views/shortcode/shortcode-myaccount.php:71
 msgid ""
 "I consent to have my email collected in order to receive my requested data. "
 "See Privacy Policy page for more information."
@@ -2742,26 +3433,28 @@ msgstr ""
 "Súhlasím s poskytnutím e-mailu, aby mi mohla byť doručená požadované dáta. "
 "Viac informácií nájdete na stránke s ochranou osobných údajov."
 
-#: includes/views/shortcode/shortcode-myaccount.php:57
-#: includes/views/shortcode/shortcode-myaccount.php:109
-#: includes/views/shortcode/shortcode-myaccount.php:160
+#: includes/views/shortcode/shortcode-myaccount.php:87
+#: includes/views/shortcode/shortcode-myaccount.php:154
+#: includes/views/shortcode/shortcode-myaccount.php:232
+#: includes/views/shortcode/shortcode-myaccount.php:298
 msgid "Submit"
 msgstr "Odoslať"
 
-#: includes/views/shortcode/shortcode-myaccount.php:64
+#: includes/views/shortcode/shortcode-myaccount.php:94
 msgid ""
 "Below, you can browse services which collects your personal data on this "
 "website. Check services you wish to be forgotten by. This will send a "
-"request to the website admin. You will be notified by e-mail once this is "
+"request to the website admin. You will be notified by email once this is "
 "done.\""
 msgstr ""
-"Nižšie sa môžete pozrieť na služby, ktoré zbierajú vaše osobné dáta na tejto "
-"stránke. Zaškrtnite služby, u ktorých chcete byť zabudnutí. Odošle sa "
-"požiadavka administrátorovi stránky. O dokončení budete upozornení e-mailom."
-"\""
+"Nižšie môžete prehľadávať služby, ktoré zhromažďujú vaše osobné údaje na "
+"tejto webovej stránke. Skontrolujte služby, na ktoré chcete zabudnúť. Toto "
+"pošle žiadosť administrátorovi webových stránok. Po dokončení tohto kroku "
+"vás budeme informovať e-mailom. \""
 
-#: includes/views/shortcode/shortcode-myaccount.php:101
-#: includes/views/shortcode/shortcode-myaccount.php:151
+#: includes/views/shortcode/shortcode-myaccount.php:138
+#: includes/views/shortcode/shortcode-myaccount.php:215
+#: includes/views/shortcode/shortcode-myaccount.php:282
 msgid ""
 "I consent to have my email collected in order to process this request. See "
 "Privacy Policy page for more information."
@@ -2769,49 +3462,65 @@ msgstr ""
 "Pre spracovanie tejto požiadavky súhlasím s poskytnutím môjho e-mailu. Viac "
 "informácií nájdete na stránke s ochranou osobných údajov."
 
-#: includes/views/shortcode/shortcode-myaccount.php:119
+#: includes/views/shortcode/shortcode-myaccount.php:164
 msgid ""
 "Below, you can send a request to have your data rectified by  the website "
-"admin. Enter what you would like to be rectified. You will be notified by e-"
-"mail once this is done."
+"admin. Enter what you would like to be rectified. You will be notified by "
+"email once this is done."
 msgstr ""
-"Nižšie môžete odoslať administrátorovi stránky požiadavka na nápravu vašich "
-"dát. Zadajte, čo by ste chceli napraviť. O dokončení budete upozornení e-"
+"Nižšie môžete odoslať žiadosť o opravu údajov administrátorom webových "
+"stránok. Zadajte, čo chcete opraviť. Ak sa to stane, budete oboznámení s e-"
 "mailom."
 
-#: includes/views/shortcode/shortcode-myaccount.php:127
+#: includes/views/shortcode/shortcode-myaccount.php:172
 msgid "Current data"
 msgstr "Aktuálne dáta"
 
-#: includes/views/shortcode/shortcode-myaccount.php:136
+#: includes/views/shortcode/shortcode-myaccount.php:187
 msgid "Rectified data"
 msgstr "Opravené údaje"
 
-#: includes/views/shortcode/shortcode-terms-accept.php:35
+#: includes/views/shortcode/shortcode-myaccount.php:240
+msgid ""
+"Below, you can browse services which sign up users to newsletters. Check "
+"services which newsletters you wish to be unsubscribed from. The "
+"subscription will stop immediately."
+msgstr ""
+"Nižšie môžete prezerať služby, ktoré zaregistrujú používateľov do "
+"bulletinov. Skontrolujte služby, od ktorých spravodajcov chcete odhlásiť. "
+"Predplatné sa ihneď zastaví."
+
+#: includes/views/shortcode/shortcode-terms-accept.php:34
 msgid "You have already accepted Terms and Conditions"
 msgstr "Už ste odsúhlasili poslednú verziu Zmluvných podmienok"
 
 #: includes/views/service/service-wp-user-consent-field.php:17
 #: includes/views/service/service-eform-consent-field.php:19
 #: includes/views/service/service-formidable-forms-consent-field.php:12
+#: includes/views/service/service-newsletter-consent-field.php:16
+#: includes/views/service/service-woocommerce-checkout-consent-field.php:16
 #: includes/views/service/service-quform-consent-field.php:12
 #: includes/views/service/service-contact-form-7-consent-field.php:20
 #: includes/views/service/service-woocommerce-consent-field.php:16
 #: includes/views/service/service-wp-comments-consent-field.php:16
+#: includes/views/service/service-newsletter-consent-field-widget.php:16
 #: includes/views/service/service-woocommerce-consent-field-label.php:12
 #: includes/views/service/service-arforms-consent-field.php:17
+#: includes/views/service/service-ninja-forms-consent-field.php:18
+#: includes/views/service/service-newsletter-consent-field-widget-minimal.php:16
 #: includes/views/service/service-events-manager-consent-field.php:17
 msgid "I consent to the storage of my data according to the Privacy Policy"
 msgstr ""
 "Súhlasím s uchovávaním svojich údajov podľa Zásad ochrany osobných údajov"
 
-#: includes/views/service/service-gravity-forms-consent-field-description.php:12
-msgid "Follow this link to access Privacy Policy"
-msgstr "Pre prístup k ochrane osobných údajov nasledujte tento odkaz"
-
+#: includes/views/service/service-woocommerce-forms-consent-field-error-message.php:12
 #: includes/views/service/service-gravity-forms-consent-field-error-message.php:12
 msgid "You must accept the Privacy Policy before submitting the form"
 msgstr "Pred odoslaním formulára musíte súhlasiť s ochranou osobných údajov"
+
+#: includes/views/service/service-gravity-forms-consent-field-description.php:12
+msgid "Follow this link to access Privacy Policy"
+msgstr "Pre prístup k ochrane osobných údajov nasledujte tento odkaz"
 
 #: includes/views/service/service-bbpress-consent-field.php:16
 #: includes/views/service/service-buddypress-consent-field.php:16
@@ -2824,10 +3533,22 @@ msgstr ""
 
 #: includes/views/service/service-mailster-consent-field.php:16
 #: includes/views/service/service-gravity-forms-consent-field-label.php:12
-msgid "I consent to storage of my data according to Privacy Policy"
-msgstr "Súhlasím s ukladaním mojich dát v súlade s ochranou osobných údajov"
+msgid "I consent to my data being stored according to the Privacy Policy"
+msgstr ""
+"Súhlasím s tým, aby moje údaje boli uložené v súlade s Pravidlami ochrany "
+"osobných údajov"
+
+#: includes/views/service/service-klaviyo-consent-field.php:16
+msgid ""
+"I consent to the storage of my data according to the Privacy Policy "
+"(required to submit)"
+msgstr ""
+"Súhlasím s ukladaním mojich údajov podľa Pravidiel ochrany osobných údajov "
+"(vyžaduje sa odosielanie)"
 
 #: includes/views/service/service-mailchimp-consent-field.php:16
+#: includes/views/service/service-metorik-helper-consent-field.php:16
+#: includes/views/service/service-ultimate-member-consent-field.php:20
 msgid "I consent to the storage of my data according to the Privacy Policy "
 msgstr "Súhlasím s ukladaním mojich dát v súlade s ochranou osobných údajov "
 
@@ -2839,9 +3560,9 @@ msgstr "Toto pole je povinné"
 msgid "This field cannot be blank."
 msgstr "Toto pole nemôže byť prázdne."
 
-#: includes/views/service/service-arforms-consent-field.php:26
-msgid "OK"
-msgstr "OK"
+#: includes/views/service/service-ninja-forms-consent-field.php:24
+msgid "This is a required field."
+msgstr "Toto pole je povinné."
 
 #. Description of the plugin/theme
 msgid ""
@@ -2858,43 +3579,3 @@ msgstr "CreateIT"
 #. Author URI of the plugin/theme
 msgid "https://www.createit.pl"
 msgstr "https://www.createit.pl"
-
-msgid "Enabled"
-msgstr "Aktivovaný"
-
-msgid "Enable"
-msgstr "Aktivovať"
-
-msgid "Disabled"
-msgstr "Deaktivovaný"
-
-msgid "Disable"
-msgstr "Deaktivovať"
-
-msgid "Select page where to display the cookie popup"
-msgstr "Vyberte stránku, na ktorej sa má zobrazit vyskakovacie okno súborov cookie"
-
-msgid "Google Analytics Tracking ID (disable tracking for this ID when cookies consent not given), eg. UA-118586768-1"
-msgstr "ID sledovania služby Google Analytics (zakázat sledovanie tohto ID, ak súbory cookie nesúhlasia), napr. UA-118.586.768-1"
-
-msgid "Hide \"Block All\" level features"
-msgstr "skryt \"Blokovat všetky\" úrovnové funkcie"
-
-msgid "Hide \"Essential\" level features"
-msgstr "skryt \"Nevyhnutný\" úrovnové funkcie"
-
-msgid "Hide \"Functionality\" level features"
-msgstr "skryt \"Funkcnost\" úrovnové funkcie"
-
-msgid "Hide \"Analytics\" level features"
-msgstr "skryt \"Analytika\" úrovnové funkcie"
-
-msgid "Hide \"Advertising\" level features"
-msgstr "skryt \"Reklama\" úrovnové funkcie"
-
-msgid "Block All"
-msgstr "Blokovat všetky"
-
-msgid "Click here to create"
-msgstr "Kliknite tu pre vytvorenie"
-

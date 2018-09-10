@@ -116,7 +116,7 @@ html.mobile-menu-is-open{
             @include media(mobile){
                 margin-bottom: $main-menu-mobile-bottom-spacing;
                 width: 100%;
-              
+                //flex:1;
             }
             flex-direction: inherit;
             align-items: inherit;
@@ -133,7 +133,7 @@ html.mobile-menu-is-open{
             z-index: 1050;
             background: white;
             width: 100%;
-            min-height: 100vh;
+            min-height: calc(100vh - 70px);
             background: rgba(255,255,255,0.97);
             padding-left:0px;
             padding-right:0px;
@@ -141,8 +141,13 @@ html.mobile-menu-is-open{
             li {
                 padding: 8px 0;
                 @include typi(bigger);
-                font-weight: 700;
+                font-weight: 600;
+                
             }
+            .main-navigation--primary{
+                justify-content: inherit;
+            }
+            
             &.is-open{
                 display: flex;
                 
@@ -171,6 +176,7 @@ html.mobile-menu-is-open{
         align-items: center;
         flex-direction: row;
         justify-content: flex-end;
+       
     }
 
     @include e('mobile-user-menu'){
@@ -178,6 +184,13 @@ html.mobile-menu-is-open{
         width: 100%;
         flex-direction: inherit;
         align-items: inherit;
+        @include media(mobile){
+            flex:1;
+            justify-content: space-evenly;
+          
+            display: flex;
+            flex-direction: column;
+        }
 
         a{
             width: 100%;
@@ -206,6 +219,52 @@ html.mobile-menu-is-open{
             width: 78px;
         }
     }
+
+    @include e('mobile-contact'){
+        @include typi(default);
+        @include media(mobile){
+            //flex:1;
+            margin-bottom: 60px;
+            border-top: 2px solid #f1f1f1;
+            padding-top: 16px;
+            width: 100%;
+        }
+      
+    }
+    @include e('mobile-contact-phone'){
+        @include typi(default);
+        margin-bottom: 8px;
+    }
+    @include e('mobile-contact-mail'){
+        @include typi(default);
+        font-weight: 700;
+        margin-bottom: 8px;
+        
+    }
+    @include e('mobile-contact-social'){
+        color:#000;
+        .social-followus__link{
+            border-color:#000;
+            color:#000;
+        }
+        .social-followus__menu{
+            justify-content: left;
+        }
+        ul{
+            color:#000;
+            margin-bottom: 8px;
+            
+        }
+
+    }
+    @include e('mobile-contact-copyright'){
+        color:#000;
+        font-weight: 300;
+        @include typi(small);
+
+    }
+    
+    
 
 }
 

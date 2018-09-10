@@ -3,8 +3,8 @@
 Contributors: yithemes
 Tags: social login, login, social provider, social authentication, authentication, connect with social, woocommerce connect, facebook, google, register, social networks, twitter
 Requires at least: 4.0
-Tested up to: 4.7.3
-Stable tag: 1.2.0
+Tested up to: 4.9.6
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,15 @@ During this transition step, .po and .mo files will be used as always, but in or
 
 
 == Changelog ==
+
+= 1.2.1 - Released on May 16, 2018 =
+* New: Support to WordPress 4.9.6 RC2
+* New: Support to WooCommerce 3.4.0 RC1
+* Dev: Added Classes YITH_WC_Social_Login_Session
+* Updated: Hybrid Library 2.10.0
+* Update: Plugin Core 3.0.15
+* Fix: Facebook login flow
+
 = 1.2.0 - Released on Mar 31, 2017 =
 * New: Support to WooCommerce 3.0 RC 2
 * Update: Plugin Framework

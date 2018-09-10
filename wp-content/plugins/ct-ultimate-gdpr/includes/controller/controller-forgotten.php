@@ -292,7 +292,7 @@ class CT_Ultimate_GDPR_Controller_Forgotten extends CT_Ultimate_GDPR_Controller_
 	private function process_confirm_request() {
 
 		// get email from query string (GET doesnt work for email)
-		preg_match( '#e=\K[a-zA-Z0-9\._\-+%]+@[a-zA-Z0-9\._\-+%]+\.[a-zA-Z0-9]{2,}#', urldecode( $_SERVER['QUERY_STRING'] ), $matches );
+		preg_match( '#e=\K[a-zA-Z0-9\._\-+%]+@[a-zA-Z0-9\._\-+%]+\.[a-zA-Z0-9]{2,}#', $_SERVER['QUERY_STRING'], $matches );
 		$email = sanitize_email( $matches[0] );
 
 		$requests = $this->get_all_requested_users_data();
@@ -356,6 +356,27 @@ class CT_Ultimate_GDPR_Controller_Forgotten extends CT_Ultimate_GDPR_Controller_
 					''
 				);
 
+			}
+
+			if (
+				$this->get_option( 'forgotten_automated_forget' ) &&
+				array_intersect(
+					(array) wp_get_current_user()->roles,
+					$this->get_option(
+						'forgotten_automated_user_forget_roles',
+						ct_ultimate_gdpr_get_value('forgotten_automated_user_forget_roles', $this->get_default_options() ) )
+				)
+			) {
+
+				$services      = isset( $requests[ $email ]['services'] ) ? $requests[ $email ]['services'] : array();
+				$services_data = array( $email => array_keys( $services ) );
+				$this->users_forget( $services_data );
+
+				if ( $this->get_option( 'forgotten_automated_user_email' ) ) {
+
+					$this->users_send_email( array( $email ) );
+
+				}
 			}
 
 		} else {
@@ -447,11 +468,13 @@ class CT_Ultimate_GDPR_Controller_Forgotten extends CT_Ultimate_GDPR_Controller_
 	}
 
 	/**
-	 *
+	 * @param array $emails
 	 */
-	private function users_send_email() {
+	private function users_send_email( $emails = array() ) {
 
-		$emails   = ct_ultimate_gdpr_get_value( 'emails', $this->get_request_array() );
+		$emails   = $emails ?
+			$emails :
+			ct_ultimate_gdpr_get_value( 'emails', $this->get_request_array() );
 		$requests = get_option( $this->get_requests_option_key(), array() );
 
 		$message = apply_filters(
@@ -525,11 +548,13 @@ class CT_Ultimate_GDPR_Controller_Forgotten extends CT_Ultimate_GDPR_Controller_
 	}
 
 	/**
-	 *
+	 * @param array $services_data
 	 */
-	private function users_forget() {
+	private function users_forget( $services_data = array() ) {
 
-		$services_data = ct_ultimate_gdpr_get_value( 'services', $this->get_request_array(), array() );
+		$services_data = $services_data ?
+			$services_data :
+			ct_ultimate_gdpr_get_value( 'services', $this->get_request_array(), array() );
 		$requests      = get_option( $this->get_requests_option_key(), array() );
 		$requests      = apply_filters( 'ct_ultimate_gdpr_controller_forgotten_users_forget_requests_before', $requests, $services_data );
 
@@ -604,9 +629,14 @@ class CT_Ultimate_GDPR_Controller_Forgotten extends CT_Ultimate_GDPR_Controller_
 	 */
 	public function add_option_fields() {
 
-		$admin = CT_Ultimate_GDPR::instance()->get_admin_controller();
-
 		/* Right To Be Forgotten section */
+
+		add_settings_section(
+			'ct-ultimate-gdpr-forgotten_section-1', // ID
+			esc_html__( 'Forms skin', 'ct-ultimate-gdpr' ), // Title
+			null, // callback
+			self::ID // Page
+		);
 
 		add_settings_section(
 			'ct-ultimate-gdpr-forgotten', // ID
@@ -618,6 +648,39 @@ class CT_Ultimate_GDPR_Controller_Forgotten extends CT_Ultimate_GDPR_Controller_
 		/* Right To Be Forgotten section fields */
 
 		{
+
+			add_settings_field(
+				'forgotten_skin_shape',
+				esc_html__( 'Skin', 'ct-ultimate-gdpr' ),
+				array( $this, 'render_field_forgotten_skin_shape' ),
+				self::ID,
+				'ct-ultimate-gdpr-forgotten_section-1'
+			);
+
+			add_settings_field(
+				'forgotten_automated_forget', // ID
+				esc_html__( "Automatically forget users who confirmed their mail", 'ct-ultimate-gdpr' ), // Title
+				array( $this, 'render_field_forgotten_automated_forget' ), // Callback
+				$this->get_id(), // Page
+				$this->get_id() // Section
+			);
+
+			add_settings_field(
+				'forgotten_automated_user_email', // ID
+				esc_html__( "Automatically send email about data removal to users who confirmed their email", 'ct-ultimate-gdpr' ), // Title
+				array( $this, 'render_field_forgotten_automated_user_email' ), // Callback
+				$this->get_id(), // Page
+				$this->get_id() // Section
+			);
+
+			add_settings_field(
+				'forgotten_automated_user_forget_roles', // ID
+				esc_html__( "Permit users of selected roles only to be forgotten automatically", 'ct-ultimate-gdpr' ), // Title
+				array( $this, 'render_field_forgotten_automated_user_forget_roles' ), // Callback
+				$this->get_id(), // Page
+				$this->get_id() // Section
+			);
+
 			add_settings_field(
 				'forgotten_notify_mail', // ID
 				esc_html__( "Admin email to send new request notifications to", 'ct-ultimate-gdpr' ), // Title
@@ -644,7 +707,7 @@ class CT_Ultimate_GDPR_Controller_Forgotten extends CT_Ultimate_GDPR_Controller_
 
 			add_settings_field(
 				'forgotten_target_page', // ID
-				esc_html__( "Set custom URL to the page containing Ultimate GDPR shortcode as the e-mail confirmation target page (or leave empty for autodetect)", 'ct-ultimate-gdpr' ), // Title
+				esc_html__( "Set custom URL to the page containing Ultimate GDPR shortcode as the email confirmation target page (or leave empty for autodetect)", 'ct-ultimate-gdpr' ), // Title
 				array( $this, 'render_field_forgotten_target_page' ), // Callback
 				'ct-ultimate-gdpr-forgotten', // Page
 				'ct-ultimate-gdpr-forgotten' // Section
@@ -653,6 +716,111 @@ class CT_Ultimate_GDPR_Controller_Forgotten extends CT_Ultimate_GDPR_Controller_
 		}
 
 	}
+
+	/**
+	 *
+	 */
+	public function render_field_forgotten_automated_user_forget_roles() {
+
+		global $wp_roles;
+		$roles       = empty( $wp_roles ) ? array() : $wp_roles->roles;
+		$roles_array = array();
+
+		/** @var array $role_array */
+		foreach ( $roles as $role_slug => $role_array ) {
+			$roles_array[ $role_slug ] = $role_array['name'];
+		}
+
+		$admin      = CT_Ultimate_GDPR::instance()->get_admin_controller();
+		$field_name = $admin->get_field_name( __FUNCTION__ );
+		$values     = $admin->get_option_value(
+			$field_name,
+			ct_ultimate_gdpr_get_value( 'forgotten_automated_user_forget_roles', $this->get_default_options() )
+		);
+
+		printf(
+			'<select class="ct-ultimate-gdpr-field" id="%s" name="%s" size="8" multiple>',
+			$admin->get_field_name( __FUNCTION__ ),
+			$admin->get_field_name_prefixed( $field_name ) . "[]"
+		);
+
+		foreach ( $roles_array as $role_slug => $role_name ) :
+
+			$selected = is_array( $values ) && in_array( $role_slug, $values ) ? "selected" : '';
+			echo "<option value='$role_slug' $selected>$role_name</option>";
+
+		endforeach;
+
+		echo '</select>';
+
+	}
+
+	/**
+	 *
+	 */
+	public function render_field_forgotten_automated_forget() {
+
+		$admin      = CT_Ultimate_GDPR::instance()->get_admin_controller();
+		$field_name = $admin->get_field_name( __FUNCTION__ );
+		printf(
+			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s' %s />",
+			$admin->get_field_name( __FUNCTION__ ),
+			$admin->get_field_name_prefixed( $field_name ),
+			$admin->get_option_value_escaped( $field_name ) ? 'checked' : ''
+		);
+
+	}
+
+	/**
+	 *
+	 */
+	public function render_field_forgotten_automated_user_email() {
+
+		$admin      = CT_Ultimate_GDPR::instance()->get_admin_controller();
+		$field_name = $admin->get_field_name( __FUNCTION__ );
+		printf(
+			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s' %s />",
+			$admin->get_field_name( __FUNCTION__ ),
+			$admin->get_field_name_prefixed( $field_name ),
+			$admin->get_option_value_escaped( $field_name ) ? 'checked' : ''
+		);
+
+	}
+
+	/**
+	 *
+	 */
+	public function render_field_forgotten_skin_shape() {
+
+		$admin = CT_Ultimate_GDPR::instance()->get_admin_controller();
+
+		$field_name = $admin->get_field_name( __FUNCTION__ );
+		$value      = $admin->get_option_value( $field_name, 'ct-ultimate-gdpr-simple-form' );
+		$options    = array(
+			''                              => esc_html__( 'Default', 'ct-ultimate-gdpr' ),
+			'ct-ultimate-gdpr-simple-form'  => esc_html__( 'Simple form', 'ct-ultimate-gdpr' ),
+			'ct-ultimate-gdpr-rounded-form' => esc_html__( 'Rounded form', 'ct-ultimate-gdpr' ),
+			'ct-ultimate-gdpr-tabbed-form'  => esc_html__( 'Tabbed form', 'ct-ultimate-gdpr' ),
+		);
+
+		printf(
+			'<select class="ct-ultimate-gdpr-field" id="%s" name="%s">',
+			$field_name,
+			$admin->get_field_name_prefixed( $field_name )
+		);
+
+		/** @var WP_Post $post */
+		foreach ( $options as $attr => $label ) :
+
+			$selected = $attr == $value ? "selected" : '';
+			echo "<option value='$attr' $selected>$label</option>";
+
+		endforeach;
+
+		echo '</select>';
+
+	}
+
 
 	/**
 	 *
@@ -726,10 +894,14 @@ class CT_Ultimate_GDPR_Controller_Forgotten extends CT_Ultimate_GDPR_Controller_
 	 */
 	public function get_default_options() {
 
+		global $wp_roles;
+		$roles_default = isset( $wp_roles->roles ) ? array_keys( $wp_roles->roles ) : array();
+
 		return apply_filters( "ct_ultimate_gdpr_controller_{$this->get_id()}_default_options", array(
-			'forgotten_notify_mail'          => get_bloginfo( 'admin_email' ),
-			'forgotten_notify_email_subject' => esc_html__( "[Ultimate GDPR] Your data has been forgotten", 'ct-ultimate-gdpr' ),
-			'forgotten_notify_email_message' => esc_html__( "[Ultimate GDPR] Your data has been forgotten", 'ct-ultimate-gdpr' ),
+			'forgotten_notify_mail'                 => get_bloginfo( 'admin_email' ),
+			'forgotten_notify_email_subject'        => esc_html__( "[Ultimate GDPR] Your data has been forgotten", 'ct-ultimate-gdpr' ),
+			'forgotten_notify_email_message'        => esc_html__( "[Ultimate GDPR] Your data has been forgotten", 'ct-ultimate-gdpr' ),
+			'forgotten_automated_user_forget_roles' => $roles_default,
 		) );
 
 	}

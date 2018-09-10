@@ -53,8 +53,11 @@ if(!class_exists('LoftLoader_Any_Page') && !class_exists('LoftLoader_Any_Page_Fi
 			if(((is_front_page() || is_home()) && (get_option('show_on_front', false) == 'page')) || is_page()){
 				$page = get_queried_object();
 				if(($atts = $this->get_loader_attributes($page->ID)) !== false){
-					$this->page_settings = array_merge($loftloader_default_settings, $atts);
-					$this->page_enabled = ($atts['loftloader_main_switch'] === 'on');
+					if( isset( $atts['loftloader_show_close_tip'] ) ) {
+						$atts['loftloader_show_close_tip'] = base64_decode( $atts['loftloader_show_close_tip'] );
+					}
+					$this->page_settings = array_merge( $loftloader_default_settings, $atts );
+					$this->page_enabled = ( $atts['loftloader_main_switch'] === 'on' );
 				}
 			}
 		}

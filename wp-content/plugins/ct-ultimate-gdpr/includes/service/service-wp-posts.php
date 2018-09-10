@@ -26,7 +26,7 @@ class CT_Ultimate_GDPR_Service_WP_Posts extends CT_Ultimate_GDPR_Service_Abstrac
 	 * @return mixed|string
 	 */
 	public function get_name() {
-		return esc_html__( "WordPress Posts", 'ct-ultimate-gdpr' );
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name",  "WordPress Posts" );
 	}
 
 	/**
@@ -103,13 +103,21 @@ class CT_Ultimate_GDPR_Service_WP_Posts extends CT_Ultimate_GDPR_Service_Abstrac
 			'ct-ultimate-gdpr-services-wpposts_accordion-19' // Section
 		);
 
-		add_settings_field(
+		/*add_settings_field(
 			"services_{$this->get_id()}_header", // ID
 			$this->get_name(), // Title
 			'__return_empty_string', // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-wpposts_accordion-19' // Section
-		);
+		);*/
+
+        add_settings_field(
+            "services_{$this->get_id()}_service_name", // ID
+            sprintf( esc_html__( "[%s] Name", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
+            array( $this, "render_name_field" ), // Callback
+            CT_Ultimate_GDPR_Controller_Services::ID, // Page
+            'ct-ultimate-gdpr-services-wpposts_accordion-19' // Section
+        );
 
 		add_settings_field(
 			"services_{$this->get_id()}_description", // ID
@@ -124,7 +132,7 @@ class CT_Ultimate_GDPR_Service_WP_Posts extends CT_Ultimate_GDPR_Service_Abstrac
 			esc_html__( '[WP Posts] Enter the user email whom the posts will be reassigned to (default is admin)', 'ct-ultimate-gdpr' ), // Title
 			array( $this, 'render_field_forgotten_wp_posts_target_user' ), // Callback
 			CT_Ultimate_GDPR_Controller_Forgotten::ID, // Page
-			'ct-ultimate-gdpr-services-wpposts_accordion-19' // Section
+			CT_Ultimate_GDPR_Controller_Forgotten::ID // Section
 		);
 
 	}

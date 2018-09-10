@@ -386,6 +386,27 @@ class Woo {
             the_subtitle( '<h2 class="section__description">', '</h2>' );
         }
     }
+
+      /**
+     * Hide shipping rates when free shipping is available.
+     * Updated to support WooCommerce 2.6 Shipping Zones.
+     *
+     * @param array $rates Array of rates found for the package.
+     * @return array
+     */
+  /*  function my_hide_shipping_when_free_is_available( $rates ) {
+        $free = array();
+        foreach ( $rates as $rate_id => $rate ) {
+            if ( 'free_shipping' === $rate->method_id ) {
+                $free[ $rate_id ] = $rate;
+                break;
+            }
+        }
+        return ! empty( $free ) ? $free : $rates;
+    } */
+
+
+
 /**
  * Show a message at the cart/checkout displaying
  * how much to go for free shipping.
@@ -451,6 +472,9 @@ public function shipping_method_notice() {
  * Show Product title
  * 
  */
+
+
+
 function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item_key=""){
 	$product_id = $cart_item['product_id'];
 	// WC_Product
@@ -464,13 +488,23 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
 		foreach ( $terms as $term ) {
 			$tersma[] = $term->slug;
 		}
-	}
-	$attribute =  $product->get_attribute('pa_pakovanje');
+    }
+    //$res = get_post_meta($product->id);
+    //print_r(unserialize($res['_product_attributes'][0]));
+    
+
+    $attribute =  $product->get_attribute('pa_pakiranje');
+    $class = 'cart__item-desc--three-rows';
+    if (isset($attribute)){
+        $class = 'cart__item-desc--tworows';
+    }
 	return 
-		 '<div class="cart__item-name">'
-		. $product->get_title()
+         '<div class="cart__item-name">'
+        . '<a href="'.get_permalink( $cart_item['data']->get_id() ).'" class="cart__item-link">'
+        . $product->get_title()
+        . '</a>'
 		. '</div>'
-		. '<p class="cart__item-desc">'
+		. '<p class="cart__item-desc '.$class.'">'
 		. $excerpt
 		. '</p>'
 		. '<div class="cart__item-attribute">'
@@ -494,9 +528,9 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
             $image = wp_get_attachment_url( $thumbnail_id );
         }
         if(!empty($thumbnail_id)){
-            echo '<div class="section__image">'.wp_get_attachment_image( $thumbnail_id , 'full-width' ) . '</div>';
+            echo '<div class="section__image "><div class="section--image-effect">'.wp_get_attachment_image( $thumbnail_id , 'full-width' ) . '</div></div>';
         }else{
-            echo '<div class="section__image">'.get_the_post_thumbnail(get_option( 'woocommerce_shop_page_id'),'full-width' ). '</div>';
+            echo '<div class="section__image "><div class="section--image-effect">'.get_the_post_thumbnail(get_option( 'woocommerce_shop_page_id'),'full-width' ). '</div></div>';
         }
     }
 
@@ -973,4 +1007,6 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
             echo $field; // WPCS: XSS ok.
         }
     }
+
+      
 }

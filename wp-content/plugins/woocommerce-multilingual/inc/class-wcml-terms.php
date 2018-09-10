@@ -54,6 +54,9 @@ class WCML_Terms{
 
 		if ( is_admin() ) {
 			add_action( 'admin_menu', array( $this, 'admin_menu_setup' ) );
+
+			add_filter( 'pre_option_default_product_cat', array( $this, 'pre_option_default_product_cat' ) );
+			add_filter( 'update_option_default_product_cat', array( $this, 'update_option_default_product_cat' ), 1, 2 );
 		}
 
 		add_action( 'delete_term', array( $this, 'wcml_delete_term' ), 10, 4 );
@@ -737,57 +740,58 @@ class WCML_Terms{
 
     }
 
-    function get_product_terms_filter( $terms, $product_id, $taxonomy, $args ){
+	function get_product_terms_filter( $terms, $product_id, $taxonomy, $args ) {
 
-        $language = $this->sitepress->get_language_for_element( $product_id, 'post_'.get_post_type( $product_id ) );
+		$language = $this->sitepress->get_language_for_element( $product_id, 'post_' . get_post_type( $product_id ) );
 
-        $is_objects_array = is_object( current ( $terms ) );
+		$is_objects_array = is_object( current( $terms ) );
 
-        $filtered_terms = array();
+		$filtered_terms = array();
 
-        foreach( $terms as $term ){
+		foreach ( $terms as $term ) {
 
-            if( !$is_objects_array ){
-                $term_obj = get_term_by( 'name', $term, $taxonomy );
-                if( !$term_obj ){
-                    $term_obj = get_term_by( 'slug', $term, $taxonomy );
-                    $is_slug =  true;
-                }
-            }
+			if ( ! $is_objects_array ) {
+				$term_obj = get_term_by( 'name', $term, $taxonomy );
 
-            if( empty($term_obj) ){
-                $filtered_terms[] = $term;
-                continue;
-            }
+				$is_wc_filtering_by_slug = isset( $args['fields'] ) && 'id=>slug' === $args['fields'];
+				if ( $is_wc_filtering_by_slug || ! $term_obj ) {
+					$term_obj = get_term_by( 'slug', $term, $taxonomy );
+					$is_slug  = true;
+				}
+			}
 
-            $trnsl_term_id = apply_filters( 'translate_object_id', $term_obj->term_id, $taxonomy, true, $language );
+			if ( empty( $term_obj ) ) {
+				$filtered_terms[] = $term;
+				continue;
+			}
 
-            if( $is_objects_array ){
-                $filtered_terms[] = get_term( $trnsl_term_id, $taxonomy );
-            }else{
-                if( isset( $is_slug ) ){
-                    $filtered_terms[] = get_term( $trnsl_term_id, $taxonomy )->slug;
-                }else{
-                    $filtered_terms[] = ( is_ajax() && isset( $_POST['action'] ) && in_array( $_POST['action'], array( 'woocommerce_add_variation', 'woocommerce_link_all_variations') ) ) ? strtolower ( get_term( $trnsl_term_id, $taxonomy )->name ) : get_term( $trnsl_term_id, $taxonomy )->name;
-                }
-            }
-        }
+			$trnsl_term_id = apply_filters( 'translate_object_id', $term_obj->term_id, $taxonomy, true, $language );
 
-        return $filtered_terms;
-    }
+			if ( $is_objects_array ) {
+				$filtered_terms[] = get_term( $trnsl_term_id, $taxonomy );
+			} else {
+				if ( isset( $is_slug ) ) {
+					$filtered_terms[] = get_term( $trnsl_term_id, $taxonomy )->slug;
+				} else {
+					$filtered_terms[] = ( is_ajax() && isset( $_POST['action'] ) && in_array( $_POST['action'], array(
+							'woocommerce_add_variation',
+							'woocommerce_link_all_variations'
+						) ) ) ? strtolower( get_term( $trnsl_term_id, $taxonomy )->name ) : get_term( $trnsl_term_id, $taxonomy )->name;
+				}
+			}
+		}
 
+		return $filtered_terms;
+	}
 
-
-
-    function set_flag_to_sync( $taxonomy, $el_id, $language_code ){
-
-        $elem_details = $this->sitepress->get_element_language_details( $el_id, 'tax_'.$taxonomy );
-        if( is_null( $elem_details->source_language_code ) )
-            return;
-
-        $this->check_if_sync_term_translation_needed( $el_id, $taxonomy );
-
-    }
+	function set_flag_to_sync( $taxonomy, $el_id, $language_code ) {
+		if ( $el_id ) {
+			$elem_details = $this->sitepress->get_element_language_details( $el_id, 'tax_' . $taxonomy );
+			if ( null !== $elem_details->source_language_code ) {
+				$this->check_if_sync_term_translation_needed( $el_id, $taxonomy );
+			}
+		}
+	}
 
     function check_if_sync_terms_needed(){
 
@@ -980,6 +984,41 @@ class WCML_Terms{
 		}
 
 		return true;
+	}
+
+	function pre_option_default_product_cat( ) {
+
+		$lang = $this->sitepress->get_current_language();
+
+		$lang          = $lang === 'all' ? $this->sitepress->get_default_language() : $lang;
+		$wcml_settings = $this->woocommerce_wpml->get_settings();
+		$ttid          = isset( $wcml_settings['default_categories'][ $lang ] ) ? (int) $wcml_settings['default_categories'][ $lang ] : 0;
+
+		return $ttid === 0
+			? false : $this->wpdb->get_var(
+				$this->wpdb->prepare(
+					"SELECT term_id
+		                     FROM {$this->wpdb->term_taxonomy}
+		                     WHERE term_taxonomy_id= %d
+		                     AND taxonomy='product_cat'",
+					$ttid
+				)
+			);
+	}
+
+	function update_option_default_product_cat( $oldvalue, $new_value ) {
+		$new_value     = $this->wpdb->get_var( $this->wpdb->prepare( "SELECT term_taxonomy_id FROM {$this->wpdb->term_taxonomy} WHERE taxonomy='product_cat' AND term_id=%d", $new_value ) );
+		$translations  = $this->sitepress->get_element_translations( $this->sitepress->get_element_trid( $new_value, 'tax_product_cat' ) );
+		$wcml_settings = $this->woocommerce_wpml->get_settings();
+
+		if ( ! empty( $translations ) ) {
+			foreach ( $translations as $t ) {
+				$wcml_settings['default_categories'][ $t->language_code ] = $t->element_id;
+			}
+			if ( isset( $wcml_settings ) ) {
+				$this->woocommerce_wpml->update_settings( $wcml_settings );
+			}
+		}
 	}
 
 }

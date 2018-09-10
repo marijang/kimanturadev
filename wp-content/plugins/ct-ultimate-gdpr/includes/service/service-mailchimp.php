@@ -9,6 +9,7 @@ class CT_Ultimate_GDPR_Service_Mailchimp extends CT_Ultimate_GDPR_Service_Abstra
 	 * @return void
 	 */
 	public function init() {
+
 		add_filter( 'mc4wp_form_errors', array( $this, 'form_errors_filter' ), 100, 2 );
 		add_filter( 'ct_ultimate_gdpr_controller_plugins_compatible_mailchimp-for-wp/mailchimp-for-wp.php', '__return_true' );
 		add_filter( 'ct_ultimate_gdpr_controller_plugins_collects_data_mailchimp-for-wp/mailchimp-for-wp.php', '__return_true' );
@@ -19,6 +20,7 @@ class CT_Ultimate_GDPR_Service_Mailchimp extends CT_Ultimate_GDPR_Service_Abstra
 	 */
 	public function collect() {
 		$this->set_collected( array() );
+
 		return $this;
 	}
 
@@ -26,14 +28,14 @@ class CT_Ultimate_GDPR_Service_Mailchimp extends CT_Ultimate_GDPR_Service_Abstra
 	 * @return mixed
 	 */
 	public function get_name() {
-		return "Mailchimp";
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", "Mailchimp" );
 	}
 
 	/**
 	 * @return bool
 	 */
 	public function is_active() {
-		return function_exists( 'mc4wp_get_form' );
+		return function_exists( 'mc4wp_get_api_v3' );
 	}
 
 	/**
@@ -51,6 +53,13 @@ class CT_Ultimate_GDPR_Service_Mailchimp extends CT_Ultimate_GDPR_Service_Abstra
 	}
 
 	/**
+	 * @return bool
+	 */
+	public function is_subscribeable() {
+		return true;
+	}
+
+	/**
 	 * @return mixed
 	 */
 	public function add_option_fields() {
@@ -63,10 +72,18 @@ class CT_Ultimate_GDPR_Service_Mailchimp extends CT_Ultimate_GDPR_Service_Abstra
 			CT_Ultimate_GDPR_Controller_Services::ID // Page
 		);
 
-		add_settings_field(
+		/*add_settings_field(
 			"services_{$this->get_id()}_header", // ID
 			$this->get_name(), // Title
 			'__return_empty_string', // Callback
+			CT_Ultimate_GDPR_Controller_Services::ID, // Page
+			'ct-ultimate-gdpr-services-mailchimp_accordion-13' // Section
+		);*/
+
+		add_settings_field(
+			"services_{$this->get_id()}_service_name", // ID
+			sprintf( esc_html__( "[%s] Name", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
+			array( $this, "render_name_field" ), // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-mailchimp_accordion-13' // Section
 		);
@@ -94,6 +111,26 @@ class CT_Ultimate_GDPR_Service_Mailchimp extends CT_Ultimate_GDPR_Service_Abstra
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-mailchimp_accordion-13' // Section
 		);
+
+	}
+
+	/**
+	 * @throws MC4WP_API_Exception
+	 */
+	public function unsubscribe() {
+
+		$lists_data = mc4wp_get_api_v3()->get_lists( array(
+			'email'  => $this->user->get_email(),
+			'fields' => 'lists.id'
+		) );
+
+		$list_ids = wp_list_pluck( $lists_data, 'id' );
+
+		foreach ( $list_ids as $list_id ) {
+
+			mc4wp_get_api_v3()->delete_list_member( $list_id, $this->user->get_email() );
+
+		}
 
 	}
 
@@ -175,6 +212,10 @@ class CT_Ultimate_GDPR_Service_Mailchimp extends CT_Ultimate_GDPR_Service_Abstra
 
 		if ( $inject && empty( $_POST["ct-ultimate-gdpr-consent-field"] ) ) {
 			$errors[] = esc_html__( "Consent is mandatory to proceed", 'ct-ultimate-gdpr' );
+		}
+
+		if ( $inject && ! empty( $_POST["ct-ultimate-gdpr-consent-field"] ) ) {
+			$this->log_user_consent();
 		}
 
 		return apply_filters( 'ct_ultimate_gdpr_service_mailchimp_form_errors', $errors, $form );

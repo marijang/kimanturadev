@@ -54,7 +54,7 @@ $slick-opacity-not-active: 0.25 !default;
 .products__slider{
     .slick-list {
         //margin: 32px;
-        padding: 16px;
+        padding:0 16px;
         @include media(mobile){
             padding: 0px;
             margin-bottom: $base-content-padding*3;
@@ -215,12 +215,13 @@ $slick-opacity-not-active: 0.25 !default;
         display: block;
         text-align: center;
         padding: 0;
-        margin: 16px 0;
+        margin-top: 16px;
+       // margin: 16px 0;
         width: 100%;
         border-radius: 0;
         display: flex !important;
         justify-content: center;
-        min-height: 32px;
+       // min-height: 32px;
         align-items: flex-start;
     }
   

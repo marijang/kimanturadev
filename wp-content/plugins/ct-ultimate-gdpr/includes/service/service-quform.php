@@ -44,7 +44,7 @@ class CT_Ultimate_GDPR_Service_Quform extends CT_Ultimate_GDPR_Service_Abstract 
 	 * @return mixed
 	 */
 	public function get_name() {
-		return 'Quform';
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", 'Quform' );
 	}
 
 	/**
@@ -102,13 +102,21 @@ class CT_Ultimate_GDPR_Service_Quform extends CT_Ultimate_GDPR_Service_Abstract 
 		);
 
 
-		add_settings_field(
+		/*add_settings_field(
 			"services_{$this->get_id()}_header", // ID
 			$this->get_name(), // Title
 			'__return_empty_string', // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-quform_accordion-15' // Section
-		);
+		);*/
+
+        add_settings_field(
+            "services_{$this->get_id()}_service_name", // ID
+            sprintf( esc_html__( "[%s] Name", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
+            array( $this, "render_name_field" ), // Callback
+            CT_Ultimate_GDPR_Controller_Services::ID, // Page
+            'ct-ultimate-gdpr-services-quform_accordion-15' // Section
+        );
 
 		add_settings_field(
 			"services_{$this->get_id()}_description", // ID
@@ -289,6 +297,8 @@ class CT_Ultimate_GDPR_Service_Quform extends CT_Ultimate_GDPR_Service_Abstract 
 				'page'   => $form->getCurrentPage()->getId(),
 			);
 
+		} elseif ( $inject ) {
+			$this->log_user_consent();
 		}
 
 		return $response;

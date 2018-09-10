@@ -12,6 +12,8 @@ class CT_Ultimate_GDPR_Service_Google_Analytics_For_Wordpress extends CT_Ultimat
 	 */
 	public function init() {
 		$this->maybe_disable_tracking();
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_compatible_google-analytics-for-wordpress/googleanalytics.php', '__return_true' );
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_collects_data_google-analytics-for-wordpress/googleanalytics.php', '__return_true' );
 	}
 
 	/**
@@ -29,7 +31,7 @@ class CT_Ultimate_GDPR_Service_Google_Analytics_For_Wordpress extends CT_Ultimat
 	 * @return mixed
 	 */
 	public function get_name() {
-		return "Google Analytics For Wordpress";
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", "Google Analytics For Wordpress" );
 	}
 
 	/**

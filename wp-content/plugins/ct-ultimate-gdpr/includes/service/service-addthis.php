@@ -9,6 +9,8 @@ class CT_Ultimate_GDPR_Service_Addthis extends CT_Ultimate_GDPR_Service_Abstract
 	 * @return void
 	 */
 	public function init() {
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_compatible_addthis/addthis_social_widget.php', '__return_true' );
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_collects_data_addthis/addthis_social_widget.php', '__return_false' );
 	}
 
 	/**
@@ -44,7 +46,7 @@ class CT_Ultimate_GDPR_Service_Addthis extends CT_Ultimate_GDPR_Service_Abstract
 	 * @return mixed
 	 */
 	public function get_name() {
-		return 'Addthis';
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", 'Addthis' );
 	}
 
 	/**

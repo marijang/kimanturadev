@@ -7,9 +7,11 @@ class CT_Ultimate_GDPR_Service_WP_User extends CT_Ultimate_GDPR_Service_Abstract
 
 	/**
 	 * CT_Ultimate_GDPR_Service_WP_User constructor.
+	 *
+	 * @param $logger
 	 */
-	public function __construct() {
-		parent::__construct();
+	public function __construct( $logger ) {
+		parent::__construct( $logger );
 
 		/** Change priority of register in order to load this service last due to forgetting feature */
 		remove_filter( 'ct_ultimate_gdpr_load_services', array( $this, 'register' ) );
@@ -32,7 +34,7 @@ class CT_Ultimate_GDPR_Service_WP_User extends CT_Ultimate_GDPR_Service_Abstract
 	 * @return mixed|string
 	 */
 	public function get_name() {
-		return esc_html__( "WP User Data", 'ct-ultimate-gdpr' );
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", "WP User Data" );
 	}
 
 	/**
@@ -54,6 +56,12 @@ class CT_Ultimate_GDPR_Service_WP_User extends CT_Ultimate_GDPR_Service_Abstract
 	 * @return void
 	 */
 	public function forget() {
+
+		$user = new WP_User( $this->user->get_id() );
+
+		if ( ! $user->exists() ) {
+			return;
+		}
 
 		$result = wp_delete_user( $this->user->get_id(), $this->user->get_target_user_id() );
 
@@ -82,13 +90,21 @@ class CT_Ultimate_GDPR_Service_WP_User extends CT_Ultimate_GDPR_Service_Abstract
 			'ct-ultimate-gdpr-breach_section-2'
 		);
 
-		add_settings_field(
+		/*add_settings_field(
 			"services_{$this->get_id()}_header", // ID
 			$this->get_name(), // Title
 			'__return_empty_string', // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-wpuser_accordion-21' // Section
-		);
+		);*/
+
+        add_settings_field(
+            "services_{$this->get_id()}_service_name", // ID
+            sprintf( esc_html__( "[%s] Name", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
+            array( $this, "render_name_field" ), // Callback
+            CT_Ultimate_GDPR_Controller_Services::ID, // Page
+            'ct-ultimate-gdpr-services-wpuser_accordion-21' // Section
+        );
 
 		add_settings_field(
 			"services_{$this->get_id()}_description", // ID
@@ -149,10 +165,9 @@ class CT_Ultimate_GDPR_Service_WP_User extends CT_Ultimate_GDPR_Service_Abstract
 		$field_name = $admin->get_field_name( __FUNCTION__ );
 		$checked    = $admin->get_option_value( $field_name, '' ) ? 'checked' : '';
 		printf(
-			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s' value='%s' %s />",
+			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s' %s />",
 			$admin->get_field_name( __FUNCTION__ ),
 			$admin->get_field_name_prefixed( $field_name ),
-			$this->get_id(),
 			$checked
 		);
 
@@ -167,10 +182,9 @@ class CT_Ultimate_GDPR_Service_WP_User extends CT_Ultimate_GDPR_Service_Abstract
 		$field_name = $admin->get_field_name( __FUNCTION__ );
 		$checked    = $admin->get_option_value( $field_name, '' ) ? 'checked' : '';
 		printf(
-			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s' value='%s' %s />",
+			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s' %s />",
 			$admin->get_field_name( __FUNCTION__ ),
 			$admin->get_field_name_prefixed( $field_name ),
-			$this->get_id(),
 			$checked
 		);
 
@@ -185,10 +199,9 @@ class CT_Ultimate_GDPR_Service_WP_User extends CT_Ultimate_GDPR_Service_Abstract
 		$field_name = $admin->get_field_name( __FUNCTION__ );
 		$checked    = $admin->get_option_value( $field_name, '' ) ? 'checked' : '';
 		printf(
-			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s' value='%s' %s />",
+			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s' %s />",
 			$admin->get_field_name( __FUNCTION__ ),
 			$admin->get_field_name_prefixed( $field_name ),
-			$this->get_id(),
 			$checked
 		);
 
@@ -203,10 +216,9 @@ class CT_Ultimate_GDPR_Service_WP_User extends CT_Ultimate_GDPR_Service_Abstract
 		$field_name = $admin->get_field_name( __FUNCTION__ );
 		$checked    = $admin->get_option_value( $field_name, '' ) ? 'checked' : '';
 		printf(
-			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s' value='%s' %s />",
+			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s'' %s />",
 			$admin->get_field_name( __FUNCTION__ ),
 			$admin->get_field_name_prefixed( $field_name ),
-			$this->get_id(),
 			$checked
 		);
 
@@ -237,6 +249,11 @@ class CT_Ultimate_GDPR_Service_WP_User extends CT_Ultimate_GDPR_Service_Abstract
 	 * @return array
 	 */
 	public function breach_recipients_filter( $recipients ) {
+
+		if ( ! $this->is_breach_enabled() ) {
+			return $recipients;
+		}
+
 		return array_merge( $recipients, $this->get_all_users_emails() );
 	}
 
@@ -278,8 +295,8 @@ class CT_Ultimate_GDPR_Service_WP_User extends CT_Ultimate_GDPR_Service_Abstract
 		add_filter( 'wpmu_validate_user_signup', array( $this, 'wpmu_validate_filter' ) );
 		add_filter( 'registration_errors', array( $this, 'registration_errors_filter' ) );
 		add_filter( 'lostpassword_post', array( $this, 'lost_password_errors_filter' ) );
-		add_action( 'register_form', array( $this, 'lost_password_add_form_fields' ) );
-		add_action( 'lostpassword_form', array( $this, 'register_add_form_fields' ) );
+		add_action( 'register_form', array( $this, 'register_add_form_fields' ) );
+		add_action( 'lostpassword_form', array( $this, 'lost_password_add_form_fields' ) );
 		add_action( 'signup_extra_fields', array( $this, 'signup_add_form_fields' ) );
 
 
@@ -289,7 +306,7 @@ class CT_Ultimate_GDPR_Service_WP_User extends CT_Ultimate_GDPR_Service_Abstract
 
 		$inject = CT_Ultimate_GDPR::instance()->get_admin_controller()->get_option_value( 'services_wp_comments_lost_password_consent_field', false, CT_Ultimate_GDPR_Controller_Services::ID );
 
-		if ( $inject && ! ct_ultimate_gdpr_get_value( 'ct-ultimate-gdpr-consent-field', $_REQUEST ) ) {
+		if ( ! ct_ultimate_gdpr_is_doing_cli() && $inject && ! ct_ultimate_gdpr_get_value( 'ct-ultimate-gdpr-consent-field', $_REQUEST ) ) {
 
 			/** @var WP_Error $errors */
 			$errors->add( 'registerfail', esc_html__( 'Consent is required', 'ct-ultimate-gdpr' ) );
@@ -309,7 +326,7 @@ class CT_Ultimate_GDPR_Service_WP_User extends CT_Ultimate_GDPR_Service_Abstract
 
 		$inject = CT_Ultimate_GDPR::instance()->get_admin_controller()->get_option_value( 'services_wp_comments_register_consent_field', false, CT_Ultimate_GDPR_Controller_Services::ID );
 
-		if ( $inject && ! ct_ultimate_gdpr_get_value( 'ct-ultimate-gdpr-consent-field', $_REQUEST ) ) {
+		if ( ! ct_ultimate_gdpr_is_doing_cli() && $inject && ! ct_ultimate_gdpr_get_value( 'ct-ultimate-gdpr-consent-field', $_REQUEST ) ) {
 
 			/** @var WP_Error $errors */
 			$errors->add( 'registerfail', esc_html__( 'Consent is required', 'ct-ultimate-gdpr' ) );
@@ -328,7 +345,7 @@ class CT_Ultimate_GDPR_Service_WP_User extends CT_Ultimate_GDPR_Service_Abstract
 
 		$inject = CT_Ultimate_GDPR::instance()->get_admin_controller()->get_option_value( 'services_wp_comments_network_signup_consent_field', false, CT_Ultimate_GDPR_Controller_Services::ID );
 
-		if ( $inject && ! ct_ultimate_gdpr_get_value( 'ct-ultimate-gdpr-consent-field', $_REQUEST ) ) {
+		if ( ! ct_ultimate_gdpr_is_doing_cli() && $inject && ! ct_ultimate_gdpr_get_value( 'ct-ultimate-gdpr-consent-field', $_REQUEST ) ) {
 
 			/** @var WP_Error $errors */
 			$errors = $result['errors'];

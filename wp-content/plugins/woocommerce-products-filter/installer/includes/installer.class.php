@@ -666,11 +666,11 @@ final class WP_Installer{
 
                     if(empty($this->settings['dismissed_nags'][$nag['repository_id']]) && $show){
                         echo '<div class="updated error otgs-is-dismissible"><p>';
-                        printf(__("To get automatic updates, you need to register %s for this site. %sRegister %s%s", 'sitepress'),
+                        printf(__("To get automatic updates, you need to register %s for this site. %sRegister %s%s", 'woocommerce-products-filter'),
                             $nag['product_name'], '<a class="button-primary" href="' . $this->menu_url() . '">', $nag['product_name'], '</a>');
 
                         echo '</p>';
-                        echo '<span class="installer-dismiss-nag notice-dismiss" data-repository="' . $nag['repository_id']  . '"><span class="screen-reader-text">' . __('Dismiss', 'sitepress') . '</span></span>';
+                        echo '<span class="installer-dismiss-nag notice-dismiss" data-repository="' . $nag['repository_id']  . '"><span class="screen-reader-text">' . __('Dismiss', 'woocommerce-products-filter') . '</span></span>';
                         echo '</div>';
                     }
                 }

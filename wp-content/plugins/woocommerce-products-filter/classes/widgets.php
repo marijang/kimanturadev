@@ -81,9 +81,16 @@ class WOOF_Widget extends WP_Widget {
             {
                 $ajax_redraw = $instance['ajax_redraw'];
             }
+            
+            $dynamic_recount = -1;
+            
+            $btn_position = 'b';
+            
+            $autosubmit=-1;
+            
             ?>
 
-            <?php echo do_shortcode('[woof sid="widget" start_filtering_btn=' . $woof_start_filtering_btn . ' price_filter=' . $price_filter . ' redirect="' . $redirect . '" ajax_redraw="' . $ajax_redraw . '"]'); ?>
+            <?php echo do_shortcode('[woof sid="widget" autosubmit="'.$autosubmit.'" start_filtering_btn=' . $woof_start_filtering_btn . ' price_filter=' . $price_filter . ' redirect="' . $redirect . '" ajax_redraw="' . $ajax_redraw . '" btn_position="'.$btn_position.'" dynamic_recount="'.$dynamic_recount.'" ]'); ?>
         </div>
         <?php
         if (isset($args['after_widget']))
@@ -101,6 +108,9 @@ class WOOF_Widget extends WP_Widget {
         $instance['redirect'] = $new_instance['redirect'];
         $instance['woof_start_filtering_btn'] = $new_instance['woof_start_filtering_btn'];
         $instance['ajax_redraw'] = $new_instance['ajax_redraw'];
+        $instance['btn_position'] = $new_instance['btn_position'];
+        $instance['dynamic_recount'] = $new_instance['dynamic_recount'];
+        $instance['autosubmit'] = $new_instance['autosubmit'];
         return $instance;
     }
 
@@ -113,7 +123,10 @@ class WOOF_Widget extends WP_Widget {
             'additional_text_before' => '',
             'redirect' => '',
             'woof_start_filtering_btn' => 0,
-            'ajax_redraw' => 0
+            'ajax_redraw' => 0,
+            'dynamic_recount'=>-1,
+            'btn_position'=>'b',
+            'autosubmit'=>-1
         );
         $instance = wp_parse_args((array) $instance, $defaults);
         $args = array();
@@ -148,6 +161,50 @@ class WOOF_Widget extends WP_Widget {
             </select>
             <i><?php _e('User on the site front will have to press button like "Show products filter form" to load search form by ajax and start filtering. Good feature when search form is quite big and page loading takes more time because of it!', 'woocommerce-products-filter') ?></i>
         </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('dynamic_recount'); ?>" style="color: red;"><?php _e('Dynamic recount', 'woocommerce-products-filter') ?>:</label>
+            <?php
+            $options = array(
+                -1 => __('Default', 'woocommerce-products-filter'),
+            );
+            ?>
+            <select class="widefat" id="<?php echo $this->get_field_id('dynamic_recount') ?>" name="<?php echo $this->get_field_name('dynamic_recount') ?>">
+                <?php foreach ($options as $k => $val) : ?>
+                    <option <?php selected($instance['dynamic_recount'], $k) ?> value="<?php echo $k ?>" class="level-0"><?php echo $val ?></option>
+                <?php endforeach; ?>
+            </select>
+            <i><?php _e('Dynamic recount for current search form. Premium only.', 'woocommerce-products-filter') ?></i>
+        </p>
+         <p>
+            <label for="<?php echo $this->get_field_id('autosubmit'); ?>"><?php _e('Autosubmit', 'woocommerce-products-filter') ?>:</label>
+            <?php
+            $options = array(
+                -1 => __('Default', 'woocommerce-products-filter'),
+                0 => __('No', 'woocommerce-products-filter'),
+                1 => __('Yes', 'woocommerce-products-filter')
+            );
+            ?>
+            <select class="widefat" id="<?php echo $this->get_field_id('autosubmit') ?>" name="<?php echo $this->get_field_name('autosubmit') ?>">
+                <?php foreach ($options as $k => $val) : ?>
+                    <option <?php selected($instance['autosubmit'], $k) ?> value="<?php echo $k ?>" class="level-0"><?php echo $val ?></option>
+                <?php endforeach; ?>
+            </select>
+            <i><?php _e('Yes - filtering starts immediately if user changed any item in the search form. No - user can set search data and then should press Filter button', 'woocommerce-products-filter') ?></i>
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_id('btn_position'); ?>" style="color: red;"><?php _e('Submit button position', 'woocommerce-products-filter') ?>:</label>
+            <?php
+            $options = array(
+                'b' => __('Bottom', 'woocommerce-products-filter'),
+            );
+            ?>
+            <select class="widefat" id="<?php echo $this->get_field_id('btn_position') ?>" name="<?php echo $this->get_field_name('btn_position') ?>">
+                <?php foreach ($options as $k => $val) : ?>
+                    <option <?php selected($instance['btn_position'], $k) ?> value="<?php echo $k ?>" class="level-0"><?php echo $val ?></option>
+                <?php endforeach; ?>
+            </select>
+            <i><?php _e('The submit and reset buttons position in current search form. Premium only.', 'woocommerce-products-filter') ?></i>
+        </p>        
         <p>
             <label for="<?php echo $this->get_field_id('ajax_redraw'); ?>"><?php _e('Form AJAX redrawing', 'woocommerce-products-filter') ?>:</label>
             <?php

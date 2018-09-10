@@ -1,16 +1,55 @@
 $content-about-us-padding: 0 100px;
 
 @include b('content-about-us-style'){
-
+    margin-bottom: 48px;
+    @include media(mobile tablet){
+        margin-bottom: 32px;
+    }
     em{
         @include typi(larger);
         font-weight: 300;
         font-style: normal;
+        display: block;
+        @include media(mobile tablet){
+            @include typi(default);
+            
+            margin-bottom: 8px;
+        }
     }
     h3,h4,p,ol,h1,ul{
         padding:$content-about-us-padding;
         @include media('mobile'){
             padding: 0;
+        }
+        @include media(tablet){
+            padding: 0 32px;
+        }
+    }
+    ol{
+        
+        margin: 32px;
+        @include media(mobile tablet){
+            margin: 16px;
+        }
+
+    }
+    ol.ordered-list{
+        margin:16px 0px;
+    }
+    .gallery{
+        margin-bottom: 0px;
+        margin-top: 0px;
+        grid-gap: 16px;
+        margin-bottom: 32px;
+        
+        dl,dt {
+            height: 100%;
+        }
+
+        @include media(mobile tablet){
+            grid-gap: 16px;
+            margin-bottom: 32px;
+            margin-top: 32px;
         }
     }
     h2{

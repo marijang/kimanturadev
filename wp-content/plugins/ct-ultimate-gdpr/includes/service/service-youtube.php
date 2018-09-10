@@ -22,7 +22,7 @@ class CT_Ultimate_GDPR_Service_Youtube extends CT_Ultimate_GDPR_Service_Abstract
 	 * @return mixed
 	 */
 	public function get_name() {
-		return 'Youtube';
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", 'Youtube' );
 	}
 
 	/**
@@ -102,6 +102,22 @@ class CT_Ultimate_GDPR_Service_Youtube extends CT_Ultimate_GDPR_Service_Abstract
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-youtube_accordion-22' // Section
 		);
+
+	}
+
+	public function cookies_to_block_filter( $cookies, $force = false ) {
+
+		$cookies_to_block = array();
+		if ( $force || CT_Ultimate_GDPR::instance()->get_admin_controller()->get_option_value( 'services_youtube_block_cookies', '', CT_Ultimate_GDPR_Controller_Services::ID ) ) {
+			$cookies_to_block = array( 'APISID', 'CONSENT', 'GPS', 'HSID', 'LOGIN_INFO', 'PREF', 'SAPISID', 'SID', 'SSID', 'VISITOR_INFO1_LIVE', 'YSC' );
+		}
+		$cookies_to_block = apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_cookies_to_block", $cookies_to_block );
+
+		if ( is_array( $cookies[ CT_Ultimate_GDPR_Model_Group::LEVEL_CONVENIENCE ] ) ) {
+			$cookies[ CT_Ultimate_GDPR_Model_Group::LEVEL_CONVENIENCE ] = array_merge( $cookies[ CT_Ultimate_GDPR_Model_Group::LEVEL_CONVENIENCE ], $cookies_to_block );
+		}
+
+		return $cookies;
 
 	}
 

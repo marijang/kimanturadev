@@ -8,7 +8,7 @@ global.$ = global.jQuery = $;
 
 //var cart = require('./test');
 
-
+/*
 $(function() {
 //$(document).ready(function(){
 
@@ -18,7 +18,6 @@ $(function() {
     });
     //const event = new Event('change');
     function incrementValue(e) {
-        
 
         var fieldName = $(e.target).data('field');
         var parent = jQuery(e.target).parent();
@@ -68,4 +67,4 @@ $(function() {
     $('.input-number__wrapper').on('click', '.input-number__increment', function(e) {
         incrementValue(e);
     });
-})
+}) */

@@ -107,7 +107,9 @@ class CT_Ultimate_GDPR_Controller_Terms extends CT_Ultimate_GDPR_Controller_Abst
 	 */
 	private function download_consents_log() {
 
-		global $wpdb;
+		$rendered = $this->logger->render_logs( $this->logger->get_logs( $this->get_id() ) );
+
+/*		global $wpdb;
 
 		// get all user metas
 		$sql = $wpdb->prepare(
@@ -147,12 +149,12 @@ class CT_Ultimate_GDPR_Controller_Terms extends CT_Ultimate_GDPR_Controller_Abst
 				$id, $version, $created, $expire
 			);
 
-		}
+		}*/
 
 		// download
 		header( "Content-Type: application/octet-stream" );
 		header( "Content-Disposition: attachment; filename='{$this->get_id()}-logs.txt'" );
-		echo $response;
+		echo $rendered;
 		exit;
 
 	}
@@ -352,6 +354,15 @@ class CT_Ultimate_GDPR_Controller_Terms extends CT_Ultimate_GDPR_Controller_Abst
 			update_user_meta( $this->user->get_current_user_id(), $this->get_id(), $data );
 		}
 
+		$this->logger->consent( array(
+			'type'       => $this->get_id(),
+			'time'       => $time,
+			'user_id'    => $this->user->get_current_user_id(),
+			'user_ip'    => ct_ultimate_gdpr_get_permitted_user_ip(),
+			'user_agent' => ct_ultimate_gdpr_get_permitted_user_agent(),
+			'data'       => $data,
+		) );
+
 	}
 
 	/**
@@ -404,7 +415,7 @@ class CT_Ultimate_GDPR_Controller_Terms extends CT_Ultimate_GDPR_Controller_Abst
 
 		add_settings_field(
 			'terms_require_guests', // ID
-			esc_html__( 'Require not logged in users/guests to accept Terms and Conditions (redirect)', 'ct-ultimate-gdpr' ), // Title
+			esc_html__( 'Require guest users to accept Terms and Conditions (redirect)', 'ct-ultimate-gdpr' ), // Title
 			array( $this, 'render_field_terms_require_guests' ), // Callback
 			$this->get_id(), // Page
 			$this->get_id() // Section
@@ -412,7 +423,7 @@ class CT_Ultimate_GDPR_Controller_Terms extends CT_Ultimate_GDPR_Controller_Abst
 
 		add_settings_field(
 			'terms_target_page', // ID
-			esc_html__( 'Page with existing Terms and Conditions', 'ct-ultimate-gdpr' ), // Title
+			esc_html__( 'The page with existing Terms and Conditions', 'ct-ultimate-gdpr' ), // Title
 			array( $this, 'render_field_terms_target_page' ), // Callback
 			$this->get_id(), // Page
 			$this->get_id() // Section
@@ -420,7 +431,7 @@ class CT_Ultimate_GDPR_Controller_Terms extends CT_Ultimate_GDPR_Controller_Abst
 
 		add_settings_field(
 			'terms_after_page', // ID
-			esc_html__( 'Page to redirect to after Terms accepted', 'ct-ultimate-gdpr' ), // Title
+			esc_html__( 'The page to redirect to after Terms accepted', 'ct-ultimate-gdpr' ), // Title
 			array( $this, 'render_field_terms_after_page' ), // Callback
 			$this->get_id(), // Page
 			$this->get_id() // Section

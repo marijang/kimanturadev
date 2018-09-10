@@ -14,7 +14,7 @@ $transition-headroom: all 0.35s ease-in-out;
 .headroom {
   width: 100%;
   &.headroom--top{
-    position: relative!important;
+    //position: relative!important;
   }
 }
 
@@ -41,4 +41,8 @@ $transition-headroom: all 0.35s ease-in-out;
   transform: translateY(0%);
   transition: $transition-headroom;
   
+}
+.headroom--top{
+  position: fixed;
+  box-shadow: none!important;
 }

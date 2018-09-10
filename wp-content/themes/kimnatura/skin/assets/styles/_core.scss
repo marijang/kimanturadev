@@ -29,7 +29,19 @@ figure {
 
 
 .main-content {
-  min-height: calc(100vh - 393px)
+  min-height: calc(100vh - 393px);
+  // Isto kao i za header logo 
+  @include media(desktop large){
+    padding-top: 112px;
+  }
+
+  @include media(tablet){
+      padding-top: 88px;
+  }
+
+  @include media(mobile ){
+    padding-top: 88px;
+  }
 }
 
 

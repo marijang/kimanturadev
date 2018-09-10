@@ -147,7 +147,9 @@
 						'loftloader_custom_img',
 						'loftloader_img_width'
 					]
-				}
+				},
+				'loftloader_show_close_timer': {},
+				'loftloader_show_close_tip': {}
 			};
 		var loftloader = type_value = loop = '';
 		if(loftloader_get_setting_value('loftloader_main_switch') === 'on'){
@@ -155,6 +157,8 @@
 			for(var id in dependency){
 				type_value = loftloader_get_setting_value(id);
 				switch(id){
+					case 'loftloader_show_close_tip':
+						type_value = type_value ? ( '"' + btoa( unescape( encodeURIComponent( type_value ) ) ) + '"' ) : '""';
 					case 'loftloader_bg_color':
 					case 'loftloader_bg_opacity':
 					case 'loftloader_bg_animation':

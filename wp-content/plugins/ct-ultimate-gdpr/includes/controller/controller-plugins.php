@@ -72,12 +72,12 @@ class CT_Ultimate_GDPR_Controller_Plugins extends CT_Ultimate_GDPR_Controller_Ab
 	protected function admin_page_action() {
 
 		$plugins        = array();
-		$active_plugins = (array) get_option( 'active_plugins', array() );
+		$active_plugins = array_merge( get_option( 'active_plugins', array() ), array_keys( get_site_option( 'active_sitewide_plugins', array() ) ) );
 		$all_plugins    = get_plugins();
 
 		foreach ( $active_plugins as $active_plugin ) {
 
-			$plugin_data             = ct_ultimate_gdpr_get_value( $active_plugin, $all_plugins, array() );
+			$plugin_data = ct_ultimate_gdpr_get_value( $active_plugin, $all_plugins, array() );
 
 			if ( ! $plugin_data ) {
 				continue;

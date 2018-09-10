@@ -12,8 +12,8 @@
 ?>
 
 <div>
-    <input class="ct-ultimate-gdpr-consent-field" type="checkbox" name="ct-ultimate-gdpr-consent-field" required/>
-    <label for="ct-ultimate-gdpr-consent-field">
+    <input class="ct-ultimate-gdpr-consent-field" type="checkbox" name="ct-ultimate-gdpr-consent-field" required id="ct-ultimate-gdpr-consent-field-events-manager"/>
+    <label for="ct-ultimate-gdpr-consent-field-events-manager">
 		<?php echo esc_html__( 'I consent to the storage of my data according to the Privacy Policy', 'ct-ultimate-gdpr' ); ?>
     </label>
 </div>

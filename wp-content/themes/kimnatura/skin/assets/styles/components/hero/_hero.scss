@@ -82,7 +82,17 @@ $hero-transition-duration-in: .9s;
         min-height: 200px;
         opacity: 1;
         @extend %bg-image;
-        background-size: contain!important;
+        background-size: contain;
+        @include media(mobile tablet){
+            background-size: cover;
+            background-position: 100%;
+        }
+
+        @include media(tablet){
+        
+            min-height: 350px;
+            margin-right: -80px; // Usrane slike
+        }
         @include media(desktop large){
             opacity: 0;
             transition: $hero-transition-duration-in ease-in $hero-transition-duration;
@@ -185,11 +195,15 @@ $hero-transition-duration-in: .9s;
             background-color: transparent;
             color: $color-black;
             text-align: center;
+            padding: 0px;
+            margin: 0px;
          }
          @include media(tablet){
             background-color: transparent;
             color: $color-black;
-            text-align: center;
+            text-align: left;
+            margin: 0px;
+            padding: 0px;
          }
     }
     @include element('link'){
@@ -202,6 +216,11 @@ $hero-transition-duration-in: .9s;
             text-align: left;
             visibility: hidden;
         }
+        @include media(tablet){
+            text-align: left;
+            margin-left: 0px;
+            
+        }
     }
     @include element('content'){
         z-index: 1;
@@ -213,12 +232,21 @@ $hero-transition-duration-in: .9s;
             color:$color-black;
             position: initial;
             background-color: transparent;
+            margin-top: 16px;
         }
 
         @include media(tablet){
             color:$color-black;
-            position: initial;
+           // position: initial;
             background-color: transparent;
+          //  margin-top: 16px;
+
+            top:0;
+            left:$hero-content-left;
+            left:0;
+            bottom:$hero-content-bottom;
+            right:$hero-content-right;
+            width: 48%;
             margin-top: 16px;
         }
         
@@ -259,6 +287,14 @@ $hero-transition-duration-in: .9s;
                 padding: 0;
                 background: none;
             }
+            @include media(tablet){
+                @include typi(huge);
+                text-align: left;
+                margin: 0;
+            }
+            @include media(mobile){
+                @include typi(huge);
+            }
         }
        // padding: $hero-content-padding;
         //width: 32%;
@@ -275,9 +311,12 @@ $hero-transition-duration-in: .9s;
             //transform: translate3d(0,0,0);
             
             @include media(desktop large){
-                @include typi(small);
+                //@include typi(small);
                 font-size: 20px;
                 margin: 0 0 20px;
+            }
+            @include media(mobile tablet){
+                //padding-bottom: 0px;
             }
             
             line-height: 1.45;

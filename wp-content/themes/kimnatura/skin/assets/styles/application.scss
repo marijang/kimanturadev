@@ -381,15 +381,13 @@ input:-webkit-autofill:active {
     cursor: pointer;
 }
 
-.headroom--top {
-    box-shadow: none!important;
-}
 
-.checkout-button {
-    @include media(mobile) {
-      margin-bottom: $base-content-padding*2;
-    }
-  }
+
+// .checkout-button {
+//     @include media(mobile) {
+//       margin-bottom: $base-content-padding*2;
+//     }
+//   }
 
 
 .loader-spin {
@@ -454,3 +452,4 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
 #ct-ultimate-gdpr-cookie-read-more {
     display: none!important;
 }
+

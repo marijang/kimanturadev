@@ -70,12 +70,23 @@ class CT_Ultimate_GDPR_Controller_Breach extends CT_Ultimate_GDPR_Controller_Abs
 	 * Send emails
 	 */
 	private function send() {
-		wp_mail(
-			$this->get_recipients(),
-			$this->get_option( 'breach_mail_title' ),
-			$this->get_option( 'breach_mail_content' ),
+
+		$recipients = $this->get_recipients();
+		$headers = array(
 			'Content-Type: text/html; charset=UTF-8'
 		);
+
+		foreach ( $recipients as $recipient ) {
+
+			wp_mail(
+				$recipient,
+				$this->get_option( 'breach_mail_title' ),
+				$this->get_option( 'breach_mail_content' ),
+				$headers
+			);
+
+		}
+
 	}
 
 	/**

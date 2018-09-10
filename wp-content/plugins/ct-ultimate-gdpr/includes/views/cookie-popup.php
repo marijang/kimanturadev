@@ -106,7 +106,7 @@ endif;
 	     endif;
 	     ?>;
                  color: <?php echo esc_attr( $options['cookie_button_text_color'] ); ?>;">
-		<?php echo ct_ultimate_gdpr_get_value( 'cookie_popup_label_accept', $options, esc_html__( 'Accept', 'ct-ultimate-gdpr' ), false  ); ?>
+		<?php echo esc_html( ct_ultimate_gdpr_get_value( 'cookie_popup_label_accept', $options, esc_html__( 'Accept', 'ct-ultimate-gdpr' ), false  ) ); ?>
     </div>
 
     <div id="ct-ultimate-gdpr-cookie-read-more"
@@ -121,7 +121,7 @@ endif;
 	     endif;
 	     ?>;
                  color: <?php echo esc_attr( $options['cookie_button_text_color'] ); ?>;">
-		<?php echo ct_ultimate_gdpr_get_value( 'cookie_popup_label_read_more', $options, esc_html__( 'Read more', 'ct-ultimate-gdpr' ), false ); ?>
+		<?php echo esc_html( ct_ultimate_gdpr_get_value( 'cookie_popup_label_read_more', $options, esc_html__( 'Read more', 'ct-ultimate-gdpr' ), false ) ); ?>
     </div>
 
 	<?php

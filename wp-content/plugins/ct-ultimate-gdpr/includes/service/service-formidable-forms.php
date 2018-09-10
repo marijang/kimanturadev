@@ -63,7 +63,7 @@ class CT_Ultimate_GDPR_Service_Formidable_Forms extends CT_Ultimate_GDPR_Service
 	 * @return mixed
 	 */
 	public function get_name() {
-		return 'Formidable Forms';
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", 'Formidable Forms' );
 	}
 
 	/**
@@ -116,26 +116,35 @@ class CT_Ultimate_GDPR_Service_Formidable_Forms extends CT_Ultimate_GDPR_Service
 
 
 		add_settings_section(
-			'ct-ultimate-gdpr-services-formidableforms_accordion-7', // ID
+
+            "ct-ultimate-gdpr-services-{$this->get_id()}_accordion-{$this->get_id()}", // ID
 			esc_html__( $this->get_name(), 'ct-ultimate-gdpr' ), // Title
 			null, // callback
 			CT_Ultimate_GDPR_Controller_Services::ID // Page
 		);
 
-		add_settings_field(
+		/*add_settings_field(
 			"services_{$this->get_id()}_header", // ID
 			$this->get_name(), // Title
 			'__return_empty_string', // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-formidableforms_accordion-7'// Section
-		);
+		);*/
+
+        add_settings_field(
+            "services_{$this->get_id()}_service_name", // ID
+            sprintf( esc_html__( "[%s] Name", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
+            array( $this, "render_name_field" ), // Callback
+            CT_Ultimate_GDPR_Controller_Services::ID, // Page
+            "ct-ultimate-gdpr-services-{$this->get_id()}_accordion-{$this->get_id()}"
+        );
 
 		add_settings_field(
 			"services_{$this->get_id()}_description", // ID
 			sprintf( esc_html__( "[%s] Description", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
 			array( $this, "render_description_field" ), // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
-			'ct-ultimate-gdpr-services-formidableforms_accordion-7'// Section
+            "ct-ultimate-gdpr-services-{$this->get_id()}_accordion-{$this->get_id()}"
 		);
 
 		add_settings_field(
@@ -146,7 +155,7 @@ class CT_Ultimate_GDPR_Service_Formidable_Forms extends CT_Ultimate_GDPR_Service
 			),
 			array( $this, "render_field_services_{$this->get_id()}_consent_field" ), // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
-			'ct-ultimate-gdpr-services-formidableforms_accordion-7'// Section
+            "ct-ultimate-gdpr-services-{$this->get_id()}_accordion-{$this->get_id()}"
 		);
 
 		add_settings_field(
@@ -154,7 +163,7 @@ class CT_Ultimate_GDPR_Service_Formidable_Forms extends CT_Ultimate_GDPR_Service
 			esc_html__( '[Formidable Forms] Inject consent checkbox as the first field instead of the last', 'ct-ultimate-gdpr' ), // Title
 			array( $this, "render_field_services_{$this->get_id()}_consent_field_position_first" ), // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
-			'ct-ultimate-gdpr-services-formidableforms_accordion-7'// Section
+            "ct-ultimate-gdpr-services-{$this->get_id()}_accordion-{$this->get_id()}"
 		);
 
 	}

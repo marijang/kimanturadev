@@ -157,12 +157,13 @@ div.checked + label .woof_qt_radio_reset{
     border: 2px solid #aaa;
     border-radius: 0px; 
     background: none;
+    color: red;
 }
 .woof_qt_reset_filter_btn:hover{
    background-image: none; 
 }
 
- .chosen-container-single .chosen-single{
+ .woof_qt .chosen-container-single .chosen-single{
      border-radius: 0px;
      background: none;
      background-color: #fff;

@@ -2,12 +2,12 @@ import $ from 'jquery';
 global.$ = global.jQuery = $;
 
 function showLoader(){
-    if (localStorage.getItem("lastRun") === null /*|| (Math.abs(new Date(localStorage.getItem("lastRun")) - new Date()) / 36e5) > 1*/) {
+    if (sessionStorage.getItem("lastRun") === null /*|| (Math.abs(new Date(localStorage.getItem("lastRun")) - new Date()) / 36e5) > 1*/) {
                         $("body").addClass("loader-open");
                      
                         $(".loader__wrap").addClass("view");
                         $('.loader-hidden').removeClass('loader-hidden');
-                        localStorage.setItem('lastRun', new Date());
+                        sessionStorage.setItem('lastRun', new Date());
                         setTimeout(function() {
                         
                             $(".loader__wrap").addClass("loader-hidden");
@@ -19,7 +19,6 @@ function showLoader(){
                    }
                    else{
                    // $('.loader__wrap').addClass('loader-hidden');
-                   console.log('remove');
                     $('.loader__wrap').remove();
                     
                    }

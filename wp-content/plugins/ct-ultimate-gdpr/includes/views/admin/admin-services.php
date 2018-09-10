@@ -42,3 +42,8 @@
         </div>
 	</form>
 </div>
+
+<form method="post">
+    <input type="submit" class="button button-secondary" name="ct-ultimate-gdpr-log"
+           value="<?php echo esc_html__( 'Download all consents log', 'ct-ultimate-gdpr' ); ?>"/>
+</form>

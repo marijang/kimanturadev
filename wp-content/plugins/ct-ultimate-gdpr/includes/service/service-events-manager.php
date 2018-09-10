@@ -40,7 +40,7 @@ class CT_Ultimate_GDPR_Service_Events_Manager extends CT_Ultimate_GDPR_Service_A
 	 * @return mixed
 	 */
 	public function get_name() {
-		return "Events Manager";
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", "Events Manager" );
 	}
 
 	/**
@@ -97,13 +97,21 @@ class CT_Ultimate_GDPR_Service_Events_Manager extends CT_Ultimate_GDPR_Service_A
 			'ct-ultimate-gdpr-services-eventmanager_accordion-5' // Section
 		);
 
-		add_settings_field(
+		/*add_settings_field(
 			"services_{$this->get_id()}_description", // ID
 			esc_html__( "[Events Manager] Description", 'ct-ultimate-gdpr' ), // Title
 			array( $this, "render_description_field" ), // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-eventmanager_accordion-5' // Section
-		);
+		);*/
+
+        add_settings_field(
+            "services_{$this->get_id()}_service_name", // ID
+            sprintf( esc_html__( "[%s] Name", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
+            array( $this, "render_name_field" ), // Callback
+            CT_Ultimate_GDPR_Controller_Services::ID, // Page
+            'ct-ultimate-gdpr-services-eventmanager_accordion-5' // Section
+        );
 
 		add_settings_field(
 			'services_events_manager_consent_field', // ID
@@ -174,6 +182,7 @@ class CT_Ultimate_GDPR_Service_Events_Manager extends CT_Ultimate_GDPR_Service_A
 			$validation = false;
 		}
 
+		$validation && $this->log_user_consent();
 
 		return apply_filters( 'ct_ultimate_gdpr_service_events_manager_form_validation', $validation, $original_validation, $booking );
 	}
