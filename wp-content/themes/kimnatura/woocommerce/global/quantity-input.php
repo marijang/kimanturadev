@@ -28,7 +28,6 @@ if ( $max_value && $min_value === $max_value ) {
 	<?php
 } else {
 	?>
-
 	<div class="quantity single-product__quantity input-number__wrapper">
 		<label class="screen-reader-text input-number__label" for="<?php echo esc_attr( $input_id ); ?>"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></label>
 		<div class="input-number__wrap-element">
@@ -38,4 +37,8 @@ if ( $max_value && $min_value === $max_value ) {
 		</div>
 	</div>
 	<?php
-}
+} ?>
+
+
+
+
