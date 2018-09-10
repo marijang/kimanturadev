@@ -6,3 +6,5 @@ $(function() {
   scrollTo.scrolltoGlobalElement();
   scrollTo.scrolltoTopElement();
 });
+
+import './touchend';
