@@ -12,6 +12,9 @@ class CT_Ultimate_GDPR_Service_Google_Analytics_Dashboard_For_WP extends CT_Ulti
 	 */
 	public function init() {
 		$this->maybe_disable_tracking();
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_compatible_google-analytics-dashboard-for-wp/gadwp.php', '__return_true' );
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_collects_data_google-analytics-dashboard-for-wp/gadwp.php', '__return_true' );
+
 	}
 
 	/**
@@ -29,7 +32,7 @@ class CT_Ultimate_GDPR_Service_Google_Analytics_Dashboard_For_WP extends CT_Ulti
 	 * @return mixed
 	 */
 	public function get_name() {
-		return "Google Analytics Dashboard For WP";
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", "Google Analytics Dashboard For WP" );
 	}
 
 	/**

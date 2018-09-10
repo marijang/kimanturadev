@@ -39,7 +39,7 @@ class CT_Ultimate_GDPR_Service_Gravity_Forms extends CT_Ultimate_GDPR_Service_Ab
 	 * @return mixed
 	 */
 	public function get_name() {
-		return 'Gravity Forms';
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", 'Gravity Forms' );
 	}
 
 	/**
@@ -83,13 +83,21 @@ class CT_Ultimate_GDPR_Service_Gravity_Forms extends CT_Ultimate_GDPR_Service_Ab
 			CT_Ultimate_GDPR_Controller_Services::ID // Page
 		);
 
-		add_settings_field(
+		/*add_settings_field(
 			"services_{$this->get_id()}_header", // ID
 			$this->get_name(), // Title
 			'__return_empty_string', // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-gravityforms_accordion-12' // Section
-		);
+		);*/
+
+        add_settings_field(
+            "services_{$this->get_id()}_service_name", // ID
+            sprintf( esc_html__( "[%s] Name", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
+            array( $this, "render_name_field" ), // Callback
+            CT_Ultimate_GDPR_Controller_Services::ID, // Page
+            'ct-ultimate-gdpr-services-gravityforms_accordion-12' // Section
+        );
 
 		add_settings_field(
 			"services_{$this->get_id()}_description", // ID
@@ -153,6 +161,10 @@ class CT_Ultimate_GDPR_Service_Gravity_Forms extends CT_Ultimate_GDPR_Service_Ab
 	 * @return array
 	 */
 	public function breach_recipients_filter( $recipients ) {
+
+		if ( ! $this->is_breach_enabled() ) {
+			return $recipients;
+		}
 
 		$entries = class_exists( 'GFAPI' ) ? GFAPI::get_entries( 0 ) : array();
 
@@ -229,7 +241,7 @@ class CT_Ultimate_GDPR_Service_Gravity_Forms extends CT_Ultimate_GDPR_Service_Ab
 	/**
 	 * @param $original_form
 	 *
-	 * @return mixed|void
+	 * @return mixed
 	 */
 	public function gform_pre_render_filter( $original_form ) {
 
@@ -286,7 +298,7 @@ class CT_Ultimate_GDPR_Service_Gravity_Forms extends CT_Ultimate_GDPR_Service_Ab
 	/**
 	 * @param $validation_result
 	 *
-	 * @return mixed|void
+	 * @return mixed
 	 */
 	public function gform_validation_filter( $validation_result ) {
 
@@ -295,6 +307,10 @@ class CT_Ultimate_GDPR_Service_Gravity_Forms extends CT_Ultimate_GDPR_Service_Ab
 
 		if ( ! $consent_given && $inject ) {
 			$validation_result['is_valid'] = false;
+		}
+
+		if ( $consent_given ) {
+			$this->log_user_consent();
 		}
 
 		return apply_filters( 'ct_ultimate_gdpr_service_gravity_forms_form_validation', $validation_result );

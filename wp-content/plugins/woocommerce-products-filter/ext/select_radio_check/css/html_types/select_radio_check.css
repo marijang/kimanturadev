@@ -30,7 +30,7 @@ dl.woof_select_radio_check{
     background-color: #fff;
     color: #424035 !important;
     display: block;
-    padding: 8px 20px 5px 10px;
+    padding: 4px 8px 3px 7px;
     line-height: 18px;
     overflow: hidden;
     border: solid 1px #d0cfc8;
@@ -51,7 +51,7 @@ dl.woof_select_radio_check{
 .woof_multiSel span {
     cursor: pointer;
     display: inline-block;
-    padding: 0 9px 2px 0;
+    /*padding: 0 9px 2px 0;*/
     width: 100%;
     margin-bottom: 3px;
 }

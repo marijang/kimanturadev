@@ -25,7 +25,7 @@ wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
 
-<form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+<form  onload="load()" class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
@@ -173,3 +173,126 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
+
+<script>
+
+$( document ).ajaxComplete(function() {
+	console.log('event');
+   var event = new CustomEvent('change', {
+	   bubbles: true
+   });
+   //const event = new Event('change');
+   function incrementValue(e) {
+
+	   var fieldName = $(e.target).data('field');
+	   var parent = jQuery(e.target).parent();
+	   var currentVal = parseInt(parent.find('input').val(), 10);
+	   
+	   if (!isNaN(currentVal)) {
+		 parent.find('input').val(currentVal + 1);
+		 //parent.find('input').dispatchEvent(event);
+	   } else {
+		 parent.find('input').val(0);
+		// parent.find('input').dispatchEvent(event);
+	   }
+	   //console.log(parent.find('input'));
+	   parent.find('input').trigger('change');
+	   parent.find('input').change();
+
+	   $('.qty').triggerHandler('change');
+	  // cart.changeProductQty();
+	  
+	  // document.getElementsByClassName('qty').dispatchEvent(event);
+	  // e.preventDefault();
+	   //alert('test');
+	 }
+	 
+   function decrementValue(e) {
+	   e.preventDefault();
+	   var parent = $(e.target).parent();
+	   var currentVal = parseInt(parent.find('input').val(), 10);
+	   
+	   if (!isNaN(currentVal) && currentVal > 0) {
+		   parent.find('input').val(currentVal - 1);
+		   //parent.find('input').dispatchEvent(event);
+	   } else {
+		   parent.find('input').val(0);
+		   //parent.find('input').dispatchEvent(event);
+	   }
+	   parent.find('input').trigger('change');
+	   //document.getElementsByClassName('qty').dispatchEvent(event);
+   }
+   $( ".input-number__wrapper").unbind( "click" );
+   $('.input-number__wrapper').on('click', '.input-number__decrement', function(e) {
+	  
+	   decrementValue(e);
+
+   });
+   
+   $('.input-number__wrapper').on('click', '.input-number__increment', function(e) {
+	   incrementValue(e);
+   });
+});
+
+
+$( document ).ready(function() {
+   var event = new CustomEvent('change', {
+	   bubbles: true
+   });
+   //const event = new Event('change');
+   function incrementValue(e) {
+
+	   var fieldName = $(e.target).data('field');
+	   var parent = jQuery(e.target).parent();
+	   var currentVal = parseInt(parent.find('input').val(), 10);
+	   
+	   if (!isNaN(currentVal)) {
+		 parent.find('input').val(currentVal + 1);
+		 //parent.find('input').dispatchEvent(event);
+	   } else {
+		 parent.find('input').val(0);
+		// parent.find('input').dispatchEvent(event);
+	   }
+	   //console.log(parent.find('input'));
+	   parent.find('input').trigger('change');
+	   parent.find('input').change();
+
+	   $('.qty').triggerHandler('change');
+	  // cart.changeProductQty();
+	  
+	  // document.getElementsByClassName('qty').dispatchEvent(event);
+	  // e.preventDefault();
+	   //alert('test');
+	 }
+	 
+   function decrementValue(e) {
+	   e.preventDefault();
+	   var parent = $(e.target).parent();
+	   var currentVal = parseInt(parent.find('input').val(), 10);
+	   
+	   if (!isNaN(currentVal) && currentVal > 0) {
+		   parent.find('input').val(currentVal - 1);
+		   //parent.find('input').dispatchEvent(event);
+	   } else {
+		   parent.find('input').val(0);
+		   //parent.find('input').dispatchEvent(event);
+	   }
+	   parent.find('input').trigger('change');
+	   //document.getElementsByClassName('qty').dispatchEvent(event);
+   }
+   
+   $('.input-number__wrapper').on('click', '.input-number__decrement', function(e) {
+	  
+	   decrementValue(e);
+
+   });
+   
+   $('.input-number__wrapper').on('click', '.input-number__increment', function(e) {
+	   incrementValue(e);
+   });
+});
+
+
+   </script>
+
+

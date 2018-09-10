@@ -3,7 +3,7 @@
 <?php
 global $WOOF;
 $_REQUEST['additional_taxes'] = $additional_taxes;
-$_REQUEST['hide_terms_count_txt'] = isset($this->settings['hide_terms_count_txt']) ? $this->settings['hide_terms_count_txt'] : 0;
+$_REQUEST['hide_terms_count_txt'] = 0;
 
 if (!function_exists('woof_draw_radio_childs'))
 {
@@ -96,7 +96,7 @@ if (!function_exists('woof_draw_radio_childs'))
                             else
                                 echo $term['name'];
                             ?><?php echo $count_string ?></label>
-                        <a href="#" data-name="<?php echo $tax_slug ?>" data-term-id="<?php echo $term['term_id'] ?>" style="<?php if (!in_array($term['slug'], $current_request)): ?>display: none;<?php endif; ?>" class="woof_radio_term_reset <?php if (in_array($term['slug'], $current_request)): ?>woof_radio_term_reset_visible<?php endif; ?> woof_radio_term_reset_<?php echo $term['term_id'] ?>"><img src="<?php echo WOOF_LINK ?>img/delete.png" height="12" width="12" alt="" /></a>
+                        <a href="#" data-name="<?php echo $tax_slug ?>" data-term-id="<?php echo $term['term_id'] ?>" style="<?php if (!in_array($term['slug'], $current_request)): ?>display: none;<?php endif; ?>" class="woof_radio_term_reset <?php if (in_array($term['slug'], $current_request)): ?>woof_radio_term_reset_visible<?php endif; ?> woof_radio_term_reset_<?php echo $term['term_id'] ?>"><img src="<?php echo WOOF_LINK ?>img/delete.png" height="12" width="12" alt="<?php _e("Delete", 'woocommerce-products-filter') ?>" /></a>
                         <?php
                         if (!empty($term['childs']))
                         {
@@ -204,7 +204,7 @@ if (!function_exists('woof_draw_radio_childs'))
                         echo $term['name'];
                     ?><?php echo $count_string ?></label>
 
-                <a href="#" data-name="<?php echo $tax_slug ?>" data-term-id="<?php echo $term['term_id'] ?>" style="<?php if (!in_array($term['slug'], $current_request)): ?>display: none;<?php endif; ?>" class="woof_radio_term_reset  <?php if (in_array($term['slug'], $current_request)): ?>woof_radio_term_reset_visible<?php endif; ?> woof_radio_term_reset_<?php echo $term['term_id'] ?>"><img src="<?php echo WOOF_LINK ?>img/delete.png" height="12" width="12" alt="" /></a>
+                <a href="#" data-name="<?php echo $tax_slug ?>" data-term-id="<?php echo $term['term_id'] ?>" style="<?php if (!in_array($term['slug'], $current_request)): ?>display: none;<?php endif; ?>" class="woof_radio_term_reset  <?php if (in_array($term['slug'], $current_request)): ?>woof_radio_term_reset_visible<?php endif; ?> woof_radio_term_reset_<?php echo $term['term_id'] ?>"><img src="<?php echo WOOF_LINK ?>img/delete.png" height="12" width="12" alt="<?php _e("Delete", 'woocommerce-products-filter') ?>" /></a>
 
                 <?php
                 if (!empty($term['childs']))

@@ -8,7 +8,7 @@ $footer-content-media-style-color:  $base-white-color;
 footer{
     background: $footer-bg-color-primary;
     font-weight: 400;
-    margin-top:  $footer-margin-top;
+   // margin-top:  $footer-margin-top;
     font-size: 80%; 
     
 }
@@ -32,9 +32,11 @@ footer{
 
 @include block('footer'){
 
-    margin-top: $base-content-padding*2;
+   // margin-top: $base-content-padding*2;
+    margin-top: 0px;
     @include media(mobile){
        margin-top: $base-content-padding;
+       margin-top: 0px;
     }
     @include e('content'){
         display: grid;
@@ -47,6 +49,11 @@ footer{
         @include media(mobile){
             text-align: center;
             grid-template-columns: 1fr;
+            grid-gap: 32px;
+        }  
+        @include media(tablet){
+            grid-row-gap: 8px;
+            grid-column-gap: 8px;
         }  
     }
     @include e('content-media-style'){
@@ -84,6 +91,9 @@ footer{
         small{
             @include container();
             display: block;
+        }
+        @include media(mobile tablet){
+            text-align: center;
         }
         
    }

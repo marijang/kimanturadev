@@ -39,7 +39,7 @@ if( ! class_exists( 'YITH_WC_Social_Login_Admin' ) ){
         /**
          * @var string Premium version landing link
          */
-        protected $_premium_landing = 'http://yithemes.com/themes/plugins/yith-woocommerce-social-login';
+        protected $_premium_landing = 'https://yithemes.com/themes/plugins/yith-woocommerce-social-login/';
 
         /**
          * @var string Panel page
@@ -49,7 +49,7 @@ if( ! class_exists( 'YITH_WC_Social_Login_Admin' ) ){
         /**
          * @var string Doc Url
          */
-        public $doc_url = 'http://yithemes.com/docs-plugins/yith-woocommerce-social-login/';
+        public $doc_url = 'https://docs.yithemes.com/yith-woocommerce-social-login/';
 
         
         /**

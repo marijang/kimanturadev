@@ -2,11 +2,11 @@
 # This file is distributed under the same license as the Ultimate GDPR package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ultimate GDPR 1.6.0\n"
+"Project-Id-Version: Ultimate GDPR 1.6.4\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/ct-ultimate-gdpr\n"
-"POT-Creation-Date: 2018-06-27 09:19+0000\n"
-"PO-Revision-Date: 2018-06-27 17:25+0800\n"
-"Last-Translator: createit <j.modelo@createit.pl>\n"
+"POT-Creation-Date: 2018-08-15 07:00+0000\n"
+"PO-Revision-Date: 2018-08-15 20:47+0800\n"
+"Last-Translator: j.modelo@createit.pl\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
@@ -30,8 +30,10 @@ msgid "Script names"
 msgstr "Имена скриптов"
 
 #: vendor/acf-fields.php:43
-msgid "Please input comma separated script names"
-msgstr "Пожалуйста, введите названия скриптов через запятую"
+msgid "Please input comma separated names of cookie creating scripts"
+msgstr ""
+"Пожалуйста, введите разделенные запятыми имена сценариев создания файлов "
+"cookie"
 
 #: vendor/acf-fields.php:53 includes/shortcode/shortcode-privacy-policy.php:17
 msgid "Cookie names"
@@ -49,11 +51,11 @@ msgstr "Тип файла сookie"
 msgid "First or Third party?"
 msgstr "Первая или Третья сторона?"
 
-#: vendor/acf-fields.php:81 includes/shortcode/shortcode-privacy-policy.php:73
+#: vendor/acf-fields.php:81 includes/shortcode/shortcode-privacy-policy.php:91
 msgid "First party"
 msgstr "Первая сторона"
 
-#: vendor/acf-fields.php:82 includes/shortcode/shortcode-privacy-policy.php:73
+#: vendor/acf-fields.php:82 includes/shortcode/shortcode-privacy-policy.php:91
 msgid "Third party"
 msgstr "Третья сторона"
 
@@ -65,11 +67,13 @@ msgstr "Может быть заблокирован?"
 msgid "Session or Persistent?"
 msgstr "Сессия или Стойкость?"
 
-#: vendor/acf-fields.php:104 includes/shortcode/shortcode-privacy-policy.php:84
+#: vendor/acf-fields.php:104
+#: includes/shortcode/shortcode-privacy-policy.php:102
 msgid "Session"
 msgstr "Сессионные"
 
-#: vendor/acf-fields.php:105 includes/shortcode/shortcode-privacy-policy.php:84
+#: vendor/acf-fields.php:105
+#: includes/shortcode/shortcode-privacy-policy.php:102
 msgid "Persistent"
 msgstr "Постоянные"
 
@@ -77,38 +81,48 @@ msgstr "Постоянные"
 msgid "Expiry Time"
 msgstr "Срок действия"
 
-#: vendor/acf-fields.php:126 includes/shortcode/shortcode-privacy-policy.php:35
+#: vendor/acf-fields.php:124 includes/shortcode/shortcode-privacy-policy.php:35
 msgid "Purpose"
 msgstr "Цель"
 
-#: vendor/acf-fields.php:138
-msgid "Is active?"
-msgstr "Работает?"
+#: vendor/acf-fields.php:136
+msgid "Do you want to activate this service?"
+msgstr "Вы хотите активировать эту услугу?"
 
-
-#: includes/views/cookie-popup.php:99 includes/views/cookie-group-popup.php:123
-#: includes/controller/controller-cookie.php:3066
-#: includes/views/shortcode/shortcode-policy-accept.php:55
-#: includes/views/shortcode/shortcode-terms-accept.php:55
+#: includes/views/cookie-popup.php:109
+#: includes/views/cookie-group-popup.php:208
+#: includes/views/cookie-group-popup.php:210
+#: includes/controller/controller-cookie.php:3462
+#: includes/views/shortcode/shortcode-policy-accept.php:54
+#: includes/views/shortcode/shortcode-terms-accept.php:54
 msgid "Accept"
 msgstr "Принять"
 
-#: includes/views/cookie-popup.php:107
-#: includes/views/cookie-group-popup.php:131
-#: includes/controller/controller-cookie.php:1120
-#: includes/controller/controller-cookie.php:3067
+#: includes/views/cookie-popup.php:124
+#: includes/views/cookie-group-popup.php:231
+#: includes/views/cookie-group-popup.php:234
+#: includes/controller/controller-cookie.php:1206
+#: includes/controller/controller-cookie.php:3463
+#: includes/views/shortcode/shortcode-privacy-center.php:47
+#: includes/views/shortcode/shortcode-privacy-center.php:73
+#: includes/views/shortcode/shortcode-privacy-center.php:99
+#: includes/views/shortcode/shortcode-privacy-center.php:123
+#: includes/views/shortcode/shortcode-privacy-center.php:131
+#: includes/views/shortcode/shortcode-privacy-center.php:140
+#: includes/views/shortcode/shortcode-privacy-center.php:153
+#: includes/views/shortcode/shortcode-privacy-center.php:163
 msgid "Read more"
 msgstr "Читать еще"
 
-#: includes/views/cookie-group-popup-header-content.php:20
+#: includes/views/cookie-group-popup-header-content.php:23
 msgid "Privacy settings"
 msgstr "Настройки Конфиденциальности"
 
-#: includes/views/cookie-group-popup-header-content.php:22
+#: includes/views/cookie-group-popup-header-content.php:25
 msgid "Decide which cookies you want to allow."
 msgstr "Решите, какие файлы cookie вы хотите разрешить."
 
-#: includes/views/cookie-group-popup-header-content.php:23
+#: includes/views/cookie-group-popup-header-content.php:26
 msgid ""
 "You can change these settings at any time. However, this can result in some "
 "functions no longer being available. For information on deleting the "
@@ -118,53 +132,67 @@ msgstr ""
 "к тому, что некоторые функции больше не будут доступны. По поводу удаления "
 "файлов cookies, проконсультируйтесь  в разделе функиции вашего браузера."
 
-#: includes/views/cookie-group-popup-header-content.php:24
+#: includes/views/cookie-group-popup-header-content.php:27
 msgid "Learn more about the cookies we use."
 msgstr "Подробнее о куках, которые мы используем."
 
-#: includes/views/cookie-group-popup-header-content.php:26
+#: includes/views/cookie-group-popup-header-content.php:29
 msgid "With the slider, you can enable or disable different types of cookies:"
 msgstr ""
 "С помощью ползунка можно включить или отключить различные типы файлов cookie:"
 
-
-#: includes/views/cookie-group-popup.php:139
-#: includes/controller/controller-cookie.php:3068
+#: includes/views/cookie-group-popup.php:253
+#: includes/views/cookie-group-popup.php:255
+#: includes/controller/controller-cookie.php:3464
 msgid "Change Settings"
 msgstr "Изменить Настройки"
 
-#: includes/views/cookie-group-popup.php:190
-#: includes/views/cookie-group-popup.php:201
+#: includes/views/cookie-group-popup.php:308
+#: includes/views/cookie-group-popup.php:319
+#: includes/views/cookie-group-popup.php:352
+#: includes/views/cookie-group-popup.php:363
 msgid "Cookie Box Settings"
 msgstr "Поле Установки Cookie"
 
-#: includes/views/cookie-group-popup.php:196
-#: includes/controller/controller-cookie.php:3084
+#: includes/views/cookie-group-popup.php:314
+#: includes/views/cookie-group-popup.php:358
+#: includes/controller/controller-cookie.php:3481
 msgid "Trigger"
 msgstr "Вызывать"
 
-#: includes/views/cookie-group-popup.php:306
-#: includes/views/cookie-group-popup.php:351
-#: includes/views/cookie-group-popup.php:371
-#: includes/views/cookie-group-popup.php:395
-#: includes/views/cookie-group-popup.php:439
+#: includes/views/cookie-group-popup.php:512
+msgid "Hide details"
+msgstr "Скрыть детали"
+
+#: includes/views/cookie-group-popup.php:531
+#: includes/views/service/service-arforms-consent-field.php:26
+msgid "OK"
+msgstr "ОК"
+
+#: includes/views/cookie-group-popup.php:559
+#: includes/views/cookie-group-popup.php:604
+#: includes/views/cookie-group-popup.php:624
+#: includes/views/cookie-group-popup.php:648
+#: includes/views/cookie-group-popup.php:691
+#: includes/controller/controller-cookie.php:3486
 msgid "This website will:"
 msgstr "Данный вебсайт будет:"
 
-#: includes/views/cookie-group-popup.php:326
-#: includes/views/cookie-group-popup.php:415
-#: includes/views/cookie-group-popup.php:460
+#: includes/views/cookie-group-popup.php:579
+#: includes/views/cookie-group-popup.php:668
+#: includes/views/cookie-group-popup.php:711
 msgid "This website wont't:"
 msgstr "Данный вебсайт не будет:"
 
-#: includes/views/cookie-group-popup.php:484
+#: includes/views/cookie-group-popup.php:735
+#: includes/controller/controller-cookie.php:3488
 msgid "Save & Close"
 msgstr "Сохранить и Закрыть"
 
 #: includes/controller/controller-forgotten.php:106
 #, php-format
 msgid "[Ultimate GDPR] New Right To Be Forgotten request from %s"
-msgstr "[Основной GDPR] Новый запрос на Право Быть Забытым из %s"
+msgstr "[Ultimate GDPR] Новый запрос на Право Быть Забытым из %s"
 
 #: includes/controller/controller-forgotten.php:125
 #: includes/controller/controller-forgotten.php:344
@@ -185,6 +213,7 @@ msgid "Right To Be Forgotten"
 msgstr "Право быть забытым"
 
 #: includes/controller/controller-forgotten.php:219
+#: includes/controller/controller-unsubscribe.php:184
 #: includes/controller/controller-rectification.php:181
 #: includes/controller/controller-data-access.php:166
 msgid "Recaptcha error!"
@@ -194,87 +223,139 @@ msgstr "Ошибка Recaptcha!"
 #, php-format
 msgid "[Ultimate GDPR] Please confirm request to be forgotten from %s"
 msgstr ""
-"[Основной GDPR] Пожалуйста, подтвердите запрос на право быть забытым %s"
+"[Ultimate GDPR] Пожалуйста, подтвердите запрос на право быть забытым %s"
 
 #: includes/controller/controller-forgotten.php:259
+#: includes/controller/controller-unsubscribe.php:224
 #: includes/controller/controller-rectification.php:208
 #: includes/controller/controller-data-access.php:190
 msgid "Your request was sent!"
 msgstr "Ваш запрос послан!"
 
 #: includes/controller/controller-forgotten.php:303
+#: includes/controller/controller-unsubscribe.php:92
 #: includes/controller/controller-rectification.php:96
 msgid "Your request was already confirmed."
 msgstr "Ваш запрсо уже подтвержден."
 
 #: includes/controller/controller-forgotten.php:328
+#: includes/controller/controller-unsubscribe.php:117
 #: includes/controller/controller-rectification.php:121
 msgid "Your request was successfully confirmed."
 msgstr "Ваш запрос полностью подтвержден."
 
-#: includes/controller/controller-forgotten.php:365
+#: includes/controller/controller-forgotten.php:386
+#: includes/controller/controller-unsubscribe.php:165
 #: includes/controller/controller-rectification.php:161
 msgid "Your request was not confirmed. Please check the link or contact admin."
 msgstr ""
 "Ваш запрос не подтвержден. Пожалуйста, проверьте ссылку или свяжитесь с "
 "админом."
 
-#: includes/controller/controller-forgotten.php:481
+#: includes/controller/controller-forgotten.php:504
 #, php-format
 msgid "[Ultimate GDPR] Emails were sent to the following users: %s"
 msgstr ""
-"[Основной GDPR] Сообщения эл. почты были посланы следующим пользователям: %s"
+"[Ultimate GDPR] Сообщения эл. почты были посланы следующим пользователям: %s"
 
-#: includes/controller/controller-forgotten.php:519
+#: includes/controller/controller-forgotten.php:542
 #, php-format
 msgid "[Ultimate GDPR] The following emails were removed from list: %s"
 msgstr ""
-"[Основной GDPR] Следующие сообщения эл. почты были удалены из списка: %s"
+"[Ultimate GDPR] Следующие сообщения эл. почты были удалены из списка: %s"
 
-#: includes/controller/controller-forgotten.php:550
+#: includes/controller/controller-forgotten.php:575
+#: includes/controller/controller-unsubscribe.php:473
 #, php-format
 msgid "Non existing service id: %s"
 msgstr "Не существующий индентификатор услуги %s"
 
-#: includes/controller/controller-forgotten.php:570
+#: includes/controller/controller-forgotten.php:595
 #, php-format
 msgid "There was an error forgetting %s service: %s"
 msgstr "Произошла ошибка забывания услуги %s: %s"
 
-#: includes/controller/controller-forgotten.php:595
+#: includes/controller/controller-forgotten.php:620
 msgid "[Ultimate GDPR] Services data were removed"
-msgstr "[Основной GDPR] Данные об услугах были удалены"
+msgstr "[Ultimate GDPR] Данные об услугах были удалены"
 
-#: includes/controller/controller-forgotten.php:613
+#. ID
+#: includes/controller/controller-forgotten.php:636
+msgid "Forms skin"
+msgstr "Формы кожи"
+
+#: includes/controller/controller-forgotten.php:643
 msgid "Right to be forgotten settings"
 msgstr "Настройки права быть забытым"
 
-#: includes/controller/controller-forgotten.php:623
+#: includes/controller/controller-forgotten.php:654
+msgid "Skin"
+msgstr "кожа"
+
+#. ID
+#: includes/controller/controller-forgotten.php:662
+msgid "Automatically forget users who confirmed their mail"
+msgstr "Автоматически забывайте пользователей, которые подтвердили свою почту"
+
+#. ID
+#: includes/controller/controller-forgotten.php:670
+msgid ""
+"Automatically send email about data removal to users who confirmed their "
+"email"
+msgstr ""
+"Автоматически отправлять электронную почту об удалении данных пользователям, "
+"которые подтвердили свою электронную почту"
+
+#. ID
+#: includes/controller/controller-forgotten.php:678
+msgid "Permit users of selected roles only to be forgotten automatically"
+msgstr "Разрешить пользователям только выбранные роли автоматически забывать"
+
+#: includes/controller/controller-forgotten.php:686
 msgid "Admin email to send new request notifications to"
 msgstr "Адрес админа, на который нужно отправлять новые уведомления"
 
-#: includes/controller/controller-forgotten.php:631
+#: includes/controller/controller-forgotten.php:694
 msgid "User notification email subject"
 msgstr "Пользовательский вопрос по электронной почте"
 
-#: includes/controller/controller-forgotten.php:639
+#: includes/controller/controller-forgotten.php:702
 msgid "User notification email message"
 msgstr "Содержание уведомления, посланного пользователю по электронной почте"
 
-#: includes/controller/controller-forgotten.php:647
+#. ID
+#: includes/controller/controller-forgotten.php:710
+#: includes/controller/controller-unsubscribe.php:631
 #: includes/controller/controller-rectification.php:549
 msgid ""
-"Set custom URL to the page containing Ultimate GDPR shortcode as the e-mail "
+"Set custom URL to the page containing Ultimate GDPR shortcode as the email "
 "confirmation target page (or leave empty for autodetect)"
 msgstr ""
-"Установите клиента , чтобы отображать на странице шорткод Основного GDPR в "
-"виде целевой страницы подтверждения в эл. почте (или оставьте пустую для "
-"автоопределения)"
+"Задайте настраиваемый URL-адрес на странице, содержащей код Ultimate GDPR "
+"shortcode в качестве целевой страницы подтверждения по электронной почте "
+"(или оставить пустой для автоматического определения)"
 
-#: includes/controller/controller-forgotten.php:731
-#: includes/controller/controller-forgotten.php:732
+#: includes/controller/controller-forgotten.php:800
+#: includes/controller/controller-cookie.php:3411
+msgid "Default"
+msgstr "По умолчанию"
+
+#: includes/controller/controller-forgotten.php:801
+msgid "Simple form"
+msgstr "Простая форма"
+
+#: includes/controller/controller-forgotten.php:802
+msgid "Rounded form"
+msgstr "Закругленная форма"
+
+#: includes/controller/controller-forgotten.php:803
+msgid "Tabbed form"
+msgstr "Вкладка"
+
+#: includes/controller/controller-forgotten.php:902
+#: includes/controller/controller-forgotten.php:903
 msgid "[Ultimate GDPR] Your data has been forgotten"
-msgstr "[Основной GDPR] Ваши данными были забыты"
+msgstr "[Ultimate GDPR] Ваши данными были забыты"
 
 #: includes/controller/controller-plugins.php:135
 #: includes/controller/controller-plugins.php:136
@@ -284,14 +365,14 @@ msgstr "Плагины"
 #: includes/controller/controller-policy.php:20
 #: includes/controller/controller-policy.php:21
 #: includes/controller/controller-policy.php:45
-#: includes/controller/controller-policy.php:818
+#: includes/controller/controller-policy.php:827
 #: includes/views/admin/admin-policy.php:32
 #: includes/views/admin/admin-terms.php:33
 msgid "Privacy Policy"
 msgstr "Политика конфиденциальности"
 
 #: includes/controller/controller-policy.php:54
-#: includes/controller/controller-terms.php:388
+#: includes/controller/controller-terms.php:399
 #: includes/controller/controller-pseudonymization.php:154
 msgid "Instructions"
 msgstr "Руководство"
@@ -327,13 +408,13 @@ msgstr ""
 "Конфиденциальности"
 
 #: includes/controller/controller-policy.php:113
-#: includes/controller/controller-terms.php:431
+#: includes/controller/controller-terms.php:442
 msgid "Shortcode Button Styling"
 msgstr "Стиль кнопок для штрихкодов"
 
 #: includes/controller/controller-policy.php:121
-#: includes/controller/controller-terms.php:439
-#: includes/controller/controller-cookie.php:1295
+#: includes/controller/controller-terms.php:450
+#: includes/controller/controller-cookie.php:1394
 msgid "Set consent expire time [s]"
 msgstr "Установить срок истечения согласия [s]"
 
@@ -362,13 +443,17 @@ msgstr ""
 
 #. ID
 #: includes/controller/controller-policy.php:153
-#: includes/controller/controller-terms.php:463
+#: includes/controller/controller-terms.php:474
 msgid ""
 "Do not block user agents (eg. bots) containing the following texts (comma "
 "separated)"
 msgstr ""
 "Не блокируйте пользовательские агенты (например, боты), содержащие следующие "
 "тексты (разделенные запятой)"
+
+#: includes/controller/controller-policy.php:190
+msgid "Click here to create"
+msgstr "Нажмите здесь, чтобы создать"
 
 #: includes/controller/controller-policy.php:201
 #, php-format
@@ -382,123 +467,265 @@ msgstr ""
 "Конфиденциальности внизу, чтобы перенаправить туда пользователей, чтобы они "
 "могли дать согласие."
 
-#: includes/controller/controller-policy.php:280
-#: includes/controller/controller-terms.php:146
-#, php-format
-msgid ""
-"user id: %d \n"
-"consent version: %s \n"
-"consent given: %s \n"
-"consent expires: %s \n"
-"\n"
-msgstr ""
-"идентификатор пользователя: %d\n"
-"версия согласия: %s\n"
-"согласие: %s\n"
-"Срок действия согласия: %s\n"
-
-#: includes/controller/controller-policy.php:637
+#: includes/controller/controller-policy.php:646
 msgid "WordPress Privacy page"
 msgstr "Страница конфиденциальности WordPress"
 
-#: includes/controller/controller-policy.php:693
-#: includes/controller/controller-terms.php:661
+#: includes/controller/controller-policy.php:702
+#: includes/controller/controller-terms.php:672
 msgid "Last visited page"
 msgstr "Последняя посещаемая страница"
 
-#: includes/controller/controller-policy.php:694
-#: includes/controller/controller-terms.php:662
+#: includes/controller/controller-policy.php:703
+#: includes/controller/controller-terms.php:673
 msgid "Don't redirect"
 msgstr "Не перенаправлять"
 
-#: includes/controller/controller-policy.php:720
-#: includes/controller/controller-terms.php:584
+#: includes/controller/controller-policy.php:729
+#: includes/controller/controller-terms.php:595
 msgid "Theme Default"
 msgstr "Тема по умолчанию"
 
-#: includes/controller/controller-policy.php:721
-#: includes/controller/controller-terms.php:585
+#: includes/controller/controller-policy.php:730
+#: includes/controller/controller-terms.php:596
 msgid "Cookie box buttons"
 msgstr "Кнопки для кнопок cookie"
 
-#: includes/controller/controller-services.php:72
-#: includes/controller/controller-services.php:73
-#: includes/controller/controller-services.php:253
-#: includes/controller/controller-services.php:269
+#: includes/controller/controller-services.php:99
+#: includes/controller/controller-services.php:100
+#: includes/controller/controller-services.php:327
+#: includes/controller/controller-services.php:343
 msgid "Services"
 msgstr "Сервисы"
 
-#: includes/controller/controller-services.php:89
-#: includes/controller/controller-services.php:96
-#: includes/controller/controller-services.php:103
+#: includes/controller/controller-services.php:116
+#: includes/controller/controller-services.php:123
+#: includes/controller/controller-services.php:130
 msgid "Services options"
 msgstr "Варианты услуг"
 
-#: includes/controller/controller-services.php:114
+#: includes/controller/controller-services.php:141
 msgid "Recaptcha key (for myaccount shortcode submissions)"
 msgstr "Ключ Recaptcha (для отправки коротких сообщений myaccount)"
 
-#: includes/controller/controller-services.php:122
+#: includes/controller/controller-services.php:149
 msgid "Recaptcha secret key (for myaccount shortcode submissions)"
 msgstr "Секретный ключ Recaptcha (для отправки коротких сообщений myaccount)"
 
-#: includes/controller/controller-services.php:251
+#. ID
+#: includes/controller/controller-services.php:157
+msgid ""
+"When logging consents of users who did not accept Privacy Policy, log their "
+"IP"
+msgstr ""
+"При регистрации согласия пользователей, которые не приняли Политику "
+"конфиденциальности, зарегистрируйте их IP-адрес"
+
+#. ID
+#: includes/controller/controller-services.php:165
+msgid ""
+"When logging consents of users who did not accept Privacy Policy, log their "
+"User Agent"
+msgstr ""
+"При регистрации согласия пользователей, которые не приняли Политику "
+"конфиденциальности, зарегистрируйте их User Agent"
+
+#: includes/controller/controller-services.php:325
 msgctxt "Post Type General Name"
 msgid "Services"
 msgstr "Сервисы"
 
-#: includes/controller/controller-services.php:252
+#: includes/controller/controller-services.php:326
 msgctxt "Post Type Singular Name"
 msgid "Services"
 msgstr "Сервисы"
 
-#: includes/controller/controller-services.php:254
+#: includes/controller/controller-services.php:328
 msgid "Parent Services"
 msgstr "Сервисы для Родителей"
 
-#: includes/controller/controller-services.php:255
+#: includes/controller/controller-services.php:329
 msgid "All Services"
 msgstr "Все Сервисы"
 
-#: includes/controller/controller-services.php:256
+#: includes/controller/controller-services.php:330
 msgid "View Service"
 msgstr "Просмотреть Сервис"
 
-#: includes/controller/controller-services.php:257
+#: includes/controller/controller-services.php:331
 msgid "Add New Service"
 msgstr "Добавить Новый Сервис"
 
-#: includes/controller/controller-services.php:258
+#: includes/controller/controller-services.php:332
 msgid "Add New"
 msgstr "Добавить Новое"
 
-#: includes/controller/controller-services.php:259
+#: includes/controller/controller-services.php:333
 msgid "Edit Service"
 msgstr "Изменить Сервис"
 
-#: includes/controller/controller-services.php:260
+#: includes/controller/controller-services.php:334
 msgid "Update Service"
 msgstr "Обновить Сервис"
 
-#: includes/controller/controller-services.php:261
+#: includes/controller/controller-services.php:335
 msgid "Search Services"
 msgstr "Поиск Сервисов"
 
-#: includes/controller/controller-services.php:262
+#: includes/controller/controller-services.php:336
 msgid "Not Found"
 msgstr "Не найдено"
 
-#: includes/controller/controller-services.php:263
+#: includes/controller/controller-services.php:337
 msgid "Not found in Trash"
 msgstr "Не найдено в Корзине"
 
-#: includes/controller/controller-services.php:268
+#: includes/controller/controller-services.php:342
 msgid "services"
 msgstr "cервисы"
 
+#: includes/controller/controller-unsubscribe.php:133
+#, php-format
+msgid "There is a new Unsubscribe request from email %s. See details at %s"
+msgstr ""
+"Существует новый запрос Отказаться от рассылки по электронной почте %s. "
+"Подробнее см. В разделе %s"
+
+#: includes/controller/controller-unsubscribe.php:218
+#, php-format
+msgid ""
+"[Ultimate GDPR] Please confirm request to be unsubscribed from %s newsletters"
+msgstr ""
+"[Ultimate GDPR] Пожалуйста, подтвердите запрос, чтобы он был отписано из "
+"бюллетеней %s"
+
+#: includes/controller/controller-unsubscribe.php:378
+#: includes/controller/controller-rectification.php:311
+#: includes/controller/controller-data-access.php:304
+#, php-format
+msgid "Data was sent to email: %s"
+msgstr "Данные посланы по адресу: %s"
+
+#: includes/controller/controller-unsubscribe.php:418
+#: includes/controller/controller-rectification.php:350
+#: includes/controller/controller-data-access.php:343
+#, php-format
+msgid "The following emails were removed from the list: %s"
+msgstr "Следующие адреса были удалены из списка: %s"
+
+#: includes/controller/controller-unsubscribe.php:493
+#, php-format
+msgid "There was an error unsubscribing %s from %s service: %s"
+msgstr "Ошибка отправки %s из %s службы: %s"
+
+#: includes/controller/controller-unsubscribe.php:519
+msgid "[Ultimate GDPR] Unsubscription finished!"
+msgstr "[Ultimate GDPR] Отказ от подписки закончен!"
+
+#: includes/controller/controller-unsubscribe.php:549
+#: includes/controller/controller-unsubscribe.php:550
+#: includes/views/shortcode/shortcode-privacy-center.php:113
+#: includes/views/shortcode/shortcode-myaccount.php:52
+msgid "Unsubscribe"
+msgstr "Отказаться от подписки"
+
+#. ID
+#: includes/controller/controller-unsubscribe.php:581
+msgid "Unsubscribe settings"
+msgstr "Настройки отмены подписки"
+
+#. ID
+#: includes/controller/controller-unsubscribe.php:591
+msgid "Automatically unsubscribe users who confirmed their mail"
+msgstr ""
+"Автоматически отменить подписку пользователей, которые подтвердили свою почту"
+
+#. ID
+#: includes/controller/controller-unsubscribe.php:599
+msgid ""
+"Automatically send email about unsubscription to users who confirmed their "
+"email"
+msgstr ""
+"Автоматически отправлять электронную почту о запрете подписки на "
+"пользователей, которые подтвердили свою электронную почту"
+
+#: includes/controller/controller-unsubscribe.php:607
+#: includes/controller/controller-rectification.php:525
+msgid "Email to send admin notifications to"
+msgstr "Послать по эл. почте уведомления админа"
+
+#: includes/controller/controller-unsubscribe.php:615
+#: includes/controller/controller-rectification.php:533
+msgid "User mail title"
+msgstr "Заголовок эл. почты пользователя"
+
+#: includes/controller/controller-unsubscribe.php:623
+#: includes/controller/controller-rectification.php:541
+msgid "User mail content"
+msgstr "Содержимое почты пользователя"
+
+#: includes/controller/controller-unsubscribe.php:749
+#, php-format
+msgid "[Ultimate GDPR] Unsubscribe notice from %s"
+msgstr "[Ultimate GDPR] Отменить уведомление от %s"
+
+#: includes/controller/controller-unsubscribe.php:750
+msgid "Your have been unsubscribed"
+msgstr "Вы были отписаны"
+
+#: includes/controller/controller-admin.php:189
+#: includes/controller/controller-admin.php:232
+msgid "Please upload a file to import"
+msgstr "Загрузите файл для импорта"
+
+#: includes/controller/controller-admin.php:198
+#: includes/controller/controller-admin.php:241
+msgid "No options were imported"
+msgstr "Никакие опции не были импортированы"
+
+#: includes/controller/controller-admin.php:219
+msgid "Settings imported successfully"
+msgstr "Параметры импортированы успешно"
+
+#: includes/controller/controller-admin.php:220
+msgid "Settings were not imported. Please check the import file."
+msgstr "Настройки не были импортированы. Проверьте файл импорта."
+
+#: includes/controller/controller-admin.php:252
+msgid "Wrong file format for services."
+msgstr "Неверный формат файла для служб."
+
+#: includes/controller/controller-admin.php:282
+msgid "Services imported successfully"
+msgstr "Успешно импортированные услуги"
+
+#: includes/controller/controller-admin.php:283
+msgid "No service was imported"
+msgstr "Никакой сервис не был импортирован"
+
+#: includes/controller/controller-admin.php:446
+#: includes/controller/controller-cookie.php:182
+msgid "Enabled"
+msgstr "Включено"
+
+#: includes/controller/controller-admin.php:447
+#: includes/controller/controller-cookie.php:183
+msgid "Enable"
+msgstr "включить"
+
+#: includes/controller/controller-admin.php:448
+#: includes/controller/controller-cookie.php:184
+msgid "Disabled"
+msgstr "Отключено"
+
+#: includes/controller/controller-admin.php:449
+#: includes/controller/controller-cookie.php:185
+msgid "Disable"
+msgstr "запрещать"
+
 #. Plugin Name of the plugin/theme
-#: includes/controller/controller-admin.php:193
-#: includes/controller/controller-admin.php:194
+#: includes/controller/controller-admin.php:467
+#: includes/controller/controller-admin.php:468
 #: includes/views/admin/admin-forgotten.php:30
 #: includes/views/admin/admin-cookie.php:21
 #: includes/views/admin/admin-pseudonymization.php:30
@@ -508,6 +735,7 @@ msgstr "cервисы"
 #: includes/views/admin/admin-services.php:21
 #: includes/views/admin/admin-data-access.php:32
 #: includes/views/admin/admin-terms.php:22
+#: includes/views/admin/admin-unsubscribe.php:30
 #: includes/views/admin/admin-rectification.php:32
 #: includes/views/admin/admin-plugins.php:21
 msgid "Ultimate GDPR"
@@ -516,7 +744,7 @@ msgstr "Ultimate GDPR"
 #: includes/controller/controller-rectification.php:132
 #, php-format
 msgid "[Ultimate GDPR] New Data Rectification request from %s"
-msgstr "[Основной GDPR] Запрос на Исправление Новых данных из %s"
+msgstr "[Ultimate GDPR] Запрос на Исправление Новых данных из %s"
 
 #: includes/controller/controller-rectification.php:140
 #, php-format
@@ -530,20 +758,8 @@ msgstr ""
 #, php-format
 msgid "[Ultimate GDPR] Please confirm your data rectification request from %s"
 msgstr ""
-"[Основной GDPR] Пожалуйста, подтвердите ваш запрос на исправление данных из "
+"[Ultimate GDPR] Пожалуйста, подтвердите ваш запрос на исправление данных из "
 "%s"
-
-#: includes/controller/controller-rectification.php:311
-#: includes/controller/controller-data-access.php:300
-#, php-format
-msgid "Data was sent to email: %s"
-msgstr "Данные посланы по адресу: %s"
-
-#: includes/controller/controller-rectification.php:350
-#: includes/controller/controller-data-access.php:339
-#, php-format
-msgid "The following emails were removed from the list: %s"
-msgstr "Следующие адреса были удалены из списка: %s"
 
 #: includes/controller/controller-rectification.php:479
 #: includes/controller/controller-rectification.php:480
@@ -558,22 +774,10 @@ msgstr "Исправление данных"
 msgid "Data Rectification settings"
 msgstr "Настройки исправления данных"
 
-#: includes/controller/controller-rectification.php:525
-msgid "Email to send admin notifications to"
-msgstr "Послать по эл. почте уведомления админа"
-
-#: includes/controller/controller-rectification.php:533
-msgid "User mail title"
-msgstr "Заголовок эл. почты пользователя"
-
-#: includes/controller/controller-rectification.php:541
-msgid "User mail content"
-msgstr "Содержимое почты пользователя"
-
 #: includes/controller/controller-rectification.php:635
 #, php-format
 msgid "[Ultimate GDPR] Data rectification notice from %s"
-msgstr "[Основной GDPR] Уведомление об исправленни данных из %s"
+msgstr "[Ultimate GDPR] Уведомление об исправленни данных из %s"
 
 #: includes/controller/controller-rectification.php:636
 msgid "Your data has been rectified"
@@ -585,7 +789,7 @@ msgstr "Неправильный адрес электронной почты!"
 
 #: includes/controller/controller-data-access.php:179
 msgid "[Ultimate GDPR] New Data Access request"
-msgstr "[Основной GDPR] Запрос на Доступ к новым данным"
+msgstr "[Ultimate GDPR] Запрос на Доступ к новым данным"
 
 #: includes/controller/controller-data-access.php:181
 #, php-format
@@ -593,15 +797,16 @@ msgid "There is a new data access request from email %s. See details at %s"
 msgstr ""
 "Имеется запрос на доступ к новым данным из эл. почты%s. Посмотреть детали %s"
 
-#: includes/controller/controller-data-access.php:422
+#: includes/controller/controller-data-access.php:426
 #: includes/views/admin/admin-forgotten.php:132
 #: includes/views/admin/admin-data-access.php:97
+#: includes/views/admin/admin-unsubscribe.php:116
 #: includes/views/admin/admin-rectification.php:95
 msgid "Not sent"
 msgstr "Не послано"
 
-#: includes/controller/controller-data-access.php:460
-#: includes/controller/controller-data-access.php:461
+#: includes/controller/controller-data-access.php:464
+#: includes/controller/controller-data-access.php:465
 #: includes/views/admin/admin-forgotten.php:40
 #: includes/views/admin/admin-breach.php:33
 #: includes/views/admin/admin-data-access.php:44
@@ -609,74 +814,81 @@ msgstr "Не послано"
 msgid "Data Access"
 msgstr "Доступ к данным"
 
-#: includes/controller/controller-data-access.php:501
+#: includes/controller/controller-data-access.php:504
 msgid "Data access settings"
 msgstr "Настройки доступа к данным"
 
-#: includes/controller/controller-data-access.php:511
+#. ID
+#: includes/controller/controller-data-access.php:515
+msgid "Automatically send data to all users on their request"
+msgstr "Автоматическая отправка данных всем пользователям по их запросу"
+
+#: includes/controller/controller-data-access.php:523
 msgid "Email to send new request notifications to"
 msgstr "Адрес, на который нужно отправлять новые уведомления"
 
-#: includes/controller/controller-data-access.php:519
-#: includes/controller/controller-breach.php:125
+#: includes/controller/controller-data-access.php:531
+#: includes/controller/controller-breach.php:136
 msgid "Mail title"
 msgstr "Заголовок эл.почты"
 
-#: includes/controller/controller-data-access.php:527
-#: includes/controller/controller-breach.php:133
+#: includes/controller/controller-data-access.php:539
+#: includes/controller/controller-breach.php:144
 msgid "Mail content"
 msgstr "Содержимое эл. почты"
 
-#: includes/controller/controller-data-access.php:601
+#: includes/controller/controller-data-access.php:626
 #, php-format
 msgid "[Ultimate GDPR] Data request results from %s"
-msgstr "[Основной GDPR] Результаты запроса о данных из %s"
+msgstr "[Ultimate GDPR] Результаты запроса о данных из %s"
 
-#: includes/controller/controller-data-access.php:602
+#: includes/controller/controller-data-access.php:627
 msgid "Please find data attached"
 msgstr "Пожалуйста, посмотрите данные во вложении"
 
-#: includes/controller/controller-terms.php:167
-#: includes/controller/controller-terms.php:168
+#: includes/controller/controller-terms.php:169
+#: includes/controller/controller-terms.php:170
 msgid "Terms And Conditions"
 msgstr "Сроки и условия"
 
-#: includes/controller/controller-terms.php:379
-#: includes/controller/controller-terms.php:722
+#: includes/controller/controller-terms.php:390
+#: includes/controller/controller-terms.php:733
 #: includes/views/admin/admin-policy.php:29
 #: includes/views/admin/admin-terms.php:30
 msgid "Terms and Conditions"
 msgstr "Сроки и условия"
 
-#: includes/controller/controller-terms.php:399
+#: includes/controller/controller-terms.php:410
 msgid "Require logged in users to accept Terms and Conditions (redirect)"
 msgstr ""
 "Требуются зарегистрированные пользователи, чтобы принять Сроки и Условия "
 "(перенаправить)"
 
-#: includes/controller/controller-terms.php:407
-msgid ""
-"Require not logged in users/guests to accept Terms and Conditions (redirect)"
+#. ID
+#: includes/controller/controller-terms.php:418
+msgid "Require guest users to accept Terms and Conditions (redirect)"
 msgstr ""
-"Необходимо, чтобы не зарегистрированные пользователи/посетители приняли "
-"Правила и Условия (перенаправить)"
+"Требовать от гостевых пользователей принимать Условия и положения "
+"(перенаправлять)"
 
-#: includes/controller/controller-terms.php:415
-msgid "Page with existing Terms and Conditions"
-msgstr "Страница с действующими Сроками и Условиями"
+#. ID
+#: includes/controller/controller-terms.php:426
+msgid "The page with existing Terms and Conditions"
+msgstr "Страница с существующими Условиями использования"
 
-#: includes/controller/controller-terms.php:423
-msgid "Page to redirect to after Terms accepted"
-msgstr "Страница для перенаправления после того, как Условия приняты"
+#. ID
+#: includes/controller/controller-terms.php:434
+msgid "The page to redirect to after Terms accepted"
+msgstr "Страница для перенаправления после принятия Условий"
 
-#: includes/controller/controller-terms.php:447
+#: includes/controller/controller-terms.php:458
 msgid ""
 "Terms version, eg. 1.0 (if you change it, user has to give consent again)"
 msgstr ""
 "Версия Условий, например, 1.0 (если вы хотите поменять ее, пользователь "
 "должен дать согласие еще раз)"
 
-#: includes/controller/controller-terms.php:455
+#: includes/controller/controller-terms.php:466
 msgid ""
 "Convert the following text to Terms and Conditions link in all services "
 "templates, eg. 'Terms and Conditions'"
@@ -684,7 +896,7 @@ msgstr ""
 "Преобразуйте следующий текст в ссылку Сроки и Условия на всех шаблонах "
 "услуг, например как \"Сроки и Условия\""
 
-#: includes/controller/controller-terms.php:476
+#: includes/controller/controller-terms.php:487
 #, php-format
 msgid ""
 "1. Place %s shortcode on your existing Terms and Conditions page to add an "
@@ -695,531 +907,754 @@ msgstr ""
 "чтобы добавить кнопку принять.%s2. Выберите страницу Сроки и Условия внизу, "
 "чтобы перенаправить туда пользователей, чтобы они могли дать согласие."
 
-#: includes/controller/controller-cookie.php:958
-#: includes/controller/controller-cookie.php:4490
+#: includes/controller/controller-cookie.php:1042
+#: includes/controller/controller-cookie.php:4971
 #, php-format
 msgid ""
 "<h3>Please navigate to <a href='%s'>Service Manager</a> tab to see all "
 "detected cookies.</h3>"
 msgstr ""
-"<h3>Пожалуйста, перейдите на вкладку <a href='%s'>Сервис Менеджер</a>чтобы "
-"просмотреть все обнаруженные файлы cookie.</h3>"
+"<h3> Перейдите на вкладку <a href='%s'> Service Manager </a>, чтобы "
+"просмотреть все обнаруженные файлы cookie. </h3>"
 
-#: includes/controller/controller-cookie.php:1023
-#, php-format
-msgid ""
-"user id: %d \n"
-"consent level: %s \n"
-"consent given: %s \n"
-"consent expires: %s \n"
-"\n"
-msgstr ""
-"идентификатор пользователя: %d\n"
-"уровень согласия: %s\n"
-"согласие: %s\n"
-"Срок действия согласия: %s\n"
-
-#: includes/controller/controller-cookie.php:1043
-#: includes/controller/controller-cookie.php:1044
+#: includes/controller/controller-cookie.php:1129
+#: includes/controller/controller-cookie.php:1130
 msgid "Cookie Consent"
-msgstr "Cookie Consent"
+msgstr "Согласие на использование файлов cookie"
 
-#: includes/controller/controller-cookie.php:1052
-#: includes/controller/controller-cookie.php:1053
+#: includes/controller/controller-cookie.php:1138
+#: includes/controller/controller-cookie.php:1139
 msgid "Services Manager"
-msgstr "Сервис-Менеджер"
+msgstr "Менеджер служб"
 
-#: includes/controller/controller-cookie.php:1075
-#: includes/controller/controller-cookie.php:1205
+#. ID
+#: includes/controller/controller-cookie.php:1161
+#: includes/controller/controller-cookie.php:1301
 msgid "Cookie popup content"
-msgstr "Всплывающий Cookie контент"
+msgstr "Всплывающее содержимое Cookie"
 
-#: includes/controller/controller-cookie.php:1082
+#. ID
+#: includes/controller/controller-cookie.php:1168
 msgid "Buttons labels"
 msgstr "Метки кнопок"
 
-#: includes/controller/controller-cookie.php:1089
+#. ID
+#: includes/controller/controller-cookie.php:1175
 msgid "Options"
 msgstr "Опции"
 
 #. ID
-#: includes/controller/controller-cookie.php:1096
+#: includes/controller/controller-cookie.php:1182
 msgid "Google Analytics Tracking ID"
 msgstr "Идентификатор отслеживания Google Analytics"
 
-#: includes/controller/controller-cookie.php:1106
+#. ID
+#: includes/controller/controller-cookie.php:1192
 msgid "Cookie check"
 msgstr "Проверка файлов cookie"
 
-#: includes/controller/controller-cookie.php:1113
+#. ID
+#: includes/controller/controller-cookie.php:1199
 msgid "Buttons styles"
 msgstr "Стиль кнопок"
 
-#: includes/controller/controller-cookie.php:1127
-#: includes/controller/controller-cookie.php:1343
-msgid "Position"
-msgstr "Размещение"
+#. ID
+#: includes/controller/controller-cookie.php:1213
+msgid "Position of the cookie notice box"
+msgstr "Позиция блока уведомлений cookie"
 
-#: includes/controller/controller-cookie.php:1134
-msgid "Box styles"
-msgstr "Стили ящиков"
+#. ID
+#: includes/controller/controller-cookie.php:1220
+msgid "Cookie notice box"
+msgstr "Блок уведомлений для файлов cookie"
 
-#: includes/controller/controller-cookie.php:1141
-#: includes/controller/controller-cookie.php:1431
+#. ID
+#: includes/controller/controller-cookie.php:1227
+msgid "Protection shortcode"
+msgstr "Защитный код"
+
+#. ID
+#: includes/controller/controller-cookie.php:1234
+#: includes/controller/controller-cookie.php:1564
 msgid "Custom style CSS"
 msgstr "Пользовательский стиль CSS"
 
 #. ID
-#: includes/controller/controller-cookie.php:1151
+#: includes/controller/controller-cookie.php:1243
 msgid "Advanced Cookies Settings"
 msgstr "Расширенные настройки файлов cookie"
 
-#: includes/controller/controller-cookie.php:1159
+#. ID
+#: includes/controller/controller-cookie.php:1251
 msgid "Trigger cookie"
 msgstr "Trigger cookie"
 
-#: includes/controller/controller-cookie.php:1166
-msgid "Lists of features"
-msgstr "Списки функций"
-
-#: includes/controller/controller-cookie.php:1173
+#. ID
+#: includes/controller/controller-cookie.php:1258
 msgid "Modal styles"
 msgstr "Модальные стили"
 
-#: includes/controller/controller-cookie.php:1180
+#. ID
+#: includes/controller/controller-cookie.php:1265
+msgid "Lists of features"
+msgstr "Списки функций"
+
+#. ID
+#: includes/controller/controller-cookie.php:1273
 msgid "Labels"
 msgstr "Этикетки"
 
-#: includes/controller/controller-cookie.php:1187
+#. ID
+#: includes/controller/controller-cookie.php:1280
 msgid "Additional settings"
 msgstr "Дополнительные настройки"
 
-#: includes/controller/controller-cookie.php:1197
+#. ID
+#: includes/controller/controller-cookie.php:1293
 msgid ""
-"Fill in with default content for selected language (remember to save changes)"
+"Provide default content for the selected language (remember to save changes)"
 msgstr ""
-"Заполните контентом по умолчанию для выбранного языка (не забудьте сохранить "
-"изменения)"
+"Предоставление содержимого по умолчанию для выбранного языка (не забудьте "
+"сохранить изменения)"
 
-#: includes/controller/controller-cookie.php:1213
+#. ID
+#: includes/controller/controller-cookie.php:1310
 msgid "Cookie popup 'accept' button label (leave empty for default)"
-msgstr ""
-"Нажать кнопку \"принять\" во всплывающем окне Cookie (оставьте пустым по "
-"умолчанию)"
+msgstr "Cookie popup 'принять' ярлык кнопки (оставить пустыми по умолчанию)"
 
-#: includes/controller/controller-cookie.php:1221
+#. ID
+#: includes/controller/controller-cookie.php:1318
 msgid "Cookie popup 'read more' button label (leave empty for default)"
-msgstr ""
-"Нажать кнопку \"читать еще\" во всплывающем окне Cookie (оставьте пустым по "
-"умолчанию)"
+msgstr "Cookie popup 'прочитайте больше' (оставить пустыми по умолчанию)"
 
-#: includes/controller/controller-cookie.php:1229
+#. ID
+#: includes/controller/controller-cookie.php:1326
 msgid "Cookie popup 'change settings' button label (leave empty for default)"
-msgstr ""
-"Нажать кнопку \"изменить настройки\" во всплывающем окне Cookie (оставьте "
-"пустым по умолчанию)"
+msgstr "Cookie popup 'изменить настройки' (оставить пустыми по умолчанию)"
 
-#: includes/controller/controller-cookie.php:1237
+#: includes/controller/controller-cookie.php:1335
 msgid "Display cookie popup on all pages"
-msgstr "Показать уведомление о сookie на всех страницах"
+msgstr "Отображать всплывающее окно cookie на всех страницах"
 
-#: includes/controller/controller-cookie.php:1245
+#: includes/controller/controller-cookie.php:1343
 msgid "Check if user is from European Union"
 msgstr "Проверьте, является ли пользователь из Европейского Союза"
 
-#: includes/controller/controller-cookie.php:1253
-msgid "Select pages where to display the cookie popup"
+#: includes/controller/controller-cookie.php:1351
+msgid "Select page where to display the cookie popup"
 msgstr ""
-"Выберите страницы, на которых будет отображаться всплывающее окно cookie"
+"Выберите страницу, на которой будет отображаться всплывающее окно cookie"
 
-#: includes/controller/controller-cookie.php:1263
+#: includes/controller/controller-cookie.php:1362
 msgid "Choose how often cookie check should be performed"
-msgstr "Выбрать, как часто следует проверять сookie"
+msgstr "Выберите частоту проверки cookie."
 
-#: includes/controller/controller-cookie.php:1271
+#: includes/controller/controller-cookie.php:1370
 msgid "Choose default level of new cookies"
-msgstr "Выбрать уровень по умолчанию для новых сookies"
+msgstr "Выберите уровень по умолчанию для новых файлов cookie."
 
-#: includes/controller/controller-cookie.php:1279
+#: includes/controller/controller-cookie.php:1378
 msgid "Cookies whitelist (never block these cookies, comma separated)"
 msgstr ""
 "Куки-файлы белого списка (никогда не блокируйте эти файлы cookie, "
 "разделенные запятыми)"
 
-#: includes/controller/controller-cookie.php:1287
+#: includes/controller/controller-cookie.php:1386
 msgid "Block selected/all cookies until user consents"
-msgstr "Заблокировать все сookies пока пользователь не даст согласие"
+msgstr ""
+"Блокировать выбранные / все файлы cookie, пока пользователь не согласится"
 
-#: includes/controller/controller-cookie.php:1303
-#: includes/controller/controller-cookie.php:1391
+#: includes/controller/controller-cookie.php:1405
+msgid "Button settings by"
+msgstr "Настройки кнопок"
+
+#: includes/controller/controller-cookie.php:1414
 msgid "Button shape"
 msgstr "Форма кнопки"
 
-#: includes/controller/controller-cookie.php:1311
-msgid "Button color"
-msgstr "Цвет кнопки"
-
-#: includes/controller/controller-cookie.php:1319
 #: includes/controller/controller-cookie.php:1423
 msgid "Button size"
 msgstr "Размер кнопки"
 
-#: includes/controller/controller-cookie.php:1327
-msgid "Read more page"
-msgstr "Читать еще"
-
-#: includes/controller/controller-cookie.php:1335
-msgid "Read More Custom URL"
-msgstr "Читать еще о настройке URL"
-
-#: includes/controller/controller-cookie.php:1351
-msgid "Distance from border [px]"
-msgstr "Расстояние от границы страницы [px]"
-
-#: includes/controller/controller-cookie.php:1359
-msgid "Box style"
-msgstr "Стиль окна"
-
-#: includes/controller/controller-cookie.php:1367
-msgid "Box shape"
-msgstr "Форма окна"
-
-#: includes/controller/controller-cookie.php:1375
-msgid "Background color"
-msgstr "Цвет фона"
-
-#: includes/controller/controller-cookie.php:1383
-msgid "Text color"
-msgstr "Цвет текста"
-
-#: includes/controller/controller-cookie.php:1399
-msgid "Button background color"
-msgstr "Цвет фона кнопки"
-
-#: includes/controller/controller-cookie.php:1407
-msgid "Button border color"
-msgstr "Цвет рамки кнопки"
-
-#: includes/controller/controller-cookie.php:1415
+#: includes/controller/controller-cookie.php:1432
 msgid "Button text color"
 msgstr "Цвет текста кнопки"
 
-#: includes/controller/controller-cookie.php:1443
-msgid "Trigger cookie settings by"
-msgstr "Запустить настройки cookie с помощью"
+#: includes/controller/controller-cookie.php:1442
+msgid "Button background color"
+msgstr "Цвет фона кнопки"
 
 #: includes/controller/controller-cookie.php:1451
-msgid "Trigger cookie settings icon"
-msgstr "Запустить настройки cookie Иконка"
+msgid "Button border color"
+msgstr "Цвет рамки кнопки"
 
-#: includes/controller/controller-cookie.php:1459
-msgid "Trigger cookie settings text"
-msgstr "Запустить настройки cookie текст"
+#: includes/controller/controller-cookie.php:1462
+msgid "Read more page"
+msgstr "Читать дальше"
 
-#: includes/controller/controller-cookie.php:1467
-msgid "Trigger cookie settings background color"
-msgstr "Запустить настройки cookie цвет фона"
+#: includes/controller/controller-cookie.php:1470
+msgid "Read More Custom URL"
+msgstr "Подробнее Пользовательский URL"
 
-#: includes/controller/controller-cookie.php:1475
-msgid "Trigger cookie settings shape"
-msgstr "Запустить настройки cookie форма"
+#: includes/controller/controller-cookie.php:1479
+msgid "Active Tab"
+msgstr "Активная вкладка"
 
-#: includes/controller/controller-cookie.php:1483
-msgid "Trigger cookie settings position"
-msgstr "Запустить настройки cookie Положение"
+#: includes/controller/controller-cookie.php:1493
+msgid "Position"
+msgstr "Должность"
 
-#: includes/controller/controller-cookie.php:1491
-msgid "Trigger cookie settings color"
-msgstr "Запустить настройки cookie цвет"
+#: includes/controller/controller-cookie.php:1501
+msgid "Distance from border [px]"
+msgstr "Расстояние от границы [px]"
 
-#: includes/controller/controller-cookie.php:1502
+#: includes/controller/controller-cookie.php:1512
+msgid "Box style"
+msgstr "Стиль коробки"
+
+#: includes/controller/controller-cookie.php:1520
+msgid "Box shape"
+msgstr "Форма коробки"
+
+#: includes/controller/controller-cookie.php:1528
+msgid "Background color"
+msgstr "Фоновый цвет"
+
+#: includes/controller/controller-cookie.php:1536
+msgid "Background image"
+msgstr "Изображение на заднем плане"
+
+#: includes/controller/controller-cookie.php:1544
+msgid "Text color"
+msgstr "Цвет текста"
+
+#: includes/controller/controller-cookie.php:1554
+msgid "Protection shortcode label"
+msgstr "Защитный ярлык"
+
+#: includes/controller/controller-cookie.php:1577
 msgid "Show advanced cookie popup always, even when the consent is given"
 msgstr ""
-"Всегда показывать расширенное всплывающее окно cookie, даже если согласие не "
-"дано"
+"Показывать расширенное отображение cookie всегда, даже когда дается согласие"
 
-#: includes/controller/controller-cookie.php:1510
+#: includes/controller/controller-cookie.php:1585
 msgid "Use advanced cookie groups popup"
 msgstr "Использовать расширенные группы файлов cookie"
 
-#: includes/controller/controller-cookie.php:1518
+#: includes/controller/controller-cookie.php:1593
+#: includes/controller/controller-cookie.php:1601
 msgid "Advanced cookie groups popup header content"
-msgstr "Контент всплывающего заголовка pасширенныx cookie групп"
+msgstr "Расширенное содержание заголовков cookie-групп"
 
-#: includes/controller/controller-cookie.php:1528
-msgid "Cookie modal header color"
-msgstr "Модный цвет заголовка cookie"
+#: includes/controller/controller-cookie.php:1612
+msgid "Trigger cookie settings by"
+msgstr "Настройки триггера cookie"
 
-#: includes/controller/controller-cookie.php:1536
-msgid "Cookie modal text color"
-msgstr "Модальный текстовый цвет печенья"
+#: includes/controller/controller-cookie.php:1620
+msgid "Trigger cookie settings icon"
+msgstr "Иконка настроек Trigger cookie"
 
-#: includes/controller/controller-cookie.php:1546
-msgid "<i>This website will</i> label"
-msgstr "<i> Данный вебсайт будет</i> ярлык"
+#: includes/controller/controller-cookie.php:1628
+msgid "Trigger cookie settings text"
+msgstr "Текст настроек Trigger cookie"
 
-#: includes/controller/controller-cookie.php:1554
-msgid "<i>This website won't</i> label"
-msgstr "<i> Данный вебсайт не будет</i> ярлык"
+#: includes/controller/controller-cookie.php:1636
+msgid "Trigger cookie settings background color"
+msgstr "Цвет фона настроек печенья"
 
-#: includes/controller/controller-cookie.php:1562
-msgid "<i>Block all</i> label"
-msgstr "<i>Блокировать</i> ярлык"
+#: includes/controller/controller-cookie.php:1644
+msgid "Trigger cookie settings shape"
+msgstr "Форма настроек cookie триггера"
 
-#: includes/controller/controller-cookie.php:1570
-msgid "<i>Essentials</i> label"
-msgstr "<i>Основные положения </i> ярлык"
+#: includes/controller/controller-cookie.php:1652
+msgid "Trigger cookie settings position"
+msgstr "Положение настроек триггера cookie"
 
-#: includes/controller/controller-cookie.php:1578
-msgid "<i>Functionality</i> label"
-msgstr "<i>Функционал</i> ярлык"
+#: includes/controller/controller-cookie.php:1660
+msgid "Trigger cookie settings color"
+msgstr "Цвет настроек cookie триггера"
 
-#: includes/controller/controller-cookie.php:1586
-msgid "<i>Analytics</i> label"
-msgstr "<i>Аналитика</i> ярлык"
-
-#: includes/controller/controller-cookie.php:1594
-msgid "<i>Advertising</i> label"
-msgstr "<i>Реклама</i> ярлык"
-
-#: includes/controller/controller-cookie.php:1605
+#: includes/controller/controller-cookie.php:1670
 msgid "List of features available for Essential level (semicolon separated)"
-msgstr "Перечислить опции доступные на Основном уровне (двоеточие отдельно)"
+msgstr "Список функций, доступных для уровня Essential (точка с запятой)"
 
-#: includes/controller/controller-cookie.php:1613
+#: includes/controller/controller-cookie.php:1678
 msgid ""
 "List of features not available for Essential level (semicolon separated)"
-msgstr "Перечислить опции недоступные на Основном уровне (двоеточие отдельно)"
+msgstr "Список функций, недоступных для основного уровня (точка с запятой)"
 
-#: includes/controller/controller-cookie.php:1621
+#: includes/controller/controller-cookie.php:1686
 msgid ""
 "List of features available for Functionality level (semicolon separated)"
 msgstr ""
-"Перечислить опции доступные на уровне Функциональных возможностей  "
-"(двоеточие отдельно)"
+"Список функций, доступных для уровня функциональности (точка с запятой)"
 
-#: includes/controller/controller-cookie.php:1629
+#: includes/controller/controller-cookie.php:1694
 msgid ""
 "List of features not available for Functionality level (semicolon separated)"
 msgstr ""
-"Перечислить опции недоступные на уровне Функциональных возможностей  "
-"(двоеточие отдельно)"
+"Список функций, недоступных для уровня функциональности (точка с запятой)"
 
-#: includes/controller/controller-cookie.php:1637
+#: includes/controller/controller-cookie.php:1702
 msgid "List of features available for Analytics level (semicolon separated)"
-msgstr "Перечислить опции доступные на уровне Аналитики  (двоеточие отдельно)"
+msgstr "Список функций, доступных для уровня Analytics (точка с запятой)"
 
-#: includes/controller/controller-cookie.php:1645
+#: includes/controller/controller-cookie.php:1710
 msgid ""
 "List of features not available for Analytics level (semicolon separated)"
-msgstr ""
-"Перечислить опции недоступные на уровне Функциональных возможностей  "
-"(двоеточие отдельно)"
+msgstr "Список функций, недоступных для уровня Analytics (точка с запятой)"
 
-#: includes/controller/controller-cookie.php:1653
+#: includes/controller/controller-cookie.php:1718
 msgid "List of features available for Advertising level (semicolon separated)"
-msgstr ""
-"Перечислить опции доступные на уровне Рекламных возможностей  (двоеточие "
-"отдельно)"
+msgstr "Список возможностей для уровня рекламы (точка с запятой)"
 
-#: includes/controller/controller-cookie.php:1661
+#: includes/controller/controller-cookie.php:1726
 msgid ""
 "List of features not available for Advertising level (semicolon separated)"
-msgstr ""
-"Перечислить опции недоступные на уровне Функиональных возможностей  "
-"(двоеточие отдельно)"
+msgstr "Список функций, недоступных для уровня рекламы (точка с запятой)"
 
-#: includes/controller/controller-cookie.php:1671
+#: includes/controller/controller-cookie.php:1737
+msgid "Cookie modal header color"
+msgstr "Модный цвет заголовка cookie"
+
+#: includes/controller/controller-cookie.php:1745
+msgid "Cookie modal text color"
+msgstr "Модальный текстовый цвет печенья"
+
+#: includes/controller/controller-cookie.php:1753
+msgid "Cookie modal skin"
+msgstr "Модная кожа печенья"
+
+#: includes/controller/controller-cookie.php:1764
+msgid "<i>This website will</i> label"
+msgstr "<i>Этот веб-сайт будет</i>"
+
+#: includes/controller/controller-cookie.php:1772
+msgid "<i>This website won't</i> label"
+msgstr "<i>Этот сайт не будет</i>"
+
+#: includes/controller/controller-cookie.php:1780
+msgid "Hide \"Block All\" level features"
+msgstr "Скрыть \"Заблокировать все\" функции"
+
+#: includes/controller/controller-cookie.php:1788
+msgid "Hide \"Essential\" level features"
+msgstr "Скрыть \"существенный\" функции"
+
+#: includes/controller/controller-cookie.php:1796
+msgid "Hide \"Functionality\" level features"
+msgstr "Скрыть \"функциональность\" функции"
+
+#: includes/controller/controller-cookie.php:1804
+msgid "Hide \"Analytics\" level features"
+msgstr "Скрыть \"аналитика\" функции"
+
+#: includes/controller/controller-cookie.php:1812
+msgid "Hide \"Advertising\" level features"
+msgstr "Скрыть \"реклама\" функции"
+
+#: includes/controller/controller-cookie.php:1820
+msgid "<i>Block all</i> label"
+msgstr "<i>Заблокировать все</i> Метка "
+
+#: includes/controller/controller-cookie.php:1828
+msgid "<i>Essentials</i> label"
+msgstr "<i>Основы</i> Метка "
+
+#: includes/controller/controller-cookie.php:1836
+msgid "<i>Functionality</i> label"
+msgstr "<i>Функциональность</i>"
+
+#: includes/controller/controller-cookie.php:1844
+msgid "<i>Analytics</i> label"
+msgstr "<i>аналитика</i> Метка "
+
+#: includes/controller/controller-cookie.php:1852
+msgid "<i>Advertising</i> label"
+msgstr "<i>Реклама</i> Метка "
+
+#. ID
+#: includes/controller/controller-cookie.php:1862
 msgid ""
 "Advanced cookie popup 'save & close' button label (leave empty for default)"
 msgstr ""
-"Нажать конпку \"сохранить и закрыть\" во впсплывающем окне улучшенных фалов "
-"cookie"
+"Продвинутая метка кнопки 'Сохранить и закрыть' cookie для cookie (оставить "
+"пустыми по умолчанию)"
 
-#: includes/controller/controller-cookie.php:1679
+#: includes/controller/controller-cookie.php:1870
 msgid "Select default privacy group"
-msgstr "Выбрать личную группу по умолчанию"
+msgstr "Выберите группу конфиденциальности по умолчанию"
 
-#: includes/controller/controller-cookie.php:1687
+#: includes/controller/controller-cookie.php:1878
+msgid "Reload page when user saves changes"
+msgstr "Обновить страницу, когда пользователь сохраняет изменения"
+
+#: includes/controller/controller-cookie.php:1887
 msgid "Select privacy group after user accepts cookies in the popup"
 msgstr ""
 "Выберите группу конфиденциальности после того, как пользователь примет файлы "
 "cookie во всплывающем окне"
 
-#: includes/controller/controller-cookie.php:1695
-msgid "Reload page when user saves changes"
-msgstr "Обновить страницу, когда пользователь сохраняет изменения"
-
-#: includes/controller/controller-cookie.php:1776
+#: includes/controller/controller-cookie.php:1984
 msgid "Never"
 msgstr "Никогда"
 
-#: includes/controller/controller-cookie.php:1777
+#: includes/controller/controller-cookie.php:1985
 msgid "Weekly"
-msgstr "Еженедельно"
+msgstr "еженедельно"
 
-#: includes/controller/controller-cookie.php:1778
+#: includes/controller/controller-cookie.php:1986
 msgid "Monthly"
-msgstr "Ежемесячно"
+msgstr "ежемесячно"
 
-#: includes/controller/controller-cookie.php:1779
+#: includes/controller/controller-cookie.php:1987
 msgid "Quarterly"
-msgstr "Раз в квартал"
+msgstr "Ежеквартальный"
 
-#: includes/controller/controller-cookie.php:1834
+#: includes/controller/controller-cookie.php:2015
+msgid "Select"
+msgstr "Выбрать"
+
+#: includes/controller/controller-cookie.php:2044
 msgid "Load"
-msgstr "Загрузить"
+msgstr "нагрузка"
 
-#: includes/controller/controller-cookie.php:2053
+#: includes/controller/controller-cookie.php:2279
+#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2818
+msgid "Update"
+msgstr "Обновить"
+
+#: includes/controller/controller-cookie.php:2280
+msgid "Remove"
+msgstr "Удалить"
+
+#: includes/controller/controller-cookie.php:2296
 msgid "Classic"
-msgstr "Классический"
+msgstr "классический"
 
-#: includes/controller/controller-cookie.php:2054
+#: includes/controller/controller-cookie.php:2297
+msgid "Classic Blue"
+msgstr "Классический синий"
+
+#: includes/controller/controller-cookie.php:2298
 msgid "Modern"
-msgstr "Современный"
+msgstr "Современное"
 
-#: includes/controller/controller-cookie.php:2083
-#: includes/controller/controller-cookie.php:2113
-#: includes/controller/controller-cookie.php:2986
+#: includes/controller/controller-cookie.php:2327
+#: includes/controller/controller-cookie.php:2387
+#: includes/controller/controller-cookie.php:3352
 msgid "Rounded"
-msgstr "Закругленный"
+msgstr "закругленный"
 
-#: includes/controller/controller-cookie.php:2084
-#: includes/controller/controller-cookie.php:2114
-#: includes/controller/controller-cookie.php:2987
+#: includes/controller/controller-cookie.php:2328
+#: includes/controller/controller-cookie.php:2388
+#: includes/controller/controller-cookie.php:3353
 msgid "Squared"
-msgstr "Квадратный"
+msgstr "в квадрате"
 
-#: includes/controller/controller-cookie.php:2210
-msgid "Normal"
-msgstr "Обычный"
-
-#: includes/controller/controller-cookie.php:2211
-msgid "Large"
-msgstr "Крупный"
-
-#: includes/controller/controller-cookie.php:2752
-msgid "Front page"
-msgstr "Главная страница"
-
-#: includes/controller/controller-cookie.php:2755
-msgid "Posts page"
-msgstr "Страница сообщений"
-
-#: includes/controller/controller-cookie.php:2780
-msgid "Bottom left"
-msgstr "Внизу слева"
-
-#: includes/controller/controller-cookie.php:2781
-msgid "Bottom right"
-msgstr "Внизу справа"
-
-#: includes/controller/controller-cookie.php:2782
-msgid "Bottom panel"
-msgstr "Нижняя панель"
-
-#: includes/controller/controller-cookie.php:2783
-msgid "Top left"
-msgstr "Наверху слева"
-
-#: includes/controller/controller-cookie.php:2784
-msgid "Top right"
-msgstr "Наверху справа"
-
-#: includes/controller/controller-cookie.php:2785
-msgid "Top panel"
-msgstr "Верхняя панель"
-
-#: includes/controller/controller-cookie.php:2831
+#: includes/controller/controller-cookie.php:2358
+#: includes/controller/controller-cookie.php:3197
 msgid "Text Only"
 msgstr "Только текст"
 
-#: includes/controller/controller-cookie.php:2832
-msgid "Icon Only"
-msgstr "Только Иконка"
-
-#: includes/controller/controller-cookie.php:2833
+#: includes/controller/controller-cookie.php:2359
+#: includes/controller/controller-cookie.php:3199
 msgid "Icon and Text"
 msgstr "Значок и текст"
 
-#: includes/controller/controller-cookie.php:2913
+#: includes/controller/controller-cookie.php:2458
+msgid "Normal"
+msgstr "Нормальный"
+
+#: includes/controller/controller-cookie.php:2459
+msgid "Large"
+msgstr "большой"
+
+#: includes/controller/controller-cookie.php:3118
+msgid "Front page"
+msgstr "Титульная страница"
+
+#: includes/controller/controller-cookie.php:3121
+msgid "Posts page"
+msgstr "Сообщения"
+
+#: includes/controller/controller-cookie.php:3146
+msgid "Bottom left"
+msgstr "Нижняя левая"
+
+#: includes/controller/controller-cookie.php:3147
+msgid "Bottom right"
+msgstr "Внизу справа"
+
+#: includes/controller/controller-cookie.php:3148
+msgid "Bottom panel"
+msgstr "Нижняя панель"
+
+#: includes/controller/controller-cookie.php:3149
+msgid "Top left"
+msgstr "Верхний левый"
+
+#: includes/controller/controller-cookie.php:3150
+msgid "Top right"
+msgstr "В правом верхнем углу"
+
+#: includes/controller/controller-cookie.php:3151
+msgid "Top panel"
+msgstr "Верхняя панель"
+
+#: includes/controller/controller-cookie.php:3198
+msgid "Icon Only"
+msgstr "Только Иконка"
+
+#: includes/controller/controller-cookie.php:3279
 msgid "Top Left"
 msgstr "Верхний левый"
 
-#: includes/controller/controller-cookie.php:2914
+#: includes/controller/controller-cookie.php:3280
 msgid "Top center"
-msgstr "Верхний в центре"
+msgstr "Верхний центр"
 
-#: includes/controller/controller-cookie.php:2915
+#: includes/controller/controller-cookie.php:3281
 msgid "Top Right"
-msgstr "Верхний правый"
+msgstr "В правом верхнем углу"
 
-#: includes/controller/controller-cookie.php:2916
+#: includes/controller/controller-cookie.php:3282
 msgid "Center Left"
-msgstr "Центральный левый"
+msgstr "Центр слева"
 
-#: includes/controller/controller-cookie.php:2917
+#: includes/controller/controller-cookie.php:3283
 msgid "Center Right"
-msgstr "Центральный правый"
+msgstr "Центр права"
 
-#: includes/controller/controller-cookie.php:2918
+#: includes/controller/controller-cookie.php:3284
 msgid "Bottom Left"
-msgstr "Нижний левый"
+msgstr "Нижняя левая"
 
-#: includes/controller/controller-cookie.php:2919
+#: includes/controller/controller-cookie.php:3285
 msgid "Bottom Center"
-msgstr "Нижний в центре"
+msgstr "Нижний Центр"
 
-#: includes/controller/controller-cookie.php:2920
+#: includes/controller/controller-cookie.php:3286
 msgid "Bottom Right"
-msgstr "Нижний правый"
+msgstr "Внизу справа"
 
-#: includes/controller/controller-cookie.php:2985
+#: includes/controller/controller-cookie.php:3351
 msgid "Round"
 msgstr "Круглый"
 
-#: includes/controller/controller-cookie.php:3093
+#: includes/controller/controller-cookie.php:3412
+msgid "Neutral"
+msgstr "нейтральный"
+
+#: includes/controller/controller-cookie.php:3413
+msgid "Modern Blue"
+msgstr "Современный синий"
+
+#: includes/controller/controller-cookie.php:3414
+msgid "Compact Dark Blue"
+msgstr "Компактный синий"
+
+#: includes/controller/controller-cookie.php:3487
+msgid "This website won't:"
+msgstr "Этот сайт не будет:"
+
+#: includes/controller/controller-cookie.php:3489
 #: includes/model/model-group.php:73 includes/model/model-group.php:91
 msgid "Block all"
 msgstr "Заблокировать все"
 
-#: includes/controller/controller-cookie.php:3094
+#: includes/controller/controller-cookie.php:3490
 msgid "Essentials"
-msgstr "Основные положения"
+msgstr "основы"
 
-#: includes/controller/controller-cookie.php:3095
+#: includes/controller/controller-cookie.php:3491
 #: includes/model/model-group.php:55 includes/model/model-group.php:88
 msgid "Functionality"
 msgstr "Функционал"
 
-#: includes/controller/controller-cookie.php:3096
+#: includes/controller/controller-cookie.php:3492
 #: includes/model/model-group.php:61 includes/model/model-group.php:89
 msgid "Analytics"
 msgstr "Аналитика"
 
-#: includes/controller/controller-cookie.php:3097
+#: includes/controller/controller-cookie.php:3493
 #: includes/model/model-group.php:67 includes/model/model-group.php:90
 msgid "Advertising"
 msgstr "Реклама"
 
-#: includes/controller/controller-cookie.php:4398
+#: includes/controller/controller-cookie.php:3494
+msgid ""
+"Essential: Remember your cookie permission setting; Essential: Allow session "
+"cookies; Essential: Gather information you input into a contact forms, "
+"newsletter and other forms across all pages; Essential: Keep track of what "
+"you input in a shopping cart; Essential: Authenticate that you are logged "
+"into your user account; Essential: Remember language version you selected;"
+msgstr ""
+"Важно: запомните настройки разрешений для файлов cookie; Essential: "
+"Разрешить сеансовые куки; Существенный: собирайте информацию, которую вы "
+"вводите в контактную форму, информационный бюллетень и другие формы на всех "
+"страницах; Важно: отслеживать, что вы вводите в корзину; Essential: "
+"аутентифицируйте, что вы вошли в свою учетную запись пользователя; "
+"Существенный: помните выбранную вами языковую версию;"
+
+#: includes/controller/controller-cookie.php:3495
+msgid ""
+"Remember your login details; Functionality: Remember social media settings; "
+"Functionality: Remember selected region and country; Analytics: Keep track "
+"of your visited pages and interaction taken; Analytics: Keep track about "
+"your location and region based on your IP number; Analytics: Keep track of "
+"the time spent on each page; Analytics: Increase the data quality of the "
+"statistics functions; Advertising: Tailor information and advertising to "
+"your interests based on e.g. the content you have visited before. (Currently "
+"we do not use targeting or targeting cookies.; Advertising: Gather "
+"personally identifiable information such as name and location;"
+msgstr ""
+"Помните свои данные для входа; Функциональность: Помните настройки "
+"социальных сетей; Функциональность: Помните выбранный регион и страну; "
+"Analytics: отслеживайте посещаемые страницы и принимайте участие; Аналитика. "
+"Следите за своим местоположением и регионом на основе вашего IP-номера; "
+"Аналитика: отслеживайте время, затрачиваемое на каждую страницу; Analytics: "
+"повышение качества данных статистических функций; Реклама: информация о "
+"вашем портфолио и реклама в ваших интересах на основе, например, контент, "
+"который вы посещали ранее. (В настоящее время мы не используем таргетинг или "
+"таргетинг на файлы cookie. Реклама: собирайте личную информацию, такую ​​как "
+"имя и местоположение;"
+
+#: includes/controller/controller-cookie.php:3496
+msgid ""
+"Essential: Remember your cookie permission setting; Essential: Allow session "
+"cookies; Essential: Gather information you input into a contact forms, "
+"newsletter and other forms across all pages; Essential: Keep track of what "
+"you input in a shopping cart; Essential: Authenticate that you are logged "
+"into your user account; Essential: Remember language version you selected; "
+"Functionality: Remember social media settings; Functionality: Remember "
+"selected region and country;"
+msgstr ""
+"Важно: запомните настройки разрешений для файлов cookie; Essential: "
+"Разрешить сеансовые куки; Существенный: собирайте информацию, которую вы "
+"вводите в контактную форму, информационный бюллетень и другие формы на всех "
+"страницах; Важно: отслеживать, что вы вводите в корзину; Essential: "
+"аутентифицируйте, что вы вошли в свою учетную запись пользователя; "
+"Существенный: помните выбранную вами языковую версию; Функциональность: "
+"Помните настройки социальных сетей; Функциональность: Помните выбранный "
+"регион и страну;"
+
+#: includes/controller/controller-cookie.php:3497
+msgid ""
+"Remember your login details; Analytics: Keep track of your visited pages and "
+"interaction taken; Analytics: Keep track about your location and region "
+"based on your IP number; Analytics: Keep track of the time spent on each "
+"page; Analytics: Increase the data quality of the statistics functions; "
+"Advertising: Tailor information and advertising to your interests based on e."
+"g. the content you have visited before. (Currently we do not use targeting "
+"or targeting cookies.; Advertising: Gather personally identifiable "
+"information such as name and location;"
+msgstr ""
+"Помните свои данные для входа; Analytics: отслеживайте посещаемые страницы и "
+"принимайте участие; Аналитика. Следите за своим местоположением и регионом "
+"на основе вашего IP-номера; Аналитика: отслеживайте время, затрачиваемое на "
+"каждую страницу; Analytics: повышение качества данных статистических "
+"функций; Реклама: информация о вашем портфолио и реклама в ваших интересах "
+"на основе, например, контент, который вы посещали ранее. (В настоящее время "
+"мы не используем таргетинг или таргетинг на файлы cookie. Реклама: собирайте "
+"личную информацию, такую ​​как имя и местоположение;"
+
+#: includes/controller/controller-cookie.php:3498
+msgid ""
+"Essential: Remember your cookie permission setting; Essential: Allow session "
+"cookies; Essential: Gather information you input into a contact forms, "
+"newsletter and other forms across all pages; Essential: Keep track of what "
+"you input in a shopping cart; Essential: Authenticate that you are logged "
+"into your user account; Essential: Remember language version you selected; "
+"Functionality: Remember social media settingsl Functionality: Remember "
+"selected region and country; Analytics: Keep track of your visited pages and "
+"interaction taken; Analytics: Keep track about your location and region "
+"based on your IP number; Analytics: Keep track of the time spent on each "
+"page; Analytics: Increase the data quality of the statistics functions;"
+msgstr ""
+"Важно: запомните настройки разрешений для файлов cookie; Essential: "
+"Разрешить сеансовые куки; Существенный: собирайте информацию, которую вы "
+"вводите в контактную форму, информационный бюллетень и другие формы на всех "
+"страницах; Важно: отслеживать, что вы вводите в корзину; Essential: "
+"аутентифицируйте, что вы вошли в свою учетную запись пользователя; "
+"Существенный: помните выбранную вами языковую версию; Функциональность: "
+"Помните настройки социальных сетей. Функциональность: Помните выбранный "
+"регион и страну; Analytics: отслеживайте посещаемые страницы и принимайте "
+"участие; Аналитика. Следите за своим местоположением и регионом на основе "
+"вашего IP-номера; Аналитика: отслеживайте время, затрачиваемое на каждую "
+"страницу; Analytics: повышение качества данных статистических функций;"
+
+#: includes/controller/controller-cookie.php:3499
+msgid ""
+"Remember your login details; Advertising: Use information for tailored "
+"advertising with third parties; Advertising: Allow you to connect to social "
+"sites; Advertising: Identify device you are using; Advertising: Gather "
+"personally identifiable information such as name and location"
+msgstr ""
+"Помните свои данные для входа; Реклама: используйте информацию для "
+"индивидуальной рекламы с третьими лицами; Реклама: Позволяет подключаться к "
+"социальным сайтам; Реклама: определение устройства, которое вы используете; "
+"Реклама: собирать личную информацию, такую ​​как имя и местоположение"
+
+#: includes/controller/controller-cookie.php:3500
+msgid ""
+"Essential: Remember your cookie permission setting; Essential: Allow session "
+"cookies; Essential: Gather information you input into a contact forms, "
+"newsletter and other forms across all pages; Essential: Keep track of what "
+"you input in a shopping cart; Essential: Authenticate that you are logged "
+"into your user account; Essential: Remember language version you selected; "
+"Functionality: Remember social media settingsl Functionality: Remember "
+"selected region and country; Analytics: Keep track of your visited pages and "
+"interaction taken; Analytics: Keep track about your location and region "
+"based on your IP number; Analytics: Keep track of the time spent on each "
+"page; Analytics: Increase the data quality of the statistics functions; "
+"Advertising: Use information for tailored advertising with third parties; "
+"Advertising: Allow you to connect to social sitesl Advertising: Identify "
+"device you are using; Advertising: Gather personally identifiable "
+"information such as name and location"
+msgstr ""
+"Важно: запомните настройки разрешений для файлов cookie; Essential: "
+"Разрешить сеансовые куки; Существенный: собирайте информацию, которую вы "
+"вводите в контактную форму, информационный бюллетень и другие формы на всех "
+"страницах; Важно: отслеживать, что вы вводите в корзину; Essential: "
+"аутентифицируйте, что вы вошли в свою учетную запись пользователя; "
+"Существенный: помните выбранную вами языковую версию; Функциональность: "
+"Помните настройки социальных сетей. Функциональность: Помните выбранный "
+"регион и страну; Analytics: отслеживайте посещаемые страницы и принимайте "
+"участие; Аналитика. Следите за своим местоположением и регионом на основе "
+"вашего IP-номера; Аналитика: отслеживайте время, затрачиваемое на каждую "
+"страницу; Analytics: повышение качества данных статистических функций; "
+"Реклама: используйте информацию для индивидуальной рекламы с третьими "
+"лицами; Реклама: Позволяет подключаться к социальным сайтам. Реклама: "
+"определение устройства, которое вы используете; Реклама: собирать личную "
+"информацию, такую ​​как имя и местоположение"
+
+#: includes/controller/controller-cookie.php:3501
+msgid "Remember your login details"
+msgstr "Запомнить ваши данные для входа"
+
+#: includes/controller/controller-cookie.php:3505
+msgid "This content requires cookies"
+msgstr "Этот контент требует куки"
+
+#: includes/controller/controller-cookie.php:4876
 msgid "Every week"
 msgstr "Каждую неделю"
 
-#: includes/controller/controller-cookie.php:4402
+#: includes/controller/controller-cookie.php:4880
 msgid "Every month"
 msgstr "Каждый месяц"
 
-#: includes/controller/controller-cookie.php:4406
+#: includes/controller/controller-cookie.php:4884
 msgid "Every quarter"
-msgstr "Раз в квартал"
+msgstr "Каждый квартал"
 
-#: includes/controller/controller-cookie.php:4477
+#: includes/controller/controller-cookie.php:4958
 #, php-format
 msgid "Cookies detected: %s, Cookies saved: %s"
 msgstr "Обнаружены файлы cookie: %s, сохраненные файлы cookie: %s"
 
-#: includes/controller/controller-cookie.php:4549
+#: includes/controller/controller-cookie.php:5028
 msgid ""
 "There was a problem with connecting to the cookie scanner. Please try again "
 "later."
@@ -1227,9 +1662,9 @@ msgstr ""
 "Возникла проблема с подключением к сканеру файлов cookie. Пожалуйста, "
 "повторите попытку позже."
 
-#: includes/controller/controller-breach.php:87
-#: includes/controller/controller-breach.php:88
-#: includes/controller/controller-breach.php:116
+#: includes/controller/controller-breach.php:98
+#: includes/controller/controller-breach.php:99
+#: includes/controller/controller-breach.php:127
 #: includes/views/admin/admin-forgotten.php:43
 #: includes/views/admin/admin-breach.php:36
 #: includes/views/admin/admin-data-access.php:47
@@ -1237,16 +1672,16 @@ msgstr ""
 msgid "Data Breach"
 msgstr "Утечка данных"
 
-#: includes/controller/controller-breach.php:141
+#: includes/controller/controller-breach.php:152
 msgid "Collect user emails from services"
 msgstr "Сбор сообщений эл. почты пользователей из услуг"
 
-#: includes/controller/controller-breach.php:212
+#: includes/controller/controller-breach.php:223
 #, php-format
 msgid "[Ultimate GDPR] Data breach information from %s"
-msgstr "[Основной GDPR] Информация об утечке данных  из %s"
+msgstr "[Ultimate GDPR] Информация об утечке данных  из %s"
 
-#: includes/controller/controller-breach.php:215
+#: includes/controller/controller-breach.php:226
 msgid "There was a data breach on our page..."
 msgstr "На вашей странице была утечка данных..."
 
@@ -1362,48 +1797,87 @@ msgid "Session or Persistent"
 msgstr "Сессионные или Постоянные"
 
 #: includes/service/service-quform.php:87
-#: includes/service/service-mailster.php:122
+#: includes/service/service-mailster.php:155
 #, php-format
 msgid "There were problems forgetting data for user: %s"
 msgstr "Возникли проблемы с забыванием данных пользователя: %s"
 
 #: includes/service/service-quform.php:115
 #: includes/service/service-bbpress.php:162
-#: includes/service/service-eform.php:128
-#: includes/service/service-formidable-forms.php:135
-#: includes/service/service-contact-form-7.php:74
+#: includes/service/service-wp-job-manager.php:78
+#: includes/service/service-wp-user.php:103
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:139
+#: includes/service/service-formcraft.php:101
+#: includes/service/service-wp-posts.php:116
+#: includes/service/service-eform.php:132
+#: includes/service/service-mailpoet.php:108
+#: includes/service/service-mailchimp.php:85
+#: includes/service/service-ninja-forms.php:62
+#: includes/service/service-gravity-forms.php:96
+#: includes/service/service-arforms.php:129
+#: includes/service/service-woocommerce.php:157
+#: includes/service/service-events-manager.php:110
+#: includes/service/service-formidable-forms.php:136
+#: includes/service/service-newsletter.php:148
+#: includes/service/service-contact-form-7.php:93
 #: includes/service/service-buddypress.php:334
-#: includes/service/service-mailster.php:150
+#: includes/service/service-flamingo.php:98
+#: includes/service/service-wp-foro.php:420
+#: includes/service/service-mailster.php:183
+#: includes/service/service-wp-comments.php:109
+#, php-format
+msgid "[%s] Name"
+msgstr "[%s] имя"
+
+#: includes/service/service-quform.php:123
+#: includes/service/service-bbpress.php:170
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:147
+#: includes/service/service-formcraft.php:109
+#: includes/service/service-eform.php:140
+#: includes/service/service-ninja-forms.php:70
+#: includes/service/service-formidable-forms.php:144
+#: includes/service/service-newsletter.php:156
+#: includes/service/service-contact-form-7.php:101
+#: includes/service/service-buddypress.php:342
+#: includes/service/service-ultimate-member.php:77
+#: includes/service/service-flamingo.php:106
+#: includes/service/service-wp-foro.php:428
+#: includes/service/service-mailster.php:191
 #, php-format
 msgid "[%s] Description"
 msgstr "[%s] Описание"
 
-#: includes/service/service-quform.php:124
-#: includes/service/service-bbpress.php:170
-#: includes/service/service-eform.php:137
-#: includes/service/service-gravity-forms.php:105
-#: includes/service/service-arforms.php:138
-#: includes/service/service-events-manager.php:111
-#: includes/service/service-formidable-forms.php:144
-#: includes/service/service-contact-form-7.php:83
-#: includes/service/service-buddypress.php:342
+#: includes/service/service-quform.php:132
+#: includes/service/service-bbpress.php:178
+#: includes/service/service-eform.php:149
+#: includes/service/service-ninja-forms.php:79
+#: includes/service/service-gravity-forms.php:113
+#: includes/service/service-arforms.php:146
+#: includes/service/service-events-manager.php:119
+#: includes/service/service-formidable-forms.php:153
+#: includes/service/service-newsletter.php:165
+#: includes/service/service-contact-form-7.php:110
+#: includes/service/service-buddypress.php:350
+#: includes/service/service-wp-foro.php:436
+#: includes/service/service-klaviyo.php:64
 #, php-format
 msgid "[%s] Inject consent checkbox to all forms"
 msgstr "[%s] Флажок \"ввести согласие\" на все формы"
 
-#: includes/service/service-quform.php:135
-#: includes/service/service-mailster.php:170
+#: includes/service/service-quform.php:143
+#: includes/service/service-mailster.php:211
 #, php-format
 msgid "[%s] Inject consent checkbox as the first field instead of the last"
 msgstr ""
 "[%s] флажок «Вставить согласие» в качестве первого поля вместо последнего"
 
-#: includes/service/service-quform.php:308
+#: includes/service/service-quform.php:318
 msgid "Quform gathers data entered by users in forms"
 msgstr "Quform собирает данные, которые пользователи вводят в виде форм"
 
-#: includes/service/service-bbpress.php:186
-#: includes/service/service-buddypress.php:352
+#: includes/service/service-bbpress.php:194
+#: includes/service/service-buddypress.php:360
+#: includes/service/service-wp-foro.php:452
 #, php-format
 msgid ""
 "[%s] Enter the existing user's email whom the posts will be reassigned to "
@@ -1412,69 +1886,72 @@ msgstr ""
 "[%s] Введите эл. адрес существующего пользователя кому будут перенаправлены "
 "сообщения (или оставьте пустое место, чтобы удалить их при забывании)"
 
-#: includes/service/service-bbpress.php:253
+#: includes/service/service-bbpress.php:266
 msgid "bbPress gathers users activity in forums"
 msgstr "bbPress собирает активность пользователей на форумах"
 
-#: includes/service/service-bbpress.php:284
-msgid "<strong>ERROR</strong>: Please consent to storage fo your data"
+#: includes/service/service-bbpress.php:297
+msgid "<strong>ERROR</strong>: Please consent to storage of your data"
 msgstr ""
 "<strong> ОШИБКА </ strong>. Пожалуйста, дайте согласие на хранение ваших "
-"данных"
+"данных."
 
 #: includes/service/service-wp-job-manager.php:50
 #, php-format
 msgid "Could not delete posts for user: %s"
 msgstr "Не удалось удалить сообщения для пользователя: %s"
 
-#: includes/service/service-wp-job-manager.php:78
+#: includes/service/service-wp-job-manager.php:86
 msgid "[WP Job Manager] Description"
 msgstr "[WP Job Manager] Описание"
 
-#: includes/service/service-wp-user.php:35
-#: includes/service/service-wp-user.php:79
-msgid "WP User Data"
-msgstr "WP Данные Пользователя"
+#: includes/service/service-wp-job-manager.php:129
+msgid "WP Job Manager gathers data entered by users in forms"
+msgstr "WP Job Manager собирает данные, введенные пользователями в формах"
 
-#: includes/service/service-wp-user.php:61
+#: includes/service/service-wp-user.php:69
 #: includes/service/service-buddypress.php:111
 #, php-format
 msgid "Could not delete user data for user: %s"
 msgstr "Нельза удалить данные пользователя для пользователя: %s"
 
-#: includes/service/service-wp-user.php:95
-msgid "[WP User Data] Description"
-msgstr "[WP Данные Пользователя] Описание"
+#: includes/service/service-wp-user.php:87
+msgid "WP User Data"
+msgstr "WP Данные Пользователя"
 
-#: includes/service/service-wp-user.php:103
-msgid "[WP User Data] Pseudonymize first and last name"
-msgstr "[WP Данные Пользователя]Псевдонимизирует первое и последнее имя"
+#: includes/service/service-wp-user.php:111
+msgid "[WP User Data] Description"
+msgstr "[WP User Data] Описание"
 
 #: includes/service/service-wp-user.php:119
+msgid "[WP User Data] Pseudonymize first and last name"
+msgstr "[WP User Data] Псевдонимизирует первое и последнее имя"
+
+#: includes/service/service-wp-user.php:135
 msgid "[WP User] Inject consent checkbox to User network signup form fields"
 msgstr ""
-"[WP Пользователь] Установите флажок \"согласие\" для полей формы регистрации "
+"[WP User] Установите флажок \"согласие\" для полей формы регистрации "
 "Пользователей в сети"
 
-#: includes/service/service-wp-user.php:127
+#: includes/service/service-wp-user.php:143
 msgid "[WP User] Inject consent checkbox to User register form fields"
 msgstr ""
 "[WP User] Вставка согласия пользователя в поле формы регистра пользователя"
 
-#: includes/service/service-wp-user.php:135
+#: includes/service/service-wp-user.php:151
 msgid "[WP User] Inject consent checkbox to lost password form fields"
 msgstr ""
-"[WP Пользователь] Установите флажок \"согласие\" полей форм с утерянными "
-"паролями"
+"[WP User] Установите флажок \"согласие\" полей форм с утерянными паролями"
 
-#: includes/service/service-wp-user.php:295
-#: includes/service/service-wp-user.php:315
-#: includes/service/service-wp-user.php:335
-#: includes/service/service-woocommerce.php:403
+#: includes/service/service-wp-user.php:312
+#: includes/service/service-wp-user.php:332
+#: includes/service/service-wp-user.php:352
+#: includes/service/service-woocommerce.php:478
+#: includes/service/service-ultimate-member.php:126
 msgid "Consent is required"
 msgstr "Требуется согласие"
 
-#: includes/service/service-wp-user.php:388
+#: includes/service/service-wp-user.php:405
 msgid "WordPress user data stored as user meta data in database"
 msgstr ""
 "WordPress Данные Пользвателя хранятся в базе данных как мета данные "
@@ -1488,13 +1965,13 @@ msgstr ""
 "[%s] Блокировать cookie Wordfence, когда пользователь не принимает файлы "
 "cookie Functionality"
 
-#: includes/service/service-wp-simple-paypal-shopping-cart.php:159
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:167
 msgid "[WP Simple Paypal Shopping Cart] Pseudonymize user order data"
 msgstr ""
 "[WP Simple Paypal Shopping Cart] Псевдонимизировать данные заказа "
 "пользователя"
 
-#: includes/service/service-wp-simple-paypal-shopping-cart.php:242
+#: includes/service/service-wp-simple-paypal-shopping-cart.php:254
 msgid "WP Simple Paypal Shopping Cart gathers consumer orders data"
 msgstr ""
 "WP Simple Paypal Shopping Cart собирает данные о потребительских заказах"
@@ -1505,11 +1982,11 @@ msgstr ""
 "[Youtube] Удалите youtube iframes до тех пор, пока не будут приняты "
 "Необходимые сookie"
 
-#: includes/service/service-youtube.php:135
+#: includes/service/service-youtube.php:151
 msgid "Youtube creates cookies"
 msgstr "Youtube создает сookies"
 
-#: includes/service/service-facebook-pixel.php:101
+#: includes/service/service-facebook-pixel.php:110
 #, php-format
 msgid ""
 "[%s] Block Facebook Pixel cookies when a user doesn't accept Advertising "
@@ -1518,9 +1995,10 @@ msgstr ""
 "[%s] Блокировать Пиксель Facebook cookies, если пользователь не принимает "
 "Рекламные файлы cookies"
 
-#: includes/service/service-wp-posts.php:29
-msgid "WordPress Posts"
-msgstr "WordPress Сообщения"
+#: includes/service/service-formcraft.php:127
+#: includes/service/service-formidable-forms.php:320
+msgid "Formidable Forms gathers data entered by users in forms"
+msgstr "Formidable Forms собирает данные,которые пользователь вносит в формы"
 
 #: includes/service/service-wp-posts.php:82
 #, php-format
@@ -1531,54 +2009,71 @@ msgstr "Нельзя обновить данные по сообщениям д�
 msgid "[WP Posts] Delete posts instead of reassigning to a different user?"
 msgstr "[WP Posts] Удалить посты или переадресовать их другому пользователю?"
 
-#: includes/service/service-wp-posts.php:116
-msgid "[WordPress Posts] Description"
-msgstr "[Сообщения WP] Описание"
-
 #: includes/service/service-wp-posts.php:124
+msgid "[WordPress Posts] Description"
+msgstr "[WordPress Posts] Описание"
+
+#: includes/service/service-wp-posts.php:132
 msgid ""
 "[WP Posts] Enter the user email whom the posts will be reassigned to "
 "(default is admin)"
 msgstr ""
-"[Сообщения WP] Введите эл. почту пользователя, которому сообщения будут "
+"[WP Posts] Введите эл. почту пользователя, которому сообщения будут "
 "перенаправлены (по умолчанию - админу)"
 
-#: includes/service/service-wp-posts.php:182
+#: includes/service/service-wp-posts.php:190
 msgid "WordPress posts author data"
 msgstr "WordPress данные по автору сообщений"
 
-#: includes/service/service-eform.php:233
+#: includes/service/service-eform.php:245
 msgid "eForm gathers data entered by users in forms"
 msgstr "eForm собирает данные, введенные пользователями в формах"
 
-#: includes/service/service-mailchimp.php:76
+#. ID
+#: includes/service/service-mailpoet.php:116
+msgid "[Mailpoet] Description"
+msgstr "[Mailpoet] Описание"
+
+#: includes/service/service-mailpoet.php:124
+msgid "Mailpoet"
+msgstr "Mailpoet"
+
+#: includes/service/service-mailpoet.php:224
+msgid "Mailpoet gathers data entered by users in forms"
+msgstr "Mailpoet собирает данные, введенные пользователями в формах"
+
+#: includes/service/service-mailchimp.php:93
 msgid "[Mailchimp] Description"
 msgstr "[Mailchimp] Описание"
 
-#: includes/service/service-mailchimp.php:84
+#: includes/service/service-mailchimp.php:101
 msgid "[Mailchimp] Inject consent checkbox to order fields"
 msgstr "[Mailchimp]Флажок \"ввести согласие\" ставится, чтобы заказать поля"
 
-#: includes/service/service-mailchimp.php:92
+#: includes/service/service-mailchimp.php:109
 msgid ""
 "[Mailchimp] Inject consent checkbox as the first field instead of the last"
 msgstr ""
 "[Mailchimp] Флажок \"ввести согласие\" ставится на первое поле, а не на "
 "последнее"
 
-#: includes/service/service-mailchimp.php:177
+#: includes/service/service-mailchimp.php:214
 msgid "Consent is mandatory to proceed"
 msgstr "Согласие обязательно для продолжения"
 
-#: includes/service/service-mailchimp.php:187
+#: includes/service/service-mailchimp.php:228
 msgid "Mailchimp gathers data entered by users in forms"
 msgstr "Mailchimp собирает данные, которые пользователь вносит в формы"
 
-#: includes/service/service-gravity-forms.php:96
+#: includes/service/service-ninja-forms.php:137
+msgid "Ninja Forms gathers data entered by users in forms"
+msgstr "Ninja Forms собирает данные, введенные пользователями в формах"
+
+#: includes/service/service-gravity-forms.php:104
 msgid "[Gravity Forms] Description"
 msgstr "[Гравитационные Формы] Описание"
 
-#: includes/service/service-gravity-forms.php:115
+#: includes/service/service-gravity-forms.php:123
 msgid ""
 "[Gravity Forms] Inject consent checkbox as the first field instead of the "
 "last"
@@ -1586,91 +2081,120 @@ msgstr ""
 "[Гравитационные Формы] Флажок \"ввести согласие\" ставится на первое поле, а "
 "не на последнее"
 
-#: includes/service/service-gravity-forms.php:123
+#: includes/service/service-gravity-forms.php:131
 msgid "Gravity Forms"
 msgstr "Гравитационные Формы"
 
-#: includes/service/service-gravity-forms.php:253
-#: includes/service/service-gravity-forms.php:254
+#: includes/service/service-gravity-forms.php:265
 #: includes/views/admin/admin-plugins.php:94
 #: includes/views/admin/admin-plugins.php:112
 msgid "Yes"
 msgstr "Да"
 
-#: includes/service/service-gravity-forms.php:308
+#: includes/service/service-gravity-forms.php:323
 msgid "Gravity forms gathers data entered by users in forms"
 msgstr ""
 "Гравитационные Формы собирают данные, которые пользователь вносит в формы"
 
-#: includes/service/service-arforms.php:129
+#: includes/service/service-arforms.php:137
 msgid "[ARForms] Description"
 msgstr "[ARForms] Описание"
 
-#: includes/service/service-arforms.php:148
+#: includes/service/service-arforms.php:156
 msgid "ARForms"
 msgstr "ARForms"
 
-#: includes/service/service-arforms.php:260
+#: includes/service/service-arforms.php:272
 msgid "ARForms gathers data entered by users in forms"
 msgstr "ARForms собирает данные, введенные пользователями в формах"
 
-#: includes/service/service-woocommerce.php:74
-#: includes/service/service-woocommerce.php:149
-#: includes/service/service-woocommerce.php:181
-msgid "WooCommerce"
-msgstr "WooCommerce"
-
-#: includes/service/service-woocommerce.php:157
+#: includes/service/service-woocommerce.php:165
 msgid "[WooCommerce] Description"
 msgstr "[WooCommerce] Описание"
 
-#: includes/service/service-woocommerce.php:165
-msgid "[WooCommerce] Inject consent checkbox to order fields"
-msgstr "[WooCommerce]Флажок \"ввести согласие\" ставится, чтобы заказать поля"
-
 #: includes/service/service-woocommerce.php:173
-msgid "[WooCommerce] Inject consent checkbox to account forms"
-msgstr "[WooCommerce]Флажок \"ввести согласие\" ставится, чтобы заказать поля"
+msgid "[WooCommerce] Inject consent checkbox to order fields"
+msgstr "[WooCommerce] Флажок \"ввести согласие\" ставится, чтобы заказать поля"
 
+#: includes/service/service-woocommerce.php:181
+msgid "[WooCommerce] Inject consent checkbox to account forms"
+msgstr "[WooCommerce] Флажок \"ввести согласие\" ставится, чтобы заказать поля"
+
+#. ID
 #: includes/service/service-woocommerce.php:189
+msgid "[WooCommerce] Inject consent checkbox to checkout"
+msgstr "[WooCommerce] Включение согласия для проверки"
+
+#: includes/service/service-woocommerce.php:197
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/service/service-woocommerce.php:205
 msgid "[WooCommerce] Pseudonymize first and last name"
 msgstr "[WooCommerce] Псевдонимизирует первое и последнее имя"
 
-#: includes/service/service-woocommerce.php:197
+#: includes/service/service-woocommerce.php:213
 msgid "[WooCommerce] Pseudonymize address information"
-msgstr "[WooCommerce]Псевдонимизиурет информацию об адресе"
+msgstr "[WooCommerce] Псевдонимизиурет информацию об адресе"
 
-#: includes/service/service-woocommerce.php:205
+#: includes/service/service-woocommerce.php:221
 msgid "[WooCommerce] Pseudonymize billing email"
-msgstr "[WooCommerce]Псевдонимизирует сообщение эл. почты о выставлении счета"
+msgstr "[WooCommerce] Псевдонимизирует сообщение эл. почты о выставлении счета"
 
-#: includes/service/service-woocommerce.php:386
-#: includes/service/service-events-manager.php:171
-#: includes/service/service-formidable-forms.php:246
+#: includes/service/service-woocommerce.php:461
+#: includes/service/service-events-manager.php:179
+#: includes/service/service-formidable-forms.php:255
 msgid "Consent"
 msgstr "Согласие"
 
-#: includes/service/service-woocommerce.php:488
+#: includes/service/service-woocommerce.php:591
 msgid "WooCommerce gathers data entered by users in shop orders"
 msgstr ""
 "WooCommerce обирает данные, которые пользователи вносят в бланки заказов в "
 "магзинах"
 
-#: includes/service/service-events-manager.php:102
-msgid "[Events Manager] Description"
-msgstr "[Менеджер событий] Описание"
+#: includes/service/service-google-analytics.php:56
+msgid ""
+"Google Analytics Tracking ID (disable tracking for this ID when cookies "
+"consent not given), eg. UA-118586768-1"
+msgstr ""
+"Идентификатор отслеживания Google Analytics (отключить отслеживание для "
+"этого идентификатора, если согласие cookie не указано), например. "
+"UA-118586768-1"
 
-#: includes/service/service-events-manager.php:170
+#: includes/service/service-google-analytics.php:65
+#, php-format
+msgid ""
+"Enable Google Analytics anonymized IP tracking (<a href='%s' "
+"target='_blank'>read more</a>)"
+msgstr ""
+"Включить анонимное отслеживание IP-адресов Google Analytics (<a href='%s' "
+"target='_blank'> читать дальше </a>)"
+
+#: includes/service/service-google-analytics.php:73
+#, php-format
+msgid ""
+"Please note that even when enabled, Ultimate GDPR will still block Google "
+"Analytics without user consent. If you would like to track anonymously users "
+"without accepting cookies, please <a href='%s' target='_blank'>read more "
+"here</a>."
+msgstr ""
+"Обратите внимание, что даже при включении Ultimate GDPR все равно будет "
+"блокировать Google Analytics без согласия пользователя. Если вы хотите "
+"отслеживать анонимных пользователей без принятия куки-файлов, пожалуйста, <a "
+"href='%s' target='_blank'> прочитайте больше здесь </a>."
+
+#: includes/service/service-events-manager.php:178
 #, php-format
 msgid "%s is required."
 msgstr "требуется %s."
 
-#: includes/service/service-events-manager.php:185
+#: includes/service/service-events-manager.php:194
 msgid "Events Manager gathers data entered by users in booking order forms"
 msgstr ""
 "Менеджер событий собирает данные, которые пользователь вносит бланки заказов"
 
-#: includes/service/service-formidable-forms.php:154
+#: includes/service/service-formidable-forms.php:163
 msgid ""
 "[Formidable Forms] Inject consent checkbox as the first field instead of the "
 "last"
@@ -1678,14 +2202,28 @@ msgstr ""
 "[Formidable Forms]Флажок \"ввести согласие\" ставится на первое поле, а не "
 "на последнее"
 
-#: includes/service/service-formidable-forms.php:222
-#: includes/service/service-formidable-forms.php:265
+#: includes/service/service-formidable-forms.php:231
+#: includes/service/service-formidable-forms.php:274
 msgid "This field is required"
 msgstr "Данное поле обязательно"
 
-#: includes/service/service-formidable-forms.php:311
-msgid "Formidable Forms gathers data entered by users in forms"
-msgstr "Formidable Forms собирает данные,которые пользователь вносит в формы"
+#. ID
+#: includes/service/service-newsletter.php:175
+msgid ""
+"[Newsletter] Inject consent checkbox as the first field instead of the last"
+msgstr ""
+"[Newsletter] Установите флажок «Вставить согласие» в качестве первого поля "
+"вместо последнего"
+
+#: includes/service/service-newsletter.php:183
+msgid "Newsletter"
+msgstr "Новостная рассылка"
+
+#: includes/service/service-newsletter.php:349
+msgid "Newsletter gathers data entered by users in newsletter forms"
+msgstr ""
+"Информационный бюллетень собирает данные, введенные пользователями в форме "
+"бюллетеня"
 
 #: includes/service/service-addthis.php:93
 #, php-format
@@ -1695,7 +2233,7 @@ msgstr ""
 "[%s] Блокировать Добавление этих cookies файлов, если пользователь не "
 "принимает Функциональные файлы cookies"
 
-#: includes/service/service-contact-form-7.php:93
+#: includes/service/service-contact-form-7.php:120
 msgid ""
 "[Contact Form 7] Inject consent checkbox as the first field instead of the "
 "last"
@@ -1703,7 +2241,7 @@ msgstr ""
 "[Contact Form 7] Флажок \"ввести согласие\" ставится на первое поле, а не на "
 "последнее"
 
-#: includes/service/service-contact-form-7.php:169
+#: includes/service/service-contact-form-7.php:196
 msgid "Contact Form 7 gathers data entered by users in forms"
 msgstr "Contact Form 7 собирает данные, которые пользователь вносит в формы"
 
@@ -1721,37 +2259,52 @@ msgstr "Contact Form 7 собирает данные, которые польз�
 msgid "Could not reassign user data for user: %s"
 msgstr "Нельзя переназначить данные пользователя для пользователя:%s"
 
-#: includes/service/service-buddypress.php:420
+#: includes/service/service-buddypress.php:428
 msgid "BuddyPress gathers users activity in profile pages and groups"
 msgstr ""
 "BuddyPress собирает информацию об активности пользователя на профильных "
 "страницах и в группах"
 
-#: includes/service/service-mailster.php:159
+#. ID
+#: includes/service/service-ultimate-member.php:85
+msgid "Inject consent checkbox to all forms"
+msgstr "Вставка согласия для всех форм"
+
+#: includes/service/service-ultimate-member.php:164
+#, php-format
+msgid "%s gathers data entered by users in forms"
+msgstr "%s собирает данные, введенные пользователями в формах"
+
+#: includes/service/service-flamingo.php:124
+msgid "Flamingo gathers data entered by users in CF7 forms"
+msgstr "Flamingo собирает данные, введенные пользователями в формах CF7"
+
+#: includes/service/service-wp-foro.php:518
+msgid "wpForo gathers users activity in forums"
+msgstr "wpForo собирает активность пользователей на форумах"
+
+#: includes/service/service-mailster.php:200
+#: includes/service/service-metorik-helper.php:87
 #, php-format
 msgid "[%s] Inject consent checkbox to subscribe forms"
 msgstr "[%s] Установите флажок «Вставить согласие», чтобы подписаться на формы"
 
-#: includes/service/service-mailster.php:181
+#: includes/service/service-mailster.php:222
 #, php-format
 msgid "[%s] Inject consent checkbox to unsubscribe forms"
 msgstr "[%s] флажок «Вставить согласие» для отмены подписки"
 
-#: includes/service/service-mailster.php:192
+#: includes/service/service-mailster.php:233
 msgid "Mailster"
 msgstr "Заголовок эл.почты"
 
-#: includes/service/service-mailster.php:389
+#: includes/service/service-mailster.php:447
 msgid "Consent is missing"
 msgstr "Согласие отсутствует"
 
-#: includes/service/service-mailster.php:400
+#: includes/service/service-mailster.php:460
 msgid "Mailster collects signed in user data"
 msgstr "Mailster собирает данные пользователя, выполнившего вход"
-
-#: includes/service/service-wp-comments.php:40
-msgid "WP Comments"
-msgstr "WP Комментарий"
 
 #: includes/service/service-wp-comments.php:71
 msgid "Anonymous"
@@ -1762,21 +2315,21 @@ msgstr "Анонимно"
 msgid "Could not update comment data for comments: %s"
 msgstr "Нельзя обновить данные по комментариям для комментарий: %s"
 
-#: includes/service/service-wp-comments.php:109
+#: includes/service/service-wp-comments.php:116
 msgid "[WP Comments] Description"
 msgstr "[WP Comments] Описание"
 
-#: includes/service/service-wp-comments.php:117
+#: includes/service/service-wp-comments.php:124
 msgid "[WP Comments] Inject consent checkbox to comments fields"
 msgstr ""
 "[WP Comments] Флажок \"ввести согласие\" ставится, чтобы прокомментировать "
 "поля"
 
-#: includes/service/service-wp-comments.php:179
+#: includes/service/service-wp-comments.php:186
 msgid "Please give consent to collect your data"
 msgstr "Пожалуйста, дайте свое согласие на сбор данных"
 
-#: includes/service/service-wp-comments.php:188
+#: includes/service/service-wp-comments.php:197
 msgid "WordPress Comments are data entered by users in comments"
 msgstr ""
 "Комментарии WordPress - это данные, которые пользователи вносят в комментраии"
@@ -1801,27 +2354,27 @@ msgstr "Невозможно получить новую версию инфор
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:337
 msgid "Install Required Plugins"
-msgstr "Установить Необходимые Плагины"
+msgstr "Установка необходимых плагинов"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:338
 msgid "Install Plugins"
-msgstr "Установить Плагины"
+msgstr "Установка плагинов"
 
-#. translators: %s: plugin name.
+#. %s: plugin name.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:340
 #, php-format
 msgid "Installing Plugin: %s"
-msgstr "Установка Плагина: %s"
+msgstr "Установка плагина: %s"
 
-#. translators: %s: plugin name.
+#. %s: plugin name.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:342
 #, php-format
 msgid "Updating Plugin: %s"
-msgstr "Обновление Плагина: %s"
+msgstr "Обновление плагина: %s"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:343
 msgid "Something went wrong with the plugin API."
-msgstr "Возникли проблемы с плагином API."
+msgstr "Что-то пошло не так с API-интерфейсом плагина."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:344
 #, php-format
@@ -1881,37 +2434,36 @@ msgstr[0] "Следующий рекомендуемый плагин в нас�
 msgstr[1] "Следующие рекомендуемые плагины в настоящее время неактивны: %1$s."
 msgstr[2] "Следующие рекомендуемые плагины в настоящее время неактивны: %1$s."
 
-#. translators: 1: plugin name(s).
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:380
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] "Начать установку плагина"
-msgstr[1] "Начать установку плагина"
-msgstr[2] "Начать установку плагина"
+msgstr[1] "Начать установку плагинов"
+msgstr[2] "Начать установку плагинов"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:385
 msgid "Begin updating plugin"
 msgid_plural "Begin updating plugins"
 msgstr[0] "Начать обновление плагина"
-msgstr[1] "Начать обновление плагина"
-msgstr[2] "Начать обновление плагина"
+msgstr[1] "Начать обновление плагинов"
+msgstr[2] "Начать обновление плагинов"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:390
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] "Начать активацию плагина"
-msgstr[1] "Начать активацию плагина"
-msgstr[2] "Начать активацию плагина"
+msgstr[1] "Начать активацию плагинов"
+msgstr[2] "Начать активацию плагинов"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:395
 msgid "Return to Required Plugins Installer"
-msgstr "Вернуться к Установщику Необходимых Плагинов"
+msgstr "Вернитесь к установщику обязательных подключаемых модулей"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:396
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:919
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3675
 msgid "Return to the Dashboard"
-msgstr "Вернуться в Dashboard"
+msgstr "Вернуться на панель инструментов"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:397
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3254
@@ -1921,45 +2473,48 @@ msgstr "Плагин успешно активирован."
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:398
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3047
 msgid "The following plugin was activated successfully:"
-msgstr "Данный плагин был успешно активирован:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] "Следующий плагин был успешно активирован:"
+msgstr[1] "Следующие плагины были успешно активированы:"
+msgstr[2] "Следующие плагины были успешно активированы:"
 
-#. translators: 1: plugin name.
+#. 1: plugin name.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:400
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
-msgstr "Никаких действий не предпринималось. Плагин %1$s уже был активен."
+msgstr "Никаких действий не принимается. Плагин %1$s уже активирован."
 
-#. translators: 1: plugin name.
+#. 1: plugin name.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:402
 #, php-format
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 msgstr ""
-"Плагин не активирован. Для этой темы требуется более высокая версия %s. "
-"Пожалуйста, обновите плагин."
+"Плагин не активирован. Для этой темы требуется более высокая версия% s. "
+"Обновите плагин."
 
-#. translators: 1: dashboard link.
+#. 1: dashboard link.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:404
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
-msgstr "Все плагины успешно установлены и активированы. %1$s"
+msgstr "Все плагины установлены и успешно активированы. %1$s"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:405
 msgid "Dismiss this notice"
-msgstr "Пропустить данное уведомление"
+msgstr "Закрыть это уведомление"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:406
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
 "activate."
 msgstr ""
-"Необходимо или рекомендуется установить, обновить или активировать один или "
-"более плагинов."
+"Для установки, обновления или активации есть один или несколько обязательных "
+"или рекомендуемых модулей."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:407
 msgid "Please contact the administrator of this site for help."
-msgstr "Пожалуйста, обратитесь за помощью к администратору этого сайта."
+msgstr "Обратитесь за помощью к администратору этого сайта."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:610
 #: vendor/optimus-prime-plugin-update/settings.php:80
@@ -1973,22 +2528,23 @@ msgstr "Требуется Обновление"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:728
 msgid "Set the parent_slug config variable instead."
-msgstr "Вместо этого установите родительской переменную конфигурации slug."
+msgstr ""
+"Вместо этого установите вместо этого конфигурационную переменную parent_slug."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:922
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1053
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2627
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3678
 msgid "Return to Dashboard"
-msgstr "Вернитесь в Dashboard"
+msgstr "Вернуться в панель инструментов"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1026
 msgid ""
 "The remote plugin package does not contain a folder with the desired slug "
 "and renaming did not work."
 msgstr ""
-"Пакет удаленного плагина не содержит папки с нужным slug, и переименование "
-"не произошло."
+"Пакет удаленных плагинов не содержит папку с желаемым слизнем, и "
+"переименование не работает."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1026
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1029
@@ -1996,24 +2552,24 @@ msgid ""
 "Please contact the plugin provider and ask them to package their plugin "
 "according to the WordPress guidelines."
 msgstr ""
-"Пожалуйста, свяжитесь с провайдером плагина и попросите их упаковать свой "
-"плагин в соответствии с WordPress рекомендациями."
+"Обратитесь к поставщику плагинов и попросите их упаковать их плагин в "
+"соответствии с рекомендациями WordPress."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1029
 msgid ""
 "The remote plugin package consists of more than one file, but the files are "
 "not packaged in a folder."
 msgstr ""
-"Пакет удаленного плагина содержит более одного файла, но фалы не упакованы в "
-"папку."
+"Пакет удаленных плагинов состоит из нескольких файлов, но файлы не упакованы "
+"в папку."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:1213
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3043
 msgctxt "plugin A *and* plugin B"
 msgid "and"
-msgstr "v"
+msgstr "а также"
 
-#. translators: %s: version number
+#. %s: version number
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2076
 #, php-format
 msgid "TGMPA v%s"
@@ -2021,56 +2577,56 @@ msgstr "TGMPA v%s"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2367
 msgid "Required"
-msgstr "Необходимо"
+msgstr "необходимые"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2370
 msgid "Recommended"
-msgstr "Рекомендуется"
+msgstr "Pекомендуемые"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2386
 msgid "WordPress Repository"
-msgstr "WordPress Хранилище"
+msgstr "Репозиторий WordPress"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2389
 msgid "External Source"
-msgstr "Внешний Источник"
+msgstr "Внешний источник"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2392
 msgid "Pre-Packaged"
-msgstr "Предварительно Упакованный"
+msgstr "Расфасованных"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2409
 msgid "Not Installed"
-msgstr "Не установлено"
+msgstr "Не установлен"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2413
 msgid "Installed But Not Activated"
-msgstr "Установлено, но Не Активировано"
+msgstr "Установленные но не активированы"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2415
 msgid "Active"
-msgstr "Активно"
+msgstr "активный"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2421
 msgid "Required Update not Available"
-msgstr "Необходимое Обновление Недоступно"
+msgstr "Требуемое обновление недоступно"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2424
 msgid "Requires Update"
-msgstr "Требуется Обновление"
+msgstr "Требуется обновление"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2427
 msgid "Update recommended"
-msgstr "Рекомендуется Обновить"
+msgstr "Рекомендованное обновление"
 
-#. translators: 1: install status, 2: update status
+#. 1: install status, 2: update status
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2436
 #, php-format
 msgctxt "Install/Update Status"
 msgid "%1$s, %2$s"
 msgstr "%1$s, %2$s"
 
-#. translators: 1: number of plugins.
+#. 1: number of plugins.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2482
 #, php-format
 msgctxt "plugins"
@@ -2080,45 +2636,45 @@ msgstr[0] "Все <span class=\"count\">(%s)</span>"
 msgstr[1] "Все <span class=\"count\">(%s)</span>"
 msgstr[2] "Все <span class=\"count\">(%s)</span>"
 
-#. translators: 1: number of plugins.
+#. 1: number of plugins.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2486
 #, php-format
 msgid "To Install <span class=\"count\">(%s)</span>"
 msgid_plural "To Install <span class=\"count\">(%s)</span>"
-msgstr[0] "Чтобы Установить<span class=\"count\">(%s)</span>"
-msgstr[1] "Чтобы Установить<span class=\"count\">(%s)</span>"
-msgstr[2] "Чтобы Установить<span class=\"count\">(%s)</span>"
+msgstr[0] "Установить <span class=\"count\">(%s)</span>"
+msgstr[1] "Установить <span class=\"count\">(%s)</span>"
+msgstr[2] "Установить <span class=\"count\">(%s)</span>"
 
-#. translators: 1: number of plugins.
+#. 1: number of plugins.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2490
 #, php-format
 msgid "Update Available <span class=\"count\">(%s)</span>"
 msgid_plural "Update Available <span class=\"count\">(%s)</span>"
-msgstr[0] "Обновление Доступно <span class=\"count\">(%s)</span>"
-msgstr[1] "Обновление Доступно <span class=\"count\">(%s)</span>"
-msgstr[2] "Обновление Доступно <span class=\"count\">(%s)</span>"
+msgstr[0] "Доступно обновление <span class=\"count\">(%s)</span>"
+msgstr[1] "Доступно обновление <span class=\"count\">(%s)</span>"
+msgstr[2] "Доступно обновление <span class=\"count\">(%s)</span>"
 
-#. translators: 1: number of plugins.
+#. 1: number of plugins.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2494
 #, php-format
 msgid "To Activate <span class=\"count\">(%s)</span>"
 msgid_plural "To Activate <span class=\"count\">(%s)</span>"
-msgstr[0] "Чтобы Активировать <span class=\"count\">(%s)</span>"
-msgstr[1] "Чтобы Активировать <span class=\"count\">(%s)</span>"
-msgstr[2] "Чтобы Активировать <span class=\"count\">(%s)</span>"
+msgstr[0] "Активировать <span class=\"count\">(%s)</span>"
+msgstr[1] "Активировать <span class=\"count\">(%s)</span>"
+msgstr[2] "Активировать <span class=\"count\">(%s)</span>"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2576
 msgctxt "as in: \"version nr unknown\""
 msgid "unknown"
-msgstr "неизвестно"
+msgstr "неизвестный"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2584
 msgid "Installed version:"
-msgstr "Установлена версия:"
+msgstr "Установленная версия:"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2592
 msgid "Minimum required version:"
-msgstr "Минимальная необходимая версия:"
+msgstr "Минимальная требуемая версия:"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2604
 msgid "Available version:"
@@ -2138,110 +2694,106 @@ msgstr "Версия"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2648
 msgid "Status"
-msgstr "Статус"
+msgstr "Положение дел"
 
-#. translators: %2$s: plugin name in screen reader markup
+#. %2$s: plugin name in screen reader markup
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2697
 #, php-format
 msgid "Install %2$s"
-msgstr "Установить %2$s"
+msgstr "устанавливать %2$s"
 
-#. translators: %2$s: plugin name in screen reader markup
+#. %2$s: plugin name in screen reader markup
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2702
 #, php-format
 msgid "Update %2$s"
 msgstr "Обновить %2$s"
 
-#. translators: %2$s: plugin name in screen reader markup
+#. %2$s: plugin name in screen reader markup
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2708
 #, php-format
 msgid "Activate %2$s"
-msgstr "Активировать %2$s"
+msgstr "активировать %2$s"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2778
 msgid "Upgrade message from the plugin author:"
-msgstr "Сообщение об обновлении от автора плагина:"
+msgstr "Обновить сообщение от автора плагина:"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2811
 msgid "Install"
-msgstr "Установить"
-
-#: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2818
-msgid "Update"
-msgstr "Обновить"
+msgstr "устанавливать"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2821
 msgid "Activate"
-msgstr "Активировать"
+msgstr "активировать"
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2852
 msgid "No plugins were selected to be installed. No action taken."
 msgstr ""
-"Плагины для установки не были выбраны. Никаких действий не предпринималось."
+"Плагины не были выбраны для установки. Никаких действий не принимается."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2854
 msgid "No plugins were selected to be updated. No action taken."
 msgstr ""
-"Плагины для обновления не были выбраны. Никаких действий не предпринималось."
+"Плагины не были выбраны для обновления. Никаких действий не принимается."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2895
 msgid "No plugins are available to be installed at this time."
-msgstr "На данный момент плагины не доступны для установки."
+msgstr "В настоящее время плагины не доступны для установки."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:2897
 msgid "No plugins are available to be updated at this time."
-msgstr "На данный момент плагины не доступны для обновления."
+msgstr "В настоящее время плагины не доступны для обновления."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3003
 msgid "No plugins were selected to be activated. No action taken."
 msgstr ""
-"Плагины для активации не были выбраны. Никаких действий не предпринималось."
+"Плагины не были выбраны для активации. Никаких действий не принимается."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3029
 msgid "No plugins are available to be activated at this time."
-msgstr "На данный момент плагины не доступны для активации."
+msgstr "В настоящее время плагины недоступны."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3253
 msgid "Plugin activation failed."
-msgstr "Ошибка активации плагина."
+msgstr "Не удалось активировать плагин."
 
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#. 1: plugin name, 2: action number 3: total number of actions.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3593
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr "Обновление Плагина %1$s (%2$d/%3$d)"
+msgstr "Обновление плагина %1$s (%2$d/%3$d)"
 
-#. translators: 1: plugin name, 2: error message.
+#. 1: plugin name, 2: error message.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3596
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr "Произошла ошибка при установке %1$s: <strong>%2$s</strong>."
+msgstr "При установке %1$s произошла ошибка: <strong>%2$s</ strong>."
 
-#. translators: 1: plugin name.
+#. 1: plugin name.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3598
 #, php-format
 msgid "The installation of %1$s failed."
-msgstr "Ошибка установки %1$s."
+msgstr "Не удалось выполнить установку %1$s."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3602
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
-"Начинается процесс установки и активации. Он может занять некоторое время на "
-"некоторых хостах, поэтому, пожалуйста, подождите немного."
+"Запускается процесс установки и активации. Этот процесс может занять "
+"некоторое время на некоторых хостах, поэтому, пожалуйста, будьте терпеливы."
 
-#. translators: 1: plugin name.
+#. 1: plugin name.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3604
 #, php-format
 msgid "%1$s installed and activated successfully."
-msgstr "%1$s успешно установлено и активировано."
+msgstr "%1$s установлено и успешно активировано."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3605
 msgid "All installations and activations have been completed."
-msgstr "Все установки и активация завершены."
+msgstr "Все установки и активации завершены."
 
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#. 1: plugin name, 2: action number 3: total number of actions.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3607
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
@@ -2252,10 +2804,10 @@ msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
-"Процесс установки начинается. Он может занять некоторое время на некоторых "
-"хостах, поэтому, пожалуйста, подождите немного."
+"Процесс установки начинается. Этот процесс может занять некоторое время на "
+"некоторых хостах, поэтому, пожалуйста, будьте терпеливы."
 
-#. translators: 1: plugin name.
+#. 1: plugin name.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3612
 #, php-format
 msgid "%1$s installed successfully."
@@ -2263,9 +2815,9 @@ msgstr "%1$s успешно установлено."
 
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3613
 msgid "All installations have been completed."
-msgstr "Все установки выполнены."
+msgstr "Все установки завершены."
 
-#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#. 1: plugin name, 2: action number 3: total number of actions.
 #: vendor/optimus-prime-plugin-update/class-tgm-plugin-activation.php:3615
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
@@ -2292,6 +2844,7 @@ msgstr "Послать"
 #: includes/views/admin/admin-services.php:22
 #: includes/views/admin/admin-data-access.php:33
 #: includes/views/admin/admin-terms.php:23
+#: includes/views/admin/admin-unsubscribe.php:31
 #: includes/views/admin/admin-rectification.php:33
 #: includes/views/admin/admin-plugins.php:22
 msgid "Settings"
@@ -2303,12 +2856,14 @@ msgstr "Список запроса на Право Быть Забытым"
 
 #: includes/views/admin/admin-forgotten.php:70
 #: includes/views/admin/admin-data-access.php:76
+#: includes/views/admin/admin-unsubscribe.php:54
 #: includes/views/admin/admin-rectification.php:74
 msgid "User ID"
 msgstr "Идентификатор пользователя"
 
 #: includes/views/admin/admin-forgotten.php:71
 #: includes/views/admin/admin-data-access.php:77
+#: includes/views/admin/admin-unsubscribe.php:55
 #: includes/views/admin/admin-rectification.php:75
 msgid "Email"
 msgstr "Эл. почта"
@@ -2319,25 +2874,30 @@ msgstr "Услуги, которые надо забыть (выбраны по�
 
 #: includes/views/admin/admin-forgotten.php:73
 #: includes/views/admin/admin-data-access.php:78
+#: includes/views/admin/admin-unsubscribe.php:57
 #: includes/views/admin/admin-rectification.php:76
 msgid "Date of request"
 msgstr "Дата запроса"
 
 #: includes/views/admin/admin-forgotten.php:74
+#: includes/views/admin/admin-unsubscribe.php:58
 msgid "Date of mail sent"
 msgstr "Дата отправки эл. сообщения отправлена"
 
 #: includes/views/admin/admin-forgotten.php:75
+#: includes/views/admin/admin-unsubscribe.php:59
 msgid "Email user / remove request"
 msgstr "Эл. почта пользователя/удалить запрос"
 
 #: includes/views/admin/admin-forgotten.php:88
 #: includes/views/admin/admin-data-access.php:94
+#: includes/views/admin/admin-unsubscribe.php:72
 #: includes/views/admin/admin-rectification.php:92
 msgid "Not registered"
 msgstr "Не зарегистрировано"
 
 #: includes/views/admin/admin-forgotten.php:95
+#: includes/views/admin/admin-unsubscribe.php:79
 msgid "Select all"
 msgstr "Выбрать все"
 
@@ -2352,12 +2912,14 @@ msgstr "Забыть и уведомить выбранных пользоват
 
 #: includes/views/admin/admin-forgotten.php:153
 #: includes/views/admin/admin-data-access.php:126
+#: includes/views/admin/admin-unsubscribe.php:137
 #: includes/views/admin/admin-rectification.php:124
 msgid "Remove selected requests from list"
 msgstr "Удалить выбранные запросы из списка"
 
 #: includes/views/admin/admin-forgotten.php:155
 #: includes/views/admin/admin-data-access.php:128
+#: includes/views/admin/admin-unsubscribe.php:139
 #: includes/views/admin/admin-rectification.php:126
 msgid "Remove all sent requests from list"
 msgstr "Удалить все отправленные запросы из списка"
@@ -2375,6 +2937,7 @@ msgid "Advanced settings"
 msgstr "Расширенные настройки"
 
 #: includes/views/admin/admin-cookie.php:79
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:245
 msgid "Press 'Save changes' before downloading logs if you changed any options"
 msgstr ""
 "Нажмите 'Сохранить изменения' перед загрузкой журналов, если вы изменили "
@@ -2414,6 +2977,10 @@ msgstr "Наши занятые пчелы ищут файлы cookie:"
 msgid "posts and pages"
 msgstr "сообщения и страницы"
 
+#: includes/views/admin/admin-cookie.php:111
+msgid " of your WordPress site."
+msgstr "вашего сайта WordPress."
+
 #: includes/views/admin/admin-cookie.php:119
 msgid "It can take up to few minutes. Thanks for your patience!"
 msgstr "Это может занять до нескольких минут. Спасибо за ваше терпение!"
@@ -2442,21 +3009,21 @@ msgstr "Кодировать выбранное"
 msgid "Decrypt selected"
 msgstr "Расшифровать выбранное"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:30
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:38
 #: includes/views/admin/admin-plugins.php:30
 msgid "Introduction"
 msgstr "Введение"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:33
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:41
 #: includes/views/admin/admin-plugins.php:33
 msgid "Compatibility"
 msgstr "Совместимость"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:42
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:50
 msgid "The GDPR was approved and adopted by the EU Parliament in April 2016."
 msgstr "В апреле 2016 года Парламент ЕС был одобрен и принят парламентом."
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:43
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:51
 msgid ""
 " The regulation will take effect after a two-year transition period and, "
 "unlike a Directive it does not require any enabling legislation to be passed "
@@ -2467,7 +3034,7 @@ msgstr ""
 "законодательства правительством; то есть он будет действовать в мае 2018 "
 "года."
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:47
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:55
 msgid ""
 "The GDPR not only applies to organisations located within the EU but it will "
 "also apply to organisations located outside of the EU if they offer goods or "
@@ -2482,165 +3049,222 @@ msgstr ""
 "хранят личную информацию о субъекта, живущих в Евросоюзе независимо от "
 "месторасположения компаний."
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:52
-msgid ""
-"This plugin will create a form where users can request access to or deletion "
-"of their personal data, stored on\n"
-"                your website. It is also possible to:"
-msgstr ""
-"Этот плагин создаст форму, в которой пользователи могут запрашивать доступ "
-"или удаление своих персональных данных, хранящихся на\n"
-"                Ваш сайт. Также возможно:"
-
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:57
-msgid ""
-"create a custom cookie notice and block all cookies until cookie consent is "
-"given"
-msgstr ""
-"создать пользовательское cookie уведомление и заблокировать все cookieдо тех "
-"пор, пока не будет получено согласие на cookie"
-
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:58
-msgid ""
-"set up redirects for your Terms and Conditions and Privacy Policy pages "
-"until consent is given"
-msgstr ""
-"установить переадресацию ваших страниц \"Сроки и Условия\" и \"Политика "
-"Конфиденциальности\", пока не будет получено согласие"
-
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:59
-msgid ""
-"browse user requests for data access/deletion and set custom email "
-"notifications"
-msgstr ""
-"просматривать запрсы на доступ/удаление данных и установить пользовательские "
-"эл. уведомления"
-
 #: includes/views/admin/admin-ct-ultimate-gdpr.php:60
 msgid ""
-"send custom email informing about data breach to all users which left their "
-"email at your site"
+"This plugin will create a form where users can request access to or deletion "
+"of their personal data, stored on your website. It is also possible to:"
+msgstr ""
+"Этот плагин создаст форму, в которой пользователи могут запрашивать доступ "
+"или удаление своих персональных данных, хранящихся на Ваш сайт. Также "
+"возможно:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:64
+msgid ""
+"Create a custom cookie notice and block all cookies until cookie consent is "
+"given."
+msgstr ""
+"Cоздать пользовательское cookie уведомление и заблокировать все cookieдо тех "
+"пор, пока не будет получено согласие на cookie."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:65
+msgid ""
+"Set up redirects for your Terms and Conditions and Privacy Policy pages "
+"until consent is given."
+msgstr ""
+"Yстановить переадресацию ваших страниц \"Сроки и Условия\" и \"Политика "
+"Конфиденциальности\", пока не будет получено согласие."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:66
+msgid ""
+"Browse user requests for data access/deletion and set custom email "
+"notifications."
+msgstr ""
+"просматривать запрсы на доступ/удаление данных и установить пользовательские "
+"эл. уведомления."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:67
+msgid ""
+"Send custom email informing about data breach to all users which left their "
+"email at your site."
 msgstr ""
 "послать эл. уведомление пользователя об утечке данных всем пользователям, "
-"которые оставляли свои эл. сообщения на вашем сайте"
-
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:61
-msgid "automatically add consent boxes for various forms on your website"
-msgstr ""
-"автоматически добавлять флажки согласия на различные формы на вашем сайте"
-
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:62
-msgid "pseudonymize some of user data stored in database"
-msgstr ""
-"псевдонимизировать некоторую часть пользовательских данных, которые хранятся "
-"в базе данных"
-
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:63
-msgid "check currently activated plugins for GDPR compliance"
-msgstr "регулярно проверять активированные плагины на соответствие с GDPR"
+"которые оставляли свои эл. сообщения на вашем сайте."
 
 #: includes/views/admin/admin-ct-ultimate-gdpr.php:68
+msgid "Automatically add consent boxes for various forms on your website."
+msgstr ""
+"Aвтоматически добавлять флажки согласия на различные формы на вашем сайте."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:69
+msgid "Pseudonymize some of user data stored in database."
+msgstr ""
+"псевдонимизировать некоторую часть пользовательских данных, которые хранятся "
+"в базе данных."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:70
+msgid "Check currently activated plugins for GDPR compliance."
+msgstr "Pегулярно проверять активированные плагины на соответствие с GDPR."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:75
 msgid ""
 "To start, browse through settings. Then, create a new page with shortcode:"
 msgstr ""
 "Для начала просмотрите настройки. Затем создайте новую страницу с коротким "
 "кодом:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:68
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:86
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:76
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:94
 msgid "[ultimate_gdpr_myaccount]"
 msgstr "[ultimate_gdpr_myaccount]"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:75
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:83
 msgid "Available Shortcodes"
 msgstr "Доступные короткие коды"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:82
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:90
 msgid "User Settings:"
 msgstr "Пользовательские настройки:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:94
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:102
 msgid "Privacy Policy Button:"
 msgstr "Кнопка Политика конфиденциальности:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:98
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:106
 msgid "[ultimate_gdpr_policy_accept]"
 msgstr "[ultimate_gdpr_policy_accept]"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:106
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:114
 msgid "Terms and Conditions Button:"
 msgstr "Условия использования Кнопка:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:110
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:118
 msgid "[ultimate_gdpr_terms_accept]"
 msgstr "[ultimate_gdpr_terms_accept]"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:118
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:126
 msgid "Cookie Popup Link:"
 msgstr "Cookie Popup Ссылка:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:122
-msgid "[ultimate_gdpr_cookie_popup]"
-msgstr "[ultimate_gdpr_cookie_popup]"
-
 #: includes/views/admin/admin-ct-ultimate-gdpr.php:130
+msgid "[ultimate_gdpr_cookie_popup]Link [/ultimate_gdpr_cookie_popup]"
+msgstr "[ultimate_gdpr_cookie_popup]Ссылка [/ultimate_gdpr_cookie_popup]"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:138
 msgid "Display Cookies List:"
 msgstr "Показать список файлов cookie:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:134
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:142
 msgid "[render_cookies_list]"
 msgstr "[render_cookies_list]"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:146
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:150
+msgid "Protect Content:"
+msgstr "Защита содержимого:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:157
+msgid "content"
+msgstr "содержание"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:168
+msgid "Privacy Center:"
+msgstr "Центр конфиденциальности:"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:184
 msgid "System requirements:"
 msgstr "Системные Требования:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:153
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:191
 msgid "PHP Version:"
 msgstr "Версия PHP:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:157
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:195
 msgid "7.2+"
 msgstr "7.2+"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:165
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:203
 msgid "Memory limit:"
 msgstr "Предел памяти:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:169
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:207
 msgid "64 MB"
 msgstr "64 MB"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:177
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:215
 msgid "Disk space:"
 msgstr "Дисковое пространство:"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:181
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:219
 msgid "10 MB"
 msgstr "10 MB"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:196
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:199
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:259
+msgid "Export/import options"
+msgstr "Параметры экспорта / импорта"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:261
+msgid ""
+"You can export current plugin settings to a file which can be used to import "
+"the settings on other websites"
+msgstr ""
+"Вы можете экспортировать текущие настройки плагина в файл, который можно "
+"использовать для импорта настроек на другие веб-сайты"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:265
+msgid "Export plugin settings"
+msgstr "Экспорт настроек плагина"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:269
+msgid ""
+"Select file to import settings from. Your current settings will be "
+"overwritten."
+msgstr ""
+"Выберите файл для импорта настроек. Ваши текущие настройки будут "
+"перезаписаны."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:275
+msgid "Import plugin settings"
+msgstr "Импортировать настройки плагина"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:279
+msgid "Export services from Service Manager"
+msgstr "Экспорт услуг из Service Manager"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:283
+msgid "Export services"
+msgstr "Экспортные услуги"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:287
+msgid ""
+"Select file to add services from. Your current services will not be removed."
+msgstr ""
+"Выберите файл для добавления сервисов. Ваши текущие службы не будут удалены."
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:293
+msgid "Import services to Service Manager"
+msgstr "Импорт услуг в Service Manager"
+
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:303
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:309
 msgid "Any questions?"
 msgstr "Любые вопросы?"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:305
 msgid "Please have a look at the"
 msgstr "Пожалуйста, взгляните на"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:307
 msgid "Support forum"
 msgstr "Форум поддержки"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:198
-msgid "or ask your questions via e-mail"
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:307
+msgid "or ask your questions via email"
 msgstr "или задать свои вопросы по электронной почте"
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:201
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:311
 msgid "Link to our "
 msgstr "Ссылка на нашу "
 
-#: includes/views/admin/admin-ct-ultimate-gdpr.php:201
+#: includes/views/admin/admin-ct-ultimate-gdpr.php:313
 msgid "Documentation"
 msgstr "Документация"
 
@@ -2676,6 +3300,10 @@ msgstr "Вернитесь"
 #: includes/views/admin/admin-data-access-user-details.php:26
 msgid "No data collected for this service"
 msgstr "Нет данных, собранных для этой услуги"
+
+#: includes/views/admin/admin-services.php:48
+msgid "Download all consents log"
+msgstr "Загрузить все согласные"
 
 #: includes/views/admin/admin-data-access.php:71
 msgid "Data access requests list"
@@ -2718,6 +3346,23 @@ msgstr "Текущие данные:"
 msgid "Rectified data:"
 msgstr "Исправленные данные:"
 
+#: includes/views/admin/admin-unsubscribe.php:49
+msgid "Unsubscribe request list"
+msgstr "Список запросов на рассылку"
+
+#: includes/views/admin/admin-unsubscribe.php:56
+msgid "Services to unsubscribe from (user selected)"
+msgstr "Услуги для отмены подписки (выбрано пользователем)"
+
+#: includes/views/admin/admin-unsubscribe.php:98
+#, php-format
+msgid "Unsubscribed at %s"
+msgstr "Неподписано в %s"
+
+#: includes/views/admin/admin-unsubscribe.php:135
+msgid "Unsubscribe and notify selected users"
+msgstr "Отменить подписку и оповестить выбранных пользователей"
+
 #: includes/views/admin/admin-rectification.php:69
 msgid "Data rectification requests list"
 msgstr "Исправление данных запрашивает список"
@@ -2751,36 +3396,68 @@ msgstr "Неизвестно"
 msgid "Partly"
 msgstr "Частично"
 
-#: includes/views/shortcode/shortcode-policy-accept.php:35
+#: includes/views/shortcode/shortcode-policy-accept.php:34
 msgid "You have already accepted Privacy Policy"
 msgstr "Вы уже приняли Полиику Конфиденциальности"
 
-#: includes/views/shortcode/shortcode-policy-accept.php:44
-#: includes/views/shortcode/shortcode-terms-accept.php:44
+#: includes/views/shortcode/shortcode-policy-accept.php:43
+#: includes/views/shortcode/shortcode-terms-accept.php:43
 msgid "Decline"
 msgstr "Отменить"
 
-#: includes/views/shortcode/shortcode-myaccount.php:31
-msgid "Personal Data Access"
-msgstr "Доступ к личным данным"
+#: includes/views/shortcode/shortcode-privacy-center.php:36
+msgid "Data access"
+msgstr "Доступ к данным"
 
-#: includes/views/shortcode/shortcode-myaccount.php:32
-msgid "Forget me"
-msgstr "Забыть меня"
+#: includes/views/shortcode/shortcode-privacy-center.php:62
+msgid "Right to be forgotten"
+msgstr "Право быть забытым"
 
-#: includes/views/shortcode/shortcode-myaccount.php:33
+#: includes/views/shortcode/shortcode-privacy-center.php:88
+#: includes/views/shortcode/shortcode-myaccount.php:47
 msgid "Data rectification"
 msgstr "Исправление данных"
 
-#: includes/views/shortcode/shortcode-myaccount.php:39
+#: includes/views/shortcode/shortcode-privacy-center.php:130
+msgid "Cookie settings"
+msgstr "Настройки файлов cookie"
+
+#: includes/views/shortcode/shortcode-privacy-center.php:139
+msgid "Privacy policy"
+msgstr "Политика конфиденциальности"
+
+#: includes/views/shortcode/shortcode-privacy-center.php:152
+msgid "Terms &amp; conditions pages"
+msgstr "Условия &amp; страницы условий"
+
+#: includes/views/shortcode/shortcode-privacy-center.php:162
+msgid "Contact DPO"
+msgstr "Как связаться с DPO"
+
+#: includes/views/shortcode/shortcode-myaccount.php:37
+msgid "Personal Data Access"
+msgstr "Доступ к личным данным"
+
+#: includes/views/shortcode/shortcode-myaccount.php:42
+msgid "Forget me"
+msgstr "Забыть меня"
+
+#: includes/views/shortcode/shortcode-myaccount.php:60
 msgid ""
 "Below, you can request for your personal data that's collected by this "
-"website sent to you in an e-mail."
+"website sent to you in an email."
 msgstr ""
-"Ниже вы можете запросить, чтобы ваши данные, которые были собраны на этом "
-"сайте, были отправлены на вашу электронную почту."
+"Ниже вы можете запросить свои личные данные, собранные на этом веб-сайте, "
+"отправленные вам по электронной почте."
 
-#: includes/views/shortcode/shortcode-myaccount.php:48
+#: includes/views/shortcode/shortcode-myaccount.php:64
+#: includes/views/shortcode/shortcode-myaccount.php:129
+#: includes/views/shortcode/shortcode-myaccount.php:200
+#: includes/views/shortcode/shortcode-myaccount.php:273
+msgid "Email:"
+msgstr "Эл. адрес:"
+
+#: includes/views/shortcode/shortcode-myaccount.php:71
 msgid ""
 "I consent to have my email collected in order to receive my requested data. "
 "See Privacy Policy page for more information."
@@ -2789,26 +3466,28 @@ msgstr ""
 "получения данных, которые я запрашиваю. См. страницу «Политика "
 "Конфиденциальности», чтобы получить больше информации."
 
-#: includes/views/shortcode/shortcode-myaccount.php:57
-#: includes/views/shortcode/shortcode-myaccount.php:109
-#: includes/views/shortcode/shortcode-myaccount.php:160
+#: includes/views/shortcode/shortcode-myaccount.php:87
+#: includes/views/shortcode/shortcode-myaccount.php:154
+#: includes/views/shortcode/shortcode-myaccount.php:232
+#: includes/views/shortcode/shortcode-myaccount.php:298
 msgid "Submit"
 msgstr "Предоставить"
 
-#: includes/views/shortcode/shortcode-myaccount.php:64
+#: includes/views/shortcode/shortcode-myaccount.php:94
 msgid ""
 "Below, you can browse services which collects your personal data on this "
 "website. Check services you wish to be forgotten by. This will send a "
-"request to the website admin. You will be notified by e-mail once this is "
+"request to the website admin. You will be notified by email once this is "
 "done.\""
 msgstr ""
-"Ниже вы можете просмотреть сервисы, которые собирают ваши персональные "
-"данные на этом сайте. Отметьте сервисы, которые следует забыть. "
-"Администратору сайта будет отправлен запрос. Вам придет уведомление по "
-"электронной почте, как только это будет сделано.\""
+"Ниже вы можете просматривать службы, которые собирают ваши персональные "
+"данные на этом веб-сайте. Проверьте услуги, о которых вы хотите забыть. Это "
+"отправит запрос администратору веб-сайта. После этого вы будете уведомлены "
+"по электронной почте.\""
 
-#: includes/views/shortcode/shortcode-myaccount.php:101
-#: includes/views/shortcode/shortcode-myaccount.php:151
+#: includes/views/shortcode/shortcode-myaccount.php:138
+#: includes/views/shortcode/shortcode-myaccount.php:215
+#: includes/views/shortcode/shortcode-myaccount.php:282
 msgid ""
 "I consent to have my email collected in order to process this request. See "
 "Privacy Policy page for more information."
@@ -2817,50 +3496,66 @@ msgstr ""
 "с обработкой данного запроса. См. страницу «Политика Конфиденциальности», "
 "чтобы получить больше информации."
 
-#: includes/views/shortcode/shortcode-myaccount.php:119
+#: includes/views/shortcode/shortcode-myaccount.php:164
 msgid ""
 "Below, you can send a request to have your data rectified by  the website "
-"admin. Enter what you would like to be rectified. You will be notified by e-"
-"mail once this is done."
+"admin. Enter what you would like to be rectified. You will be notified by "
+"email once this is done."
 msgstr ""
-"Ниже вы можете послать запрос на то, чтобы администратор вебсайта исправил "
-"ваши данные. Введите то, что вы хотели бы исправить. Вам придет уведомление "
-"по электронной почте, как только это будет сделано."
+"Ниже вы можете отправить запрос, чтобы ваши данные были исправлены "
+"администратором веб-сайта. Введите то, что вы хотите исправить. После этого "
+"вы будете уведомлены по электронной почте."
 
-#: includes/views/shortcode/shortcode-myaccount.php:127
+#: includes/views/shortcode/shortcode-myaccount.php:172
 msgid "Current data"
 msgstr "Текущие данные"
 
-#: includes/views/shortcode/shortcode-myaccount.php:136
+#: includes/views/shortcode/shortcode-myaccount.php:187
 msgid "Rectified data"
 msgstr "Исправленные данные"
 
-#: includes/views/shortcode/shortcode-terms-accept.php:35
+#: includes/views/shortcode/shortcode-myaccount.php:240
+msgid ""
+"Below, you can browse services which sign up users to newsletters. Check "
+"services which newsletters you wish to be unsubscribed from. The "
+"subscription will stop immediately."
+msgstr ""
+"Ниже вы можете просматривать службы, которые подписывают пользователей на "
+"информационные бюллетени. Проверьте, какие информационные бюллетени вы "
+"хотите отменить. Подписка немедленно прекратится."
+
+#: includes/views/shortcode/shortcode-terms-accept.php:34
 msgid "You have already accepted Terms and Conditions"
 msgstr "Вы уже приняли Сроки и Условия"
 
 #: includes/views/service/service-wp-user-consent-field.php:17
 #: includes/views/service/service-eform-consent-field.php:19
 #: includes/views/service/service-formidable-forms-consent-field.php:12
+#: includes/views/service/service-newsletter-consent-field.php:16
+#: includes/views/service/service-woocommerce-checkout-consent-field.php:16
 #: includes/views/service/service-quform-consent-field.php:12
 #: includes/views/service/service-contact-form-7-consent-field.php:20
 #: includes/views/service/service-woocommerce-consent-field.php:16
 #: includes/views/service/service-wp-comments-consent-field.php:16
+#: includes/views/service/service-newsletter-consent-field-widget.php:16
 #: includes/views/service/service-woocommerce-consent-field-label.php:12
 #: includes/views/service/service-arforms-consent-field.php:17
+#: includes/views/service/service-ninja-forms-consent-field.php:18
+#: includes/views/service/service-newsletter-consent-field-widget-minimal.php:16
 #: includes/views/service/service-events-manager-consent-field.php:17
 msgid "I consent to the storage of my data according to the Privacy Policy"
 msgstr ""
 "Я согласен/а на хранения моих данных согласно Политике Конфиденциальности"
 
+#: includes/views/service/service-woocommerce-forms-consent-field-error-message.php:12
+#: includes/views/service/service-gravity-forms-consent-field-error-message.php:12
+msgid "You must accept the Privacy Policy before submitting the form"
+msgstr "Вы должны принять Политику Конфиденциальности перед отправкой формы"
+
 #: includes/views/service/service-gravity-forms-consent-field-description.php:12
 msgid "Follow this link to access Privacy Policy"
 msgstr ""
 "Перейдите по этой ссылке, чтобы получить доступ к Политике Конфиденциальности"
-
-#: includes/views/service/service-gravity-forms-consent-field-error-message.php:12
-msgid "You must accept the Privacy Policy before submitting the form"
-msgstr "Вы должны принять Политику Конфиденциальности перед отправкой формы"
 
 #: includes/views/service/service-bbpress-consent-field.php:16
 #: includes/views/service/service-buddypress-consent-field.php:16
@@ -2873,12 +3568,22 @@ msgstr ""
 
 #: includes/views/service/service-mailster-consent-field.php:16
 #: includes/views/service/service-gravity-forms-consent-field-label.php:12
-msgid "I consent to storage of my data according to Privacy Policy"
+msgid "I consent to my data being stored according to the Privacy Policy"
 msgstr ""
-"Я согласен(на) хранить свои данные в соответствие с Политикой "
-"Конфиденциальности"
+"Я соглашаюсь на сохранение моих данных в соответствии с Политикой "
+"конфиденциальности"
+
+#: includes/views/service/service-klaviyo-consent-field.php:16
+msgid ""
+"I consent to the storage of my data according to the Privacy Policy "
+"(required to submit)"
+msgstr ""
+"Я соглашаюсь на хранение моих данных в соответствии с Политикой "
+"конфиденциальности (требуется для отправки)"
 
 #: includes/views/service/service-mailchimp-consent-field.php:16
+#: includes/views/service/service-metorik-helper-consent-field.php:16
+#: includes/views/service/service-ultimate-member-consent-field.php:20
 msgid "I consent to the storage of my data according to the Privacy Policy "
 msgstr ""
 "Я даю согласие на хранение своих данных в соответствии с Политикой "
@@ -2892,9 +3597,9 @@ msgstr "Поле обязательно для заполнения"
 msgid "This field cannot be blank."
 msgstr "Это поле не может быть пустым."
 
-#: includes/views/service/service-arforms-consent-field.php:26
-msgid "OK"
-msgstr "ОК"
+#: includes/views/service/service-ninja-forms-consent-field.php:24
+msgid "This is a required field."
+msgstr "Это обязательное поле."
 
 #. Description of the plugin/theme
 msgid ""
@@ -2911,42 +3616,3 @@ msgstr "CreateIT"
 #. Author URI of the plugin/theme
 msgid "https://www.createit.pl"
 msgstr "https://www.createit.pl"
-
-msgid "Enabled"
-msgstr "Включено"
-
-msgid "Enable"
-msgstr "Bключить"
-
-msgid "Disabled"
-msgstr "Отключено"
-
-msgid "Disable"
-msgstr "Запрещать"
-
-msgid "Select page where to display the cookie popup"
-msgstr "Выберите страницу, на которой будет отображаться всплывающее окно cookie"
-
-msgid "Google Analytics Tracking ID (disable tracking for this ID when cookies consent not given), eg. UA-118586768-1"
-msgstr "Идентификатор отслеживания Google Analytics (отключить отслеживание для этого идентификатора, если согласие cookie не указано), например. UA-118586768-1"
-
-msgid "Hide \"Block All\" level features"
-msgstr "Спрятать \"Заблокировать все\" функции уровня"
-
-msgid "Hide \"Essential\" level features"
-msgstr "Спрятать \"Основы\" функции уровня"
-
-msgid "Hide \"Functionality\" level features"
-msgstr "Спрятать \"функциональность\" функции уровня"
-
-msgid "Hide \"Analytics\" level features"
-msgstr "Спрятать \"аналитика\" функции уровня"
-
-msgid "Hide \"Advertising\" level features"
-msgstr "Спрятать \"реклама\" функции уровня"
-
-msgid "Block All"
-msgstr "Заблокировать все"
-
-msgid "Click here to create"
-msgstr "Нажмите здесь, чтобы создать"

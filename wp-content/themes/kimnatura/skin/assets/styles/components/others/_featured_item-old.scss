@@ -13,13 +13,14 @@
         transform-style: preserve-3d;
         display: block;
         color: inherit;
-        
+        background: #fff;
+       // border: 1px solid #f3f3f3;
         overflow: hidden;
         user-select: none;
        // margin: 16px;
         outline:0;
         //z-index: 1;
-        border: 1px solid $base-grey-color;
+       // border: 1px solid $base-grey-color;
 
         @include media(desktop large){
             height: 452px;
@@ -110,15 +111,16 @@
          }
         @include element('movable'){
             padding: $base-content-padding;
-            border-top: 1px solid $base-light-grey-color;
+            //border-top: 1px solid $base-light-grey-color;
             position: relative;
             transition: transform 300ms;
             text-align: left;
             background: $base-white-color;
+            margin-top: 2px;
     
             @include media(desktop large){
                 padding: $base-content-padding*2;
-                transform: translateY(64px);
+                transform: translateY(56px);
             }
         }
 

@@ -46,32 +46,32 @@ class CT_Ultimate_GDPR_Model_Group {
 			case self::LEVEL_NECESSARY:
 
 				$label = __( 'Essential', 'ct-ultimate-gdpr' );
-				$label = $admin->get_option_value( 'cookie_group_popup_label_essentials', $label, CT_Ultimate_GDPR_Controller_Cookie::ID );
+				$label = $admin->get_option_value_escaped( 'cookie_group_popup_label_essentials', $label, CT_Ultimate_GDPR_Controller_Cookie::ID );
 
 				break;
 
 			case self::LEVEL_CONVENIENCE:
 
 				$label = __( 'Functionality', 'ct-ultimate-gdpr' );
-				$label = $admin->get_option_value( 'cookie_group_popup_label_functionality', $label, CT_Ultimate_GDPR_Controller_Cookie::ID );
+				$label = $admin->get_option_value_escaped( 'cookie_group_popup_label_functionality', $label, CT_Ultimate_GDPR_Controller_Cookie::ID );
 				break;
 
 			case self::LEVEL_STATISTICS:
 
 				$label = __( 'Analytics', 'ct-ultimate-gdpr' );
-				$label = $admin->get_option_value( 'cookie_group_popup_label_analytics', $label, CT_Ultimate_GDPR_Controller_Cookie::ID );
+				$label = $admin->get_option_value_escaped( 'cookie_group_popup_label_analytics', $label, CT_Ultimate_GDPR_Controller_Cookie::ID );
 				break;
 
 			case self::LEVEL_TARGETTING:
 
 				$label = __( 'Advertising', 'ct-ultimate-gdpr' );
-				$label = $admin->get_option_value( 'cookie_group_popup_label_advertising', $label, CT_Ultimate_GDPR_Controller_Cookie::ID );
+				$label = $admin->get_option_value_escaped( 'cookie_group_popup_label_advertising', $label, CT_Ultimate_GDPR_Controller_Cookie::ID );
 				break;
 
 			case self::LEVEL_BLOCK_ALL:
 
 				$label = __( 'Block all', 'ct-ultimate-gdpr' );
-				$label = $admin->get_option_value( 'cookie_group_popup_label_block_all', $label, CT_Ultimate_GDPR_Controller_Cookie::ID );
+				$label = $admin->get_option_value_escaped( 'cookie_group_popup_label_block_all', $label, CT_Ultimate_GDPR_Controller_Cookie::ID );
 				break;
 
 			default:

@@ -241,52 +241,52 @@ class CT_Ultimate_GDPR_Controller_Policy extends CT_Ultimate_GDPR_Controller_Abs
 	 */
 	private function download_consents_log() {
 
-		global $wpdb;
+		$rendered = $this->logger->render_logs( $this->logger->get_logs( $this->get_id() ) );
+
+		/* LEGACY - logs from user meta */
 
 		// get all user metas
-		$sql = $wpdb->prepare(
-			"
-				SELECT user_id, meta_value 
-				FROM {$wpdb->usermeta}
-				WHERE meta_key = %s
-			",
-			$this->get_id()
-		);
-
-		$results = $wpdb->get_results( $sql, ARRAY_A );
-
-		// default to array
-		if ( ! $results ) {
-			$results = array();
-		}
-
-		// create a response
-		$response = '';
-		foreach ( $results as $result ) {
-
-			$id      = $result['user_id'];
-			$data    = maybe_unserialize( ( $result['meta_value'] ) );
-			$expire  = $data['policy_expire_time'];
-			$version = $data['policy_version'];
-
-			// either get consent given time (v1.4) or calculate it
-			$created = isset( $data['policy_consent_time'] ) ? $data['policy_consent_time'] : ( $expire - (int) $this->get_option( 'policy_expire', YEAR_IN_SECONDS ) );
-
-			// format dates
-			$expire  = ct_ultimate_gdpr_date( $expire );
-			$created = ct_ultimate_gdpr_date( $created );
-
-			$response .= sprintf(
-				__( "user id: %d \r\nconsent version: %s \r\nconsent given: %s \r\nconsent expires: %s \r\n\r\n", 'ct-ultimate-gdpr' ),
-				$id, $version, $created, $expire
-			);
-
-		}
+//		$sql = $wpdb->prepare(
+//			"
+//				SELECT user_id, meta_value
+//				FROM {$wpdb->usermeta}
+//				WHERE meta_key = %s
+//			",
+//			$this->get_id()
+//		);
+//
+//		$results = $wpdb->get_results( $sql, ARRAY_A );
+//
+//		 default to array
+//		if ( ! $results ) {
+//			$results = array();
+//		}
+//
+//		foreach ( $results as $result ) {
+//
+//			$id      = $result['user_id'];
+//			$data    = maybe_unserialize( ( $result['meta_value'] ) );
+//			$expire  = $data['policy_expire_time'];
+//			$version = $data['policy_version'];
+//
+//			 either get consent given time (v1.4) or calculate it
+//			$created = isset( $data['policy_consent_time'] ) ? $data['policy_consent_time'] : ( $expire - (int) $this->get_option( 'policy_expire', YEAR_IN_SECONDS ) );
+//
+//			 format dates
+//			$expire  = ct_ultimate_gdpr_date( $expire );
+//			$created = ct_ultimate_gdpr_date( $created );
+//
+//			$response .= sprintf(
+//				__( "user id: %d \r\nconsent version: %s \r\nconsent given: %s \r\nconsent expires: %s \r\n\r\n", 'ct-ultimate-gdpr' ),
+//				$id, $version, $created, $expire
+//			);
+//
+//		}
 
 		// download
 		header( "Content-Type: application/octet-stream" );
 		header( "Content-Disposition: attachment; filename='{$this->get_id()}-logs.txt'" );
-		echo $response;
+		echo $rendered;
 		exit;
 
 	}
@@ -447,7 +447,7 @@ class CT_Ultimate_GDPR_Controller_Policy extends CT_Ultimate_GDPR_Controller_Abs
 	/**
 	 * @return bool
 	 */
-	private function is_consent_valid() {
+	public function is_consent_valid() {
 
 		$user_meta = get_user_meta( $this->user->get_current_user_id(), $this->get_id(), true );
 
@@ -520,6 +520,15 @@ class CT_Ultimate_GDPR_Controller_Policy extends CT_Ultimate_GDPR_Controller_Abs
 		if ( is_user_logged_in() ) {
 			update_user_meta( $this->user->get_current_user_id(), $this->get_id(), $data );
 		}
+
+		$this->logger->consent( array(
+			'type'       => $this->get_id(),
+			'time'       => $time,
+			'user_id'    => $this->user->get_current_user_id(),
+			'user_ip'    => ct_ultimate_gdpr_get_permitted_user_ip(),
+			'user_agent' => ct_ultimate_gdpr_get_permitted_user_agent(),
+			'data'       => $data,
+		) );
 
 	}
 
@@ -825,15 +834,23 @@ class CT_Ultimate_GDPR_Controller_Policy extends CT_Ultimate_GDPR_Controller_Abs
 	 * Set a placeholder for templates
 	 */
 	private function add_placeholders() {
-		$url = $this->get_custom_target_page() ? $this->get_custom_target_page() : get_permalink( $this->get_target_page_id() );
-		CT_Ultimate_GDPR_Model_Placeholders::instance()->add(
-			$this->get_option( 'policy_placeholder' ),
-			sprintf(
-				'<a href="%s">%s</a>',
-				$url,
-				$this->get_option( 'policy_placeholder' )
-			)
-		);
+
+		$url          = $this->get_custom_target_page() ? $this->get_custom_target_page() : get_permalink( $this->get_target_page_id() );
+		$placeholders = array_filter( array_map( 'trim', explode( ',', $this->get_option( 'policy_placeholder' ) ) ) );
+
+		foreach ( $placeholders as $placeholder ) {
+
+			CT_Ultimate_GDPR_Model_Placeholders::instance()->add(
+				$placeholder,
+				sprintf(
+					'<a href="%s">%s</a>',
+					esc_url( $url ),
+					$placeholder
+				)
+			);
+
+		}
+
 	}
 
 	/**

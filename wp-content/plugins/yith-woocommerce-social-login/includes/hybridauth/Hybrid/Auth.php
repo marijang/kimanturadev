@@ -3,7 +3,7 @@
 /**
  * HybridAuth
  * http://hybridauth.sourceforge.net | http://github.com/hybridauth/hybridauth
- * (c) 2009-2015, HybridAuth authors | http://hybridauth.sourceforge.net/licenses.html
+ * (c) 2009-2017, HybridAuth authors | http://hybridauth.sourceforge.net/licenses.html
  */
 
 /**
@@ -15,7 +15,7 @@
  */
 class Hybrid_Auth {
 
-	public static $version = "2.8.2";
+	public static $version = "2.10.0";
 
 	/**
 	 * Configuration array
@@ -294,11 +294,10 @@ class Hybrid_Auth {
 	 */
 	public static function getConnectedProviders() {
 		$idps = array();
-		if( isset( Hybrid_Auth::$config["providers"] ) ){
-			foreach (Hybrid_Auth::$config["providers"] as $idpid => $params) {
-				if (Hybrid_Auth::isConnectedWith($idpid)) {
-					$idps[] = $idpid;
-				}
+
+		foreach (Hybrid_Auth::$config["providers"] as $idpid => $params) {
+			if (Hybrid_Auth::isConnectedWith($idpid)) {
+				$idps[] = $idpid;
 			}
 		}
 

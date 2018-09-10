@@ -454,7 +454,8 @@ class CT_Ultimate_GDPR_Controller_Pseudonymization extends CT_Ultimate_GDPR_Cont
 	 * @return bool
 	 */
 	private function is_encrypted( $content ) {
-		return is_string( $content ) && 0 === mb_stripos( $content, $this->get_encrypted_prefix() );
+		$stripos = function_exists( 'mb_stripos' ) ? 'mb_stripos' : 'stripos';
+		return is_string( $content ) && 0 === $stripos( $content, $this->get_encrypted_prefix() );
 	}
 
 	/**
@@ -796,4 +797,10 @@ class CT_Ultimate_GDPR_Controller_Pseudonymization extends CT_Ultimate_GDPR_Cont
 		return self::$doing_meta_filter;
 	}
 
+	/**
+	 * @return array
+	 */
+	private function get_excluded_keys_options_to_export(  ) {
+		return array( 'pseudonymization_db_key' );
+	}
 }

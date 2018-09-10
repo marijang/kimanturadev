@@ -29,7 +29,7 @@ class CT_Ultimate_GDPR_Service_GA_Google_Analytics extends CT_Ultimate_GDPR_Serv
 	 * @return mixed
 	 */
 	public function get_name() {
-		return "GA Google Analytics";
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", "GA Google Analytics" );
 	}
 
 	/**

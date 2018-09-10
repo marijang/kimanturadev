@@ -71,7 +71,7 @@ class CT_Ultimate_GDPR_Service_Woocommerce extends CT_Ultimate_GDPR_Service_Abst
 	 * @return mixed|string
 	 */
 	public function get_name() {
-		return esc_html__( "WooCommerce", 'ct-ultimate-gdpr' );
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", "WooCommerce" );
 	}
 
 	/**
@@ -144,13 +144,21 @@ class CT_Ultimate_GDPR_Service_Woocommerce extends CT_Ultimate_GDPR_Service_Abst
 			CT_Ultimate_GDPR_Controller_Services::ID // Page
 		);
 
-		add_settings_field(
+		/*add_settings_field(
 			'services_woocommerce_header', // ID
 			esc_html__( 'WooCommerce', 'ct-ultimate-gdpr' ), // Title
 			'__return_empty_string', // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-woocommerce_accordion-16' // Section
-		);
+		);*/
+
+        add_settings_field(
+            "services_{$this->get_id()}_service_name", // ID
+            sprintf( esc_html__( "[%s] Name", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
+            array( $this, "render_name_field" ), // Callback
+            CT_Ultimate_GDPR_Controller_Services::ID, // Page
+            'ct-ultimate-gdpr-services-woocommerce_accordion-16' // Section
+        );
 
 		add_settings_field(
 			"services_{$this->get_id()}_description", // ID
@@ -172,6 +180,14 @@ class CT_Ultimate_GDPR_Service_Woocommerce extends CT_Ultimate_GDPR_Service_Abst
 			'services_woocommerce_edit_account_consent_field', // ID
 			esc_html__( '[WooCommerce] Inject consent checkbox to account forms', 'ct-ultimate-gdpr' ), // Title
 			array( $this, 'render_field_services_woocommerce_edit_account_consent_field' ), // Callback
+			CT_Ultimate_GDPR_Controller_Services::ID, // Page
+			'ct-ultimate-gdpr-services-woocommerce_accordion-16' // Section
+		);
+
+		add_settings_field(
+			'services_woocommerce_checkout_consent_field', // ID
+			esc_html__( '[WooCommerce] Inject consent checkbox to checkout', 'ct-ultimate-gdpr' ), // Title
+			array( $this, 'render_field_services_woocommerce_checkout_consent_field' ), // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-woocommerce_accordion-16' // Section
 		);
@@ -338,6 +354,23 @@ class CT_Ultimate_GDPR_Service_Woocommerce extends CT_Ultimate_GDPR_Service_Abst
 	}
 
 	/**
+	 *
+	 */
+	public function render_field_services_woocommerce_checkout_consent_field() {
+
+		$admin = CT_Ultimate_GDPR::instance()->get_admin_controller();
+
+		$field_name = $admin->get_field_name( __FUNCTION__ );
+		printf(
+			"<input class='ct-ultimate-gdpr-field' type='checkbox' id='%s' name='%s' %s />",
+			$admin->get_field_name( __FUNCTION__ ),
+			$admin->get_field_name_prefixed( $field_name ),
+			$admin->get_option_value_escaped( $field_name ) ? 'checked' : ''
+		);
+
+	}
+
+	/**
 	 * @return void
 	 */
 	public function init() {
@@ -361,6 +394,48 @@ class CT_Ultimate_GDPR_Service_Woocommerce extends CT_Ultimate_GDPR_Service_Abst
 
 		add_filter( 'woocommerce_process_registration_errors', array( $this, 'woocommerce_form_errors_filter' ), 100 );
 
+		add_filter( 'ct_ultimate_gdpr_redirect', array( $this, 'disable_checkout_redirect' ) );
+	}
+
+	/**
+	 * @param $should_redirect
+	 *
+	 * @return bool
+	 */
+	public function disable_checkout_redirect( $should_redirect ) {
+
+		if ( is_checkout() || is_order_received_page() ) {
+			$should_redirect = false;
+		}
+
+		return $should_redirect;
+	}
+
+	/**
+	 * @param $cookies
+	 * @param bool $force
+	 *
+	 * @return mixed
+	 */
+	public function cookies_to_block_filter( $cookies, $force = false ) {
+
+		$cookies_to_block = array();
+		if ( $force ) {
+			$cookies_to_block = array(
+				'woocommerce_*',
+				'wp_woocommerce_*',
+				'wc_cart_hash_*',
+				'wc_fragments_*',
+			);
+		}
+		$cookies_to_block = apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_cookies_to_block", $cookies_to_block );
+
+		if ( is_array( $cookies[ CT_Ultimate_GDPR_Model_Group::LEVEL_NECESSARY ] ) ) {
+			$cookies[ CT_Ultimate_GDPR_Model_Group::LEVEL_NECESSARY ] = array_merge( $cookies[ CT_Ultimate_GDPR_Model_Group::LEVEL_NECESSARY ], $cookies_to_block );
+		}
+
+		return $cookies;
+
 	}
 
 	/**
@@ -371,6 +446,8 @@ class CT_Ultimate_GDPR_Service_Woocommerce extends CT_Ultimate_GDPR_Service_Abst
 		add_action( 'woocommerce_edit_account_form', array( $this, 'edit_account_form_action' ), 100 );
 		add_action( 'woocommerce_register_form', array( $this, 'edit_account_form_action' ), 100 );
 		add_action( 'woocommerce_lostpassword_form', array( $this, 'edit_account_form_action' ), 100 );
+		add_action( 'woocommerce_review_order_before_submit', array( $this, 'checkout_action' ), 100 );
+		add_action( 'woocommerce_checkout_process', array( $this, 'checkout_consent_validation' ), 100 );
 	}
 
 	/**
@@ -401,6 +478,8 @@ class CT_Ultimate_GDPR_Service_Woocommerce extends CT_Ultimate_GDPR_Service_Abst
 
 		if ( $inject && empty( $_REQUEST['ct-ultimate-gdpr-consent-field'] ) ) {
 			$errors->add( 1, esc_html__( 'Consent is required', 'ct-ultimate-gdpr' ) );
+		} elseif ( $inject ) {
+			$this->log_user_consent();
 		}
 
 		return $errors;
@@ -417,17 +496,11 @@ class CT_Ultimate_GDPR_Service_Woocommerce extends CT_Ultimate_GDPR_Service_Abst
 
 		if ( $inject ) {
 
-			$ct_placholders = CT_Ultimate_GDPR_Model_Placeholders::instance();
-			$placeholders   = $ct_placholders->get();
-			$ct_placholders->clear();
-
 			$fields['order']['ct-ultimate-gdpr-consent-field'] = array(
 				'type'     => 'checkbox',
 				'label'    => ct_ultimate_gdpr_render_template( ct_ultimate_gdpr_locate_template( 'service/service-woocommerce-consent-field-label', false ) ),
 				'required' => true,
 			);
-
-			$ct_placholders->set( $placeholders );
 		}
 
 		return $fields;
@@ -448,11 +521,43 @@ class CT_Ultimate_GDPR_Service_Woocommerce extends CT_Ultimate_GDPR_Service_Abst
 	}
 
 	/**
+	 *
+	 */
+	public function checkout_action() {
+
+		$inject = CT_Ultimate_GDPR::instance()->get_admin_controller()->get_option_value( 'services_woocommerce_checkout_consent_field', false, CT_Ultimate_GDPR_Controller_Services::ID );
+
+		if ( $inject ) {
+			ct_ultimate_gdpr_render_template( ct_ultimate_gdpr_locate_template( 'service/service-woocommerce-checkout-consent-field', false ), true );
+		}
+
+
+	}
+
+	/**
+	 * @param $wccs_custom_checkout_field_pro_process
+	 *
+	 * @return mixed
+	 */
+	public function checkout_consent_validation( $wccs_custom_checkout_field_pro_process ) {
+		$inject = CT_Ultimate_GDPR::instance()->get_admin_controller()->get_option_value( 'services_woocommerce_checkout_consent_field', false, CT_Ultimate_GDPR_Controller_Services::ID );
+		$conesent_given = isset($_POST['ct-ultimate-gdpr-consent-field']) ? $_POST['ct-ultimate-gdpr-consent-field'] : false;
+		if( $inject && !$conesent_given ) {
+			wc_add_notice( ct_ultimate_gdpr_render_template( ct_ultimate_gdpr_locate_template( 'service/service-woocommerce-forms-consent-field-error-message', false ) ), 'error' );
+		}
+		return $wccs_custom_checkout_field_pro_process;
+	}
+
+	/**
 	 * @param array $recipients
 	 *
 	 * @return array
 	 */
 	public function breach_recipients_filter( $recipients ) {
+
+		if ( ! $this->is_breach_enabled() ) {
+			return $recipients;
+		}
 
 		$customer_orders = get_posts( array(
 			'numberposts' => - 1,
@@ -560,8 +665,9 @@ class CT_Ultimate_GDPR_Service_Woocommerce extends CT_Ultimate_GDPR_Service_Abst
 
 		$scripts_to_block = array();
 
-		if ( $force || CT_Ultimate_GDPR::instance()->get_admin_controller()->get_option_value( 'services_woocommerce_block_cookies', '', CT_Ultimate_GDPR_Controller_Services::ID ) ) {
+		if ( $force ) {
 
+			// we dont need to remove them as they only generate local cookies
 			$scripts_to_block = array(
 //				"cart-fragments.",
 //				"woocommerce.",

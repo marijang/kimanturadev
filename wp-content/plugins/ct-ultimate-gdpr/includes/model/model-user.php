@@ -86,7 +86,7 @@ class CT_Ultimate_GDPR_Model_User {
 	public function get_target_user_id(  ) {
 
 		$user_id = (int) CT_Ultimate_GDPR::instance()->get_admin_controller()->get_option_value(
-			'service_wp_posts_target_user',
+			'forgotten_wp_posts_target_user',
 			$this->get_current_user_id(),
 			CT_Ultimate_GDPR_Controller_Forgotten::ID
 		);

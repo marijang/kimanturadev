@@ -171,6 +171,7 @@ jQuery(function ($) {
 	    shortcode: 'woof_nothing', //we do not need get any products, seacrh form data only
 	    woof_shortcode: shortcode
 	};
+       console.log(data);
 	jQuery.post(woof_ajaxurl, data, function (content) {
 	    content = jQuery.parseJSON(content);
 	    jQuery('div.woof_redraw_zone').replaceWith(jQuery(content.form).find('.woof_redraw_zone'));
@@ -309,13 +310,12 @@ function woof_init_orderby() {
 }
 
 function woof_init_reset_button() {
-    jQuery('.woof_reset_search_form').life('click', function () {
+    jQuery('.woof_reset_search_form').life('click', function () {       
 	//var link = jQuery(this).data('link');
 	woof_ajax_page_num = 1;
 	if (woof_is_permalink) {
-	    woof_current_values = {};
+	    woof_current_values = {};           
 	    woof_submit_link(woof_get_submit_link().split("page/")[0]);
-	    //woof_submit_link(woof_get_submit_link());
 	} else {
 	    var link = woof_shop_page;
 	    if (woof_current_values.hasOwnProperty('page_id')) {
@@ -673,7 +673,6 @@ function woof_draw_products_top_panel() {
 	var is_price_in = false;
 	//lets show this on the panel
 	jQuery.each(woof_current_values, function (index, value) {
-
 	    //lets filter data for the panel
 	    if (jQuery.inArray(index, woof_accept_array) == -1) {
 		return;
@@ -737,6 +736,7 @@ function woof_draw_products_top_panel() {
 			try {
 			    //txt = jQuery('.woof_n_' + index + '_' + v).val();
 			    txt = jQuery("input[data-anchor='woof_n_" + index + '_' + v + "']").val();
+                            //console.log("input[data-anchor='woof_n_" + index + '_' + v + "']")
 			} catch (e) {
 			    console.log(e);
 			}
@@ -814,7 +814,8 @@ function woof_draw_products_top_panel() {
 
 //control conditions if proucts shortcode uses on the page
 function woof_shortcode_observer() {
-    if (jQuery('.woof_shortcode_output').length  ||( typeof woof_not_redirect!== 'undefined' && woof_not_redirect==1 )) {
+    //if (jQuery('.woof_shortcode_output').length || jQuery('#is_woo_shortcode').length  ||( typeof woof_not_redirect!== 'undefined' && woof_not_redirect==1 )) {
+	if (jQuery('.woof_shortcode_output').length ||( typeof woof_not_redirect!== 'undefined' && woof_not_redirect==1 )) {
 	woof_current_page_link = location.protocol + '//' + location.host + location.pathname;
     }
 
@@ -966,7 +967,7 @@ function woof_checkboxes_slide() {
 function woof_init_ion_sliders() {
     jQuery.each(jQuery('.woof_range_slider'), function (index, input) {
 	try {
-
+            
 	    jQuery(input).ionRangeSlider({
 		min: jQuery(input).data('min'),
 		max: jQuery(input).data('max'),
@@ -981,8 +982,10 @@ function woof_init_ion_sliders() {
 		grid: true,
 		step: jQuery(input).data('step'),
 		onFinish: function (ui) {
-		    woof_current_values.min_price = parseInt(ui.from, 10);
-		    woof_current_values.max_price = parseInt(ui.to, 10);
+                    var tax=jQuery(input).data('taxes');
+                    console.log(tax);
+		    woof_current_values.min_price = (parseInt(ui.from, 10)/tax);
+		    woof_current_values.max_price = (parseInt(ui.to, 10)/tax);
 		    //woocs adaptation
 		    if (typeof woocs_current_currency !== 'undefined') {
 			woof_current_values.min_price = Math.ceil(woof_current_values.min_price / parseFloat(woocs_current_currency.rate));
@@ -1069,8 +1072,8 @@ function woof_reinit_native_woo_price_filter() {
 	    }
 
 	    //+++
-	    label_min = number_format(label_min, 2, '.', ',');
-	    label_max = number_format(label_max, 2, '.', ',');
+	    label_min = woof_front_number_format(label_min, 2, '.', ',');
+	    label_max = woof_front_number_format(label_max, 2, '.', ',');
 	    if (jQuery.inArray(woocs_current_currency.name, woocs_array_no_cents) || woocs_current_currency.hide_cents == 1) {
 		label_min = label_min.replace('.00', '');
 		label_max = label_max.replace('.00', '');
@@ -1403,6 +1406,34 @@ function woof_change_link_addtocart(){
         }     
     });
     
+}
+//https://github.com/kvz/phpjs/blob/master/functions/strings/number_format.js
+function woof_front_number_format(number, decimals, dec_point, thousands_sep) {
+    number = (number + '')
+	    .replace(/[^0-9+\-Ee.]/g, '');
+    var n = !isFinite(+number) ? 0 : +number,
+	    prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+	    sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
+	    dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+	    s = '',
+	    toFixedFix = function (n, prec) {
+		var k = Math.pow(10, prec);
+		return '' + (Math.round(n * k) / k)
+			.toFixed(prec);
+	    };
+// Fix for IE parseFloat(0.55).toFixed(0) = 0;
+    s = (prec ? toFixedFix(n, prec) : '' + Math.round(n))
+	    .split('.');
+    if (s[0].length > 3) {
+	s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+    }
+    if ((s[1] || '')
+	    .length < prec) {
+	s[1] = s[1] || '';
+	s[1] += new Array(prec - s[1].length + 1)
+		.join('0');
+    }
+    return s.join(dec);
 }
 
 //additional function to check local storage

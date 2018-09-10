@@ -293,4 +293,18 @@ jQuery(document).ready(function ($) {
             $tabValue = $tab.attr('value');
             $('#' + $tabValue).trigger('click');
         }
+
+
+      // hints for admin options
+      tippy('.ct-ultimate-gdpr-hint', {
+         allowTitleHTML: true,
+         placement: 'bottom',
+         trigger: 'click',
+         hideOnClick: true,
+         arrow: true,
+         distance: 0,
+         animateFill: false,
+         animation: 'fade', // 'shift-toward', 'fade', 'scale', 'perspective'
+      })
+
 });

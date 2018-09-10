@@ -4,6 +4,7 @@ function woof_init_text() {
         
         var val = jQuery(this).val();
         val=val.replace("\'","\&#039;");
+        val=val.replace("\"","\&quot;");
         var uid = jQuery(this).data('uid');
         if (e.keyCode == 13 /*&& val.length > 0*/) {
             woof_text_do_submit = true;
@@ -118,7 +119,11 @@ function woof_init_text() {
     jQuery('.woof_text_search_go').life('click', function () {
         var uid = jQuery(this).data('uid');
         woof_text_do_submit = true;
-        woof_text_direct_search('woof_text', jQuery('.woof_show_text_search.' + uid).val());
+        
+        var val=jQuery('.woof_show_text_search.' + uid).val();
+        //var val =jQuery(this).siblings(".woof_show_text_search").val();
+        val=val.replace("\"","\&quot;");
+        woof_text_direct_search('woof_text', val);
     });
 }
 
@@ -130,7 +135,6 @@ function woof_text_direct_search(name, slug) {
             return;
         }
     });
-
     if (slug != 0) {
         woof_current_values[name] = slug;
     }

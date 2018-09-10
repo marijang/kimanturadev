@@ -14,7 +14,7 @@
 
 
 
-<article id="post-<?php the_ID(); ?>" class="section section__spacing-top--default">
+<article id="post-<?php the_ID(); ?>" class="section section__spacing-top--default section__spacing-bottom--larger">
     <?php do_action('b4b_checkout_content_before'); ?>
 
 		<?php

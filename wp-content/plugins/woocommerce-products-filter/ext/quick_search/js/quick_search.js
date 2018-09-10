@@ -1,6 +1,7 @@
 var data_text=[];
 var woof_qt_current_values=[];
 woof_qt_current_values.add_filter={};
+woof_qt_current_values.meta_filter={};
 var woof_qt_curr_page=0;
 var woof_qt_result_wraper={};
 var woof_qt_per_page=12;
@@ -97,6 +98,7 @@ function init_text_filter_content(){
             /*init all events*/
             woof_init_text_search();
             woof_qt_init_ion_sliders();
+            woof_qt_init_meta_ion_sliders();
             woof_qt_init_select();
             woof_qt_init_checkbox();
             woof_qt_init_radio();
@@ -197,21 +199,21 @@ function woof_do_quick_search_search(type,page,per_page){
         //console.log(searchField);
         var queries=[];
         var words=searchField.split(" ");
+        
         jQuery.each(words, function (key, val) {
             queries[key]= String.format("( d.title LIKE '%{0}%'  OR  d.key_words LIKE '%{0}%'  OR d.sku LIKE '%{0}%' ) ",val)
         });   
         sql_query="("+queries.join(text_group_logic)+")";
     }
    /*slider*/
-   if(woof_qt_current_values.min_price && woof_qt_current_values.max_price){
+   if((woof_qt_current_values.min_price && woof_qt_current_values.max_price) || (woof_qt_current_values.min_price===0 && woof_qt_current_values.max_price)){
       var sql_query_slider=String.format("( (get_min_price(d.price) BETWEEN {0} AND {1}) OR (get_max_price(d.price) BETWEEN {0} AND {1})) ",woof_qt_current_values.min_price,woof_qt_current_values.max_price)
      if(sql_query!=""){
          sql_query_slider=" AND "+sql_query_slider;
      }
       sql_query+=sql_query_slider;
-       //console.log(sql_query);
    }
-   /*aditional filters*/
+   /*additional filters*/
    if(woof_qt_current_values.add_filter){
        var sql_query_add_filter= []; 
        jQuery.each(woof_qt_current_values.add_filter, function (key_tax,tax){
@@ -241,6 +243,20 @@ function woof_do_quick_search_search(type,page,per_page){
      }
      
    }
+    /*meta filters*/
+    if(woof_qt_current_values.meta_filter){
+       /* console.log(woof_qt_current_values.meta_filter); */
+        var meta_query= woof_quick_search_generate_meta_filter(woof_qt_current_values.meta_filter);
+        if(meta_query){
+            if(sql_query){
+                sql_query +=" AND ("+meta_query+")";
+            }else{
+                sql_query +=meta_query;
+            }
+            
+        }
+        
+    }  
     /*console.log(sql_query)*/
    /*If  serch is not going*/
    if(sql_query==""){
@@ -260,11 +276,11 @@ function woof_do_quick_search_search(type,page,per_page){
    
    /*sort*/
    alasql.fn.get_max_price=function(_prices){ /*init function*/
-       var price= woof_get_price_limits(_prices)
+       var price= woof_get_price_limits(_prices);
        return price['max'];
    }
    alasql.fn.get_min_price=function(_prices){/*init function*/
-       var price= woof_get_price_limits(_prices)
+       var price= woof_get_price_limits(_prices);
        return price['min'];       
    }
    var sort_sql = " "; 
@@ -289,12 +305,50 @@ function woof_do_quick_search_search(type,page,per_page){
     if(type=="pagination"){
         return alasql("SELECT COUNT(1) FROM ? AS d  WHERE "+sql_query+sort_sql,[data_text]);
     }   
- 
     data_result=alasql("SELECT * FROM ? AS d WHERE "+sql_query+sort_sql+pagination_sql,[data_text]);
     if(data_result!=undefined  && data_result.length==0){
        data_result[0]="nan";
     }
     return data_result;
+}
+
+function woof_quick_search_generate_meta_filter(meta_data){
+    var meta_query=[];
+    var tmp_query=[];
+    var term_logic="OR";
+
+    jQuery.each(meta_data, function( index, value ) {
+        if(woof_qt_term_logic[index]!=undefined && woof_qt_term_logic[index]=="AND"){
+            term_logic= "AND";  
+        }else{
+            term_logic= "OR"; 
+        }
+        switch(value['type']){
+            case'exact':
+                jQuery.each(value['value'],function( i, val ) {
+                    if(val!=-1){
+                        tmp_query.push(String.format(" d.meta_data->('{0}') ='{1}' ",index,val ));
+                    }
+                });
+                if(tmp_query.length){
+                    meta_query.push("("+tmp_query.join(term_logic)+")");
+                }
+                break;
+            case'exist':
+                if(value['value'].length>0){
+                   meta_query.push(String.format("( d.meta_data->('{0}') <> 'undefined' )",index));
+                }                
+                break;
+            case'range':
+                if(value['value'].length>1){
+                    meta_query.push(String.format("( d.meta_data->('{0}') BETWEEN {1} AND {2} )",index,value['value'][0],value['value'][1]));
+                }                 
+                break;
+            default:
+        }
+
+    });
+    return meta_query.join(woof_qt_tax_logic);
 }
 
 function woof_quick_search_draw(){  
@@ -768,6 +822,57 @@ function woof_qt_reset_ion_sliders(){
 	}
     
 }
+/*
+ * 
+ * meta slider
+ * 
+ */
+function woof_qt_init_meta_ion_sliders() {
+
+    jQuery.each(jQuery('.woof_qt_meta_slider'), function (index, input) {
+        var tax = jQuery(input).data('tax');
+	try {
+	    jQuery(input).ionRangeSlider({
+		min: jQuery(input).data('min'),
+		max: jQuery(input).data('max'),
+		type: 'double',
+		prefix: jQuery(input).data('slider-prefix'),
+		postfix: jQuery(input).data('slider-postfix'),
+		prettify: true,
+		hideMinMax: false,
+		hideFromTo: false,
+		grid: true,
+		step: jQuery(input).data('step'),
+		onFinish: function (ui) {
+                    if(woof_qt_current_values.meta_filter[tax]==undefined){
+                        woof_qt_current_values.meta_filter[tax]={value:[],type:"range"};
+                    }
+                    if(jQuery(input).data('min')==ui.from && jQuery(input).data('max')==ui.to){
+                        delete woof_qt_current_values.meta_filter[tax];
+                    }else{
+                        woof_qt_current_values.meta_filter[tax]['value']=[parseFloat(ui.from, 10),parseFloat(ui.to, 10)];
+                    }
+                    
+
+
+           woof_qt_curr_page=0;/*reset pagination*/
+           woof_quick_search_draw();
+		    return false;
+		}
+	    });
+	} catch (e) {
+
+	}
+    });
+}
+/* reset  slider */
+function woof_qt_reset_meta_ion_sliders(){
+    var slider = jQuery(".woof_qt_meta_slider").data("ionRangeSlider");
+	if(slider!=undefined){
+		slider.reset();
+	}
+    
+}
 
 /*
  * 
@@ -789,8 +894,23 @@ function woof_qt_init_checkbox(){
             var slug=jQuery(this).attr('data-tax');
             if(woof_qt_current_values.add_filter[slug]==undefined){
                 woof_qt_current_values.add_filter[slug]=[];
-            }          
-            woof_qt_current_values.add_filter[slug].push(jQuery(this).val());
+            }  
+             //meta filter
+            if(jQuery(this).hasClass("meta_"+slug) ){
+                if(woof_qt_current_values.meta_filter[slug]==undefined){
+                    woof_qt_current_values.meta_filter[slug]={value:[],type:""};
+                }
+                woof_qt_current_values.meta_filter[slug]['value'].push(jQuery(this).val());
+                if(jQuery(this).val()=="meta_exist"){
+                    woof_qt_current_values.meta_filter[slug]['type']='exist';
+                }else{
+                    woof_qt_current_values.meta_filter[slug]['type']='exact';
+                }
+                
+            }else{
+                woof_qt_current_values.add_filter[slug].push(jQuery(this).val());        
+            }
+
             woof_qt_curr_page=0;/*reset pagination*/
             woof_quick_search_draw();
            //console.log(woof_qt_current_values.add_filter[slug])
@@ -800,11 +920,27 @@ function woof_qt_init_checkbox(){
         jQuery('.woof_qt_checkbox').on('ifUnchecked', function (event) {
             jQuery(this).attr("checked", false);
             var slug=jQuery(this).attr('data-tax');
-            var temp_array=woof_qt_current_values.add_filter[slug];
-            woof_qt_delete_element_array( temp_array,jQuery(this).val());
-            if(temp_array){
-              woof_qt_current_values.add_filter[slug]=temp_array; 
-            }
+             //meta filter
+            if(jQuery(this).hasClass("meta_"+slug) ){
+                if(woof_qt_current_values.meta_filter[slug]==undefined){
+                    woof_qt_current_values.meta_filter[slug]={value:[],type:""};
+                }
+                var temp_array=woof_qt_current_values.meta_filter[slug]['value'];
+                woof_qt_delete_element_array( temp_array,jQuery(this).val());
+                if(temp_array){
+                  woof_qt_current_values.meta_filter[slug]['value']=temp_array; 
+                }else{
+                    delete woof_qt_current_values.meta_filter[slug];
+                }                 
+                
+            }else{
+                var temp_array=woof_qt_current_values.add_filter[slug];
+                woof_qt_delete_element_array( temp_array,jQuery(this).val());
+                if(temp_array){
+                  woof_qt_current_values.add_filter[slug]=temp_array; 
+                }      
+            }            
+
             woof_qt_curr_page=0;/*reset pagination*/
             woof_quick_search_draw();
             //console.log(woof_qt_current_values.add_filter[slug])
@@ -830,20 +966,50 @@ function woof_qt_init_checkbox(){
         jQuery('.woof_qt_checkbox').on('change', function (event) {
             var slug=jQuery(this).attr('data-tax');
             if (jQuery(this).is(':checked')) {
-                jQuery(this).attr("checked", true);            
+                jQuery(this).attr("checked", true); 
+                
                 if(woof_qt_current_values.add_filter[slug]==undefined){
                     woof_qt_current_values.add_filter[slug]=[];
-                }          
-                woof_qt_current_values.add_filter[slug].push(jQuery(this).val());
+                }  
+                
+                if(jQuery(this).hasClass("meta_"+slug) ){
+                    if(woof_qt_current_values.meta_filter[slug]==undefined){
+                        woof_qt_current_values.meta_filter[slug]={value:[],type:""};
+                    }
+                    woof_qt_current_values.meta_filter[slug]['value'].push(jQuery(this).val());
+                    if(jQuery(this).val()=="meta_exist"){
+                        woof_qt_current_values.meta_filter[slug]['type']='exist';
+                    }else{
+                        woof_qt_current_values.meta_filter[slug]['type']='exact';
+                    }
+
+                }else{
+                    woof_qt_current_values.add_filter[slug].push(jQuery(this).val());        
+                }
+                
                 woof_qt_curr_page=0;/*reset pagination*/
                 woof_quick_search_draw();
             } else {
                 jQuery(this).attr("checked", false);
-                var temp_array=woof_qt_current_values.add_filter[slug];
-                woof_qt_delete_element_array( temp_array,jQuery(this).val());
-                if(temp_array){
-                  woof_qt_current_values.add_filter[slug]=temp_array; 
-                }
+                if(jQuery(this).hasClass("meta_"+slug) ){
+                   if(woof_qt_current_values.meta_filter[slug]==undefined){
+                       woof_qt_current_values.meta_filter[slug]={value:[],type:""};
+                   }
+                   var temp_array=woof_qt_current_values.meta_filter[slug]['value'];
+                   woof_qt_delete_element_array( temp_array,jQuery(this).val());
+                   if(temp_array){
+                     woof_qt_current_values.meta_filter[slug]['value']=temp_array; 
+                   }else{
+                        delete woof_qt_current_values.meta_filter[slug];
+                   }                  
+
+                }else{
+                   var temp_array=woof_qt_current_values.add_filter[slug];
+                   woof_qt_delete_element_array( temp_array,jQuery(this).val());
+                   if(temp_array){
+                     woof_qt_current_values.add_filter[slug]=temp_array; 
+                   }      
+                }               
                 //console.log(woof_qt_current_values.add_filter[slug]) 
                 woof_qt_curr_page=0;/*reset pagination*/
                 woof_quick_search_draw();    
@@ -940,7 +1106,14 @@ function woof_qt_init_select(){
         }else if(tax_id!=-1){
             tax_ids[0]=tax_id;
         }
-        woof_qt_current_values.add_filter[slug]=tax_ids;
+        //meta filter
+        if(jQuery(this).hasClass("meta_"+slug) ){
+            woof_qt_current_values.meta_filter[slug]={type:'exact',value:tax_ids};
+            
+        }else{
+             woof_qt_current_values.add_filter[slug]=tax_ids;            
+        }
+
         woof_qt_curr_page=0;/*reset pagination*/
         woof_quick_search_draw();
         });
@@ -982,6 +1155,7 @@ function woof_init_text_search(){
 function woof_qt_reset_init(){
    jQuery('.woof_qt_reset_filter_btn').click(function () {
         woof_qt_current_values.add_filter={};
+        woof_qt_current_values.meta_filter={};
         jQuery('#woof_quick_search_form').val('');
         woof_qt_curr_page=0;/*reset pagination*/
         woof_qt_current_values.max_price =null;
@@ -991,6 +1165,7 @@ function woof_qt_reset_init(){
         woof_qt_reset_checkbox();
         woof_qt_reset_select();
         woof_qt_reset_ion_sliders();
+        woof_qt_reset_meta_ion_sliders();
         woof_quick_search_draw();  
    });   
 }

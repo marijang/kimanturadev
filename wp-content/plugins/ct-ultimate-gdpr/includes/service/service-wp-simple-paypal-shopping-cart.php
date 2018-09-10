@@ -19,6 +19,8 @@ class CT_Ultimate_GDPR_Service_WP_Simple_Paypal_Shopping_Cart extends CT_Ultimat
 			$this,
 			'add_postmeta_keys_to_encrypt'
 		) );
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_compatible_wordpress-simple-paypal-shopping-cart/wp_shopping_cart.php', '__return_true' );
+		add_filter( 'ct_ultimate_gdpr_controller_plugins_collects_data_wordpress-simple-paypal-shopping-cart/wp_shopping_cart.php', '__return_false' );
 	}
 
 	public function add_postmeta_keys_to_encrypt( $keys ) {
@@ -66,7 +68,7 @@ class CT_Ultimate_GDPR_Service_WP_Simple_Paypal_Shopping_Cart extends CT_Ultimat
 	 * @return mixed
 	 */
 	public function get_name() {
-		return 'WP Simple Paypal Shopping Cart';
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", 'WP Simple Paypal Shopping Cart' );
 	}
 
 	/**
@@ -126,17 +128,25 @@ class CT_Ultimate_GDPR_Service_WP_Simple_Paypal_Shopping_Cart extends CT_Ultimat
 
 		// services
 
-		add_settings_field(
+		/*add_settings_field(
 			"services_{$this->get_id()}_header", // ID
 			$this->get_name(), // Title
 			'__return_empty_string', // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-wpsimplepaypalshoppingcart_accordion-20' // Section
-		);
+		);*/
+
+        add_settings_field(
+            "services_{$this->get_id()}_service_name", // ID
+            sprintf( esc_html__( "[%s] Name", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
+            array( $this, "render_name_field" ), // Callback
+            CT_Ultimate_GDPR_Controller_Services::ID, // Page
+            'ct-ultimate-gdpr-services-wpsimplepaypalshoppingcart_accordion-20' // Section
+        );
 
 		add_settings_field(
 			"services_{$this->get_id()}_description", // ID
-			esc_html__( "[{$this->get_name()}] Description", 'ct-ultimate-gdpr' ), // Title
+			sprintf( esc_html__( "[%s] Description", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
 			array( $this, "render_description_field" ), // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-wpsimplepaypalshoppingcart_accordion-20' // Section
@@ -205,6 +215,10 @@ class CT_Ultimate_GDPR_Service_WP_Simple_Paypal_Shopping_Cart extends CT_Ultimat
 	 * @return array
 	 */
 	public function breach_recipients_filter( $recipients ) {
+
+		if ( ! $this->is_breach_enabled() ) {
+			return $recipients;
+		}
 
 		global $wpdb;
 

@@ -2,7 +2,7 @@
 if (!defined('ABSPATH'))
     die('No direct access allowed');
 
-//30-11-2016
+//20-06-2018
 final class WOOF_EXT_STAT extends WOOF_EXT {
 
     private $table_stat_buffer = 'woof_stat_buffer';
@@ -20,12 +20,14 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
     public $cron = NULL;
     public $wp_cron_period = 'daily';
     public $max_items_per_graph = 10;
-
+    public $updated_table=false;
+    public $meta_keys=array();
     //***
 
     public function __construct()
     {
         parent::__construct();
+
         global $wpdb;
         $this->table_stat_buffer = $wpdb->prefix . $this->table_stat_buffer;
         $this->table_stat_tmp = $wpdb->prefix . $this->table_stat_tmp;
@@ -33,6 +35,16 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
         if (isset($this->woof_settings['woof_stat']['is_enabled']))
         {
             $this->is_enabled = (bool) $this->woof_settings['woof_stat']['is_enabled'];
+        }
+        //****
+        $this->updated_table=get_option('woof_stat_updated_table',false);
+         
+        if(!$this->updated_table ){
+            global $wpdb;
+            $table_name = $this->table_stat_tmp;
+            if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
+                update_option('woof_stat_updated_table',true); 
+            }
         }
         //***
         $cache_folder = '_woof_stat_cache';
@@ -85,6 +97,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
         //***
         $this->cache_folder = WP_CONTENT_DIR . '/' . $cache_folder . '/';
         add_filter('woof_get_request_data', array($this, 'woof_get_request_data'));
+        $this->meta_keys=$this->get_meta_keys();
         //***
         $this->init();
         //***
@@ -124,6 +137,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
         add_action('wp_ajax_woof_get_stat_data', array($this, 'woof_get_stat_data'));
         add_action('wp_ajax_woof_get_top_terms', array($this, 'woof_get_top_terms'));
         add_action('wp_ajax_woof_stat_check_connection', array($this, 'woof_stat_check_connection'));
+        add_action('wp_ajax_woof_stat_update_db', array($this, 'woof_stat_update_db'));     
     }
 
     public function get_ext_path()
@@ -142,7 +156,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
         add_action('woof_print_applications_tabs_content_' . $this->folder_name, array($this, 'woof_print_applications_tabs_content'), 10, 1);
         self::$includes['js']['woof_stat_html_items'] = $this->get_ext_link() . 'js/stat.js';
     }
-//ajax
+    //ajax
     public function woof_stat_check_connection() {
         $pdo_options = array();
         $pdo_options['host'] = sanitize_text_field($_REQUEST['woof_stat_host']);
@@ -159,6 +173,19 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
         }
         die(__("Database successfully connected!!!", 'woocommerce-products-filter'));
     }
+    public function woof_stat_update_db(){
+        global $wpdb;
+        $row = $wpdb->get_results(  "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '".$this->table_stat_buffer."' AND column_name = 'meta_value'"  );
+        if(empty($row)){
+           $result=$wpdb->query("ALTER TABLE ".$this->table_stat_buffer." ADD meta_value text COLLATE utf8_unicode_ci NOT NULL");
+           if($result===false){
+               die(__("Somthing wrong!", 'woocommerce-products-filter'));
+           }
+        }
+        update_option('woof_stat_updated_table',true); 
+        die(__("Database successfully updated!!!", 'woocommerce-products-filter'));
+    }
+
     public function woof_print_applications_tabs()
     {
         ?>
@@ -177,7 +204,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
         //woof_stat_calendar_date_format, woof_stat_week_first_day
         wp_enqueue_script('woof_google_charts', 'https://www.gstatic.com/charts/loader.js');
         wp_enqueue_script('jquery-ui-core');
-
+        //***
         global $WOOF;
         $data = array();
         $data['stat_min_date'] = $this->get_stat_min_date_db();
@@ -235,29 +262,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
         $data['table_stat_tmp'] = $this->table_stat_tmp;
         $data['folder_name'] = $this->folder_name;
         $data['woof_settings'] = $this->woof_settings;
-        //sss
-        $seconds = bindec(101) * MONTH_IN_SECONDS - (time() - $this->get_time());
-        $in_use = 0;
-        $data['display_time'] = $in_use;
-        if ($seconds > 0)
-        {
-
-            $months = floor($seconds / MONTH_IN_SECONDS);
-            $seconds %= MONTH_IN_SECONDS;
-
-            $days = floor($seconds / DAY_IN_SECONDS);
-            $seconds %= DAY_IN_SECONDS;
-
-            $hours = floor($seconds / HOUR_IN_SECONDS);
-            $seconds %= HOUR_IN_SECONDS;
-
-            $minutes = floor($seconds / MINUTE_IN_SECONDS);
-            $seconds %= MINUTE_IN_SECONDS;
-
-            $data['display_time'] = sprintf(__('%s monthes and %s days and %s hours and %s minutes and %s seconds', 'woocommerce-products-filter'), $months, $days, $hours, $minutes, $seconds);
-        }
-
-        $data['isa'] = $this->is_enabled;
+        $data['updated_table'] = $this->updated_table;
         //$data['stat_weight'] = WOOF_HELPER::recurse_dirsize($this->cache_folder);
         //$data['stat_min_date'] = $this->get_stat_min_date();//for file system only
 
@@ -277,39 +282,11 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
                     try {
                         $this->pdo = new PDO("mysql:host={$pdo_options['host']};dbname={$pdo_options['host_db_name']}", $pdo_options['host_user'], $pdo_options['host_pass']);
                     } catch (Exception $e) {
-                        $this->pdo = NULL;
                         echo '<div class="error"><p class="description">' . sprintf(__('Wrong data for "<b>Server options for statistic stock</b>" options', 'woocommerce-products-filter')) . '</p></div>';
                     }
                 }
-                //important for data collection - sss
-                if (!$this->get_time() AND $this->is_enabled)
-                {
-                    update_option('woof_stat_start', time());
-                }
             }
         }
-    }
-
-    public function get_time()
-    {
-        $time = get_option('woof_stat_start', NULL);
-        return (int) $time;
-    }
-
-    public function do_stat_data()
-    {
-        $is = true;
-        if (!$this->get_time())
-        {
-            update_option('woof_stat_start', time());
-        }
-
-        if (bindec(101) * MONTH_IN_SECONDS - (time() - $this->get_time()) < 0)
-        {
-            $is = FALSE;
-        }
-
-        return $is;
     }
 
     public function get_woof_cron_schedules($key = '')
@@ -347,11 +324,8 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
             {
                 $this->cron->attach($hook, time(), $this->get_woof_cron_schedules($this->wp_cron_period));
             }
-            //sss
-            if (bindec(101) * MONTH_IN_SECONDS - (time() - $this->get_time()) > 0)
-            {
-                $this->cron->process();
-            }
+
+            $this->cron->process();
         }
     }
 
@@ -580,6 +554,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
                             }
                         }
                         //***
+                        
                         $operative_data3 = array();
                         $search_template_count = count($search_template);
 
@@ -599,9 +574,17 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
                                         break;
                                     }
 
-                                    $item['tax_name'] = $taxonomies[$item['taxonomy']];
-                                    $t = get_term_by('id', $item['value'], $item['taxonomy']);
-                                    $item['value_name'] = $t->name;
+                                    if(class_exists('WOOF_META_FILTER') AND in_array($item['taxonomy'],$this->meta_keys) ){
+                                        
+                                        
+                                        $item['tax_name'] = WOOF_META_FILTER::get_meta_filter_name($item['taxonomy']);
+                                        $item['value_name'] = WOOF_META_FILTER::get_meta_filter_option_name($item['taxonomy'],$item['value']); 
+                                        
+                                    }else{
+                                        $item['tax_name'] = $taxonomies[$item['taxonomy']];
+                                        $t = get_term_by('id', $item['value'], $item['taxonomy']);
+                                        $item['value_name'] = $t->name; 
+                                    }
 
                                     unset($tax_should_be[$item['taxonomy']]);
                                 }
@@ -708,6 +691,27 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
                     $taxonomies[urldecode($slug)] = $t->labels->name;
                 }
             }
+            //meta filter
+            if(class_exists('WOOF_META_FILTER')){
+                $meta_keys=array();
+                $meta_fields=$this->woof_settings['meta_filter'];
+                if (!empty($meta_fields))
+                {
+                    foreach ($meta_fields as $key => $meta)
+                    {
+                        if($meta['meta_key']=="__META_KEY__"){
+                            continue;
+                        } 
+                        $slug= $meta["search_view"]."_".$meta['meta_key'];
+                        if(!in_array($slug,$this->items_for_stat)){
+                            continue;
+                        }
+                        $meta_keys[]=$slug;
+                        $taxonomies[urldecode($slug)]=WOOF_HELPER::wpml_translate(null, $meta['title'], 0);
+                    }
+                }  
+            }
+
             //***
             if (!empty($stat_data))
             {
@@ -769,6 +773,8 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
                             }
                             $block_tax_diff[$tn]+=$count;
                         }
+                    }else{
+                        
                     }
                 }
 
@@ -789,6 +795,20 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
                         $block_tax_each[$tax_slug]['terms'] = array();
                         if (!empty($block))
                         {
+                            if(class_exists('WOOF_META_FILTER')){
+                                if(in_array($tax_slug,$meta_keys)){
+                                    foreach ($block as $term_id => $count)
+                                    {
+                                       $val_name= WOOF_META_FILTER::get_meta_filter_option_name($tax_slug,$term_id);
+                                       if($val_name){
+                                           $block_tax_each[$tax_slug]['terms'][$val_name] = $count;
+                                       }else{
+                                           $block_tax_each[$tax_slug]['terms'][$term_id] = $count;
+                                       }
+                                    }                                
+                                    continue;
+                                }
+                            }
                             foreach ($block as $term_id => $count)
                             {
                                 $t = get_term_by('id', $term_id, $tax_slug);
@@ -817,7 +837,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
     //writing all search request from the customers
     public function woof_get_request_data($data)
     {
-        if (!$this->is_enabled OR ! $this->do_stat_data())
+        if (!$this->is_enabled)
         {
             return $data;
         }
@@ -919,13 +939,53 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
                 $hash = md5(json_encode($request) . $user_ip . date('d-m-Y'));
                 unset($request['really_curr_tax']);
                 //lets check for the same request from the same user
-                $the_same_hash = $wpdb->get_var($wpdb->prepare("SELECT hash FROM $this->table_stat_tmp WHERE user_ip = %s AND hash = %s", $user_ip, $hash));
+                $data_sql=array(
+                    array(
+                        'type'=>'string',
+                        'val'=>$user_ip,
+                    ),
+                    array(
+                        'type'=>'string',
+                        'val'=>$hash,
+                    )                    
+                ); 
+                $the_same_hash = $wpdb->get_var(WOOF_HELPER::woof_prepare("SELECT hash FROM $this->table_stat_tmp WHERE user_ip = %s AND hash = %s",$data_sql));
                 //***
                 if (empty($the_same_hash))
                 {
                     $request = json_encode($request, JSON_UNESCAPED_UNICODE);
                     $time = time();
-                    $insert = $wpdb->prepare("(%s, %s, %s, %s, %s, %d, %d)", $user_ip, $type, $request, $hash, $tax_page, $tax_page_term_id, $time);
+                    $data_sql=array(
+                        array(
+                            'type'=>'string',
+                            'val'=>$user_ip,
+                        ),
+                        array(
+                            'type'=>'string',
+                            'val'=>$type,
+                        ),
+                        array(
+                            'type'=>'string',
+                            'val'=>$request,
+                        ),
+                        array(
+                            'type'=>'string',
+                            'val'=>$hash,
+                        ),
+                        array(
+                            'type'=>'string',
+                            'val'=>$tax_page,
+                        ),
+                        array(
+                            'type'=>'int',
+                            'val'=>$tax_page_term_id,
+                        ),
+                        array(
+                            'type'=>'int',
+                            'val'=>$time,
+                        ),
+                    ); 
+                    $insert = WOOF_HELPER::woof_prepare("(%s, %s, %s, %s, %s, %d, %d)", $data_sql);
                     $wpdb->query("INSERT INTO {$this->table_stat_tmp} (user_ip,page,request,hash,tax_page,tax_page_term_id,time) VALUES " . $insert);
                 }
             }
@@ -941,7 +1001,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
     {
         //WOOF_HELPER::log(date('d-m-Y H:i:s'));
 
-        if (!$this->is_enabled OR ! $this->do_stat_data())
+        if (!$this->is_enabled)
         {
             return;
         }
@@ -952,16 +1012,36 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
         $terms = array();
         $step_num = 0;
         $step = 100;
-        $count = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*)
+        $data_sql=array(
+            array(
+                'type'=>'int',
+                'val'=>0,
+            )                  
+        );
+        $count = $wpdb->get_var(WOOF_HELPER::woof_prepare("SELECT COUNT(*)
 			FROM {$this->table_stat_tmp} WHERE is_collected = %d
-			ORDER BY user_ip", 0));
+			ORDER BY user_ip", $data_sql));
 
         while (true)
         {
             $next = $step * ($step_num + 1);
-            $res = $wpdb->get_results($wpdb->prepare("SELECT *
+            $data_sql=array(
+                array(
+                    'type'=>'int',
+                    'val'=>0,
+                ), 
+                array(
+                    'type'=>'int',
+                    'val'=>$step_num,
+                ), 
+                array(
+                    'type'=>'int',
+                    'val'=>$next,
+                ),                
+            );
+            $res = $wpdb->get_results(WOOF_HELPER::woof_prepare("SELECT *
 			FROM {$this->table_stat_tmp} WHERE is_collected = %d
-			LIMIT %d,%d", 0, $step_num, $next), ARRAY_A);
+			LIMIT %d,%d",$data_sql ), ARRAY_A);
 
 
             if (!empty($res))
@@ -972,17 +1052,43 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
 
                     if (!empty($data))
                     {
-                        foreach ($data as $taxonomy => $term_slug)
-                        {
+                        foreach ($data as $taxonomy => $term_slugs)
+                        {   
+                            $terms= explode(',',$term_slugs);
+                            foreach($terms as $term_slug){
                             $value = 0;
+                            $meta_value="";
                             $term_slug = urldecode($term_slug);
                             $taxonomy = urldecode($taxonomy);
                             $exclude = array('min_price', 'max_price');
+                            $meta_key=array();
+                            if(class_exists('WOOF_META_FILTER')){
+                             
+                                $meta_fields=$this->woof_settings['meta_filter'];
+                                if (!empty($meta_fields))
+                                {
+                                    foreach ($meta_fields as $key => $meta)
+                                    {
+                                        if($meta['meta_key']=="__META_KEY__"){
+                                            continue;
+                                        } 
+                                        $slug= $meta["search_view"]."_".$meta['meta_key'];
+                                        $meta_key[]=urldecode($slug);
+                                        $exclude = array_merge($exclude,$meta_key); 
+                                    }
+                                }                                
+                            }
                             if (!in_array($taxonomy, $exclude))
                             {
                                 if (!isset($terms[$taxonomy . '_' . $term_slug]))
                                 {
-                                    $value = (int) $wpdb->get_var($wpdb->prepare("SELECT term_id FROM {$wpdb->prefix}terms WHERE slug = %s", urlencode($term_slug)));
+                                    $data_sql=array(
+                                        array(
+                                            'type'=>'string',
+                                            'val'=>urlencode($term_slug),
+                                        ),                 
+                                    );                                   
+                                    $value = (int) $wpdb->get_var(WOOF_HELPER::woof_prepare("SELECT term_id FROM {$wpdb->prefix}terms WHERE slug = %s",$data_sql ));
                                     //terms caching
                                     $terms[$taxonomy . '_' . $term_slug] = $value;
                                 } else
@@ -991,15 +1097,68 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
                                 }
                             } else
                             {
-                                $value = $term_slug;
+                               if(in_array($taxonomy,$meta_key)){
+                                   $meta_value=$term_slug;// do that 
+                                   $value=0;
+                               }else{
+                                   $value = $term_slug;
+                                   
+                               }
+                                
+                                
                             }
-
-                            $insert = $wpdb->prepare("(%s, %s, %s, %d, %s, %d, %d)", $row['hash'], $row['user_ip'], $taxonomy, $value, $row['page'], $row['tax_page_term_id'], $row['time']);
-                            $wpdb->query("INSERT INTO {$this->table_stat_buffer} (hash,user_ip,taxonomy,value,page,tax_page_term_id,time) VALUES " . $insert);
+                            $data_sql=array(
+                                array(
+                                    'type'=>'string',
+                                    'val'=>$row['hash'],
+                                ),
+                                array(
+                                    'type'=>'string',
+                                    'val'=>$row['user_ip'],
+                                ),
+                                array(
+                                    'type'=>'string',
+                                    'val'=>$taxonomy,
+                                ),
+                                array(
+                                    'type'=>'int',
+                                    'val'=>$value,
+                                ),
+                                array(
+                                    'type'=>'string',
+                                    'val'=>$meta_value,
+                                ),                                
+                                array(
+                                    'type'=>'string',
+                                    'val'=>$row['page'],
+                                ),
+                                array(
+                                    'type'=>'int',
+                                    'val'=>$row['tax_page_term_id'],
+                                ),
+                                array(
+                                    'type'=>'int',
+                                    'val'=>$row['time'],
+                                ),
+                            ); 
+                            $insert = WOOF_HELPER::woof_prepare("(%s, %s, %s, %d,%s,%s, %d, %d)", $data_sql);
+                            $wpdb->query("INSERT INTO {$this->table_stat_buffer} (hash,user_ip,taxonomy,value,meta_value,page,tax_page_term_id,time) VALUES " . $insert);
+                        
+                            }
+                            
                         }
                     }
-
-                    $wpdb->query($wpdb->prepare("UPDATE {$this->table_stat_tmp} SET is_collected = %d WHERE hash = %s", 1, $row['hash']));
+                    $data_sql=array(
+                        array(
+                            'type'=>'int',
+                            'val'=>1,
+                        ),   
+                        array(
+                            'type'=>'string',
+                            'val'=>$row['hash'],
+                        ),                       
+                    );                    
+                    $wpdb->query(WOOF_HELPER::woof_prepare("UPDATE {$this->table_stat_tmp} SET is_collected = %d WHERE hash = %s", $data_sql));
                 }
             }
 
@@ -1011,7 +1170,13 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
             }
         }
 //***
-        $wpdb->query($wpdb->prepare("DELETE FROM {$this->table_stat_tmp} WHERE is_collected = %d", 1));
+        $data_sql=array(
+            array(
+                'type'=>'int',
+                'val'=>1,
+            ),                         
+        );        
+        $wpdb->query(WOOF_HELPER::woof_prepare("DELETE FROM {$this->table_stat_tmp} WHERE is_collected = %d", $data_sql));
         //if ($this->place_statdata_into_files())//this method for keeping stat data in files
         if ($this->place_statdata_into_db())//placing data into dedicated DB
         {
@@ -1025,7 +1190,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
 
     public function place_statdata_into_db()
     {
-        if (!$this->is_enabled OR ! $this->do_stat_data())
+        if (!$this->is_enabled)
         {
             return;
         }
@@ -1047,12 +1212,18 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
                 //***
                 foreach ($hash_array as $hash)
                 {
+                    $data_sql=array(
+                        array(
+                            'type'=>'string',
+                            'val'=>$hash,
+                        ),                         
+                    );                    
                     //$res = $wpdb->get_results($wpdb->prepare("SELECT user_ip as uip,taxonomy as t,value as v,page as p,tax_page_term_id as tpti,time FROM {$this->table_stat_buffer} WHERE hash = %s", $hash), ARRAY_A);
-                    $res = $wpdb->get_results($wpdb->prepare("SELECT * FROM {$this->table_stat_buffer} WHERE hash = %s", $hash), ARRAY_A);
+                    $res = $wpdb->get_results(WOOF_HELPER::woof_prepare("SELECT * FROM {$this->table_stat_buffer} WHERE hash = %s", $data_sql), ARRAY_A);
                     if (!empty($res))
                     {
                         $time = $res[0]['time'];
-
+                      
                         //PDO here
                         if (!is_null($this->pdo))
                         {
@@ -1091,10 +1262,18 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
 
                             foreach ($res as $row)
                             {
+                                if(class_exists('WOOF_META_FILTER')){
+                                    if(in_array($row['taxonomy'],$this->meta_keys)){
+                                        if($row['value']==0){
+                                            $row['value']=$row['meta_value'];
+                                        }
+                                    }
+                                }
+                                $tax=urlencode($row['taxonomy']);
                                 $stmt = $this->pdo->prepare($sql);
                                 $stmt->bindParam(':hash', $row['hash'], PDO::PARAM_STR);
                                 $stmt->bindParam(':user_ip', $row['user_ip'], PDO::PARAM_STR);
-                                $stmt->bindParam(':taxonomy', urlencode($row['taxonomy']), PDO::PARAM_STR);
+                                $stmt->bindParam(':taxonomy', $tax, PDO::PARAM_STR);
                                 $stmt->bindParam(':value', $row['value'], PDO::PARAM_STR);
                                 $stmt->bindParam(':page', $row['page'], PDO::PARAM_STR);
                                 $stmt->bindParam(':tax_page_term_id', $row['tax_page_term_id'], PDO::PARAM_INT);
@@ -1174,8 +1353,14 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
                 //***
                 foreach ($hash_array as $hash)
                 {
+                    $data_sql=array(
+                        array(
+                            'type'=>'string',
+                            'val'=>$hash,
+                        ),                         
+                    );                   
                     //$res = $wpdb->get_results($wpdb->prepare("SELECT user_ip as uip,taxonomy as t,value as v,page as p,tax_page_term_id as tpti,time FROM {$this->table_stat_buffer} WHERE hash = %s", $hash), ARRAY_A);
-                    $res = $wpdb->get_results($wpdb->prepare("SELECT * FROM {$this->table_stat_buffer} WHERE hash = %s", $hash), ARRAY_A);
+                    $res = $wpdb->get_results(WOOF_HELPER::woof_prepare("SELECT * FROM {$this->table_stat_buffer} WHERE hash = %s", $data_sql), ARRAY_A);
                     if (!empty($res))
                     {
                         $time = $res[0]['time'];
@@ -1398,7 +1583,13 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
     private function get_user_requests_count($user_ip)
     {
         global $wpdb;
-        return (int) $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) as count FROM $this->table_stat_tmp WHERE user_ip = %s", $user_ip));
+        $data_sql=array(
+            array(
+                'type'=>'string',
+                'val'=>$user_ip,
+            ),                         
+         );         
+        return (int) $wpdb->get_var(WOOF_HELPER::woof_prepare("SELECT COUNT(*) as count FROM $this->table_stat_tmp WHERE user_ip = %s", $data_sql));
     }
 
     public function get_the_user_ip()
@@ -1416,6 +1607,32 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
             $ip = $_SERVER['REMOTE_ADDR'];
         }
         return $ip;
+    }
+    public function get_meta_keys(){
+        if(class_exists('WOOF_META_FILTER')){
+            $meta_keys=array();
+            $meta_fields=array();
+            if(isset($this->woof_settings['meta_filter'])){
+                $meta_fields=$this->woof_settings['meta_filter'];
+            }
+            if (!empty($meta_fields))
+            {
+                foreach ($meta_fields as $key => $meta)
+                {
+                    if($meta['meta_key']=="__META_KEY__"){
+                        continue;
+                    } 
+                    $slug= $meta["search_view"]."_".$meta['meta_key'];
+                    if(!in_array($slug,$this->items_for_stat)){
+                        continue;
+                    }
+                    $meta_keys[]=$slug;
+                }
+            }  
+            return $meta_keys;
+        }else{
+            return array();
+        }
     }
 
 }

@@ -44,7 +44,7 @@ class CT_Ultimate_GDPR_Service_Contact_Form_7 extends CT_Ultimate_GDPR_Service_A
 	 * @return mixed
 	 */
 	public function get_name() {
-		return 'Contact Form 7';
+		return apply_filters( "ct_ultimate_gdpr_service_{$this->get_id()}_name", 'Contact Form 7' );
 	}
 
 	/**
@@ -80,13 +80,21 @@ class CT_Ultimate_GDPR_Service_Contact_Form_7 extends CT_Ultimate_GDPR_Service_A
 			CT_Ultimate_GDPR_Controller_Services::ID // Page
 		);
 
-		add_settings_field(
+		/*add_settings_field(
 			"services_{$this->get_id()}_header", // ID
 			$this->get_name(), // Title
 			'__return_empty_string', // Callback
 			CT_Ultimate_GDPR_Controller_Services::ID, // Page
 			'ct-ultimate-gdpr-services-cform7_accordion-4'
-		);
+		);*/
+
+        add_settings_field(
+            "services_{$this->get_id()}_service_name", // ID
+            sprintf( esc_html__( "[%s] Name", 'ct-ultimate-gdpr' ), $this->get_name() ), // Title
+            array( $this, "render_name_field" ), // Callback
+            CT_Ultimate_GDPR_Controller_Services::ID, // Page
+            'ct-ultimate-gdpr-services-cform7_accordion-4' // Section
+        );
 
 		add_settings_field(
 			"services_{$this->get_id()}_description", // ID
@@ -175,11 +183,21 @@ class CT_Ultimate_GDPR_Service_Contact_Form_7 extends CT_Ultimate_GDPR_Service_A
 				$fields = ct_ultimate_gdpr_render_template( ct_ultimate_gdpr_locate_template( 'service/service-contact-form-7-consent-field', false ), false ) . $fields;
 			} else {
 				$fields .= ct_ultimate_gdpr_render_template( ct_ultimate_gdpr_locate_template( 'service/service-contact-form-7-consent-field', false ), false );
+
 			}
 		}
 
 		return apply_filters( 'ct_ultimate_gdpr_service_contact_form_7_form_content', $fields, $original_fields, $inject, $position_first );
 	}
+
+    public function enqueue_static(  ) {
+
+        wp_enqueue_script( 'ct-ultimate-gdpr-service-contact-form-7', ct_ultimate_gdpr_url( 'assets/js/service-contact-form-7.js' ) );
+        wp_localize_script( 'ct-ultimate-gdpr-service-contact-form-7', 'ct_ultimate_gdpr_contact_form_7', array(
+            'checkbox' => ct_ultimate_gdpr_render_template( ct_ultimate_gdpr_locate_template( 'service/service-contact-form-7-consent-field', false ) ),
+        ) );
+
+    }
 
 	/**
 	 * @return string
