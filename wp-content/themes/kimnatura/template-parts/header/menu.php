@@ -25,17 +25,17 @@ $array = array(
     array(
         "value" => 'Facebook',
         "link"  => '#facebook',
-        "image" => 'facebook.svg'
+        "image" => 'facebook-black.svg'
     ),
     array(
         "value" => 'Instagram',
         "link"  => '#instagram',
-        "image" => 'instagram.svg'
+        "image" => 'instagram-black.svg'
     ),
     array(
         "value" => 'Twitter',
         "link"  => '#twitter',
-        "image" => 'twitter.svg'
+        "image" => 'twitter-black.svg'
     )
 );
 ?>

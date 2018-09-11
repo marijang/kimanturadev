@@ -244,16 +244,21 @@ html.mobile-menu-is-open{
     @include e('mobile-contact-social'){
         color:#000;
         .social-followus__link{
-            border-color:#000;
-            color:#000;
+            border-color:$color-black;
+            position: relative;
         }
         .social-followus__menu{
             justify-content: left;
         }
         ul{
-            color:#000;
+            color: $color-black;
             margin-bottom: 8px;
             
+        }
+
+        svg {
+            position: absolute;
+            top: 0;
         }
 
     }
