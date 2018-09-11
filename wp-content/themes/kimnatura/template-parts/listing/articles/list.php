@@ -13,7 +13,12 @@ $image  = $images->get_post_image( 'listing' );
   <div class="article-list__container">
     <div class="article-list__image">
       <a class="article-list__image-link" href="<?php the_permalink(); ?>">
-           <?php  the_post_thumbnail( 'blog-list'); ?>
+        <?php  if (wp_is_mobile()) {
+            the_post_thumbnail( 'post_full_width');
+          } else {
+            the_post_thumbnail( 'blog-list');
+          }
+        ?>
       </a>
     </div>
     <div class="article-list__content">
