@@ -25,17 +25,17 @@ $array = array(
     array(
         "value" => 'Facebook',
         "link"  => '#facebook',
-        "image" => 'facebook-black.svg'
+        "image" => 'facebookb.svg'
     ),
     array(
         "value" => 'Instagram',
         "link"  => '#instagram',
-        "image" => 'instagram-black.svg'
+        "image" => 'instagramb.svg'
     ),
     array(
         "value" => 'Twitter',
         "link"  => '#twitter',
-        "image" => 'twitter-black.svg'
+        "image" => 'twitterb.svg'
     )
 );
 ?>
@@ -61,8 +61,8 @@ $array = array(
       <!--<a href="" class="main-navigation__link header__mobile-lang">Engleski</a>-->
  
     <div class="header__mobile-contact">
-     <div class="header__mobile-contact-phone"><a href="tel:+385992317072">+385992317072</a></div>
-     <div class="header__mobile-contact-mail">info@kimnatura.hr</div>
+     <div class="header__mobile-contact-phone"><a href="tel:+385993474302">+385993474302</a></div>
+     <div class="header__mobile-contact-mail"><a href="mailto:info@kimnatura.hr">info@kimnatura.hr</a></div>
      <div class="footer__links footer__links--social header__mobile-contact-social">
         <ul class="social-followus__menu">
             <?php
