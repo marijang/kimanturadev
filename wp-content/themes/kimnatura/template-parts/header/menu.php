@@ -25,17 +25,17 @@ $array = array(
     array(
         "value" => 'Facebook',
         "link"  => '#facebook',
-        "image" => 'facebook.svg'
+        "image" => 'facebookb.svg'
     ),
     array(
         "value" => 'Instagram',
         "link"  => '#instagram',
-        "image" => 'instagram.svg'
+        "image" => 'instagramb.svg'
     ),
     array(
         "value" => 'Twitter',
         "link"  => '#twitter',
-        "image" => 'twitter.svg'
+        "image" => 'twitterb.svg'
     )
 );
 ?>
@@ -61,8 +61,8 @@ $array = array(
       <!--<a href="" class="main-navigation__link header__mobile-lang">Engleski</a>-->
  
     <div class="header__mobile-contact">
-     <div class="header__mobile-contact-phone"><a href="tel:+385992317072">+385992317072</a></div>
-     <div class="header__mobile-contact-mail">info@kimnatura.hr</div>
+     <div class="header__mobile-contact-phone"><a href="tel:+385993474302">+385993474302</a></div>
+     <div class="header__mobile-contact-mail"><a href="mailto:info@kimnatura.hr">info@kimnatura.hr</a></div>
      <div class="footer__links footer__links--social header__mobile-contact-social">
         <ul class="social-followus__menu">
             <?php
@@ -70,7 +70,7 @@ $array = array(
             ?>
                 <li class="social-followus__item">
                     <a href="<?php echo $item['link']?>" class="social-followus__link">
-                    <?php  get_template_part('skin/public/images/inline/inline',$item['image']) ?>
+                    <?php  get_template_part('skin/public/images/inline/inline-'.$item['image']) ?>
                     </a>
                 </li>
             <?php

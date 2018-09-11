@@ -8,7 +8,7 @@
 
 use Kimnatura\Theme\Utils as Utils;
 $images = new Utils\Images();
-$image  = $images->get_post_image( 'full_width' );
+$image  = $images->get_post_image( 'post_full_width' );
 
 
 // Check if set featured image 2
