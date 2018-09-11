@@ -151,13 +151,13 @@ $article-min-height:      500px;
         margin-bottom:0;
         min-height: auto;
         img{
-          max-height: 250px;
+          max-height: 350px;
         }
       } 
       
       @include media(mobile, landscape){
         img{
-          max-height: 320px;
+          max-height: 350px;
         }
       } 
 
