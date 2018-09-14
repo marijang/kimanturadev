@@ -33,6 +33,9 @@
 <meta name="application-name" content="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"/>
 <meta name="msapplication-TileColor" content="#C3151B"/>
 
+<!-- google-site -->
+<meta name="google-site-verification" content="tt5yQkox-hk9u-sB5aljgpYfhsLNIkmXWjhkmNuF4Uk" />
+
 <!-- Apple -->
 <meta name="apple-mobile-web-app-title" content="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 <meta name="apple-mobile-web-app-capable" content="yes">
