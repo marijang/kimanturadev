@@ -14,7 +14,7 @@ $hero-content-dots-inactive-color: #3A4542;
 $sastojci-content-padding:    $base-content-padding*3;
 $sastojci-content-bg-color:   $base-primary-color;
 $sastojci-bg-margin:          0 64px 64px 0;
-$sastojci-bg-height:          550px;
+$sastojci-bg-height:          555px;
 $sastojci-bg-height-small:          380px;
 
 $sastojci-navigation-bottom:  48px;
@@ -89,7 +89,7 @@ $slick-opacity-not-active: 0.25 !default;
         height: 100%;
         //width: 100%;
         background-repeat: no-repeat;
-        background-position-y: 43%;
+        background-position-y: 42%;
     
 
         @include media(ipad tablet){
