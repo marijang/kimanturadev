@@ -60,7 +60,7 @@ class General {
     add_image_size('gallery-large',668,437,true);
     add_image_size('gallery-small',468,437,true);
     add_image_size( 'slider-full-width', 1200,560, true );
-    add_image_size( 'sastojci2', 1104,530, true );
+    add_image_size( 'sastojci2', 1104, 0, true );
 
  
   }
