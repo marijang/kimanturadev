@@ -27,7 +27,6 @@ if ( $terms_page_id > 0 && apply_filters( 'woocommerce_checkout_show_terms', tru
 			<span><?php printf( __( 'Pristajem na <a href="/uvjeti-koristenja-internetske-stranice/" target="_blank" class="1woocommerce-terms-and-conditions-link">uvjete korištenja</a>', 'woocommerce' ), "/uvjeti-koristenja-internetske-stranice" ); ?></span> <span class="required">*</span>
 		</label>
 		<input type="hidden" name="terms-field" value="1" />
-		<div class="checkbox__error-label" id="terms-error">Potrebno je prihvatiti uvjete korištenja</div>
 	</p>
 	<?php do_action( 'woocommerce_checkout_after_terms_and_conditions' ); ?>
 <?php endif; ?>

@@ -366,7 +366,8 @@ input:-webkit-autofill:active {
 
 .terms {
     @include media(mobile){
-        margin-top: 0px!important;
+        margin-bottom: 90px!important;
+        margin-top: 16px;
     }
 }
 
@@ -453,3 +454,7 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
     display: none!important;
 }
 
+
+.woocommerce-additional-fields__field-wrapper {
+    margin-top: -115px;
+}

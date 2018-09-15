@@ -63,7 +63,7 @@ if ( ! is_ajax() ) {
 }?>
 
 <script>
-$('<div class="checkbox__error-label" id="privacy-error">Potrebno je prihvatiti uvjete privatnosti</div>').appendTo('#ct-ultimate-gdpr-consent-field_field')
+
 $("#place_order").click(function(){
 	var checked = $("#terms:checked").length;
 	if (checked) {
