@@ -63,21 +63,31 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<div id="payment-details" style="display:none" class="checkout__form">
 			<?php do_action( 'b4b_woocommerce_checkout_payment' ); ?>
 			<div class="woocommerce-additional-fields">
-	<?php do_action( 'woocommerce_before_order_notes', $checkout ); ?>
+				<?php do_action( 'woocommerce_before_order_notes', $checkout ); ?>
 
-	<?php if ( apply_filters( 'woocommerce_enable_order_notes_field', 'yes' === get_option( 'woocommerce_enable_order_comments', 'yes' ) ) ) : ?>
+				<?php if ( apply_filters( 'woocommerce_enable_order_notes_field', 'yes' === get_option( 'woocommerce_enable_order_comments', 'yes' ) ) ) : ?>
 
-		<?php if ( ! WC()->cart->needs_shipping() || wc_ship_to_billing_address_only() ) : ?>
+				<?php if ( ! WC()->cart->needs_shipping() || wc_ship_to_billing_address_only() ) : ?>
 
-			<h3><?php _e( 'Additional information', 'woocommerce' ); ?></h3>
+				<h3><?php _e( 'Additional information', 'woocommerce' ); ?></h3>
 
-		<?php endif; ?>
+				<?php endif; ?>
 
-		<div class="woocommerce-additional-fields__field-wrapper">
-			<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
-				<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
-			<?php endforeach; ?>
-		</div>
+				<div class="woocommerce-additional-fields__field-wrapper">
+					<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
+						<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
+					<?php endforeach; ?>
+			</div>
+
+			<?php wc_get_template( 'checkout/terms.php' ); ?>
+
+			<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
+
+			<?php echo apply_filters( 'woocommerce_order_button_html', '<a  class="button alt btn btn--primary-color" name="woocommerce_checkout_place_order " id="place_order" value="' . 'Platite' . '" data-value="' . 'Platite' . '">' . 'Platite' . '</a>' ); // @codingStandardsIgnoreLine ?>
+
+			<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
+
+			<?php wp_nonce_field( 'woocommerce-process_checkout' ); ?>
 
 	<?php endif; ?>
 
