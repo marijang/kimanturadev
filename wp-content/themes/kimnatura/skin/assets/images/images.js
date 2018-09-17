@@ -13,6 +13,7 @@ import './cipka-r.png';
 import './logo-white.svg';
 import './cipka-bottom.png';
 import './wsPayLogo-106x50.png';
+import './facebook.svg';
 // Favicons.
 // import './favicons/52.png';
 // import './favicons/70.png';
