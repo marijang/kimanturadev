@@ -32,7 +32,7 @@ $('.woocommerce-MyAccount-content [for="ct-ultimate-gdpr-consent-field-woocommer
     labelWoo.text('');
     var splitWoo = textWoo.split('odredbama');
     //label.append('<span>' + split[0]  + ' odredbama <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
-    labelWoo.append('<span>Pristajem da se moji podaci pohrane u skladu s odredbama <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
+    labelWoo.append('<span>Pristajem da se moji podaci pohrane u skladu s <a href="/pravila-privatnosti" target="_blank" > Pravilima o privatnosti</a> *</span>');
     inputWoo.prependTo(labelWoo);
     labelWoo.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
     labelWoo.click(function() {
