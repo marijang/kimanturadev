@@ -22,7 +22,7 @@
         
     }
     @include e('title'){
-        margin-bottom:0px; 
+        margin-bottom:0px!important; 
     }
     @include e('regular-price'){
         //  display: inherit!important;
