@@ -358,15 +358,15 @@ input:-webkit-autofill:active {
 }
 
 
-.woocommerce-additional-fields__field-wrapper {
-    @include media(mobile){
-        margin-top: -75px;
-    }
-}
+// .woocommerce-additional-fields__field-wrapper {
+//     @include media(mobile){
+//         margin-top: -75px;
+//     }
+// }
 
 .terms {
     @include media(mobile){
-        margin-bottom: 90px!important;
+        //margin-bottom: 90px!important;
         margin-top: 16px;
     }
 }
@@ -472,4 +472,8 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
         margin-left: -16px;
         margin-right: -16px;
     }
+}
+
+#wcwspay-form {
+    margin-top: 16px;
 }

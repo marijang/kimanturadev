@@ -78,12 +78,13 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 						<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
 					<?php endforeach; ?>
 			</div>
+			</div>
 
 			<?php wc_get_template( 'checkout/terms.php' ); ?>
 
 			<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-			<?php echo apply_filters( 'woocommerce_order_button_html', '<a  class="button alt btn btn--primary-color" name="woocommerce_checkout_place_order " id="place_order" value="' . 'Platite' . '" data-value="' . 'Platite' . '">' . 'Platite' . '</a>' ); // @codingStandardsIgnoreLine ?>
+			<?php echo apply_filters( 'woocommerce_order_button_html', '<a style="float: right;" class="button alt btn btn--primary-color" name="woocommerce_checkout_place_order " id="place_order" value="' . 'Platite' . '" data-value="' . 'Platite' . '">' . 'Platite' . '</a>' ); // @codingStandardsIgnoreLine ?>
 
 			<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 
@@ -92,7 +93,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	<?php endif; ?>
 
 	<?php do_action( 'woocommerce_after_order_notes', $checkout ); ?>
-</div>	
+	
 		</div>
 		<div class="checkout__review">
 			<div class="checkout__review-box">
