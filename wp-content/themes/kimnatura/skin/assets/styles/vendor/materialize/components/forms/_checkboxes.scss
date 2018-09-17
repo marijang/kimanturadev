@@ -14,7 +14,7 @@
   // Text Label Style
   + span:not(.lever) {
     position: relative;
-    padding-left: 24px;
+    padding-left: 32px;
     cursor: pointer;
     display: inline-block;
    // height: 25px;
@@ -22,6 +22,9 @@
     //font-size: 1rem;
    
     user-select: none;
+    @include media(mobile){
+      padding-left: 24px;
+    }
   }
 
   /* checkbox aspect */
