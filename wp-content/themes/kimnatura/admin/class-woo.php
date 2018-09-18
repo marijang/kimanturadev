@@ -269,26 +269,49 @@ class Woo {
 
     $cart_total = WC()->cart->get_displayed_subtotal();
     $t = '';
-  //  if ($cart_total > 0) {
+    
+    $statusCss = array(
+        'step-1'=> '',
+        'step-2'=> '',
+        'step-3'=> '',
+        'step-4'=> ''
+    );
 
   
 
     $this->enqueue_scripts_filter();
    
     //$t.='C Step='.$step;
-    if (is_cart()) {
-      $step =  0;
+    //if (is_cart()) {
+    if(is_wc_endpoint_url( 'cart' )){
+        $step =  0;
+        $statusCss['step-1'] = 'is-active is-activated'; 
+        $statusCss['step-2'] = 'is-disabled'; 
+        $statusCss['step-3'] = 'is-disabled'; 
+        $statusCss['step-4'] = 'is-disabled'; 
     }
-    if (Is_checkout()) {
-      $step =  1;
+    if (is_wc_endpoint_url( 'checkout' )) {
+        $step =  1;
+        $statusCss['step-1'] = 'is-activated'; 
+        $statusCss['step-2'] = 'is-active'; 
+        $statusCss['step-3'] = 'is-disabled'; 
+        $statusCss['step-4'] = 'is-disabled'; 
     }
-    if (is_wc_endpoint_url( 'order-pay' )) {
-      //$t .="order-pay";
-      $step = 4;
+    if (is_wc_endpoint_url( 'order-received')) {
+        $step =  3;
+        $statusCss['step-1'] = 'is-activated'; 
+        $statusCss['step-2'] = 'is-activated'; 
+        $statusCss['step-3'] = 'is-activated is-active'; 
+        $statusCss['step-4'] = 'is-disabled';
     }
-  //  if (is_wc_endpoint_url( 'order-received' )) {
-  //    $t .="";
-  //  }
+    if (is_wc_endpoint_url( 'order-pay' )||is_wc_endpoint_url( 'order-received')) {
+        $step = 4;
+        $statusCss['step-1'] = 'is-activated'; 
+        $statusCss['step-2'] = 'is-activated'; 
+        $statusCss['step-3'] = 'is-activated '; 
+        $statusCss['step-4'] = 'is-activated is-active';
+    }
+ 
   
   
     if (is_account_page()) {
@@ -297,11 +320,9 @@ class Woo {
     if (is_cart()) {
       //$t .="Cart";
     }
-     //var_dump($_POST);
-    
-    //is_order_received_page
+
   
-    
+    /*
     if (Is_view_order_page()) {
       $step =  2;
     }
@@ -311,20 +332,12 @@ class Woo {
     if (Is_view_order_page()) {
       $step =  4;
     }
-     
-    /*
-     * Page title
-     *  
-    $t  .= '<header class="page__title">';
-    $t  .= '<h1 class="page__title">'.get_the_title( ).'</h1>'; 
-    $t  .= '<p class="page__description">'.get_the_subtitle().'</p>';
-    $t  .= '</header>';
-    */
-      //$t.='Step='.$step;
+     */
+ 
     $t  .= '<ul class="cart-checkout-navigation browser-default">';
     // First item
-    $t  .= '<li id="wc-multistep-cart" data-step="cart" class="cart-checkout-navigation__item '. ( ($step == 0 && !is_wc_endpoint_url( 'order-received' )) ? 'is-active' : '').' '. ( ($step > 0 && !is_wc_endpoint_url( 'order-received' ) ) ? 'is-activated' : '').'" >';
-    //$t  .= __('Košarica','b4b');
+    //$t  .= '<li id="wc-multistep-cart" data-step="cart" class="cart-checkout-navigation__item '. ( ($step == 0 && !is_wc_endpoint_url( 'order-received' )) ? 'is-active' : '').' '. ( ($step > 0 && !is_wc_endpoint_url( 'order-received' ) ) ? 'is-activated' : '').'" >';
+    $t  .= '<li id="wc-multistep-cart" data-step="cart" class="cart-checkout-navigation__item '.$statusCss['step-1'].'" >';
     if (!is_wc_endpoint_url( 'order-received' )) {
     if ($step>0){
       $t .= '<a href="'.get_permalink( wc_get_page_id( 'cart' )).'">
@@ -344,28 +357,29 @@ class Woo {
   ';
 }
     $t  .= '</li>';
+
     // Second item
-     $t  .= '<li id="wc-multistep-details" data-step="customer-details" class="cart-checkout-navigation__item '. ( ($step == 1 && !is_wc_endpoint_url( 'order-received' ) ) ? 'is-active' : '').' '. ( ($step == 0 || is_wc_endpoint_url( 'order-received' ) ) ? 'is-disabled' : '').'" >';
-    if (!is_wc_endpoint_url( 'order-received' ) && $step > 0) {  $t  .= '<a href="'.get_permalink( wc_get_page_id( 'checkout' )).'">'; }
+    // $t  .= '<li id="wc-multistep-details" data-step="customer-details" class="cart-checkout-navigation__item '. ( ($step == 1 && !is_wc_endpoint_url( 'order-received' ) ) ? 'is-active' : '').' '. ( ($step == 0 || is_wc_endpoint_url( 'order-received' ) ) ? 'is-disabled' : '').'" >';
+    $t  .= '<li id="wc-multistep-details" data-step="customer-details" class="cart-checkout-navigation__item '.$statusCss['step-2'].'" >';
+    if (!is_wc_endpoint_url( 'order-received' ) && $step > 0) {  
+        $t  .= '<a href="'.get_permalink( wc_get_page_id( 'checkout' )).'">'; 
+    }
     $t  .= '<span class="cart-checkout-navigation__step-number">2</span><span class="cart-checkout-navigation__step-title">'.__('Dostava','b4b').'<span>';
     $t  .= ' </a></li>';
     // Third item
-    $t  .= '<li id="wc-multistep-payment" data-step="payment" class="cart-checkout-navigation__item '. ( ($step == 2) ? 'is-active' : '').'" >';
+    //$t  .= '<li id="wc-multistep-payment" data-step="payment" class="cart-checkout-navigation__item '. ( ($step == 2) ? 'is-active' : '').'" >';
+    $t  .= '<li id="wc-multistep-payment" data-step="payment" class="cart-checkout-navigation__item '.$statusCss['step-3'].'" >';
     $t  .= '<span class="cart-checkout-navigation__step-number">3</span>';
     $t  .= '<span class="cart-checkout-navigation__step-title">'.__('Način plaćanja','b4b').'<span>';
     $t  .= '</li>';
     // Fourth Item
-    $t  .= '<li id="wc-multistep-finish" data-step="finish" class="cart-checkout-navigation__item is-last 
-    '. ( ($step == 3) ? ' is-active' : '').'" >';
+    $t  .= '<li id="wc-multistep-finish" data-step="finish" class="cart-checkout-navigation__item is-last '.$statusCss['step-4'].'" >';
     $t  .= '<span class="cart-checkout-navigation__step-number">4</span>';
     $t  .= '<span class="cart-checkout-navigation__step-title">'.__('Potvrda','b4b').'<span>';
     $t  .= '</li>';
   
   
     $t  .=  "</ul>";
-    //}
-    //$t  .= '<div class="page__content">';  
-    //$t  .= 'Show:'.($step == 0) ? 'is-active' : 'prazno';
     return $t;
   }
 
@@ -394,14 +408,20 @@ class Woo {
      * @param array $rates Array of rates found for the package.
      * @return array
      */
+<<<<<<< HEAD
+   public  function my_hide_shipping_when_free_is_available( $rates ) {
+=======
   /*  function my_hide_shipping_when_free_is_available( $rates ) {
+>>>>>>> e51828a6589caaaa0ba675ec4606186036f790ad
         $free = array();
+ 
         foreach ( $rates as $rate_id => $rate ) {
             if ( 'free_shipping' === $rate->method_id ) {
                 $free[ $rate_id ] = $rate;
                 break;
             }
         }
+        
         return ! empty( $free ) ? $free : $rates;
     } */
 
