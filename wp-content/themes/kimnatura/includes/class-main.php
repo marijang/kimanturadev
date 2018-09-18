@@ -350,11 +350,7 @@ class Main {
     $this->loader->add_action('woocommerce_after_main_content',$blog,'last_news');
 
     // Free shipping
-<<<<<<< HEAD
     $this->loader->add_filter( 'woocommerce_package_rates',$woo,'my_hide_shipping_when_free_is_available', 1 );
-=======
-    // $this->loader->add_filter( 'woocommerce_package_rates', 'my_hide_shipping_when_free_is_available', 100 );
->>>>>>> e51828a6589caaaa0ba675ec4606186036f790ad
     
   }
  

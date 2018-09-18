@@ -268,6 +268,7 @@ class Woo {
   public function multi_step() {
 
     $cart_total = WC()->cart->get_displayed_subtotal();
+    $step=0;
     $t = '';
     
     $statusCss = array(
@@ -283,33 +284,34 @@ class Woo {
    
     //$t.='C Step='.$step;
     //if (is_cart()) {
-    if(is_wc_endpoint_url( 'cart' )){
+    if(is_cart()){
         $step =  0;
         $statusCss['step-1'] = 'is-active is-activated'; 
         $statusCss['step-2'] = 'is-disabled'; 
         $statusCss['step-3'] = 'is-disabled'; 
         $statusCss['step-4'] = 'is-disabled'; 
     }
-    if (is_wc_endpoint_url( 'checkout' )) {
+    if (is_checkout() || Is_view_order_page()) {
         $step =  1;
         $statusCss['step-1'] = 'is-activated'; 
         $statusCss['step-2'] = 'is-active'; 
         $statusCss['step-3'] = 'is-disabled'; 
         $statusCss['step-4'] = 'is-disabled'; 
     }
-    if (is_wc_endpoint_url( 'order-received')) {
+    // ovo se nece nikada dogoditi
+    if (is_add_payment_method_page()) {
         $step =  3;
         $statusCss['step-1'] = 'is-activated'; 
         $statusCss['step-2'] = 'is-activated'; 
         $statusCss['step-3'] = 'is-activated is-active'; 
         $statusCss['step-4'] = 'is-disabled';
     }
-    if (is_wc_endpoint_url( 'order-pay' )||is_wc_endpoint_url( 'order-received')) {
+    if (Is_checkout_pay_page()||is_order_received_page()) {
         $step = 4;
-        $statusCss['step-1'] = 'is-activated'; 
-        $statusCss['step-2'] = 'is-activated'; 
-        $statusCss['step-3'] = 'is-activated '; 
-        $statusCss['step-4'] = 'is-activated is-active';
+        $statusCss['step-1'] = ''; 
+        $statusCss['step-2'] = ''; 
+        $statusCss['step-3'] = ''; 
+        $statusCss['step-4'] = 'is-active';
     }
  
   
@@ -338,6 +340,13 @@ class Woo {
     // First item
     //$t  .= '<li id="wc-multistep-cart" data-step="cart" class="cart-checkout-navigation__item '. ( ($step == 0 && !is_wc_endpoint_url( 'order-received' )) ? 'is-active' : '').' '. ( ($step > 0 && !is_wc_endpoint_url( 'order-received' ) ) ? 'is-activated' : '').'" >';
     $t  .= '<li id="wc-multistep-cart" data-step="cart" class="cart-checkout-navigation__item '.$statusCss['step-1'].'" >';
+    if (!Is_checkout_pay_page()||!is_order_received_page()) { 
+    $t .= '<a href="'.get_permalink( wc_get_page_id( 'cart' )).'">
+             <span class="cart-checkout-navigation__step-number">1</span>
+             <span class="cart-checkout-navigation__step-title">'.__('Košarica ','b4b').'<span>
+         </a>';
+    }
+    /*
     if (!is_wc_endpoint_url( 'order-received' )) {
     if ($step>0){
       $t .= '<a href="'.get_permalink( wc_get_page_id( 'cart' )).'">
@@ -356,12 +365,13 @@ class Woo {
     <span class="cart-checkout-navigation__step-title">'.__('Košarica','b4b').'<span>
   ';
 }
+*/
     $t  .= '</li>';
 
     // Second item
     // $t  .= '<li id="wc-multistep-details" data-step="customer-details" class="cart-checkout-navigation__item '. ( ($step == 1 && !is_wc_endpoint_url( 'order-received' ) ) ? 'is-active' : '').' '. ( ($step == 0 || is_wc_endpoint_url( 'order-received' ) ) ? 'is-disabled' : '').'" >';
     $t  .= '<li id="wc-multistep-details" data-step="customer-details" class="cart-checkout-navigation__item '.$statusCss['step-2'].'" >';
-    if (!is_wc_endpoint_url( 'order-received' ) && $step > 0) {  
+    if (!Is_checkout_pay_page()||!is_order_received_page()) {  
         $t  .= '<a href="'.get_permalink( wc_get_page_id( 'checkout' )).'">'; 
     }
     $t  .= '<span class="cart-checkout-navigation__step-number">2</span><span class="cart-checkout-navigation__step-title">'.__('Dostava','b4b').'<span>';
@@ -408,11 +418,7 @@ class Woo {
      * @param array $rates Array of rates found for the package.
      * @return array
      */
-<<<<<<< HEAD
    public  function my_hide_shipping_when_free_is_available( $rates ) {
-=======
-  /*  function my_hide_shipping_when_free_is_available( $rates ) {
->>>>>>> e51828a6589caaaa0ba675ec4606186036f790ad
         $free = array();
  
         foreach ( $rates as $rate_id => $rate ) {
@@ -423,7 +429,7 @@ class Woo {
         }
         
         return ! empty( $free ) ? $free : $rates;
-    } */
+    } 
 
 
 
