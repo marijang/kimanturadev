@@ -291,7 +291,7 @@ $section-description-space-bottom-small:$base-content-padding;
             padding:$section-highlight-padding;
             @include media(mobile){
                 padding:0;
-                padding-top: 16px;
+                //padding-top: 16px;
             }
         }
         

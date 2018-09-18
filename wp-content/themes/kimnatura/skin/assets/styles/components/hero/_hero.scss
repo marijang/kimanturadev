@@ -31,7 +31,7 @@ $hero-transition-duration-in: .9s;
     }
 }
 
-@include block('hero'){
+@include block('hero') {
      
    @include e('slider-wrapper'){
       //  margin-top: $base-content-padding;
@@ -416,4 +416,10 @@ $hero-transition-duration-in: .9s;
 		transform: scale(.75) rotate(45deg);
 		opacity: .25;
 	}
+}
+
+.hero__bg {
+@media (tablet) {
+    background-size: contain;
+}
 }
