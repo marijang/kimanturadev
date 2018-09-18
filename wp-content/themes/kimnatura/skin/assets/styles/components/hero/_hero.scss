@@ -419,7 +419,7 @@ $hero-transition-duration-in: .9s;
 }
 
 .hero__bg {
-@media (tablet) {
+@include media(mobile, landscape) {
     background-size: contain;
 }
 }
