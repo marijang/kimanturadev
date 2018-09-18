@@ -163,7 +163,7 @@ $(function() {
     };
 
     $( "#search-form" ).submit(search);
-    $( '#search-input' ).keyup(debounce(search, 300));
+    $( '#search-input' ).keyup(debounce(search, 200));
     $('#btn-search-close').click(search);
 
 	

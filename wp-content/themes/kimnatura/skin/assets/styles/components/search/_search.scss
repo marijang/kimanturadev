@@ -529,6 +529,7 @@ $search-grid-row-gap: $base-content-padding*3;
 	@include media(mobile){
 		max-width: 240px;
 		max-height: 240px;
+		min-height: initial;
 	}
 }
 
