@@ -27,7 +27,8 @@ $cart_total = WC()->cart->get_displayed_subtotal();
 </script>
 
 
-<?php if (is_user_logged_in() || (!is_user_logged_in() && strpos(home_url( $wp->request ), 'my-account') === false && strpos(home_url( $wp->request ), 'cart') === false)) : ?>
+<?php if (!(!is_user_logged_in() && wp_is_mobile())) {  
+if (is_user_logged_in() || (!is_user_logged_in() && strpos(home_url( $wp->request ), 'my-account') === false && strpos(home_url( $wp->request ), 'cart') === false)) : ?>
 <div class="navigation-user">
         <div class="navigation-user__wrap">
 	    <?php
@@ -86,17 +87,18 @@ $cart_total = WC()->cart->get_displayed_subtotal();
 		</div>
 		<div class="navigation-user__settings" id="settings-toggle"><i class="material-icons">settings</i></div>
 		<?php
-		} else {
-		?>
-		
+		} else { ?>
 			<div class="navigation-user__login">
 				
                  <?php do_action('woocommerce_custom_login_form'); ?>
             
 			</div>
 		<?php
+		
 		}
+	
 		?>
 		</div>
 		</div>
-	<?php endif ?>
+	<?php endif;
+	}?>

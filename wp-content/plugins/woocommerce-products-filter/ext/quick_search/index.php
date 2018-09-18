@@ -190,8 +190,7 @@ final class WOOF_EXT_QUICK_TEXT extends WOOF_EXT {
     }
 
     public function woof_print_applications_tabs_content() {
-
-        wp_enqueue_script('woof_qs_admin', $this->get_ext_link() . 'js/admin.js');
+        wp_enqueue_script('woof_qs_admin_', $this->get_ext_link() . 'js/admin.js');
         //***
         global $WOOF;
         $data = array();
@@ -339,7 +338,7 @@ final class WOOF_EXT_QUICK_TEXT extends WOOF_EXT {
         $data['price'] = $this->get_all_prices($product);
         $data['key_words'] = "";
         $data['term_ids'] = " ";
-        ///$data['price'] = $this->get_all_prices($id);
+        $data['meta_data']=array();
         $term_ids = array();
         $all_taxonomies = $WOOF->get_taxonomies();
         foreach ($this->tax_serch_data as $tax) {
@@ -383,10 +382,30 @@ final class WOOF_EXT_QUICK_TEXT extends WOOF_EXT {
                 $data['term_ids'] .= " ";
             }
         }
+        $data['meta_data']=$this->get_meta_data_by_id($id);
         //wp_cache_flush();
         return $data;
     }
-
+    public function get_meta_data_by_id($id){
+        $meta_data=array();
+        if(class_exists('WOOF_META_FILTER')){
+                $meta_fields=$this->woof_settings['meta_filter'];
+                if (!empty($meta_fields))
+                {
+                    foreach ($meta_fields as $key => $meta)
+                    {
+                        if($meta['meta_key']=="__META_KEY__"){
+                            continue;
+                        } 
+                        $meta=get_post_meta( $id,$meta['meta_key'], true );
+                        if($meta){
+                            $meta_data[$key]=$meta;
+                        }
+                    }
+                }    
+        }
+        return $meta_data;
+    }
     public function get_all_prices($product) {
         if (!$product) {
             return array();

@@ -32,6 +32,16 @@ $(document).ready( function() {
         
     });
 
+
+    var uncheckParent = function(){
+        $('input[name="product_cat[]"]:checked').each(function() {
+            if ($(this).data('child') != null) {
+                $('input[data-parent="' + $(this).data('child') + '"]').prop('checked', false);
+            } 
+        })
+    
+    }
+
     // Open default
     $('.shop-categories__item input:checked').each(function(index,item){
         $(item).closest( "li" ).addClass('is-expanded');
@@ -105,6 +115,7 @@ $(document).ready( function() {
     });
 
     $('input[name="product_cat[]"]').on('click',function(){
+        uncheckParent();
         setValue();
         if($('input[name="product_cat"]').val()!=''){
             window.location.href = "/shop/?category="+$('input[name="product_cat"]').val();

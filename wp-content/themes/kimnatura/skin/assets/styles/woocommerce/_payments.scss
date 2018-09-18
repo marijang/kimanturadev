@@ -4,7 +4,7 @@
         margin:0px;
     }
     @include element('method'){
-        padding: 32px;
+        padding: 16px;
         background: $color-light-grey;
         &.is-active{
             background: #fff;
@@ -17,5 +17,21 @@
     }
     .btn{
         float: right;
+    }
+}
+
+#payment-details {
+    .woocommerce-additional-fields {
+        margin-left: 20px;
+        @include media(mobile){
+            margin-left: 4px;
+        }
+    }
+
+    .terms {
+        margin-left: 20px;
+        @include media(mobile){
+            margin-left: 4px;
+        }
     }
 }

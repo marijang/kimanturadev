@@ -284,11 +284,11 @@ class Woo {
     //$t.='C Step='.$step;
     //if (is_cart()) {
     if(is_wc_endpoint_url( 'cart' )){
-      $step =  0;
-      $statusCss['step-1'] = 'is-active is-activated'; 
-      $statusCss['step-2'] = 'is-disabled'; 
-      $statusCss['step-3'] = 'is-disabled'; 
-      $statusCss['step-4'] = 'is-disabled'; 
+        $step =  0;
+        $statusCss['step-1'] = 'is-active is-activated'; 
+        $statusCss['step-2'] = 'is-disabled'; 
+        $statusCss['step-3'] = 'is-disabled'; 
+        $statusCss['step-4'] = 'is-disabled'; 
     }
     if (is_wc_endpoint_url( 'checkout' )) {
         $step =  1;
@@ -408,7 +408,11 @@ class Woo {
      * @param array $rates Array of rates found for the package.
      * @return array
      */
+<<<<<<< HEAD
    public  function my_hide_shipping_when_free_is_available( $rates ) {
+=======
+  /*  function my_hide_shipping_when_free_is_available( $rates ) {
+>>>>>>> e51828a6589caaaa0ba675ec4606186036f790ad
         $free = array();
  
         foreach ( $rates as $rate_id => $rate ) {
@@ -419,7 +423,7 @@ class Woo {
         }
         
         return ! empty( $free ) ? $free : $rates;
-    }
+    } */
 
 
 

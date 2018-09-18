@@ -92,8 +92,7 @@ $checkout-margin-top:  $base-content-padding*3;
 
 .terms {
     @include media(mobile){
-        margin-bottom: 16px;
-        margin-top: 16px;
+        
     }
 }
 

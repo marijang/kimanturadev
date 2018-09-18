@@ -12,3 +12,20 @@ function ywsl_curPageURL() {
     return $pageURL;
 }
 
+if ( ! function_exists( 'ywsl_check_wpengine' ) ) {
+	/**
+	 * Check if the website is stored on wp engine
+	 * @return bool
+	 * @since 1.3.0
+	 * @author Emanuela Castorina <emanuela.castorina@yithemes.com>
+	 */
+	function ywsl_check_wpengine() {
+		$is_wp_engine = defined( 'WPE_APIKEY' );
+
+		if ( $is_wp_engine && ! defined( 'YWSL_FINAL_SLASH' ) ) {
+			define( 'YWSL_FINAL_SLASH', true );
+		}
+
+		return $is_wp_engine;
+	}
+}

@@ -22,7 +22,11 @@ class WCML_Upgrade{
         '4.2.0',
 	    '4.2.2',
 	    '4.2.7',
-        '4.2.10'
+        '4.2.10',
+        '4.2.11',
+	    '4.3.0',
+        '4.3.4',
+        '4.3.5'
     );
     
     function __construct(){
@@ -96,27 +100,27 @@ class WCML_Upgrade{
         if(empty($version_in_db) && get_option('icl_is_wcml_installed')){
             $version_in_db = '2.3.2';
         }
-        
-        $migration_ran = false;
-        
-        if($version_in_db && version_compare($version_in_db, WCML_VERSION, '<')){
-                        
-            foreach($this->versions as $version){
-                
-                if(version_compare($version, WCML_VERSION, '<=') && version_compare($version, $version_in_db, '>')){
 
-                    $upgrade_method = 'upgrade_' . str_replace('.', '_', $version);
-                    
-                    if(method_exists($this, $upgrade_method)){
-                        $this->$upgrade_method();
-                        $migration_ran = true;
-                    }
-                    
-                }
-                
-            }
-            
-        }
+        $migration_ran = false;
+
+	    if ( $version_in_db && version_compare( $version_in_db, WCML_VERSION, '<' ) ) {
+
+		    foreach ( $this->versions as $version ) {
+
+			    if ( version_compare( $version, $version_in_db, '>' ) ) {
+
+				    $upgrade_method = 'upgrade_' . str_replace( '.', '_', $version );
+
+				    if ( method_exists( $this, $upgrade_method ) ) {
+					    $this->$upgrade_method();
+					    $migration_ran = true;
+				    }
+
+			    }
+
+		    }
+
+	    }
 
         if($migration_ran || empty($version_in_db)){
             update_option('_wcml_version', WCML_VERSION);            
@@ -624,9 +628,9 @@ class WCML_Upgrade{
 		// #wcml-2242
 		$wcml_settings = get_option( '_wcml_settings' );
 		if( 'yahoo' === $wcml_settings['multi_currency']['exchange_rates']['service'] ){
-			$wcml_settings['multi_currency']['exchange_rates']['service'] = 'fixierio';
+			$wcml_settings['multi_currency']['exchange_rates']['service'] = 'fixerio';
 			update_option( '_wcml_settings', $wcml_settings );
-        }
+		}
 
 	}
 
@@ -648,6 +652,77 @@ class WCML_Upgrade{
 				$block_cost_field_key = str_replace( 'base', 'block', $price->meta_key );
 				update_post_meta( $price->post_id, $block_cost_field_key, $base_cost_price );
 			}
+		}
+
+	}
+
+	private function upgrade_4_2_11(){
+        global $wpdb;
+
+		$wpdb->query( "UPDATE {$wpdb->prefix}woocommerce_order_itemmeta
+                                  SET meta_key = '_wcml_converted_subtotal'
+                                  WHERE meta_key = 'wcml_converted_subtotal'"
+		);
+
+		$wpdb->query( "UPDATE {$wpdb->prefix}woocommerce_order_itemmeta
+                                  SET meta_key = '_wcml_converted_total'
+                                  WHERE meta_key = 'wcml_converted_total'"
+		);
+
+		WCML_Install::insert_default_categories();
+
+	}
+
+	private function upgrade_4_3_0() {
+		$wcml_settings = get_option( '_wcml_settings' );
+		if (
+			WCML_MULTI_CURRENCIES_INDEPENDENT === $wcml_settings['enable_multi_currency'] &&
+			isset( $wcml_settings['multi_currency']['exchange_rates']['service'] ) &&
+			'fixierio' === $wcml_settings['multi_currency']['exchange_rates']['service']
+		) {
+			$wcml_settings['multi_currency']['exchange_rates']['service'] = 'fixerio';
+			update_option( '_wcml_settings', $wcml_settings );
+
+			$announcement_url   = 'https://github.com/fixerAPI/fixer#readme';
+			$api_key_url        = 'https://fixer.io/dashboard';
+			$announcement_link  = '<a href="' . $announcement_url . '" target="_blank">' . __( 'important change about this service', 'woocommerce-multilingual' ) . '</a>';
+			$fixer_api_key_link = '<a href="' . $api_key_url . '" target="_blank">' . __( 'Fixer.io API key', 'woocommerce-multilingual' ) . '</a>';
+			$fixerio_name       = '<strong>Fixer.io</strong>';
+			$mc_settings_link   = '<a href="' . admin_url( 'admin.php?page=wpml-wcml&tab=multi-currency' ) . '">' . __( 'multi-currency settings page', 'woocommerce-multilingual' ) . '</a>';
+
+			$message = sprintf( __( 'Your site uses %s to automatically calculate prices in the secondary currency. There is an %s effective June 1st, 2018.', 'woocommerce-multilingual' ), $fixerio_name, $announcement_link );
+			$message .= '<br />';
+			$message .= sprintf( __( 'Please go to the %s and fill in your %s.', 'woocommerce-multilingual' ), $mc_settings_link, $fixer_api_key_link );
+
+			$notice = new WPML_Notice( 'wcml-fixerio-api-key-required', $message, 'wcml-save-multi-currency-options' );
+			$notice->set_css_class_types( 'warning' );
+			$notice->set_dismissible( true );
+			$wpml_admin_notices = wpml_get_admin_notices();
+			$wpml_admin_notices->add_notice( $notice );
+
+		}
+	}
+
+	private function upgrade_4_3_4() {
+		global $wpdb;
+
+		//delete wrong duplicated attachments
+		$wpdb->query( "DELETE FROM {$wpdb->prefix}icl_translations WHERE `element_id` IN ( SELECT ID FROM {$wpdb->prefix}posts WHERE `guid` LIKE '%attachment_id%' ) " );
+		$wpdb->query( "DELETE FROM {$wpdb->prefix}postmeta WHERE `post_id` IN ( SELECT ID FROM {$wpdb->prefix}posts WHERE `guid` LIKE '%attachment_id%' ) " );
+		$wpdb->query( "DELETE FROM {$wpdb->prefix}posts WHERE `guid` LIKE '%attachment_id%'" );
+
+	}
+
+	private function upgrade_4_3_5() {
+
+		if ( class_exists( 'WC_Product_Bundle' ) && function_exists( 'WC_PB' ) ) {
+
+			global $wpdb;
+			//delete wrong bundle items
+			$wpdb->query( "DELETE FROM {$wpdb->prefix}woocommerce_bundled_itemmeta WHERE `meta_key` LIKE 'translation_item_id_of_%' AND `meta_value` IN ( SELECT bundled_item_id FROM {$wpdb->prefix}woocommerce_bundled_items WHERE `product_id` = 0 AND `bundle_id` = 0 ) " );
+			$wpdb->query( "DELETE FROM {$wpdb->prefix}woocommerce_bundled_items WHERE `product_id` = 0 AND `bundle_id` = 0 " );
+			$not_existing_items = $wpdb->get_col( "SELECT m.`meta_id` FROM {$wpdb->prefix}woocommerce_bundled_itemmeta AS m LEFT JOIN {$wpdb->prefix}woocommerce_bundled_items as i ON m.meta_value = i.bundled_item_id WHERE m.`meta_key` LIKE 'translation_item_id_of_%' AND i.`bundled_item_id` IS NULL" );
+			$wpdb->query( $wpdb->prepare( "DELETE FROM {$wpdb->prefix}woocommerce_bundled_itemmeta WHERE `meta_id` IN ( %s )", join( ',', $not_existing_items ) ) );
 		}
 
 	}

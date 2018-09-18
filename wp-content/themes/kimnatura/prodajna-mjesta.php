@@ -23,7 +23,7 @@ get_header();
 
         <div class="grid2">
             <figure class="grid2__item fig-item">
-                <img alt="picture" src="<?php echo esc_url( KIM_IMAGE_URL . 'prod-baska.png' ); ?>" width="106" height="50" class="fig-item__img">
+                <img alt="picture" src="<?php echo esc_url( KIM_IMAGE_URL . 'prod-baska.png' ); ?>" class="fig-item__img">
                 <figcaption class="fig-item__caption grid2__caption">
                     <h5 class="grid2__title">Minerva obrt za trgovinu</h5>
                     <div class="grid2__icon-row">

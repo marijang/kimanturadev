@@ -62,6 +62,10 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 		 * @since 1.0.0
 		 */
 		public function __construct() {
+
+			YITH_WC_Social_Login_Session();
+
+
 			/* plugin */
 			add_action( 'plugins_loaded', array( $this, 'plugin_fw_loader' ), 15 );
 			require_once(YITH_YWSL_INC.'hybridauth/Hybrid/Auth.php');
@@ -71,12 +75,21 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 			$this->_set_social_list();
 			$this->_set_social_list_enabled();
 
-            if( defined('YITH_YWSL_FREE_INIT') ) {
-                add_shortcode( 'yith_wc_social_login', array( $this, 'yith_wc_social_login_shortcode' ) );
-            }
+			add_shortcode( 'yith_wc_social_login', array( $this, 'yith_wc_social_login_shortcode' ) );
 
-			add_action('init', array($this,'get_login_request'));
-			add_action( 'wp_logout', array( $this, 'logout') );
+			add_action( 'init', array( $this, 'hybrid_auth' ) );
+			add_action( 'init', array( $this, 'get_login_request' ) );
+			add_action( 'wp_logout', array( $this, 'logout' ), 11 );
+		}
+
+		public function hybrid_auth() {
+			if ( isset( $_GET['hauth_start'] ) || isset( $_GET['hauth_done'] ) ) {
+				require_once( YITH_YWSL_INC . "hybridauth/Hybrid/Auth.php" );
+				require_once( YITH_YWSL_INC . "hybridauth/Hybrid/Endpoint.php" );
+
+				Hybrid_Endpoint::process();
+
+			}
 		}
 
 		/**
@@ -84,10 +97,7 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 		 *
 		 * @since   1.0.0
 		 * @author  Emanuela Castorina <emanuela.castorina@yithemes.com>
-		 *
-		 * @param $property
-		 *
-		 * @return mixed
+		 * @return  mix
 		 */
 		public function __get( $property ){
 			if ( isset( $this->_data[$property] ) ) {
@@ -131,7 +141,13 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 		 * @author Emanuela Castorina <emanuela.castorina@yithemes.com>
 		 */
 		private function _set_social_list() {
-			$this->_data['social_list'] = include( YITH_YWSL_DIR . '/plugin-options/socials.php' );
+			$social_list = include( YITH_YWSL_DIR . '/plugin-options/socials.php' );
+
+            if( get_option('ywsl_social_networks')){
+                $social_list = array_merge(array_flip(get_option('ywsl_social_networks')), $social_list);
+            }
+
+            $this->_data['social_list'] = $social_list;
 		}
 
 		/**
@@ -153,22 +169,31 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 					return;
 				}
 
+				if ( $_REQUEST['ywsl_social'] == 'facebook' && ! ywsl_check_wpengine() ) {
+					$this->config['base_url'] = YITH_YWSL_URL . 'includes/hybridauth/';
+				}
+
+				$this->config = apply_filters( 'ywsl_alter_config', $this->config, $_REQUEST['ywsl_social'] );
+
 				try{
 					$this->hybridauth = new Hybrid_Auth( $this->config );
 				}catch ( Exception $e ) {
-					wp_safe_redirect( $this->get_redirect_to() );
+					wp_redirect( $this->get_redirect_to() );
 				}
 
 				try {
 					$adapter      = $this->hybridauth->authenticate( $social_name );
 					$user_profile = $adapter->getUserProfile();
-				} catch ( Exception $e ) {
-					//echo $this->get_error( $e->getCode() );
+				}
+				catch ( Exception $e ) {
 					$this->hybridauth->logoutAllProviders();
 					exit;
 				}
 
-				$registration_check = $this->verify_user( $social, $user_profile->identifier );
+				$registration_check       = $this->verify_user( $social, $user_profile->identifier );
+				$hyb_email                = sanitize_email($user_profile->email);
+				$hyb_user_login           = sanitize_user($user_profile->displayName, true);
+				$hyb_user_avatar          = $user_profile->photoURL;
 
 				if ( is_user_logged_in() ) {
 					$current_user = wp_get_current_user();
@@ -184,15 +209,19 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 				if ( $registration_check ) {
 					//registration with this provider exists
 					wp_set_auth_cookie( $registration_check, true );
-
-					wp_safe_redirect( $this->get_redirect_to() );
+					wp_redirect( $this->get_redirect_to() );
 					exit;
-				}
-				else {
+				}elseif( $current_customer_id = $this->verify_email_exists( $hyb_email ) ){
 
-					$hyb_email                = sanitize_email($user_profile->email);
-					$hyb_user_login           = sanitize_user($user_profile->displayName, true);
-					$hyb_user_avatar          = $user_profile->photoURL;
+					//link account
+					add_user_meta( $current_customer_id, $social.'_login_id', $user_profile->identifier, true );
+					add_user_meta( $current_customer_id, $social.'_login_data', (array) $user_profile, true );
+					$this->add_user_meta( $current_customer_id, $user_profile, $hyb_email );
+					wp_set_auth_cookie( $current_customer_id, true );
+					wp_redirect( $this->get_redirect_to() );
+					exit;
+
+				}else {
 
 					$yith_user_login          = $this->get_username( $hyb_user_login, $hyb_email );
 					$yith_user_email          = $this->get_email( $hyb_email );
@@ -212,27 +241,25 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 					$show_username    = false;
 					$show_form_errors = array();
 
+                    if(  ! $yith_user_email && ! is_user_logged_in()  ){
+                        $show_form          = true;
+                        $show_email         = true;
+                        $show_form_errors[] = __('Add your email address', 'yith-woocommerce-social-login') ;
+                    }
 
-					if( ! $yith_user_email && ! is_user_logged_in() ){
-						$show_form          = true;
-						$show_email         = true;
-						$show_form_errors[] = __('Add your email address', 'yith-woocommerce-social-login') ;
-					}
+                    if(  $yith_user_email && ! $yith_user_email_validate ){
+                        $show_form          = true;
+                        $show_email         = true;
+                        $show_form_errors[] = __('Your email address is not valid!', 'yith-woocommerce-social-login') ;
+                    }
 
-					if(  $yith_user_email && ! $yith_user_email_validate ){
-                            $show_form          = true;
-                            $show_email         = true;
-                            $show_form_errors[] = __('Your email address is not valid!', 'yith-woocommerce-social-login') ;
-					}
-
-                    if ( $yith_user_email_validate && $this->verify_email_exists( $yith_user_email ) ) {
+                    if ( $yith_user_email_validate && $this->verify_email_exists( $yith_user_email ) && ! is_user_logged_in() ) {
                         $show_form          = true;
                         $show_email         = true;
                         $show_form_errors[] = __( 'This email already exists', 'yith-woocommerce-social-login' );
                     }
 
-
-                    if( ! $yith_user_login || ! $yith_user_login_validate ){
+					if( ! $yith_user_login || ! $yith_user_login_validate ){
 						$show_form          = true;
 						$show_username      = true;
 						$show_form_errors[] = __('Username is not valid!', 'yith-woocommerce-social-login') ;
@@ -254,21 +281,23 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 						exit;
 
 					}else{
-						//verify if exist an user with that email
-					//	$current_customer_id = $this->verify_email_exists( $yith_user_email );
-                        if ( is_user_logged_in() ) {
-                            $current_user = wp_get_current_user();
-                            $current_customer_id = $current_user->ID;
-                        }else{
-                            $current_customer_id = $this->add_user( $yith_user_login, $yith_user_email, $user_profile );
-                        }
 
-						//link account
-						add_user_meta( $current_customer_id, $social.'_login_id', $user_profile->identifier, true );
-						add_user_meta( $current_customer_id, $social.'_login_data', (array) $user_profile, true );
+						if( apply_filters('ywpop_enable_the_registration', true ) ){
+							if ( ! is_user_logged_in() ) {
+								if ( username_exists( $yith_user_login ) ) {
+									$yith_user_login = $this->get_username( $yith_user_login, $yith_user_email );
+								}
+								$current_customer_id = $this->add_user( $yith_user_login, $yith_user_email, $user_profile );
+							}
 
-						wp_set_auth_cookie( $current_customer_id, true );
-						wp_safe_redirect( $this->get_redirect_to() );
+							//link account
+							add_user_meta( $current_customer_id, $social.'_login_id', $user_profile->identifier, true );
+							add_user_meta( $current_customer_id, $social.'_login_data', (array) $user_profile, true );
+
+							wp_set_auth_cookie( $current_customer_id, true );
+						}
+
+						wp_redirect( $this->get_redirect_to() );
 						exit;
 
 					}
@@ -291,10 +320,10 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 		 */
 		function get_username( $hyb_user_login, $hyb_user_email ) {
 
-			$yith_user_login = isset( $_REQUEST["yith_user_login"] ) ? $_REQUEST["yith_user_login"] : '';
+			$yith_user_login = isset( $_REQUEST["yith_user_login"] ) ? $_REQUEST["yith_user_login"] : $hyb_user_login;
 
-			if ( !empty( $yith_user_login ) ) {
-				if ( get_option( 'woocommerce_registration_generate_username' ) == 'yes' && !empty( $hyb_user_email ) ) {
+			if ( ! empty( $yith_user_login ) ) {
+				if ( get_option( 'woocommerce_registration_generate_username' ) == 'yes' && ! empty( $hyb_user_email ) ) {
 					$yith_user_login = sanitize_user( current( explode( '@', $hyb_user_email ) ) );
 					if ( username_exists( $yith_user_login ) ) {
 						$append     = 1;
@@ -411,7 +440,7 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 
 			$this->add_user_meta( $customer_id, $user_info, $user_email );
 
-			do_action( 'user_register', $customer_id );
+			//do_action( 'user_register', $customer_id );
 			do_action( 'woocommerce_created_customer', $customer_id, $args, $password );
 
 			return $customer_id;
@@ -421,53 +450,106 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 		 * Add meta to user from provider's user info
 		 *
 		 * @since  1.0.0
-		 *
-		 * @param $user_id
-		 * @param $user_info
-		 * @param $user_email
-		 *
-		 * @return void
+		 * @return string
 		 * @author Emanuela Castorina <emanuela.castorina@yithemes.com>
 		 */
 		public function add_user_meta( $user_id, $user_info, $user_email ){
 
-			add_user_meta( $user_id, 'billing_email', $user_email, true );
+			if( get_user_meta( $user_id, 'billing_email', true ) == '' ){
+				update_user_meta( $user_id, 'billing_email', $user_email );
+			}
 
-			if ( isset( $user_info->description ) ) {
-				add_user_meta( $user_id, 'description', $user_info->description, true );
+			if ( isset( $user_info->description ) && $user_info->description == '' ) {
+				update_user_meta( $user_id, 'description', $user_info->description);
 			}
 
 			if ( isset( $user_info->firstName ) ) {
-				add_user_meta( $user_id, 'billing_first_name', $user_info->firstName, true );
-				add_user_meta( $user_id, 'shipping_first_name', $user_info->firstName, true );
+				if( get_user_meta( $user_id, 'first_name', true ) == '' ){
+					update_user_meta( $user_id, 'first_name', $user_info->firstName );
+				}
+
+				if( get_user_meta( $user_id, 'billing_first_name', true ) == '' ){
+					update_user_meta( $user_id, 'billing_first_name', $user_info->firstName );
+				}
+
+				if( get_user_meta( $user_id, 'shipping_first_name', true ) == '' ){
+					update_user_meta( $user_id, 'shipping_first_name', $user_info->firstName );
+				}
+
 			}
 			if ( isset( $user_info->lastName ) ) {
-				add_user_meta( $user_id, 'billing_last_name', $user_info->firstName, true );
-				add_user_meta( $user_id, 'shipping_last_name', $user_info->firstName, true );
+				if( get_user_meta( $user_id, 'last_name', true ) == '' ){
+					update_user_meta( $user_id, 'last_name', $user_info->lastName );
+				}
+
+				if( get_user_meta( $user_id, 'billing_last_name', true ) == '' ){
+					update_user_meta( $user_id, 'billing_last_name', $user_info->lastName );
+				}
+
+				if( get_user_meta( $user_id, 'shipping_last_name', true ) == '' ){
+					update_user_meta( $user_id, 'shipping_last_name', $user_info->lastName);
+				}
+
 			}
-			if ( isset( $user_info->phone ) ) {
-				add_user_meta( $user_id, 'billing_phone', $user_info->phone, true );
+			if ( isset( $user_info->phone ) && get_user_meta( $user_id, 'billing_phone', true ) == ''  ) {
+				update_user_meta( $user_id, 'billing_phone', $user_info->phone);
 			}
 			if ( isset( $user_info->address ) ) {
-				add_user_meta( $user_id, 'billing_address_1', $user_info->address, true );
-				add_user_meta( $user_id, 'shipping_address_1', $user_info->address, true );
+
+				if( get_user_meta( $user_id, 'billing_address_1', true ) == '' ){
+					update_user_meta( $user_id, 'billing_address_1', $user_info->address );
+				}
+
+				if( get_user_meta( $user_id, 'shipping_address_1', true ) == '' ){
+					update_user_meta( $user_id, 'shipping_address_1', $user_info->address);
+				}
 			}
 			if ( isset( $user_info->country ) ) {
-				add_user_meta( $user_id, 'billing_country', $user_info->country, true );
-				add_user_meta( $user_id, 'shipping_country', $user_info->country, true );
+
+				if( get_user_meta( $user_id, 'billing_country', true ) == '' ){
+					update_user_meta( $user_id, 'billing_country', $user_info->country );
+				}
+
+				if( get_user_meta( $user_id, 'shipping_country', true ) == '' ){
+					update_user_meta( $user_id, 'shipping_country', $user_info->country);
+				}
+
 			}
 			if ( isset( $user_info->region ) ) {
-				add_user_meta( $user_id, 'billing_state', $user_info->region, true );
-				add_user_meta( $user_id, 'shipping_state', $user_info->region, true );
+
+				if( get_user_meta( $user_id, 'billing_state', true ) == '' ){
+					update_user_meta( $user_id, 'billing_state', $user_info->region );
+				}
+
+				if( get_user_meta( $user_id, 'shipping_state', true ) == '' ){
+					update_user_meta( $user_id, 'shipping_state', $user_info->region);
+				}
+
 			}
 			if ( isset( $user_info->city ) ) {
-				add_user_meta( $user_id, 'billing_city', $user_info->city, true );
-				add_user_meta( $user_id, 'shipping_city', $user_info->city, true );
+
+				if( get_user_meta( $user_id, 'billing_city', true ) == '' ){
+					update_user_meta( $user_id, 'billing_city', $user_info->city );
+				}
+
+				if( get_user_meta( $user_id, 'shipping_city', true ) == '' ){
+					update_user_meta( $user_id, 'shipping_city', $user_info->city );
+				}
+
 			}
 			if ( isset( $user_info->zip ) ) {
-				add_user_meta( $user_id, 'billing_postcode', $user_info->zip, true );
-				add_user_meta( $user_id, 'shipping_postcode', $user_info->zip, true );
+
+				if( get_user_meta( $user_id, 'billing_postcode', true ) == '' ){
+					update_user_meta( $user_id, 'billing_postcode', $user_info->zip);
+				}
+
+				if( get_user_meta( $user_id, 'shipping_postcode', true ) == '' ){
+					update_user_meta( $user_id, 'shipping_postcode', $user_info->zip );
+				}
+
 			}
+
+			do_action( 'ywsl_add_additional_user_info', $user_id, $user_info, $user_email );
 
 		}
 
@@ -503,7 +585,7 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 					$error = __( 'Authentification failed. The user has canceled the authentication or the provider refused the connection.', 'yith-woocommerce-social-login' );
 					break;
 				case 6 :
-					$error = __( 'User profile request failed. User might not be connected to the provider and have to authenticate again.', 'yith-woocommerce-social-login' );
+					$error = __( 'Request of user profile failed. Probably the user is not connected to the provider and a new authentication is necessary.', 'yith-woocommerce-social-login' );
 					break;
 				case 7 :
 					$error = __( 'User not connected to the provider.', 'yith-woocommerce-social-login' );
@@ -533,7 +615,7 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 				if ( !( strpos( $redirect_to_url, 'wp-admin' ) || strpos( $redirect_to_url, 'wp-login.php' ) ) ) {
 					$redirect_to = $redirect_to_url;
 					// Redirect to https if user wants ssl
-					if ( isset( $secure_cookie ) && $secure_cookie && false !== strpos( $redirect_to, 'wp-admin' ) ) {
+					if ( is_ssl() && false !== strpos( $redirect_to, 'wp-admin' ) ) {
 						$redirect_to = preg_replace( '|^http://|', 'https://', $redirect_to );
 					}
 				}
@@ -616,9 +698,13 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 		 * @return void
 		 * @author Emanuela Castorina <emanuela.castorina@yithemes.com>
 		 */
-		public function logout(){
-			Hybrid_Auth::logoutAllProviders();
-			session_destroy();
+		public function logout() {
+			if ( isset( $_SESSION ) ) {
+				session_destroy();
+			}
+			clearstatcache();
+			unset( $this->hybridauth );
+
 		}
 
 	}

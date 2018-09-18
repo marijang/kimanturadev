@@ -13,9 +13,6 @@
 		 */
 		init: function() {
 
-			// Set user identifier
-			WPForms.setUserIndentifier();
-
 			// Document ready
 			$(document).ready(WPForms.ready);
 
@@ -31,6 +28,9 @@
 		 * @since 1.2.3
 		 */
 		ready: function() {
+
+			// Set user identifier
+			WPForms.setUserIndentifier();
 
 			WPForms.loadValidation();
 			WPForms.loadDatePicker();
@@ -77,6 +77,17 @@
 				$( '.wpforms-input-temp-name' ).each(function( index, el ) {
 					var random = Math.floor( Math.random() * 9999 ) + 1;
 					$( this ).attr( 'name', 'wpf-temp-' + random );
+				});
+
+				// Prepend URL field contents with http:// if user input doesn't contain a schema.
+				$( '.wpforms-validate input[type=url]' ).change( function () {
+					var url = $( this ).val();
+					if ( ! url ) {
+						return false;
+					}
+					if ( url.substr( 0, 7 ) !== 'http://' && url.substr( 0, 8 ) !== 'https://' ) {
+						$( this ).val( 'http://' + url );
+					}
 				});
 
 				$.validator.messages.required = wpforms_settings.val_required;
@@ -169,6 +180,8 @@
 										} else {
 											element.closest( 'tr' ).find( 'th' ).append( error );
 										}
+									} else if ( element.hasClass( 'wpforms-net-promoter-score-option' ) ) {
+										element.closest( 'table' ).after( error );
 									} else {
 										element.parent().parent().parent().append( error );
 									}
@@ -752,7 +765,7 @@
 		 */
 		setUserIndentifier: function() {
 
-			if ( ! WPForms.getCookie('_wpfuuid') ) {
+			if ( typeof wpforms_settings !== 'undefined' && wpforms_settings.uuid_cookie && ! WPForms.getCookie('_wpfuuid') ) {
 
 				// Generate UUID - http://stackoverflow.com/a/873856/1489528
 				var s         = new Array(36),

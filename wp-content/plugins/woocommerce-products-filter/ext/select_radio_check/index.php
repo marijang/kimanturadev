@@ -47,7 +47,7 @@ final class WOOF_EXT_SEL_RADIO_CHECK extends WOOF_EXT {
                 'type' => 'select',
                 'options' => array(
                     0 => __('Radio', 'woocommerce-products-filter'),
-                    //1 => __('Checkbox - in the premium version', 'woocommerce-products-filter')
+                    //1 => __('Checkbox', 'woocommerce-products-filter')
                 )
             ),
             'select_radio_check_height' => array(

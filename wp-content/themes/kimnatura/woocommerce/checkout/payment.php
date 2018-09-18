@@ -46,7 +46,7 @@ if ( ! is_ajax() ) {
 			<br/><button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'woocommerce' ); ?>"><?php esc_html_e( 'Update totals', 'woocommerce' ); ?></button>
 		</noscript>
 
-		<?php wc_get_template( 'checkout/terms.php' ); ?>
+		<!-- <?php wc_get_template( 'checkout/terms.php' ); ?>
 
 		<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
@@ -54,7 +54,7 @@ if ( ! is_ajax() ) {
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 
-		<?php wp_nonce_field( 'woocommerce-process_checkout' ); ?>
+		<?php wp_nonce_field( 'woocommerce-process_checkout' ); ?> -->
 	</div>
 </div>
 <?php
@@ -63,19 +63,18 @@ if ( ! is_ajax() ) {
 }?>
 
 <script>
-$('<div class="checkbox__error-label" id="privacy-error">Potrebno je prihvatiti uvjete privatnosti</div>').appendTo('#ct-ultimate-gdpr-consent-field_field')
+
 $("#place_order").click(function(){
 	var checked = $("#terms:checked").length;
-	if (checked) {
+	var checked1 = $("#ct-ultimate-gdpr-consent-field:checked").length;
+	if (checked && checked1) {
 		$("form[name='checkout']").submit();
-	} else {
+	} 
+	if (!checked) {
 		$('#terms-error').addClass('checkbox__error-label--active');
 		$('#terms').parent().addClass("checkbox__error");
 	}
-	var checked1 = $("#ct-ultimate-gdpr-consent-field:checked").length;
-	if (checked1) {
-		$("form[name='checkout']").submit();
-	} else {
+	if (!checked1) {
 		$("#privacy-error").addClass('checkbox__error-label--active');
 		$("#ct-ultimate-gdpr-consent-field").parent().addClass("checkbox__error");
 	}

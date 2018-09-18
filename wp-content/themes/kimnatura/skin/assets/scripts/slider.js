@@ -147,7 +147,7 @@ $(".products__slider").slick({
   // the magic
   responsive: [{
 
-      breakpoint: 1024,
+      breakpoint: 1200,
       settings: {
         slidesToShow: 3,
         infinite: true
@@ -163,7 +163,7 @@ $(".products__slider").slick({
       }
 
     }, {
-      breakpoint: 800,
+      breakpoint: 1056,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,

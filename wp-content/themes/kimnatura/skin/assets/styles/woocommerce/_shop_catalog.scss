@@ -115,7 +115,6 @@
     @include element('items'){
         width: 100%;
         @extend %list-reset;
-        max-height: 2500px;
         overflow: hidden;
         transition: all 1.5s cubic-bezier(0.81, 0.15, 0.26, 0.99);
         @include media(tablet){

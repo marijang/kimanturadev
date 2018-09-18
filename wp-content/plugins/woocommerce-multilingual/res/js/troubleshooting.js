@@ -208,9 +208,9 @@ jQuery( function($) {
         run_next_troubleshooting_action: function(){
            if(jQuery('#wcml_sync_product_variations').is(':checked') && parseInt( jQuery('#count_prod_variat').val() ) !== 0 ){
                 WCML_Troubleshooting.sync_variations();
-            }else if(jQuery('#wcml_sync_gallery_images').is(':checked') && parseInt( jQuery('#count_galleries').val() ) !== 0 ){
-                WCML_Troubleshooting.sync_product_gallery();
-            }else if(jQuery('#wcml_sync_categories').is(':checked') && parseInt( jQuery('#count_categories').val() ) !== 0 ){
+           }else if(jQuery('#wcml_sync_gallery_images').is(':checked') && parseInt( jQuery('#count_galleries').val() ) !== 0 ){
+               WCML_Troubleshooting.sync_product_gallery();
+           }else if(jQuery('#wcml_sync_categories').is(':checked') && parseInt( jQuery('#count_categories').val() ) !== 0 ){
                 WCML_Troubleshooting.sync_product_categories();
             }else if(jQuery('#wcml_duplicate_terms').is(':checked') && parseInt( jQuery('#count_terms').val() ) !== 0 ){
                 WCML_Troubleshooting.duplicate_terms();

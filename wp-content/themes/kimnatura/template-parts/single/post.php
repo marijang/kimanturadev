@@ -8,7 +8,7 @@
 
 use Kimnatura\Theme\Utils as Utils;
 $images = new Utils\Images();
-$image  = $images->get_post_image( 'full_width' );
+$image  = $images->get_post_image( 'post_full_width' );
 
 
 // Check if set featured image 2
@@ -54,7 +54,7 @@ if (kdmfi_has_featured_image('featured-image-2')){
     <div class="section__share-add-wrap">
         <?php require locate_template( 'template-parts/parts/addthis.php' ); ?>
     </div>
-    <div class="section__content-share">
+    <div class="section__content-share content-style">
         <?php the_content(); ?>
     </div>
   </div>

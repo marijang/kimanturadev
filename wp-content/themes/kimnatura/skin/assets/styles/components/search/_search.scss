@@ -43,7 +43,11 @@ $search-grid-row-gap: $base-content-padding*3;
 	color: $base-white-color;
     background: $primary-color;
     z-index: 1001;
-    position: static;
+	position: static;
+	
+	@include media(mobile){
+		height: 60%;
+	}
      
     
     &.scrolled {
@@ -100,6 +104,11 @@ $search-grid-row-gap: $base-content-padding*3;
     background: $base-white-color;
 	//transform: translate(0,40%);
 	-webkit-transform-style: preserve-3d;
+
+	@include media(mobile){
+		top: 60%;
+		min-height: 40%;
+	}
 
     &.scrolled {
 		top: 102px;
@@ -520,6 +529,7 @@ $search-grid-row-gap: $base-content-padding*3;
 	@include media(mobile){
 		max-width: 240px;
 		max-height: 240px;
+		min-height: initial;
 	}
 }
 

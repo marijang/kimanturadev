@@ -2,7 +2,7 @@
 <?php
 global $WOOF;
 $_REQUEST['additional_taxes'] = $additional_taxes;
-$_REQUEST['hide_terms_count_txt'] = isset($this->settings['hide_terms_count_txt']) ? $this->settings['hide_terms_count_txt'] : 0;
+$_REQUEST['hide_terms_count_txt'] = 0;
 
 //***
 

@@ -18,6 +18,7 @@
   <div class="section__content">
     <?php
         echo do_shortcode('[mc4wp_form id="'.get_theme_mod('mailchimp_newsletter_code').'"]');
+        // echo do_shortcode('[mc4wp_form id="236"]');
         
         ?>
   </div>

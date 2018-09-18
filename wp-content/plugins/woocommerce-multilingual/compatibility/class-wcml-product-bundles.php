@@ -57,6 +57,9 @@ class WCML_Product_Bundles {
 
 			add_action( 'wp_insert_post', array( $this, 'sync_product_bundle_meta_with_translations' ), 10 );
 
+			add_filter( 'woocommerce_json_search_found_products', array( $this, 'woocommerce_json_search_filter_found_products' ) );
+
+			add_action( 'woocommerce_before_delete_bundled_item', array( $this, 'delete_bundled_item_relationship' ) );
 		}
 
 		// product bundle using separate custom fields for prices
@@ -820,6 +823,25 @@ class WCML_Product_Bundles {
 			add_option( 'wcml_upgrade_bundles_items_relationships', true );
 
 		}
+	}
+
+	public function woocommerce_json_search_filter_found_products( $found_products ) {
+
+		foreach ( $found_products as $id => $product_name ) {
+			if ( $this->sitepress->get_language_for_element( $id, 'post_' . get_post_type( $id ) ) != $this->sitepress->get_current_language() ) {
+				unset( $found_products[ $id ] );
+			}
+		}
+
+		return $found_products;
+	}
+
+	public function delete_bundled_item_relationship( $bundle_item ){
+
+		$this->wpdb->query( $this->wpdb->prepare(
+			"DELETE FROM {$this->wpdb->prefix}woocommerce_bundled_itemmeta WHERE `meta_value` = %d AND `meta_key` LIKE 'translation_item_id_of_%'", $bundle_item->get_id()
+		) );
+
 	}
 
 }

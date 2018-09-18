@@ -104,6 +104,10 @@ $section-description-space-bottom-small:$base-content-padding;
         padding-left: 0px;
         border-radius: 10px;
 
+        @include media(tablet){
+            margin-left: 0;
+        }
+
         @include media(mobile){
             height: auto;
             position: initial;
@@ -171,6 +175,7 @@ $section-description-space-bottom-small:$base-content-padding;
         overflow: hidden;
         img{
             width: $section-img-width;
+            height: auto;
            
         }
         margin-top: $base-content-padding*2;
@@ -186,10 +191,37 @@ $section-description-space-bottom-small:$base-content-padding;
         @include media(tablet){
             margin-top: $base-content-padding;
             margin-bottom: $base-content-padding*2;  
-            min-height: 450px;
+            min-height: 350px;
             width: 100%;
         }
     }
+
+    @include element('image-homepage'){
+        overflow: hidden;
+        img{
+            width: $section-img-width;
+            height: auto;
+           
+        }
+        margin-top: $base-content-padding*2;
+        margin-bottom: $base-content-padding*3;
+        min-height: 450px;
+        @extend %bg-image;
+        @include media(mobile){
+            margin: $base-content-padding 0; 
+            min-height: 178px;
+            width: 100%;
+        }
+
+        @include media(tablet){
+            margin-top: $base-content-padding;
+            margin-bottom: $base-content-padding*2;  
+            min-height: 350px;
+            width: 100%;
+        }
+    }
+
+
     
     @include element('header'){
         //margin-bottom: $section-header-space-bottom;
@@ -259,7 +291,7 @@ $section-description-space-bottom-small:$base-content-padding;
             padding:$section-highlight-padding;
             @include media(mobile){
                 padding:0;
-                padding-top: 16px;
+                //padding-top: 16px;
             }
         }
         
