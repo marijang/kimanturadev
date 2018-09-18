@@ -48,6 +48,10 @@ $slick-opacity-not-active: 0.25 !default;
         //transition-delay: 10.3s;
         //animation-delay: 10.3s;
         z-index: 1;
+
+        @include media(mobile) {
+            margin-bottom: 8px;
+        }
         .animate-bg{
             background-color:black;
             
@@ -100,6 +104,7 @@ $slick-opacity-not-active: 0.25 !default;
            margin:0;
            //height: 272px;
            min-height: 280px;
+           background-position-x: 0%;
         }
         @include media(desktop large){
             opacity: 0;

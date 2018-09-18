@@ -10,6 +10,7 @@
 
     @include element('content'){
         @include container();
+      
     }
     @include element('container'){
         @include container();
