@@ -4,6 +4,16 @@
         margin:0px;
     }
     @include element('method'){
+        @include first(){
+            @include media(desktop large){
+                padding-top: 32px;
+            }
+        }
+        @include mast(){
+            @include media(desktop large){
+                padding-bottom: 32px;
+            }
+        }
         padding: 16px;
         background: $color-light-grey;
         &.is-active{
