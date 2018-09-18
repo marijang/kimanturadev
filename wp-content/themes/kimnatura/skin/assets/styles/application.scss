@@ -455,11 +455,11 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
 }
 
 
-.woocommerce-additional-fields__field-wrapper {
-    @include media(mobile) {
-        margin-top: -115px;
-    }
-}
+// .woocommerce-additional-fields__field-wrapper {
+//     @include media(mobile) {
+//         margin-top: -115px;
+//     }
+// }
 
 .checkout__form {
     @include media(mobile) {
