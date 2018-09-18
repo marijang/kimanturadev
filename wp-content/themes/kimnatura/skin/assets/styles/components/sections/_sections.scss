@@ -203,8 +203,8 @@ $section-description-space-bottom-small:$base-content-padding;
             height: auto;
            
         }
-        margin-top: $base-content-padding*2;
-        margin-bottom: $base-content-padding*3;
+        // margin-top: $base-content-padding*2;
+        // margin-bottom: $base-content-padding*3;
         min-height: 450px;
         @extend %bg-image;
         @include media(mobile){

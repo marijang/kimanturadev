@@ -1,12 +1,12 @@
 @include b('woocommerce-message'){
     @include container();
     padding: $base-content-padding;
-    margin-bottom: $base-content-padding;
+    //margin-bottom: $base-content-padding;
     //margin-top: $base-content-padding;
     text-align: center;
     @include typi(small);
     @include m('info'){
-        margin-bottom: $base-content-padding;
+        //margin-bottom: $base-content-padding;
     }
     @include m('alert'){
         color: #721c24;
@@ -27,6 +27,10 @@
                 text-decoration: none;
             }
         }
+    }
+
+    .show-login {
+        cursor: pointer;
     }
 
 }
