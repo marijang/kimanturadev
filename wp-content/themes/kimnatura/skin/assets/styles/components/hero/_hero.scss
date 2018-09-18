@@ -44,6 +44,9 @@ $hero-transition-duration-in: .9s;
       @include media(tablet) {
         min-height: 0px;
      }
+     @include media(mobile, landscape) {
+        min-height: 0px;
+    }
    }
    @include e('slider-indicator'){
        position: absolute;
@@ -88,15 +91,26 @@ $hero-transition-duration-in: .9s;
             background-position: 100%;
         }
 
+        @include media(mobile, landscape) {
+            background-size: cover;
+            background-position: 100%;
+        }
+
         @include media(tablet){
         
             min-height: 350px;
             margin-right: -80px; // Usrane slike
         }
+        @include media(mobile, landscape) {
+            min-height: 350px;
+            margin-right: -80px; // Usrane slike
+            background-size: contain;
+        }
         @include media(desktop large){
             opacity: 0;
             transition: $hero-transition-duration-in ease-in $hero-transition-duration;
             min-height: 560px;
+
         } 
     }
     @include element('slider-wrapper'){
@@ -171,6 +185,10 @@ $hero-transition-duration-in: .9s;
             background-color: transparent;
             margin-top:16px;
         }
+        @include media(mobile, landscape) {
+            background-color: transparent;
+            margin-top:16px;
+        }
     }
     @include element('description'){
         margin: 0;
@@ -205,6 +223,13 @@ $hero-transition-duration-in: .9s;
             margin: 0px;
             padding: 0px;
          }
+         @include media(mobile, landscape) {
+            background-color: transparent;
+            color: $color-black;
+            text-align: left;
+            margin: 0px;
+            padding: 0px;
+        }
     }
     @include element('link'){
         transition: $hero-transition-duration ease-in $hero-transition-duration;
@@ -220,6 +245,11 @@ $hero-transition-duration-in: .9s;
             text-align: left;
             margin-left: 0px;
             
+        }
+
+        @include media(mobile, landscape) {
+            text-align: left;
+            margin-left: 0px;
         }
     }
     @include element('content'){
@@ -249,6 +279,21 @@ $hero-transition-duration-in: .9s;
             width: 48%;
             margin-top: 16px;
         }
+
+        @include media(mobile, landscape) {
+            color:$color-black;
+           // position: initial;
+            background-color: transparent;
+          //  margin-top: 16px;
+          position: absolute;
+            top:0;
+            left:$hero-content-left;
+            left:0;
+            bottom:$hero-content-bottom;
+            right:$hero-content-right;
+            width: 48%;
+            margin-top: 16px;
+        }
         
         @include media(desktop large){
             top:$hero-content-top;
@@ -266,6 +311,9 @@ $hero-transition-duration-in: .9s;
             }
             @include media(tablet){
             
+                background-color: transparent;
+            }
+            @include media(mobile, landscape) {
                 background-color: transparent;
             }
            // @include typi(large);
@@ -288,6 +336,11 @@ $hero-transition-duration-in: .9s;
                 background: none;
             }
             @include media(tablet){
+                @include typi(huge);
+                text-align: left;
+                margin: 0;
+            }
+            @include media(mobile, landscape) {
                 @include typi(huge);
                 text-align: left;
                 margin: 0;
@@ -418,8 +471,4 @@ $hero-transition-duration-in: .9s;
 	}
 }
 
-.hero__bg {
-@include media(mobile, landscape) {
-    background-size: contain;
-}
-}
+
