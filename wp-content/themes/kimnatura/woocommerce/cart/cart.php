@@ -241,7 +241,9 @@ $( document ).ready(function() {
    });
 
    $( 'button[name=update_cart]' ).on( 'click',function(){
-        if ($('.cart__banner').length > 0){$('.cart__banner').addClass('cart__banner--loading');}
+        if ($('.cart__banner').length > 0){
+			$('.cart__banner').addClass('cart__banner--loading');
+		}
 	} );
 	
    //const event = new Event('change');
