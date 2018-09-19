@@ -55,6 +55,7 @@ $cart-navigation-item-mobile-size: $base-content-padding*2.5;
        // @include typi('small');
         margin-right: $base-content-padding*3;
         position: relative;
+        cursor: default;
 
         @include media(mobile){
             margin-right: $cart-navigation-items-spacing-mobile;
@@ -111,6 +112,18 @@ $cart-navigation-item-mobile-size: $base-content-padding*2.5;
             }
             
         }
+        &.is-disabled{
+            color:$base-dark-grey-color;
+            background: $base-grey-color;
+            
+            a{
+                color:$base-dark-grey-color;
+                display: block;
+                pointer-events: none;
+            }
+            
+        }
+
         &:last-child{
             margin-right: 0px;
             &::after{

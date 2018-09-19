@@ -308,9 +308,9 @@ class Woo {
     }
     if (Is_checkout_pay_page()||is_order_received_page()) {
         $step = 4;
-        $statusCss['step-1'] = ''; 
-        $statusCss['step-2'] = ''; 
-        $statusCss['step-3'] = ''; 
+        $statusCss['step-1'] = 'is-disabled'; 
+        $statusCss['step-2'] = 'is-disabled'; 
+        $statusCss['step-3'] = 'is-disabled'; 
         $statusCss['step-4'] = 'is-active';
     }
  
