@@ -17,7 +17,7 @@ $result = get_posts( $args ) ;
 
 
 ?>
-<div class="sastojci__slider-wrapper section section__spacing-top--default section__spacing-bottom--medium">
+<div class="sastojci__slider-wrapper section section__spacing-top--default1 section__spacing-bottom--medium1">
 
 <div class="sastojci__slider sastojci-slider-slick slick-slider">
 <?php
