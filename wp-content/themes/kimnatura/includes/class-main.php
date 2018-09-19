@@ -21,6 +21,7 @@ use Kimnatura\Admin\Woo as Woo;
 
 use Kimnatura\Admin\Rest\Example as Example;
 use Kimnatura\Admin\Rest\Search as Search;
+use Kimnatura\Admin\Rest\Postage as Postage;
 use Kimnatura\Admin\MailChimp as MailChimp;
 /**
  * The main start class.
@@ -94,6 +95,7 @@ class Main {
     //var_dump(new Example);
     Example::listen();
     Search::listen();
+    Postage::listen();
   }
 
   /**
@@ -269,7 +271,6 @@ class Main {
     $this->loader->remove_action( 'woocommerce_cart_is_empty', 'wc_empty_cart_message',10);
     $this->loader->add_action( 'woocommerce_cart_is_empty', $woo, 'woocommerce_cart_is_empty_message',10,1);
     
-    $this->loader->add_action( 'woocommerce_update_cart_action_cart_updated', $woo, 'shipping_method_notice', 20, 1 );
     // Enque styles and scripts.
     //$this->loader->add_action( 'wp_enqueue_scripts', $theme, 'enqueue_styles' );
     //$this->loader->add_action( 'wp_enqueue_scripts', $theme, 'enqueue_scripts' );

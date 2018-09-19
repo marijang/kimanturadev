@@ -439,7 +439,6 @@ class Woo {
  */
 public function shipping_method_notice() {
 	//if ( ! is_cart() && ! is_checkout() ) { // Remove partial if you don't want to show it on cart/checkout
-   
 	$packages = WC()->cart->get_shipping_packages();
 	$package = reset( $packages );
 	$zone = wc_get_shipping_zone( $package );
@@ -482,8 +481,8 @@ public function shipping_method_notice() {
 			}
         }
     }
-	}
-    if ( is_cart()&&$cart_total >0 ){
+    }
+    if ( (is_cart() || wp_doing_ajax()) && $cart_total >0 ){
         if ($message!=''){
             echo '<div class="cart__banner">'.$message.'</div>';
         }
