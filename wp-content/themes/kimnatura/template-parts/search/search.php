@@ -10,9 +10,7 @@
                     </a>
                 
                     <div class="search__btn-close" id="btn-search-close"><i class="material-icons">close</i></div>
-                        <!-- <button id="btn-search-close" class="btn btn--search-close" aria-label="Close search form">
-                            <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
-                        </button> -->
+  
             
                 <div class="search__form-wrapper">
                     <form class="search__form" role="search" method="get" onsubmit="event.preventDefault()" id="search-form">
@@ -25,6 +23,22 @@
 		</div>
 			<div class="search__inner search__inner--down" id='search-down'>
                 <div class="section section__spacing-top--medium section__spacing-bottom--medium">
+                <div class="search__loader" >
+	<!-- Loader 9 -->
+
+<svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" enable-background="new 0 0 0 0" xml:space="preserve">
+    <rect x="20" y="20" width="4" height="10" fill="#000" transform="translate(0 15.5206)">
+      <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0" dur="0.6s" repeatCount="indefinite"></animateTransform>
+    </rect>
+    <rect x="30" y="20" width="4" height="10" fill="#000" transform="translate(0 2.18727)">
+      <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0.2s" dur="0.6s" repeatCount="indefinite"></animateTransform>
+    </rect>
+    <rect x="40" y="20" width="4" height="10" fill="#000" transform="translate(0 11.1461)">
+      <animateTransform attributeType="xml" attributeName="transform" type="translate" values="0 0; 0 20; 0 0" begin="0.4s" dur="0.6s" repeatCount="indefinite"></animateTransform>
+    </rect>
+</svg>
+<p>Pretraga u tijeku<br>Molimo pričekajte</p>
+</div>
 				    <section id="search-results" class="">
                     </section>
                 </div>
