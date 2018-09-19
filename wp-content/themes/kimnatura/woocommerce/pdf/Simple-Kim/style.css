@@ -95,7 +95,7 @@ table.head {
 }
 
 td.header img {
-	height: 88px;
+	height: auto;
 	width: 88px;
 }
 

@@ -177,10 +177,16 @@ do_action( 'woocommerce_before_cart' ); ?>
 <script>
 
 $( document ).ajaxComplete(function() {
-	console.log('event');
+
    var event = new CustomEvent('change', {
 	   bubbles: true
    });
+
+   $( 'button[name=update_cart]' ).on( 'click',function(){
+        if ($('.cart__banner').length > 0){
+			$('.cart__banner').addClass('cart__banner--loading');
+		}
+	} );
    //const event = new Event('change');
    function incrementValue(e) {
 
@@ -239,6 +245,13 @@ $( document ).ready(function() {
    var event = new CustomEvent('change', {
 	   bubbles: true
    });
+
+   $( 'button[name=update_cart]' ).on( 'click',function(){
+        if ($('.cart__banner').length > 0){
+			$('.cart__banner').addClass('cart__banner--loading');
+		}
+	} );
+	
    //const event = new Event('change');
    function incrementValue(e) {
 

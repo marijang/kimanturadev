@@ -232,6 +232,10 @@ $input-number-width: $base-content-padding*2.5;
         @include media(desktop large){
             margin-bottom: $base-content-padding*2;
         }
+
+        @include m('loading'){
+            opacity: 0.6;
+        }
         
     }
 

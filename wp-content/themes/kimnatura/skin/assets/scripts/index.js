@@ -36,3 +36,4 @@ import './zoom';
 import './loader';
 
 import './wspay';
+import './postage';

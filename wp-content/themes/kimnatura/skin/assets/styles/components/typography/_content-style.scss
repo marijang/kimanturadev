@@ -1,5 +1,9 @@
 @include b('content-style'){
 
+    h2:first-child{
+        margin-top: 0;
+    }
+
     h2,h3,h4 {
         margin-top: $base-content-padding;
         margin-bottom: $base-content-padding;

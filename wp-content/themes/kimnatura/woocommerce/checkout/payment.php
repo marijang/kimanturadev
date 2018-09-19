@@ -67,13 +67,13 @@ if ( ! is_ajax() ) {
 $("#place_order").click(function(){
 	var checked = $("#terms:checked").length;
 	var checked1 = $("#ct-ultimate-gdpr-consent-field:checked").length;
-	if (checked && checked1) {
+	if (checked1) {   //checked zakomentirano
 		$("form[name='checkout']").submit();
 	} 
-	if (!checked) {
-		$('#terms-error').addClass('checkbox__error-label--active');
-		$('#terms').parent().addClass("checkbox__error");
-	}
+	// if (!checked) {
+	// 	$('#terms-error').addClass('checkbox__error-label--active');
+	// 	$('#terms').parent().addClass("checkbox__error");
+	// }
 	if (!checked1) {
 		$("#privacy-error").addClass('checkbox__error-label--active');
 		$("#ct-ultimate-gdpr-consent-field").parent().addClass("checkbox__error");

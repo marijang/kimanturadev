@@ -11,7 +11,7 @@ get_header();
 <section class="section">
         <header class="section__header">
 	        <h1 class="section__title">Novosti</h1>
-	        <p class="section__description">Opis</p>
+	        <p class="section__description" style="display:none;" >Naše novosti</p>
 	    </header><!-- .entry-header -->
       <?php
 if ( have_posts() ) {

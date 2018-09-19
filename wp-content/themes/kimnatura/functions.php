@@ -332,11 +332,11 @@ function terms_and_conditions_validation( $username, $email, $validation_errors 
 // Link za preuzimanje računa
 add_filter('woocommerce_thankyou_order_received_text', 'wpo_wcpdf_thank_you_link', 10, 2);
 function wpo_wcpdf_thank_you_link( $text, $order ) {
-    if ( is_user_logged_in() ) {
+    // if ( is_user_logged_in() ) {
         $order_id = method_exists($order, 'get_id') ? $order->get_id() : $order->id;
         $pdf_url = wp_nonce_url( admin_url( 'admin-ajax.php?action=generate_wpo_wcpdf&template_type=invoice&order_ids=' . $order_id . '&my-account'), 'generate_wpo_wcpdf' );
         $text .= '<div class="thanks__button"><a class="checkout-button button alt wc-forward btn btn--primary-color" href="'.esc_attr($pdf_url).'">Preuzmite PDF</a></div>';
-    }
+    //}
     return $text;
 }
 
