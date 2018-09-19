@@ -332,11 +332,11 @@ function terms_and_conditions_validation( $username, $email, $validation_errors 
 // Link za preuzimanje računa
 add_filter('woocommerce_thankyou_order_received_text', 'wpo_wcpdf_thank_you_link', 10, 2);
 function wpo_wcpdf_thank_you_link( $text, $order ) {
-    if ( is_user_logged_in() ) {
+    // if ( is_user_logged_in() ) {
         $order_id = method_exists($order, 'get_id') ? $order->get_id() : $order->id;
         $pdf_url = wp_nonce_url( admin_url( 'admin-ajax.php?action=generate_wpo_wcpdf&template_type=invoice&order_ids=' . $order_id . '&my-account'), 'generate_wpo_wcpdf' );
         $text .= '<div class="thanks__button"><a class="checkout-button button alt wc-forward btn btn--primary-color" href="'.esc_attr($pdf_url).'">Preuzmite PDF</a></div>';
-    }
+    //}
     return $text;
 }
 
@@ -416,3 +416,86 @@ function my_hide_shipping_when_free_is_available( $rates ) {
 	return ! empty( $free ) ? $free : $rates;
 }
 add_filter( 'woocommerce_package_rates', 'my_hide_shipping_when_free_is_available', 100 );
+
+
+
+// add_action( 'woocommerce_update_cart_action_cart_updated', 'shipping_method_notice', 20, 1 );
+// add_action( 'woocommerce_update_cart_action_cart_updated', 'on_action_cart_updated', 20, 1 );
+function on_action_cart_updated( $cart_updated ){
+
+	
+		//if ( ! is_cart() && ! is_checkout() ) { // Remove partial if you don't want to show it on cart/checkout
+		var_dump("a");
+		$packages = WC()->cart->get_shipping_packages();
+		$package = reset( $packages );
+		$zone = wc_get_shipping_zone( $package );
+		$cart_total = WC()->cart->get_displayed_subtotal();
+		$message = '';
+		if ( WC()->cart->display_prices_including_tax() ) {
+			$cart_total = round( $cart_total - ( WC()->cart->get_discount_total() + WC()->cart->get_discount_tax() ), wc_get_price_decimals() );
+		} else {
+			$cart_total = round( $cart_total - WC()->cart->get_discount_total(), wc_get_price_decimals() );
+		}
+		// Calculate price if zone is selected
+		foreach ( $zone->get_shipping_methods( true ) as $k => $method ) {
+			$min_amount = $method->get_option( 'min_amount' );
+			if ( $method->id == 'free_shipping' && ! empty( $min_amount ) && $cart_total < $min_amount ) {
+				$remaining = $min_amount - $cart_total;
+				$message =  sprintf( 'Dodajte proizvoda za još %s kako biste ostvarili besplatnu dostavu!', wc_price( $remaining ) );
+			}
+		}
+		// Show info if price is not calculated just for info
+		if($cart_total >0){
+		if (!isset($remaining)){
+			$delivery_zones = \WC_Shipping_Zones::get_zones();
+			foreach ((array) $delivery_zones as $key => $the_zone ) {
+				//echo $the_zone['zone_name'];
+				foreach ($the_zone['shipping_methods'] as $method) {
+					if ($method->is_enabled()){
+						$min_amount = $method->get_option( 'min_amount' );
+						// Free shipping method rules
+						if ( $method->id == 'free_shipping'){
+							// Cart total less then min_amount
+							if (! empty( $min_amount ) && $cart_total < $min_amount ) {
+								$remaining = $min_amount - $cart_total;
+								$message=  sprintf( 'Ako dodate još %s ostvariti ćete besplatnu dostavu!', wc_price( $remaining ) );
+							}
+						}
+					}
+					//echo $value->id;
+					//echo $value->get_title();
+					// var_dump($value);
+				}
+			}
+		}
+		}
+		if ( is_cart()&&$cart_total >0 ){
+			if ($message!=''){
+				echo '<div class="cart__banner">'.$message.'</div>';
+			}
+		}
+		return $cart_updated; 
+
+		
+		
+	
+	
+
+    // $applied_coupons = WC()->cart->get_applied_coupons();
+
+    // if( count( $applied_coupons ) > 0 ){
+    //     $new_value        = WC()->cart->get_cart_subtotal();
+    //     $discounted       = WC()->cart->coupon_discount_totals;
+    //     $discounted_value = array_values($discounted)[0];
+    //     $new_value        = $new_value-$discounted_value + 100;
+
+    //     WC()->cart->set_total( $new_value );
+
+    //     if ( $cart_updated ) {
+    //         // Recalc our totals
+    //         WC()->cart->calculate_totals();
+    //     }
+    // }
+}
+
+add_filter( 'woocommerce_update_cart_action_cart_updated', 'on_action_cart_updated', 10, 1 ); 

@@ -232,6 +232,7 @@ html.mobile-menu-is-open{
       
     }
     @include e('mobile-contact-phone'){
+        display: none;
         @include typi(default);
         margin-bottom: 8px;
     }
