@@ -9,7 +9,7 @@
                 padding-top: 32px;
             }
         }
-        @include mast(){
+        @include last(){
             @include media(desktop large){
                 padding-bottom: 32px;
             }
