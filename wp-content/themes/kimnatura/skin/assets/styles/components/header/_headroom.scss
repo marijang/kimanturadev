@@ -4,6 +4,7 @@ $transition-headroom: all 0.35s ease-in-out;
   position: fixed;
   width: 100%;
   z-index: 200;
+  background-color: $base-white-color;
   /*
   @include for-phone-only() {
     display: none;
@@ -13,6 +14,7 @@ $transition-headroom: all 0.35s ease-in-out;
 
 .headroom {
   width: 100%;
+  background-color: $base-white-color;
   &.headroom--top{
     //position: relative!important;
   }
@@ -44,5 +46,6 @@ $transition-headroom: all 0.35s ease-in-out;
 }
 .headroom--top{
   position: fixed;
+  background-color: $base-white-color;
   box-shadow: none!important;
 }
