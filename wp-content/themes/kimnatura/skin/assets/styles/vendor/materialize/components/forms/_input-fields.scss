@@ -172,8 +172,12 @@ textarea.materialize-textarea {
   }
 
   position: relative;
+
+  //jao
   margin-top: 1rem;
   margin-bottom: 1rem;
+  //margin-top: 8px;
+  //margin-bottom: 8px;
 
   & > label {
     color: $input-border-color;

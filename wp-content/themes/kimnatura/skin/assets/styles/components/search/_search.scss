@@ -36,6 +36,19 @@ $search-grid-row-gap: $base-content-padding*3;
     
 }
 
+.search__loader{
+	text-align: center;
+	display: none;
+	p{
+		@include typi(small);
+	}
+}
+.search__loader svg {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+}
+
 .search__inner--up {
     height: 40%;
     //min-height: 200px;

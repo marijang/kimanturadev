@@ -4,7 +4,7 @@
     
     @include element('wrap'){
         @include container();
-        padding: $grid-gutter*2 0;
+        padding: $grid-gutter 0;
         display: grid;
         align-items: center;
         align-content: center;
@@ -12,6 +12,7 @@
         @include media(mobile){
             grid-template-columns: 1fr 24px;
             grid-template-rows: auto;
+            padding: $grid-gutter ;
         }
     }
     @include element('menu'){

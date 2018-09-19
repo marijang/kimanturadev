@@ -56,7 +56,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 			<?php do_action( 'woocommerce_checkout_shipping' ); ?>
 			
 			<div class="checkout__btn">
-				<a id="proceed-to-payment" class="btn btn--primary-color"><?php _e( 'Nastavi na plaćanje', 'b4b' ); ?></a>
+				<a id="proceed-to-payment" href="#proceed-to-payment" class="btn btn--primary-color"><?php _e( 'Nastavi na plaćanje', 'b4b' ); ?></a>
 			</div>
 		</div>
 		<?php endif; ?>
@@ -84,7 +84,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 			<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-			<?php echo apply_filters( 'woocommerce_order_button_html', '<a style="float: right;" class="button alt btn btn--primary-color" name="woocommerce_checkout_place_order " id="place_order" value="' . 'Platite' . '" data-value="' . 'Platite' . '">' . 'Platite' . '</a>' ); // @codingStandardsIgnoreLine ?>
+			<?php echo apply_filters( 'woocommerce_order_button_html', '<a style="float: right; margint-top:16px;" class="button alt btn btn--primary-color place__order" name="woocommerce_checkout_place_order " id="place_order" value="' . 'Platite' . '" data-value="' . 'Platite' . '">' . 'Platite' . '</a>' ); // @codingStandardsIgnoreLine ?>
 
 			<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 
@@ -107,8 +107,9 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
     </div><!-- End of checkout__Grid -->
 </form>
 <script>
-	 $('#proceed-to-payment').on('click',function(){
-     if (!$("form[name='checkout']").valid()) {
+	 $('#proceed-to-payment').on('click',function(e){
+		 e.preventDefault();
+         if (!$("form[name='checkout']").valid()) {
      }else {
          $('#payment-details,#wc-multistep-payment-title').show();
          $('#customer-details,#wc-multistep-details-title').hide();

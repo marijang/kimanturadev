@@ -35,7 +35,7 @@ $hero-transition-duration-in: .9s;
      
    @include e('slider-wrapper'){
       //  margin-top: $base-content-padding;
-      min-height: 80vh;
+      //min-height: 80vh;
 
       @include media(mobile) {
           min-height: 0px;
@@ -357,7 +357,7 @@ $hero-transition-duration-in: .9s;
             margin-bottom: $base-content-padding;
             display: block;
             @include media(desktop large){
-            
+                padding-top: 0px;
             }
         }
         p,div{
@@ -366,7 +366,8 @@ $hero-transition-duration-in: .9s;
             @include media(desktop large){
                 //@include typi(small);
                 font-size: 20px;
-                margin: 0 0 20px;
+                margin: 0 0 8px;
+                padding-top: 0px;
             }
             @include media(mobile tablet){
                 //padding-bottom: 0px;
