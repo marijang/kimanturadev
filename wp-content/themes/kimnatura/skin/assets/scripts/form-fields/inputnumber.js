@@ -2,15 +2,8 @@
 import $ from 'jquery';
 global.$ = global.jQuery = $;
 
-// Ili ovo 
-//import 'expose-loader?$!jquery';
-//import 'expose-loader?jQuery!jquery';
-
-//var cart = require('./test');
-
-/*
 $(function() {
-//$(document).ready(function(){
+$(document).ready(function(){
 
 
     var event = new CustomEvent('change', {
@@ -67,4 +60,5 @@ $(function() {
     $('.input-number__wrapper').on('click', '.input-number__increment', function(e) {
         incrementValue(e);
     });
-}) */
+});
+}); 
