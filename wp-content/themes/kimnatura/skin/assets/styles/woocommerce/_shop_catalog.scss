@@ -39,6 +39,9 @@
 }
 .has-chips{
     @include typi(default);
+    @include media(mobile tablet){
+        display: none;
+    }
 }
 
 @include block('shop-catalog'){

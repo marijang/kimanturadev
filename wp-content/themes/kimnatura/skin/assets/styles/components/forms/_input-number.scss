@@ -34,6 +34,13 @@ $input-number-height: 48px;
         height: $input-number-height;
         padding: 0 $base-content-padding;
         line-height: 48px;
+        display: inline-flex;
+
+        padding: 0 16px;
+        line-height: 1em;
+        justify-content: center;
+        align-items: center;
+        
         @include hover{
             background: darken(rgba($base-light-grey-color,100),1%);
             //border: 1px solid $input-border-color;
