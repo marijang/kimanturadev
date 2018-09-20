@@ -113,7 +113,8 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
      }else {
          $('#payment-details,#wc-multistep-payment-title').show();
          $('#customer-details,#wc-multistep-details-title').hide();
-         $('#wc-multistep-payment').addClass('is-active');
+		 $('#wc-multistep-payment').addClass('is-active');
+		 $('#wc-multistep-payment').removeClass('is-disabled');
          $('#wc-multistep-details').removeClass('is-active');
          $('#wc-multistep-details').addClass('is-activated');
 	 }
