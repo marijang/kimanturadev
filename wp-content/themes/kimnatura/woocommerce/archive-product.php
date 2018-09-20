@@ -37,9 +37,15 @@ do_action( 'woocommerce_before_main_content' );
 
 <header class="section__header">
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-		<h1 class="section__title">Naši proizvodi
+		<h1 class="section__title">
 		<?php 
-			
+			$kategorija = explode(',',get_query_var( 'product_cat' ));
+			$count = count($kategorija);
+			if($count==1){
+				woocommerce_page_title(); 
+			}else{
+				echo 'Naši proizvodi';
+			}
 		   ///woocommerce_page_title(); 
 		?>
 		</h1>

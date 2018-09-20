@@ -397,7 +397,11 @@ class Woo {
   public function category_description_title() {
         global $post;
         $kategorija = explode(',',get_query_var( 'product_cat' ));
+
         $categories = '';
+        if(count($kategorija)>1){
+
+       
         $args_post = array(
             'hide_empty'    => false,
             'hierarchical'    => false,
@@ -415,18 +419,18 @@ class Woo {
                  }
                  
              }
-         } else {
-        
          }
-
+        }
 
         if ( is_product_category() ) {
             global $wp_query;
             $cat_id = $wp_query->get_queried_object_id();
             $cat_desc = term_description( $cat_id, 'product_cat' );
            // $subtit = '<p class="section__description">'.$cat_desc.'</p>';
+           if(count($kategorija)>1){
             $subtit = '<p class="section__description has-chips">Odabrane kategorije: '.$categories.'</p>';
             echo $subtit;
+           }
         }else{
             echo '<p class="section__description">'.__('Odaberite kategoriju proizvoda'). '</p>';
             the_subtitle( '<p class="section__description">', '</p>' );
