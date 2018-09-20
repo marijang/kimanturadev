@@ -417,3 +417,11 @@ function my_hide_shipping_when_free_is_available( $rates ) {
 }
 add_filter( 'woocommerce_package_rates', 'my_hide_shipping_when_free_is_available', 100 );
 
+
+
+add_filter(  'woocommerce_default_address_fields', 'custom_default_address_fields', 20, 1 );
+function custom_default_address_fields( $fields ) {
+    unset($fields['state']);
+	unset($fields['company']);
+    return $fields;
+}

@@ -477,3 +477,7 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
 #wcwspay-form {
     margin-top: 16px;
 }
+
+input {
+    margin-bottom: 4px!important;
+}
