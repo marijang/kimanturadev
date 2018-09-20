@@ -142,4 +142,101 @@ $( document ).ready(function() {
       });
 
       $('abbr.required').replaceWith('*');
+
+
+
+      //Account change
+      $("#edit-billing").validate({
+        // Specify validation rules
+        rules: {
+          // The key name on the left side is the name attribute
+          // of an input field. Validation rules are defined
+          // on the right side
+          billing_first_name: "required",
+          billing_last_name: "required",
+          billing_email: {"required" : true, "email" : true },
+          billing_address_1: "required",
+          billing_city: "required",
+          billing_postcode: "required",
+          billing_phone : {
+           required: true,
+           number: true
+          }/*,
+          shipping_first_name: {
+              required : '#ship-to-different-address-checkbox:checked'
+          },
+          shipping_last_name: {
+           required : '#ship-to-different-address-checkbox:checked'
+          },
+          shipping_address_1: {
+           required : '#ship-to-different-address-checkbox:checked'
+          },
+          shipping_city: {
+           required : '#ship-to-different-address-checkbox:checked'
+          },
+          shipping_postcode: {
+           required : '#ship-to-different-address-checkbox:checked'
+          } */
+        },
+        // Specify validation error messages
+        messages: {
+          billing_first_name: "Ime je potrebno polje",
+          billing_last_name: "Prezime je potrebno polje",
+          billing_email: {"required" : "Email adresa je potrebno polje", "email" : "Email nije ispravnog formata" },
+          billing_address_1: "Adresa je potrebno polje",
+          billing_city: "Grad je potrebno polje",
+          billing_postcode: "Poštanski broj je potrebno polje",
+          billing_phone : {"required" : "Telefonski broj je potrebno polje","number" : "Telefonski broj mora biti numeričkog formata"},
+         /* shipping_first_name : "Ime je potrebno polje",
+          shipping_last_name : "Prezime je potrebno polje",
+          shipping_address_1 : "Adresa je potrebno polje",
+          shipping_city : "Grad je potrebno polje",
+          shipping_postcode : "Poštanski broj je potrebno polje" */
+   
+        },
+        errorPlacement: function(error, element) {
+            element.addClass('invalid');
+            var el = element.parent().find('.errorClass');
+            if (el.length)
+                el.attr('data-error', error.text());
+               
+            else 
+           
+                element.parent().parent().find('.errorClass').attr('data-error', error.text());
+          }
+      });
+
+
+      $("#edit-shipping").validate({
+        // Specify validation rules
+        rules: {
+          // The key name on the left side is the name attribute
+          // of an input field. Validation rules are defined
+          // on the right side
+          shipping_first_name: "required",
+          shipping_last_name: "required",
+          shipping_address_1: "required",
+          shipping_city: "required",
+          shipping_postcode: "required"
+        },
+        // Specify validation error messages
+        messages: {
+          shipping_first_name : "Ime je potrebno polje",
+          shipping_last_name : "Prezime je potrebno polje",
+          shipping_address_1 : "Adresa je potrebno polje",
+          shipping_city : "Grad je potrebno polje",
+          shipping_postcode : "Poštanski broj je potrebno polje" 
+   
+        },
+        errorPlacement: function(error, element) {
+            element.addClass('invalid');
+            var el = element.parent().find('.errorClass');
+            if (el.length)
+                el.attr('data-error', error.text());
+               
+            else 
+           
+                element.parent().parent().find('.errorClass').attr('data-error', error.text());
+          }
+      });
 }); 
