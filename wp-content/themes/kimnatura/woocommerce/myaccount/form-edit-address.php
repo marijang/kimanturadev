@@ -29,7 +29,7 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 	<?php wc_get_template( 'myaccount/my-address.php' ); ?>
 <?php else : ?>
 <div class="account__content">
-	<form method="post">
+	<form method="post" id="<?php echo 'billing' === $load_address ? 'edit-billing' : 'edit-shipping' ?>">
 
 		<div class="section__description section__description--spacing-bottom-s"><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title, $load_address ); ?></div><?php // @codingStandardsIgnoreLine ?>
 
