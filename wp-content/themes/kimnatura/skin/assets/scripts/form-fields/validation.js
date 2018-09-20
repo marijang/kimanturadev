@@ -123,7 +123,7 @@ $( document ).ready(function() {
             }
           },
         unhighlight: function(element) {
-            //console.log(element);
+            // (element);
                 $(element).removeClass('invalid');
                 $(element).addClass('valid');
         },

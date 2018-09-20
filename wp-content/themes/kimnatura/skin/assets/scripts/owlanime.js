@@ -10,7 +10,7 @@ var x = 0,
 
 
 function log(){
-    console.log("X:"+x+' max:'+max+' min:'+min);
+     ("X:"+x+' max:'+max+' min:'+min);
 }
 var start = false;
 $('.slider-slick').on('mouseover',function(event){

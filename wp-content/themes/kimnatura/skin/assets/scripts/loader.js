@@ -30,7 +30,7 @@ $(document).ready(function() {
 
 // $(document).ready(function() {
 //         $(window).on("load", function() {
-//             console.log('ulaz');
+//              ('ulaz');
 //             if (localStorage.getItem("lastRun") === null /*|| (Math.abs(new Date(localStorage.getItem("lastRun")) - new Date()) / 36e5) > 1*/) {
 //                 $("body").addClass("loader-open");
              
@@ -48,7 +48,7 @@ $(document).ready(function() {
 //            }
 //            else{
 //            // $('.loader__wrap').addClass('loader-hidden');
-//            console.log('remove');
+//             ('remove');
 //             $('.loader__wrap').remove();
             
 //            }

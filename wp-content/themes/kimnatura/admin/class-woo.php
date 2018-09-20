@@ -396,11 +396,33 @@ class Woo {
 
   public function category_description_title() {
         global $post;
+        $args_post = array(
+            'hide_empty'    => false,
+            'hierarchical'    => false,
+            'taxonomy' => 'product_cat'
+            ); 
+         $categories = '';  
+         $term_query = new \WP_Term_Query(  $args_post );
+         if ( ! empty( $term_query->terms ) ) {
+             foreach ( $term_query ->terms as $term ) {
+              
+                 if($term->slug!='uncategorized'){
+                     if($categories==''){
+                        $categories .= $term->name;
+                     }else{
+                        $categories .=', '.$term->name;
+                     }
+                    
+                 }
+                 
+             }
+        } 
         if ( is_product_category() ) {
             global $wp_query;
             $cat_id = $wp_query->get_queried_object_id();
             $cat_desc = term_description( $cat_id, 'product_cat' );
             $subtit = '<p class="section__description">'.$cat_desc.'</p>';
+            //$subtit = '<p class="section__description">'.$categories.'</p>';
             echo $subtit;
         }else{
             echo '<p class="section__description">'.__('Odaberite kategoriju proizvoda'). '</p>';
@@ -791,8 +813,8 @@ function b4b_woocommerce_cart_item_name($product_name, $cart_item="", $cart_item
 
     function filter_product_query( $q ){
         $taxonomies = array();
-        if (!empty($_GET['category'])) {
-            $categories = explode(',',$_GET['category']);
+        if (!empty($_GET['kategorija'])) {
+            $categories = explode(',',$_GET['kategorija']);
             $taxonomies[] = array (
                 'taxonomy' => 'product_cat',
                 'field' => 'slug',

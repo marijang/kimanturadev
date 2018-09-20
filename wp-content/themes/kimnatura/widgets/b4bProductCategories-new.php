@@ -83,8 +83,8 @@ class b4bProductCategories_widget extends WP_Widget {
              foreach ( $term_query->terms as $term ) {
               
                  if($term->slug!='uncategorized'){
-                  //  $categories[] = $term->slug;
-                   // echo $term->slug;
+                    $categories[] = $term->slug;
+                    echo $term->slug;
                  }
                  
              }
@@ -95,10 +95,10 @@ class b4bProductCategories_widget extends WP_Widget {
 
         if ( $count > 0 ) {
             
-            if (!empty($_GET['kategorija'])) {
-                $categories = explode(',',$_GET['kategorija']);
+            if (!empty($categories)) {
+                $category = implode(',',$categories);
                 
-                echo '<input name="product_cat" type="text" value="'.esc_attr($_GET['kategorija']).'">';
+                echo '<input name="product_cat" type="text" value="'.esc_attr($category).'">';
             }else{
                 echo '<input name="product_cat" type="hidden" value="" data-parent="autmn">';
             }
