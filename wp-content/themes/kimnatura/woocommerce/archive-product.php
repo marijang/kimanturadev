@@ -37,7 +37,18 @@ do_action( 'woocommerce_before_main_content' );
 
 <header class="section__header">
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-		<h1 class="section__title"><?php woocommerce_page_title(); ?></h1>
+		<h1 class="section__title">
+		<?php 
+			$kategorija = explode(',',get_query_var( 'product_cat' ));
+			$count = count($kategorija);
+			if($count==1){
+				woocommerce_page_title(); 
+			}else{
+				echo 'Naši proizvodi';
+			}
+		   ///woocommerce_page_title(); 
+		?>
+		</h1>
         <?php the_subtitle( '<p class="section__description">', '</p>' ); ?>
 	<?php endif; ?>
 
@@ -61,6 +72,11 @@ do_action( 'woocommerce_before_main_content' );
 <?php
 
 
+
+
+
+
+//var_dump( get_query_var('terms'));
 if ( have_posts() ) {
 
 	/**
@@ -79,10 +95,12 @@ if ( have_posts() ) {
 
 	woocommerce_product_loop_start();
 
+
 	if ( wc_get_loop_prop( 'total' ) ) {
 		while ( have_posts() ) {
 			the_post();
 
+		
 			/**
 			 * Hook: woocommerce_shop_loop.
 			 *

@@ -19,6 +19,28 @@
 }
 
 
+.shop__filter-chips{
+    @include typi(small);
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    display: inline-flex;
+    background: $base-grey-color;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-left: 8px;
+    border-radius:8px; 
+    cursor: pointer;
+    &:hover{
+        background: $base-primary-color;
+        color: #FFF;
+        border: 1px solid $base-primary-color;
+    }
+}
+.has-chips{
+    @include typi(default);
+}
+
 @include block('shop-catalog'){
     padding: $grid-gutter 0;
     padding-top: 0;

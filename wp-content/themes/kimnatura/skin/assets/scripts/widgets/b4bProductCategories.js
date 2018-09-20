@@ -70,6 +70,16 @@ $(document).ready( function() {
         return (countElements*elementHeight);
     }
 
+    $('.shop__filter-chips').on('click',function(e){
+        e.preventDefault();
+        var data = $(this).attr('data-value');
+        //alert(data);
+        var $el = $('#filter-cat-'+data);
+        $el.trigger('click');
+        $el.prop('checked', false);
+        $(this).fadeOut();
+    });
+
     $('#show-more-products').on('click',function(e){
         
         e.preventDefault(); 
@@ -114,13 +124,15 @@ $(document).ready( function() {
          });   
     });
 
+ 
+
     $('input[name="product_cat[]"]').on('click',function(){
         uncheckParent();
         setValue();
         if($('input[name="product_cat"]').val()!=''){
-            window.location.href = "/shop/?category="+$('input[name="product_cat"]').val();
+            window.location.href = "/proizvodi/kategorija/"+$('input[name="product_cat"]').val();
         }else{
-            window.location.href = "/shop/";
+            window.location.href = "/proizvodi/";
         }
     });
 });

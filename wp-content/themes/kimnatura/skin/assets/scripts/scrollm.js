@@ -2,7 +2,7 @@
 //var scrollMonitor = require("scrollmonitor");
 $(function() {
     var elem = document.getElementById('page-navigation');
-    //console.log(scrollMonitor);
+    // (scrollMonitor);
     var scrollMonitor = require("scrollmonitor");
     var RevealFx = require("./revealfx");
 
@@ -27,9 +27,9 @@ $(function() {
 
          elementWatcher.stateChange(function() {
             $offset = $(section).offset().top- $(window).scrollTop() - $('.addthis_toolbox').height() ;
-            console.log($(section).offset().top- $(window).scrollTop());
-            console.log(elementWatcher.bottom);
-            console.log(elementWatcher.height);
+             ($(section).offset().top- $(window).scrollTop());
+             (elementWatcher.bottom);
+             (elementWatcher.height);
             if ( $offset < 0){
                 if(!this.isAboveViewport){
                     $('.addthis_toolbox').fadeOut();
@@ -43,7 +43,7 @@ $(function() {
     $('.article-list').each(function(index, section) {
         var elementWatcher = scrollMonitor.create( section );
         elementWatcher.enterViewport(function() {
-           // console.log( 'I have entered the viewport' );
+           //  ( 'I have entered the viewport' );
            /*
             var rev3 = new RevealFx(section, {
                 revealSettings : {
@@ -83,7 +83,7 @@ $(function() {
             elementWatcher.destroy();
         });
         elementWatcher.exitViewport(function() {
-           // console.log( 'I have left the viewport' );
+           //  ( 'I have left the viewport' );
         });
 
     });

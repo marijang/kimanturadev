@@ -14,7 +14,16 @@ if ( !class_exists( '\\WPO\\WC\\PDF_Invoices\\Main' ) ) :
 class Main {
 
 	function __construct()	{
+		
+
+
+
 		add_action( 'wp_ajax_generate_wpo_wcpdf', array($this, 'generate_pdf_ajax' ) );
+
+		// Da guest može
+		add_action( 'wp_ajax_nopriv_generate_wpo_wcpdf', array($this, 'generate_pdf_ajax' ) );
+		
+
 		add_filter( 'woocommerce_email_attachments', array( $this, 'attach_pdf_to_email' ), 99, 3 );
 		add_filter( 'wpo_wcpdf_custom_attachment_condition', array( $this, 'disable_free_attachment'), 1001, 4 );
 
@@ -46,6 +55,8 @@ class Main {
 		add_action( 'woocommerce_privacy_remove_order_personal_data', array( $this, 'remove_order_personal_data' ), 10, 1 );
 		// export private data
 		add_action( 'woocommerce_privacy_export_order_personal_data_meta', array( $this, 'export_order_personal_data_meta' ), 10, 1 );
+		
+		
 	}
 
 	/**
@@ -177,9 +188,9 @@ class Main {
 		$allowed = true;
 
 		// check if user is logged in
-		if ( ! is_user_logged_in() ) {
+		/* if ( ! is_user_logged_in() ) {
 			$allowed = false;
-		}
+		} */
 
 		// Check the user privileges
 		if( !( current_user_can( 'manage_woocommerce_orders' ) || current_user_can( 'edit_shop_orders' ) ) && !isset( $_GET['my-account'] ) ) {
