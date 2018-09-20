@@ -118,9 +118,9 @@ $(document).ready( function() {
         uncheckParent();
         setValue();
         if($('input[name="product_cat"]').val()!=''){
-            window.location.href = "/shop/?category="+$('input[name="product_cat"]').val();
+            window.location.href = "/trgovina/?kategorija="+$('input[name="product_cat"]').val();
         }else{
-            window.location.href = "/shop/";
+            window.location.href = "/trgovina/";
         }
     });
 });

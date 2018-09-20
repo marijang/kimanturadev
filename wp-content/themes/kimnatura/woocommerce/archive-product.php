@@ -61,6 +61,11 @@ do_action( 'woocommerce_before_main_content' );
 <?php
 
 
+
+
+
+
+//var_dump( get_query_var('terms'));
 if ( have_posts() ) {
 
 	/**
@@ -83,6 +88,7 @@ if ( have_posts() ) {
 		while ( have_posts() ) {
 			the_post();
 
+		
 			/**
 			 * Hook: woocommerce_shop_loop.
 			 *
