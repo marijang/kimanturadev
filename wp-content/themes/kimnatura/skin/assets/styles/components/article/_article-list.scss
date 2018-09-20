@@ -11,6 +11,12 @@ $article-min-height:      500px;
     @include first(){
       padding-top:0; 
     }
+    @include last(){
+      
+      @include media(desktop large){
+       // padding-bottom:16px;
+      } 
+    }
     @include media(mobile tablet){
         margin-top:$base-content-padding;
         //margin-top: $base-content-padding*2;

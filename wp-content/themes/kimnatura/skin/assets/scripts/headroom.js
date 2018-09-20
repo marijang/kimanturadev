@@ -40,10 +40,10 @@ var headroom  = new Headroom(myElement,{
 // initialise
 
 headroom.init({
-    tolerance: 5,
+    tolerance: 50,
     offset : 250,
     onPin : function() {
-         ('OK');
+        
     },
     // callback when unpinned, `this` is headroom object
     onUnpin : function() { ('HEADROOM:Vidi me MZ kako radim1111:)');},

@@ -102,6 +102,7 @@ $(function() {
         var $this = $(this);
         var $query  = $this.data('current');
         var url = themeLocalization.ajaxurl + '?action=search';
+       // toggleLoader('on','');
         $.ajax({
             type : "get",
             //dataType : "json",
@@ -109,7 +110,8 @@ $(function() {
            // data : {action: action, post_id : post_id, nonce: nonce},
             success: function(response) {
                if(response) {
-                   $("#search-results").html(response);
+                   //$("#search-results").html(response);
+                   toggleLoader('off',response);
                }
                else {
                   alert("Your vote could not be added")
@@ -118,7 +120,26 @@ $(function() {
          });   
     });
 
-    
+    function toggleLoader(signal,response){
+        var loader = $('.search__loader');
+        var results = $('#search-results');
+        if (signal == 'on'){
+            loader.fadeIn();
+            results.fadeOut(function(){ 
+                loader.fadeIn();
+            });
+        }else{
+            setTimeout(function(){
+               loader.fadeOut(function(){ 
+                     results.html(response);
+                     results.fadeIn(); 
+                });
+            },500);
+        }
+            
+
+
+    }
 
     function search( event ) {
         event.preventDefault();
@@ -128,6 +149,7 @@ $(function() {
         var url = themeLocalization.ajaxurl + '?action=search&search='+search;
         //$('#search-results').css('display','none');
         //$('.loader-spin').css('display','block');
+        toggleLoader('on','');
         $.ajax({
             type : "get",
             //dataType : "json",
@@ -137,7 +159,8 @@ $(function() {
             success: function(response) {
                if(response) {
                     //$('.loader-spin').css('display','none');                    
-                    $("#search-results").html(response);
+                 //   $("#search-results").html(response);
+                    toggleLoader('off',response);
                     //$('#search-results').css('display','block');
                }
                else {

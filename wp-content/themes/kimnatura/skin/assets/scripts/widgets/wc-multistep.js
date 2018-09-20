@@ -174,7 +174,9 @@ $("form[name='checkout']").validate({
          var el = element.parent().find('.errorClass');
          if (el.length)
              el.attr('data-error', error.text());
+            
          else 
+        
              element.parent().parent().find('.errorClass').attr('data-error', error.text());
        }
    });

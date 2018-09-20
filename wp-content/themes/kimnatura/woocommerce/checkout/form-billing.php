@@ -30,14 +30,28 @@ $woo = new Woo;
 	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
 	<div class="woocommerce-billing-fields__field-wrapper">
 		<?php
-		    $sort = array(
-				array('billing_first_name','billing_last_name'),
-				array('billing_email'),
-				array('billing_phone'),
-				array('billing_address_1','billing_country'),
-			
-				array('billing_city','billing_postcode')
-			);
+			if (wp_is_mobile()) {
+				$sort = array(
+					array('billing_first_name'),
+					array('billing_last_name'),
+					array('billing_email'),
+					array('billing_phone'),
+					array('billing_address_1'),
+					array('billing_country'),
+					array('billing_city'),
+					array('billing_postcode')
+				);
+			} else {
+				$sort = array(
+					array('billing_first_name','billing_last_name'),
+					array('billing_email'),
+					array('billing_phone'),
+					array('billing_address_1','billing_country'),
+				
+					array('billing_city','billing_postcode')
+				);
+			}
+		    
 			$fields = $checkout->get_checkout_fields( 'billing' );
 
 

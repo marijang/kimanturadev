@@ -32,8 +32,16 @@ $label-req-color: $base-primary-color;
   @include e('hide') {
     display: none;
   }
+  &.errorClass{
+    display: none;
+  }
+  &:not([data-error*='wrong']){
+      display: block;
+  }
 }
 
-
+.helper-text.errorClass{
+  display: none;
+}
 
 
