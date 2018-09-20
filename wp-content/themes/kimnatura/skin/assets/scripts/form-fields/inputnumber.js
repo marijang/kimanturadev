@@ -30,7 +30,7 @@ $(function() {
           parent.find('input').val(0);
          // parent.find('input').dispatchEvent(event);
         }
-        //console.log(parent.find('input'));
+        // (parent.find('input'));
         parent.find('input').trigger('change');
         parent.find('input').change();
 

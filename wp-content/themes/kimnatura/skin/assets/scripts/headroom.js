@@ -17,12 +17,12 @@ var headroom  = new Headroom(myElement,{
         //$('.shop-catalog__filter').addClass('shop-categories__list--headup');
     },
     // callback when unpinned, `this` is headroom object
-    onUnpin : function() {console.log('HEADROOM:Vidi me MZ kako radim:)');
+    onUnpin : function() { ('HEADROOM:Vidi me MZ kako radim:)');
       $('.shop-catalog__filter').removeClass('shop-categories__list--headup');
     },
     // callback when above offset, `this` is headroom object
     onTop : function() {
-        console.log('HEADROOM:Vidi me MZ opet radim:) ');
+         ('HEADROOM:Vidi me MZ opet radim:) ');
         $('.shop-catalog__filter').addClass('shop-categories__list--headup');
         $('.shop-catalog__filter').removeClass('shop-categories__list--headup');
     },
@@ -43,12 +43,12 @@ headroom.init({
     tolerance: 5,
     offset : 250,
     onPin : function() {
-        console.log('OK');
+         ('OK');
     },
     // callback when unpinned, `this` is headroom object
-    onUnpin : function() {console.log('HEADROOM:Vidi me MZ kako radim1111:)');},
+    onUnpin : function() { ('HEADROOM:Vidi me MZ kako radim1111:)');},
     // callback when above offset, `this` is headroom object
-    onTop : function() {console.log('HEADROOM:Vidi me MZ opet radim111:) ');},
+    onTop : function() { ('HEADROOM:Vidi me MZ opet radim111:) ');},
     // callback when below offset, `this` is headroom object
     onNotTop : function() {},
     // callback at bottom of page, `this` is headroom object

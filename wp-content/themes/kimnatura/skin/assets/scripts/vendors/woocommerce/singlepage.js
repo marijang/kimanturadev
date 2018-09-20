@@ -17,12 +17,12 @@ $(document).ready(function($) {
             $('.single-product__price').html(
                 $('div.woocommerce-variation-price > span.price').html())
                 .append('<p class="availability">'+$('div.woocommerce-variation-availability').html()+'</p>');
-            console.log($('input.variation_id').val());
+             ($('input.variation_id').val());
         } else {
             $('.single-product__price').html($('div.hidden-variable-price').html());
             if($('p.availability'))
                 $('p.availability').remove();
-            console.log('NULL');
+             ('NULL');
         }
         */
     });

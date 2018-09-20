@@ -76,7 +76,7 @@ $(function() {
 $('.hero-slider-slick').on('beforeChange', function(event, slick, currentSlide, nextSlide){
   event.preventDefault();
   var $slide = $(slick.$slides[currentSlide]);
-  //console.log($slide.find('.hero_item'));
+  // ($slide.find('.hero_item'));
   $slide.find('.hero__item').removeClass('animated');
  // var activeSlide = $('.hero-slider-slick .slick-active').find('.hero__item');
   var otherSlides = $('.hero-slider-slick .slick-slide').find('.hero__item');
@@ -101,7 +101,7 @@ $('.sastojci-slider-slick').slick({
                 //FYI just have a look at the object to find available information
                 //press f12 to access the console in most browsers
                 //you could also debug or look in the source
-                //console.log(slider);
+                // (slider);
                 return  (i + 1) + '/' + slider.slideCount;
             },
 
