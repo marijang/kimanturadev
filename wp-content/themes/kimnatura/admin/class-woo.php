@@ -396,33 +396,36 @@ class Woo {
 
   public function category_description_title() {
         global $post;
+        $kategorija = explode(',',get_query_var( 'product_cat' ));
+        $categories = '';
         $args_post = array(
             'hide_empty'    => false,
             'hierarchical'    => false,
             'taxonomy' => 'product_cat'
             ); 
-         $categories = '';  
+           
          $term_query = new \WP_Term_Query(  $args_post );
          if ( ! empty( $term_query->terms ) ) {
-             foreach ( $term_query ->terms as $term ) {
+             foreach ( $term_query->terms as $term ) {
               
-                 if($term->slug!='uncategorized'){
-                     if($categories==''){
-                        $categories .= $term->name;
-                     }else{
-                        $categories .=', '.$term->name;
-                     }
+                 if(in_array($term->slug,$kategorija)){
+                   
+                        $categories .='<span class="shop__filter-chips" data-value="'.$term->slug.'">'.$term->name.'<i class="material-icons mi">close</i></span>';
                     
                  }
                  
              }
-        } 
+         } else {
+        
+         }
+
+
         if ( is_product_category() ) {
             global $wp_query;
             $cat_id = $wp_query->get_queried_object_id();
             $cat_desc = term_description( $cat_id, 'product_cat' );
-            $subtit = '<p class="section__description">'.$cat_desc.'</p>';
-            //$subtit = '<p class="section__description">'.$categories.'</p>';
+           // $subtit = '<p class="section__description">'.$cat_desc.'</p>';
+            $subtit = '<p class="section__description has-chips">Odabrane kategorije: '.$categories.'</p>';
             echo $subtit;
         }else{
             echo '<p class="section__description">'.__('Odaberite kategoriju proizvoda'). '</p>';

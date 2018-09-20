@@ -37,7 +37,12 @@ do_action( 'woocommerce_before_main_content' );
 
 <header class="section__header">
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-		<h1 class="section__title"><?php woocommerce_page_title(); ?></h1>
+		<h1 class="section__title">Naši proizvodi
+		<?php 
+			
+		   ///woocommerce_page_title(); 
+		?>
+		</h1>
         <?php the_subtitle( '<p class="section__description">', '</p>' ); ?>
 	<?php endif; ?>
 
@@ -83,6 +88,7 @@ if ( have_posts() ) {
 
 
 	woocommerce_product_loop_start();
+
 
 	if ( wc_get_loop_prop( 'total' ) ) {
 		while ( have_posts() ) {
