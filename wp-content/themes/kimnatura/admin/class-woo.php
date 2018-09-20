@@ -382,7 +382,7 @@ class Woo {
     $t  .= '<a href="'.get_permalink( wc_get_page_id( 'payment' )).'">'; 
     $t  .= '<span class="cart-checkout-navigation__step-number">3</span>';
     $t  .= '<span class="cart-checkout-navigation__step-title">'.__('Način plaćanja','b4b').'<span>';
-    $t  .= '</li>';
+    $t  .= '</a></li>';
     // Fourth Item
     $t  .= '<li id="wc-multistep-finish" data-step="finish" class="cart-checkout-navigation__item is-last '.$statusCss['step-4'].'" >';
     $t  .= '<span class="cart-checkout-navigation__step-number">4</span>';
