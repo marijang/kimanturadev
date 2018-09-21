@@ -505,9 +505,9 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
 }
 
 .contact__section input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
+.contact__section input:-webkit-autofill:hover,
+.contact__section input:-webkit-autofill:focus,
+.contact__section input:-webkit-autofill:active {
     background-color: $primary-color!important;
     transition: background-color 5000s ease-in-out 0s;
     -webkit-box-shadow: 0 0 0px 1000px $primary-color inset!important;
