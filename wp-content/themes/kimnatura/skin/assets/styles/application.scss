@@ -478,9 +478,7 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
     margin-top: 16px;
 }
 
-input {
-    margin-bottom: 4px!important;
-}
+
 
 .checkbox__invalid span {
     color: $error-red;
