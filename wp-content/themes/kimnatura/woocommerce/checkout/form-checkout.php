@@ -74,7 +74,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 				<?php endif; ?>
 
 				<div class="woocommerce-additional-fields__field-wrapper">
-					<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
+					<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>					
 						<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
 					<?php endforeach; ?>
 			</div>

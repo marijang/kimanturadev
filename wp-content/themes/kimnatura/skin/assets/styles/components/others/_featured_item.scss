@@ -74,8 +74,13 @@ $featured-list-popover-height:   $base-content-padding*4;
     }
     @include element('image'){
         width: 100%;
+        
         transition: transform 300ms;
         height: 280px;
+
+        @include media(mobile tablet){
+            height: 100%;
+        }
     }
     @include element('description'){
         display: flex;
