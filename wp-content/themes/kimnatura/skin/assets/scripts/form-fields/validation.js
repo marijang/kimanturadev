@@ -265,7 +265,7 @@ $( document ).ready(function() {
             account_email: {"required" : "Email adresa je potrebno polje", "email" : "Email adressa nije ispravnog formata" },
             account_display_name: {"required" : "Ime za prikaz je potrebno polje", "minlength" : "Ime za prikaz mora sadržavati minimalno 2 znaka" },
             password_current: {"required" : "Trenutna lozinka je potrebno polje" },
-            password_1: {"minlength" : "Lozinka mora sadržavati minimalno 4 znaka" },
+            password_1: {"minlength" : "Lozinka mora sadržavati minimalno 4 znaka"},
             password_2: {"equalTo" : "Lozinke se ne podudaraju", "required" : "Potvrda nove lozinke je potrebno polje" },
    
         },
