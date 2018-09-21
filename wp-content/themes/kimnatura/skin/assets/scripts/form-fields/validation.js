@@ -239,4 +239,49 @@ $( document ).ready(function() {
                 element.parent().parent().find('.errorClass').attr('data-error', error.text());
           }
       });
+
+
+      $('.woocommerce-EditAccountForm').validate({
+        // Specify validation rules
+        rules: {
+          account_first_name: {"required" : true, "minlength" : 2 },
+          account_last_name: {"required" : true, "minlength" : 2 },
+          account_email: {"required" : true, "email" : true },
+          account_display_name: {"required" : true, "minlength" : 2 },
+          'ct-ultimate-gdpr-consent-field' : "required",
+          password_current : { required: function(element){
+            return $("[name='password_1']").val() != "";
+          }},
+          password_1 : {"minlength" : 4},
+          password_2 : {equalTo: "[name='password_1']", required: function(element){
+            return $("[name='password_1']").val() != "";
+          }},
+
+        },
+        // Specify validation error messages
+        messages: {
+            account_first_name: {"required" : "Ime je potrebno polje", "minlength" : "Ime mora sadržavati minimalno 2 znaka" },
+            account_last_name: {"required" : "Prezime je potrebno polje", "minlength" : "Prezime mora sadržavati minimalno 2 znaka" },
+            account_email: {"required" : "Email adresa je potrebno polje", "email" : "Email adressa nije ispravnog formata" },
+            account_display_name: {"required" : "Ime za prikaz je potrebno polje", "minlength" : "Ime za prikaz mora sadržavati minimalno 2 znaka" },
+            password_current: {"required" : "Trenutna lozinka je potrebno polje" },
+            password_1: {"minlength" : "Lozinka mora sadržavati minimalno 4 znaka"},
+            password_2: {"equalTo" : "Lozinke se ne podudaraju", "required" : "Potvrda nove lozinke je potrebno polje" },
+   
+        },
+        errorPlacement: function(error, element) {
+            if (element.attr('type') != 'checkbox') {
+            element.addClass('invalid');
+            var el = element.parent().find('.errorClass');
+            if (el.length)
+                el.attr('data-error', error.text());
+               
+            else 
+           
+                element.parent().parent().find('.errorClass').attr('data-error', error.text());
+            } else {
+                element.parent().addClass('checkbox__invalid');
+            }
+          }
+      });
 }); 

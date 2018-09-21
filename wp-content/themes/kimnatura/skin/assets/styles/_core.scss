@@ -29,7 +29,7 @@ figure {
 
 
 .main-content {
-  min-height: calc(100vh - 243px);
+  min-height: calc(100vh - 229px);
   // Isto kao i za header logo 
   @include media(desktop large){
     padding-top: 112px;
