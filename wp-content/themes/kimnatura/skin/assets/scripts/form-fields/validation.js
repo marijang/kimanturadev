@@ -253,7 +253,7 @@ $( document ).ready(function() {
             return $("[name='password_1']").val() != "";
           }},
           password_1 : {"minlength" : 4},
-          password_2 : {"minlength" : 4, equalTo: "[name='password_1']", required: function(element){
+          password_2 : {equalTo: "[name='password_1']", required: function(element){
             return $("[name='password_1']").val() != "";
           }},
 
@@ -266,7 +266,7 @@ $( document ).ready(function() {
             account_display_name: {"required" : "Ime za prikaz je potrebno polje", "minlength" : "Ime za prikaz mora sadržavati minimalno 2 znaka" },
             password_current: {"required" : "Trenutna lozinka je potrebno polje" },
             password_1: {"minlength" : "Lozinka mora sadržavati minimalno 4 znaka" },
-            password_2: {"minlength" : "Lozinka mora sadržavati minimalno 4 znaka", "equalTo" : "Lozinke se ne podudaraju", "required" : "Potvrda nove lozinke je potrebno polje" },
+            password_2: {"equalTo" : "Lozinke se ne podudaraju", "required" : "Potvrda nove lozinke je potrebno polje" },
    
         },
         errorPlacement: function(error, element) {
