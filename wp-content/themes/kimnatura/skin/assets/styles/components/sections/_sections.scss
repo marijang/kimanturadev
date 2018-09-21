@@ -279,7 +279,7 @@ $section-description-space-bottom-small:$base-content-padding;
         @include p('e:inner'){
             display: flex;
             align-items: center;
-            @include media(mobile){
+            @include media(mobile tablet){
                 flex-direction: column-reverse;
                // flex-direction: row-reverse; 
                align-items: baseline;
