@@ -46,7 +46,7 @@ $woo  = new Woo();
             echo '<span class="featured-link__onsale">'.$sale .'</span>'; //  esc_html__( 'Sale!', 'woocommerce' ). '</span>';
         }
         if (has_post_thumbnail( $loop->post->ID )) 
-        echo get_the_post_thumbnail($loop->post->ID, 'shop-catalog',array('class'=>'featured-link__image')); 
+        echo get_the_post_thumbnail($loop->post->ID, 'related-products',array('class'=>'featured-link__image')); 
         else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="product placeholder Image" width="65px" height="115px" />'; 
         ?>
           
