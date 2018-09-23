@@ -11,7 +11,6 @@ import './fonts';
 //import './form-fields';
 import './components';
 
-//import './cookies-notification';
 
 import './readingprogress';
 import './slider';

@@ -25,7 +25,6 @@
 
 
 
-
     // hide payments
     $('#payment').hide();
    // $('#customer_details').hide();
