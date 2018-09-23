@@ -478,6 +478,38 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
     margin-top: 16px;
 }
 
-input {
-    margin-bottom: 4px!important;
+
+
+.checkbox__invalid span {
+    color: $error-red;
+}
+
+.wpforms-confirmation-container-full {
+    background: $primary-color!important;
+    border-color: $primary-color!important;
+    display: flex!important;
+    align-items: center!important;
+    color: white!important;
+    margin-left: 72px !important;
+    margin-top: -72px !important;
+    min-width: calc(50% - 96px) !important;
+    max-width: calc(50% - 96px) !important;
+    padding: 55px 40px !important;
+    
+
+    p {
+        font-weight: 600;
+        padding: 32px;
+        font-family: "Poppins", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"!important;
+    }
+}
+
+.contact__section input:-webkit-autofill,
+.contact__section input:-webkit-autofill:hover,
+.contact__section input:-webkit-autofill:focus,
+.contact__section input:-webkit-autofill:active {
+    background-color: $primary-color!important;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0px 1000px $primary-color inset!important;
+    -webkit-text-fill-color: white!important;
 }
