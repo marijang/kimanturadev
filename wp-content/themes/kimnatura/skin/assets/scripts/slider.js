@@ -37,42 +37,6 @@ $(function() {
   }
 
   $('.hero-slider-slick').slick(sliderConfig());
-  
-//   $('.hero-slider-slick').slick({
-// // normal options...
-//       infinite: false,
-//       infinite: false,
-//       slidesToShow: 1,
-//       dots:true,
-//       arrows:false,
-//       //cssEase: 'ease-in-out',
-//       autoplay:true,
-//       autoplaySpeed: 6000,
-//       fade:true,
-//       speed: 0,
-//       useCSS:false,
-//       useTransform:true,
-//       waitForAnimate: true,
-      
-//       responsive: [
-//         {
-//           breakpoint: 600,
-//           settings: {
-//             arrows:true,
-//             fade:false,
-//             dots: false,
-//             adaptiveHeight: true
-//           }
-//         }
-//       ],
-//     });
-
-
-
-
-
-
-
 $('.hero-slider-slick').on('beforeChange', function(event, slick, currentSlide, nextSlide){
   event.preventDefault();
   var $slide = $(slick.$slides[currentSlide]);
