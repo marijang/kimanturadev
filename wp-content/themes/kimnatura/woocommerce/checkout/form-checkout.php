@@ -84,7 +84,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 			<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-			<?php echo apply_filters( 'woocommerce_order_button_html', '<a style="float: right; margint-top:16px;" class="button alt btn btn--primary-color place__order" name="woocommerce_checkout_place_order " id="place_order" value="' . 'Platite' . '" data-value="' . 'Platite' . '">' . 'Platite' . '</a>' ); // @codingStandardsIgnoreLine ?>
+			<?php echo apply_filters( 'woocommerce_order_button_html', '<a style="float: right; margin-top:16px;" class="button alt btn btn--primary-color place__order" name="woocommerce_checkout_place_order " id="place_order" value="' . 'Platite' . '" data-value="' . 'Platite' . '">' . 'Platite' . '</a>' ); // @codingStandardsIgnoreLine ?>
 
 			<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 
