@@ -1,10 +1,6 @@
-
 import $ from 'jquery';
 global.$ = global.jQuery = $;
-//
 import Headroom from 'headroom.js';
-
-//var Headroom = require("headroom.js");
 $(function() {
 // grab an element
 
@@ -22,7 +18,6 @@ var headroom  = new Headroom(myElement,{
     },
     // callback when above offset, `this` is headroom object
     onTop : function() {
-         ('HEADROOM:Vidi me MZ opet radim:) ');
         $('.shop-catalog__filter').addClass('shop-categories__list--headup');
         $('.shop-catalog__filter').removeClass('shop-categories__list--headup');
     },
@@ -41,20 +36,7 @@ var headroom  = new Headroom(myElement,{
 
 headroom.init({
     tolerance: 50,
-    offset : 250,
-    onPin : function() {
-        
-    },
-    // callback when unpinned, `this` is headroom object
-    onUnpin : function() { ('HEADROOM:Vidi me MZ kako radim1111:)');},
-    // callback when above offset, `this` is headroom object
-    onTop : function() { ('HEADROOM:Vidi me MZ opet radim111:) ');},
-    // callback when below offset, `this` is headroom object
-    onNotTop : function() {},
-    // callback at bottom of page, `this` is headroom object
-    onBottom : function() {},
-    // callback when moving away from bottom of page, `this` is headroom object
-    onNotBottom : function() {}
+    offset : 250
 });
 
 });

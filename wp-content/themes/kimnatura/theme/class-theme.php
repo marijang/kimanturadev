@@ -104,16 +104,16 @@ class Theme {
       wp_enqueue_script( $this->theme_name . '-scripts-vendors' );
 
       $main_script_vandors = '/skin/public/scripts/vendors/anime.min.js';
-      wp_register_script( $this->theme_name . 'anime-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ) );
+      wp_register_script( $this->theme_name . 'anime-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ) ,true);
       wp_enqueue_script( $this->theme_name . 'anime-scripts-vendors' );
 
       $main_script_vandors = '/skin/public/scripts/vendors/materialize.min.js';
-      wp_register_script( $this->theme_name . 'materialize-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ) );
-      wp_enqueue_script( $this->theme_name . 'materialize-scripts-vendors');
+      //wp_register_script( $this->theme_name . 'materialize-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ) );
+      //wp_enqueue_script( $this->theme_name . 'materialize-scripts-vendors');
     
 
       $main_script = '/skin/public/scripts/application.js';
-      wp_register_script( $this->theme_name . '-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ) );
+      wp_register_script( $this->theme_name . '-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ),true );
       wp_enqueue_script( $this->theme_name . '-scripts');
 
 
