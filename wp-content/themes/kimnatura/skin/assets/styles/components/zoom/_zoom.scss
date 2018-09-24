@@ -9,7 +9,8 @@
 }
 
 .woocommerce-product-gallery__trigger{
-    @include media(desktop){
-        display: none;
+    display: none;
+    @include media(mobile tablet){
+        display: inline;
     }
 }

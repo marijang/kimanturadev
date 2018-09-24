@@ -17,12 +17,19 @@ $article-min-height:      500px;
        // padding-bottom:16px;
       } 
     }
-    @include media(mobile tablet){
+    @include media(mobile){
         margin-top:$base-content-padding;
         //margin-top: $base-content-padding*2;
         margin-bottom: 0;
         padding: 0;
     }
+
+    @include media(tablet){
+      margin-top:$base-content-padding;
+      //margin-top: $base-content-padding*2;
+      margin-bottom: 0;
+      padding-bottom: $base-content-padding;
+  }
 
     @include e('excerpt'){
       overflow: hidden;
