@@ -2,8 +2,15 @@
     border:0!important;
 }
 
-.yith_magnifier_zoom_wrap:hover{
-    .yith_magnifier_zoom {
-        opacity: 0;
+.woocommerce-product-gallery__image:hover{
+        .wp-post-image{
+            opacity: 0;
+        }
+}
+
+.woocommerce-product-gallery__trigger{
+    display: none;
+    @include media(mobile tablet){
+        display: inline;
     }
 }

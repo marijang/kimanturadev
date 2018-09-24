@@ -95,7 +95,9 @@
                 //height: 280px;
                 transform: scale(1);
             }
-            
+            @include media(mobile tablet){
+                height: 100%;
+            }
            
          }
         @include element('description'){
