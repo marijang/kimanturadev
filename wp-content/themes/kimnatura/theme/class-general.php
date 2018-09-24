@@ -53,6 +53,7 @@ class General {
     add_image_size( 'full-width', 1200,400, true );  //300 pixels wide (and unlimited height) 
     add_image_size( 'highlighted', 564,493, true ); // Try to not use
     add_image_size( 'shop-catalog', 375,250, true );
+    add_image_size( 'related-products', 358,250, true );
     add_image_size( 'shop-catalog-small', 342,228, true );
     add_image_size( 'sastojci', 1136,600, true );
     add_image_size( 'product', 585, 390,true);

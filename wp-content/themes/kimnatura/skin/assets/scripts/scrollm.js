@@ -43,19 +43,6 @@ $(function() {
     $('.article-list').each(function(index, section) {
         var elementWatcher = scrollMonitor.create( section );
         elementWatcher.enterViewport(function() {
-           //  ( 'I have entered the viewport' );
-           /*
-            var rev3 = new RevealFx(section, {
-                revealSettings : {
-                bgcolor: '#fcf652',
-                direction: 'rl',
-                onCover: function(contentEl, revealerEl) {
-                    contentEl.style.opacity = 1;
-                }
-                }
-            });
-
-            */
             var rev4 = new RevealFx(section.querySelector(".article-list__content"), {
                 revealSettings : {
                 bgcolor: '#3DC19E',
