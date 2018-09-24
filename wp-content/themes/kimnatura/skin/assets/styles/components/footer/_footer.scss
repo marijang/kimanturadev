@@ -84,6 +84,9 @@ footer{
         }
         
     }
+    @include e('logo-img'){
+        width: 92px;
+    }
     @include e('info'){
         background: $footer-bg-color-secondary;
         padding: $grid-gutter;

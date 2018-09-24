@@ -33,7 +33,7 @@ input:-webkit-autofill:active {
 @import 'core';
 
 //Icons
-@import 'components/icons/icons';
+//@import 'components/icons/icons';
 
 // Typography
 @import 'components/typography/typography';
@@ -87,7 +87,7 @@ input:-webkit-autofill:active {
 @import 'components/newsletter/newsletter';
 
 // Template parts
-@import 'components/parts/cookies-notification';
+//@import 'components/parts/cookies-notification';
 @import 'components/parts/reading-progress';
 
 // Single
@@ -512,4 +512,7 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
     transition: background-color 5000s ease-in-out 0s;
     -webkit-box-shadow: 0 0 0px 1000px $primary-color inset!important;
     -webkit-text-fill-color: white!important;
+}
+.ct-ultimate-gdpr-cookie-bottomPanel-padding.popup-modern-style{
+    padding-bottom: 0!important;
 }
