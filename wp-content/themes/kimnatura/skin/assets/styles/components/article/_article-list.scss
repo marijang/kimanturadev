@@ -142,7 +142,8 @@ $article-min-height:      500px;
    }
   
     @include element('image'){
-      margin-bottom: $article-content-padding;
+      // margin-bottom: $article-content-padding;
+      margin-bottom: auto;
       flex: 1;
       min-height: $article-min-height;
       z-index: 3;
@@ -161,7 +162,8 @@ $article-min-height:      500px;
           
       }
       @include media(mobile ){
-        margin-bottom:0;
+        // margin-bottom:0;
+        margin-bottom: auto;
         min-height: auto;
         img{
           max-height: 350px;
@@ -192,7 +194,7 @@ $article-min-height:      500px;
           display: none;
         }
       }
-      @include media(tablet){
+      @include media(tablet up){
         &.mobile{
           display: none;
         }
