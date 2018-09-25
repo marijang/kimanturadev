@@ -151,7 +151,7 @@ $article-min-height:      500px;
         img {
             transform: scale(1.02);
         }
-    }   
+      }   
       img{
           height: auto;
           max-height: 550px;
@@ -174,11 +174,30 @@ $article-min-height:      500px;
         }
       } 
 
-      @include media( tablet){
+      @include media(tablet){
         margin-bottom:0;
         min-height: auto;
         img{
           max-height: 450px;
+        }
+      }
+    }
+
+    @include element('image-link'){
+      @include media(mobile){
+        &.mobile{
+          display: inline;
+        }
+        &.tablet{
+          display: none;
+        }
+      }
+      @include media(tablet){
+        &.mobile{
+          display: none;
+        }
+        &.tablet{
+          display: inline;
         }
       }
     }
