@@ -217,7 +217,7 @@ $section-description-space-bottom-small:$base-content-padding;
         @include media(tablet){
             margin-top: $base-content-padding;
             margin-bottom: $base-content-padding*2;  
-            min-height: 350px;
+            min-height: 250px;
             width: 100%;
         }
     }

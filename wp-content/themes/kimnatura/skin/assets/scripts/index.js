@@ -36,4 +36,4 @@ import './loader';
 
 import './wspay';
 import './postage';
-
+import './featured';

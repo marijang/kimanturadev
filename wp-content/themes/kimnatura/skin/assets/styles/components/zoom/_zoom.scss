@@ -5,6 +5,11 @@
 .woocommerce-product-gallery__image:hover{
         .wp-post-image{
             opacity: 0;
+        
+            @include media(mobile tablet){
+                opacity: 1;
+            }
+
         }
 }
 
@@ -12,5 +17,11 @@
     display: none;
     @include media(mobile tablet){
         display: inline;
+    }
+}
+
+img.zoomImg {
+    @include media(mobile tablet){
+        display: none!important;
     }
 }

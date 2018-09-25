@@ -12,14 +12,23 @@ $image  = $images->get_post_image( 'listing' );
 <article class="article-list">
   <div class="article-list__container">
     <div class="article-list__image">
-      <a class="article-list__image-link" href="<?php the_permalink(); ?>">
-        <?php  //if (wp_is_mobile()) {
-            //the_post_thumbnail( 'post_full_width');
-          //} else {
-            the_post_thumbnail( 'blog-list');
-          //}
-        ?>
-      </a>
+      <?php  if (wp_is_mobile()) { ?>
+        <a class="article-list__image-link mobile" href="<?php the_permalink(); ?>">
+          <?php the_post_thumbnail( 'post_full_width'); ?>
+        </a>
+        <a class="article-list__image-link tablet" href="<?php the_permalink(); ?>">
+          <?php the_post_thumbnail( 'blog-list'); ?>
+        </a>
+      <?php 
+        } else { ?>
+          <a class="article-list__image-link" href="<?php the_permalink(); ?>">
+            <?php
+              the_post_thumbnail( 'blog-list');
+            ?>
+          </a>
+          <?php
+            }
+          ?>
     </div>
     <div class="article-list__content">
       <header>
