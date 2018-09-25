@@ -198,6 +198,7 @@ $section-description-space-bottom-small:$base-content-padding;
 
     @include element('image-homepage'){
         overflow: hidden;
+        flex: 1;
         img{
             width: $section-img-width;
             height: auto;
@@ -279,7 +280,7 @@ $section-description-space-bottom-small:$base-content-padding;
         @include p('e:inner'){
             display: flex;
             align-items: center;
-            @include media(mobile tablet){
+            @include media(mobile){
                 flex-direction: column-reverse;
                // flex-direction: row-reverse; 
                align-items: baseline;
