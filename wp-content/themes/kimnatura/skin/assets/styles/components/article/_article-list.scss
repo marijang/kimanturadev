@@ -194,7 +194,7 @@ $article-min-height:      500px;
           display: none;
         }
       }
-      @include media(tablet ipad desktop){
+      @include media(tablet ipad desktop large){
         &.mobile{
           display: none;
         }
