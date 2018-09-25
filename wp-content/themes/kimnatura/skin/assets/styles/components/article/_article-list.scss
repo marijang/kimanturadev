@@ -163,7 +163,7 @@ $article-min-height:      500px;
       }
       @include media(mobile ){
         // margin-bottom:0;
-        margin-bottom: auto;
+        margin-bottom: 0;
         min-height: auto;
         img{
           max-height: 350px;
@@ -177,7 +177,7 @@ $article-min-height:      500px;
       } 
 
       @include media(tablet){
-        margin-bottom:0;
+        margin-bottom:auto;
         min-height: auto;
         img{
           max-height: 450px;
