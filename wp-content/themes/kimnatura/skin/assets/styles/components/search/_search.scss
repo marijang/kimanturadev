@@ -537,7 +537,7 @@ $search-grid-row-gap: $base-content-padding*3;
 }
 
 #search-results .article-single__image-link img {
-	min-height: 180px;
+	//min-height: 180px;
 	height: auto!important;
 	@include media(mobile){
 		max-width: 240px;
