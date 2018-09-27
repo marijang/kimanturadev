@@ -17,6 +17,10 @@
         }
         .featured-link__movable{
             transform: translateY(-10px);
+
+            @include media(mobile){
+                text-align: center;
+            }
         }
         .featured-link__button{
             opacity: 1;

@@ -23,7 +23,7 @@
        // border: 1px solid $base-grey-color;
 
         @include media(desktop large){
-            height: 452px;
+            height: 450px;
             transform: translateY(40vh);
             opacity: 0;
             transition: transform .5s ease-in .5s,
@@ -88,7 +88,7 @@
      
 
         @include element('image'){
-            width: 100%;
+            //width: 100%;
             transition: transform 300ms;
             transform: scale(.8);
             @include media(desktop large){
@@ -96,7 +96,7 @@
                 transform: scale(1);
             }
             @include media(mobile tablet){
-                height: 100%;
+                margin: 0 auto;
             }
            
          }
@@ -123,6 +123,9 @@
             @include media(desktop large){
                 padding: $base-content-padding*2;
                 transform: translateY(56px);
+            }
+            @include media(mobile tablet){
+                text-align: center;
             }
         }
 
