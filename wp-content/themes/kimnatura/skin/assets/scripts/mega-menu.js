@@ -8,8 +8,9 @@
  * Copyright 2016, Codrops
  * http://www.codrops.com
  */
-import $ from 'jquery';
-global.$ = global.jQuery = $;
+//import $ from 'jquery';
+//global.$ = global.jQuery = $;
+
 $(document).ready( function() {
 
     var mainContainer = document.querySelector('.main-wrap'),

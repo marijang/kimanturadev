@@ -1,5 +1,5 @@
-import $ from 'jquery';
-global.$ = global.jQuery = $;
+//import $ from 'jquery';
+//global.$ = global.jQuery = $;
 
 function showLoader(){
     if (sessionStorage.getItem("lastRun") === null /*|| (Math.abs(new Date(localStorage.getItem("lastRun")) - new Date()) / 36e5) > 1*/) {

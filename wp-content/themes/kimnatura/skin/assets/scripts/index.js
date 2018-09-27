@@ -13,7 +13,7 @@ import './components';
 
 
 import './readingprogress';
-//import './slider';
+import './slider';
 import './headroom';
 
 
@@ -31,7 +31,7 @@ import './mega-menu';
 
 //import './loader';
 
-//import './zoom';
+import './zoom';
 import './loader';
 
 import './wspay';

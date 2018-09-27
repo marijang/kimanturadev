@@ -108,6 +108,7 @@ class Theme {
       wp_enqueue_script( $this->theme_name . 'anime-scripts-vendors' );
 
       $main_script_vandors = '/skin/public/scripts/vendors/materialize.min.js';
+    
       //wp_register_script( $this->theme_name . 'materialize-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ) );
       //wp_enqueue_script( $this->theme_name . 'materialize-scripts-vendors');
     
