@@ -91,10 +91,7 @@ $hero-transition-duration-in: .9s;
             background-position: 100%;
         }
 
-        @include media(mobile, landscape) {
-            background-size: cover;
-            background-position: 100%;
-        }
+       
 
         @include media(tablet){
         
@@ -102,9 +99,9 @@ $hero-transition-duration-in: .9s;
             margin-right: -80px; // Usrane slike
         }
         @include media(mobile, landscape) {
-            min-height: 350px;
-            margin-right: -80px; // Usrane slike
-            background-size: contain;
+            min-height: 350px; // Usrane slike
+            background-size: 60%;
+            background-position: right;
         }
         @include media(desktop large){
             opacity: 0;
