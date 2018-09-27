@@ -10,7 +10,9 @@
 namespace Kimnatura\Admin;
 
 use Kimnatura\Helpers as General_Helpers;
+use Kimnatura\Admin\b4bProductCategories_widget as b4bProductCategories_widget;
 
+//include_once get_template_directory() . '/widgets/old-b4bProductCategories.php';
 /**
  * Class Admin
  */
@@ -117,7 +119,7 @@ class Admin {
    * @since 2.1.0
    */
   function b4bProductCategories_widget() { 
-      register_widget( 'b4bProductCategories_widget' );
+      register_widget( new b4bProductCategories_widget() );
   }
 
 

@@ -11,10 +11,7 @@
  */
 
 namespace Kimnatura;
-
-
 $inf_theme_options['cookies_notification_description'] = 'Za pružanje boljeg korisničkog iskustva, ova stranica koristi cookies. Nastavkom pregleda stranice slažete se s korištenjem kolačića.';
-
 /**
  * Theme version global
  *
@@ -60,12 +57,7 @@ require WP_CONTENT_DIR . '/../vendor/autoload.php';
 function init_theme() {
     $plugin = new \Kimnatura\Includes\Main();
     $plugin->run();
-
-
-    //$loader = $loader->get_loader();
-
 }
-// CHANGE
 init_theme();
 
 

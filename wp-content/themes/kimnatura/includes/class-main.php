@@ -24,6 +24,7 @@ use Kimnatura\Admin\Rest\Search as Search;
 use Kimnatura\Admin\Rest\Postage as Postage;
 use Kimnatura\Admin\MailChimp as MailChimp;
 use Subtitles as Subtitles;
+use Kimnatura\Admin\b4bProductCategories_widget;
 /**
  * The main start class.
  *

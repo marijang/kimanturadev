@@ -7,8 +7,7 @@
  */
 
 namespace Kimnatura\Admin;
-use Kimnatura\Widgets\b4bProductCategories_widget as General_Helpers;
-
+use Kimnatura\Admin\b4bProductCategories_widget;
 /**
  * Class Widgets
  */
@@ -83,7 +82,7 @@ class Widgets {
           'after_title' => '</h4>',
       )
     );
-    register_widget( 'b4bProductCategories_widget' );
+    //register_widget( 'b4bProductCategories_widget' );
   }
 
 }

@@ -6,17 +6,18 @@
  * @since   2.0.0
  * @package Kimnatura\Admin
  */
-namespace Kimnatura\Widgets;
+namespace Kimnatura\Admin;
 
-use WP_Widget as WP_Widget;
+//use WP_Widget as WP_Widget;
 
 
-class b4bProductCategories_widget extends WP_Widget {
+class b4bProductCategories_widget extends \WP_Widget  {
     // Set up the widget name and description.
 
     protected $scripts = array();
 
     public function __construct() {
+       
         $widget_options = array( 
             'classname' => 'b4bProductCategories_widget', 
             'description' => 'Custom B4b Woocommerce Category Widget' 

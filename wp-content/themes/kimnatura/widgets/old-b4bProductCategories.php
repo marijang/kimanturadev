@@ -9,7 +9,7 @@
 namespace Kimnatura\Widgets;
 
 
-class oldb4bProductCategories_widget extends WP_Widget {
+class b4bProductCategories_widget extends \WP_Widget {
     // Set up the widget name and description.
 
     protected $scripts = array();
