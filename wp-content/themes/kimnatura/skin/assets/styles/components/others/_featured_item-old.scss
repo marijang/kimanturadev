@@ -96,7 +96,7 @@
                 transform: scale(1);
             }
             @include media(mobile tablet){
-                //height: 100%;
+                margin: 0 auto;
             }
            
          }
@@ -123,6 +123,9 @@
             @include media(desktop large){
                 padding: $base-content-padding*2;
                 transform: translateY(56px);
+            }
+            @include media(mobile tablet){
+                text-align: center;
             }
         }
 
