@@ -7,9 +7,9 @@
 use Kimnatura\Admin\Menu as Menu;
 use Kimnatura\Helpers\General_Helper as Helper;
 $menu             = new Menu\Menu();
-$blog_name        = get_bloginfo( 'name' );
-$blog_description = get_bloginfo( 'description' );
-$header_logo_info = $blog_name . ' - ' . $blog_description;
+//$blog_name        = get_bloginfo( 'name' );
+//$blog_description = get_bloginfo( 'description' );
+//$header_logo_info = $blog_name . ' - ' . $blog_description;
 $helper = new Helper();
 
 

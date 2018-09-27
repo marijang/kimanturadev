@@ -250,11 +250,9 @@ class Main {
     $blog         = new Admin\Blog( $this->get_theme_info() );
     $this->loader->add_action('pre_get_posts', $blog,'inf_exclude_category');
     $this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
-      $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
-    
+    $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
     $this->loader->add_action('b4b_before_home_page',$woo,'woocommerce_related_products',10);
     $this->loader->add_action('b4b_after_home_page',$blog,'last_news',20);
-    
   }
   
   /**
@@ -266,8 +264,8 @@ class Main {
     $woo          = new Woo( $this->get_theme_info() );
     $blog         = new Admin\Blog( $this->get_theme_info() );
     $this->loader->add_action( 'after_setup_theme', $woo, 'add_theme_support' );
-    $this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_styles' );
-    $this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_scripts' );
+    //$this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_styles' );
+    //$this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_scripts' );
     $this->loader->remove_action( 'woocommerce_cart_is_empty', 'wc_empty_cart_message',10);
     $this->loader->add_action( 'woocommerce_cart_is_empty', $woo, 'woocommerce_cart_is_empty_message',10,1);
     
@@ -328,8 +326,8 @@ class Main {
     
     $this->loader->add_action( 'b4b_woo_shipping_notice', $woo, 'shipping_method_notice' );
 
-    remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
-    add_action( 'b4b_woocommerce_checkout_payment', 'woocommerce_checkout_payment', 20 );
+    $this->loader->remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+    $this->loader->add_action( 'b4b_woocommerce_checkout_payment', 'woocommerce_checkout_payment', 20 );
     
     $this->loader->add_filter( 'woocommerce_order_button_text',$woo, 'custom_order_button_text' ); 
     // Add all actions

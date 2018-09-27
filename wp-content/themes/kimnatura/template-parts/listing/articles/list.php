@@ -44,5 +44,5 @@ $image  = $images->get_post_image( 'listing' );
       <a href="<?php echo  esc_url( get_permalink() )?>" rel="bookmark" class="article-list__link"><?php echo __('Saznaj više','kimnatura');?></a>
     </div>
   </div>
-  <?php require locate_template( 'template-parts/parts/google-rich-snippets.php' ); ?>
+  <?php //require locate_template( 'template-parts/parts/google-rich-snippets.php' ); ?>
 </article>
