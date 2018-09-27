@@ -48,7 +48,7 @@ html.mobile-menu-is-open{
         grid-area: hamburger;
         display: none;
         .toggle{
-           
+            min-height: 20px;
             display: block;
             cursor: pointer;
             top: 50%;

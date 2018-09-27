@@ -168,6 +168,11 @@
        overflow: hidden;
        position: relative;
        max-height: 0;
+
+       @include media(mobile){
+            text-align: center;
+       }
+
        &::before1{
            content: "";
            display: block;
