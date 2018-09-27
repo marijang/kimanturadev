@@ -42,8 +42,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#C3151B">
 <link rel="apple-touch-startup-image" href="<?php echo esc_url( KIM_IMAGE_URL . 'logo-color.svg' ); ?>">
 
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 
 <?php 
 get_template_part( 'template-parts/header/head/favicons' );
