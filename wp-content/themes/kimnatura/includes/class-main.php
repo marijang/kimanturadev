@@ -84,7 +84,7 @@ class Main {
     $this->load_dependencies();
     $this->define_admin_hooks();
     $this->define_theme_hooks();
-    $this->define_woo_hooks(); 
+   // $this->define_woo_hooks(); 
     $this->define_blog_hooks();
     $this->define_rest();
 
