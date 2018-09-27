@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying all pages
- * Template Name: Homepage
+ * Template Name: Homepage-old
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -30,5 +30,5 @@ do_action('b4b_after_home_page');
 get_template_part( 'section-templates/sastojci-hero' );
 get_template_part( 'template-parts/single/newsletter' );
 
-//get_sidebar();
+get_sidebar();
 get_footer();

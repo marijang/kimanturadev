@@ -78,20 +78,7 @@ class b4bProductCategories_widget extends WP_Widget {
             'taxonomy' => 'product_cat'
             ); 
            
-         $term_query = new WP_Term_Query(  $args_post );
-         if ( ! empty( $term_query->terms ) ) {
-             foreach ( $term_query->terms as $term ) {
-              
-                 if($term->slug!='uncategorized'){
-                  //  $categories[] = $term->slug;
-                    //echo $term->slug;
-                 }
-                 
-             }
-         } else {
-        
-         }
-
+    
          $_GET['kategorija'] = get_query_var( 'product_cat' );
       
 

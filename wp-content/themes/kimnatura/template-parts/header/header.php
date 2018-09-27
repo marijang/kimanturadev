@@ -44,16 +44,15 @@ $header_logo_info = $blog_name . ' - ' . $blog_description;
     <img class="header__logo-img" src="<?php echo esc_url( KIM_IMAGE_URL . 'logo.svg' ); ?>" title="<?php echo esc_attr( $header_logo_info ); ?>" alt="<?php echo esc_attr( $header_logo_info ); ?>" />
   </a>
  
-  <div class="header__main-menu" id="menu">
+
   <?php
     get_template_part( 'template-parts/header/menu', '' );
   ?>
-  </div>
-  <div class="header__user-menu">
-    <?php
-    get_template_part( 'template-parts/header/user', '' );
-  ?>
-  </div>
+  
+ 
+
+
+
 </div>
 </div>
 
