@@ -248,10 +248,10 @@ class Main {
   private function define_blog_hooks() {
     $woo          = new Woo( $this->get_theme_info() );
     $blog         = new Admin\Blog( $this->get_theme_info() );
-    $this->loader->add_action('pre_get_posts', $blog,'inf_exclude_category');
-    $this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
+   // $this->loader->add_action('pre_get_posts', $blog,'inf_exclude_category');
+    //$this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
     $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
-    $this->loader->add_action('b4b_before_home_page',$woo,'woocommerce_related_products',10);
+    //$this->loader->add_action('b4b_before_home_page',$woo,'woocommerce_related_products',10);
     $this->loader->add_action('b4b_after_home_page',$blog,'last_news',20);
   }
   
@@ -296,8 +296,8 @@ class Main {
     });
     
     // Remove Checkout form
-    remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
-    add_action('woocommerce_custom_login_form','woocommerce_checkout_login_form', 10);
+    $this->loader->remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
+    $this->loader->add_action('woocommerce_custom_login_form','woocommerce_checkout_login_form', 10);
    
     $this->loader->add_action( 'woocommerce_before_single_product',$woo, 'move_variations_single_price', 1 );
 

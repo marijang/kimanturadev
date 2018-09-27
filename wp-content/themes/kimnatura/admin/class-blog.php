@@ -128,6 +128,7 @@ class Blog {
   }
 
   public function inf_exclude_category( $query ) {
+    /*
     $slugs = array('slider','homepage','sastojci');
     foreach($slugs as $slug){
         $cat = get_category_by_slug($slug); 
@@ -142,6 +143,7 @@ class Blog {
         }
         
     }
+    */
   }
 
   /**

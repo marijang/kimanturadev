@@ -9,7 +9,7 @@
  */
 global $wpdb,$post;
 use Kimnatura\Theme\Utils as Utils;
-
+$images = new Utils\Images();
 
 
 $args = array( 'numberposts' => 10 ,'category_name' =>'slider-hero');
@@ -29,7 +29,7 @@ $i = 0;
 foreach($result as $post):
   setup_postdata($post);
 
-  $images = new Utils\Images();
+ 
   $image  = $images->get_post_image( 'slider-full-width' );
   $words  = preg_split('/\s+/', get_the_title());
   $class = '';
@@ -84,8 +84,9 @@ foreach($result as $post):
 </div><!--end of hero item-->
 
 <?php
-wp_reset_postdata();	
+
 endforeach;
+wp_reset_postdata();	
 ?>
 </div>
 </div>
