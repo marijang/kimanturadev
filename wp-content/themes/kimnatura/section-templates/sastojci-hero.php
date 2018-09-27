@@ -57,9 +57,11 @@ foreach($result as $post):
 </div><!--end of hero item-->
 
 <?php
+
 endforeach;
+wp_reset_postdata();
 ?>
 </div>
 </div>
 <?php
-wp_reset_postdata();	
+	

@@ -101,7 +101,7 @@ init_theme();
 
 //inf_test();
 /* Exclude some categories */
-add_action( 'pre_get_posts', 'test',10 );
+//add_action( 'pre_get_posts', 'test',10 );
 
 function test( $query ) {
   $slugs = array('slider','homepage','sastojci');

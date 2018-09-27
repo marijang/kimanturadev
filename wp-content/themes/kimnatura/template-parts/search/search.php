@@ -5,8 +5,8 @@
 			
             <div class="search__header">
     
-                    <a class="search__logo-link" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( $blog_name ); ?>">
-                        <img class="search__logo-img" src="<?php echo esc_url( KIM_IMAGE_URL . 'logo-white.svg' ); ?>" title="<?php echo esc_attr( $header_logo_info ); ?>" alt="<?php echo esc_attr( $header_logo_info ); ?>" />
+                    <a class="search__logo-link" href="<?php echo esc_url( home_url() ); ?>" >
+                        <img class="search__logo-img" src="<?php echo esc_url( KIM_IMAGE_URL . 'logo-white.svg' ); ?>" />
                     </a>
                 
                     <div class="search__btn-close" id="btn-search-close"><i class="material-icons">close</i></div>

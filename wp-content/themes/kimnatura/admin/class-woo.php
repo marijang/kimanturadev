@@ -71,26 +71,6 @@ class Woo {
     add_theme_support( 'wc-product-gallery-slider' );
   }
 
-  /**
-   * Register the Stylesheets for the admin area.
-   *
-   * @since 2.0.0
-   */
-  public function enqueue_styles() {
-
- 
-
-  }
-  /**
-   * Register the JavaScript for the admin area.
-   *
-   * @since 2.0.0
-   */
-  public function enqueue_scripts() {
-
-   
-
-  }
 
    /**
    * Register the JavaScript for the admin area.
@@ -123,9 +103,7 @@ class Woo {
      */
     function woocommerce_template_loop_product_link_open() {
         global $product;
-
         $link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
-
         echo '<a href="' . esc_url( $link ) . '" class="shop-catalog__link-wrap">';
     }
 
@@ -142,11 +120,9 @@ class Woo {
 
   public function custom_order_fields($fields) {
         unset($fields['order']['order_comments']);
-        unset($fields['billing']['billing_company']); // remove the option to enter in a company
-        unset($fields['billing']['billing_state']); // remove the billing state
-        //unset($fields['billing']['billing_country']); // remove the billing country
-        unset($fields['billing']['billing_address_2']); // remove the second line of the address
-        //var_dump($fields);
+        unset($fields['billing']['billing_company']);
+        unset($fields['billing']['billing_state']); 
+        unset($fields['billing']['billing_address_2']); 
         $fields["billing"]['billing_first_name']['priority']= 10;
         $fields["billing"]['billing_last_name']['priority'] = 20;
         $fields["billing"]['billing_email']['priority']		= 30;
@@ -155,10 +131,6 @@ class Woo {
         $fields["billing"]['billing_postcode']['priority']	= 60;
         $fields["billing"]['billing_city']['priority']		= 70;
         $fields["billing"]['billing_country']['priority']	= 190;
-       // $fields["billing"]['billing_city']['class']         = array('form-row-first'); 
-       // $fields["billing"]['billing_postcode']['class']     = array('form-row-last');
-        //$fields["billing"]['billing_country']['class']    	= array('form-row-wide');
-        //var_dump($fields);
         return $fields;
   }
 
@@ -195,10 +167,6 @@ class Woo {
         $title =  __('Upsale proizvodi','b4b');
         $productIDs = array_unique (array_merge ($upsell , $cross,$related));
         if(count($productIDs)<3){
-            //$related = wc_get_related_products($product->get_id());
-            // wc_get_product_ids_on_sale
-            // wc_get_related_products
-            //var_dump($related);wc_get_product_category_list
             $category = wc_get_product_cat_ids($product->get_id());
             $args1 = array(
                 'post_type' => 'product',
@@ -224,12 +192,10 @@ class Woo {
         }
         $productIDs = array_unique (array_merge ($upsell , $cross,$related,$category));
     }else{
-       // echo $post->ID();
        $productIDs ='';
        if (isset($post)){
-        $productIDs = get_post_meta($post->ID,'custom_productIds',true);
+            $productIDs = get_post_meta($post->ID,'custom_productIds',true);
        }
-       
         $title =  __('Vezani proizvodi','kimnatura');
     }
     
@@ -260,8 +226,8 @@ class Woo {
     
     $loop = new \WP_Query( $args );
     require( locate_template( 'template-parts/woocommerce/related-products.php' ) );
-    wp_reset_query(); 
-    wp_reset_postdata();
+    //wp_reset_query(); 
+    //wp_reset_postdata();
 
 }
 
@@ -319,22 +285,8 @@ class Woo {
     if (is_account_page()) {
       $t .="acount_page";
     }
-    if (is_cart()) {
-      //$t .="Cart";
-    }
+    
 
-  
-    /*
-    if (Is_view_order_page()) {
-      $step =  2;
-    }
-    if (Is_order_received_page()) {
-      $step =  3;
-    }
-    if (Is_view_order_page()) {
-      $step =  4;
-    }
-     */
  
     $t  .= '<ul class="cart-checkout-navigation browser-default">';
     // First item

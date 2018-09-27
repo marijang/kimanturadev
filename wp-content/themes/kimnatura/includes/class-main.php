@@ -202,7 +202,7 @@ class Main {
     add_filter( 'use_default_gallery_style', '__return_false' );
 
     // Legacy Browsers.
-    $this->loader->add_action( 'template_redirect', $legacy_browsers, 'redirect_to_legacy_browsers_page' );
+    //$this->loader->add_action( 'template_redirect', $legacy_browsers, 'redirect_to_legacy_browsers_page' );
 
     // Customizer
     $this->loader->add_action( 'customize_register',$theme,'add_customizer');
@@ -248,13 +248,11 @@ class Main {
   private function define_blog_hooks() {
     $woo          = new Woo( $this->get_theme_info() );
     $blog         = new Admin\Blog( $this->get_theme_info() );
-    $this->loader->add_action('pre_get_posts', $blog,'inf_exclude_category');
+   // $this->loader->add_action('pre_get_posts', $blog,'inf_exclude_category');
     $this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
-      $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
-    
+    $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
     $this->loader->add_action('b4b_before_home_page',$woo,'woocommerce_related_products',10);
     $this->loader->add_action('b4b_after_home_page',$blog,'last_news',20);
-    
   }
   
   /**
@@ -266,8 +264,8 @@ class Main {
     $woo          = new Woo( $this->get_theme_info() );
     $blog         = new Admin\Blog( $this->get_theme_info() );
     $this->loader->add_action( 'after_setup_theme', $woo, 'add_theme_support' );
-    $this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_styles' );
-    $this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_scripts' );
+    //$this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_styles' );
+    //$this->loader->add_action( 'wp_enqueue_scripts', $woo, 'enqueue_scripts' );
     $this->loader->remove_action( 'woocommerce_cart_is_empty', 'wc_empty_cart_message',10);
     $this->loader->add_action( 'woocommerce_cart_is_empty', $woo, 'woocommerce_cart_is_empty_message',10,1);
     
@@ -298,8 +296,8 @@ class Main {
     });
     
     // Remove Checkout form
-    remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
-    add_action('woocommerce_custom_login_form','woocommerce_checkout_login_form', 10);
+    $this->loader->remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
+    $this->loader->add_action('woocommerce_custom_login_form','woocommerce_checkout_login_form', 10);
    
     $this->loader->add_action( 'woocommerce_before_single_product',$woo, 'move_variations_single_price', 1 );
 
@@ -328,8 +326,8 @@ class Main {
     
     $this->loader->add_action( 'b4b_woo_shipping_notice', $woo, 'shipping_method_notice' );
 
-    remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
-    add_action( 'b4b_woocommerce_checkout_payment', 'woocommerce_checkout_payment', 20 );
+    $this->loader->remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+    $this->loader->add_action( 'b4b_woocommerce_checkout_payment', 'woocommerce_checkout_payment', 20 );
     
     $this->loader->add_filter( 'woocommerce_order_button_text',$woo, 'custom_order_button_text' ); 
     // Add all actions

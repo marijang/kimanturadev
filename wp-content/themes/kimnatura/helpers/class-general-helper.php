@@ -138,6 +138,9 @@ class General_Helper {
    * @since 2.0.0
    */
   public function print_copyright() {
+
+    echo 'Kim Natura '.date("Y"); 
+    /*
     global $wpdb;
     $copyright_dates = $wpdb->get_results("
     SELECT
@@ -163,5 +166,7 @@ class General_Helper {
       }
       
     echo  $output;
+    */
   }
+  
 }

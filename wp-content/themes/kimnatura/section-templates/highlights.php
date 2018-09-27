@@ -16,5 +16,7 @@ $current = 'even';
 foreach($result as $post):
   setup_postdata($post);
   get_template_part( 'template-parts/single/highlighted' );
+  wp_reset_postdata();	
 endforeach;
-wp_reset_postdata();	
+
+
