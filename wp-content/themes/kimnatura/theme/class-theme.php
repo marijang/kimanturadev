@@ -139,6 +139,22 @@ class Theme {
 
 
   
+  /**
+   * Register the JavaScript for the theme area.
+   *
+   * FAnother thing we recommend is to remove query strings from your static resources. 
+   * Resources with a “?” in the URL are not cached by some proxy caching servers or CDNS, 
+   * which could result in a large missed opportunity for increased speeds. 
+   * One way to do this would be to add the following to your functions.php file.
+   *
+   * @since 2.0.0
+   */
+  function _remove_script_version( $src ){
+    $parts = explode( '?ver', $src );
+    return $parts[0];
+  }
+
+  
   function add_shortcodes(){
     $contactmap = new Shortcodes\Gmap();
     add_shortcode( 'b4b-map', array($contactmap,'shortcode') );
