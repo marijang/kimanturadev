@@ -19,3 +19,4 @@ foreach($result as $post):
   wp_reset_postdata();	
 endforeach;
 
+
