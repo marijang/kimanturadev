@@ -100,11 +100,11 @@ class Theme {
       wp_enqueue_script( $this->theme_name . '-webfont' ); // Fonts loaded via JS fonts.js.
 
       $main_script_vandors = '/skin/public/scripts/vendors.js';
-      wp_register_script( $this->theme_name . '-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ) );
+      wp_register_script( $this->theme_name . '-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ),true );
       wp_enqueue_script( $this->theme_name . '-scripts-vendors' );
 
       $main_script_vandors = '/skin/public/scripts/vendors/anime.min.js';
-      wp_register_script( $this->theme_name . 'anime-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ));
+      wp_register_script( $this->theme_name . 'anime-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ),true);
       wp_enqueue_script( $this->theme_name . 'anime-scripts-vendors' );
 
       $main_script_vandors = '/skin/public/scripts/vendors/materialize.min.js';
