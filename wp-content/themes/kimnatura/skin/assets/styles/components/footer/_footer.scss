@@ -89,7 +89,7 @@ footer{
     }
     @include e('info'){
         background: $footer-bg-color-secondary;
-        padding: $grid-gutter;
+        padding: $grid-gutter 0;
         color: $footer-text-color;
         small{
             @include container();
