@@ -25,7 +25,8 @@ Class Search extends WP_AJAX
             'post_status' => 'publish', //$_POST['load'],
             // 's' => $search,
             'posts_per_page' => 2,
-            'post_type' => array('post')
+            'post_type' => array('post'),
+            'category_name' => array('blog')
          );
     } else {
         $args = array(
