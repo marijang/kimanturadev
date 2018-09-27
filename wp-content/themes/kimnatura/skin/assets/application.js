@@ -8,4 +8,4 @@ import './scripts';
 import './images/images';
 
 // Load fonts
-import './fonts/fonts';
+//import './fonts/fonts';
