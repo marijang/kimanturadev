@@ -23,6 +23,7 @@ use Kimnatura\Admin\Rest\Example as Example;
 use Kimnatura\Admin\Rest\Search as Search;
 use Kimnatura\Admin\Rest\Postage as Postage;
 use Kimnatura\Admin\MailChimp as MailChimp;
+use Subtitles as Subtitles;
 /**
  * The main start class.
  *
@@ -84,7 +85,7 @@ class Main {
     $this->load_dependencies();
     $this->define_admin_hooks();
     $this->define_theme_hooks();
-   // $this->define_woo_hooks(); 
+    $this->define_woo_hooks(); 
     $this->define_blog_hooks();
     $this->define_rest();
 
@@ -108,6 +109,7 @@ class Main {
    */
   private function load_dependencies() {
     $this->loader = new Loader();
+  
   }
 
   /**
@@ -139,6 +141,9 @@ class Main {
     $mfi         = new Mfi($this->get_theme_info());
     // Mailchimp
     $this->loader->add_action('mc4wp_form_response_position', $mailchimp,'mc4wp_form_response_position');
+
+    // 
+    $this->loader->add_action( 'widgets_init',$admin, 'b4bProductCategories_widget' );
 
     // Plugins
     $this->loader->add_filter('kdmfi_featured_images',$mfi,'kdmfi_featured_images');
@@ -176,6 +181,8 @@ class Main {
     $this->loader->add_action( 'after_setup_theme', $media, 'add_custom_image_sizes' );
     $this->loader->add_filter( 'wp_handle_upload_prefilter', $media, 'check_svg_on_media_upload' );
 
+    //$this->loader->add_action( 'init',$admin, 'slidercategory', 0 );
+    //$this->loader-> add_action( 'init', $admin,'slider', 10 );
 
   }
 
@@ -198,8 +205,16 @@ class Main {
     $this->loader->add_action( 'wp_enqueue_scripts', $theme, 'enqueue_styles' );
     $this->loader->add_action( 'wp_enqueue_scripts', $theme, 'enqueue_scripts' );
 
+    // Remove styles
+    add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+    remove_filter( 'woocommerce_checkout_fields', 'woocommerce_checkout_fields_filter', 100 );
+
     // Remove inline gallery css.
     add_filter( 'use_default_gallery_style', '__return_false' );
+    if ( class_exists( 'Subtitles' ) && method_exists( 'Subtitles', 'subtitle_styling' ) ) {
+      remove_action( 'wp_head', array( Subtitles::getInstance(), 'subtitle_styling' ) );
+    }
+    add_filter('subtitle_view_supported', '__return_false');
 
     // Legacy Browsers.
     //$this->loader->add_action( 'template_redirect', $legacy_browsers, 'redirect_to_legacy_browsers_page' );
@@ -246,6 +261,11 @@ class Main {
     // Pagination.
     $this->loader->add_filter( 'next_posts_link_attributes', $pagination, 'pagination_link_next_class' );
     $this->loader->add_filter( 'previous_posts_link_attributes', $pagination, 'pagination_link_prev_class' );
+
+    $this->loader->add_action( 'wp_print_scripts',$theme, 'iconic_remove_password_strength', 10 );
+
+    $this->loader->add_filter( 'login_redirect', $theme,'login_redirect', 10, 3 );
+    
 
   }
 
@@ -361,6 +381,26 @@ class Main {
 
     // Free shipping
     $this->loader->add_filter( 'woocommerce_package_rates',$woo,'my_hide_shipping_when_free_is_available', 1 );
+
+    $this->loader->add_filter("woocommerce_checkout_fields",$woo, "order_fields");
+
+    //kod za dodavanje checkboxa za prihvaćanje uvjeta korištenja
+    $this->loader->add_action( 'woocommerce_register_form',$woo, 'add_terms_and_conditions_to_registration', 20 );
+
+
+    // Link za preuzimanje računa
+    $this->loader->add_filter('woocommerce_thankyou_order_received_text', $woo,'wpo_wcpdf_thank_you_link', 10, 2);
+
+    $this->loader->add_action( 'woocommerce_register_post',$woo, 'terms_and_conditions_validation', 20, 3 );
+
+    $this->loader->add_filter( 'wpo_wcpdf_invoice_title',$woo, 'wpo_wcpdf_invoice_title' );
+    $this->loader->add_filter( 'wpo_wcpdf_filename',$woo, 'wpo_wcpdf_custom_filename', 10, 4 );
+    $this->loader->add_filter( 'woocommerce_cart_shipping_method_full_label',$woo, 'bbloomer_remove_shipping_label', 10, 2 );
+    $this->loader->add_filter( "woocommerce_catalog_orderby",$woo, "my_woocommerce_catalog_orderby", 20 );
+    $this->loader->add_filter( 'woocommerce_package_rates',$woo, 'my_hide_shipping_when_free_is_available', 100 );
+    $this->loader->add_filter( 'woocommerce_default_address_fields',$woo, 'custom_default_address_fields', 20, 1 );
+
+    
     
   }
  

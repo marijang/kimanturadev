@@ -260,4 +260,17 @@ class Theme {
 
   }
 
+
+  /**
+   * Remove password strength check.
+   */
+  public function iconic_remove_password_strength() {
+    wp_dequeue_script( 'wc-password-strength-meter' );
+  }
+
+
+  public function login_redirect( $url, $query, $user ) {
+    return home_url();
+  }
+
 }

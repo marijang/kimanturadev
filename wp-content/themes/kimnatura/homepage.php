@@ -23,11 +23,11 @@ get_header();
 
 
 get_template_part( 'section-templates/slider-hero' );
-//do_action('b4b_before_home_page');
+do_action('b4b_before_home_page');
 get_template_part( 'section-templates/highlights' );
 
 do_action('b4b_after_home_page');
-//get_template_part( 'section-templates/sastojci-hero' );
+get_template_part( 'section-templates/sastojci-hero' );
 get_template_part( 'template-parts/single/newsletter' );
 
 //get_sidebar();

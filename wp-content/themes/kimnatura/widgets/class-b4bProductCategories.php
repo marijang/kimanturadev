@@ -1,11 +1,15 @@
 <?php
-/*
-Plugin Name: B4B Products by category
-Description: This plugin displays a list of products of a certain category on your website.
-*/
 
+/**
+ * The login page specific functionality.
+ *
+ * @since   2.0.0
+ * @package Kimnatura\Admin
+ */
+namespace Kimnatura\Widgets;
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+use WP_Widget as WP_Widget;
+
 
 class b4bProductCategories_widget extends WP_Widget {
     // Set up the widget name and description.
@@ -180,7 +184,7 @@ class b4bProductCategories_widget extends WP_Widget {
     }
     
 // Register the widget.
-function b4bProductCategories_widget() { 
-register_widget( 'b4bProductCategories_widget' );
-}
-add_action( 'widgets_init', 'b4bProductCategories_widget' );
+//function b4bProductCategories_widget() { 
+//register_widget( 'b4bProductCategories_widget' );
+//}
+//add_action( 'widgets_init', 'b4bProductCategories_widget' );
