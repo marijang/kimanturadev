@@ -7,6 +7,7 @@ $cart-navigation-item-mobile-size: $base-content-padding*2.5;
 
 @include block('cart-checkout-navigation'){
 
+    
     @include container();
     padding: 0;
     list-style: none;
@@ -14,7 +15,7 @@ $cart-navigation-item-mobile-size: $base-content-padding*2.5;
     align-items: center;
     align-content: stretch; 
     margin-bottom:$cart-navigation-margin-bottom;
-    margin-bottom: 0;
+    margin-bottom: 32px;
     margin-top: $cart-navigation-margin;
     font-family: $base-font-family;
 
@@ -24,12 +25,28 @@ $cart-navigation-item-mobile-size: $base-content-padding*2.5;
          
         }
     }
+
+    @include media(desktop large) {
+        margin-bottom: 0;
+    }
+
+    @include media(ipad) {
+        margin-bottom: 32px;
+    }
+
     @include element('header'){
        // margin-top: $base-content-padding;
         @include media(desktop large){
             //margin-top: $base-content-padding*2;
         }
     }
+
+    @include media(tablet) {
+        text-align: center;
+
+    }
+
+ 
 
     @include media(mobile){
         padding-left: $base-content-padding!important;

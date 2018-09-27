@@ -26,16 +26,6 @@ $array = array(
         "value" => 'Facebook',
         "link"  => '#facebook',
         "image" => 'facebookb.svg'
-    ),
-    array(
-        "value" => 'Instagram',
-        "link"  => '#instagram',
-        "image" => 'instagramb.svg'
-    ),
-    array(
-        "value" => 'Twitter',
-        "link"  => '#twitter',
-        "image" => 'twitterb.svg'
     )
 );
 ?>
