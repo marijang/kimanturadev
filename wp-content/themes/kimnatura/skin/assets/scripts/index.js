@@ -26,7 +26,7 @@ import './components/removeItems';
 
 import './app';
 
-import './search';
+//import './search';
 import './mega-menu';
 
 //import './loader';
