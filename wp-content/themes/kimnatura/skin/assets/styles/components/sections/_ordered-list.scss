@@ -79,12 +79,21 @@ $ordered-list-gap:              $base-content-padding*2.5;
         right: $ordered-list-right;
         transform: translateY(-16px);
         //transform: translate(-$ordered-list-top, -$ordered-list-left); 
-        @include media(mobile tablet){
+        @include media(mobile){
             font-size: 64px;
             height: 64px;
             transform: translateY(12px);
             vertical-align: middle;
             top: 0%;
+            left: -24px;
+        }
+
+        @include media(tablet){
+            font-size: 64px;
+            height: 64px;
+            transform: translateY(12px);
+            vertical-align: middle;
+            top: -5%;
             left: -24px;
         }
     }
