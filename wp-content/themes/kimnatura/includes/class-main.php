@@ -246,8 +246,8 @@ class Main {
      * This will remove some default functionality, but it mostly removes unnecessary
      * meta tags from the head section.
      */
-    $this->loader->add_filter( 'script_loader_src', $theme,'_remove_script_version', 15, 1 );
-    $this->loader->add_filter( 'style_loader_src', $theme,'_remove_script_version', 15, 1 );
+    //$this->loader->add_filter( 'script_loader_src', $theme,'_remove_script_version', 15, 1 );
+    //$this->loader->add_filter( 'style_loader_src', $theme,'_remove_script_version', 15, 1 );
 
     // Gallery.
     $this->loader->add_filter( 'post_gallery', $gallery, 'wrap_post_gallery', 10, 3 );
