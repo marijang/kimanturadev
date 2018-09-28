@@ -326,8 +326,8 @@ class Main {
     });
     
     // Remove Checkout form
-    $this->loader->remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
-    $this->loader->add_action('woocommerce_custom_login_form','woocommerce_checkout_login_form', 10);
+    remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
+    add_action('woocommerce_custom_login_form', 'woocommerce_checkout_login_form', 10);
    
     $this->loader->add_action( 'woocommerce_before_single_product',$woo, 'move_variations_single_price', 1 );
 
@@ -339,7 +339,7 @@ class Main {
     $this->loader->add_action('woocommerce_after_main_content',$woo,'woocommerce_related_products');
     // Add all Filters
     $this->loader->add_filter('b4b_woo_checkout_step',$woo,'multi_step');
-    $this->loader->add_filter("woocommerce_checkout_fields",$woo, "custom_order_fields");
+    $this->loader->add_filter("woocommerce_checkout_fields", $woo, "custom_order_fields");
     $this->loader->add_filter('woocommerce_cart_item_name',$woo,'b4b_woocommerce_cart_item_name',10,3);
 
 
@@ -356,8 +356,8 @@ class Main {
     
     $this->loader->add_action( 'b4b_woo_shipping_notice', $woo, 'shipping_method_notice' );
 
-    $this->loader->remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
-    $this->loader->add_action( 'b4b_woocommerce_checkout_payment', 'woocommerce_checkout_payment', 20 );
+    remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+    add_action( 'b4b_woocommerce_checkout_payment', 'woocommerce_checkout_payment', 20 );
     
     $this->loader->add_filter( 'woocommerce_order_button_text',$woo, 'custom_order_button_text' ); 
     // Add all actions
