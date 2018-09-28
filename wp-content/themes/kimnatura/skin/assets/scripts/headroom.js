@@ -1,5 +1,5 @@
-import $ from 'jquery';
-global.$ = global.jQuery = $;
+//import $ from 'jquery';
+//global.$ = global.jQuery = $;
 import Headroom from 'headroom.js';
 $(function() {
 // grab an element
