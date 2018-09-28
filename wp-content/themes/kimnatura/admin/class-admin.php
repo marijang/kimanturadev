@@ -11,8 +11,6 @@ namespace Kimnatura\Admin;
 
 use Kimnatura\Helpers as General_Helpers;
 use Kimnatura\Admin\b4bProductCategories_widget as b4bProductCategories_widget;
-
-//include_once get_template_directory() . '/widgets/old-b4bProductCategories.php';
 /**
  * Class Admin
  */
