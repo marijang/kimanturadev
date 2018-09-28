@@ -76,33 +76,12 @@ class Blog {
         add_image_size( 'blogarchive', 576 , 500, true ); 
   }
 
-  public function test(){
-        echo "OK OVO RADI SADA";
-       // add_filter('b4b_checkout_step','b4b_test');
-  }
+
 
   function last_news() {		
 		get_template_part( 'section-templates/last-news' );
   }
-  /*
-  if ( is_front_page() && is_home() ) {
-    // Default homepage
-    $this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
-    $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);  
-  } elseif ( is_front_page() ){
-  //Static homepage
-  $this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
-  $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
-  } elseif ( is_home()){
-    //Blog page
-    $this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
-    //  $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
-  } else {
-    //everything else
-    $this->loader->add_action('b4b_after_single_page',$woo,'woocommerce_related_products',10);
-    $this->loader->add_action('b4b_after_single_page',$blog,'last_news',20);
-  }
-  */
+
 
   public function dynamic_load($test=""){
     global $woo;
