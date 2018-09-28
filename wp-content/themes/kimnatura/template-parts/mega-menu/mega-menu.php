@@ -10,9 +10,6 @@
                     </a>
                 
                     <div class="mega-menu__btn-close" id="btn-mega-menu-close"><i class="material-icons">close</i></div>
-                        <!-- <button id="btn-search-close" class="btn btn--search-close" aria-label="Close search form">
-                            <svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
-                        </button> -->
             </div>
 
             <div class="mega-menu__grid"><?php dynamic_sidebar('mega-menu'); ?></div>
