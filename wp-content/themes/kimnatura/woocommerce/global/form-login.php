@@ -57,13 +57,4 @@ if ( is_user_logged_in() ) {
 	<?php do_action( 'woocommerce_login_form_end' ); ?>
 
 </form>
-<script >
-$(document).ready(function() {
-	$(window).load(function() {
 
-	$('.woocommerce-error.woocommerce-message.woocommerce-message--alert').appendTo('.navigation-user');
-
-	});
-
-});
-</script>
