@@ -108,12 +108,13 @@ class Theme {
       wp_enqueue_script( $this->theme_name . 'anime-scripts-vendors' );
 
       $main_script_vandors = '/skin/public/scripts/vendors/materialize.min.js';
-      //wp_register_script( $this->theme_name . 'materialize-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ) );
-      //wp_enqueue_script( $this->theme_name . 'materialize-scripts-vendors');
+    
+      wp_register_script( $this->theme_name . 'materialize-scripts-vendors', get_template_directory_uri() . $main_script_vandors, array(), $this->general_helper->get_assets_version( $main_script_vandors ) );
+      wp_enqueue_script( $this->theme_name . 'materialize-scripts-vendors');
     
 
       $main_script = '/skin/public/scripts/application.js';
-      wp_register_script( $this->theme_name . '-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ) );
+      wp_register_script( $this->theme_name . '-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ));
       wp_enqueue_script( $this->theme_name . '-scripts');
 
 
@@ -136,6 +137,22 @@ class Theme {
     }
   }
 
+
+  
+  /**
+   * Register the JavaScript for the theme area.
+   *
+   * FAnother thing we recommend is to remove query strings from your static resources. 
+   * Resources with a “?” in the URL are not cached by some proxy caching servers or CDNS, 
+   * which could result in a large missed opportunity for increased speeds. 
+   * One way to do this would be to add the following to your functions.php file.
+   *
+   * @since 2.0.0
+   */
+  function _remove_script_version( $src ){
+    $parts = explode( '?ver', $src );
+    return $parts[0];
+  }
 
   
   function add_shortcodes(){
@@ -241,6 +258,19 @@ class Theme {
       )
     );
 
+  }
+
+
+  /**
+   * Remove password strength check.
+   */
+  public function iconic_remove_password_strength() {
+    wp_dequeue_script( 'wc-password-strength-meter' );
+  }
+
+
+  public function login_redirect( $url, $query, $user ) {
+    return home_url();
   }
 
 }

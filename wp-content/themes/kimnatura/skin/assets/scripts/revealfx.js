@@ -1,6 +1,5 @@
 
 
-	'use strict';
 
 	// Helper vars and functions.
 	function extend(a, b) {
