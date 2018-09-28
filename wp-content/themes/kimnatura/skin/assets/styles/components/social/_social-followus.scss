@@ -24,6 +24,7 @@ $social-followus-border-radius: 0;
         flex:1;
         max-height: 34px;
         max-width: 34px;
+        margin-right: 0px!important;
     }
     @include element('link'){
         color: $social-followus-color;
