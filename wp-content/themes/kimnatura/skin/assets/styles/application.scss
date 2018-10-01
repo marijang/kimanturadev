@@ -516,3 +516,23 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
 .ct-ultimate-gdpr-cookie-bottomPanel-padding.popup-modern-style{
     padding-bottom: 0!important;
 }
+
+
+
+
+.woocommerce-result-count.shop__products-result-count.shop-catalog__results {
+    @include media(tablet) {
+       flex: 1;
+       margin-right: 32px;
+    }
+}
+
+#wc-multistep-payment {
+    @include media(tablet) {
+        flex: 2;
+    }
+}
+
+.pswp__container {
+    background-color: white!important;
+}

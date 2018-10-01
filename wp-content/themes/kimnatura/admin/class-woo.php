@@ -22,7 +22,7 @@ class Woo {
    *
    * @since 2.0.0
    */
-  protected $theme_name;
+   protected $theme_name;
 
   /**
    * Global theme version
@@ -31,16 +31,16 @@ class Woo {
    *
    * @since 2.0.0
    */
-  protected $theme_version;
+   protected $theme_version;
 
-  /**
+   /**
    * General_Helper class
    *
    * @var object General_Helper
    *
    * @since 2.1.1
    */
-  public $general_helper;
+   public $general_helper;
 
   /**
    * Initialize class
@@ -50,12 +50,12 @@ class Woo {
    * @since 2.1.1 Adding General Helpers class.
    * @since 2.0.0
    */
-  public function __construct( $theme_info = null ) {
+   public function __construct( $theme_info = null ) {
     $this->theme_name    = $theme_info['theme_name'];
     $this->theme_version = $theme_info['theme_version'];
 
     $this->general_helper = new General_Helpers\General_Helper();
-  }
+   }
 
   /**
    * Enable theme support
@@ -63,84 +63,174 @@ class Woo {
    *
    * @since 2.0.0
    */
-  public function add_theme_support() {
+   public function add_theme_support() {
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'woocommerce' );
     add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
-  }
-
-  /**
-   * Register the Stylesheets for the admin area.
-   *
-   * @since 2.0.0
-   */
-  public function enqueue_styles() {
-
- 
-
-  }
-  /**
-   * Register the JavaScript for the admin area.
-   *
-   * @since 2.0.0
-   */
-  public function enqueue_scripts() {
-
-   
-
-  }
-
-   /**
-   * Register the JavaScript for the admin area.
-   *
-   * @since 2.0.0
-   */
-  public function enqueue_scripts_filter() {
-
-    $main_script = '/skin/public/scripts/widgets/wc-multistep.js';
-    wp_register_script( $this->theme_name . '-multistep-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ), true );
-    wp_enqueue_script( $this->theme_name . '-multistep-scripts');
-
-  }
-/**
-   * Register the JavaScript for the Single Product page .
-   *
-   * @since 2.0.0
-   */
-  public function enqueue_scripts_singlepage() {
-
-    $main_script = '/skin/public/scripts/vendors/woocommerce/singlepage.js';
-    wp_register_script( $this->theme_name . '-multistep-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ), true );
-    wp_enqueue_script( $this->theme_name . '-multistep-scripts' );
-
-  }
+   }
 
 
     /**
-     * Insert the opening anchor tag for products in the loop.
+     * Register the JavaScript for the admin area.
+     *
+     * @since 2.0.0
      */
-    function woocommerce_template_loop_product_link_open() {
-        global $product;
+    public function enqueue_scripts_filter() {
+        $main_script = '/skin/public/scripts/widgets/wc-multistep.js';
+        wp_register_script( $this->theme_name . '-multistep-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ), true );
+        wp_enqueue_script( $this->theme_name . '-multistep-scripts');
+    }
 
-        $link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
+    /**
+     * Register the JavaScript for the Single Product page .
+     *
+     * @since 2.0.0
+     */
+    public function enqueue_scripts_singlepage() {
+        $main_script = '/skin/public/scripts/vendors/woocommerce/singlepage.js';
+        wp_register_script( $this->theme_name . '-multistep-scripts', get_template_directory_uri() . $main_script, array(), $this->general_helper->get_assets_version( $main_script ), true );
+        wp_enqueue_script( $this->theme_name . '-multistep-scripts' );
+    }
 
-        echo '<a href="' . esc_url( $link ) . '" class="shop-catalog__link-wrap">';
+    /**
+     * Hide shipping rates when free shipping is available.
+     * Updated to support WooCommerce 2.6 Shipping Zones.
+     *
+     * @param array $rates Array of rates found for the package.
+     * @return array
+     */
+    public function my_hide_shipping_when_free_is_available( $rates ) {
+        $free = array();
+        foreach ( $rates as $rate_id => $rate ) {
+            if ( 'free_shipping' === $rate->method_id ) {
+                $free[ $rate_id ] = $rate;
+                break;
+            }
+        }
+        return ! empty( $free ) ? $free : $rates;
+    }
+
+    public function my_woocommerce_catalog_orderby( $orderby ) {
+        unset($orderby["rating"]);		// Remove "Sort by average rating"
+        return $orderby;
     }
 
 
-  public function custom_order_button_text() {
-      return __( 'Platite', 'woocommerce' ); 
-  }
+    // Brisanje svih vrsta naplate dostave (npr. flat rate:)
+    /**
+     * @snippet       Removes shipping method labels @ WooCommerce Cart
+     * @how-to        Watch tutorial @ https://businessbloomer.com/?p=19055
+     * @sourcecode    https://businessbloomer.com/?p=484
+     * @author        Rodolfo Melogli
+     * @testedwith    WooCommerce 2.6.2
+     */
+    
+    public function bbloomer_remove_shipping_label($label, $method) {
+        $new_label = preg_replace( '/^.+:/', '', $label );
+        return $new_label;
+    }
 
- /**
-   * Billing Fields
-   *
-   * @since 2.0.0
-   */
 
-  public function custom_order_fields($fields) {
+    /**
+     * Mislav PDF
+     * Updated to support WooCommerce 2.6 Shipping Zones.
+     *
+     * @param array $rates Array of rates found for the package.
+     * @return array
+     */
+    public function wpo_wcpdf_custom_filename( $filename, $template_type, $order_ids, $context ) {
+        $invoice_string = _n( 'invoice', 'invoices', count($order_ids), 'woocommerce-pdf-invoices-packing-slips' );
+        $new_prefix = _n( 'narudzba', 'narudzba', count($order_ids), 'woocommerce-pdf-invoices-packing-slips' );
+        $new_filename = str_replace($invoice_string, $new_prefix, $filename);   
+        return $new_filename;
+    }
+
+    /**
+     * Mislav PDF
+     * Updated to support WooCommerce 2.6 Shipping Zones.
+     *
+     * @param array $rates Array of rates found for the package.
+     * @return array
+     */
+    public function wpo_wcpdf_invoice_title () {
+        $invoice_title = 'NARUDŽBA';
+        return $invoice_title;
+    }
+
+
+    /**
+     * ??
+     * ??
+     *
+     * @param array $rates Array of rates found for the package.
+     * @return array
+     */
+    public function wpo_wcpdf_thank_you_link( $text, $order ) {
+        // if ( is_user_logged_in() ) {
+            $order_id = method_exists($order, 'get_id') ? $order->get_id() : $order->id;
+            $pdf_url = wp_nonce_url( admin_url( 'admin-ajax.php?action=generate_wpo_wcpdf&template_type=invoice&order_ids=' . $order_id . '&my-account'), 'generate_wpo_wcpdf' );
+            $text .= '<div class="thanks__button"><a class="checkout-button button alt wc-forward btn btn--primary-color" href="'.esc_attr($pdf_url).'">Preuzmite PDF</a></div>';
+        //}
+        return $text;
+    }
+
+    /**
+     * ??
+     * ??
+     *
+     * @param array $rates Array of rates found for the package.
+     * @return array
+     */
+    public function terms_and_conditions_validation( $username, $email, $validation_errors ) {
+        if ( ! isset( $_POST['terms'] ) )
+            $validation_errors->add( 'terms_error', __( 'Terms and condition are not checked!', 'woocommerce' ) );
+    
+        return $validation_errors;
+    }
+
+
+    /**
+     * ??
+     * ??
+     *
+     * @param array $rates Array of rates found for the package.
+     * @return array
+     */
+    public function add_terms_and_conditions_to_registration() {
+        $terms_page_id = wc_get_page_id( 'terms' );
+    
+        if ( $terms_page_id > 0 ) {
+            $terms         = get_post( $terms_page_id );
+            $terms_content = has_shortcode( $terms->post_content, 'woocommerce_checkout' ) ? '' : wc_format_content( $terms->post_content );
+    
+            if ( $terms_content ) {
+                echo '<div class="woocommerce-terms-and-conditions" style="display: none; max-height: 200px; overflow: auto;">' . $terms_content . '</div>';
+            }
+            ?>
+            <p id="terms_cond" class="form-row terms wc-terms-and-conditions">
+                <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                    <input type="checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" 
+                    name="terms" 
+                    <?php checked( apply_filters( 'woocommerce_terms_is_checked_default', isset( $_POST['terms'] ) ), true ); ?> id="terms" /> 
+                    <span><?php printf( __( 'Pristajem na <a href="%s"  class="woocommerce-terms-and-conditions-link">uvjete korištenja</a>', 'woocommerce' ), "/uvjeti-koristenja-internetske-stranice" ); ?></span> <span class="required">*</span>
+                </label>
+                <input type="hidden" name="terms-field" value="1" />
+            </p>
+        <?php
+        }
+    }
+    
+  
+    /**
+     * ??
+     * ??
+     *
+     * @param array $rates Array of rates found for the package.
+     * @return array
+     */  
+    function order_fields($fields) {
         unset($fields['order']['order_comments']);
         unset($fields['billing']['billing_company']); // remove the option to enter in a company
         unset($fields['billing']['billing_state']); // remove the billing state
@@ -155,10 +245,55 @@ class Woo {
         $fields["billing"]['billing_postcode']['priority']	= 60;
         $fields["billing"]['billing_city']['priority']		= 70;
         $fields["billing"]['billing_country']['priority']	= 190;
-       // $fields["billing"]['billing_city']['class']         = array('form-row-first'); 
-       // $fields["billing"]['billing_postcode']['class']     = array('form-row-last');
+        $fields["billing"]['billing_city']['class']         = array('form-row-first'); 
+        $fields["billing"]['billing_postcode']['class']     = array('form-row-last');
         //$fields["billing"]['billing_country']['class']    	= array('form-row-wide');
         //var_dump($fields);
+        return $fields;
+    }
+
+
+  /**
+   * Insert the opening anchor tag for products in the loop.
+   */
+   public function woocommerce_template_loop_product_link_open() {
+        global $product;
+        $link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
+        echo '<a href="' . esc_url( $link ) . '" class="shop-catalog__link-wrap">';
+   }
+
+
+  public function custom_order_button_text() {
+      return __( 'Platite', 'woocommerce' ); 
+  }
+
+  public function custom_default_address_fields( $fields ) {
+    unset($fields['state']);
+	unset($fields['company']);
+    return $fields;
+  }
+
+  
+
+ /**
+   * Billing Fields
+   *
+   * @since 2.0.0
+   */
+
+  public function custom_order_fields($fields) {
+        unset($fields['order']['order_comments']);
+        unset($fields['billing']['billing_company']);
+        unset($fields['billing']['billing_state']); 
+        unset($fields['billing']['billing_address_2']); 
+        $fields["billing"]['billing_first_name']['priority']= 10;
+        $fields["billing"]['billing_last_name']['priority'] = 20;
+        $fields["billing"]['billing_email']['priority']		= 30;
+        $fields["billing"]['billing_address_1']['priority'] = 40;
+        $fields["billing"]['billing_phone']['priority']		= 50;
+        $fields["billing"]['billing_postcode']['priority']	= 60;
+        $fields["billing"]['billing_city']['priority']		= 70;
+        $fields["billing"]['billing_country']['priority']	= 190;
         return $fields;
   }
 
@@ -195,10 +330,6 @@ class Woo {
         $title =  __('Upsale proizvodi','b4b');
         $productIDs = array_unique (array_merge ($upsell , $cross,$related));
         if(count($productIDs)<3){
-            //$related = wc_get_related_products($product->get_id());
-            // wc_get_product_ids_on_sale
-            // wc_get_related_products
-            //var_dump($related);wc_get_product_category_list
             $category = wc_get_product_cat_ids($product->get_id());
             $args1 = array(
                 'post_type' => 'product',
@@ -224,12 +355,10 @@ class Woo {
         }
         $productIDs = array_unique (array_merge ($upsell , $cross,$related,$category));
     }else{
-       // echo $post->ID();
        $productIDs ='';
        if (isset($post)){
-        $productIDs = get_post_meta($post->ID,'custom_productIds',true);
+            $productIDs = get_post_meta($post->ID,'custom_productIds',true);
        }
-       
         $title =  __('Vezani proizvodi','kimnatura');
     }
     
@@ -260,8 +389,8 @@ class Woo {
     
     $loop = new \WP_Query( $args );
     require( locate_template( 'template-parts/woocommerce/related-products.php' ) );
-    wp_reset_query(); 
-    wp_reset_postdata();
+    //wp_reset_query(); 
+    //wp_reset_postdata();
 
 }
 
@@ -319,22 +448,8 @@ class Woo {
     if (is_account_page()) {
       $t .="acount_page";
     }
-    if (is_cart()) {
-      //$t .="Cart";
-    }
+    
 
-  
-    /*
-    if (Is_view_order_page()) {
-      $step =  2;
-    }
-    if (Is_order_received_page()) {
-      $step =  3;
-    }
-    if (Is_view_order_page()) {
-      $step =  4;
-    }
-     */
  
     $t  .= '<ul class="cart-checkout-navigation browser-default">';
     // First item
@@ -448,7 +563,7 @@ class Woo {
      * @param array $rates Array of rates found for the package.
      * @return array
      */
-   public  function my_hide_shipping_when_free_is_available( $rates ) {
+   public  function my_hide_shipping_when_free_is_available_old( $rates ) {
         $free = array();
  
         foreach ( $rates as $rate_id => $rate ) {

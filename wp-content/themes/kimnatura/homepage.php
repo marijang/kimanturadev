@@ -30,5 +30,5 @@ do_action('b4b_after_home_page');
 get_template_part( 'section-templates/sastojci-hero' );
 get_template_part( 'template-parts/single/newsletter' );
 
-get_sidebar();
+//get_sidebar();
 get_footer();

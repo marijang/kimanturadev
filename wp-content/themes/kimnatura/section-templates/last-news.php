@@ -35,7 +35,9 @@ get_template_part( 'template-parts/listing/articles/list' );
 get_template_part( 'template-parts/listing/articles/list-odd' );
     $current = 'even';
   }
+  
 endforeach;
 wp_reset_postdata();	
+
 echo '</div>';
 echo '</div>';

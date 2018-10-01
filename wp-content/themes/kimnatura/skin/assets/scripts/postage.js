@@ -1,7 +1,7 @@
 
 
-import $ from 'jquery';
-global.$ = global.jQuery = $;
+//import $ from 'jquery';
+//global.$ = global.jQuery = $;
 
 $(function(){
     $( document.body ).on( 'updated_cart_totals',function(){

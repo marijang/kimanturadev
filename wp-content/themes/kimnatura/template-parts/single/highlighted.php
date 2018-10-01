@@ -31,7 +31,7 @@
       </div>
       <div class="section__image-homepage">  <?php the_post_thumbnail( 'highlighted',array('class' => 'kenburns-bottom'));  ?></div>
       </div>
-      <?php require locate_template( 'template-parts/parts/google-rich-snippets.php' ); ?>
+      <?php //require locate_template( 'template-parts/parts/google-rich-snippets.php' ); ?>
   </div>
 
 </article>

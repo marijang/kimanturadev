@@ -7,7 +7,7 @@ Description: This plugin displays a list of products of a certain category on yo
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class b4bProductCategories_widget extends WP_Widget {
+class old2b4bProductCategories_widget extends WP_Widget {
     // Set up the widget name and description.
 
     protected $scripts = array();

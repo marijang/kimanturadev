@@ -23,6 +23,11 @@ import './form-fields/inputnumber';
 import './form-fields/checkbox_gdpr';
 import './form-fields/validation';
 import './components/removeItems';
+import './components/account-nav';
+import './components/proceed-to-payment';
+import './components/login';
+import './components/to-top-shop';
+
 
 import './app';
 
@@ -37,4 +42,5 @@ import './loader';
 import './wspay';
 import './postage';
 import './featured';
+import './menu';
 import '/woocommerce';

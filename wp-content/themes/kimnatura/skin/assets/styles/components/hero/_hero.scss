@@ -86,18 +86,27 @@ $hero-transition-duration-in: .9s;
         opacity: 1;
         @extend %bg-image;
         background-size: contain;
-        @include media(mobile tablet){
+        @include media(mobile){
             background-size: cover;
             background-position: 100%;
         }
 
+
+        
        
 
         @include media(tablet){
-        
+            background-size: 70%;
             min-height: 350px;
-            margin-right: -80px; // Usrane slike
+            background-position: right;
         }
+
+        @include media(tablet, landscape){
+            background-size: 80%;
+            min-height: 350px;
+            background-position: right;
+        }
+
         @include media(mobile, landscape) {
             min-height: 350px; // Usrane slike
             background-size: 60%;

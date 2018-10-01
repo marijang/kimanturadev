@@ -22,6 +22,7 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
         padding: $base-content-padding/2;
         @include media(tablet){
             padding: $base-content-padding/4;
+            margin-left: 4px;
         }
         
     }
@@ -72,6 +73,11 @@ $main-menu-mobile-bottom-spacing: $base-content-padding*2;
                 transform: scale(0, 1); 
                 @include media(mobile){
                     display: none;
+                }
+
+                @include media(tablet){
+                    width: 8px;
+                    left: -$base-content-padding/3;
                 }
             }
     }

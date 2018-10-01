@@ -1,18 +1,23 @@
 <?php
-/*
-Plugin Name: B4B Products by category
-Description: This plugin displays a list of products of a certain category on your website.
-*/
+
+/**
+ * The login page specific functionality.
+ *
+ * @since   2.0.0
+ * @package Kimnatura\Admin
+ */
+namespace Kimnatura\Admin;
+
+//use WP_Widget as WP_Widget;
 
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
-class b4bProductCategories_widget extends WP_Widget {
+class b4bProductCategories_widget extends \WP_Widget  {
     // Set up the widget name and description.
 
     protected $scripts = array();
 
     public function __construct() {
+       
         $widget_options = array( 
             'classname' => 'b4bProductCategories_widget', 
             'description' => 'Custom B4b Woocommerce Category Widget' 
@@ -78,20 +83,7 @@ class b4bProductCategories_widget extends WP_Widget {
             'taxonomy' => 'product_cat'
             ); 
            
-         $term_query = new WP_Term_Query(  $args_post );
-         if ( ! empty( $term_query->terms ) ) {
-             foreach ( $term_query->terms as $term ) {
-              
-                 if($term->slug!='uncategorized'){
-                  //  $categories[] = $term->slug;
-                    //echo $term->slug;
-                 }
-                 
-             }
-         } else {
-        
-         }
-
+    
          $_GET['kategorija'] = get_query_var( 'product_cat' );
       
 
@@ -193,7 +185,7 @@ class b4bProductCategories_widget extends WP_Widget {
     }
     
 // Register the widget.
-function b4bProductCategories_widget() { 
-register_widget( 'b4bProductCategories_widget' );
-}
-add_action( 'widgets_init', 'b4bProductCategories_widget' );
+//function b4bProductCategories_widget() { 
+//register_widget( 'b4bProductCategories_widget' );
+//}
+//add_action( 'widgets_init', 'b4bProductCategories_widget' );
