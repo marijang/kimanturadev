@@ -57,4 +57,3 @@ if ( is_user_logged_in() ) {
 	<?php do_action( 'woocommerce_login_form_end' ); ?>
 
 </form>
-
