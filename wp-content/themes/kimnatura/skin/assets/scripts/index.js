@@ -43,4 +43,4 @@ import './wspay';
 import './postage';
 import './featured';
 import './menu';
-import '/woocommerce';
+import './woocommerce';
