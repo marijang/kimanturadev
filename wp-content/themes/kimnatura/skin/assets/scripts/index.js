@@ -27,7 +27,7 @@ import './components/account-nav';
 import './components/proceed-to-payment';
 import './components/login';
 import './components/to-top-shop';
-
+import './components/payment';
 
 import './app';
 
