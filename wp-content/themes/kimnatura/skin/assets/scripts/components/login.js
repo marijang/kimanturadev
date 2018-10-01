@@ -85,10 +85,5 @@ jQuery('#reg-toggle-mobile').on('click', function(){
 
 
 $(document).ready(function() {
-	$(window).load(function() {
-
 	$('.woocommerce-error.woocommerce-message.woocommerce-message--alert').appendTo('.navigation-user');
-
-	});
-
 });
