@@ -27,7 +27,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 }
 ?>
 
-<form name="checkout" method="post" class="cart-checkout-navigation__form checkout woocommerce-checkout" enctype="multipart/form-data">
+<form name="checkout" method="post" class="cart-checkout-navigation__form checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 	<!--ovo je tu prebačeno iz form-billinga -->
 	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
 
