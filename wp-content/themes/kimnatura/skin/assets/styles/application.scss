@@ -445,7 +445,7 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
 .ct-ultimate-gdpr-cookie-popup-modern .ct-container {
     width: 1170px;
 
-    @include media(mobile tablet) {
+    @include media(mobile tablet desktop) {
         width: 100%;
     }
 }
