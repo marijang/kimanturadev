@@ -1,6 +1,6 @@
 
-import $ from 'jquery';
-global.$ = global.jQuery = $;
+//import $ from 'jquery';
+//global.$ = global.jQuery = $;
 
 $(function() {
 $(document).ready(function(){
