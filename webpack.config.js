@@ -100,6 +100,22 @@ const allPlugins = [
     from: `${themeFullPath}/assets/scripts/widgets`,
     to: `${themeOutput}/scripts/widgets`,
   }]),
+
+  // new CopyWebpackPlugin([
+  //    // Find jQuery in node_modules and copy it to public folder
+  //   {
+  //     from: `${appPath}/node_modules/jquery/dist/jquery.min.js`,
+  //     to: `${themeOutput}/scripts/vendors`,
+  //   },
+  //    // If using images in css to reference directly put them in this folder. That will override the cache-busting.
+  //   {
+  //     from: `${themePath}/assets/static`,
+  //     to: `${themeOutput}/static`,
+  //   },
+  // ]),
+
+  
+
 ];
 
 const allOptimizations = {
@@ -149,6 +165,10 @@ module.exports = [
       path: themeOutput,
       publicPath: themePublicPath,
       filename: outputJs,
+    },
+    // Don't bundle jQuery but expect it from a different source.
+    externals: {
+      jquery: 'jQuery',
     },
 
     optimization: allOptimizations,
