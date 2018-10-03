@@ -90,16 +90,16 @@ const allPlugins = [
 
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 
-  // // Is using vendor files, but prefered to use npm
-  // new CopyWebpackPlugin([{
-  //   from: `${themeFullPath}/assets/scripts/vendors`,
-  //   to: `${themeOutput}/scripts/vendors`,
-  // }]),
+  // Is using vendor files, but prefered to use npm
+  new CopyWebpackPlugin([{
+    from: `${themeFullPath}/assets/scripts/vendors`,
+    to: `${themeOutput}/scripts/vendors`,
+  }]),
 
-  // new CopyWebpackPlugin([{
-  //   from: `${themeFullPath}/assets/scripts/widgets`,
-  //   to: `${themeOutput}/scripts/widgets`,
-  // }]),
+  new CopyWebpackPlugin([{
+    from: `${themeFullPath}/assets/scripts/widgets`,
+    to: `${themeOutput}/scripts/widgets`,
+  }]),
 
   // new CopyWebpackPlugin([
   //    // Find jQuery in node_modules and copy it to public folder
@@ -114,25 +114,9 @@ const allPlugins = [
   //   },
   // ]),
 
-  // Copy from one target to new destination.
-  new CopyWebpackPlugin([
-    
-        // Find jQuery in node_modules and copy it to public folder
-        {
-          from: `${appPath}/node_modules/jquery/dist/jquery.min.js`,
-          to: `${themeOutput}/scripts/vendors`,
-        },
-    
-        // If using images in css to reference directly put them in this folder. That will override the cache-busting.
-        {
-          from: `${themePath}/assets/static`,
-          to: `${themeOutput}/static`,
-        },
-      ]),
-    
-      // Create manifest.json file.
-      new ManifestPlugin(),
-  ];
+  
+
+];
 
 const allOptimizations = {
   runtimeChunk: false,
