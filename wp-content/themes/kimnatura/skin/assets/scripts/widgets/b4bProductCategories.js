@@ -33,13 +33,16 @@ $(document).ready( function() {
     });
 
 
-    var uncheckParent = function(){
-        $('input[name="product_cat[]"]:checked').each(function() {
-            if ($(this).data('child') != null) {
-                $('input[data-parent="' + $(this).data('child') + '"]').prop('checked', false);
-            } 
-        })
-    
+    var uncheckParent = function(el){
+        if (el.data('parent') != null) {
+            $('input[data-child="' + el.data('parent') + '"]').prop('checked', false);
+        } else {
+            $('input[name="product_cat[]"]:checked').each(function() {
+                if ($(this).data('child') != null) {
+                    $('input[data-parent="' + $(this).data('child') + '"]').prop('checked', false);
+                } 
+            })
+        }
     }
 
     // Open default
@@ -62,6 +65,7 @@ $(document).ready( function() {
             $target.val(total);
         });
         $target.val(total);
+
     }
     
     function calcHeight(){
@@ -127,7 +131,7 @@ $(document).ready( function() {
  
 
     $('input[name="product_cat[]"]').on('click',function(){
-        uncheckParent();
+        uncheckParent($(this));
         setValue();
         if($('input[name="product_cat"]').val()!=''){
             window.location.href = "/proizvodi/kategorija/"+$('input[name="product_cat"]').val();
@@ -135,4 +139,6 @@ $(document).ready( function() {
             window.location.href = "/proizvodi/";
         }
     });
+
+
 });
