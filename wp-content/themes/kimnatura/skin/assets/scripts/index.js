@@ -5,6 +5,7 @@
 
 //import './lazyloading';
 
+
 import './jquery.validate.min';
 import './fonts';
 
