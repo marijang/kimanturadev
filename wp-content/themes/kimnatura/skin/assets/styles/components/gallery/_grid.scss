@@ -69,6 +69,7 @@ $grid-item-title-space-bottom: $base-content-padding;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: $grid-gap-column $grid-gap-row;
+    margin-bottom: $grid-gallery-space-bottom/2;
 
     @include media(mobile){
         grid-template-columns: 1fr;
