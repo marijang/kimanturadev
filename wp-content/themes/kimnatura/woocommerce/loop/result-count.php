@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	//printf( _nx( 'Showing the single result', 'Showing all %d results', $total, 'woocommerce' ), $total );
 	if ( $total <= $per_page || -1 === $per_page ) {
 		/* translators: %d: total results */
-		printf( _nx( 'Prikazujemo jedan rezultat', 'Prikazujemo sva %d rezultata', $total, 'woocommerce' ), $total );
+		printf( _nx( 'Prikazujemo jedan rezultat', 'Prikazujemo svih %d rezultata', $total, 'woocommerce' ), $total );
 	} else {
 		$first = ( $per_page * $current ) - $per_page + 1;
 		$last  = min( $total, $per_page * $current );
