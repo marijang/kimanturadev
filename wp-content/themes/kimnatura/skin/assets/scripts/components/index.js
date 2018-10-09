@@ -7,4 +7,4 @@ $(function() {
   scrollTo.scrolltoTopElement();
 });
 
-import './touchend';
+//import './touchend';
