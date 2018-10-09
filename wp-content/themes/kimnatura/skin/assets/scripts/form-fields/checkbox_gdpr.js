@@ -150,7 +150,7 @@ $('.woocommerce-MyAccount-content [for="ct-ultimate-gdpr-consent-field-woocommer
   $('.newsletter__content input[name="EMAIL"]').parent().css('margin-bottom', "0px");
 
 
-    $('input [name!="EMAIL"]').focus();
+   // $('input [name!="EMAIL"]').focus();
 
 
 
