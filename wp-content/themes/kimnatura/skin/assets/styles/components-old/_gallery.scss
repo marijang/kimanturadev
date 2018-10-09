@@ -49,6 +49,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 32px 40px;
+    margin-bottom: 32px;
 
     @include e('item'){
         padding: 0;
