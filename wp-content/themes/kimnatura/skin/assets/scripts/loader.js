@@ -1,8 +1,8 @@
 //import $ from 'jquery';
 //global.$ = global.jQuery = $;
 
-function showLoader(){
-    if (sessionStorage.getItem("lastRun") === null /*|| (Math.abs(new Date(localStorage.getItem("lastRun")) - new Date()) / 36e5) > 1*/) {
+/*function showLoader(){
+    if (sessionStorage.getItem("lastRun") === null ) {
                         $("body").addClass("loader-open");
                      
                         $(".loader__wrap").addClass("view");
@@ -15,10 +15,9 @@ function showLoader(){
                                 $("body").removeClass("loader-open");
                                
                             },2000)
-                         }, 2500); //1500
+                         }, 2500); 
                    }
                    else{
-                   // $('.loader__wrap').addClass('loader-hidden');
                     $('.loader__wrap').remove();
                     
                    }
@@ -26,7 +25,7 @@ function showLoader(){
 
 $(document).ready(function() {
     showLoader();
-});
+});*/
 
 // $(document).ready(function() {
 //         $(window).on("load", function() {
