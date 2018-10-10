@@ -63,9 +63,11 @@ if (kdmfi_has_featured_image('featured-image-2')){
       <section class="two-column-grid">
         <?php 
         $prods = get_post_meta( get_the_ID() , 'post_products', true );
+        if ($prods != null ) {
         $args = array(
           'post_type' => 'product',
-          'post__in'      => $prods
+          'post__in'      => $prods,
+					'posts_per_page' => -1
        );
        // The Query
        $the_query = new WP_Query( $args );
@@ -75,6 +77,7 @@ if (kdmfi_has_featured_image('featured-image-2')){
           get_template_part( 'template-parts/listing/articles/single-post' );
         }
       }
+    }
       wp_reset_query();
          ?>        
       </section>

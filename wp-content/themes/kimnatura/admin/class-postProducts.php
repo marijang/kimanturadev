@@ -116,12 +116,9 @@ class PostProducts {
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 			return $post_id;
 		foreach ( $this->meta_fields as $meta_field ) {
-			if ( isset( $_POST[ $meta_field['id'] ] ) ) {
                     update_post_meta( $post_id, $meta_field['id'], $_POST[ $meta_field['id'] ] );
                
-			} else if ( $meta_field['type'] === 'checkbox' ) {
-				update_post_meta( $post_id, $meta_field['id'], '0' );
-			}
+			
 		}
 	}
 }
