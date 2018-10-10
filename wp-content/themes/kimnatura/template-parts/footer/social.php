@@ -12,7 +12,7 @@ $icons_dir =  KIM_IMAGE_URL . 'social-share/';
 $array = array(
     array(
         "value" => 'Facebook',
-        "link"  => '#facebook',
+        "link"  => 'https://www.facebook.com/pg/kimnatura.hr/',
         "image" => 'facebook.svg'
     )
 );
