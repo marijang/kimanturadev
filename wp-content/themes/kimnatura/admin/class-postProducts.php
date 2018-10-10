@@ -28,6 +28,8 @@ class PostProducts {
 	}
 	public function add_meta_boxes() {
 		foreach ( $this->screen as $single_screen ) {
+			$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+			if ( $post_id && in_category( 'slider-hero', $post_id ) ) {
 			add_meta_box(
 				'postproducts',
 				__( 'Uključeni proizvodi', 'textdomain' ),
@@ -36,6 +38,7 @@ class PostProducts {
 				'normal',
 				'default'
 			);
+		}
 		}
 	}
 	public function meta_box_callback( $post ) {
