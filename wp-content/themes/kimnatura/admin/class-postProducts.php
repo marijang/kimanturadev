@@ -61,7 +61,8 @@ class PostProducts {
                     $meta_field['id']
                 );
                 $args = array(
-                    'post_type'=> 'product'
+					'post_type' => 'product',
+					'posts_per_page' => -1
                     );              
                 
                 $query = new \WP_Query( $args );
