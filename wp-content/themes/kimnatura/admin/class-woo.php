@@ -600,7 +600,7 @@ public function shipping_method_notice() {
     // Calculate price if zone is selected
 	foreach ( $zone->get_shipping_methods( true ) as $k => $method ) {
 		$min_amount = $method->get_option( 'min_amount' );
-		if ( $method->id == 'free_shipping' && ! empty( $min_amount ) && $cart_total < $min_amount ) {
+		if ( $method->id == 'free_shipping' && ! empty( $min_amount ) && $cart_total < $min_amount && $zone->get_zone_name() == 'Croatia' ) {
 			$remaining = $min_amount - $cart_total;
 			$message =  sprintf( 'Dodajte proizvoda za još %s kako biste ostvarili besplatnu dostavu!', wc_price( $remaining ) );
 		}
@@ -617,7 +617,7 @@ public function shipping_method_notice() {
 					// Free shipping method rules
 					if ( $method->id == 'free_shipping'){
 						// Cart total less then min_amount
-						if (! empty( $min_amount ) && $cart_total < $min_amount ) {
+						if (! empty( $min_amount ) && $cart_total < $min_amount && $zone->get_zone_name() == 'Croatia' ) {
 							$remaining = $min_amount - $cart_total;
 							$message=  sprintf( 'Ako dodate još %s ostvariti ćete besplatnu dostavu!', wc_price( $remaining ) );
 						}
