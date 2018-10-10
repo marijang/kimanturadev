@@ -77,8 +77,8 @@ if (kdmfi_has_featured_image('featured-image-2')){
           get_template_part( 'template-parts/listing/articles/single-post' );
         }
       }
-    }
       wp_reset_query();
+    }
          ?>        
       </section>
   <?php endif ?>
