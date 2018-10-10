@@ -25,6 +25,7 @@ use Kimnatura\Admin\Rest\Postage as Postage;
 use Kimnatura\Admin\MailChimp as MailChimp;
 use Subtitles as Subtitles;
 use Kimnatura\Admin\b4bProductCategories_widget;
+use Kimnatura\Admin\PostProducts;
 /**
  * The main start class.
  *
@@ -89,6 +90,7 @@ class Main {
     $this->define_woo_hooks(); 
     $this->define_blog_hooks();
     $this->define_rest();
+    $this->define_metaboxes();
 
 
   }
@@ -98,6 +100,10 @@ class Main {
     Example::listen();
     Search::listen();
     Postage::listen();
+  }
+
+  public function define_metaboxes() {
+    new PostProducts($this->get_theme_info() );
   }
 
   /**
@@ -185,6 +191,9 @@ class Main {
     //$this->loader->add_action( 'init',$admin, 'slidercategory', 0 );
     //$this->loader-> add_action( 'init', $admin,'slider', 10 );
 
+
+
+
   }
 
   /**
@@ -266,6 +275,8 @@ class Main {
     $this->loader->add_action( 'wp_print_scripts',$theme, 'iconic_remove_password_strength', 10 );
 
     $this->loader->add_filter( 'login_redirect', $theme,'login_redirect', 10, 3 );
+
+    
     
 
   }

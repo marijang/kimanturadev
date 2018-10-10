@@ -59,5 +59,24 @@ if (kdmfi_has_featured_image('featured-image-2')){
     </div>
   </div>
   <?php require locate_template( 'template-parts/parts/google-rich-snippets.php' ); ?>
+  <?php if (in_category('slider-hero')) : ?>
+      <section class="two-column-grid">
+        <?php 
+        $prods = get_post_meta( get_the_ID() , 'post_products', true );
+        $args = array(
+          'post_type' => 'product',
+          'post__in'      => $prods
+       );
+       // The Query
+       $the_query = new WP_Query( $args );
+       if ($the_query->have_posts()) {
+        $posts = $the_query->posts;
+        foreach ($posts as $post) {
+          get_template_part( 'template-parts/listing/articles/single-post' );
+        }
+      }
+      wp_reset_query();
+         ?>        
+      </section>
+  <?php endif ?>
 </article>
-

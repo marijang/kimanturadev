@@ -26,8 +26,7 @@
     </div>
     <?php if (get_post_type() == "product") : ?>
     <p class="featured-link__categories" style="margin-top: -16px;margin-bottom: 12px;"><?php 
-    global $product;
-    $product_cats = wp_get_post_terms( $product->get_id(), 'product_cat' );
+    $product_cats = wp_get_post_terms( get_the_id(), 'product_cat' );
             $categories = "";
             for ( $i = 0; $i < sizeof($product_cats); $i++ ) {
                 $categories = $categories . $product_cats[$i]->name;

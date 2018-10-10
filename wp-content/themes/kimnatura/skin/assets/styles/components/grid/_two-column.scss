@@ -1,0 +1,13 @@
+$row-gap : $base-content-padding;
+$column-gap : $base-content-padding;
+
+@include b('two-column-grid') {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: $row-gap;
+    grid-column-gap: $column-gap;
+
+    @include media(mobile) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
