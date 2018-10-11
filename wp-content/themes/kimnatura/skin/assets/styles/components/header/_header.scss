@@ -18,6 +18,20 @@ html.mobile-menu-is-open{
 }
 
 @include b('header'){
+
+    @include e('language') {
+        color: $title-link-color;
+
+        &:hover {
+            color: $primary-color;
+        }
+
+        &.disabled {
+            display: none;
+        }
+    }
+
+
     @include e('container'){
         z-index: 1200;
         

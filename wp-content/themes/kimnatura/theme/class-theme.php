@@ -123,7 +123,7 @@ class Theme {
       // If using WPML.
       $ajax_url = '';
       if ( defined( 'ICL_LANGUAGE_CODE' ) ) {
-        $ajax_url .= admin_url( 'admin-ajax.php?lang=' . ICL_LANGUAGE_CODE );
+        $ajax_url .= admin_url( 'admin-ajax.php' /*. ICL_LANGUAGE_CODE */ );
       } else {
         $ajax_url .= admin_url( 'admin-ajax.php' );
       }

@@ -45,11 +45,15 @@ $array = array(
     <span class="main-navigation__user-info">Prijava</span>
     </a>
     <?php endif  ?>
+   
+  
     </div>
 
+    
   <div class="header__mobile-user-menu mobile-only">
       <!--<a href="" class="main-navigation__link header__mobile-lang">Engleski</a>-->
- 
+      
+      
     <div class="header__mobile-contact">
      <div class="header__mobile-contact-phone"><a href="tel:+385993474302">+385993474302</a></div>
      <div class="header__mobile-contact-mail"><a href="mailto:info@kimnatura.hr">info@kimnatura.hr</a></div>
@@ -59,7 +63,7 @@ $array = array(
             foreach($array as $item){
             ?>
                 <li class="social-followus__item">
-                    <a href="<?php echo $item['link']?>" class="social-followus__link">
+                    <a target="_blank" rel="noopener noreferrer" href="<?php echo $item['link']?>" class="social-followus__link">
                     <?php  get_template_part('skin/public/images/inline/inline-'.$item['image']) ?>
                     </a>
                 </li>
@@ -79,11 +83,19 @@ $array = array(
   </div>
 
    <div class="header__user-menu">
-   
+  
+  
 
 <ul id="site-header-cart" class="main-navigation main-navigation--secondary">
-    <li class="main-navigation__item desktop-only">
-       <!-- <a href="" class="main-navigation__link">EN</a> -->
+    <li class="main-navigation__item">
+   
+       <?php   
+       if (current_user_can('editor') || current_user_can('administrator') ) { ?>
+        <a class="header__language" href="<?php echo get_site_url() . '/en/' ?>"> EN </a>
+
+        <a class="header__language" href="<?php echo get_site_url() . '/hr/' ?>"> HR </a>
+       <?php } ?> 
+       
     </li>
     <li class="main-navigation__item" id="eng">
         <a href="#" id="btn-search" class="main-navigation__link">

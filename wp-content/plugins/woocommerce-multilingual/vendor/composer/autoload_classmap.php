@@ -422,6 +422,7 @@ return array(
     'WCML_Setup_Store_Pages_UI' => $baseDir . '/inc/template-classes/setup/class-wcml-setup-store-pages-ui.php',
     'WCML_Setup_Translation_Options_UI' => $baseDir . '/inc/template-classes/setup/class-wcml-setup-translation-options-ui.php',
     'WCML_Setup_UI' => $baseDir . '/classes/wcml-setup/class-wcml-setup-ui.php',
+    'WCML_St_Taxonomy_UI' => $baseDir . '/inc/template-classes/class-wcml-st-taxonomy-ui.php',
     'WCML_Status_Config_Warnings_UI' => $baseDir . '/inc/template-classes/status/class-wcml-status-config-warnings-ui.php',
     'WCML_Status_Media_UI' => $baseDir . '/inc/template-classes/status/class-wcml-status-media-ui.php',
     'WCML_Status_Multi_Currencies_UI' => $baseDir . '/inc/template-classes/status/class-wcml-status-multi-currencies-ui.php',

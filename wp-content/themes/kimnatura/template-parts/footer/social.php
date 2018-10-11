@@ -24,7 +24,7 @@ $array = array(
 foreach($array as $item){
 ?>
     <li class="social-followus__item">
-        <a href="<?php echo $item['link']?>" class="social-followus__link">
+        <a target="_blank" rel="noopener noreferrer" href="<?php echo $item['link']?>" class="social-followus__link">
         <?php  get_template_part('skin/public/images/inline/inline',$item['image']) ?>
         </a>
     </li>

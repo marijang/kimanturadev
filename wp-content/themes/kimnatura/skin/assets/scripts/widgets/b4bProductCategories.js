@@ -95,7 +95,7 @@ $(document).ready( function() {
         var $perpage  = $this.data('per-page');
         var $categories  = $('input[name="product_cat"]').val();
         var $products_left;
-        var url = themeLocalization.ajaxurl + '?action=example&start='+$get+'&load='+$perpage+'&category='+$categories;
+        var url = themeLocalization.ajaxurl + '?action=loadMore&start='+$get+'&load='+$perpage+'&category='+$categories;
         $.ajax({
             type : "get",
             url : url,

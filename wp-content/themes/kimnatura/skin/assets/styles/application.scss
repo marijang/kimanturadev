@@ -539,3 +539,9 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
 .pswp__container {
     background-color: white!important;
 }
+
+
+.dd-option-image, .dd-selected-image{max-width: 64px !important;}
+.woocommerce-currency-switcher-form .chosen-single span{line-height: 22px !important;}
+.woocommerce-currency-switcher-form .chosen-drop,.woocommerce-currency-switcher-form .chosen-single{border-radius: 0;background: #ffffff;}
+.woocommerce-currency-switcher-form .chosen-results .active-result{color: #000000;}

@@ -27,16 +27,14 @@ $header_logo_info = $blog_name . ' - ' . $blog_description;
   <a class="header__logo-link" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( $blog_name ); ?>">
     <img class="header__logo-img" src="<?php echo esc_url( KIM_IMAGE_URL . 'logo.svg' ); ?>" title="<?php echo esc_attr( $header_logo_info ); ?>" alt="<?php echo esc_attr( $header_logo_info ); ?>" />
   </a>
- 
+
 
   <?php
     get_template_part( 'template-parts/header/menu', '' );
+
   ?>
   
  
-
-
-
 </div>
 </div>
 
