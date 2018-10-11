@@ -138,7 +138,6 @@ $(document).ready( function() {
         uncheckParent($(this));
         setValue();
         var lang = getCookiebyName('_icl_current_language');
-        console.log(lang);
         if($('input[name="product_cat"]').val()!=''){
             window.location.href = '/' + lang + "/proizvodi/kategorija/"+$('input[name="product_cat"]').val();
         }else{
