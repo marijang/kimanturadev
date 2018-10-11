@@ -90,11 +90,12 @@ $array = array(
     <li class="main-navigation__item">
    
        <?php   
-       if (current_user_can('editor') || current_user_can('administrator') ) { ?>
-        <a class="header__language" href="<?php echo get_site_url() . '/en/' ?>"> EN </a>
-
-        <a class="header__language" href="<?php echo get_site_url() . '/hr/' ?>"> HR </a>
-       <?php } ?> 
+       if (current_user_can('editor') || current_user_can('administrator') ) { 
+           if (ICL_LANGUAGE_CODE == 'hr')  {?>
+        <a class="header__language" data-lang="en" href="<?php echo get_site_url() . '/en/' ?>"> EN </a>
+           <?php  } else { ?>
+        <a class="header__language" data-lang="hr" href="<?php echo get_site_url() . '/hr/' ?>"> HR </a>
+       <?php } }?> 
        
     </li>
     <li class="main-navigation__item" id="eng">
