@@ -11,9 +11,13 @@ global $wpdb,$post;
 use Kimnatura\Theme\Utils as Utils;
 
 
-
+if (ICL_LANGUAGE_CODE == 'hr')  {
 $args = array( 'numberposts' => 1000 ,'category_name' =>'sastojci');
+} else {
+    $args = array( 'numberposts' => 1000 ,'category_name' =>'sastojci-en');  
+}
 $result = get_posts( $args ) ;
+
 
 
 ?>
