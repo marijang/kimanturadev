@@ -9,8 +9,10 @@ $('#proceed-to-payment').on('click',function(e){
     $('#wc-multistep-payment').removeClass('is-disabled');
     $('#wc-multistep-details').removeClass('is-active');
     $('#wc-multistep-details').addClass('is-activated');
+    $('body,html').animate({
+        scrollTop : 0                     // Scroll to top of body
+    }, 500);
 }
 });
-
 
 });

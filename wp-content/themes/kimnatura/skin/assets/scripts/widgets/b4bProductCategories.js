@@ -4,6 +4,10 @@
 //$(function() {
 $(document).ready( function() {
 
+    var getCookiebyName = function(name){
+        var pair = document.cookie.match(new RegExp(name + '=([^;]+)'));
+        return !!pair ? pair[1] : null;
+    };
 
     var action = 'example';
    // var url = themeLocalization.ajaxurl + '?action=example&start=2&load=2';
@@ -133,10 +137,12 @@ $(document).ready( function() {
     $('input[name="product_cat[]"]').on('click',function(){
         uncheckParent($(this));
         setValue();
+        var lang = getCookiebyName('_icl_current_language');
+        console.log(lang);
         if($('input[name="product_cat"]').val()!=''){
-            window.location.href = "/proizvodi/kategorija/"+$('input[name="product_cat"]').val();
+            window.location.href = '/' + lang + "/proizvodi/kategorija/"+$('input[name="product_cat"]').val();
         }else{
-            window.location.href = "/proizvodi/";
+            window.location.href = '/' + lang + "/proizvodi/";
         }
     });
 
