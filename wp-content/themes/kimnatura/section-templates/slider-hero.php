@@ -12,7 +12,11 @@ use Kimnatura\Theme\Utils as Utils;
 $images = new Utils\Images();
 
 
-$args = array( 'numberposts' => 10 ,'category_name' =>'slider-hero');
+if (ICL_LANGUAGE_CODE == 'hr')  {
+    $args = array( 'numberposts' => 10 ,'category_name' =>'slider-hero');
+    } else {
+        $args = array( 'numberposts' => 10 ,'category_name' =>'slider-hero-en');  
+    }
 $result = get_posts( $args ) ;
 
 
