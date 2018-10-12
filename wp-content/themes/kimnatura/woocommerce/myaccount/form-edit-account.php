@@ -27,7 +27,6 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 <form class="woocommerce-EditAccountForm edit-account" action="" method="post">
 
 	<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
-	<div class="section__description section__description--spacing-bottom-s">Osnovni podaci</div>
 	<p class="input-field woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
 		<label for="account_first_name"><?php esc_html_e( 'First name', 'woocommerce' ); ?> <span class="required">*</span></label>
 		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text validate" name="account_first_name" id="account_first_name" value="<?php echo esc_attr( $user->first_name ); ?>" />

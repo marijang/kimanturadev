@@ -92,9 +92,9 @@ $array = array(
        <?php   
        if (current_user_can('editor') || current_user_can('administrator') ) { 
            if (ICL_LANGUAGE_CODE == 'hr')  {?>
-        <a class="header__language" data-lang="en" href="<?php echo get_site_url() . '/en/' ?>"> EN </a>
+        <a class="header__language main-navigation__link" data-lang="en" href="<?php echo get_site_url() . '/en/' ?>"> EN </a>
            <?php  } else { ?>
-        <a class="header__language" data-lang="hr" href="<?php echo get_site_url() . '/' ?>"> HR </a>
+        <a class="header__language main-navigation__link" data-lang="hr" href="<?php echo get_site_url() . '/' ?>"> HR </a>
        <?php } }?> 
        
     </li>
@@ -105,12 +105,12 @@ $array = array(
     </li>
     <li class="main-navigation__item desktop-only">
     <?php if(is_user_logged_in()):  ?>
-    <a href="/my-account/edit-account" class="main-navigation__link is-logged-in">
+    <a href="<?php echo wc_customer_edit_account_url(); ?>" class="main-navigation__link is-logged-in">
             <i class="material-icons">account_circle</i>
             <span class="main-navigation__user-info"><?php echo $name;  ?></span>
             </a>
     <?php else:  ?>
-    <a href="/my-account/edit-account" class="main-navigation__link">
+    <a href="<?php echo wc_customer_edit_account_url(); ?>" class="main-navigation__link">
     <i class="material-icons">account_circle</i>
     </a>
     <?php endif  ?>

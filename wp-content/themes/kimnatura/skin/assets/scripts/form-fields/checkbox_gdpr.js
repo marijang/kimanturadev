@@ -51,7 +51,7 @@ $('.woocommerce-MyAccount-content [for="ct-ultimate-gdpr-consent-field-woocommer
     var text1 = label1.text();
     label1.text('');
     //label.append('<span>' + split[0] + split[1]  + ' na <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
-    label1.append('<span>Pristajem na to da se moji podaci prikupe s obzirom na <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
+    label1.append('<span>' + text1 + ' *</span>');
     input.prependTo(label1);
     var el = label1.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
     el.appendTo('.newsletter__content')
@@ -65,6 +65,7 @@ $('.woocommerce-MyAccount-content [for="ct-ultimate-gdpr-consent-field-woocommer
             $(this).find('input').parent().removeClass('checkbox__invalid');
         }
     });
+    
 
 
     // input checkbox na stranici za plaćanje
