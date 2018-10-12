@@ -94,7 +94,7 @@ $array = array(
            if (ICL_LANGUAGE_CODE == 'hr')  {?>
         <a class="header__language" data-lang="en" href="<?php echo get_site_url() . '/en/' ?>"> EN </a>
            <?php  } else { ?>
-        <a class="header__language" data-lang="hr" href="<?php echo get_site_url() . '/hr/' ?>"> HR </a>
+        <a class="header__language" data-lang="hr" href="<?php echo get_site_url() . '/' ?>"> HR </a>
        <?php } }?> 
        
     </li>
