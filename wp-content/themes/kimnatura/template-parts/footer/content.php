@@ -18,7 +18,7 @@ $helper = new Helper();
       <div class="footer__links footer__content-media-style">
         <img class="footer__logo-img" src="<?php echo esc_url( KIM_IMAGE_URL . 'logo-white.svg' ); ?>" title="<?php echo esc_attr( $header_logo_info ); ?>" alt="<?php echo esc_attr( $header_logo_info ); ?>" />
          <p>
-           <?php echo get_theme_mod('footer_text'); ?>
+           <?php echo __('Kim Natura pomoći će vam da svjesnije, opuštenije i prirodnije kročite kroz sve dane i obveze pred vama.','kimnatura'); ?>
         </p>
       </div>
       <div class="footer__links">
