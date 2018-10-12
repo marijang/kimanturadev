@@ -1,6 +1,8 @@
 
-
 (function($){
+
+  
+
     $('#payment').hide();
     var navigation = $('.cart-checkout-navigation');
     var activestep = $('.cart-checkout-navigation__item.is-active');
@@ -88,6 +90,9 @@
 
 
 $(function() {
+
+    
+
 function init(){
     var count = jQuery('input[name="payment_method"]').length;
     if (count>0){
@@ -121,6 +126,14 @@ init();
 
 
 $(document).ready(function(){
+
+    var getCookiebyName = function(name){
+        var pair = document.cookie.match(new RegExp(name + '=([^;]+)'));
+        return !!pair ? pair[1] : null;
+    };
+    var lang = getCookiebyName('_icl_current_language');
+
+    if (lang == 'hr') {
 $("form[name='checkout']").validate({
      // Specify validation rules
      rules: {
@@ -179,7 +192,68 @@ $("form[name='checkout']").validate({
         
              element.parent().parent().find('.errorClass').attr('data-error', error.text());
        }
-   });
+   }); } else {
+    $("form[name='checkout']").validate({
+        // Specify validation rules
+        rules: {
+          // The key name on the left side is the name attribute
+          // of an input field. Validation rules are defined
+          // on the right side
+          billing_first_name: "required",
+          billing_last_name: "required",
+          billing_email: {"required" : true, "email" : true },
+          billing_address_1: "required",
+          billing_city: "required",
+          billing_postcode: "required",
+          billing_phone : {
+           required: true,
+           number: true
+         } ,
+          shipping_first_name: {
+              required : '#ship-to-different-address-checkbox:checked'
+          },
+          shipping_last_name: {
+           required : '#ship-to-different-address-checkbox:checked'
+          },
+          shipping_address_1: {
+           required : '#ship-to-different-address-checkbox:checked'
+          },
+          shipping_city: {
+           required : '#ship-to-different-address-checkbox:checked'
+          },
+          shipping_postcode: {
+           required : '#ship-to-different-address-checkbox:checked'
+          }
+        },
+        // Specify validation error messages
+        messages: {
+          billing_first_name: "Name is required",
+          billing_last_name: "Last name is required",
+          billing_email: {"required" : "Email address is required", "email" : "Email format is wrong" },
+          billing_address_1: "Address is required",
+          billing_city: "City is required",
+          billing_postcode: "Post code is required",
+          billing_phone : {"required" : "Phone number is required","number" : "Phone number format is wrong"},
+          shipping_first_name : "Name is required",
+          shipping_last_name : "Last name is required",
+          shipping_address_1 : "Address is required",
+          shipping_city : "City is required",
+          shipping_postcode : "Post code is required"
+   
+        },
+        errorPlacement: function(error, element) {
+            element.addClass('invalid');
+            var el = element.parent().find('.errorClass');
+            if (el.length)
+                el.attr('data-error', error.text());
+               
+            else 
+           
+                element.parent().parent().find('.errorClass').attr('data-error', error.text());
+          }
+      });
+
+   }
 
    
  
