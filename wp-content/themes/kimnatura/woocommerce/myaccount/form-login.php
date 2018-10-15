@@ -109,7 +109,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			    <span class="helper-text errorClass" data-error="wrong"></span>
 			</p>
 
-			<?php //if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
+			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
 
 				<p style="margin-bottom: 0px;" class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide login__row input-field">
 					<label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
@@ -117,7 +117,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<span class="helper-text errorClass" data-error="wrong"></span>
 				</p>
 
-			<?php //endif; ?>
+			<?php endif; ?>
 
 			<?php do_action( 'woocommerce_register_form' ); ?>
 
