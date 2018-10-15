@@ -70,7 +70,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 								if ( ! empty( $actions ) ) {
 									foreach ( $actions as $key => $action ) {
 										if ($key == "invoice") {
-										echo '<a href="' . esc_url( $action['url'] ) . '" class="woocommerce-button button ' . sanitize_html_class( $key ) . '">Preuzmite račun</a>';
+										echo '<a href="' . esc_url( $action['url'] ) . '" class="woocommerce-button button ' . sanitize_html_class( $key ) . '">' . __('Preuzmite račun', 'kimnatura') .'</a>';
 										echo '<a href="' . esc_url( $action['url'] ) . '" class="woocommerce-button button mobile-invoice">Preuzmite</a>';
 										}
 									}

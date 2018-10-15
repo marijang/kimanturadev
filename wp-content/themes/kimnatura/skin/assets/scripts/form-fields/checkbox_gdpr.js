@@ -12,6 +12,16 @@ var i = 0;
     label.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
 });
 
+
+$('.woocommerce-ResetPassword.lost_reset_password .ct-ultimate-gdpr-consent-field').each(function() {
+    var label =  $(this).next();
+    var text = label.text();
+    label.text('');
+    label.append('<span>' + text + '</span>');
+    $(this).prependTo(label);
+    label.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
+});
+
 $('.woocommerce-MyAccount-content [for="ct-ultimate-gdpr-consent-field-woocommerce"]').each(function() {
     $(this).click(function() {
         var cb = $(this).find('input');
