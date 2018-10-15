@@ -39,8 +39,6 @@ do_action( 'woocommerce_before_main_content' );
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 		<h1 class="section__title">
 		<?php 
-			global $sitepress;
-			$sitepress->switch_lang(ICL_LANGUAGE_CODE);
 			$kategorija = explode(',',get_query_var( 'product_cat' ));
 			$count = count($kategorija);
 			if($count==1){
