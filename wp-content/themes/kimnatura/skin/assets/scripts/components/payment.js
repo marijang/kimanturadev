@@ -5,10 +5,10 @@ $("#place_order").on('click',function(){
 	if (checked1) {   //checked zakomentirano
 		$("form[name='checkout']").submit();
 	} 
-	// if (!checked) {
-	// 	$('#terms-error').addClass('checkbox__error-label--active');
-	// 	$('#terms').parent().addClass("checkbox__error");
-	// }
+	 if (!checked) {
+	 	$('#terms-error').addClass('checkbox__error-label--active');
+	 	$('#terms').parent().addClass("checkbox__error");
+	 }
 	if (!checked1) {
 		$("#privacy-error").addClass('checkbox__error-label--active');
 		$("#ct-ultimate-gdpr-consent-field").parent().addClass("checkbox__error");
