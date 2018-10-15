@@ -33,8 +33,7 @@ Class LoadMore extends WP_AJAX
         $taxonomies[] = array (
             'taxonomy' => 'product_cat',
             'field' => 'slug',
-            'terms' => $categories,
-            'suppress_filters' => true
+            'terms' => $categories
         );
     
     // https://wordpress.stackexchange.com/questions/25076/how-to-filter-wordpress-search-excluding-post-in-some-custom-taxonomies
@@ -47,16 +46,14 @@ Class LoadMore extends WP_AJAX
         'post_type' => 'product',
         'posts_per_page' => $load, //$_POST['load'],
         'paged' => $start,
-        'tax_query' => $taxonomy_query,
-        'suppress_filters' => true
+        'tax_query' => $taxonomy_query
         //'offset' => (($start + $load) - $load) 
     );
 } else {
     $args = array(
         'post_type' => 'product',
         'posts_per_page' => $load, //$_POST['load'],
-        'paged' => $start,
-        'suppress_filters' => true
+        'paged' => $start
     );
 }
     // Asos primjer load more
