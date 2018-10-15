@@ -147,7 +147,7 @@ $(document).ready( function() {
         }
     } else {
         if($('input[name="product_cat"]').val()!=''){
-            window.location.href = /proizvodi/kategorija/"+$('input[name="product_cat"]').val();
+            window.location.href = "/proizvodi/kategorija/"+$('input[name="product_cat"]').val();
         }else{
             window.location.href = "/proizvodi/";
         }
