@@ -7,7 +7,7 @@ var i = 0;
     var label =  $(this).next();
     var text = label.html();
     label.html('');
-    label.append('<span>' + text + '</span>');
+    label.append('<span>' + text + ' *</span>');
     $(this).prependTo(label);
     label.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
 });
