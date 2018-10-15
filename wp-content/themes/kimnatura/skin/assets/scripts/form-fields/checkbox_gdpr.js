@@ -5,8 +5,8 @@ var i = 0;
     $(this).attr('id', $(this).attr('id') + i);
     i++;
     var label =  $(this).next();
-    var text = label.text();
-    label.text('');
+    var text = label.html();
+    label.html('');
     label.append('<span>' + text + '</span>');
     $(this).prependTo(label);
     label.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
@@ -15,9 +15,9 @@ var i = 0;
 
 $('.woocommerce-ResetPassword.lost_reset_password .ct-ultimate-gdpr-consent-field').each(function() {
     var label =  $(this).next();
-    var text = label.text();
-    label.text('');
-    label.append('<span>' + text + '</span>');
+    var text = label.html();
+    label.html('');
+    label.append('<span>' + text + ' *</span>');
     $(this).prependTo(label);
     label.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
 });
@@ -38,8 +38,8 @@ $('.woocommerce-MyAccount-content [for="ct-ultimate-gdpr-consent-field-woocommer
     var inputWoo = $('.register #ct-ultimate-gdpr-consent-field-woocommerce');
     inputWoo.attr('required', false);
     var labelWoo = $(".register [for='ct-ultimate-gdpr-consent-field-woocommerce']");
-    var textWoo = labelWoo.text();
-    labelWoo.text('');
+    var textWoo = labelWoo.html();
+    labelWoo.html('');
     //label.append('<span>' + split[0]  + ' odredbama <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
     labelWoo.append('<span>'+ textWoo + '</span>');
     inputWoo.prependTo(labelWoo);
@@ -82,11 +82,10 @@ $('.woocommerce-MyAccount-content [for="ct-ultimate-gdpr-consent-field-woocommer
     var inputPay = $('.woocommerce-additional-fields #ct-ultimate-gdpr-consent-field');
     inputPay.attr('required', false);
     var labelPay = $('.woocommerce-additional-fields .checkbox');
-    var textPay = labelPay.text();
+    var textPay = labelPay.html();
     
-    labelPay.text('');
+    labelPay.html('');
     labelPay.prepend(inputPay);
-    var splitPay = textPay.split('');
     //label.append('<span>' + split[0]  + ' odredbama <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
     labelPay.append('<span> ' + textPay + '</span>');
     
@@ -147,8 +146,8 @@ $('.woocommerce-MyAccount-content [for="ct-ultimate-gdpr-consent-field-woocommer
     // Kontakt
     var input_contact = $('.contact__field--inverted input[type="checkbox"]');
     var label_contact = input_contact.parent().find('label');
-    var span_contact = $('<span>' + label_contact.text() + '</span>');
-    label_contact.text(' ');
+    var span_contact = $('<span>' + label_contact.html() + '</span>');
+    label_contact.html(' ');
     span_contact.appendTo(label_contact);
     input_contact.prependTo(label_contact);
 
