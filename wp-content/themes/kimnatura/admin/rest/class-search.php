@@ -19,6 +19,9 @@ Class Search extends WP_AJAX
 
    // woocommerce_product_loop_start();
     $search = $this->get('search');
+    $lang = $this->get('lang','hr'); 
+    global $sitepress;
+    $sitepress->switch_lang($lang);
 
     if($search==''){
         $args = array(

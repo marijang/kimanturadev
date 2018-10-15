@@ -90,6 +90,10 @@ $(document).ready( function() {
 
 
 $(function() {
+    var getCookiebyName = function(name){
+        var pair = document.cookie.match(new RegExp(name + '=([^;]+)'));
+        return !!pair ? pair[1] : null;
+    };
     var action = 'search';
     // var url = themeLocalization.ajaxurl + '?action=example&start=2&load=2';
     // var allPanels = $('.shop-categories__childs').show();
@@ -101,7 +105,8 @@ $(function() {
 
         var $this = $(this);
         var $query  = $this.data('current');
-        var url = themeLocalization.ajaxurl + '?action=search';
+        var lang = getCookiebyName('_icl_current_language');
+        var url = themeLocalization.ajaxurl + '?action=search&lang=' + lang ;
        // toggleLoader('on','');
         $.ajax({
             type : "get",
@@ -146,7 +151,8 @@ $(function() {
         var $this = $(this);
         var $input = $this.find('input[name="s"]');
         var search = $this.val();
-        var url = themeLocalization.ajaxurl + '?action=search&search='+search;
+        var lang = getCookiebyName('_icl_current_language');
+        var url = themeLocalization.ajaxurl + '?action=search&lang=' + lang +'&search='+search;
         //$('#search-results').css('display','none');
         //$('.loader-spin').css('display','block');
         toggleLoader('on','');

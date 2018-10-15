@@ -99,7 +99,8 @@ $(document).ready( function() {
         var $perpage  = $this.data('per-page');
         var $categories  = $('input[name="product_cat"]').val();
         var $products_left;
-        var url = themeLocalization.ajaxurl + '?action=loadMore&start='+$get+'&load='+$perpage+'&category='+$categories;
+        var lang = getCookiebyName('_icl_current_language');
+        var url = themeLocalization.ajaxurl + '?action=loadMore&start='+$get+'&load='+$perpage+'&lang=' + lang + '&category='+$categories;
         $.ajax({
             type : "get",
             url : url,
