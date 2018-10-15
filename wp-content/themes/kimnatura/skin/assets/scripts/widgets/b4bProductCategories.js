@@ -139,11 +139,19 @@ $(document).ready( function() {
         uncheckParent($(this));
         setValue();
         var lang = getCookiebyName('_icl_current_language');
+        if (lang != 'hr') {
         if($('input[name="product_cat"]').val()!=''){
-            window.location.href = '/' + lang + "/proizvodi/kategorija/"+$('input[name="product_cat"]').val();
+            window.location.href = '/' + lang  + "/proizvodi/kategorija/"+$('input[name="product_cat"]').val();
         }else{
             window.location.href = '/' + lang + "/proizvodi/";
         }
+    } else {
+        if($('input[name="product_cat"]').val()!=''){
+            window.location.href = /proizvodi/kategorija/"+$('input[name="product_cat"]').val();
+        }else{
+            window.location.href = "/proizvodi/";
+        }
+    }
     });
 
 
