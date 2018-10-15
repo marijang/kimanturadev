@@ -171,7 +171,7 @@ class Woo {
         // if ( is_user_logged_in() ) {
             $order_id = method_exists($order, 'get_id') ? $order->get_id() : $order->id;
             $pdf_url = wp_nonce_url( admin_url( 'admin-ajax.php?action=generate_wpo_wcpdf&template_type=invoice&order_ids=' . $order_id . '&my-account'), 'generate_wpo_wcpdf' );
-            $text .= '<div class="thanks__button"><a class="checkout-button button alt wc-forward btn btn--primary-color" href="'.esc_attr($pdf_url).'">Preuzmite PDF</a></div>';
+            $text .= '<div class="thanks__button"><a class="checkout-button button alt wc-forward btn btn--primary-color" href="'.esc_attr($pdf_url).'">'. __('Preuzmite PDF', 'kimnatura') . '</a></div>';
         //}
         return $text;
     }
@@ -602,7 +602,7 @@ public function shipping_method_notice() {
 		$min_amount = $method->get_option( 'min_amount' );
 		if ( $method->id == 'free_shipping' && ! empty( $min_amount ) && $cart_total < $min_amount && $zone->get_zone_name() == 'Croatia' ) {
 			$remaining = $min_amount - $cart_total;
-			$message =  sprintf( 'Dodajte proizvoda za još %s kako biste ostvarili besplatnu dostavu!', wc_price( $remaining ) );
+			$message =  sprintf( __('Dodajte proizvoda za još %s kako biste ostvarili besplatnu dostavu!', 'kimnatura'), wc_price( $remaining ) );
 		}
 	}
     // Show info if price is not calculated just for info
@@ -619,7 +619,7 @@ public function shipping_method_notice() {
 						// Cart total less then min_amount
 						if (! empty( $min_amount ) && $cart_total < $min_amount && $zone->get_zone_name() == 'Croatia' ) {
 							$remaining = $min_amount - $cart_total;
-							$message=  sprintf( 'Ako dodate još %s ostvariti ćete besplatnu dostavu!', wc_price( $remaining ) );
+							$message=  sprintf( __('Ako dodate još %s ostvariti ćete besplatnu dostavu!', 'kimnatura') , wc_price( $remaining ) );
 						}
 					}
 				}

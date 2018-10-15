@@ -150,7 +150,7 @@ $woo  = new Woo();
                     }
                     ?>
                 </div>
-                <div class="featured-link__button btn btn--primary btn--small ">Idi na proizvod</div>
+                <div class="featured-link__button btn btn--primary btn--small "><?php echo __( 'Idi na proizvod','kimnatura' ) ?></div>
             </div>
         </a>
        

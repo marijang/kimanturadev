@@ -10,8 +10,8 @@ get_header();
 
 <section class="section">
         <header class="section__header">
-	        <h1 class="section__title">Novosti</h1>
-	        <p class="section__description" style="display:none;" >Naše novosti</p>
+	        <h1 class="section__title"><?php echo __('Novosti','kimnatura');?></h1>
+	        <p class="section__description" style="display:none;" ><?php echo __('Naše novosti','b4b');?></p>
 	    </header><!-- .entry-header -->
       <?php
 if ( have_posts() ) {

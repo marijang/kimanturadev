@@ -80,7 +80,7 @@ get_header();
 
         </div>
 
-        <h1 class="section__title section__header">Ostala prodajna mjesta</h1>
+        <h1 class="section__title section__header"><?php echo __('Ostala prodajna mjesta','kimnatura'); ?></h1>
         <div class="grid3">
             <div class="grid3__item">
                 <h2 class="grid3__item-title" style="font-weight: 500">Patrik obrt za trgovinu</h2>

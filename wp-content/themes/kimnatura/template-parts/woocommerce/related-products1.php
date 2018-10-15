@@ -125,7 +125,7 @@
                     }
                     ?>
                 </div>
-                <div class="featured-link__button">Idi na proizvod</div>
+                <div class="featured-link__button"><?php echo __( 'Idi na proizvod','kimnatura' ) ?></div>
             </div>
         </a>
 			

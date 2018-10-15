@@ -46,7 +46,7 @@
             <?php   } ?>
                 </div>
             <div class="mega-menu__show-all">
-                <a href="<?php echo wc_get_page_permalink( 'shop' )?>" class=" btn btn btn--white-color">Pogledajte sve proizvode</a>
+                <a href="<?php echo wc_get_page_permalink( 'shop' )?>" class=" btn btn btn--white-color"><?php echo __('Pogledajte sve proizvode', 'kimnatura'); ?></a>
             </div>
 				
         </div>

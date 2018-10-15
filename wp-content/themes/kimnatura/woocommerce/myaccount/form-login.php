@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php endif; ?>
 
 		<div class="login__box-title"><?php esc_html_e( 'Login', 'woocommerce' ); ?></div>
-		<p class="login__box-description">Unesite korisničke podatke za prijavu.</p>
+		<p class="login__box-description"><?php echo __('Unesite korisničke podatke za prijavu.', 'kimnatura'); ?></p>
 
 		<form class="woocommerce-form1111 woocommerce-form-login login" method="post">
 
@@ -88,7 +88,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div id="reg-box" class="u-column2 col-2 login__box login__box--reg">
 
 		<div class="login__box-title"><?php esc_html_e( 'Register', 'woocommerce' ); ?></div>
-		<p class="login__box-description">Otvarite račun na našim stranicama kako bi brže kupovali i imali pregled povijesti kupnje.</p>
+		<p class="login__box-description"><?php echo __('Otvorite račun na našim stranicama kako bi brže kupovali i imali pregled povijesti kupnje.', 'kimnatura'); ?></p>
 
 		<form method="post" class="register" autocomplete="off">
 

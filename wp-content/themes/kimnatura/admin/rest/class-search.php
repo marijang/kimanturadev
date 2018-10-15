@@ -42,9 +42,9 @@ Class Search extends WP_AJAX
     //var_dump($query);
         echo   '<header class="section__header">';
         if($search==''){
-            echo '<h1 id="search-title" class="section__title">Zadnje s našeg bloga</h1>';
+            echo '<h1 id="search-title" class="section__title">' . __('Zadnje s našeg bloga', 'kimnatura') .'</h1>';
         } else {
-            echo '<h1 id="search-title" class="section__title">Rezultati pretraživanja</h1>';
+            echo '<h1 id="search-title" class="section__title">' . __('Rezultati pretraživanja', 'kimnatura') .'</h1>';
         }
         echo '</header><!-- .entry-header -->
                 <div id="search-results" class="search__related">';

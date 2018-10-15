@@ -40,11 +40,11 @@ if ( $total <= 1 ) {
 <div class="shop-catalog__pagination">
 	<div class="shop-catalog__num-of-items">
 		<div class="total shop-catalog__results-wrap" data-products-left="<?php echo $total_left ?>">
-    	<div class="shop-catalog__results-count">Pregledali ste <?php echo $last; ?> od <?php echo $total_all ?> proizvoda.</div>
+    	<div class="shop-catalog__results-count"><?php echo __('Pregledali ste', 'kimnatura') . ' ';  ?> <?php echo $last . ' '; ?> <?php echo __('od', 'kimnatura') . ' ';?> <?php echo $total_all . ' '; ?> <?php echo __('proizvoda', 'kimnatura'); ?></div>
     	<progress max="100" value="'.$percentage.'" class="shop-catalog__progress" aria-hidden="true"></progress>
     </div>
 	</div>
-	<a href="/page/2" class="btn btn--grey-color shop-catalog__btn-shop-more" data-current="<?php echo max( 1, $current ); ?>" data-per-page="<?php echo max( 1, $per_page ); ?>" id="show-more-products">Prikaži više</a>
+	<a href="/page/2" class="btn btn--grey-color shop-catalog__btn-shop-more" data-current="<?php echo max( 1, $current ); ?>" data-per-page="<?php echo max( 1, $per_page ); ?>" id="show-more-products"><?php echo __('Prikaži više', 'kimnatura'); ?></a>
 	<div class="shop-catalog__loader">
 	<!-- Loader 9 -->
 

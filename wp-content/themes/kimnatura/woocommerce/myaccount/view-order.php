@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php else : ?>
 		<div class="thanks__title">
-		 <div>Potvrdu o plaćanju možete preuzeti u .pdf formatu </div> </div>
+		 <div><?php echo __('Potvrdu o plaćanju možete preuzeti u .pdf formatu', 'kimnatura'); ?> </div> </div>
 			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
 
 				<li class="woocommerce-order-overview__order order">
