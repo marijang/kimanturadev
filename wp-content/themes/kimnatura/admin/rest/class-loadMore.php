@@ -21,7 +21,10 @@ Class LoadMore extends WP_AJAX
 
     $load  = $this->get('load',12);
     $start = $this->get('start',0); 
+    $lang = $this->get('lang','hr'); 
     $categories = explode(',',$_GET['category']);
+    global $sitepress;
+    $sitepress->switch_lang($lang);
     
 
     $taxonomies = array();

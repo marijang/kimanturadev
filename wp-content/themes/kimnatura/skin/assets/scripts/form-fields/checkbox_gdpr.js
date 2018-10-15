@@ -41,7 +41,7 @@ $('.woocommerce-MyAccount-content [for="ct-ultimate-gdpr-consent-field-woocommer
     var textWoo = labelWoo.html();
     labelWoo.html('');
     //label.append('<span>' + split[0]  + ' odredbama <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
-    labelWoo.append('<span>'+ textWoo + '</span>');
+    labelWoo.append('<span>'+ textWoo + ' *</span>');
     inputWoo.prependTo(labelWoo);
     labelWoo.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
     labelWoo.click(function() {
@@ -87,7 +87,7 @@ $('.woocommerce-MyAccount-content [for="ct-ultimate-gdpr-consent-field-woocommer
     labelPay.html('');
     labelPay.prepend(inputPay);
     //label.append('<span>' + split[0]  + ' odredbama <a href="/pravila-privatnosti" target="_blank" > Pravila o privatnosti</a> *</span>');
-    labelPay.append('<span> ' + textPay + '</span>');
+    labelPay.append('<span> ' + textPay + ' *</span>');
     
     //labelPay.wrap('<p class="form-row terms wc-terms-and-conditions"></p>');
     // labelPay.click(function() {
