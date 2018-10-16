@@ -126,6 +126,16 @@ class Woo {
         echo '</div>';
     }
 
+    
+
+    public function check_cart_weight(){
+    global $woocommerce;
+    $weight = $woocommerce->cart->cart_contents_weight;
+    if( $weight > 40 ){
+        wc_add_notice( sprintf( __( 'You have %s Kg weight and we allow only 40Kg of weight per order.', 'woocommerce' ), $weight ), 'error' );
+    }
+}
+
 
     // Brisanje svih vrsta naplate dostave (npr. flat rate:)
     /**
