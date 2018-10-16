@@ -132,7 +132,7 @@ class Woo {
     global $woocommerce;
     $weight = $woocommerce->cart->cart_contents_weight;
     if( $weight > 40 ){
-        wc_add_notice( sprintf( __( 'You have %s Kg weight and we allow only 40Kg of weight per order.', 'woocommerce' ), $weight ), 'error' );
+        wc_add_notice( sprintf( __( 'You have %s kg weight and we allow only 40 kg of weight per order.', 'woocommerce' ), $weight ), 'error' );
     }
 }
 
