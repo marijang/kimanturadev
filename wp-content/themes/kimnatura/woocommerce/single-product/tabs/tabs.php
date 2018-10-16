@@ -33,11 +33,11 @@ if ( ! empty( $tabs ) ) : ?>
 	<div class="woocommerce-tabs wc-tabs-wrapper single-product__tab-wrapper">
 
 		<?php foreach ( $tabs as $key => $tab ) : ?>
-		     <?php if (esc_attr( $key ) != 'additional_information') : ?>
+		     <?php //if (esc_attr( $key ) != 'additional_information') : ?>
 			<div class="<?php echo esc_attr( $key ); ?> single-product__tab single-product__tab-<?php echo esc_attr( $key ); ?>" id="tab-<?php echo esc_attr( $key ); ?>" role="tabpanel" aria-labelledby="tab-title-<?php echo esc_attr( $key ); ?>">
 				<?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
 			</div>
-<?php endif; ?>
+<?php //endif; ?>
 		<?php endforeach; ?>
 	</div>
 

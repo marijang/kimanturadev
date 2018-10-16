@@ -275,7 +275,8 @@ class Main {
 
     $this->loader->add_filter( 'login_redirect', $theme,'login_redirect', 10, 3 );
 
-    
+
+   
     
 
   }
@@ -411,6 +412,8 @@ class Main {
     $this->loader->add_filter( 'woocommerce_package_rates',$woo, 'my_hide_shipping_when_free_is_available', 100 );
     $this->loader->add_filter( 'woocommerce_default_address_fields',$woo, 'custom_default_address_fields', 20, 1 );
 
+
+    $this->loader->add_action( 'woocommerce_cart_collaterals',$woo, 'myprefix_cart_extra_info', 10, 3 );
     
     
   }

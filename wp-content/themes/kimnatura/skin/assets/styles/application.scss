@@ -545,3 +545,8 @@ input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:n
 .woocommerce-currency-switcher-form .chosen-single span{line-height: 22px !important;}
 .woocommerce-currency-switcher-form .chosen-drop,.woocommerce-currency-switcher-form .chosen-single{border-radius: 0;background: #ffffff;}
 .woocommerce-currency-switcher-form .chosen-results .active-result{color: #000000;}
+
+
+.additional_information {
+    margin-top: $base-content-padding;
+}
