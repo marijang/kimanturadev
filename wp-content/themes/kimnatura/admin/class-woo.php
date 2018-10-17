@@ -967,8 +967,8 @@ class Woo
             return;
         }
 
-        if (isset($available_gateways['authorize']) && $woocommerce->customer->get_billing_country() == 'HR') {
-            unset($available_gateways['authorize']);
+        if (isset($available_gateways['cod']) && $woocommerce->customer->get_billing_country() != 'HR') {
+            unset($available_gateways['cod']);
         } 
         return $available_gateways;
     }

@@ -415,6 +415,8 @@ class Main {
 
     //$this->loader->add_action( 'woocommerce_cart_collaterals',$woo, 'myprefix_cart_extra_info', 10, 3 );
     $this->loader->add_action( 'woocommerce_check_cart_items',$woo, 'check_cart_weight', 10, 3 );
+
+    $this->loader->add_filter( 'woocommerce_available_payment_gateways',$woo, 'bbloomer_payment_gateway_disable_country', 20, 1 );
     
     
   }

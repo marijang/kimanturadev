@@ -62,7 +62,6 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<?php endif; ?>
 		<div id="payment-details" style="display:none" class="checkout__form">
 			<?php do_action( 'b4b_woocommerce_checkout_payment' ); ?>
-			<?php echo var_dump(WC()->payment_gateways->payment_gateways()); ?>
 			<div class="woocommerce-additional-fields">
 				<?php do_action( 'woocommerce_before_order_notes', $checkout ); ?>
 
