@@ -74,6 +74,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<ul class="wc_payment_methods payment_methods methods">
 				<?php
 				if ( ! empty( $available_gateways ) ) {
+					echo var_dump($available_gateways);
 					foreach ( $available_gateways as $gateway ) {
 						wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
 					}

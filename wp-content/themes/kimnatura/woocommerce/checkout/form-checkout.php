@@ -62,6 +62,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<?php endif; ?>
 		<div id="payment-details" style="display:none" class="checkout__form">
 			<?php do_action( 'b4b_woocommerce_checkout_payment' ); ?>
+			<?php echo var_dump(WC()->payment_gateways->payment_gateways()); ?>
 			<div class="woocommerce-additional-fields">
 				<?php do_action( 'woocommerce_before_order_notes', $checkout ); ?>
 
@@ -74,7 +75,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 				<?php endif; ?>
 
 				<div class="woocommerce-additional-fields__field-wrapper">
-					<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>					
+					<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
 						<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
 					<?php endforeach; ?>
 			</div>
@@ -106,6 +107,8 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		</div>
     </div><!-- End of checkout__Grid -->
 </form>
+
+
 
 	
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
