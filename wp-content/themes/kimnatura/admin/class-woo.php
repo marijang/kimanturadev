@@ -967,7 +967,7 @@ class Woo
             return;
         }
 
-        if (isset($available_gateways['cod']) && $woocommerce->customer->get_billing_country() != 'HR') {
+        if (isset($available_gateways['cod']) && $woocommerce->customer->get_shipping_country() != 'HR') {
             unset($available_gateways['cod']);
         } 
         return $available_gateways;
